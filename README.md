@@ -10,7 +10,7 @@ This project started mostly out of curiosity: could a 60 FPS patch be made for a
 
 I am not a reverse engineering expert. I only know some basics of coding, and very little about MIPS assembly, PSP internals, or low-level game patching.
 
-This is mostly a “for fun” and learning-oriented project. The goal is to understand how the game works, why it breaks at 60 FPS, and whether a playable patch can realistically be built.
+This is mostly a "for fun" and learning-oriented project. The goal is to understand how the game works, why it breaks at 60 FPS, and whether a playable patch can realistically be built.
 
 ChatGPT 5.5 is being used as a research assistant to help:
 
