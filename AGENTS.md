@@ -35,6 +35,25 @@ materially incomplete, unless explicitly requested by the project owner.
 
 ---
 
+## Investigation escalation chain
+
+The default investigation chain is:
+
+1. The parent Sol agent defines the technical question.
+2. Deterministic tools and existing evidence are checked first.
+3. One or more DeepSeek workers may investigate independent aspects in parallel.
+4. A DeepSeek skeptical reviewer should independently challenge important hypotheses.
+5. The parent Sol agent reconciles the findings.
+6. GPT-6 Astra may be used only for materially unresolved or architecturally difficult cases.
+7. No model consensus constitutes validation.
+8. Important gameplay claims ultimately require reproducible evidence or controlled testing.
+
+For parallel investigations, workers should have distinct scopes rather than duplicate the same reasoning unnecessarily.
+
+Priority remains 30 FPS → 60 FPS gameplay parity.
+
+---
+
 ## Core principle
 
 **No language-model output is automatically considered factual or validated.**
