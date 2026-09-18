@@ -1,0 +1,44 @@
+{
+  "taskFile": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\v1-parity-inventory\\task.snapshot.md",
+  "profile": "deepseek-flash-high",
+  "startedAtUtc": "2026-09-18T21:00:14.4605254Z",
+  "completedAtUtc": "2026-09-18T21:09:23.0395085Z",
+  "roles": [
+    {
+      "role": "explorer",
+      "succeeded": true,
+      "childSucceeded": true,
+      "report": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\v1-parity-inventory\\workers\\explorer.md",
+      "reportExists": true,
+      "reportBytes": 51693,
+      "stdoutLog": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\v1-parity-inventory\\workers\\_logs\\explorer.stdout.log",
+      "stderrLog": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\v1-parity-inventory\\workers\\_logs\\explorer.stderr.log",
+      "statusFile": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\v1-parity-inventory\\workers\\_logs\\explorer.status.json",
+      "failureReason": null
+    },
+    {
+      "role": "mapper",
+      "succeeded": true,
+      "childSucceeded": true,
+      "report": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\v1-parity-inventory\\workers\\mapper.md",
+      "reportExists": true,
+      "reportBytes": 58127,
+      "stdoutLog": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\v1-parity-inventory\\workers\\_logs\\mapper.stdout.log",
+      "stderrLog": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\v1-parity-inventory\\workers\\_logs\\mapper.stderr.log",
+      "statusFile": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\v1-parity-inventory\\workers\\_logs\\mapper.status.json",
+      "failureReason": null
+    },
+    {
+      "role": "skeptic",
+      "succeeded": true,
+      "childSucceeded": true,
+      "report": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\v1-parity-inventory\\workers\\skeptic.md",
+      "reportExists": true,
+      "reportBytes": 35154,
+      "stdoutLog": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\v1-parity-inventory\\workers\\_logs\\skeptic.stdout.log",
+      "stderrLog": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\v1-parity-inventory\\workers\\_logs\\skeptic.stderr.log",
+      "statusFile": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\v1-parity-inventory\\workers\\_logs\\skeptic.status.json",
+      "failureReason": null
+    }
+  ]
+}
