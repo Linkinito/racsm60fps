@@ -21,6 +21,20 @@ The repository should remain understandable to contributors who did not particip
 
 ---
 
+## Project priority
+
+Before starting any substantial task, read `PROJECT_GOALS.md`.
+
+Priority 0 is 30 FPS → 60 FPS behavioral parity.
+
+Reverse engineering, documentation and tooling exist primarily to help
+achieve and validate that goal.
+
+Do not prioritize optional user-facing features while Priority 0 remains
+materially incomplete, unless explicitly requested by the project owner.
+
+---
+
 ## Core principle
 
 **No language-model output is automatically considered factual or validated.**
