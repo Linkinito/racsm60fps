@@ -98,3 +98,7 @@ Thumbs.db
 .env
 .env.*
 *.key
+
+# Duplicate PRX reference set.
+# SHA-256 verified identical to development-v0.6.3-generalisation/prx-reference/
+**/development-v0.6.1/verified-prx-inputs/
