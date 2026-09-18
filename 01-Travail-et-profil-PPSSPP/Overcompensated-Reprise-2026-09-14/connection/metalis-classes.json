@@ -1,0 +1,686 @@
+[
+  {
+    "object_name": "Acidbomb",
+    "callback_rvas": "0x0010E2EC; 0x0010E2FC; 0x0010EC64"
+  },
+  {
+    "object_name": "AcidbombEpoxy",
+    "callback_rvas": "0x001100A8; 0x001100B0; 0x00110138"
+  },
+  {
+    "object_name": "AcidGloveHUD",
+    "callback_rvas": "0x00110640; 0x00110648; 0x00110650"
+  },
+  {
+    "object_name": "AgentController",
+    "callback_rvas": "0x00110658; 0x00110748; 0x00110900"
+  },
+  {
+    "object_name": "AgentOfDoom",
+    "callback_rvas": "0x00110F50; 0x0011102C; 0x001110EC; 0x0011140C"
+  },
+  {
+    "object_name": "AgentOfDoomShrapnel",
+    "callback_rvas": "0x00115B24; 0x00115B2C; 0x00115B34"
+  },
+  {
+    "object_name": "AgentsBomb",
+    "callback_rvas": "0x00115E34; 0x00115E3C; 0x00115E44"
+  },
+  {
+    "object_name": "AgentsGlove",
+    "callback_rvas": "0x001173D0; 0x0011745C; 0x00117488"
+  },
+  {
+    "object_name": "AgentsGrenade",
+    "callback_rvas": "0x00117958; 0x00117A48; 0x00117EFC"
+  },
+  {
+    "object_name": "AgentsLaser",
+    "callback_rvas": "0x00118478; 0x00118780; 0x00118834"
+  },
+  {
+    "object_name": "AgentsRocket",
+    "callback_rvas": "0x00119240; 0x00119304; 0x00119384"
+  },
+  {
+    "object_name": "ArenaController",
+    "callback_rvas": "0x00119F8C; 0x00119F9C; 0x0011A4E4"
+  },
+  {
+    "object_name": "ArmorHelmet",
+    "callback_rvas": "0x0011AD1C; 0x0011AD24; 0x0011AD2C"
+  },
+  {
+    "object_name": "ArmorLeftFoot",
+    "callback_rvas": "0x0011AD34; 0x0011AD3C; 0x0011AD44"
+  },
+  {
+    "object_name": "ArmorLeftHand",
+    "callback_rvas": "0x0011AD4C; 0x0011AD54; 0x0011AD5C"
+  },
+  {
+    "object_name": "ArmorRightFoot",
+    "callback_rvas": "0x0011AD64; 0x0011AD6C; 0x0011AD74"
+  },
+  {
+    "object_name": "ArmorRightHand",
+    "callback_rvas": "0x0011AD7C; 0x0011AD84; 0x0011AD8C"
+  },
+  {
+    "object_name": "ArmorTorso",
+    "callback_rvas": "0x0011AD94; 0x0011AD9C; 0x0011ADA4"
+  },
+  {
+    "object_name": "BeeMine",
+    "callback_rvas": "0x0011B444; 0x0011B454; 0x0011B834; 0x0011B52C"
+  },
+  {
+    "object_name": "BeeMineGlove",
+    "callback_rvas": "0x0011D210; 0x0011D398; 0x0011D3C4"
+  },
+  {
+    "object_name": "BeeMineGloveHUD",
+    "callback_rvas": "0x0011D9E4; 0x0011D9EC; 0x0011D9F4"
+  },
+  {
+    "object_name": "BeeMineShrapnel",
+    "callback_rvas": "0x0011DD2C; 0x0011DD34; 0x0011DD3C"
+  },
+  {
+    "object_name": "Blaster",
+    "callback_rvas": "0x0011DDB4; 0x0011DF10; 0x0011E434"
+  },
+  {
+    "object_name": "BlasterAkimbo",
+    "callback_rvas": "0x0011F414; 0x0011F498; 0x0011F4C8"
+  },
+  {
+    "object_name": "BlasterShot",
+    "callback_rvas": "0x0011F798; 0x0011F7C0; 0x0011FB64"
+  },
+  {
+    "object_name": "BlitzGun",
+    "callback_rvas": "0x00121A30; 0x00121B8C; 0x00121FE4"
+  },
+  {
+    "object_name": "BlitzGunShot",
+    "callback_rvas": "0x00123A78; 0x00123A80; 0x00123C1C"
+  },
+  {
+    "object_name": "Bolt",
+    "callback_rvas": "0x0012472C; 0x00124734"
+  },
+  {
+    "object_name": "BoltController",
+    "callback_rvas": "0x00127CB4; 0x00127EE8; 0x00127F0C"
+  },
+  {
+    "object_name": "BoltGrabber",
+    "callback_rvas": "0x001282A8; 0x001282B0; 0x001282B8"
+  },
+  {
+    "object_name": "Bombglove",
+    "callback_rvas": "0x001282C0; 0x00128398; 0x00128848"
+  },
+  {
+    "object_name": "BotFlingerArm",
+    "callback_rvas": "0x00128DB8; 0x00128E5C; 0x00128E90"
+  },
+  {
+    "object_name": "BoxBreaker",
+    "callback_rvas": "0x00129FF8; 0x0012A000; 0x0012A008"
+  },
+  {
+    "object_name": "BoxBreakerHelp",
+    "callback_rvas": "0x0012A094; 0x0012A09C; 0x0012A0A4"
+  },
+  {
+    "object_name": "ChameleonDecoy",
+    "callback_rvas": "0x0012A370; 0x0012A378; 0x0012A390; 0x0012A418"
+  },
+  {
+    "object_name": "ClankBotFlingerVehicle",
+    "callback_rvas": "0x0012A518; 0x0012A668; 0x0012AAE8; 0x0012A6A0"
+  },
+  {
+    "object_name": "ClankBotShrapnel",
+    "callback_rvas": "0x0012B15C; 0x0012B164; 0x0012B16C"
+  },
+  {
+    "object_name": "ClankChallengeMenu",
+    "callback_rvas": "0x0012B4EC; 0x0012B544; 0x0012B54C"
+  },
+  {
+    "object_name": "ClankElectroTorso",
+    "callback_rvas": "0x0012B844; 0x0012B9BC; 0x0012BEB0; 0x0012BA2C"
+  },
+  {
+    "object_name": "ClankForShipAnim",
+    "callback_rvas": "0x0012C260; 0x0012C268; 0x0012C270"
+  },
+  {
+    "object_name": "ClankHead",
+    "callback_rvas": "0x0012C278; 0x0012C280; 0x0012C288"
+  },
+  {
+    "object_name": "ClankPack",
+    "callback_rvas": "0x0012C290; 0x0012C2C0; 0x0012C2C8"
+  },
+  {
+    "object_name": "ClankPlr",
+    "callback_rvas": "0x0012C2EC; 0x0012C338; 0x0012C340; 0x0012C348"
+  },
+  {
+    "object_name": "ClankRamTorso",
+    "callback_rvas": "0x0012C3FC; 0x0012C544; 0x0012C5C0; 0x0012C850"
+  },
+  {
+    "object_name": "ClankSawTorso",
+    "callback_rvas": "0x0012CDE4; 0x0012CF2C; 0x0012CF94; 0x0012D228"
+  },
+  {
+    "object_name": "ContinuePoint",
+    "callback_rvas": "0x0012D804; 0x0012D828; 0x0012D830"
+  },
+  {
+    "object_name": "ConveyorBelt",
+    "callback_rvas": "0x0012D948; 0x0012DAD8; 0x0012DAE0"
+  },
+  {
+    "object_name": "CowBell",
+    "callback_rvas": "0x0012E0EC; 0x0012E0F4; 0x0012E0FC"
+  },
+  {
+    "object_name": "Crate",
+    "callback_rvas": "0x0012E234; 0x0012E23C; 0x0012E324; 0x0012E244"
+  },
+  {
+    "object_name": "CrateChunk",
+    "callback_rvas": "0x0012E32C; 0x0012E334"
+  },
+  {
+    "object_name": "CrateChunkController",
+    "callback_rvas": "0x0012E990; 0x0012E998"
+  },
+  {
+    "object_name": "CrossbowGun",
+    "callback_rvas": "0x0012E9A0; 0x0012EA8C; 0x0012EC6C"
+  },
+  {
+    "object_name": "CrossbowShot",
+    "callback_rvas": "0x0012F2BC; 0x0012F2C4; 0x00130804"
+  },
+  {
+    "object_name": "CrystalGroundShard",
+    "callback_rvas": "0x001316F8; 0x0013193C; 0x00131B80"
+  },
+  {
+    "object_name": "DamageSphere",
+    "callback_rvas": "0x001322A0; 0x001322A8; 0x001322B0"
+  },
+  {
+    "object_name": "DeathTrigger",
+    "callback_rvas": "0x0013238C; 0x001323EC; 0x001323F4"
+  },
+  {
+    "object_name": "DerbyCrateHealth",
+    "callback_rvas": "0x00132568; 0x0013277C; 0x00132798; 0x001327B4"
+  },
+  {
+    "object_name": "DerbyCratePowerup",
+    "callback_rvas": "0x00132FBC; 0x00132FF0; 0x0013300C; 0x00133014"
+  },
+  {
+    "object_name": "DerbyPowerup",
+    "callback_rvas": "0x00133060; 0x00133094; 0x0013309C"
+  },
+  {
+    "object_name": "DerbyPowerupHealth",
+    "callback_rvas": "0x00133EE0; 0x00133F54; 0x00133F70"
+  },
+  {
+    "object_name": "DerbyTeleporterHealth",
+    "callback_rvas": "0x0013561C; 0x0013563C; 0x00135644"
+  },
+  {
+    "object_name": "DerbyTeleporterPowerup",
+    "callback_rvas": "0x00135B5C; 0x00135B84; 0x00135B8C"
+  },
+  {
+    "object_name": "DestructionDerby",
+    "callback_rvas": "0x001360C8; 0x00136214; 0x001362EC"
+  },
+  {
+    "object_name": "DualBlasterHUD",
+    "callback_rvas": "0x00136650; 0x00136658; 0x00136660"
+  },
+  {
+    "object_name": "electricXplo",
+    "callback_rvas": "0x00137100; 0x00136E54; 0x00136E5C"
+  },
+  {
+    "object_name": "ElectroBall",
+    "callback_rvas": "0x001389E8; 0x00138A58; 0x00138A9C"
+  },
+  {
+    "object_name": "ElectroshockWave",
+    "callback_rvas": "0x001396E0; 0x001396E8; 0x0013A1C0"
+  },
+  {
+    "object_name": "EnemyBotFlingerVehicle",
+    "callback_rvas": "0x0013A59C; 0x0013A750; 0x0013B938; 0x0013A788"
+  },
+  {
+    "object_name": "EnemyController",
+    "callback_rvas": "0x0013BC7C; 0x0013BE88; 0x0013C0C8"
+  },
+  {
+    "object_name": "EnemyElectroTorso",
+    "callback_rvas": "0x0013EA1C; 0x0013EC08; 0x0013F488; 0x0013EC90"
+  },
+  {
+    "object_name": "EnemyHead",
+    "callback_rvas": "0x0013F864; 0x0013F874; 0x0013F87C"
+  },
+  {
+    "object_name": "EnemyRamTorso",
+    "callback_rvas": "0x0013FC24; 0x0013FE10; 0x00140878; 0x0013FEA4"
+  },
+  {
+    "object_name": "EnemySawTorso",
+    "callback_rvas": "0x00140CD4; 0x00140E54; 0x001416C4; 0x00140ED4"
+  },
+  {
+    "object_name": "ExplosiveBee",
+    "callback_rvas": "0x00141AC4; 0x00141B6C; 0x00142A14"
+  },
+  {
+    "object_name": "Fire",
+    "callback_rvas": "0x00143B0C; 0x00143C80; 0x00143D80"
+  },
+  {
+    "object_name": "Flamethrower",
+    "callback_rvas": "0x001441C8; 0x00144344; 0x00145154"
+  },
+  {
+    "object_name": "FlyingCarLightweightDirectional",
+    "callback_rvas": "0x00147794; 0x00147988; 0x00147990"
+  },
+  {
+    "object_name": "FlyingCarLightweightOrbit",
+    "callback_rvas": "0x00148850; 0x00148A2C; 0x00148A34"
+  },
+  {
+    "object_name": "FogMoby",
+    "callback_rvas": "0x0014933C; 0x001493DC; 0x001493E4"
+  },
+  {
+    "object_name": "GenericTieForm",
+    "callback_rvas": "0x00149934; 0x00149984; 0x001499B8"
+  },
+  {
+    "object_name": "GiantClankGrowthPad",
+    "callback_rvas": "0x00149CC8; 0x00149E78; 0x00149F80"
+  },
+  {
+    "object_name": "GravityCrystal",
+    "callback_rvas": "0x0014A7F4; 0x0014AA0C; 0x0014B384"
+  },
+  {
+    "object_name": "HeadShrapnel",
+    "callback_rvas": "0x0014B780; 0x0014B794; 0x0014B79C"
+  },
+  {
+    "object_name": "Helipack",
+    "callback_rvas": "0x0014BD94; 0x0014BD9C; 0x0014BDA4"
+  },
+  {
+    "object_name": "Hookshot",
+    "callback_rvas": "0x0014BFA4; 0x0014C140; 0x0014C174"
+  },
+  {
+    "object_name": "Hypershot",
+    "callback_rvas": "0x0014C59C; 0x0014C638; 0x0014C6C0"
+  },
+  {
+    "object_name": "IntroMovie",
+    "callback_rvas": "0x0014C850; 0x0014C90C; 0x0014C914"
+  },
+  {
+    "object_name": "LaserTracer",
+    "callback_rvas": "0x001505B0; 0x001506A4; 0x0015082C"
+  },
+  {
+    "object_name": "Level04ChallengeUnlocker",
+    "callback_rvas": "0x00156038; 0x00156120; 0x00156128"
+  },
+  {
+    "object_name": "Level04Crane",
+    "callback_rvas": "0x0015618C; 0x00156430; 0x00156C78"
+  },
+  {
+    "object_name": "Level04Crusher",
+    "callback_rvas": "0x00156E64; 0x00157084; 0x001577F8"
+  },
+  {
+    "object_name": "Level04HelpManager",
+    "callback_rvas": "0x00158034; 0x001580E8; 0x001580F0"
+  },
+  {
+    "object_name": "Level04SecretDoor",
+    "callback_rvas": "0x001582D8; 0x001584E4; 0x00158548"
+  },
+  {
+    "object_name": "Level04StartMoby",
+    "callback_rvas": "0x001588AC; 0x001589F0; 0x001589F8"
+  },
+  {
+    "object_name": "LevelMusic",
+    "callback_rvas": "0x00158A80; 0x00158B60"
+  },
+  {
+    "object_name": "LightningAttack",
+    "callback_rvas": "0x001591C8; 0x00159208; 0x00159648"
+  },
+  {
+    "object_name": "MapOMaticGadget",
+    "callback_rvas": "0x00159AD0; 0x00159AD8; 0x00159AE0"
+  },
+  {
+    "object_name": "Microbot",
+    "callback_rvas": "0x00159AE8; 0x00159BD0; 0x0015A5E4"
+  },
+  {
+    "object_name": "MicroBotSurvival",
+    "callback_rvas": "0x0015B1B0; 0x0015B288; 0x0015B8BC"
+  },
+  {
+    "object_name": "MicrobotToss",
+    "callback_rvas": "0x0015CA58; 0x0015CC40; 0x0015D16C"
+  },
+  {
+    "object_name": "MicrobotTossBomb",
+    "callback_rvas": "0x0015D6A0; 0x0015D77C; 0x0015D7B0; 0x0015DA5C"
+  },
+  {
+    "object_name": "MicrobotTossGoal",
+    "callback_rvas": "0x0015E288; 0x0015E338; 0x0015E340"
+  },
+  {
+    "object_name": "MicrobotTossTeleporter",
+    "callback_rvas": "0x0015EC00; 0x0015EC44; 0x0015ECA8"
+  },
+  {
+    "object_name": "MobyCollection",
+    "callback_rvas": "0x0015F0C0; 0x0015F0C8; 0x0015F0D0"
+  },
+  {
+    "object_name": "MobyIce",
+    "callback_rvas": "0x0015F974; 0x0015F98C; 0x00160310"
+  },
+  {
+    "object_name": "Mootator",
+    "callback_rvas": "0x00160EB8; 0x00161108; 0x00162258"
+  },
+  {
+    "object_name": "MutantCow",
+    "callback_rvas": "0x001627C0; 0x00162944; 0x00162E70; 0x001AC4AC"
+  },
+  {
+    "object_name": "MutantMadCow",
+    "callback_rvas": "0x001639D0; 0x00163B38; 0x00163F54; 0x001AC4AC"
+  },
+  {
+    "object_name": "NapalmBubble",
+    "callback_rvas": "0x00164BC4; 0x00164BCC; 0x00164BD4"
+  },
+  {
+    "object_name": "ObstacleBouncer",
+    "callback_rvas": "0x00165658; 0x0016568C; 0x001656F0"
+  },
+  {
+    "object_name": "ObstacleSaw",
+    "callback_rvas": "0x001659E8; 0x00165A1C; 0x00165A24"
+  },
+  {
+    "object_name": "ObstacleSpinningFloor",
+    "callback_rvas": "0x00165F8C; 0x00166008; 0x00166010"
+  },
+  {
+    "object_name": "ObstacleVent",
+    "callback_rvas": "0x00166268; 0x00166314; 0x0016631C"
+  },
+  {
+    "object_name": "ObstacleWall",
+    "callback_rvas": "0x00166CD0; 0x00166E50; 0x00166EB4"
+  },
+  {
+    "object_name": "PDA",
+    "callback_rvas": "0x00166EBC; 0x00166EC4; 0x00166ECC"
+  },
+  {
+    "object_name": "Polarizer",
+    "callback_rvas": "0x00166F00; 0x001670BC; 0x00167C0C"
+  },
+  {
+    "object_name": "PowerupAmmo",
+    "callback_rvas": "0x00168B7C; 0x00168C48; 0x00168C50"
+  },
+  {
+    "object_name": "PowerupHealth",
+    "callback_rvas": "0x0016A0F0; 0x0016A140; 0x0016A17C"
+  },
+  {
+    "object_name": "Ratchet",
+    "callback_rvas": "0x0016B88C; 0x0016B8CC; 0x0016B8D4; 0x0016B8DC"
+  },
+  {
+    "object_name": "RatchetDecoyInner",
+    "callback_rvas": "0x0016C7D4; 0x0016C7DC; 0x0016D54C; 0x0016C89C"
+  },
+  {
+    "object_name": "RatchetDecoyOuter",
+    "callback_rvas": "0x0016DA5C; 0x0016DA98; 0x0016DAA0"
+  },
+  {
+    "object_name": "RatchetShip",
+    "callback_rvas": "0x0016DABC; 0x0016DCAC; 0x0016DD10"
+  },
+  {
+    "object_name": "RatchetShipAnimation",
+    "callback_rvas": "0x0016E7B8; 0x0016E000; 0x0016ED54"
+  },
+  {
+    "object_name": "Region",
+    "callback_rvas": "0x00170CBC; 0x00170DB8; 0x00170DC0"
+  },
+  {
+    "object_name": "Ryno",
+    "callback_rvas": "0x00170DC8; 0x00170EA4; 0x00171544"
+  },
+  {
+    "object_name": "RynoRocket",
+    "callback_rvas": "0x00171F48; 0x00171F64; 0x00171FB4"
+  },
+  {
+    "object_name": "ShieldBubble",
+    "callback_rvas": "0x00172E70; 0x00172EF4; 0x00172EFC"
+  },
+  {
+    "object_name": "ShieldCharger",
+    "callback_rvas": "0x00174BCC; 0x0017428C; 0x00174FFC; 0x00175800"
+  },
+  {
+    "object_name": "ShieldChargerBolt",
+    "callback_rvas": "0x00177660; 0x00177668; 0x001776AC"
+  },
+  {
+    "object_name": "ShockRocket",
+    "callback_rvas": "0x00177A00; 0x00177AEC; 0x00177DD8"
+  },
+  {
+    "object_name": "ShockRocketShot",
+    "callback_rvas": "0x0017894C; 0x0017899C; 0x00178FA4"
+  },
+  {
+    "object_name": "ShrapnelModel",
+    "callback_rvas": "0x00179DBC; 0x00179DC4; 0x00179DCC"
+  },
+  {
+    "object_name": "ShrinkBeam",
+    "callback_rvas": "0x0017A1E8; 0x0017A1F0; 0x0017A8A4"
+  },
+  {
+    "object_name": "ShrinkRayRatchet",
+    "callback_rvas": "0x0017B564; 0x0017B56C; 0x0017B574"
+  },
+  {
+    "object_name": "SimpleSound",
+    "callback_rvas": "0x0017B57C; 0x0017B6D4; 0x0017B6DC"
+  },
+  {
+    "object_name": "SmasherBot",
+    "callback_rvas": "0x0017BA44; 0x0017BB9C; 0x0017C1C0; 0x0017BBC8"
+  },
+  {
+    "object_name": "Spitfire",
+    "callback_rvas": "0x0017C8A4; 0x0017C8D8; 0x0017C8FC"
+  },
+  {
+    "object_name": "Splash",
+    "callback_rvas": "0x0017DC90; 0x0017DCD8; 0x0017DCE0"
+  },
+  {
+    "object_name": "Sproutomatic",
+    "callback_rvas": "0x0017E2B8; 0x0017E360; 0x0017E398"
+  },
+  {
+    "object_name": "StaticBarrierBelt",
+    "callback_rvas": "0x0017E95C; 0x0017E990; 0x0017E998"
+  },
+  {
+    "object_name": "SuckCannon",
+    "callback_rvas": "0x0017E9A0; 0x0017EAE8; 0x0017F104"
+  },
+  {
+    "object_name": "SuckCannonComet",
+    "callback_rvas": "0x001AD9D0; 0x001AD9D8; 0x001ADC0C"
+  },
+  {
+    "object_name": "SuckCannonCometTie",
+    "callback_rvas": "0x001AD9D0; 0x001AD9D8; 0x0017FA74"
+  },
+  {
+    "object_name": "SuckCannonManager",
+    "callback_rvas": "0x00180754; 0x001807A0; 0x001807A8"
+  },
+  {
+    "object_name": "SurvivalBGTile",
+    "callback_rvas": "0x001810B0; 0x001810C8; 0x001810D0"
+  },
+  {
+    "object_name": "SurvivalBot",
+    "callback_rvas": "0x001817BC; 0x001817C4; 0x00182AA0"
+  },
+  {
+    "object_name": "SurvivalBotPort",
+    "callback_rvas": "0x001849AC; 0x00184A18; 0x00184A4C"
+  },
+  {
+    "object_name": "SurvivalBotSpawner",
+    "callback_rvas": "0x00184F80; 0x00184FE8; 0x0018501C"
+  },
+  {
+    "object_name": "SurvivalBotTeleport",
+    "callback_rvas": "0x001853D4; 0x00185560; 0x00185668"
+  },
+  {
+    "object_name": "SurvivalBridge",
+    "callback_rvas": "0x00185B94; 0x00185C3C; 0x00185C7C"
+  },
+  {
+    "object_name": "SurvivalGround",
+    "callback_rvas": "0x001861F4; 0x00186228; 0x0018628C"
+  },
+  {
+    "object_name": "SurvivalReversePad",
+    "callback_rvas": "0x001864D8; 0x0018650C; 0x00186540"
+  },
+  {
+    "object_name": "SurvivalTrapeze",
+    "callback_rvas": "0x00186754; 0x00186844; 0x00186878"
+  },
+  {
+    "object_name": "SurvivalWall",
+    "callback_rvas": "0x00186C5C; 0x00186CE8; 0x00186D1C"
+  },
+  {
+    "object_name": "SwarmManager",
+    "callback_rvas": "0x001871E8; 0x00187230; 0x00187568"
+  },
+  {
+    "object_name": "Teleporter",
+    "callback_rvas": "0x00187D88; 0x00188140; 0x0018850C"
+  },
+  {
+    "object_name": "TieManipulator",
+    "callback_rvas": "0x00188E58; 0x00188E50; 0x00189430"
+  },
+  {
+    "object_name": "TitaniumBolt",
+    "callback_rvas": "0x001897C0; 0x001899B0; 0x00189B18"
+  },
+  {
+    "object_name": "TMRobotHeadB",
+    "callback_rvas": "0x0018A53C; 0x0018A964; 0x0018BFE8; 0x0018A668"
+  },
+  {
+    "object_name": "TMRobotTorsoB",
+    "callback_rvas": "0x0018EF20; 0x0018D818; 0x0018F4BC; 0x0018D4C0"
+  },
+  {
+    "object_name": "TorsoAShot",
+    "callback_rvas": "0x00191870; 0x001910A8; 0x001911A0"
+  },
+  {
+    "object_name": "TorsoShrapnel",
+    "callback_rvas": "0x00191D84; 0x00191D8C; 0x00191D94"
+  },
+  {
+    "object_name": "TriggerCollection",
+    "callback_rvas": "0x0019239C; 0x001923A4; 0x001923AC"
+  },
+  {
+    "object_name": "TripleWaveBeacon",
+    "callback_rvas": "0x001928A4; 0x00192A54; 0x00192A88"
+  },
+  {
+    "object_name": "VehicleController",
+    "callback_rvas": "0x00192D30; 0x00192E70; 0x001956DC"
+  },
+  {
+    "object_name": "VehicleHusk",
+    "callback_rvas": "0x00195EE8; 0x00195EF0; 0x00195F14; 0x00196168"
+  },
+  {
+    "object_name": "VehicleHuskSmasher",
+    "callback_rvas": "0x00196288; 0x00196290; 0x001962B4; 0x00196504"
+  },
+  {
+    "object_name": "VehicleMine",
+    "callback_rvas": "0x00196624; 0x00196650; 0x00196658"
+  },
+  {
+    "object_name": "VehicleMissile",
+    "callback_rvas": "0x00196A94; 0x00196AC4; 0x00196EA0"
+  },
+  {
+    "object_name": "vendor",
+    "callback_rvas": "0x00197528; 0x001976F0; 0x00197754"
+  },
+  {
+    "object_name": "Wrench",
+    "callback_rvas": "0x00197AD0; 0x00197BA4; 0x00197FE0"
+  }
+]

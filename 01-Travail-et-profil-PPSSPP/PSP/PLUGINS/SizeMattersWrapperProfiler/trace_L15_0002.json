@@ -1,0 +1,22 @@
+{
+  "schema": "rcsm-wrapper-trace/5",
+  "game_id": "UCES00420",
+  "plugin_version": "0.6.2-native-menu-dev.1",
+  "target_environment": "PPSSPP 1.19.3 / Windows 11",
+  "mode": "global_60fps",
+  "reason": "module_transition",
+  "module_index": 15,
+  "module_key": "LEVEL_15",
+  "sample_unit": "vblank",
+  "policy": {"default": "two_pass", "instrumentation_enabled": true, "two_pass_callsites": 0, "one_pass_callsites": 0, "custom_fallback_callsites": 0},
+  "capture": {"start_sample": 126752, "end_sample": 127132, "installed_callsites": 0, "equivalent_profile_matches": 2, "reference_base": "0x09139D00", "runtime_base": "0x09159D00", "address_delta": 131072, "resolution_source": "module_api"},
+  "unknown_hits": 0,
+  "entries": [
+    {"ra": "0x09176534", "runtime_ra": "0x09196534", "family_id": "WF-002", "installed": false, "configured_policy": "two_pass", "effective_policy": "two_pass", "custom_fallback": false, "hits": 0, "first_sample": 0, "last_sample": 0, "active_vblanks": 0, "same_vblank_hits": 0, "max_hits_per_vblank": 0, "gap_1_vblank": 0, "gap_2_vblank": 0, "gap_other_vblank": 0},
+    {"ra": "0x09176C10", "runtime_ra": "0x09196C10", "family_id": "WF-001", "installed": false, "configured_policy": "two_pass", "effective_policy": "two_pass", "custom_fallback": false, "hits": 0, "first_sample": 0, "last_sample": 0, "active_vblanks": 0, "same_vblank_hits": 0, "max_hits_per_vblank": 0, "gap_1_vblank": 0, "gap_2_vblank": 0, "gap_other_vblank": 0},
+    {"ra": "0x09176C44", "runtime_ra": "0x09196C44", "family_id": "WF-001", "installed": false, "configured_policy": "two_pass", "effective_policy": "two_pass", "custom_fallback": false, "hits": 0, "first_sample": 0, "last_sample": 0, "active_vblanks": 0, "same_vblank_hits": 0, "max_hits_per_vblank": 0, "gap_1_vblank": 0, "gap_2_vblank": 0, "gap_other_vblank": 0},
+    {"ra": "0x09176DC0", "runtime_ra": "0x09196DC0", "family_id": "WF-001", "installed": false, "configured_policy": "two_pass", "effective_policy": "two_pass", "custom_fallback": false, "hits": 0, "first_sample": 0, "last_sample": 0, "active_vblanks": 0, "same_vblank_hits": 0, "max_hits_per_vblank": 0, "gap_1_vblank": 0, "gap_2_vblank": 0, "gap_other_vblank": 0},
+    {"ra": "0x0917AA60", "runtime_ra": "0x0919AA60", "family_id": "WF-003", "installed": false, "configured_policy": "two_pass", "effective_policy": "two_pass", "custom_fallback": false, "hits": 0, "first_sample": 0, "last_sample": 0, "active_vblanks": 0, "same_vblank_hits": 0, "max_hits_per_vblank": 0, "gap_1_vblank": 0, "gap_2_vblank": 0, "gap_other_vblank": 0},
+    {"ra": "0x09182524", "runtime_ra": "0x091A2524", "family_id": "WF-004", "installed": false, "configured_policy": "two_pass", "effective_policy": "two_pass", "custom_fallback": false, "hits": 0, "first_sample": 0, "last_sample": 0, "active_vblanks": 0, "same_vblank_hits": 0, "max_hits_per_vblank": 0, "gap_1_vblank": 0, "gap_2_vblank": 0, "gap_other_vblank": 0}
+  ]
+}

@@ -1,0 +1,444 @@
+{
+  "module_index": 4,
+  "status": "experimental_not_release_validated",
+  "changes": [
+    {
+      "rva": 421984,
+      "original": 1007041800,
+      "patched": 1007041672,
+      "label": "Teleport emitter elapsed seconds",
+      "evidence": "resume-crates-result-1789592738689.json",
+      "validation": "experimental_gameplay_qualitative"
+    },
+    {
+      "rva": 1232796,
+      "original": 1007009664,
+      "patched": 1007009536,
+      "label": "ClankSaw two float countdowns",
+      "evidence": "resume-crates-result-1789592738689.json",
+      "validation": "experimental_partial"
+    },
+    {
+      "rva": 1261732,
+      "original": 1007009664,
+      "patched": 1007009536,
+      "label": "Nanotech fade timer -1 -> -0.5",
+      "evidence": "pickup-collection-1789593231151.json",
+      "validation": "experimental_gameplay_qualitative"
+    },
+    {
+      "rva": 1266428,
+      "original": 1006944128,
+      "patched": 1006944000,
+      "label": "Nanotech attraction timer -1 -> -0.5",
+      "evidence": "pickup-collection-1789593231151.json",
+      "validation": "experimental_gameplay_qualitative"
+    },
+    {
+      "rva": 1267612,
+      "original": 1006944128,
+      "patched": 1006944000,
+      "label": "TeleporterHealth countdown",
+      "evidence": "resume-crates-result-1789592738689.json",
+      "validation": "experimental_gameplay_qualitative"
+    },
+    {
+      "rva": 1268976,
+      "original": 1006944128,
+      "patched": 1006944000,
+      "label": "TeleporterPowerup countdown",
+      "evidence": "resume-crates-result-1789592738689.json",
+      "validation": "experimental_gameplay_qualitative"
+    },
+    {
+      "rva": 1308036,
+      "original": 1006944128,
+      "patched": 1006944000,
+      "label": "EnemyElectro countdown E8",
+      "evidence": "resume-crates-result-1789592738689.json",
+      "validation": "experimental_partial"
+    },
+    {
+      "rva": 1308296,
+      "original": 1006944128,
+      "patched": 1006944000,
+      "label": "EnemyElectro second float countdown",
+      "evidence": "resume-crates-result-1789592738689.json",
+      "validation": "experimental_partial"
+    },
+    {
+      "rva": 1313088,
+      "original": 1006944128,
+      "patched": 1006944000,
+      "label": "EnemyRam countdown",
+      "evidence": "resume-crates-result-1789592738689.json",
+      "validation": "experimental_partial"
+    },
+    {
+      "rva": 1313420,
+      "original": 1006944128,
+      "patched": 1006944000,
+      "label": "EnemyRam second countdown",
+      "evidence": "resume-crates-result-1789592738689.json",
+      "validation": "experimental_partial"
+    },
+    {
+      "rva": 1464880,
+      "original": 1006944128,
+      "patched": 1006944000,
+      "label": "ObstacleSaw cycle timer",
+      "evidence": "resume-crates-result-1789592738689.json",
+      "validation": "experimental_partial"
+    },
+    {
+      "rva": 1468524,
+      "original": 1007140736,
+      "patched": 1007140608,
+      "label": "ObstacleVent cycle timer",
+      "evidence": "resume-crates-result-1789592738689.json",
+      "validation": "experimental_partial"
+    },
+    {
+      "rva": 1716708,
+      "original": 1006911984,
+      "patched": 1006912112,
+      "label": "Saw retraction animation divisor",
+      "evidence": "resume-crates-result-1789592738689.json",
+      "validation": "experimental_partial"
+    },
+    {
+      "rva": 1716892,
+      "original": 1006911984,
+      "patched": 1006912112,
+      "label": "Saw extension animation divisor",
+      "evidence": "resume-crates-result-1789592738689.json",
+      "validation": "experimental_partial"
+    },
+    {
+      "rva": 3023976,
+      "original": 983091,
+      "patched": 1966182,
+      "label": "ClankSaw active/recharge integer durations",
+      "evidence": "resume-crates-result-1789592738689.json",
+      "validation": "experimental_partial"
+    },
+    {
+      "rva": 3028292,
+      "original": 1036831950,
+      "patched": 1028443342,
+      "label": "pickup initial speed",
+      "evidence": "pickup-collection-1789593231151.json",
+      "validation": "experimental_gameplay_qualitative"
+    },
+    {
+      "rva": 3028308,
+      "original": 1031127696,
+      "patched": 1014350480,
+      "label": "pickup acceleration",
+      "evidence": "pickup-collection-1789593231151.json",
+      "validation": "experimental_gameplay_qualitative"
+    },
+    {
+      "rva": 3028312,
+      "original": 1051372203,
+      "patched": 1042983595,
+      "label": "pickup max speed",
+      "evidence": "pickup-collection-1789593231151.json",
+      "validation": "experimental_gameplay_qualitative"
+    },
+    {
+      "rva": 3028316,
+      "original": 1034147594,
+      "patched": 1025982779,
+      "label": "pickup steering below cap",
+      "evidence": "pickup-collection-1789593231151.json",
+      "validation": "experimental_gameplay_qualitative"
+    },
+    {
+      "rva": 3028320,
+      "original": 1045220557,
+      "patched": 1037579919,
+      "label": "pickup steering at cap",
+      "evidence": "pickup-collection-1789593231151.json",
+      "validation": "experimental_gameplay_qualitative"
+    },
+    {
+      "rva": 3048588,
+      "original": 1045854033,
+      "patched": 1037465425,
+      "label": "SpinningFloor angular increment",
+      "evidence": "resume-crates-result-1789592738689.json",
+      "validation": "experimental_partial"
+    },
+    {
+      "rva": 3048792,
+      "original": 1032358025,
+      "patched": 1023969417,
+      "label": "Vent fade-in increment",
+      "evidence": "resume-crates-result-1789592738689.json",
+      "validation": "experimental_partial"
+    },
+    {
+      "rva": 3048796,
+      "original": 1032358025,
+      "patched": 1023969417,
+      "label": "Vent fade-out increment",
+      "evidence": "resume-crates-result-1789592738689.json",
+      "validation": "experimental_partial"
+    },
+    {
+      "rva": 3066244,
+      "original": 1045220558,
+      "patched": 1036831950,
+      "label": "Electro normal forward cap",
+      "evidence": "resume-crates-result-1789592738689.json",
+      "validation": "experimental_partial"
+    },
+    {
+      "rva": 3066248,
+      "original": 1045220558,
+      "patched": 1036831950,
+      "label": "Electro normal reverse cap",
+      "evidence": "resume-crates-result-1789592738689.json",
+      "validation": "experimental_partial"
+    },
+    {
+      "rva": 3066252,
+      "original": 1033951612,
+      "patched": 1025563004,
+      "label": "Electro normal turn step",
+      "evidence": "resume-crates-result-1789592738689.json",
+      "validation": "experimental_partial"
+    },
+    {
+      "rva": 3066256,
+      "original": 1001786210,
+      "patched": 985008994,
+      "label": "Electro normal forward accel",
+      "evidence": "resume-crates-result-1789592738689.json",
+      "validation": "experimental_partial"
+    },
+    {
+      "rva": 3066260,
+      "original": 1001786210,
+      "patched": 985008994,
+      "label": "Electro normal reverse accel",
+      "evidence": "resume-crates-result-1789592738689.json",
+      "validation": "experimental_partial"
+    },
+    {
+      "rva": 3066264,
+      "original": 1010174818,
+      "patched": 993397602,
+      "label": "Electro normal brake",
+      "evidence": "resume-crates-result-1789592738689.json",
+      "validation": "experimental_partial"
+    },
+    {
+      "rva": 3066268,
+      "original": 1001786210,
+      "patched": 985008994,
+      "label": "Electro normal coast",
+      "evidence": "resume-crates-result-1789592738689.json",
+      "validation": "experimental_partial"
+    },
+    {
+      "rva": 3066772,
+      "original": 3201092814,
+      "patched": 3192704206,
+      "label": "Ram impulse low",
+      "evidence": "resume-crates-result-1789592738689.json",
+      "validation": "experimental_partial"
+    },
+    {
+      "rva": 3066784,
+      "original": 3206125978,
+      "patched": 3197737370,
+      "label": "Ram impulse high",
+      "evidence": "resume-crates-result-1789592738689.json",
+      "validation": "experimental_partial"
+    },
+    {
+      "rva": 3066848,
+      "original": 1049135241,
+      "patched": 1040746633,
+      "label": "Ram normal forward cap",
+      "evidence": "resume-crates-result-1789592738689.json",
+      "validation": "experimental_partial"
+    },
+    {
+      "rva": 3066852,
+      "original": 1039068912,
+      "patched": 1030680304,
+      "label": "Ram normal reverse cap",
+      "evidence": "resume-crates-result-1789592738689.json",
+      "validation": "experimental_partial"
+    },
+    {
+      "rva": 3066856,
+      "original": 1029076817,
+      "patched": 1020688209,
+      "label": "Ram normal turn step",
+      "evidence": "resume-crates-result-1789592738689.json",
+      "validation": "experimental_partial"
+    },
+    {
+      "rva": 3066860,
+      "original": 1001786210,
+      "patched": 985008994,
+      "label": "Ram normal forward accel",
+      "evidence": "resume-crates-result-1789592738689.json",
+      "validation": "experimental_partial"
+    },
+    {
+      "rva": 3066864,
+      "original": 993397602,
+      "patched": 976620386,
+      "label": "Ram normal reverse accel",
+      "evidence": "resume-crates-result-1789592738689.json",
+      "validation": "experimental_partial"
+    },
+    {
+      "rva": 3066868,
+      "original": 1010174818,
+      "patched": 993397602,
+      "label": "Ram normal brake",
+      "evidence": "resume-crates-result-1789592738689.json",
+      "validation": "experimental_partial"
+    },
+    {
+      "rva": 3066872,
+      "original": 1001786210,
+      "patched": 985008994,
+      "label": "Ram normal coast",
+      "evidence": "resume-crates-result-1789592738689.json",
+      "validation": "experimental_partial"
+    },
+    {
+      "rva": 3066892,
+      "original": 1053609166,
+      "patched": 1045220558,
+      "label": "Ram charge cap forward",
+      "evidence": "resume-crates-result-1789592738689.json",
+      "validation": "experimental_partial"
+    },
+    {
+      "rva": 3066896,
+      "original": 1039068912,
+      "patched": 1030680304,
+      "label": "Ram charge cap reverse",
+      "evidence": "resume-crates-result-1789592738689.json",
+      "validation": "experimental_partial"
+    },
+    {
+      "rva": 3066900,
+      "original": 1029076817,
+      "patched": 1020688209,
+      "label": "Ram charge turn",
+      "evidence": "resume-crates-result-1789592738689.json",
+      "validation": "experimental_partial"
+    },
+    {
+      "rva": 3066904,
+      "original": 1045220559,
+      "patched": 1028443343,
+      "label": "Ram charge acceleration",
+      "evidence": "resume-crates-result-1789592738689.json",
+      "validation": "experimental_partial"
+    },
+    {
+      "rva": 3066908,
+      "original": 993397602,
+      "patched": 976620386,
+      "label": "Ram charge reverse accel",
+      "evidence": "resume-crates-result-1789592738689.json",
+      "validation": "experimental_partial"
+    },
+    {
+      "rva": 3066912,
+      "original": 1018563426,
+      "patched": 1001786210,
+      "label": "Ram charge brake",
+      "evidence": "resume-crates-result-1789592738689.json",
+      "validation": "experimental_partial"
+    },
+    {
+      "rva": 3066916,
+      "original": 1001786210,
+      "patched": 985008994,
+      "label": "Ram charge coast",
+      "evidence": "resume-crates-result-1789592738689.json",
+      "validation": "experimental_partial"
+    },
+    {
+      "rva": 3066944,
+      "original": 4915215,
+      "patched": 9830430,
+      "label": "Ram charge/recharge integer durations",
+      "evidence": "resume-crates-result-1789592738689.json",
+      "validation": "experimental_partial"
+    },
+    {
+      "rva": 3067544,
+      "original": 1045220558,
+      "patched": 1036831950,
+      "label": "forward cap",
+      "evidence": "resume-crates-result-1789592738689.json",
+      "validation": "experimental_partial"
+    },
+    {
+      "rva": 3067548,
+      "original": 1032358025,
+      "patched": 1023969417,
+      "label": "reverse cap",
+      "evidence": "resume-crates-result-1789592738689.json",
+      "validation": "experimental_partial"
+    },
+    {
+      "rva": 3067552,
+      "original": 1033951612,
+      "patched": 1025563004,
+      "label": "Clank turn",
+      "evidence": "resume-crates-result-1789592738689.json",
+      "validation": "experimental_partial"
+    },
+    {
+      "rva": 3067556,
+      "original": 1001786210,
+      "patched": 985008994,
+      "label": "forward acceleration",
+      "evidence": "resume-crates-result-1789592738689.json",
+      "validation": "experimental_partial"
+    },
+    {
+      "rva": 3067560,
+      "original": 993397602,
+      "patched": 976620386,
+      "label": "reverse acceleration",
+      "evidence": "resume-crates-result-1789592738689.json",
+      "validation": "experimental_partial"
+    },
+    {
+      "rva": 3067564,
+      "original": 1010174818,
+      "patched": 993397602,
+      "label": "braking",
+      "evidence": "resume-crates-result-1789592738689.json",
+      "validation": "experimental_partial"
+    },
+    {
+      "rva": 3067568,
+      "original": 1001786210,
+      "patched": 985008994,
+      "label": "coasting deceleration",
+      "evidence": "resume-crates-result-1789592738689.json",
+      "validation": "experimental_partial"
+    }
+  ],
+  "cave7_word34": {
+    "original": 1006911360,
+    "patched": 1006911232,
+    "scope": "module4 only",
+    "validation": "user reports debris looks normal"
+  }
+}

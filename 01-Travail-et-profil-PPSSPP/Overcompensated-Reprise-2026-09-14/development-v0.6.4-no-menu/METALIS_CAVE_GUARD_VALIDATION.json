@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "scope": "host test of exact extracted old/new prepare_full_patch functions, real generated tables and real rcsm_full_prepare; only PSP cache sync is a no-op; no game process touched",
+  "runtime_sha256": "e6ebc8af1eae253af9721a4a61b8dffc8888d3258330c44f236cf451cd535b5f",
+  "result": [
+    "PASS: actual generated Metalis template: old runtime rejects, new runtime prepares 167 entries",
+    "PASS: legacy 1.0 template normalises to 0.5",
+    "PASS: unexpected 2.0 template is rejected"
+  ]
+}

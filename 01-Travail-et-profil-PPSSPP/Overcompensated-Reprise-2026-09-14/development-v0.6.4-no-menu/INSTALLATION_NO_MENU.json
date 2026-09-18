@@ -1,0 +1,18 @@
+{
+  "timestamp_local": "2026-09-18T09:33:43.463376",
+  "version": "0.6.4-no-menu-dev.1",
+  "installed": true,
+  "enabled": false,
+  "plugin_path": "C:\\Users\\linki\\Documents\\PPSSPP\\PSP\\PLUGINS\\SizeMattersWrapperProfiler",
+  "backup": "C:\\Users\\linki\\Documents\\PPSSPP\\Overcompensated-Reprise-2026-09-14\\development-v0.6.4-no-menu\\backup-plugin-before-no-menu",
+  "before_sha256": "2913a613e77b1e7c749a017fed334585dfd50c15db9ee9a659420ecdab25fc44",
+  "after_sha256": "2c043c8bb8e3bc02da314d05227b2d67f3f1ee79dea7194126ef77e6c0203ddc",
+  "bytes": 81166,
+  "checks": {
+    "menu_symbols_absent": true,
+    "sidecar_path_absent_from_binary": true,
+    "plugin_disabled_preserved": true,
+    "backup_all_files_sha256_verified": true
+  },
+  "sidecar": "removed from plugin after verified backup; no longer read or written by binary"
+}

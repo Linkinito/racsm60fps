@@ -1,0 +1,43 @@
+{
+  "schema": "rcsm-in-situ-diagnostic/1",
+  "date": "2026-08-25",
+  "game_id": "UCES00420",
+  "environment": "PPSSPP 1.19.3 / Windows 11 Home",
+  "input": {
+    "stage": "01_SINGLE_POKITARU",
+    "plugin_version": "0.4.2-prealpha",
+    "status_log_sha256": "0be490583d35d9cc0f3a91a0c026199754515d99f508bc42d1eca3de77da3fa1",
+    "trace_sha256": "1d6661d2b485a6fca3ec4e32429e22f6df7170a21d3170ccda3c49c555f8db15"
+  },
+  "observations": {
+    "module": "LEVEL_01",
+    "runtime_base": "0x09140D00",
+    "address_delta": 28672,
+    "installed_callsites": 1,
+    "installed_ra": "0x0918B0C0",
+    "installed_family": "WF-002",
+    "installed_hits": 0,
+    "unknown_hits": 0,
+    "false_transition_entry_word": "0x682BACB6",
+    "stable_anchor_word": "0xC60E0000",
+    "runtime_suppression_word": "0x0E453BE4",
+    "user_report": "Ratchet remained visible and controllable while roughly half of Pokitaru was traversed without incident."
+  },
+  "diagnosis": {
+    "status": "FALSE_MODULE_TRANSITION_CAUSED_BY_PPSSPP_JIT_MARKER",
+    "confidence": "high",
+    "reason": "PPSSPP reserves the 0x68xxxxxx opcode class for JIT blocks and emulator hooks. The observed 0x682BACB6 matches its MIPS_IS_EMUHACK mask, while all independent Pokitaru guards remained valid and gameplay continued.",
+    "official_source": "https://github.com/hrydgard/ppsspp/blob/master/Core/MIPS/MIPS.h",
+    "official_opcode": "0x68000000",
+    "official_mask": "0xFC000000",
+    "not_demonstrated": "The WF-002 counter remained at zero, so this run did not execute or validate the Allegrex trampoline."
+  },
+  "v0.4.3_response": [
+    "Accept a PPSSPP emuhack opcode only at wrapper prologue word zero.",
+    "Continue to require the stable level anchor, prologue words one through three, the relocated inner jal and every candidate callsite exactly.",
+    "Log the accepted JIT marker instead of exporting a false module_transition trace.",
+    "Replace the silent WF-002 probe with both LEVEL_01 WF-019 TriggeredDoor branches at reference RAs 0x092C142C and 0x092C16AC.",
+    "Keep full-module instrumentation disabled until a focused trace contains at least one hit and gameplay remains transparent."
+  ],
+  "remaining_boundary": "Run v0.4.3 Stage 01 near one or more doors on Pokitaru and return status.log plus the manual trace."
+}

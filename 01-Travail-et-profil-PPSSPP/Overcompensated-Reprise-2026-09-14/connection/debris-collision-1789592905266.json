@@ -1,0 +1,35 @@
+{
+  "time": "2026-09-16T21:08:25.265Z",
+  "status": "applied_verified",
+  "userValidated": [
+    "crate respawn delay",
+    "teleport animation"
+  ],
+  "cpuBefore": {
+    "event": "cpu.status",
+    "ticket": "wf29-3",
+    "stepping": false,
+    "paused": false,
+    "pc": 142628724,
+    "ticks": 3004770906909
+  },
+  "base": 152354048,
+  "plugin": 144011520,
+  "cave": 144079168,
+  "originalCave": "wP+9JygAsK8lgIAAIAC05wZlAEYAPwQ8AGCERCQADsaBcwxGJAAO5gQAD8bCewxGAADOxIBzD0YAAM7kAAASxQgADsYEANHEgnMMRsKUDEbCnAxGwpwMRkCMDkZAjBNGBADR5AwAD8bCewxGCADOxIBzD0YIAM7kgpQMRggADsaAcxJGCAAO5oA/BDwAYIREA89FCgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+  "change": {
+    "address": 144079304,
+    "before": 1006911360,
+    "after": 1006911232
+  },
+  "cpuAfter": {
+    "event": "cpu.status",
+    "ticket": "wf29-63",
+    "stepping": false,
+    "paused": false,
+    "pc": 142628724,
+    "ticks": 3004833869809
+  },
+  "persisted": true,
+  "installed": 1
+}

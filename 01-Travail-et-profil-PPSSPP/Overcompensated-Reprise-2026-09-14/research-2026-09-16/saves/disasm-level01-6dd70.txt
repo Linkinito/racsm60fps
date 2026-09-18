@@ -1,0 +1,32 @@
+0006DD70 beqz $a2, 0x6dddc
+0006DD74 nop 
+0006DD78 sltiu $a2, $a1, 0xf
+0006DD7C beqz $a2, 0x6dd88
+0006DD80 lui $a3, 0x2d
+0006DD84 addiu $a1, $a1, 1
+0006DD88 lw $a3, -0x3a78($a3)
+0006DD8C lui $t0, 0x2b
+0006DD90 lw $t0, -0xd80($t0)
+0006DD94 sll $a3, $a3, 9
+0006DD98 srl $a2, $a0, 1
+0006DD9C addu $a3, $t0, $a3
+0006DDA0 lui $t1, 5
+0006DDA4 addu $a2, $a3, $a2
+0006DDA8 addiu $a3, $t1, 0x34e0
+0006DDAC addu $a2, $a2, $a3
+0006DDB0 andi $a3, $a0, 1
+0006DDB4 beqz $a3, 0x6ddd0
+0006DDB8 lbu $a0, ($a2)
+0006DDBC andi $a0, $a0, 0xf
+0006DDC0 sll $a1, $a1, 4
+0006DDC4 or $a0, $a0, $a1
+0006DDC8 b 0x6dddc
+0006DDCC sb $a0, ($a2)
+0006DDD0 andi $a0, $a0, 0xf0
+0006DDD4 or $a0, $a0, $a1
+0006DDD8 sb $a0, ($a2)
+0006DDDC jr $ra
+0006DDE0 nop 
+0006DDE4 addiu $sp, $sp, -0x20
+0006DDE8 sw $s0, 0x10($sp)
+0006DDEC move $s0, $a0

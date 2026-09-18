@@ -1,0 +1,14 @@
+[
+  {
+    "requested": 30,
+    "accepted": true
+  },
+  {
+    "requested": 60,
+    "accepted": true
+  },
+  {
+    "requested": 45,
+    "accepted": false
+  }
+]

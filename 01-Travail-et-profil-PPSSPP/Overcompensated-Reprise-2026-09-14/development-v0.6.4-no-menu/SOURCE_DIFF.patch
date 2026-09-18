@@ -1,0 +1,144 @@
+--- v063/src/psp_plugin_runtime.c
++++ v064/src/psp_plugin_runtime.c
+@@ -31,9 +31,9 @@
+ #include "rcsm_fps_choice.h"
+ #include "wrapper_profiles.generated.h"
+ 
+-#define RCSM_VERSION "0.6.3-generalisation-dev.2"
+-
+-/* Menu/debugger mailbox. Monitor is the sole owner of g_fps_choice. */
++#define RCSM_VERSION "0.6.4-no-menu-dev.1"
++
++/* Startup INI selects FPS. These symbols expose telemetry only: no runtime toggle. */
+ volatile uint32_t g_rcsm_requested_fps = 60u;
+ volatile uint32_t g_rcsm_applied_fps = 0u;
+ volatile uint32_t g_rcsm_fps_pending = 1u;
+@@ -864,7 +864,6 @@
+     return result;
+ }
+ 
+-#include "menu_runtime.inc"
+ 
+ static int prepare_full_patch(const RcsmRuntimeBinding *binding) {
+     const RcsmFullModule *m = rcsm_full_module(binding->profile->module_index);
+@@ -880,10 +879,11 @@
+                 !rcsm_jal_reachable(addresses[i],target)) return 0;
+             g_full_caves[i][g_rcsm_cave_return_indices[i]] = rcsm_encode_j(target);
+         }
+-        /* Metalis collision countdown must use the same half-step as motion.
+-           Other modules retain the original template until separately audited. */
++        /* Accept the legacy and the already-generalised half-step template.
++           The latter is present in the generated v0.6.3 tables. */
+         if (m->module_index == 4u && i == 7u) {
+-            if (g_full_caves[i][34] != 0x3C043F80u) return 0;
++            if (g_full_caves[i][34] != 0x3C043F80u &&
++                g_full_caves[i][34] != 0x3C043F00u) return 0;
+             g_full_caves[i][34] = 0x3C043F00u;
+         }
+         sync_game_code(addresses[i],sizeof(g_full_caves[i]),NULL);
+@@ -1730,15 +1730,7 @@
+     while (!g_stop_requested) {
+         RcsmRuntimeDetection detected;
+         int detected_valid;
+-        uint32_t requested = g_rcsm_requested_fps;
+-        if (requested != g_fps_choice.requested) {
+-            if (g_config.mode == RCSM_MODE_GLOBAL_60FPS && rcsm_fps_request(&g_fps_choice, requested))
+-                log_line("frame_rate requested=%u; deferred until verified module reload", (unsigned)requested);
+-            else g_rcsm_requested_fps = g_fps_choice.requested;
+-        }
+-        menu_save_choice();
+         detected_valid = resolve_current_module(&detected);
+-        menu_monitor(&detected);
+         if (g_binding.profile != NULL &&
+             detection_matches_binding(&detected, &g_binding) &&
+             detected.entry_guard_is_emuhack && !g_binding.jit_entry_seen) {
+@@ -1845,7 +1837,6 @@
+         (void)resolve_current_module(&detected);
+         deactivate_profile(detection_matches_binding(&detected, &g_binding), "plugin_stop");
+     }
+-    menu_stop();
+     log_line("stop version=%s", RCSM_VERSION);
+ }
+ 
+@@ -1856,7 +1847,6 @@
+     g_stop_requested = 0;
+     g_monitor_thread = sceKernelGetThreadId();
+     load_config();
+-    if(g_config.mode==RCSM_MODE_GLOBAL_60FPS)menu_load_choice();
+     g_vblank_thread = sceKernelCreateThread(
+         "rcsm_vblank_clock", vblank_thread, 0x2Eu, 0x800u, PSP_THREAD_ATTR_USER, NULL
+     );
+--- v063/Makefile
++++ v064/Makefile
+@@ -1,5 +1,5 @@
+ TARGET = patch
+-OBJS = src/rcsm_menu.o src/menu_hook.o generated/menu_profiles.generated.o src/rcsm_fps_choice.o  src/psp_plugin_runtime.o src/profiler_hook.o src/rcsm_profiler_core.o src/rcsm_format.o src/rcsm_full_patch.o generated/wrapper_profiles.generated.o generated/full_patch.generated.o
++OBJS = src/rcsm_fps_choice.o  src/psp_plugin_runtime.o src/profiler_hook.o src/rcsm_profiler_core.o src/rcsm_format.o src/rcsm_full_patch.o generated/wrapper_profiles.generated.o generated/full_patch.generated.o
+ 
+ INCDIR = include generated
+ CFLAGS = -O2 -G0 -std=c11 -Wall -Wextra -Werror -fno-strict-aliasing
+--- v063/RCSMProfiler.ini
++++ v064/RCSMProfiler.ini
+@@ -1,9 +1,9 @@
+-; Overcompensated v0.6.3-generalisation-dev.2 - UCES00420 / PPSSPP 1.19.3
++; Overcompensated v0.6.4-no-menu-dev.1 - UCES00420 / PPSSPP 1.19.3
+ ; Configuration lue au demarrage. Redemarrer PPSSPP apres toute modification.
+ ; Desactiver tous les anciens cheats 60 FPS et les autres PRX correcteurs.
+ [dispatcher]
+ mode = global_60fps
+-; Applied on plugin start or a verified module reload, never mid-round.
++; Startup INI only: menu toggle and sidecar preference have been removed.
+ frame_rate = 60
+ allowed_module = 0
+ ; 1=socle, 2=armes, 4=breakables/boulons, 8=particules. 15 active l'ensemble.
+--- v063/tools/run_host_checks.py
++++ v064/tools/run_host_checks.py
+@@ -17,7 +17,6 @@
+     root=Path(__file__).resolve().parents[1]
+     reports=[]
+     suites={
+-        'test_menu':['src/rcsm_menu.c'],
+         'test_fps_choice':['src/rcsm_fps_choice.c'],
+         'test_full_patch':['src/rcsm_full_patch.c','generated/full_patch.generated.c','src/rcsm_profiler_core.c','generated/wrapper_profiles.generated.c'],
+         'test_profiler_core':['src/rcsm_profiler_core.c','generated/wrapper_profiles.generated.c'],
+--- v063/tools/validate_prx.py
++++ v064/tools/validate_prx.py
+@@ -99,9 +99,10 @@
+ 
+ def locate_tool(name: str, pspdev: Path | None) -> Path | None:
+     if pspdev is not None:
+-        candidate = pspdev / "bin" / name
+-        if candidate.is_file():
+-            return candidate
++        for executable in (name, name + ".exe"):
++            candidate = pspdev / "bin" / executable
++            if candidate.is_file():
++                return candidate
+     found = shutil.which(name)
+     return Path(found) if found else None
+ 
+@@ -284,8 +285,8 @@
+         checks,
+     )
+     require(
+-        '#define RCSM_VERSION "0.6.3-generalisation-dev.2"' in runtime_source,
+-        "version runtime 0.6.3-generalisation-dev.2",
++        '#define RCSM_VERSION "0.6.4-no-menu-dev.1"' in runtime_source,
++        "version runtime 0.6.4-no-menu-dev.1",
+         checks,
+     )
+     require(
+@@ -319,7 +320,7 @@
+         missing = [name for name, path in tools.items() if path is None]
+         require(not missing, f"binutils PSP disponibles ({', '.join(missing) or 'aucun manquant'})", checks)
+         require(elf_path.is_file() and prx_path.is_file(), "patch.elf et patch.prx prÃ©sents", checks)
+-        require(b"0.6.3-generalisation-dev.2" in prx_path.read_bytes(), "version 0.6.3 intÃ©grÃ©e au PRX", checks)
++        require(b"0.6.4-no-menu-dev.1" in prx_path.read_bytes(), "version 0.6.4 intÃ©grÃ©e au PRX", checks)
+ 
+         gcc_version = run(tools["psp-gcc"], "--version").splitlines()[0]
+         size_output = run(tools["psp-size"], str(elf_path))
+@@ -466,3 +467,4 @@
+ if __name__ == "__main__":
+     main()
+ 
++

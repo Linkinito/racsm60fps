@@ -1,0 +1,15 @@
+{
+  "toolchain_archive_sha256": "037f902acd90cfcf4711aeee6462479a6d0eabee6faf93ff44fe1081e653d512",
+  "compiler": "psp-gcc 15.2.0 Windows dmang-dev v2",
+  "outputs": {
+    "patch.elf": {
+      "size": 157964,
+      "sha256": "19fb1c0d7b972b8b39ae01f7a83083f626aa180b021d257da37c2348fc5d95e6"
+    },
+    "patch.prx": {
+      "size": 127674,
+      "sha256": "d1239a3f4c7302fbfb57cc592f220973dfe5c0467ccb5ffcbd8074ad87b86354"
+    }
+  },
+  "installed": false
+}

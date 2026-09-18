@@ -1,0 +1,36 @@
+{
+  "time": "2026-09-15T21:12:58.343Z",
+  "address": 152528980,
+  "before": {
+    "event": "cpu.breakpoint.list",
+    "ticket": "wf29-4",
+    "breakpoints": []
+  },
+  "add": {
+    "event": "cpu.breakpoint.add",
+    "ticket": "wf29-5"
+  },
+  "after": {
+    "event": "cpu.breakpoint.list",
+    "ticket": "wf29-6",
+    "breakpoints": [
+      {
+        "address": 152528980,
+        "enabled": true,
+        "log": false,
+        "condition": null,
+        "logFormat": null,
+        "symbol": null,
+        "code": "addiu sp,sp,-0x50"
+      }
+    ]
+  },
+  "cpu": {
+    "event": "cpu.status",
+    "ticket": "wf29-7",
+    "stepping": false,
+    "paused": false,
+    "pc": 154231188,
+    "ticks": 28070185617
+  }
+}

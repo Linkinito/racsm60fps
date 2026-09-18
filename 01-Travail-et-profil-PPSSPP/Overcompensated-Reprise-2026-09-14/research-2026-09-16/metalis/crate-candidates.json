@@ -1,0 +1,37 @@
+{
+  "status": "STAGED_NOT_APPLIED_NOT_VISUALLY_VALIDATED",
+  "game": "UCES00420",
+  "module": 4,
+  "sha256": "6896122ac19973e928303dc94c40fa309b5f06e5fef6ab14f624987035a4dc37",
+  "changes": [
+    {
+      "label": "TeleporterHealth countdown",
+      "rva": 1267612,
+      "before": 1006944128,
+      "after": 1006944000,
+      "verified_against_original": true
+    },
+    {
+      "label": "TeleporterPowerup countdown",
+      "rva": 1268976,
+      "before": 1006944128,
+      "after": 1006944000,
+      "verified_against_original": true
+    },
+    {
+      "label": "Teleport emitter elapsed seconds",
+      "rva": 421984,
+      "before": 1007041800,
+      "after": 1007041672,
+      "verified_against_original": true
+    }
+  ],
+  "conditions": [
+    "Verify fresh module base; never reuse previous absolute addresses",
+    "Require v0.6 global 60fps active and CPU suspended",
+    "Read original instructions with replacements:false",
+    "Preflight all words before any write; snapshot; readback; rollback only changed words on failure",
+    "Do not change 30-to-frame conversion at 1359C4 or 135F18: countdown already halved",
+    "67060 is shared emitter timing: scope wider than two crate teleporters; full VFX lifetime remains to audit"
+  ]
+}

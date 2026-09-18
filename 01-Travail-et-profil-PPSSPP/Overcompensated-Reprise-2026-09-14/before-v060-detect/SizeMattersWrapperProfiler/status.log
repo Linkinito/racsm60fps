@@ -1,0 +1,60 @@
+start version=0.4.5-prealpha target=PPSSPP-1.19.3-Windows11 trace_schema=4 mode=full_module single_ra=0x091840C0 focus_family=19 allowed_module=3 poll_us=100000 stable=3 reference_base=0x09139D00 resolver=module_api+fallback_scan
+start version=0.4.5-prealpha target=PPSSPP-1.19.3-Windows11 trace_schema=4 mode=full_module single_ra=0x091840C0 focus_family=19 allowed_module=3 poll_us=100000 stable=3 reference_base=0x09139D00 resolver=module_api+fallback_scan
+module armed key=LEVEL_03 index=3 mode=full_module family=WF-019 hook=0x08972C44 callsites=33 resolver=module_api base=0x0915AD00 delta=135168 entry=0x27BDFFC0 jit=0
+start version=0.4.5-prealpha target=PPSSPP-1.19.3-Windows11 trace_schema=4 mode=full_module single_ra=0x091840C0 focus_family=19 allowed_module=3 poll_us=100000 stable=3 reference_base=0x09139D00 resolver=module_api+fallback_scan
+module armed key=LEVEL_03 index=3 mode=full_module family=WF-019 hook=0x08972C44 callsites=33 resolver=module_api base=0x0915AD00 delta=135168 entry=0x27BDFFC0 jit=0
+start version=0.4.5-prealpha target=PPSSPP-1.19.3-Windows11 trace_schema=4 mode=full_module single_ra=0x091840C0 focus_family=19 allowed_module=3 poll_us=100000 stable=3 reference_base=0x09139D00 resolver=module_api+fallback_scan
+module armed key=LEVEL_03 index=3 mode=full_module family=WF-019 hook=0x0895A044 callsites=33 resolver=module_api base=0x09141D00 delta=32768 entry=0x27BDFFC0 jit=0
+start version=0.4.5-prealpha target=PPSSPP-1.19.3-Windows11 trace_schema=4 mode=full_module single_ra=0x091840C0 focus_family=19 allowed_module=3 poll_us=100000 stable=3 reference_base=0x09139D00 resolver=module_api+fallback_scan
+module armed key=LEVEL_03 index=3 mode=full_module family=WF-019 hook=0x0895A044 callsites=33 resolver=module_api base=0x09141D00 delta=32768 entry=0x27BDFFC0 jit=0
+PPSSPP JIT marker accepted key=LEVEL_03 address=0x09150080 word=0x680013F2; remaining guards valid
+start version=0.4.5-prealpha target=PPSSPP-1.19.3-Windows11 trace_schema=4 mode=full_module single_ra=0x091840C0 focus_family=19 allowed_module=3 poll_us=100000 stable=3 reference_base=0x09139D00 resolver=module_api+fallback_scan
+module armed key=LEVEL_03 index=3 mode=full_module family=WF-019 hook=0x0895A044 callsites=33 resolver=module_api base=0x09141D00 delta=32768 entry=0x27BDFFC0 jit=0
+PPSSPP JIT marker accepted key=LEVEL_03 address=0x09150080 word=0x680013F2; remaining guards valid
+trace saved path=ms0:/PSP/PLUGINS/SizeMattersWrapperProfiler/trace_L03_0001.json module=3 entries=33
+module detected key=LEVEL_22 index=22 matches=1 mode=full_module writes=0 resolver=module_api base=0x09141D00 delta=32768 entry=0x27BDFFC0 jit=0
+PPSSPP JIT marker accepted key=LEVEL_22 address=0x0914F890 word=0x6856F5C6; remaining guards valid
+start version=0.4.5-prealpha target=PPSSPP-1.19.3-Windows11 trace_schema=4 mode=full_module single_ra=0x091840C0 focus_family=19 allowed_module=3 poll_us=100000 stable=3 reference_base=0x09139D00 resolver=module_api+fallback_scan
+module armed key=LEVEL_03 index=3 mode=full_module family=WF-019 hook=0x0895A044 callsites=33 resolver=module_api base=0x09141D00 delta=32768 entry=0x27BDFFC0 jit=0
+PPSSPP JIT marker accepted key=LEVEL_03 address=0x09150080 word=0x680013F2; remaining guards valid
+trace saved path=ms0:/PSP/PLUGINS/SizeMattersWrapperProfiler/trace_L03_0001.json module=3 entries=33
+module detected key=LEVEL_22 index=22 matches=1 mode=full_module writes=0 resolver=module_api base=0x09141D00 delta=32768 entry=0x27BDFFC0 jit=0
+PPSSPP JIT marker accepted key=LEVEL_22 address=0x0914F890 word=0x6855A4A2; remaining guards valid
+trace saved path=ms0:/PSP/PLUGINS/SizeMattersWrapperProfiler/trace_L22_0002.json module=22 entries=11
+module armed key=LEVEL_03 index=3 mode=full_module family=WF-019 hook=0x0895A044 callsites=33 resolver=module_api base=0x09141D00 delta=32768 entry=0x27BDFFC0 jit=0
+PPSSPP JIT marker accepted key=LEVEL_03 address=0x09150080 word=0x688DC4BE; remaining guards valid
+trace saved path=ms0:/PSP/PLUGINS/SizeMattersWrapperProfiler/trace_L03_0003.json module=3 entries=33
+trace saved path=ms0:/PSP/PLUGINS/SizeMattersWrapperProfiler/trace_L03_0004.json module=3 entries=33
+module detected key=LEVEL_04 index=4 matches=1 mode=full_module writes=0 resolver=module_api base=0x09141D00 delta=32768 entry=0x27BDFFC0 jit=0
+PPSSPP JIT marker accepted key=LEVEL_04 address=0x0914FE54 word=0x6816E252; remaining guards valid
+start version=0.4.5-prealpha target=PPSSPP-1.19.3-Windows11 trace_schema=4 mode=full_module single_ra=0x091840C0 focus_family=19 allowed_module=3 poll_us=100000 stable=3 reference_base=0x09139D00 resolver=module_api+fallback_scan
+start version=0.4.5-prealpha target=PPSSPP-1.19.3-Windows11 trace_schema=4 mode=full_module single_ra=0x091840C0 focus_family=19 allowed_module=3 poll_us=100000 stable=3 reference_base=0x09139D00 resolver=module_api+fallback_scan
+module armed key=LEVEL_03 index=3 mode=full_module family=WF-019 hook=0x0895A044 callsites=33 resolver=module_api base=0x09141D00 delta=32768 entry=0x27BDFFC0 jit=0
+PPSSPP JIT marker accepted key=LEVEL_03 address=0x09150080 word=0x680013F2; remaining guards valid
+trace saved path=ms0:/PSP/PLUGINS/SizeMattersWrapperProfiler/trace_L03_0001.json module=3 entries=33
+module detected key=LEVEL_22 index=22 matches=1 mode=full_module writes=0 resolver=module_api base=0x09141D00 delta=32768 entry=0x27BDFFC0 jit=0
+PPSSPP JIT marker accepted key=LEVEL_22 address=0x0914F890 word=0x6865DD46; remaining guards valid
+trace saved path=ms0:/PSP/PLUGINS/SizeMattersWrapperProfiler/trace_L22_0002.json module=22 entries=11
+module armed key=LEVEL_03 index=3 mode=full_module family=WF-019 hook=0x0895A044 callsites=33 resolver=module_api base=0x09141D00 delta=32768 entry=0x27BDFFC0 jit=0
+PPSSPP JIT marker accepted key=LEVEL_03 address=0x09150080 word=0x689F063A; remaining guards valid
+health changed key=LEVEL_03 original=33 hook=0; treating as same-level reload
+trace saved path=ms0:/PSP/PLUGINS/SizeMattersWrapperProfiler/trace_L03_0003.json module=3 entries=33
+redirects removed key=LEVEL_03 modified=0 mismatched=0 reason=redirect_health_change
+module armed key=LEVEL_03 index=3 mode=full_module family=WF-019 hook=0x0895A044 callsites=33 resolver=module_api base=0x09141D00 delta=32768 entry=0x27BDFFC0 jit=0
+PPSSPP JIT marker accepted key=LEVEL_03 address=0x09150080 word=0x68D4711A; remaining guards valid
+trace saved path=ms0:/PSP/PLUGINS/SizeMattersWrapperProfiler/trace_L03_0004.json module=3 entries=33
+trace saved path=ms0:/PSP/PLUGINS/SizeMattersWrapperProfiler/trace_L03_0005.json module=3 entries=33
+module detected key=LEVEL_04 index=4 matches=1 mode=full_module writes=0 resolver=module_api base=0x09141D00 delta=32768 entry=0x27BDFFC0 jit=0
+PPSSPP JIT marker accepted key=LEVEL_04 address=0x0914FE54 word=0x68ED944A; remaining guards valid
+start version=0.4.5-prealpha target=PPSSPP-1.19.3-Windows11 trace_schema=4 mode=full_module single_ra=0x091840C0 focus_family=19 allowed_module=3 poll_us=100000 stable=3 reference_base=0x09139D00 resolver=module_api+fallback_scan
+module detected key=LEVEL_01 index=1 matches=1 mode=full_module writes=0 resolver=module_api base=0x09141D00 delta=32768 entry=0x27BDFFC0 jit=0
+PPSSPP JIT marker accepted key=LEVEL_01 address=0x0915005C word=0x682B992E; remaining guards valid
+trace saved path=ms0:/PSP/PLUGINS/SizeMattersWrapperProfiler/trace_L01_0001.json module=1 entries=55
+module detected key=LEVEL_04 index=4 matches=1 mode=full_module writes=0 resolver=module_api base=0x09141D00 delta=32768 entry=0x27BDFFC0 jit=0
+PPSSPP JIT marker accepted key=LEVEL_04 address=0x0914FE54 word=0x689EAE6A; remaining guards valid
+trace saved path=ms0:/PSP/PLUGINS/SizeMattersWrapperProfiler/trace_L04_0002.json module=4 entries=36
+module detected key=LEVEL_01 index=1 matches=1 mode=full_module writes=0 resolver=module_api base=0x09141D00 delta=32768 entry=0x27BDFFC0 jit=0
+PPSSPP JIT marker accepted key=LEVEL_01 address=0x0915005C word=0x68C5C99A; remaining guards valid
+start version=0.4.5-prealpha target=PPSSPP-1.19.3-Windows11 trace_schema=4 mode=full_module single_ra=0x091840C0 focus_family=19 allowed_module=3 poll_us=100000 stable=3 reference_base=0x09139D00 resolver=module_api+fallback_scan
+module detected key=LEVEL_01 index=1 matches=1 mode=full_module writes=0 resolver=module_api base=0x09141D00 delta=32768 entry=0x27BDFFC0 jit=0
+PPSSPP JIT marker accepted key=LEVEL_01 address=0x0915005C word=0x682B9B1E; remaining guards valid

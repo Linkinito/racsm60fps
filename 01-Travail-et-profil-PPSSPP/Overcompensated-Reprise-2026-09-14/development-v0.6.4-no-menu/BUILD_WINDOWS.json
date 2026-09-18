@@ -1,0 +1,17 @@
+{
+  "toolchain_archive_sha256": "037f902acd90cfcf4711aeee6462479a6d0eabee6faf93ff44fe1081e653d512",
+  "compiler": "psp-gcc 15.2.0 Windows dmang-dev v2",
+  "outputs": {
+    "patch.elf": {
+      "size": 107784,
+      "sha256": "61b70c0532f23f558da7ca62c84eb77b68d1dd6170d83a606e4f78505eeb8423"
+    },
+    "patch.prx": {
+      "size": 81166,
+      "sha256": "2c043c8bb8e3bc02da314d05227b2d67f3f1ee79dea7194126ef77e6c0203ddc"
+    }
+  },
+  "installed": true,
+  "enabled": false,
+  "installed_path": "C:\\Users\\linki\\Documents\\PPSSPP\\PSP\\PLUGINS\\SizeMattersWrapperProfiler\\patch.prx"
+}

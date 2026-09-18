@@ -1,0 +1,1446 @@
+{
+  "time": "2026-09-16T22:42:50.249Z",
+  "scope": "read-only integration check; not gameplay validation",
+  "game": {
+    "event": "game.status",
+    "ticket": "wf29-1",
+    "game": {
+      "id": "UCES00420",
+      "version": "1.00",
+      "title": "Ratchet and Clank: Size Matters"
+    },
+    "paused": false
+  },
+  "base": 152358144,
+  "pluginBase": 144011520,
+  "sites": [
+    {
+      "rva": 13360,
+      "expected": 1006910600,
+      "observed": 1006910600,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 13384,
+      "expected": 1006943368,
+      "observed": 1006943368,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 85584,
+      "expected": 1006910600,
+      "observed": 1006910600,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 163488,
+      "expected": 170238064,
+      "observed": 170238064,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 163492,
+      "expected": 0,
+      "observed": 0,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 163640,
+      "expected": 0,
+      "observed": 0,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 196444,
+      "expected": 1176265472,
+      "observed": 1176265472,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 196476,
+      "expected": 1176265473,
+      "observed": 1176265473,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 196884,
+      "expected": 1176265472,
+      "observed": 1176265472,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 200388,
+      "expected": 1175217408,
+      "observed": 1175217408,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 200708,
+      "expected": 707002369,
+      "observed": 707002369,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 330376,
+      "expected": 1006944000,
+      "observed": 1006944000,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 330996,
+      "expected": 1007009536,
+      "observed": 1007009536,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 331972,
+      "expected": 1007009536,
+      "observed": 1007009536,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 421984,
+      "expected": 1007041672,
+      "observed": 1007041672,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 1109436,
+      "expected": 170237616,
+      "observed": 170237616,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 1109440,
+      "expected": 0,
+      "observed": 0,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 1118480,
+      "expected": 1007075072,
+      "observed": 1007075072,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 1118508,
+      "expected": 1007075072,
+      "observed": 1007075072,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 1137464,
+      "expected": 1007107840,
+      "observed": 1007107840,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 1144088,
+      "expected": 1006944000,
+      "observed": 1006944000,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 1144704,
+      "expected": 1006944000,
+      "observed": 1006944000,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 1146628,
+      "expected": 1007009536,
+      "observed": 1007009536,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 1147256,
+      "expected": 170237680,
+      "observed": 170237680,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 1147260,
+      "expected": 0,
+      "observed": 0,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 1151956,
+      "expected": 1007041672,
+      "observed": 1007041672,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 1166168,
+      "expected": 1006911232,
+      "observed": 1006911232,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 1166424,
+      "expected": 1006911232,
+      "observed": 1006911232,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 1176996,
+      "expected": 1007043184,
+      "observed": 1007043184,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 1178488,
+      "expected": 1006976768,
+      "observed": 1006976768,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 1195044,
+      "expected": 1006976768,
+      "observed": 1006976768,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 1206224,
+      "expected": 1006976768,
+      "observed": 1006976768,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 1208360,
+      "expected": 604241924,
+      "observed": 604241924,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 1232796,
+      "expected": 1007009536,
+      "observed": 1007009536,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 1247384,
+      "expected": 1006944000,
+      "observed": 1006944000,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 1249464,
+      "expected": 1006911232,
+      "observed": 1006911232,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 1249580,
+      "expected": 1006911232,
+      "observed": 1006911232,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 1252384,
+      "expected": 1006944000,
+      "observed": 1006944000,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 1261732,
+      "expected": 1007009536,
+      "observed": 1007009536,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 1266428,
+      "expected": 1006944000,
+      "observed": 1006944000,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 1267612,
+      "expected": 1006944000,
+      "observed": 1006944000,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 1268976,
+      "expected": 1006944000,
+      "observed": 1006944000,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 1308036,
+      "expected": 1006944000,
+      "observed": 1006944000,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 1308296,
+      "expected": 1006944000,
+      "observed": 1006944000,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 1313088,
+      "expected": 1006944000,
+      "observed": 1006944000,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 1313420,
+      "expected": 1006944000,
+      "observed": 1006944000,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 1331652,
+      "expected": 1006911232,
+      "observed": 1006911232,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 1332324,
+      "expected": 1007075072,
+      "observed": 1007075072,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 1332668,
+      "expected": 872677382,
+      "observed": 872677382,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 1378628,
+      "expected": 170237872,
+      "observed": 170237872,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 1378632,
+      "expected": 0,
+      "observed": 0,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 1464880,
+      "expected": 1006944000,
+      "observed": 1006944000,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 1468524,
+      "expected": 1007140608,
+      "observed": 1007140608,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 1512980,
+      "expected": 1006944000,
+      "observed": 1006944000,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 1515452,
+      "expected": 1006976768,
+      "observed": 1006976768,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 1528032,
+      "expected": 1006944000,
+      "observed": 1006944000,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 1528984,
+      "expected": 1006910600,
+      "observed": 1006910600,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 1529056,
+      "expected": 1006944000,
+      "observed": 1006944000,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 1539824,
+      "expected": 170237744,
+      "observed": 170237744,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 1539868,
+      "expected": 170237808,
+      "observed": 170237808,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 1539872,
+      "expected": 0,
+      "observed": 0,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 1569808,
+      "expected": 170237936,
+      "observed": 170237936,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 1569812,
+      "expected": 0,
+      "observed": 0,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 1608372,
+      "expected": 1006944000,
+      "observed": 1006944000,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 1608712,
+      "expected": 1006944000,
+      "observed": 1006944000,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 1614552,
+      "expected": 1006911360,
+      "observed": 1006911360,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 1716708,
+      "expected": 1006912112,
+      "observed": 1006912112,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 1716892,
+      "expected": 1006912112,
+      "observed": 1006912112,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 1760736,
+      "expected": 170238000,
+      "observed": 170238000,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 1760740,
+      "expected": 0,
+      "observed": 0,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3013880,
+      "expected": 1123024896,
+      "observed": 1123024896,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3013884,
+      "expected": 1123024896,
+      "observed": 1123024896,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3015704,
+      "expected": 1065353216,
+      "observed": 1065353216,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3017792,
+      "expected": 1001786210,
+      "observed": 1001786210,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3017796,
+      "expected": 1091043328,
+      "observed": 1091043328,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3017804,
+      "expected": 1029076817,
+      "observed": 1029076817,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3017808,
+      "expected": 1037465425,
+      "observed": 1037465425,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3017816,
+      "expected": 1028443341,
+      "observed": 1028443341,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3017820,
+      "expected": 1040187392,
+      "observed": 1040187392,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3020628,
+      "expected": 1000593118,
+      "observed": 1000593118,
+      "pass": true,
+      "continuous": true
+    },
+    {
+      "rva": 3020632,
+      "expected": 1065353006,
+      "observed": 1065353006,
+      "pass": true,
+      "continuous": true
+    },
+    {
+      "rva": 3020640,
+      "expected": 1014349875,
+      "observed": 1014349875,
+      "pass": true,
+      "continuous": true
+    },
+    {
+      "rva": 3020644,
+      "expected": 1065351329,
+      "observed": 1065351329,
+      "pass": true,
+      "continuous": true
+    },
+    {
+      "rva": 3020652,
+      "expected": 1106247680,
+      "observed": 1106247680,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3021056,
+      "expected": 1022739087,
+      "observed": 1022739087,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3021064,
+      "expected": 1031642245,
+      "observed": 1031642245,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3021072,
+      "expected": 1007192201,
+      "observed": 1007192201,
+      "pass": true,
+      "continuous": true
+    },
+    {
+      "rva": 3021080,
+      "expected": 1028437749,
+      "observed": 1028437749,
+      "pass": true,
+      "continuous": true
+    },
+    {
+      "rva": 3021084,
+      "expected": 1065332249,
+      "observed": 1065332249,
+      "pass": true,
+      "continuous": true
+    },
+    {
+      "rva": 3023976,
+      "expected": 1966182,
+      "observed": 1966182,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3028292,
+      "expected": 1028443342,
+      "observed": 1028443342,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3028308,
+      "expected": 1014350480,
+      "observed": 1014350480,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3028312,
+      "expected": 1042983595,
+      "observed": 1042983595,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3028316,
+      "expected": 1025982779,
+      "observed": 1025982779,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3028320,
+      "expected": 1037579919,
+      "observed": 1037579919,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3032808,
+      "expected": 1051372203,
+      "observed": 1051372203,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3037788,
+      "expected": 1106247680,
+      "observed": 1106247680,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3037792,
+      "expected": 1094713344,
+      "observed": 1094713344,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3046880,
+      "expected": 997374422,
+      "observed": 997374422,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3046884,
+      "expected": 1001786209,
+      "observed": 1001786209,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3046888,
+      "expected": 1007192201,
+      "observed": 1007192201,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3046892,
+      "expected": 1015580809,
+      "observed": 1015580809,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3046896,
+      "expected": 1015580809,
+      "observed": 1015580809,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3046900,
+      "expected": 1015580809,
+      "observed": 1015580809,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3046904,
+      "expected": 1015580809,
+      "observed": 1015580809,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3046908,
+      "expected": 1015580809,
+      "observed": 1015580809,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3048588,
+      "expected": 1037465425,
+      "observed": 1037465425,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3048792,
+      "expected": 1023969417,
+      "observed": 1023969417,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3048796,
+      "expected": 1023969417,
+      "observed": 1023969417,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3053192,
+      "expected": 1044487551,
+      "observed": 1044487551,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3053196,
+      "expected": 1044487551,
+      "observed": 1044487551,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3053200,
+      "expected": 1050728828,
+      "observed": 1050728828,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3053204,
+      "expected": 1050728828,
+      "observed": 1050728828,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3053216,
+      "expected": 1050253722,
+      "observed": 1050253722,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3053884,
+      "expected": 1131413504,
+      "observed": 1131413504,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3054404,
+      "expected": 1069547520,
+      "observed": 1069547520,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3054408,
+      "expected": 1069547520,
+      "observed": 1069547520,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3054412,
+      "expected": 1069547520,
+      "observed": 1069547520,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3054416,
+      "expected": 1069547520,
+      "observed": 1069547520,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3054420,
+      "expected": 1069547520,
+      "observed": 1069547520,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3054424,
+      "expected": 1069547520,
+      "observed": 1069547520,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3054428,
+      "expected": 1069547520,
+      "observed": 1069547520,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3054464,
+      "expected": 1025563004,
+      "observed": 1025563004,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3054468,
+      "expected": 1025563004,
+      "observed": 1025563004,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3054472,
+      "expected": 1033951612,
+      "observed": 1033951612,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3054476,
+      "expected": 1033951612,
+      "observed": 1033951612,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3054480,
+      "expected": 1033951612,
+      "observed": 1033951612,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3054484,
+      "expected": 1033951612,
+      "observed": 1033951612,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3054488,
+      "expected": 1033951612,
+      "observed": 1033951612,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3054492,
+      "expected": 1033951612,
+      "observed": 1033951612,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3054500,
+      "expected": 1123024896,
+      "observed": 1123024896,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3054512,
+      "expected": 1106247680,
+      "observed": 1106247680,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3057368,
+      "expected": 1033476506,
+      "observed": 1033476506,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3061368,
+      "expected": 1039516303,
+      "observed": 1039516303,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3066244,
+      "expected": 1036831950,
+      "observed": 1036831950,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3066248,
+      "expected": 1036831950,
+      "observed": 1036831950,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3066252,
+      "expected": 1025563004,
+      "observed": 1025563004,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3066256,
+      "expected": 985008994,
+      "observed": 985008994,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3066260,
+      "expected": 985008994,
+      "observed": 985008994,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3066264,
+      "expected": 993397602,
+      "observed": 993397602,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3066268,
+      "expected": 985008994,
+      "observed": 985008994,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3066772,
+      "expected": 3192704206,
+      "observed": 3192704206,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3066784,
+      "expected": 3197737370,
+      "observed": 3197737370,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3066848,
+      "expected": 1040746633,
+      "observed": 1040746633,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3066852,
+      "expected": 1030680304,
+      "observed": 1030680304,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3066856,
+      "expected": 1020688209,
+      "observed": 1020688209,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3066860,
+      "expected": 985008994,
+      "observed": 985008994,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3066864,
+      "expected": 976620386,
+      "observed": 976620386,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3066868,
+      "expected": 993397602,
+      "observed": 993397602,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3066872,
+      "expected": 985008994,
+      "observed": 985008994,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3066892,
+      "expected": 1045220558,
+      "observed": 1045220558,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3066896,
+      "expected": 1030680304,
+      "observed": 1030680304,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3066900,
+      "expected": 1020688209,
+      "observed": 1020688209,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3066904,
+      "expected": 1028443343,
+      "observed": 1028443343,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3066908,
+      "expected": 976620386,
+      "observed": 976620386,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3066912,
+      "expected": 1001786210,
+      "observed": 1001786210,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3066916,
+      "expected": 985008994,
+      "observed": 985008994,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3066944,
+      "expected": 9830430,
+      "observed": 9830430,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3067544,
+      "expected": 1036831950,
+      "observed": 1036831950,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3067548,
+      "expected": 1023969417,
+      "observed": 1023969417,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3067552,
+      "expected": 1025563004,
+      "observed": 1025563004,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3067556,
+      "expected": 985008994,
+      "observed": 985008994,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3067560,
+      "expected": 976620386,
+      "observed": 976620386,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3067564,
+      "expected": 993397602,
+      "observed": 993397602,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3067568,
+      "expected": 985008994,
+      "observed": 985008994,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 3070884,
+      "expected": 1114636288,
+      "observed": 1114636288,
+      "pass": true,
+      "continuous": false
+    },
+    {
+      "rva": 630868,
+      "expected": 0,
+      "observed": 0,
+      "pass": true,
+      "continuous": false
+    }
+  ],
+  "callsites": [
+    {
+      "ra": 152416296,
+      "policy": 1,
+      "expected": 237334269,
+      "observed": 237334269,
+      "pass": true
+    },
+    {
+      "ra": 152416324,
+      "policy": 1,
+      "expected": 237334269,
+      "observed": 237334269,
+      "pass": true
+    },
+    {
+      "ra": 152416352,
+      "policy": 1,
+      "expected": 237334269,
+      "observed": 237334269,
+      "pass": true
+    },
+    {
+      "ra": 152416932,
+      "policy": 1,
+      "expected": 237334269,
+      "observed": 237334269,
+      "pass": true
+    },
+    {
+      "ra": 152416968,
+      "policy": 1,
+      "expected": 237334269,
+      "observed": 237334269,
+      "pass": true
+    },
+    {
+      "ra": 152426792,
+      "policy": 2,
+      "expected": 237334276,
+      "observed": 237334276,
+      "pass": true
+    },
+    {
+      "ra": 152524804,
+      "policy": 1,
+      "expected": 237334269,
+      "observed": 237334269,
+      "pass": true
+    },
+    {
+      "ra": 152524840,
+      "policy": 1,
+      "expected": 237334269,
+      "observed": 237334269,
+      "pass": true
+    },
+    {
+      "ra": 152524876,
+      "policy": 1,
+      "expected": 237334269,
+      "observed": 237334269,
+      "pass": true
+    },
+    {
+      "ra": 152536660,
+      "policy": 1,
+      "expected": 237334269,
+      "observed": 237334269,
+      "pass": true
+    },
+    {
+      "ra": 152545204,
+      "policy": 2,
+      "expected": 237334276,
+      "observed": 237334276,
+      "pass": true
+    },
+    {
+      "ra": 152545612,
+      "policy": 2,
+      "expected": 237334276,
+      "observed": 237334276,
+      "pass": true
+    },
+    {
+      "ra": 152667832,
+      "policy": 1,
+      "expected": 237334269,
+      "observed": 237334269,
+      "pass": true
+    },
+    {
+      "ra": 152669588,
+      "policy": 1,
+      "expected": 237334269,
+      "observed": 237334269,
+      "pass": true
+    },
+    {
+      "ra": 152669640,
+      "policy": 1,
+      "expected": 237334269,
+      "observed": 237334269,
+      "pass": true
+    },
+    {
+      "ra": 152670020,
+      "policy": 1,
+      "expected": 237334269,
+      "observed": 237334269,
+      "pass": true
+    },
+    {
+      "ra": 152685540,
+      "policy": 1,
+      "expected": 237334269,
+      "observed": 237334269,
+      "pass": true
+    },
+    {
+      "ra": 152717172,
+      "policy": 1,
+      "expected": 237334269,
+      "observed": 237334269,
+      "pass": true
+    },
+    {
+      "ra": 153037528,
+      "policy": 2,
+      "expected": 237334276,
+      "observed": 237334276,
+      "pass": true
+    },
+    {
+      "ra": 153037564,
+      "policy": 2,
+      "expected": 237334276,
+      "observed": 237334276,
+      "pass": true
+    },
+    {
+      "ra": 153482324,
+      "policy": 3,
+      "expected": 237334269,
+      "observed": 237334269,
+      "pass": true
+    },
+    {
+      "ra": 153482356,
+      "policy": 3,
+      "expected": 237334269,
+      "observed": 237334269,
+      "pass": true
+    },
+    {
+      "ra": 153482964,
+      "policy": 3,
+      "expected": 237334269,
+      "observed": 237334269,
+      "pass": true
+    },
+    {
+      "ra": 153482996,
+      "policy": 3,
+      "expected": 237334269,
+      "observed": 237334269,
+      "pass": true
+    },
+    {
+      "ra": 153483556,
+      "policy": 3,
+      "expected": 237334269,
+      "observed": 237334269,
+      "pass": true
+    },
+    {
+      "ra": 153483684,
+      "policy": 3,
+      "expected": 237334269,
+      "observed": 237334269,
+      "pass": true
+    },
+    {
+      "ra": 153483724,
+      "policy": 3,
+      "expected": 237334269,
+      "observed": 237334269,
+      "pass": true
+    },
+    {
+      "ra": 153494448,
+      "policy": 3,
+      "expected": 237334269,
+      "observed": 237334269,
+      "pass": true
+    },
+    {
+      "ra": 153494640,
+      "policy": 3,
+      "expected": 237334269,
+      "observed": 237334269,
+      "pass": true
+    },
+    {
+      "ra": 153576248,
+      "policy": 2,
+      "expected": 237334276,
+      "observed": 237334276,
+      "pass": true
+    },
+    {
+      "ra": 153577268,
+      "policy": 2,
+      "expected": 237334276,
+      "observed": 237334276,
+      "pass": true
+    },
+    {
+      "ra": 153834624,
+      "policy": 3,
+      "expected": 237334269,
+      "observed": 237334269,
+      "pass": true
+    },
+    {
+      "ra": 153982208,
+      "policy": 2,
+      "expected": 237334276,
+      "observed": 237334276,
+      "pass": true
+    },
+    {
+      "ra": 154065332,
+      "policy": 3,
+      "expected": 237334269,
+      "observed": 237334269,
+      "pass": true
+    },
+    {
+      "ra": 154067104,
+      "policy": 3,
+      "expected": 237334269,
+      "observed": 237334269,
+      "pass": true
+    },
+    {
+      "ra": 154067132,
+      "policy": 3,
+      "expected": 237334269,
+      "observed": 237334269,
+      "pass": true
+    }
+  ],
+  "cave7Word34": 1006911232,
+  "g_rcsm_requested_fps": 60,
+  "g_rcsm_applied_fps": 60,
+  "g_rcsm_fps_pending": 0,
+  "pass": true
+}

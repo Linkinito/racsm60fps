@@ -1,0 +1,57 @@
+{
+  "time": "2026-09-15T21:14:59.833Z",
+  "test": "ClankSaw movement constants only",
+  "changes": [
+    {
+      "address": 155421592,
+      "before": 1045220558,
+      "after": 1036831950,
+      "label": "forward cap",
+      "verified": true
+    },
+    {
+      "address": 155421596,
+      "before": 1032358025,
+      "after": 1023969417,
+      "label": "reverse cap",
+      "verified": true
+    },
+    {
+      "address": 155421604,
+      "before": 1001786210,
+      "after": 985008994,
+      "label": "forward acceleration",
+      "verified": true
+    },
+    {
+      "address": 155421608,
+      "before": 993397602,
+      "after": 976620386,
+      "label": "reverse acceleration",
+      "verified": true
+    },
+    {
+      "address": 155421612,
+      "before": 1010174818,
+      "after": 993397602,
+      "label": "braking",
+      "verified": true
+    },
+    {
+      "address": 155421616,
+      "before": 1001786210,
+      "after": 985008994,
+      "label": "coasting deceleration",
+      "verified": true
+    },
+    {
+      "address": 164313856,
+      "before": 1033683413,
+      "after": 1025294805,
+      "label": "current forward velocity; restore only while still suspended in this snapshot",
+      "verified": true
+    }
+  ],
+  "CPU": "left suspended",
+  "success": true
+}

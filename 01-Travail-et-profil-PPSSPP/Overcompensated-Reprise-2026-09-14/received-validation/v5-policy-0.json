@@ -1,0 +1,230 @@
+{
+  "status": "PASS",
+  "config": "C:\\Users\\linki\\Documents\\PPSSPP\\Overcompensated-Reprise-2026-09-14\\sources-v0.5.0\\Size_Matters_wrapper_dispatcher_v0.5.0-prealpha_UCES00420\\profiler\\RCSMProfiler.ini",
+  "mode": "detect_only",
+  "module_index": 4,
+  "callsites": 36,
+  "armed_callsites": 0,
+  "two_pass_callsites": 0,
+  "one_pass_callsites": 0,
+  "custom_fallback_callsites": 0,
+  "one_pass_families": [],
+  "routes": [
+    {
+      "ra": "0x09148028",
+      "family_id": "WF-005",
+      "configured_policy": "two_pass",
+      "effective_policy": "two_pass"
+    },
+    {
+      "ra": "0x09148044",
+      "family_id": "WF-005",
+      "configured_policy": "two_pass",
+      "effective_policy": "two_pass"
+    },
+    {
+      "ra": "0x09148060",
+      "family_id": "WF-005",
+      "configured_policy": "two_pass",
+      "effective_policy": "two_pass"
+    },
+    {
+      "ra": "0x091482A4",
+      "family_id": "WF-013",
+      "configured_policy": "two_pass",
+      "effective_policy": "two_pass"
+    },
+    {
+      "ra": "0x091482C8",
+      "family_id": "WF-013",
+      "configured_policy": "two_pass",
+      "effective_policy": "two_pass"
+    },
+    {
+      "ra": "0x0914A928",
+      "family_id": "WF-015",
+      "configured_policy": "two_pass",
+      "effective_policy": "two_pass"
+    },
+    {
+      "ra": "0x09162804",
+      "family_id": "WF-014",
+      "configured_policy": "two_pass",
+      "effective_policy": "two_pass"
+    },
+    {
+      "ra": "0x09162828",
+      "family_id": "WF-014",
+      "configured_policy": "two_pass",
+      "effective_policy": "two_pass"
+    },
+    {
+      "ra": "0x0916284C",
+      "family_id": "WF-014",
+      "configured_policy": "two_pass",
+      "effective_policy": "two_pass"
+    },
+    {
+      "ra": "0x09165654",
+      "family_id": "WF-029",
+      "configured_policy": "two_pass",
+      "effective_policy": "two_pass"
+    },
+    {
+      "ra": "0x091677B4",
+      "family_id": "WF-023",
+      "configured_policy": "two_pass",
+      "effective_policy": "two_pass"
+    },
+    {
+      "ra": "0x0916794C",
+      "family_id": "WF-023",
+      "configured_policy": "two_pass",
+      "effective_policy": "two_pass"
+    },
+    {
+      "ra": "0x091856B8",
+      "family_id": "WF-002",
+      "configured_policy": "two_pass",
+      "effective_policy": "two_pass"
+    },
+    {
+      "ra": "0x09185D94",
+      "family_id": "WF-001",
+      "configured_policy": "two_pass",
+      "effective_policy": "two_pass"
+    },
+    {
+      "ra": "0x09185DC8",
+      "family_id": "WF-001",
+      "configured_policy": "two_pass",
+      "effective_policy": "two_pass"
+    },
+    {
+      "ra": "0x09185F44",
+      "family_id": "WF-001",
+      "configured_policy": "two_pass",
+      "effective_policy": "two_pass"
+    },
+    {
+      "ra": "0x09189BE4",
+      "family_id": "WF-003",
+      "configured_policy": "two_pass",
+      "effective_policy": "two_pass"
+    },
+    {
+      "ra": "0x09191774",
+      "family_id": "WF-004",
+      "configured_policy": "two_pass",
+      "effective_policy": "two_pass"
+    },
+    {
+      "ra": "0x091DFAD8",
+      "family_id": "WF-028",
+      "configured_policy": "two_pass",
+      "effective_policy": "two_pass"
+    },
+    {
+      "ra": "0x091DFAFC",
+      "family_id": "WF-028",
+      "configured_policy": "two_pass",
+      "effective_policy": "two_pass"
+    },
+    {
+      "ra": "0x0924C454",
+      "family_id": "WF-008",
+      "configured_policy": "two_pass",
+      "effective_policy": "two_pass"
+    },
+    {
+      "ra": "0x0924C474",
+      "family_id": "WF-008",
+      "configured_policy": "two_pass",
+      "effective_policy": "two_pass"
+    },
+    {
+      "ra": "0x0924C6D4",
+      "family_id": "WF-009",
+      "configured_policy": "two_pass",
+      "effective_policy": "two_pass"
+    },
+    {
+      "ra": "0x0924C6F4",
+      "family_id": "WF-009",
+      "configured_policy": "two_pass",
+      "effective_policy": "two_pass"
+    },
+    {
+      "ra": "0x0924C924",
+      "family_id": "WF-007",
+      "configured_policy": "two_pass",
+      "effective_policy": "two_pass"
+    },
+    {
+      "ra": "0x0924C9A4",
+      "family_id": "WF-007",
+      "configured_policy": "two_pass",
+      "effective_policy": "two_pass"
+    },
+    {
+      "ra": "0x0924C9CC",
+      "family_id": "WF-007",
+      "configured_policy": "two_pass",
+      "effective_policy": "two_pass"
+    },
+    {
+      "ra": "0x0924F3B0",
+      "family_id": "WF-010",
+      "configured_policy": "two_pass",
+      "effective_policy": "two_pass"
+    },
+    {
+      "ra": "0x0924F470",
+      "family_id": "WF-010",
+      "configured_policy": "two_pass",
+      "effective_policy": "two_pass"
+    },
+    {
+      "ra": "0x09263338",
+      "family_id": "WF-026",
+      "configured_policy": "two_pass",
+      "effective_policy": "two_pass"
+    },
+    {
+      "ra": "0x09263734",
+      "family_id": "WF-025",
+      "configured_policy": "two_pass",
+      "effective_policy": "two_pass"
+    },
+    {
+      "ra": "0x092A2480",
+      "family_id": "WF-006",
+      "configured_policy": "two_pass",
+      "effective_policy": "two_pass"
+    },
+    {
+      "ra": "0x092C6500",
+      "family_id": "WF-030",
+      "configured_policy": "two_pass",
+      "effective_policy": "two_pass"
+    },
+    {
+      "ra": "0x092DA9B4",
+      "family_id": "WF-012",
+      "configured_policy": "two_pass",
+      "effective_policy": "two_pass"
+    },
+    {
+      "ra": "0x092DB0A0",
+      "family_id": "WF-011",
+      "configured_policy": "two_pass",
+      "effective_policy": "two_pass"
+    },
+    {
+      "ra": "0x092DB0BC",
+      "family_id": "WF-011",
+      "configured_policy": "two_pass",
+      "effective_policy": "two_pass"
+    }
+  ]
+}

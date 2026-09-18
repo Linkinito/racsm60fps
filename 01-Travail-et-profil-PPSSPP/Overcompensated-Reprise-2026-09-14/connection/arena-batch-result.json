@@ -1,0 +1,304 @@
+{
+  "time": "2026-09-15T23:09:57.593Z",
+  "coverage": "Experimental arena batch: electro/ram movement and ram charge; saw active/recharge durations and animation; selected float cooldowns; saw/vent cycle timers and floor rotation. Damage cadence, other vehicle types, projectiles and full trap collision coverage NOT validated.",
+  "changes": [
+    {
+      "address": 155420292,
+      "before": 1045220558,
+      "after": 1036831950,
+      "label": "Electro normal forward cap",
+      "originalFloat": 0.20000001788139343,
+      "verified": true
+    },
+    {
+      "address": 155420296,
+      "before": 1045220558,
+      "after": 1036831950,
+      "label": "Electro normal reverse cap",
+      "originalFloat": 0.20000001788139343,
+      "verified": true
+    },
+    {
+      "address": 155420300,
+      "before": 1033951612,
+      "after": 1025563004,
+      "label": "Electro normal turn step",
+      "originalFloat": 0.07853981852531433,
+      "verified": true
+    },
+    {
+      "address": 155420304,
+      "before": 1001786210,
+      "after": 985008994,
+      "label": "Electro normal forward accel",
+      "originalFloat": 0.005555556155741215,
+      "verified": true
+    },
+    {
+      "address": 155420308,
+      "before": 1001786210,
+      "after": 985008994,
+      "label": "Electro normal reverse accel",
+      "originalFloat": 0.005555556155741215,
+      "verified": true
+    },
+    {
+      "address": 155420312,
+      "before": 1010174818,
+      "after": 993397602,
+      "label": "Electro normal brake",
+      "originalFloat": 0.01111111231148243,
+      "verified": true
+    },
+    {
+      "address": 155420316,
+      "before": 1001786210,
+      "after": 985008994,
+      "label": "Electro normal coast",
+      "originalFloat": 0.005555556155741215,
+      "verified": true
+    },
+    {
+      "address": 155420896,
+      "before": 1049135241,
+      "after": 1040746633,
+      "label": "Ram normal forward cap",
+      "originalFloat": 0.2666666805744171,
+      "verified": true
+    },
+    {
+      "address": 155420900,
+      "before": 1039068912,
+      "after": 1030680304,
+      "label": "Ram normal reverse cap",
+      "originalFloat": 0.11666667461395264,
+      "verified": true
+    },
+    {
+      "address": 155420904,
+      "before": 1029076817,
+      "after": 1020688209,
+      "label": "Ram normal turn step",
+      "originalFloat": 0.05235988274216652,
+      "verified": true
+    },
+    {
+      "address": 155420908,
+      "before": 1001786210,
+      "after": 985008994,
+      "label": "Ram normal forward accel",
+      "originalFloat": 0.005555556155741215,
+      "verified": true
+    },
+    {
+      "address": 155420912,
+      "before": 993397602,
+      "after": 976620386,
+      "label": "Ram normal reverse accel",
+      "originalFloat": 0.0027777780778706074,
+      "verified": true
+    },
+    {
+      "address": 155420916,
+      "before": 1010174818,
+      "after": 993397602,
+      "label": "Ram normal brake",
+      "originalFloat": 0.01111111231148243,
+      "verified": true
+    },
+    {
+      "address": 155420920,
+      "before": 1001786210,
+      "after": 985008994,
+      "label": "Ram normal coast",
+      "originalFloat": 0.005555556155741215,
+      "verified": true
+    },
+    {
+      "address": 153586844,
+      "before": 1007009664,
+      "after": 1007009536,
+      "label": "ClankSaw two float countdowns",
+      "verified": true
+    },
+    {
+      "address": 153662084,
+      "before": 1006944128,
+      "after": 1006944000,
+      "label": "EnemyElectro countdown E8",
+      "verified": true
+    },
+    {
+      "address": 153662344,
+      "before": 1006944128,
+      "after": 1006944000,
+      "label": "EnemyElectro second float countdown",
+      "verified": true
+    },
+    {
+      "address": 153667136,
+      "before": 1006944128,
+      "after": 1006944000,
+      "label": "EnemyRam countdown",
+      "verified": true
+    },
+    {
+      "address": 153667468,
+      "before": 1006944128,
+      "after": 1006944000,
+      "label": "EnemyRam second countdown",
+      "verified": true
+    },
+    {
+      "address": 153818928,
+      "before": 1006944128,
+      "after": 1006944000,
+      "label": "ObstacleSaw cycle timer",
+      "verified": true
+    },
+    {
+      "address": 153822572,
+      "before": 1007140736,
+      "after": 1007140608,
+      "label": "ObstacleVent cycle timer",
+      "verified": true
+    },
+    {
+      "address": 155402636,
+      "before": 1045854033,
+      "after": 1037465425,
+      "label": "SpinningFloor angular increment",
+      "originalFloat": 0.20943953096866608,
+      "verified": true
+    },
+    {
+      "address": 155402840,
+      "before": 1032358025,
+      "after": 1023969417,
+      "label": "Vent fade-in increment",
+      "originalFloat": 0.06666667014360428,
+      "verified": true
+    },
+    {
+      "address": 155402844,
+      "before": 1032358025,
+      "after": 1023969417,
+      "label": "Vent fade-out increment",
+      "originalFloat": 0.06666667014360428,
+      "verified": true
+    },
+    {
+      "address": 155420940,
+      "before": 1053609166,
+      "after": 1045220558,
+      "label": "Ram charge cap forward",
+      "verified": true
+    },
+    {
+      "address": 155420944,
+      "before": 1039068912,
+      "after": 1030680304,
+      "label": "Ram charge cap reverse",
+      "verified": true
+    },
+    {
+      "address": 155420948,
+      "before": 1029076817,
+      "after": 1020688209,
+      "label": "Ram charge turn",
+      "verified": true
+    },
+    {
+      "address": 155420952,
+      "before": 1045220559,
+      "after": 1028443343,
+      "label": "Ram charge acceleration",
+      "verified": true
+    },
+    {
+      "address": 155420956,
+      "before": 993397602,
+      "after": 976620386,
+      "label": "Ram charge reverse accel",
+      "verified": true
+    },
+    {
+      "address": 155420960,
+      "before": 1018563426,
+      "after": 1001786210,
+      "label": "Ram charge brake",
+      "verified": true
+    },
+    {
+      "address": 155420964,
+      "before": 1001786210,
+      "after": 985008994,
+      "label": "Ram charge coast",
+      "verified": true
+    },
+    {
+      "address": 155420820,
+      "before": 3201092814,
+      "after": 3192704206,
+      "label": "Ram impulse low",
+      "verified": true
+    },
+    {
+      "address": 155420832,
+      "before": 3206125978,
+      "after": 3197737370,
+      "label": "Ram impulse high",
+      "verified": true
+    },
+    {
+      "address": 155378024,
+      "before": 983091,
+      "after": 1966182,
+      "label": "ClankSaw active/recharge integer durations",
+      "verified": true
+    },
+    {
+      "address": 155420992,
+      "before": 4915215,
+      "after": 9830430,
+      "label": "Ram charge/recharge integer durations",
+      "verified": true
+    },
+    {
+      "address": 154070756,
+      "before": 1006911984,
+      "after": 1006912112,
+      "label": "Saw retraction animation divisor",
+      "verified": true
+    },
+    {
+      "address": 154070940,
+      "before": 1006911984,
+      "after": 1006912112,
+      "label": "Saw extension animation divisor",
+      "verified": true
+    },
+    {
+      "address": 164314304,
+      "before": 1021885506,
+      "after": 1013496898,
+      "label": "current EnemyElectroTorso speed; dynamic value, rollback only before execution",
+      "verified": true
+    },
+    {
+      "address": 164316192,
+      "before": 1034594988,
+      "after": 1026206380,
+      "label": "current EnemyRamTorso speed; dynamic value, rollback only before execution",
+      "verified": true
+    },
+    {
+      "address": 164316472,
+      "before": 3154675850,
+      "after": 3146287242,
+      "label": "current EnemyRamTorso speed; dynamic value, rollback only before execution",
+      "verified": true
+    }
+  ],
+  "status": "applied_CPU_suspended"
+}

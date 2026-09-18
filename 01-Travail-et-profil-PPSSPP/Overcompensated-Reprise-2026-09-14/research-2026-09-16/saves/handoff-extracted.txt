@@ -1,0 +1,543 @@
+Ratchet & Clank: Size Matters
+Overcompensated
+Format de sauvegarde UCES00420 — état du reverse-engineering et document de passation
+Version 0.1 — 16 septembre 2026
+OBJECTIF
+Permettre à un autre analyste de reprendre le travail sans dépendre du contexte de conversation. Le document sépare les faits observés, les corrélations fortes, les hypothèses et les tâches restant à valider.
+PORTÉE
+Cette version documente surtout l’organisation physique de DATA0/SECURE.BIN, la correspondance RAM <-> sauvegarde, le système générique de flags, les Skill Points, les blocs RE00 et les zones candidates pour une extension Overcompensated. Elle ne prétend pas encore nommer chaque champ du GameState ni chaque structure auxiliaire.
+1. Résumé exécutif
+La sauvegarde solo de la version européenne UCES00420 est contenue dans un dossier DATA0 avec trois fichiers : PARAM.SFO, ICON0.PNG et SECURE.BIN. Le gameplay persistant est stocké dans SECURE.BIN sous forme chiffrée PSP Savedata ; une fois déchiffré, son payload fait exactement 0x56F20 octets, soit 356 128 octets.
+Le début de ce payload contient une structure de jeu persistante directement corrélable à la RAM, suivie de quatorze blocs fixes de 0x4000 octets commençant par la signature RE00, puis d’une grande région auxiliaire jusqu’à la fin du fichier. Les Skill Points sont six octets de flags situés physiquement à 0x8F7–0x8FC dans le payload clair, mais le code les adresse par indices logiques 0x77–0x7C via une base interne de 0x880.
+La limite de 48 bits observée appartient donc au champ vanilla des Skill Points et ne constitue pas une limite générale de la sauvegarde. En revanche, les octets immédiatement postérieurs à 0x8FC contiennent déjà d’autres données : il ne faut pas étendre le champ vanilla en écrivant à la suite sans remapper le GameState.
+Une zone de 86 516 octets, 0x3E4EC–0x536DF, est entièrement nulle dans deux états de sauvegarde indépendants actuellement disponibles. Cette plage est une candidate très intéressante pour la persistance Overcompensated, mais elle ne doit pas être considérée comme libre avant validation par analyse des accès mémoire et tests sur davantage de modes de jeu.
+2. Légende de confiance
+Niveau
+Signification
+CONFIRMÉ
+Observation directe dans le binaire clair, le RAM dump ou le code désassemblé; reproductible avec les fichiers actuels.
+CORRÉLATION FORTE
+Plusieurs indices indépendants concordent, mais une expérience différentielle supplémentaire reste souhaitable.
+HYPOTHÈSE
+Interprétation plausible de la structure; ne pas coder contre elle comme si elle était certaine.
+À VALIDER
+Piste de travail explicitement non démontrée.
+3. Matériel de référence disponible
+Les analyses décrites ici ont été réalisées sur une sauvegarde réelle DATA0, un dump RAM PPSSPP antérieur et les PRX extraits du jeu. La présence de deux états de sauvegarde distincts permet déjà plusieurs validations différentielles, mais elle ne remplace pas une campagne de saves contrôlées où une seule variable change à la fois.
+Artefact
+Rôle
+État
+DATA0.zip
+Sauvegarde utilisateur actuelle; contient PARAM.SFO, SECURE.BIN et ICON0.PNG.
+Source primaire
+SECURE_CURRENT_DECRYPTED.bin
+Payload clair de SECURE.BIN actuel, longueur 0x56F20.
+Référence actuelle
+SECURE_decrypted_from_RAM.bin
+Ancien payload clair extrait/reconstruit depuis RAM.dump, même longueur.
+Référence différentielle
+RAM.dump
+Dump mémoire PPSSPP; contient notamment le GameState et une structure sceUtilitySavedata.
+Source primaire
+BIN(1).zip / allprx/
+PRX du jeu, utilisés pour confirmer les accès au GameState et aux flags.
+Source code machine
+allprx_dis/*.txt
+Désassemblages MIPS des PRX.
+Support de reverse-engineering
+4. Structure du dossier DATA0
+Le dossier de sauvegarde solo fourni correspond à UCES00420DATA0. Les trois fichiers ont des rôles très différents : l’icône est purement visuelle, PARAM.SFO porte les métadonnées PSP et SECURE.BIN contient la progression de jeu chiffrée.
+Fichier
+Taille
+Fonction
+PARAM.SFO
+4 912 octets
+Métadonnées PSP Savedata; titre, détail, répertoire, liste des fichiers sécurisés.
+SECURE.BIN
+356 144 octets
+Données de progression chiffrées; fichier principal à reverse-engineerer.
+ICON0.PNG
+32 768 octets
+Illustration affichée dans l’interface de sauvegarde PSP/PPSSPP.
+Dans le PARAM.SFO actuel, les chaînes lisibles confirment une sauvegarde solo sur Metalis avec 20 973 boulons et un temps affiché de 00:57. Cette valeur de boulons est particulièrement utile, car elle sert de repère externe pour valider l’offset correspondant dans le payload clair.
+5. Chiffrement PSP Savedata et déchiffrement
+CONFIRMÉ
+SECURE.BIN fait 0x56F30 octets sur disque, alors que son payload clair fait 0x56F20 octets. Le différentiel de 16 octets est cohérent avec l’enveloppe cryptographique utilisée par le Savedata PSP.
+Le RAM dump contient une structure sceUtilitySavedata complète pointant vers un buffer clair de la même longueur que le payload déchiffré. L’analyse précédente a également identifié et utilisé avec succès le mode Savedata 5 et la clé de 16 octets 33 33 33 01 02 03 04 05 06 07 08 09 A0 A1 A2 A3 pour reconstruire le plaintext actuel via les routines compatibles PPSSPP/libkirk.
+Pour reproduire le déchiffrement, la référence recommandée est l’implémentation PPSSPP elle-même, notamment Core/Dialog/SavedataParam.cpp, Core/HLE/sceChnnlsv.cpp et ext/libkirk. Il est préférable de réutiliser ces routines ou un outil compatible plutôt que d’implémenter un schéma cryptographique approximatif à partir de zéro.
+SECURE.BIN chiffré : 0x56F30 = 356 144 octets
+Payload clair          : 0x56F20 = 356 128 octets
+Différence             : 0x10    = 16 octets
+Mode Savedata observé  : 5
+Clé observée           : 33 33 33 01 02 03 04 05 06 07 08 09 A0 A1 A2 A3
+6. Cartographie macroscopique du payload clair
+Le payload clair se divise en trois zones principales : un GameState global de 0x1C40 octets, quatorze slots RE00 de 0x4000 octets chacun et une région auxiliaire finale de 0x1D2E0 octets. Les bornes ci-dessous sont des offsets relatifs au début du payload déchiffré, et non au fichier chiffré brut.
+Plage
+Taille
+Interprétation
+Confiance
+0x00000–0x01C3F
+0x1C40 / 7 232 o
+GameState persistant principal; correspond directement à la structure utilisée en RAM.
+CONFIRMÉ
+0x01C40–0x39C3F
+0x38000 / 229 376 o
+14 slots fixes RE00 de 0x4000 octets.
+CONFIRMÉ
+0x39C40–0x56F1F
+0x1D2E0 / 119 520 o
+Région auxiliaire avec petites structures et grandes plages nulles.
+CONFIRMÉ physiquement; sémantique inconnue
+0x00000  ┌──────────────────────────────┐
+         │ GameState global             │ 0x1C40
+0x01C40  ├──────────────────────────────┤
+         │ RE00 #00                     │ 0x4000
+0x05C40  ├──────────────────────────────┤
+         │ RE00 #01                     │ 0x4000
+         │ ...                          │
+0x35C40  ├──────────────────────────────┤
+         │ RE00 #13                     │ 0x4000
+0x39C40  ├──────────────────────────────┤
+         │ Région auxiliaire            │ 0x1D2E0
+0x56F20  └──────────────────────────────┘
+7. GameState persistant : 0x00000–0x01C3F
+Cette première zone est le cœur de la progression globale. La correspondance RAM <-> disque est démontrée par plusieurs accès de code et par la valeur des boulons : le jeu accède au même offset relatif 0x1C28 dans le GameState que celui trouvé dans le payload déchiffré.
+Offset
+Taille/type
+Contenu connu
+Preuve
+0x08F7–0x08FC
+6 octets
+Flags Skill Points; 48 bits adressables.
+Code générique de flags + appels PRX + valeurs de save
+0x01C28–0x01C2B
+uint32 LE
+Nombre de boulons.
+20 973 dans save actuelle; 20 522 dans ancien état
+Autres offsets
+inconnus
+Inventaire, progression, missions, états persistants, etc.
+À cartographier champ par champ
+Dans l’état actuel  la valeur à 0x1C28 est 20 973 et dans l’ancien état elle est 20 522. Cette stabilité d’offset entre deux saves indépendantes confirme que l’on travaille sur une structure persistante fixe plutôt que sur une sérialisation variable.
+8. Système générique de flags et Skill Points
+CONFIRMÉ
+Dans LEVEL_01.PRX, la routine à .text+0x21B14 lit un octet à GameState + 0x880 + byteIndex puis applique 1 << bitIndex. La routine à .text+0x21B38 modifie le bit correspondant après avoir masqué la valeur à 1 bit.
+Les valeurs 0x77–0x7C ne sont donc pas des offsets physiques de fichier : ce sont des indices d’octets passés à ce système générique. L’adresse physique dans le GameState est obtenue en ajoutant 0x880, d’où 0x880 + 0x77 = 0x8F7 et 0x880 + 0x7C = 0x8FC.
+GetFlag(byteIndex, bitIndex):
+    value = *(uint8_t *)(GameState + 0x880 + byteIndex)
+    return value & (1 << bitIndex)
+SetFlag(byteIndex, value, bitIndex):
+    ptr = GameState + 0x880 + byteIndex
+    *ptr = (*ptr & ~(1 << bitIndex)) | ((value & 1) << bitIndex)
+Pokitaru fournit une validation explicite de l’organisation par bits : son PRX interroge l’indice logique 0x77 avec les bits 0, 1 et 2, tandis que Ryllus interroge le même octet avec les bits 4, 5 et 6. Cette organisation suggère fortement des demi-octets de quatre flags par destination, avec des slots inutilisés lorsque le niveau possède moins de quatre Skill Points.
+Indice logique
+Offset physique
+Nibble bas
+Nibble haut
+Statut
+0x77
+0x8F7
+bits 0–3 : Pokitaru
+bits 4–7 : Ryllus
+Forte; appels PRX explicites
+0x78
+0x8F8
+bits 0–3 : Kalidon
+bits 4–7 : Metalis
+Mapping de travail; à revalider niveau par niveau
+0x79
+0x8F9
+bits 0–3 : Dreamtime
+bits 4–7 : Medical Outpost Omega
+Mapping de travail; à revalider niveau par niveau
+0x7A
+0x8FA
+bits 0–3 : Challax
+bits 4–7 : Dayni Moon
+Mapping de travail; à revalider niveau par niveau
+0x7B
+0x8FB
+bits 0–3 : Inside Clank
+bits 4–7 : Quadrona
+Mapping de travail; à revalider niveau par niveau
+0x7C
+0x8FC
+bits 0–3 : non attribués
+bits 4–7 : non attribués
+Aucun usage Skill Point observé; ne pas confondre avec “zone libre globale”
+La sauvegarde actuelle contient les six octets 02 00 00 00 00 00 à 0x8F7–0x8FC, alors que l’ancien état contient 00 00 00 00 00 00. Pour Pokitaru, 0x02 signifie que seul le bit 1 est actif, ce qui est cohérent avec un seul Skill Point acquis dans ce groupe.
+Save actuelle @ 0x8F7 : 02 00 00 00 00 00
+Ancienne save @ 0x8F7 : 00 00 00 00 00 00
+ATTENTION
+Les octets 0x8FD et suivants ne constituent pas une extension implicite du tableau de Skill Points. D’autres flags persistants y sont déjà stockés et des indices logiques comme 0x80 ou 0x82 sont utilisés par le jeu; une écriture naïve au-delà de 0x8FC risquerait de corrompre la progression.
+9. Les quatorze slots RE00
+À partir de 0x1C40, la sauvegarde réserve quatorze slots de 0x4000 octets, chacun commençant par la signature ASCII RE00. Leur présence et leur espacement sont confirmés, mais leur fonction exacte n’est pas encore attribuée; il faut éviter de les appeler arbitrairement “saves de niveaux” ou “replays” sans preuve supplémentaire.
+#
+Offset
+Magic
++0x04
++0x08
+00
+0x01C40
+RE00
+0x8000
+0x020C
+01
+0x05C40
+RE00
+0x8000
+0x1B28
+02
+0x09C40
+RE00
+0x8000
+0x19D8
+03
+0x0DC40
+RE00
+0x8000
+0x12BF
+04
+0x11C40
+RE00
+0x8000
+0x020C
+05
+0x15C40
+RE00
+0x8000
+0x020C
+06
+0x19C40
+RE00
+0x8000
+0x020C
+07
+0x1DC40
+RE00
+0x8000
+0x020C
+08
+0x21C40
+RE00
+0x8000
+0x020C
+09
+0x25C40
+RE00
+0x8000
+0x020C
+10
+0x29C40
+RE00
+0x8000
+0x020C
+11
+0x2DC40
+RE00
+0x8000
+0x020C
+12
+0x31C40
+RE00
+0x8000
+0x020C
+13
+0x35C40
+RE00
+0x8000
+0x020C
+Le champ +0x04 vaut 0x8000 dans les quatorze slots observés, tandis que +0x08 varie pour les premiers slots actifs et vaut souvent 0x020C dans les slots proches d’un état par défaut. Il serait prématuré d’appeler +0x08 une taille : des données significatives peuvent exister au-delà de cette valeur dans au moins un slot observé.
+Structure minimale actuellement sûre :
+RE00Slot {
+    +0x00  char magic[4] = "RE00";
+    +0x04  uint32 field_04 = 0x8000;
+    +0x08  uint32 field_08;      // signification non établie
+    +0x0C  ... payload ...
+    +0x3FFF fin du slot
+}
+10. Région auxiliaire : 0x39C40–0x56F1F
+La région finale n’est pas un padding uniforme. Elle alterne des petites structures non nulles et de larges plages de zéros, avec plusieurs alignements remarquables autour de frontières en 0x1000; sa structure physique peut donc être cartographiée même si son sens fonctionnel reste largement inconnu.
+Plage
+Taille
+État
+Commentaire
+0x39C40–0x3A451
+2 066
+Zéros
+Préambule/padding observé
+0x3A452–0x3A4CF
+126
+Données
+Petite structure non identifiée
+0x3A4D0–0x3B4DF
+4 112
+Zéros
+Espace entre structures
+0x3B4E0–0x3B6D7
+504
+Données
+Structure non identifiée
+0x3B6D8–0x3C4DF
+3 592
+Zéros
+Espace entre structures
+0x3C4E0–0x3C5E7
+264
+Données
+Structure non identifiée
+0x3C5E8–0x3D4DF
+3 832
+Zéros
+Espace entre structures
+0x3D4E0–0x3D6A7
+456
+Données
+Structure non identifiée
+0x3D6A8–0x3E4DF
+3 640
+Zéros
+Espace entre structures
+0x3E4E0–0x3E4EB
+12
+Données
+Petite structure non identifiée
+0x3E4EC–0x536DF
+86 516
+Zéros
+Zone candidate Overcompensated; non certifiée libre
+0x536E0–0x5371E
+63
+Données
+Structure non identifiée
+0x5371F–0x538DF
+449
+Zéros
+Espace entre structures
+0x538E0–0x538FB
+28
+Données
+Structure non identifiée
+0x538FC–0x53ADF
+484
+Zéros
+Espace entre structures
+0x53AE0–0x53B18
+57
+Données
+Structure non identifiée
+0x53B19–0x566DF
+11 207
+Zéros
+Grande zone à investiguer
+0x566E0–0x566E8
+9
+Données
+Structure non identifiée
+0x566E9–0x56EFF
+2 071
+Zéros
+Espace terminal
+0x56F00–0x56F02
+3
+Données
+Marqueur/valeur terminale non identifiée
+0x56F03–0x56F1F
+29
+Zéros
+Fin du payload
+CANDIDATE
+La plage 0x3E4EC–0x536DF contient exactement 86 516 octets nuls dans les deux payloads clairs disponibles. C’est une excellente candidate pour une extension persistante, mais deux saves ne prouvent pas que le jeu ne l’utilise jamais; aucun write-watch complet n’a encore été effectué sur tous les modes.
+11. Validation différentielle déjà acquise
+Deux états de sauvegarde clairs de même longueur sont actuellement disponibles : l’état courant issu de DATA0.zip et un état plus ancien extrait/reconstruit depuis RAM.dump. Leur comparaison valide la stabilité des offsets et fournit des ancres concrètes pour les futurs diffs contrôlés.
+Champ
+Save actuelle
+Ancienne save
+Conclusion
+Longueur plaintext
+0x56F20
+0x56F20
+Format fixe de même taille.
+Boulons @ 0x1C28
+20973
+20522
+Offset persistant confirmé.
+Skill bytes @ 0x8F7
+02 00 00 00 00 00
+00 00 00 00 00 00
+Le champ varie avec la progression Skill Point.
+0x3E4EC–0x536DF
+86 516 octets nuls
+86 516 octets nuls
+Zone candidate stable dans ces deux états seulement.
+12. Implications pour Overcompensated
+Les 48 bits vanilla sont suffisants pour un prototype rapide, car 25 Skill Points semblent utilisés et plusieurs bits restent disponibles. Ils ne constituent toutefois pas une bonne architecture définitive pour Speed Points, Curiosity Points et Skill Issues : le code vanilla parcourt ces octets dans divers contextes, et mélanger les nouveaux points aux flags originaux pourrait modifier des compteurs, déblocages ou comportements non désirés.
+L’architecture recommandée est une structure persistante Overcompensated séparée, stockée dans une zone certifiée inutilisée du payload existant ou, à défaut, dans un fichier annexe géré par le plugin. Une zone interne est préférable si elle peut être prouvée sûre, car le jeu et PPSSPP continueraient alors à gérer normalement le chiffrement et l’écriture de SECURE.BIN.
+Proposition de structure, uniquement après validation d’un emplacement libre :
+struct OCSaveHeader {
+    char     magic[4];      // "OCSV"
+    uint16_t version;
+    uint16_t size;
+    uint32_t flags;
+};
+// Puis : bitsets Speed / Curiosity / Skill Issues, meilleurs temps, compteurs, etc.
+// Prévoir une version de format pour les migrations futures.
+13. Ce qu’il ne faut pas considérer comme acquis
+Plusieurs points peuvent facilement devenir des “fausses certitudes” si le relais ne connaît que les conclusions sans leur niveau de preuve. Les éléments ci-dessous doivent rester explicitement marqués comme ouverts jusqu’à validation expérimentale ou lecture complète du code concerné.
+Ne pas supposer
+Pourquoi
+“Les 86 516 octets sont libres.”
+Ils sont nuls dans deux saves seulement; un autre mode, une progression tardive ou une fonctionnalité rare peut les utiliser.
+“RE00 est un replay / un niveau / un cache précis.”
+Seuls la signature, le nombre de slots, leur taille et certains champs sont confirmés; la sémantique reste inconnue.
+“Les 23 bits Skill Point inutilisés sont sans conséquence.”
+Ils appartiennent au champ vanilla et peuvent être lus par des compteurs/déblocages; il faut auditer les consommateurs.
+“0x7D est le septième octet Skill Points.”
+0x7D est un nouvel indice générique de flags, pas une continuation garantie du système Skill Point.
+“Le mapping planète <-> nibble est définitivement prouvé partout.”
+Pokitaru/Ryllus sont explicitement vérifiés; le reste suit un mapping de travail cohérent qui mérite une validation PRX systématique.
+“La taille du fichier peut être changée sans conséquence.”
+Aucun test de compatibilité n’a encore validé une extension physique de SECURE.BIN; privilégier d’abord une zone interne certifiée.
+14. Procédure de reprise recommandée
+Un successeur devrait commencer par reproduire les observations existantes avant d’ajouter de nouvelles hypothèses. Cette vérification prend peu de temps avec les fichiers fournis et garantit que les offsets, les versions de PRX et le payload analysé sont bien identiques à ceux de ce document.
+Étape
+Action
+Résultat attendu
+1
+Ouvrir SECURE_CURRENT_DECRYPTED.bin et vérifier la longueur.
+0x56F20 octets.
+2
+Lire uint32 LE à 0x1C28.
+20 973.
+3
+Lire 6 octets à 0x8F7.
+02 00 00 00 00 00.
+4
+Vérifier les signatures RE00 à 0x1C40 + n×0x4000 pour n=0..13.
+14 signatures RE00.
+5
+Vérifier que 0x3E4EC–0x536DF est nul dans les deux plaintexts.
+86 516 octets nuls dans chacun.
+6
+Dans LEVEL_01.PRX, confirmer les routines .text+0x21B14 et .text+0x21B38.
+Lecture/écriture de GameState+0x880+index.
+7
+Reprendre ensuite seulement la cartographie sémantique.
+Base commune fiable.
+15. Expériences prioritaires à mener
+La meilleure méthode pour nommer les champs restants est le diff contrôlé : deux sauvegardes issues du même point de départ où une seule variable connue change. Cette méthode doit être complétée par des breakpoints ou write watches PPSSPP afin de distinguer les champs réellement persistants du padding qui reste nul par hasard.
+Priorité
+Expérience
+But
+P0
+Save A/B : obtenir exactement un Skill Point supplémentaire sans autre changement volontaire.
+Valider le bit précis, la persistance et les éventuelles copies/checksums.
+P0
+Write-watch sur 0x3E4EC–0x536DF pendant chargement, jeu, sauvegarde, changement de planète et retour frontend.
+Déterminer si la grande zone candidate reçoit le moindre accès en écriture.
+P1
+Tester Challenge Mode / NG+, courses, Clank, séquences spéciales et éventuellement multijoueur.
+Détecter les zones de sauvegarde rarement utilisées.
+P1
+Créer des diffs contrôlés pour boulons, arme achetée, niveau d’arme, armure, progression de mission.
+Reconstruire progressivement le struct GameState.
+P1
+Auditer tous les lecteurs des indices 0x77–0x7C et le compteur de Skill Points.
+Savoir exactement quels effets aurait l’usage des bits vanilla libres.
+P2
+Une fois un espace certifié, écrire une signature OCSV temporaire puis save/reload.
+Proof-of-concept de persistance Overcompensated sans fichier annexe.
+Annexe A — Offsets essentiels
+Offset / plage
+Sens actuel
+Statut
+0x00000
+Début du GameState sauvegardé.
+CONFIRMÉ
+0x008F7–0x008FC
+6 octets Skill Points / flags 0x77–0x7C.
+CONFIRMÉ
+0x01C28
+Boulons, uint32 little-endian.
+CONFIRMÉ
+0x01C40
+Début RE00 #00.
+CONFIRMÉ
+0x05C40
+Début RE00 #01.
+CONFIRMÉ
+0x09C40
+Début RE00 #02.
+CONFIRMÉ
+0x0DC40
+Début RE00 #03.
+CONFIRMÉ
+0x11C40
+Début RE00 #04.
+CONFIRMÉ
+0x15C40
+Début RE00 #05.
+CONFIRMÉ
+0x19C40
+Début RE00 #06.
+CONFIRMÉ
+0x1DC40
+Début RE00 #07.
+CONFIRMÉ
+0x21C40
+Début RE00 #08.
+CONFIRMÉ
+0x25C40
+Début RE00 #09.
+CONFIRMÉ
+0x29C40
+Début RE00 #10.
+CONFIRMÉ
+0x2DC40
+Début RE00 #11.
+CONFIRMÉ
+0x31C40
+Début RE00 #12.
+CONFIRMÉ
+0x35C40
+Début RE00 #13.
+CONFIRMÉ
+0x39C40
+Début de la région auxiliaire.
+CONFIRMÉ
+0x3E4EC–0x536DF
+86 516 octets nuls dans deux saves.
+CANDIDATE, NON CERTIFIÉE LIBRE
+0x56F20
+Fin exclusive du payload clair.
+CONFIRMÉ
+Annexe B — Squelette de structure de travail
+Le squelette suivant n’est pas un header C prêt à compiler : il sert à maintenir une représentation commune entre les analystes. Les champs inconnus sont volontairement laissés opaques jusqu’à ce qu’un diff ou le code fournisse une preuve suffisante.
+struct SizeMattersSavePlain {
+    uint8_t  gameState[0x1C40];
+    RE00Slot re00[14];          // 14 * 0x4000
+    uint8_t  auxiliary[0x1D2E0];
+};
+// Sous-structure partielle connue :
+// gameState[0x08F7..0x08FC] = Skill Point / generic flag bytes
+// *(uint32_t *)&gameState[0x1C28] = bolts
+Annexe C — Valeurs de contrôle pour détecter une mauvaise base
+Ces valeurs servent de “fingerprints” rapides pour vérifier qu’un analyste travaille bien sur les mêmes fichiers que ceux utilisés ici. Si elles ne correspondent pas, il faut d’abord identifier la version de la sauvegarde ou du PRX avant de réutiliser les offsets tels quels.
+Contrôle
+Valeur attendue
+Taille DATA0/SECURE.BIN chiffré
+356 144 / 0x56F30 octets
+Taille SECURE_CURRENT_DECRYPTED.bin
+356 128 / 0x56F20 octets
+Boulons actuels @ 0x1C28
+ED 51 00 00 = 20 973
+Skill bytes actuels @ 0x8F7
+02 00 00 00 00 00
+Magic @ 0x1C40
+52 45 30 30 = “RE00”
+RE00 +0x04
+00 80 00 00 = 0x8000
+Longueur grande zone candidate
+86 516 octets
+État de passation : 
+la structure macroscopique est suffisamment documentée pour reprendre le travail immédiatement, mais la cartographie sémantique fine du GameState, des RE00 et de la zone auxiliaire reste à poursuivre. Toute extension persistante Overcompensated doit attendre la certification d’un espace réellement inutilisé ou utiliser provisoirement un stockage séparé.

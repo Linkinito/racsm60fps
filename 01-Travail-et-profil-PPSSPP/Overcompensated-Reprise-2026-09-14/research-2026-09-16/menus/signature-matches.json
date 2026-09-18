@@ -1,0 +1,316 @@
+[
+  {
+    "module": "LEVEL_04.PRX",
+    "symbol": "__0FkPAUSEMENU_UpdateNumberItemsPerWindowP6KtPAUSEMENU",
+    "symbol_address": "0x162d4",
+    "size": 72,
+    "prefix_words": 18,
+    "matches": [
+      "0xac1bc"
+    ]
+  },
+  {
+    "module": "LEVEL_04.PRX",
+    "symbol": "__0FfPAUSEMENU_CalculateScrollNeededP6KtPAUSEMENU",
+    "symbol_address": "0x163c4",
+    "size": 228,
+    "prefix_words": 57,
+    "matches": [
+      "0xac2ac"
+    ]
+  },
+  {
+    "module": "LEVEL_04.PRX",
+    "symbol": "__0FQPAUSEMODE_Updatev",
+    "symbol_address": "0x17620",
+    "size": 244,
+    "prefix_words": 61,
+    "matches": []
+  },
+  {
+    "module": "LEVEL_04.PRX",
+    "symbol": "__0FTLEVELSTARTUP_Updatev",
+    "symbol_address": "0x19488",
+    "size": 5784,
+    "prefix_words": 64,
+    "matches": []
+  },
+  {
+    "module": "LEVEL_04.PRX",
+    "symbol": "__0FRHUDFXCYCLE_UpdateP6LtHUDCYCLEFX",
+    "symbol_address": "0x15c34",
+    "size": 160,
+    "prefix_words": 40,
+    "matches": [
+      "0xa6a34"
+    ]
+  },
+  {
+    "module": "LEVEL_04.PRX",
+    "symbol": "__0FQPAUSEMENU_UpdateP6KtPAUSEMENUUi",
+    "symbol_address": "0x15e94",
+    "size": 156,
+    "prefix_words": 39,
+    "matches": [
+      "0xabb18"
+    ]
+  },
+  {
+    "module": "LEVEL_04.PRX",
+    "symbol": "__0FePAUSEMENU_HideAllCustomCursorsP6KtPAUSEMENU",
+    "symbol_address": "0x160ac",
+    "size": 132,
+    "prefix_words": 33,
+    "matches": [
+      "0xabf78"
+    ]
+  },
+  {
+    "module": "LEVEL_04.PRX",
+    "symbol": "__0FXPAUSEMENU_SeekSelectionP6KtPAUSEMENUUi",
+    "symbol_address": "0x15f30",
+    "size": 228,
+    "prefix_words": 57,
+    "matches": [
+      "0xabbb4"
+    ]
+  },
+  {
+    "module": "LEVEL_04.PRX",
+    "symbol": "__0FRPAUSEMENU_SetTextP6KtPAUSEMENUUiNCCb",
+    "symbol_address": "0x16014",
+    "size": 92,
+    "prefix_words": 23,
+    "matches": [
+      "0xabe04"
+    ]
+  },
+  {
+    "module": "LEVEL_04.PRX",
+    "symbol": "__0FePAUSEMENU_BeginAddingMenuItemsP6KtPAUSEMENUPcUiTD",
+    "symbol_address": "0x16130",
+    "size": 224,
+    "prefix_words": 56,
+    "matches": [
+      "0xac018"
+    ]
+  },
+  {
+    "module": "LEVEL_04.PRX",
+    "symbol": "__0FZPAUSEMENU_SetScreenLimitsP6KtPAUSEMENUsNDC",
+    "symbol_address": "0x164a8",
+    "size": 216,
+    "prefix_words": 54,
+    "matches": [
+      "0xac3a0"
+    ]
+  },
+  {
+    "module": "LEVEL_04.PRX",
+    "symbol": "__0FcPAUSEMENU_EndAddingMenuItemsP6KtPAUSEMENU",
+    "symbol_address": "0x16210",
+    "size": 196,
+    "prefix_words": 49,
+    "matches": [
+      "0xac0f8"
+    ]
+  },
+  {
+    "module": "LEVEL_04.PRX",
+    "symbol": "__0FgPAUSEMENU_CalculateItemsToRenderP6KtPAUSEMENUPUiTC",
+    "symbol_address": "0x16328",
+    "size": 156,
+    "prefix_words": 39,
+    "matches": [
+      "0xac210"
+    ]
+  },
+  {
+    "module": "LEVEL_04.PRX",
+    "symbol": "__0FcPAUSEMENU_GetCurrentItemNodeP6KtPAUSEMENU",
+    "symbol_address": "0x16580",
+    "size": 48,
+    "prefix_words": 12,
+    "matches": [
+      "0xac7f0"
+    ]
+  },
+  {
+    "module": "LEVEL_04.PRX",
+    "symbol": "__0FRPAUSEMENU_AddItemP6KtPAUSEMENUUiNECbNCC",
+    "symbol_address": "0x165b0",
+    "size": 288,
+    "prefix_words": 64,
+    "matches": [
+      "0xac850"
+    ]
+  },
+  {
+    "module": "LEVEL_04.PRX",
+    "symbol": "__0FQPAUSEMENU_RenderP6KtPAUSEMENU",
+    "symbol_address": "0x166d0",
+    "size": 3556,
+    "prefix_words": 64,
+    "matches": [
+      "0xac970"
+    ]
+  },
+  {
+    "module": "FRONTEND.PRX",
+    "symbol": "__0FkPAUSEMENU_UpdateNumberItemsPerWindowP6KtPAUSEMENU",
+    "symbol_address": "0x162d4",
+    "size": 72,
+    "prefix_words": 18,
+    "matches": [
+      "0x160d4"
+    ]
+  },
+  {
+    "module": "FRONTEND.PRX",
+    "symbol": "__0FfPAUSEMENU_CalculateScrollNeededP6KtPAUSEMENU",
+    "symbol_address": "0x163c4",
+    "size": 228,
+    "prefix_words": 57,
+    "matches": [
+      "0x161c4"
+    ]
+  },
+  {
+    "module": "FRONTEND.PRX",
+    "symbol": "__0FQPAUSEMODE_Updatev",
+    "symbol_address": "0x17620",
+    "size": 244,
+    "prefix_words": 61,
+    "matches": [
+      "0x17420"
+    ]
+  },
+  {
+    "module": "FRONTEND.PRX",
+    "symbol": "__0FTLEVELSTARTUP_Updatev",
+    "symbol_address": "0x19488",
+    "size": 5784,
+    "prefix_words": 64,
+    "matches": []
+  },
+  {
+    "module": "FRONTEND.PRX",
+    "symbol": "__0FRHUDFXCYCLE_UpdateP6LtHUDCYCLEFX",
+    "symbol_address": "0x15c34",
+    "size": 160,
+    "prefix_words": 40,
+    "matches": [
+      "0x15a34"
+    ]
+  },
+  {
+    "module": "FRONTEND.PRX",
+    "symbol": "__0FQPAUSEMENU_UpdateP6KtPAUSEMENUUi",
+    "symbol_address": "0x15e94",
+    "size": 156,
+    "prefix_words": 39,
+    "matches": [
+      "0x15c94"
+    ]
+  },
+  {
+    "module": "FRONTEND.PRX",
+    "symbol": "__0FePAUSEMENU_HideAllCustomCursorsP6KtPAUSEMENU",
+    "symbol_address": "0x160ac",
+    "size": 132,
+    "prefix_words": 33,
+    "matches": [
+      "0x15eac"
+    ]
+  },
+  {
+    "module": "FRONTEND.PRX",
+    "symbol": "__0FXPAUSEMENU_SeekSelectionP6KtPAUSEMENUUi",
+    "symbol_address": "0x15f30",
+    "size": 228,
+    "prefix_words": 57,
+    "matches": [
+      "0x15d30"
+    ]
+  },
+  {
+    "module": "FRONTEND.PRX",
+    "symbol": "__0FRPAUSEMENU_SetTextP6KtPAUSEMENUUiNCCb",
+    "symbol_address": "0x16014",
+    "size": 92,
+    "prefix_words": 23,
+    "matches": [
+      "0x15e14"
+    ]
+  },
+  {
+    "module": "FRONTEND.PRX",
+    "symbol": "__0FePAUSEMENU_BeginAddingMenuItemsP6KtPAUSEMENUPcUiTD",
+    "symbol_address": "0x16130",
+    "size": 224,
+    "prefix_words": 56,
+    "matches": [
+      "0x15f30"
+    ]
+  },
+  {
+    "module": "FRONTEND.PRX",
+    "symbol": "__0FZPAUSEMENU_SetScreenLimitsP6KtPAUSEMENUsNDC",
+    "symbol_address": "0x164a8",
+    "size": 216,
+    "prefix_words": 54,
+    "matches": [
+      "0x162a8"
+    ]
+  },
+  {
+    "module": "FRONTEND.PRX",
+    "symbol": "__0FcPAUSEMENU_EndAddingMenuItemsP6KtPAUSEMENU",
+    "symbol_address": "0x16210",
+    "size": 196,
+    "prefix_words": 49,
+    "matches": [
+      "0x16010"
+    ]
+  },
+  {
+    "module": "FRONTEND.PRX",
+    "symbol": "__0FgPAUSEMENU_CalculateItemsToRenderP6KtPAUSEMENUPUiTC",
+    "symbol_address": "0x16328",
+    "size": 156,
+    "prefix_words": 39,
+    "matches": [
+      "0x16128"
+    ]
+  },
+  {
+    "module": "FRONTEND.PRX",
+    "symbol": "__0FcPAUSEMENU_GetCurrentItemNodeP6KtPAUSEMENU",
+    "symbol_address": "0x16580",
+    "size": 48,
+    "prefix_words": 12,
+    "matches": [
+      "0x16380"
+    ]
+  },
+  {
+    "module": "FRONTEND.PRX",
+    "symbol": "__0FRPAUSEMENU_AddItemP6KtPAUSEMENUUiNECbNCC",
+    "symbol_address": "0x165b0",
+    "size": 288,
+    "prefix_words": 64,
+    "matches": [
+      "0x163b0"
+    ]
+  },
+  {
+    "module": "FRONTEND.PRX",
+    "symbol": "__0FQPAUSEMENU_RenderP6KtPAUSEMENU",
+    "symbol_address": "0x166d0",
+    "size": 3556,
+    "prefix_words": 64,
+    "matches": [
+      "0x164d0"
+    ]
+  }
+]

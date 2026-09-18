@@ -1,0 +1,2213 @@
+{
+  "time": "2026-09-15T23:02:00.734Z",
+  "samples": [
+    {
+      "cpu": {
+        "event": "cpu.status",
+        "ticket": "wf29-3",
+        "stepping": true,
+        "paused": false,
+        "pc": 152528980,
+        "ticks": 1423691095003
+      },
+      "rows": [
+        {
+          "name": "DestructionDerby",
+          "address": 157714400,
+          "flags": 32801,
+          "state": 5,
+          "pos": [
+            -92.5926513671875,
+            16.410444259643555,
+            53.153358459472656
+          ],
+          "timer": 0,
+          "pvars": 0
+        },
+        {
+          "name": "DestructionDerby",
+          "address": 157714528,
+          "flags": 32801,
+          "state": 0,
+          "pos": [
+            -92.5,
+            16,
+            54
+          ],
+          "timer": 0,
+          "pvars": 0
+        },
+        {
+          "name": "DestructionDerby",
+          "address": 157714656,
+          "flags": 32801,
+          "state": 0,
+          "pos": [
+            -92.5926513671875,
+            16.410444259643555,
+            53.153358459472656
+          ],
+          "timer": 0,
+          "pvars": 0
+        },
+        {
+          "name": "DestructionDerby",
+          "address": 157714784,
+          "flags": 32801,
+          "state": 0,
+          "pos": [
+            -92.5926513671875,
+            16.410444259643555,
+            53.153358459472656
+          ],
+          "timer": 0,
+          "pvars": 0
+        },
+        {
+          "name": "DestructionDerby",
+          "address": 157714912,
+          "flags": 32801,
+          "state": 0,
+          "pos": [
+            -92.5926513671875,
+            16.410444259643555,
+            53.153358459472656
+          ],
+          "timer": 0,
+          "pvars": 0
+        },
+        {
+          "name": "EnemyElectroTorso",
+          "address": 157715040,
+          "flags": 164624,
+          "state": 0,
+          "pos": [
+            -97.32730102539062,
+            14,
+            56.54838180541992
+          ],
+          "timer": 0,
+          "pvars": 164314304
+        },
+        {
+          "name": "EnemyElectroTorso",
+          "address": 157715168,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -85.73567199707031,
+            14,
+            60.76157760620117
+          ],
+          "timer": 0,
+          "pvars": 164314652
+        },
+        {
+          "name": "EnemyElectroTorso",
+          "address": 157715296,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -94.97063446044922,
+            14,
+            43.76979446411133
+          ],
+          "timer": 0,
+          "pvars": 164315000
+        },
+        {
+          "name": "EnemyElectroTorso",
+          "address": 157715424,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -81.7214126586914,
+            14,
+            53.52862548828125
+          ],
+          "timer": 0,
+          "pvars": 164315348
+        },
+        {
+          "name": "ObstacleWall",
+          "address": 157715552,
+          "flags": 557057,
+          "state": 0,
+          "pos": [
+            -96.5,
+            14,
+            52
+          ],
+          "timer": 0,
+          "pvars": 164315696
+        },
+        {
+          "name": "ObstacleWall",
+          "address": 157715680,
+          "flags": 557057,
+          "state": 0,
+          "pos": [
+            -90.5,
+            14,
+            46
+          ],
+          "timer": 0,
+          "pvars": 164315712
+        },
+        {
+          "name": "ObstacleWall",
+          "address": 157715808,
+          "flags": 557569,
+          "state": 0,
+          "pos": [
+            -84.5,
+            14,
+            52
+          ],
+          "timer": 0,
+          "pvars": 164315728
+        },
+        {
+          "name": "ObstacleWall",
+          "address": 157715936,
+          "flags": 557057,
+          "state": 0,
+          "pos": [
+            -90.5,
+            14,
+            58
+          ],
+          "timer": 0,
+          "pvars": 164315744
+        },
+        {
+          "name": "ObstacleWall",
+          "address": 157716064,
+          "flags": 557105,
+          "state": 0,
+          "pos": [
+            -90.5,
+            14,
+            57
+          ],
+          "timer": 0,
+          "pvars": 164315760
+        },
+        {
+          "name": "ObstacleWall",
+          "address": 157716192,
+          "flags": 557105,
+          "state": 0,
+          "pos": [
+            -90.5,
+            14,
+            47
+          ],
+          "timer": 0,
+          "pvars": 164315776
+        },
+        {
+          "name": "ObstacleWall",
+          "address": 157716320,
+          "flags": 557105,
+          "state": 0,
+          "pos": [
+            -95,
+            14,
+            57.26247787475586
+          ],
+          "timer": 0,
+          "pvars": 164315792
+        },
+        {
+          "name": "ObstacleWall",
+          "address": 157716448,
+          "flags": 557105,
+          "state": 0,
+          "pos": [
+            -86,
+            14,
+            57.332733154296875
+          ],
+          "timer": 0,
+          "pvars": 164315808
+        },
+        {
+          "name": "ObstacleWall",
+          "address": 157716576,
+          "flags": 557105,
+          "state": 0,
+          "pos": [
+            -90.44050598144531,
+            14,
+            45.44569778442383
+          ],
+          "timer": 0,
+          "pvars": 164315824
+        },
+        {
+          "name": "ObstacleWall",
+          "address": 157716704,
+          "flags": 557105,
+          "state": 0,
+          "pos": [
+            -96.5,
+            14,
+            58
+          ],
+          "timer": 0,
+          "pvars": 164315840
+        },
+        {
+          "name": "ObstacleWall",
+          "address": 157716832,
+          "flags": 557105,
+          "state": 0,
+          "pos": [
+            -96.5,
+            14,
+            46
+          ],
+          "timer": 0,
+          "pvars": 164315856
+        },
+        {
+          "name": "ObstacleWall",
+          "address": 157716960,
+          "flags": 557105,
+          "state": 0,
+          "pos": [
+            -84.5,
+            14,
+            46
+          ],
+          "timer": 0,
+          "pvars": 164315872
+        },
+        {
+          "name": "ObstacleWall",
+          "address": 157717088,
+          "flags": 557105,
+          "state": 0,
+          "pos": [
+            -84.5,
+            14,
+            58
+          ],
+          "timer": 0,
+          "pvars": 164315888
+        },
+        {
+          "name": "ObstacleSaw",
+          "address": 157717216,
+          "flags": 33025,
+          "state": 1,
+          "pos": [
+            -90.5,
+            14,
+            52
+          ],
+          "timer": 0,
+          "pvars": 164315904
+        },
+        {
+          "name": "ObstacleSaw",
+          "address": 157717344,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -97.5,
+            14,
+            52
+          ],
+          "timer": 60,
+          "pvars": 164315960
+        },
+        {
+          "name": "ObstacleSaw",
+          "address": 157717472,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -83.5,
+            14,
+            52
+          ],
+          "timer": 60,
+          "pvars": 164316016
+        },
+        {
+          "name": "ObstacleSaw",
+          "address": 157717600,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -93.5,
+            14,
+            57
+          ],
+          "timer": 60,
+          "pvars": 164316072
+        },
+        {
+          "name": "ObstacleSaw",
+          "address": 157717728,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -87.5,
+            14,
+            47
+          ],
+          "timer": 60,
+          "pvars": 164316128
+        },
+        {
+          "name": "EnemyRamTorso",
+          "address": 157717856,
+          "flags": 163856,
+          "state": 1,
+          "pos": [
+            -94.2947998046875,
+            14,
+            55.00129699707031
+          ],
+          "timer": 120,
+          "pvars": 164316192
+        },
+        {
+          "name": "EnemyRamTorso",
+          "address": 157717984,
+          "flags": 1081617,
+          "state": 2,
+          "pos": [
+            -95.0953369140625,
+            14,
+            52.59464645385742
+          ],
+          "timer": 119,
+          "pvars": 164316472
+        },
+        {
+          "name": "EnemyRamTorso",
+          "address": 157718112,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -81.08358001708984,
+            14,
+            50.3702278137207
+          ],
+          "timer": 0,
+          "pvars": 164316752
+        },
+        {
+          "name": "EnemyRamTorso",
+          "address": 157718240,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -86.85014343261719,
+            14,
+            60.651859283447266
+          ],
+          "timer": 0,
+          "pvars": 164317032
+        },
+        {
+          "name": "EnemyRamTorso",
+          "address": 157718368,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -85.14056396484375,
+            14,
+            59.01351547241211
+          ],
+          "timer": 0,
+          "pvars": 164317312
+        },
+        {
+          "name": "ObstacleVent",
+          "address": 157720416,
+          "flags": 32881,
+          "state": 0,
+          "pos": [
+            -82.52299499511719,
+            14,
+            44.137001037597656
+          ],
+          "timer": 43,
+          "pvars": 164317888
+        },
+        {
+          "name": "ObstacleVent",
+          "address": 157720544,
+          "flags": 32881,
+          "state": 0,
+          "pos": [
+            -98.48400115966797,
+            14,
+            44.137001037597656
+          ],
+          "timer": 43,
+          "pvars": 164317924
+        },
+        {
+          "name": "ObstacleVent",
+          "address": 157720672,
+          "flags": 32881,
+          "state": 0,
+          "pos": [
+            -98.48400115966797,
+            14,
+            60.06899642944336
+          ],
+          "timer": 43,
+          "pvars": 164317960
+        },
+        {
+          "name": "ObstacleVent",
+          "address": 157720800,
+          "flags": 32881,
+          "state": 0,
+          "pos": [
+            -82.52299499511719,
+            14,
+            60.06899642944336
+          ],
+          "timer": 43,
+          "pvars": 164317996
+        },
+        {
+          "name": "ObstacleVent",
+          "address": 157720928,
+          "flags": 32881,
+          "state": 0,
+          "pos": [
+            -82.52299499511719,
+            14,
+            60.06899642944336
+          ],
+          "timer": 120,
+          "pvars": 164318032
+        },
+        {
+          "name": "ObstacleVent",
+          "address": 157721056,
+          "flags": 32881,
+          "state": 0,
+          "pos": [
+            -82.52299499511719,
+            14,
+            44.137001037597656
+          ],
+          "timer": 120,
+          "pvars": 164318068
+        },
+        {
+          "name": "ObstacleVent",
+          "address": 157721184,
+          "flags": 32881,
+          "state": 0,
+          "pos": [
+            -98.48400115966797,
+            14,
+            44.137001037597656
+          ],
+          "timer": 120,
+          "pvars": 164318104
+        },
+        {
+          "name": "ObstacleVent",
+          "address": 157721312,
+          "flags": 32881,
+          "state": 0,
+          "pos": [
+            -98.48400115966797,
+            14,
+            60.06899642944336
+          ],
+          "timer": 120,
+          "pvars": 164318140
+        },
+        {
+          "name": "ObstacleVent",
+          "address": 157721440,
+          "flags": 32881,
+          "state": 0,
+          "pos": [
+            -82.52299499511719,
+            14,
+            60.06899642944336
+          ],
+          "timer": 120,
+          "pvars": 164318176
+        },
+        {
+          "name": "ObstacleVent",
+          "address": 157721568,
+          "flags": 32881,
+          "state": 0,
+          "pos": [
+            -82.52299499511719,
+            14,
+            44.137001037597656
+          ],
+          "timer": 120,
+          "pvars": 164318212
+        },
+        {
+          "name": "ObstacleVent",
+          "address": 157721696,
+          "flags": 32881,
+          "state": 0,
+          "pos": [
+            -98.48400115966797,
+            14,
+            44.137001037597656
+          ],
+          "timer": 120,
+          "pvars": 164318248
+        },
+        {
+          "name": "ObstacleVent",
+          "address": 157721824,
+          "flags": 32881,
+          "state": 0,
+          "pos": [
+            -98.48400115966797,
+            14,
+            60.06899642944336
+          ],
+          "timer": 120,
+          "pvars": 164318284
+        },
+        {
+          "name": "ObstacleBouncer",
+          "address": 157722592,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -91.24799346923828,
+            14,
+            52
+          ],
+          "timer": 0,
+          "pvars": 164318608
+        },
+        {
+          "name": "ObstacleBouncer",
+          "address": 157722720,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -87.5,
+            14,
+            52
+          ],
+          "timer": 0,
+          "pvars": 164318624
+        },
+        {
+          "name": "ObstacleBouncer",
+          "address": 157722848,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -97.37622833251953,
+            14,
+            45.60790252685547
+          ],
+          "timer": 0,
+          "pvars": 164318640
+        },
+        {
+          "name": "ObstacleBouncer",
+          "address": 157722976,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -83.98714447021484,
+            14,
+            45.503108978271484
+          ],
+          "timer": 0,
+          "pvars": 164318656
+        },
+        {
+          "name": "ObstacleBouncer",
+          "address": 157723104,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -92.5,
+            14,
+            49
+          ],
+          "timer": 0,
+          "pvars": 164318672
+        },
+        {
+          "name": "ObstacleBouncer",
+          "address": 157723232,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -87.5,
+            14,
+            50
+          ],
+          "timer": 0,
+          "pvars": 164318688
+        },
+        {
+          "name": "ObstacleBouncer",
+          "address": 157723360,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -88.5,
+            14,
+            55
+          ],
+          "timer": 0,
+          "pvars": 164318704
+        },
+        {
+          "name": "ObstacleBouncer",
+          "address": 157723488,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -93.5,
+            14,
+            54
+          ],
+          "timer": 0,
+          "pvars": 164318720
+        },
+        {
+          "name": "ObstacleBouncer",
+          "address": 157723616,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -85.5,
+            14,
+            55
+          ],
+          "timer": 0,
+          "pvars": 164318736
+        },
+        {
+          "name": "ObstacleBouncer",
+          "address": 157723744,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -95.5,
+            14,
+            49
+          ],
+          "timer": 0,
+          "pvars": 164318752
+        },
+        {
+          "name": "EnemySawTorso",
+          "address": 157724128,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -95.99313354492188,
+            14,
+            43.52334976196289
+          ],
+          "timer": 0,
+          "pvars": 164319376
+        },
+        {
+          "name": "EnemySawTorso",
+          "address": 157724256,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -81.7214126586914,
+            14,
+            47.68757247924805
+          ],
+          "timer": 0,
+          "pvars": 164319572
+        },
+        {
+          "name": "EnemySawTorso",
+          "address": 157724384,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -91.05284881591797,
+            14,
+            43.34239959716797
+          ],
+          "timer": 0,
+          "pvars": 164319768
+        },
+        {
+          "name": "ObstacleSpinningFloor",
+          "address": 157730272,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -90.34365844726562,
+            14,
+            52.27595901489258
+          ],
+          "timer": 0,
+          "pvars": 164326560
+        },
+        {
+          "name": "ObstacleSpinningFloor",
+          "address": 157730400,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -90.5,
+            14,
+            49
+          ],
+          "timer": 0,
+          "pvars": 164326572
+        },
+        {
+          "name": "ObstacleSpinningFloor",
+          "address": 157730528,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -90.5,
+            14,
+            55
+          ],
+          "timer": 0,
+          "pvars": 164326584
+        },
+        {
+          "name": "ObstacleSpinningFloor",
+          "address": 157730656,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -93.5,
+            14,
+            52
+          ],
+          "timer": 0,
+          "pvars": 164326596
+        },
+        {
+          "name": "ObstacleSpinningFloor",
+          "address": 157730784,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -87.5,
+            14,
+            52
+          ],
+          "timer": 0,
+          "pvars": 164326608
+        },
+        {
+          "name": "ObstacleSpinningFloor",
+          "address": 157730912,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -90.5,
+            14,
+            45
+          ],
+          "timer": 0,
+          "pvars": 164326620
+        },
+        {
+          "name": "ObstacleSpinningFloor",
+          "address": 157731040,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -90.5,
+            14,
+            59
+          ],
+          "timer": 0,
+          "pvars": 164326632
+        },
+        {
+          "name": "ObstacleSpinningFloor",
+          "address": 157731168,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -95.5,
+            14,
+            57
+          ],
+          "timer": 0,
+          "pvars": 164326644
+        },
+        {
+          "name": "ObstacleSpinningFloor",
+          "address": 157731296,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -85.5,
+            14,
+            57
+          ],
+          "timer": 0,
+          "pvars": 164326656
+        },
+        {
+          "name": "ObstacleSpinningFloor",
+          "address": 157731424,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -85.5,
+            14,
+            47
+          ],
+          "timer": 0,
+          "pvars": 164326668
+        },
+        {
+          "name": "ObstacleSpinningFloor",
+          "address": 157731552,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -95.5,
+            14,
+            47
+          ],
+          "timer": 0,
+          "pvars": 164326680
+        },
+        {
+          "name": "ObstacleSpinningFloor",
+          "address": 157731680,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -90.5,
+            14,
+            60
+          ],
+          "timer": 0,
+          "pvars": 164326692
+        },
+        {
+          "name": "ObstacleSpinningFloor",
+          "address": 157731808,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -82.5,
+            14,
+            52
+          ],
+          "timer": 0,
+          "pvars": 164326704
+        },
+        {
+          "name": "ObstacleSpinningFloor",
+          "address": 157731936,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -90.5,
+            14,
+            44
+          ],
+          "timer": 0,
+          "pvars": 164326716
+        },
+        {
+          "name": "ObstacleSpinningFloor",
+          "address": 157732064,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -98.5,
+            14,
+            52
+          ],
+          "timer": 0,
+          "pvars": 164326728
+        },
+        {
+          "name": "VehicleMine",
+          "address": 157804384,
+          "flags": 512,
+          "state": 1,
+          "pos": [
+            -82.76126861572266,
+            14,
+            53.49088668823242
+          ],
+          "timer": 0,
+          "pvars": 164350800
+        },
+        {
+          "name": "VehicleMine",
+          "address": 157804512,
+          "flags": 512,
+          "state": 1,
+          "pos": [
+            -98.13593292236328,
+            14,
+            57.364356994628906
+          ],
+          "timer": 0,
+          "pvars": 164350816
+        },
+        {
+          "name": "VehicleMine",
+          "address": 157804640,
+          "flags": 32768,
+          "state": 0,
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "timer": 0,
+          "pvars": 164350832
+        },
+        {
+          "name": "VehicleMine",
+          "address": 157804768,
+          "flags": 32768,
+          "state": 0,
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "timer": 0,
+          "pvars": 164350848
+        },
+        {
+          "name": "VehicleMine",
+          "address": 157804896,
+          "flags": 32768,
+          "state": 0,
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "timer": 0,
+          "pvars": 164350864
+        },
+        {
+          "name": "VehicleMissile",
+          "address": 157805024,
+          "flags": 0,
+          "state": 0,
+          "pos": [
+            -95.42134857177734,
+            14.5,
+            56.4824333190918
+          ],
+          "timer": 120,
+          "pvars": 164350880
+        },
+        {
+          "name": "VehicleMissile",
+          "address": 157805152,
+          "flags": 32768,
+          "state": 0,
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "timer": 0,
+          "pvars": 164350916
+        },
+        {
+          "name": "VehicleMissile",
+          "address": 157805280,
+          "flags": 32768,
+          "state": 0,
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "timer": 0,
+          "pvars": 164350952
+        },
+        {
+          "name": "VehicleMissile",
+          "address": 157805408,
+          "flags": 32768,
+          "state": 0,
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "timer": 0,
+          "pvars": 164350988
+        },
+        {
+          "name": "VehicleMissile",
+          "address": 157805536,
+          "flags": 32768,
+          "state": 0,
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "timer": 0,
+          "pvars": 164351024
+        }
+      ]
+    },
+    {
+      "cpu": {
+        "event": "cpu.status",
+        "ticket": "wf29-6",
+        "stepping": true,
+        "paused": false,
+        "pc": 154231188,
+        "ticks": 1423991011917
+      },
+      "rows": [
+        {
+          "name": "DestructionDerby",
+          "address": 157714400,
+          "flags": 32801,
+          "state": 5,
+          "pos": [
+            -92.5926513671875,
+            16.410444259643555,
+            53.153358459472656
+          ],
+          "timer": 0,
+          "pvars": 0
+        },
+        {
+          "name": "DestructionDerby",
+          "address": 157714528,
+          "flags": 32801,
+          "state": 0,
+          "pos": [
+            -92.5,
+            16,
+            54
+          ],
+          "timer": 0,
+          "pvars": 0
+        },
+        {
+          "name": "DestructionDerby",
+          "address": 157714656,
+          "flags": 32801,
+          "state": 0,
+          "pos": [
+            -92.5926513671875,
+            16.410444259643555,
+            53.153358459472656
+          ],
+          "timer": 0,
+          "pvars": 0
+        },
+        {
+          "name": "DestructionDerby",
+          "address": 157714784,
+          "flags": 32801,
+          "state": 0,
+          "pos": [
+            -92.5926513671875,
+            16.410444259643555,
+            53.153358459472656
+          ],
+          "timer": 0,
+          "pvars": 0
+        },
+        {
+          "name": "DestructionDerby",
+          "address": 157714912,
+          "flags": 32801,
+          "state": 0,
+          "pos": [
+            -92.5926513671875,
+            16.410444259643555,
+            53.153358459472656
+          ],
+          "timer": 0,
+          "pvars": 0
+        },
+        {
+          "name": "EnemyElectroTorso",
+          "address": 157715040,
+          "flags": 164624,
+          "state": 0,
+          "pos": [
+            -97.32730102539062,
+            14,
+            56.54838180541992
+          ],
+          "timer": 0,
+          "pvars": 164314304
+        },
+        {
+          "name": "EnemyElectroTorso",
+          "address": 157715168,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -85.73567199707031,
+            14,
+            60.76157760620117
+          ],
+          "timer": 0,
+          "pvars": 164314652
+        },
+        {
+          "name": "EnemyElectroTorso",
+          "address": 157715296,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -94.97063446044922,
+            14,
+            43.76979446411133
+          ],
+          "timer": 0,
+          "pvars": 164315000
+        },
+        {
+          "name": "EnemyElectroTorso",
+          "address": 157715424,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -81.7214126586914,
+            14,
+            53.52862548828125
+          ],
+          "timer": 0,
+          "pvars": 164315348
+        },
+        {
+          "name": "ObstacleWall",
+          "address": 157715552,
+          "flags": 557057,
+          "state": 0,
+          "pos": [
+            -96.5,
+            14,
+            52
+          ],
+          "timer": 0,
+          "pvars": 164315696
+        },
+        {
+          "name": "ObstacleWall",
+          "address": 157715680,
+          "flags": 557057,
+          "state": 0,
+          "pos": [
+            -90.5,
+            14,
+            46
+          ],
+          "timer": 0,
+          "pvars": 164315712
+        },
+        {
+          "name": "ObstacleWall",
+          "address": 157715808,
+          "flags": 557569,
+          "state": 0,
+          "pos": [
+            -84.5,
+            14,
+            52
+          ],
+          "timer": 0,
+          "pvars": 164315728
+        },
+        {
+          "name": "ObstacleWall",
+          "address": 157715936,
+          "flags": 557057,
+          "state": 0,
+          "pos": [
+            -90.5,
+            14,
+            58
+          ],
+          "timer": 0,
+          "pvars": 164315744
+        },
+        {
+          "name": "ObstacleWall",
+          "address": 157716064,
+          "flags": 557105,
+          "state": 0,
+          "pos": [
+            -90.5,
+            14,
+            57
+          ],
+          "timer": 0,
+          "pvars": 164315760
+        },
+        {
+          "name": "ObstacleWall",
+          "address": 157716192,
+          "flags": 557105,
+          "state": 0,
+          "pos": [
+            -90.5,
+            14,
+            47
+          ],
+          "timer": 0,
+          "pvars": 164315776
+        },
+        {
+          "name": "ObstacleWall",
+          "address": 157716320,
+          "flags": 557105,
+          "state": 0,
+          "pos": [
+            -95,
+            14,
+            57.26247787475586
+          ],
+          "timer": 0,
+          "pvars": 164315792
+        },
+        {
+          "name": "ObstacleWall",
+          "address": 157716448,
+          "flags": 557105,
+          "state": 0,
+          "pos": [
+            -86,
+            14,
+            57.332733154296875
+          ],
+          "timer": 0,
+          "pvars": 164315808
+        },
+        {
+          "name": "ObstacleWall",
+          "address": 157716576,
+          "flags": 557105,
+          "state": 0,
+          "pos": [
+            -90.44050598144531,
+            14,
+            45.44569778442383
+          ],
+          "timer": 0,
+          "pvars": 164315824
+        },
+        {
+          "name": "ObstacleWall",
+          "address": 157716704,
+          "flags": 557105,
+          "state": 0,
+          "pos": [
+            -96.5,
+            14,
+            58
+          ],
+          "timer": 0,
+          "pvars": 164315840
+        },
+        {
+          "name": "ObstacleWall",
+          "address": 157716832,
+          "flags": 557105,
+          "state": 0,
+          "pos": [
+            -96.5,
+            14,
+            46
+          ],
+          "timer": 0,
+          "pvars": 164315856
+        },
+        {
+          "name": "ObstacleWall",
+          "address": 157716960,
+          "flags": 557105,
+          "state": 0,
+          "pos": [
+            -84.5,
+            14,
+            46
+          ],
+          "timer": 0,
+          "pvars": 164315872
+        },
+        {
+          "name": "ObstacleWall",
+          "address": 157717088,
+          "flags": 557105,
+          "state": 0,
+          "pos": [
+            -84.5,
+            14,
+            58
+          ],
+          "timer": 0,
+          "pvars": 164315888
+        },
+        {
+          "name": "ObstacleSaw",
+          "address": 157717216,
+          "flags": 1081345,
+          "state": 2,
+          "pos": [
+            -90.5,
+            14,
+            52
+          ],
+          "timer": 3,
+          "pvars": 164315904
+        },
+        {
+          "name": "ObstacleSaw",
+          "address": 157717344,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -97.5,
+            14,
+            52
+          ],
+          "timer": 60,
+          "pvars": 164315960
+        },
+        {
+          "name": "ObstacleSaw",
+          "address": 157717472,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -83.5,
+            14,
+            52
+          ],
+          "timer": 60,
+          "pvars": 164316016
+        },
+        {
+          "name": "ObstacleSaw",
+          "address": 157717600,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -93.5,
+            14,
+            57
+          ],
+          "timer": 60,
+          "pvars": 164316072
+        },
+        {
+          "name": "ObstacleSaw",
+          "address": 157717728,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -87.5,
+            14,
+            47
+          ],
+          "timer": 60,
+          "pvars": 164316128
+        },
+        {
+          "name": "EnemyRamTorso",
+          "address": 157717856,
+          "flags": 163856,
+          "state": 1,
+          "pos": [
+            -94.2947998046875,
+            14,
+            55.00129699707031
+          ],
+          "timer": 120,
+          "pvars": 164316192
+        },
+        {
+          "name": "EnemyRamTorso",
+          "address": 157717984,
+          "flags": 1081617,
+          "state": 2,
+          "pos": [
+            -95.0953369140625,
+            14,
+            52.59464645385742
+          ],
+          "timer": 119,
+          "pvars": 164316472
+        },
+        {
+          "name": "EnemyRamTorso",
+          "address": 157718112,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -81.08358001708984,
+            14,
+            50.3702278137207
+          ],
+          "timer": 0,
+          "pvars": 164316752
+        },
+        {
+          "name": "EnemyRamTorso",
+          "address": 157718240,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -86.85014343261719,
+            14,
+            60.651859283447266
+          ],
+          "timer": 0,
+          "pvars": 164317032
+        },
+        {
+          "name": "EnemyRamTorso",
+          "address": 157718368,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -85.14056396484375,
+            14,
+            59.01351547241211
+          ],
+          "timer": 0,
+          "pvars": 164317312
+        },
+        {
+          "name": "ObstacleVent",
+          "address": 157720416,
+          "flags": 33361,
+          "state": 1,
+          "pos": [
+            -82.52299499511719,
+            14,
+            44.137001037597656
+          ],
+          "timer": 22,
+          "pvars": 164317888
+        },
+        {
+          "name": "ObstacleVent",
+          "address": 157720544,
+          "flags": 32849,
+          "state": 1,
+          "pos": [
+            -98.48400115966797,
+            14,
+            44.137001037597656
+          ],
+          "timer": 22,
+          "pvars": 164317924
+        },
+        {
+          "name": "ObstacleVent",
+          "address": 157720672,
+          "flags": 32849,
+          "state": 1,
+          "pos": [
+            -98.48400115966797,
+            14,
+            60.06899642944336
+          ],
+          "timer": 22,
+          "pvars": 164317960
+        },
+        {
+          "name": "ObstacleVent",
+          "address": 157720800,
+          "flags": 33361,
+          "state": 1,
+          "pos": [
+            -82.52299499511719,
+            14,
+            60.06899642944336
+          ],
+          "timer": 22,
+          "pvars": 164317996
+        },
+        {
+          "name": "ObstacleVent",
+          "address": 157720928,
+          "flags": 32881,
+          "state": 0,
+          "pos": [
+            -82.52299499511719,
+            14,
+            60.06899642944336
+          ],
+          "timer": 120,
+          "pvars": 164318032
+        },
+        {
+          "name": "ObstacleVent",
+          "address": 157721056,
+          "flags": 32881,
+          "state": 0,
+          "pos": [
+            -82.52299499511719,
+            14,
+            44.137001037597656
+          ],
+          "timer": 120,
+          "pvars": 164318068
+        },
+        {
+          "name": "ObstacleVent",
+          "address": 157721184,
+          "flags": 32881,
+          "state": 0,
+          "pos": [
+            -98.48400115966797,
+            14,
+            44.137001037597656
+          ],
+          "timer": 120,
+          "pvars": 164318104
+        },
+        {
+          "name": "ObstacleVent",
+          "address": 157721312,
+          "flags": 32881,
+          "state": 0,
+          "pos": [
+            -98.48400115966797,
+            14,
+            60.06899642944336
+          ],
+          "timer": 120,
+          "pvars": 164318140
+        },
+        {
+          "name": "ObstacleVent",
+          "address": 157721440,
+          "flags": 32881,
+          "state": 0,
+          "pos": [
+            -82.52299499511719,
+            14,
+            60.06899642944336
+          ],
+          "timer": 120,
+          "pvars": 164318176
+        },
+        {
+          "name": "ObstacleVent",
+          "address": 157721568,
+          "flags": 32881,
+          "state": 0,
+          "pos": [
+            -82.52299499511719,
+            14,
+            44.137001037597656
+          ],
+          "timer": 120,
+          "pvars": 164318212
+        },
+        {
+          "name": "ObstacleVent",
+          "address": 157721696,
+          "flags": 32881,
+          "state": 0,
+          "pos": [
+            -98.48400115966797,
+            14,
+            44.137001037597656
+          ],
+          "timer": 120,
+          "pvars": 164318248
+        },
+        {
+          "name": "ObstacleVent",
+          "address": 157721824,
+          "flags": 32881,
+          "state": 0,
+          "pos": [
+            -98.48400115966797,
+            14,
+            60.06899642944336
+          ],
+          "timer": 120,
+          "pvars": 164318284
+        },
+        {
+          "name": "ObstacleBouncer",
+          "address": 157722592,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -91.24799346923828,
+            14,
+            52
+          ],
+          "timer": 0,
+          "pvars": 164318608
+        },
+        {
+          "name": "ObstacleBouncer",
+          "address": 157722720,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -87.5,
+            14,
+            52
+          ],
+          "timer": 0,
+          "pvars": 164318624
+        },
+        {
+          "name": "ObstacleBouncer",
+          "address": 157722848,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -97.37622833251953,
+            14,
+            45.60790252685547
+          ],
+          "timer": 0,
+          "pvars": 164318640
+        },
+        {
+          "name": "ObstacleBouncer",
+          "address": 157722976,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -83.98714447021484,
+            14,
+            45.503108978271484
+          ],
+          "timer": 0,
+          "pvars": 164318656
+        },
+        {
+          "name": "ObstacleBouncer",
+          "address": 157723104,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -92.5,
+            14,
+            49
+          ],
+          "timer": 0,
+          "pvars": 164318672
+        },
+        {
+          "name": "ObstacleBouncer",
+          "address": 157723232,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -87.5,
+            14,
+            50
+          ],
+          "timer": 0,
+          "pvars": 164318688
+        },
+        {
+          "name": "ObstacleBouncer",
+          "address": 157723360,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -88.5,
+            14,
+            55
+          ],
+          "timer": 0,
+          "pvars": 164318704
+        },
+        {
+          "name": "ObstacleBouncer",
+          "address": 157723488,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -93.5,
+            14,
+            54
+          ],
+          "timer": 0,
+          "pvars": 164318720
+        },
+        {
+          "name": "ObstacleBouncer",
+          "address": 157723616,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -85.5,
+            14,
+            55
+          ],
+          "timer": 0,
+          "pvars": 164318736
+        },
+        {
+          "name": "ObstacleBouncer",
+          "address": 157723744,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -95.5,
+            14,
+            49
+          ],
+          "timer": 0,
+          "pvars": 164318752
+        },
+        {
+          "name": "EnemySawTorso",
+          "address": 157724128,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -95.99313354492188,
+            14,
+            43.52334976196289
+          ],
+          "timer": 0,
+          "pvars": 164319376
+        },
+        {
+          "name": "EnemySawTorso",
+          "address": 157724256,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -81.7214126586914,
+            14,
+            47.68757247924805
+          ],
+          "timer": 0,
+          "pvars": 164319572
+        },
+        {
+          "name": "EnemySawTorso",
+          "address": 157724384,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -91.05284881591797,
+            14,
+            43.34239959716797
+          ],
+          "timer": 0,
+          "pvars": 164319768
+        },
+        {
+          "name": "ObstacleSpinningFloor",
+          "address": 157730272,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -90.34365844726562,
+            14,
+            52.27595901489258
+          ],
+          "timer": 0,
+          "pvars": 164326560
+        },
+        {
+          "name": "ObstacleSpinningFloor",
+          "address": 157730400,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -90.5,
+            14,
+            49
+          ],
+          "timer": 0,
+          "pvars": 164326572
+        },
+        {
+          "name": "ObstacleSpinningFloor",
+          "address": 157730528,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -90.5,
+            14,
+            55
+          ],
+          "timer": 0,
+          "pvars": 164326584
+        },
+        {
+          "name": "ObstacleSpinningFloor",
+          "address": 157730656,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -93.5,
+            14,
+            52
+          ],
+          "timer": 0,
+          "pvars": 164326596
+        },
+        {
+          "name": "ObstacleSpinningFloor",
+          "address": 157730784,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -87.5,
+            14,
+            52
+          ],
+          "timer": 0,
+          "pvars": 164326608
+        },
+        {
+          "name": "ObstacleSpinningFloor",
+          "address": 157730912,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -90.5,
+            14,
+            45
+          ],
+          "timer": 0,
+          "pvars": 164326620
+        },
+        {
+          "name": "ObstacleSpinningFloor",
+          "address": 157731040,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -90.5,
+            14,
+            59
+          ],
+          "timer": 0,
+          "pvars": 164326632
+        },
+        {
+          "name": "ObstacleSpinningFloor",
+          "address": 157731168,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -95.5,
+            14,
+            57
+          ],
+          "timer": 0,
+          "pvars": 164326644
+        },
+        {
+          "name": "ObstacleSpinningFloor",
+          "address": 157731296,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -85.5,
+            14,
+            57
+          ],
+          "timer": 0,
+          "pvars": 164326656
+        },
+        {
+          "name": "ObstacleSpinningFloor",
+          "address": 157731424,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -85.5,
+            14,
+            47
+          ],
+          "timer": 0,
+          "pvars": 164326668
+        },
+        {
+          "name": "ObstacleSpinningFloor",
+          "address": 157731552,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -95.5,
+            14,
+            47
+          ],
+          "timer": 0,
+          "pvars": 164326680
+        },
+        {
+          "name": "ObstacleSpinningFloor",
+          "address": 157731680,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -90.5,
+            14,
+            60
+          ],
+          "timer": 0,
+          "pvars": 164326692
+        },
+        {
+          "name": "ObstacleSpinningFloor",
+          "address": 157731808,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -82.5,
+            14,
+            52
+          ],
+          "timer": 0,
+          "pvars": 164326704
+        },
+        {
+          "name": "ObstacleSpinningFloor",
+          "address": 157731936,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -90.5,
+            14,
+            44
+          ],
+          "timer": 0,
+          "pvars": 164326716
+        },
+        {
+          "name": "ObstacleSpinningFloor",
+          "address": 157732064,
+          "flags": 32817,
+          "state": 0,
+          "pos": [
+            -98.5,
+            14,
+            52
+          ],
+          "timer": 0,
+          "pvars": 164326728
+        },
+        {
+          "name": "VehicleMine",
+          "address": 157804384,
+          "flags": 512,
+          "state": 1,
+          "pos": [
+            -82.76126861572266,
+            14,
+            53.49088668823242
+          ],
+          "timer": 0,
+          "pvars": 164350800
+        },
+        {
+          "name": "VehicleMine",
+          "address": 157804512,
+          "flags": 512,
+          "state": 1,
+          "pos": [
+            -98.13593292236328,
+            14,
+            57.364356994628906
+          ],
+          "timer": 0,
+          "pvars": 164350816
+        },
+        {
+          "name": "VehicleMine",
+          "address": 157804640,
+          "flags": 32768,
+          "state": 0,
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "timer": 0,
+          "pvars": 164350832
+        },
+        {
+          "name": "VehicleMine",
+          "address": 157804768,
+          "flags": 32768,
+          "state": 0,
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "timer": 0,
+          "pvars": 164350848
+        },
+        {
+          "name": "VehicleMine",
+          "address": 157804896,
+          "flags": 32768,
+          "state": 0,
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "timer": 0,
+          "pvars": 164350864
+        },
+        {
+          "name": "VehicleMissile",
+          "address": 157805024,
+          "flags": 0,
+          "state": 0,
+          "pos": [
+            -95.42134857177734,
+            14.5,
+            56.4824333190918
+          ],
+          "timer": 120,
+          "pvars": 164350880
+        },
+        {
+          "name": "VehicleMissile",
+          "address": 157805152,
+          "flags": 32768,
+          "state": 0,
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "timer": 0,
+          "pvars": 164350916
+        },
+        {
+          "name": "VehicleMissile",
+          "address": 157805280,
+          "flags": 32768,
+          "state": 0,
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "timer": 0,
+          "pvars": 164350952
+        },
+        {
+          "name": "VehicleMissile",
+          "address": 157805408,
+          "flags": 32768,
+          "state": 0,
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "timer": 0,
+          "pvars": 164350988
+        },
+        {
+          "name": "VehicleMissile",
+          "address": 157805536,
+          "flags": 32768,
+          "state": 0,
+          "pos": [
+            0,
+            0,
+            0
+          ],
+          "timer": 0,
+          "pvars": 164351024
+        }
+      ]
+    }
+  ],
+  "changes": [
+    {
+      "name": "ObstacleSaw",
+      "address": 157717216,
+      "timerDelta": 3,
+      "moved": false,
+      "state": [
+        1,
+        2
+      ]
+    },
+    {
+      "name": "ObstacleVent",
+      "address": 157720416,
+      "timerDelta": -21,
+      "moved": false,
+      "state": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "ObstacleVent",
+      "address": 157720544,
+      "timerDelta": -21,
+      "moved": false,
+      "state": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "ObstacleVent",
+      "address": 157720672,
+      "timerDelta": -21,
+      "moved": false,
+      "state": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "ObstacleVent",
+      "address": 157720800,
+      "timerDelta": -21,
+      "moved": false,
+      "state": [
+        0,
+        1
+      ]
+    }
+  ]
+}

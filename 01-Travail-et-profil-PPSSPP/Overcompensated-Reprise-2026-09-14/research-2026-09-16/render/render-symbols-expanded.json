@@ -1,0 +1,380 @@
+[
+  {
+    "name": "__sti__camera_cpp",
+    "value": "0x160",
+    "size": 180,
+    "section": 1
+  },
+  {
+    "name": "__0FaUPDATE_GameInitLoop_Renderv",
+    "value": "0x12a8",
+    "size": 28,
+    "section": 1
+  },
+  {
+    "name": "__0FXUPDATE_DebugLoop_Renderv",
+    "value": "0x1370",
+    "size": 36,
+    "section": 1
+  },
+  {
+    "name": "__0FXUPDATE_LoadLevel_Renderv",
+    "value": "0x1610",
+    "size": 68,
+    "section": 1
+  },
+  {
+    "name": "__0FaUPDATE_RestartLevel_Renderv",
+    "value": "0x1674",
+    "size": 36,
+    "section": 1
+  },
+  {
+    "name": "__0FYUPDATE_ResetLevel_Renderv",
+    "value": "0x16b8",
+    "size": 36,
+    "section": 1
+  },
+  {
+    "name": "DISPLAY_LIST_SIZE",
+    "value": "0x4304",
+    "size": 4,
+    "section": 35
+  },
+  {
+    "name": "LS.178.HUD_RenderFontPrintWindow",
+    "value": "0xd185",
+    "size": 1,
+    "section": 35
+  },
+  {
+    "name": "LS.184.g_RenderIconDemoId",
+    "value": "0x1a04c",
+    "size": 4,
+    "section": 46
+  },
+  {
+    "name": "__0FSHUD_RenderIconDemov",
+    "value": "0x1287c",
+    "size": 520,
+    "section": 1
+  },
+  {
+    "name": "__0FOHUD_RenderFontv",
+    "value": "0x126c4",
+    "size": 440,
+    "section": 1
+  },
+  {
+    "name": "LS.28.HUD_TurnPauseRenderOff",
+    "value": "0xd290",
+    "size": 1,
+    "section": 35
+  },
+  {
+    "name": "g_DecompressedFog",
+    "value": "0x1a0e0",
+    "size": 32768,
+    "section": 46
+  },
+  {
+    "name": "__0FVdisplay_abort_message6Nan_error_code",
+    "value": "0x1fe1c",
+    "size": 108,
+    "section": 1
+  },
+  {
+    "name": "__0FNCAMERA_SetFovf",
+    "value": "0x74",
+    "size": 40,
+    "section": 1
+  },
+  {
+    "name": "__0FOCAMERA_SetFovXf",
+    "value": "0x9c",
+    "size": 196,
+    "section": 1
+  },
+  {
+    "name": "__0FWCAMERA_CommitToDisplayv",
+    "value": "0x0",
+    "size": 104,
+    "section": 1
+  },
+  {
+    "name": "__0FNCAMERA_GetFovv",
+    "value": "0x68",
+    "size": 12,
+    "section": 1
+  },
+  {
+    "name": "__0FlDISPLAY_SetViewMatrixFromCameraMatrixPC6HMATRIX4",
+    "value": "0x33ac",
+    "size": 36,
+    "section": 1
+  },
+  {
+    "name": "__0FXDISPLAY_SetupProjectionfNDB",
+    "value": "0x33d0",
+    "size": 32,
+    "section": 1
+  },
+  {
+    "name": "__0FSDISPLAY_CommitViewv",
+    "value": "0x3450",
+    "size": 60,
+    "section": 1
+  },
+  {
+    "name": "__0FaDISPLAY_BuildFrustumPlanesP6HMATRIX4NCBP6KClipPlanes",
+    "value": "0x3674",
+    "size": 2240,
+    "section": 1
+  },
+  {
+    "name": "__0FbDISPLAY_SetVisibilityPlanesP6KClipPlanes",
+    "value": "0x33f0",
+    "size": 36,
+    "section": 1
+  },
+  {
+    "name": "__0FQDISPLAY_CalcFovXf",
+    "value": "0x3518",
+    "size": 72,
+    "section": 1
+  },
+  {
+    "name": "__0FbUPDATE_OpenNormalLoopRenderv",
+    "value": "0x14a0",
+    "size": 28,
+    "section": 1
+  },
+  {
+    "name": "__0FYUPDATE_NormalLoop_Renderv",
+    "value": "0x14bc",
+    "size": 84,
+    "section": 1
+  },
+  {
+    "name": "__0FOGLOBAL_SetFlagUiUcTC",
+    "value": "0x1c80",
+    "size": 44,
+    "section": 1
+  },
+  {
+    "name": "__0FfDISPLAY_ResetMatrixRenderStatesv",
+    "value": "0x348c",
+    "size": 140,
+    "section": 1
+  },
+  {
+    "name": "__0FKHUD_Renderv",
+    "value": "0x125ac",
+    "size": 280,
+    "section": 1
+  },
+  {
+    "name": "__0FYHUD_ResetHudRenderStatesv",
+    "value": "0xe378",
+    "size": 28,
+    "section": 1
+  },
+  {
+    "name": "__0FRHUD_RenderTopMostv",
+    "value": "0x1251c",
+    "size": 44,
+    "section": 1
+  },
+  {
+    "name": "__0FdHUD_RenderUberTopNoMatterWhatv",
+    "value": "0x12548",
+    "size": 36,
+    "section": 1
+  },
+  {
+    "name": "__0FYLEVELSTARTUP_Core_Renderv",
+    "value": "0x18cb4",
+    "size": 360,
+    "section": 1
+  },
+  {
+    "name": "__0FSFADEOVERLAY_Renderv",
+    "value": "0xdd20",
+    "size": 32,
+    "section": 1
+  },
+  {
+    "name": "__0FaHUD_SetGuWidgetRenderStatev",
+    "value": "0xe50c",
+    "size": 312,
+    "section": 1
+  },
+  {
+    "name": "__0FQPAUSEMODE_Renderv",
+    "value": "0x17714",
+    "size": 252,
+    "section": 1
+  },
+  {
+    "name": "__0FTLEVELSTARTUP_Renderv",
+    "value": "0x18e1c",
+    "size": 44,
+    "section": 1
+  },
+  {
+    "name": "__0FRSCRNCHEATS_Renderv",
+    "value": "0x1af4c",
+    "size": 44,
+    "section": 1
+  },
+  {
+    "name": "__0FWSCRNMULTIPLAYER_Renderv",
+    "value": "0x1acd0",
+    "size": 44,
+    "section": 1
+  },
+  {
+    "name": "__0FVSCRNOPTSTARTUP_Renderv",
+    "value": "0x1b458",
+    "size": 44,
+    "section": 1
+  },
+  {
+    "name": "__0FcGLOBALVARS_CompressedFogInitb",
+    "value": "0x1c18",
+    "size": 104,
+    "section": 1
+  },
+  {
+    "name": "__0FOGLOBAL_GetFlagUiUc",
+    "value": "0x1bf8",
+    "size": 32,
+    "section": 1
+  },
+  {
+    "name": "__0FOGADGET_GetDataUii",
+    "value": "0x3300",
+    "size": 76,
+    "section": 1
+  },
+  {
+    "name": "__0FoGADGET_ResetAllWeaponAmmoToRespectiveMaxbTB",
+    "value": "0x30e0",
+    "size": 208,
+    "section": 1
+  },
+  {
+    "name": "__0FXHUD_ExitHudRenderStatesv",
+    "value": "0xe394",
+    "size": 28,
+    "section": 1
+  },
+  {
+    "name": "__0FNVRAM_RenderToP6MRenderTargetUi",
+    "value": "0xd3fc",
+    "size": 224,
+    "section": 1
+  },
+  {
+    "name": "__0FVFADEOVERLAYOBJ_RenderP6MtFADEOVERLAY",
+    "value": "0xde8c",
+    "size": 112,
+    "section": 1
+  },
+  {
+    "name": "HUD_gRenderFont",
+    "value": "0xd0c8",
+    "size": 1,
+    "section": 35
+  },
+  {
+    "name": "g_HudLastRenderStateDirty",
+    "value": "0xd0cc",
+    "size": 4,
+    "section": 35
+  },
+  {
+    "name": "g_HudLastRenderState",
+    "value": "0xd0d0",
+    "size": 4,
+    "section": 35
+  },
+  {
+    "name": "HUD_CallbackQuePreRender",
+    "value": "0xa1230",
+    "size": 260,
+    "section": 46
+  },
+  {
+    "name": "__0FXHUD_DebugScreens_Renderv",
+    "value": "0xe024",
+    "size": 332,
+    "section": 1
+  },
+  {
+    "name": "__0FVHUD_SetRenderDefaultsv",
+    "value": "0x1256c",
+    "size": 64,
+    "section": 1
+  },
+  {
+    "name": "__0FOHUDDIAG_Renderv",
+    "value": "0x17dd8",
+    "size": 744,
+    "section": 1
+  },
+  {
+    "name": "__0FgPAUSEMENU_CalculateItemsToRenderP6KtPAUSEMENUPUiTC",
+    "value": "0x16328",
+    "size": 156,
+    "section": 1
+  },
+  {
+    "name": "__0FQPAUSEMENU_RenderP6KtPAUSEMENU",
+    "value": "0x166d0",
+    "size": 3556,
+    "section": 1
+  },
+  {
+    "name": "g_RenderWhileFading",
+    "value": "0xd49c",
+    "size": 4,
+    "section": 35
+  },
+  {
+    "name": "__0FbLEVELSTARTUP_MainMenuRenderv",
+    "value": "0x18c3c",
+    "size": 120,
+    "section": 1
+  },
+  {
+    "name": "__0FbSCRNMULTIPLAYER_Core_Renderv",
+    "value": "0x1ab20",
+    "size": 64,
+    "section": 1
+  },
+  {
+    "name": "__0FWSCRNCHEATS_Core_Renderv",
+    "value": "0x1ae2c",
+    "size": 288,
+    "section": 1
+  },
+  {
+    "name": "__0FaSCRNOPTSTARTUP_Core_Renderv",
+    "value": "0x1b0bc",
+    "size": 924,
+    "section": 1
+  },
+  {
+    "name": "_sceDisplay_0011_stub_head",
+    "value": "0xb4",
+    "size": 0,
+    "section": 25
+  },
+  {
+    "name": "_sceDisplay_stub_str",
+    "value": "0xc4",
+    "size": 0,
+    "section": 30
+  }
+]

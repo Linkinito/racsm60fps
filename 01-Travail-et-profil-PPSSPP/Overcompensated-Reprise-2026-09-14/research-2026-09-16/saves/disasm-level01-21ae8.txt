@@ -1,0 +1,40 @@
+00021AE8 lui $a3, 0x2b
+00021AEC lw $a3, -0xd80($a3)
+00021AF0 andi $a2, $a2, 0xff
+00021AF4 addu $a0, $a3, $a0
+00021AF8 lbu $a3, 0x880($a0)
+00021AFC not $a2, $a2
+00021B00 andi $a1, $a1, 0xff
+00021B04 and $a2, $a3, $a2
+00021B08 or $a1, $a2, $a1
+00021B0C jr $ra
+00021B10 sb $a1, 0x880($a0)
+00021B14 lui $a2, 0x2b
+00021B18 lw $a2, -0xd80($a2)
+00021B1C andi $a1, $a1, 0xff
+00021B20 addu $a0, $a2, $a0
+00021B24 lbu $v0, 0x880($a0)
+00021B28 ori $a0, $zero, 1
+00021B2C sllv $a0, $a0, $a1
+00021B30 jr $ra
+00021B34 and $v0, $v0, $a0
+00021B38 lui $t0, 0x2b
+00021B3C lw $t1, -0xd80($t0)
+00021B40 andi $a2, $a2, 0xff
+00021B44 ori $a3, $zero, 1
+00021B48 sllv $a3, $a3, $a2
+00021B4C addu $t1, $t1, $a0
+00021B50 not $a3, $a3
+00021B54 lbu $t2, 0x880($t1)
+00021B58 andi $a3, $a3, 0xff
+00021B5C and $a3, $t2, $a3
+00021B60 sb $a3, 0x880($t1)
+00021B64 lw $a3, -0xd80($t0)
+00021B68 andi $a1, $a1, 0xff
+00021B6C addu $a0, $a3, $a0
+00021B70 andi $a1, $a1, 1
+00021B74 lbu $a3, 0x880($a0)
+00021B78 sllv $a1, $a1, $a2
+00021B7C or $a1, $a3, $a1
+00021B80 jr $ra
+00021B84 sb $a1, 0x880($a0)

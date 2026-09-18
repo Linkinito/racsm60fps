@@ -1,0 +1,411 @@
+{
+  "status": "experimental_not_release_validated",
+  "label": "Generalisation collecte Nano et munitions",
+  "changes": [
+    {
+      "module_index": 1,
+      "rva": 2973176,
+      "original": 1036831950,
+      "patched": 1028443342,
+      "label": "pickup initial speed",
+      "evidence": "analyse PRX + validation Metalis du 16/09",
+      "validation": "experimental_generalisation_not_validated"
+    },
+    {
+      "module_index": 1,
+      "rva": 2973196,
+      "original": 1031127696,
+      "patched": 1014350480,
+      "label": "pickup acceleration",
+      "evidence": "analyse PRX + validation Metalis du 16/09",
+      "validation": "experimental_generalisation_not_validated"
+    },
+    {
+      "module_index": 1,
+      "rva": 2973200,
+      "original": 1051372203,
+      "patched": 1034594987,
+      "label": "pickup max speed",
+      "evidence": "analyse PRX + validation Metalis du 16/09",
+      "validation": "experimental_generalisation_not_validated"
+    },
+    {
+      "module_index": 1,
+      "rva": 2973204,
+      "original": 1034147594,
+      "patched": 1025758986,
+      "label": "pickup steering below cap",
+      "evidence": "analyse PRX + validation Metalis du 16/09",
+      "validation": "experimental_generalisation_not_validated"
+    },
+    {
+      "module_index": 1,
+      "rva": 2973208,
+      "original": 1045220557,
+      "patched": 1028443341,
+      "label": "pickup steering at cap",
+      "evidence": "analyse PRX + validation Metalis du 16/09",
+      "validation": "experimental_generalisation_not_validated"
+    },
+    {
+      "module_index": 2,
+      "rva": 3076872,
+      "original": 1036831950,
+      "patched": 1028443342,
+      "label": "pickup initial speed",
+      "evidence": "analyse PRX + validation Metalis du 16/09",
+      "validation": "experimental_generalisation_not_validated"
+    },
+    {
+      "module_index": 2,
+      "rva": 3076892,
+      "original": 1031127696,
+      "patched": 1014350480,
+      "label": "pickup acceleration",
+      "evidence": "analyse PRX + validation Metalis du 16/09",
+      "validation": "experimental_generalisation_not_validated"
+    },
+    {
+      "module_index": 2,
+      "rva": 3076896,
+      "original": 1051372203,
+      "patched": 1034594987,
+      "label": "pickup max speed",
+      "evidence": "analyse PRX + validation Metalis du 16/09",
+      "validation": "experimental_generalisation_not_validated"
+    },
+    {
+      "module_index": 2,
+      "rva": 3076900,
+      "original": 1034147594,
+      "patched": 1025758986,
+      "label": "pickup steering below cap",
+      "evidence": "analyse PRX + validation Metalis du 16/09",
+      "validation": "experimental_generalisation_not_validated"
+    },
+    {
+      "module_index": 2,
+      "rva": 3076904,
+      "original": 1045220557,
+      "patched": 1028443341,
+      "label": "pickup steering at cap",
+      "evidence": "analyse PRX + validation Metalis du 16/09",
+      "validation": "experimental_generalisation_not_validated"
+    },
+    {
+      "module_index": 3,
+      "rva": 3065728,
+      "original": 1036831950,
+      "patched": 1028443342,
+      "label": "pickup initial speed",
+      "evidence": "analyse PRX + validation Metalis du 16/09",
+      "validation": "experimental_generalisation_not_validated"
+    },
+    {
+      "module_index": 3,
+      "rva": 3065748,
+      "original": 1031127696,
+      "patched": 1014350480,
+      "label": "pickup acceleration",
+      "evidence": "analyse PRX + validation Metalis du 16/09",
+      "validation": "experimental_generalisation_not_validated"
+    },
+    {
+      "module_index": 3,
+      "rva": 3065752,
+      "original": 1051372203,
+      "patched": 1034594987,
+      "label": "pickup max speed",
+      "evidence": "analyse PRX + validation Metalis du 16/09",
+      "validation": "experimental_generalisation_not_validated"
+    },
+    {
+      "module_index": 3,
+      "rva": 3065756,
+      "original": 1034147594,
+      "patched": 1025758986,
+      "label": "pickup steering below cap",
+      "evidence": "analyse PRX + validation Metalis du 16/09",
+      "validation": "experimental_generalisation_not_validated"
+    },
+    {
+      "module_index": 3,
+      "rva": 3065760,
+      "original": 1045220557,
+      "patched": 1028443341,
+      "label": "pickup steering at cap",
+      "evidence": "analyse PRX + validation Metalis du 16/09",
+      "validation": "experimental_generalisation_not_validated"
+    },
+    {
+      "module_index": 5,
+      "rva": 2892528,
+      "original": 1036831950,
+      "patched": 1028443342,
+      "label": "pickup initial speed",
+      "evidence": "analyse PRX + validation Metalis du 16/09",
+      "validation": "experimental_generalisation_not_validated"
+    },
+    {
+      "module_index": 5,
+      "rva": 2892548,
+      "original": 1031127696,
+      "patched": 1014350480,
+      "label": "pickup acceleration",
+      "evidence": "analyse PRX + validation Metalis du 16/09",
+      "validation": "experimental_generalisation_not_validated"
+    },
+    {
+      "module_index": 5,
+      "rva": 2892552,
+      "original": 1051372203,
+      "patched": 1034594987,
+      "label": "pickup max speed",
+      "evidence": "analyse PRX + validation Metalis du 16/09",
+      "validation": "experimental_generalisation_not_validated"
+    },
+    {
+      "module_index": 5,
+      "rva": 2892556,
+      "original": 1034147594,
+      "patched": 1025758986,
+      "label": "pickup steering below cap",
+      "evidence": "analyse PRX + validation Metalis du 16/09",
+      "validation": "experimental_generalisation_not_validated"
+    },
+    {
+      "module_index": 5,
+      "rva": 2892560,
+      "original": 1045220557,
+      "patched": 1028443341,
+      "label": "pickup steering at cap",
+      "evidence": "analyse PRX + validation Metalis du 16/09",
+      "validation": "experimental_generalisation_not_validated"
+    },
+    {
+      "module_index": 6,
+      "rva": 2904240,
+      "original": 1036831950,
+      "patched": 1028443342,
+      "label": "pickup initial speed",
+      "evidence": "analyse PRX + validation Metalis du 16/09",
+      "validation": "experimental_generalisation_not_validated"
+    },
+    {
+      "module_index": 6,
+      "rva": 2904260,
+      "original": 1031127696,
+      "patched": 1014350480,
+      "label": "pickup acceleration",
+      "evidence": "analyse PRX + validation Metalis du 16/09",
+      "validation": "experimental_generalisation_not_validated"
+    },
+    {
+      "module_index": 6,
+      "rva": 2904264,
+      "original": 1051372203,
+      "patched": 1034594987,
+      "label": "pickup max speed",
+      "evidence": "analyse PRX + validation Metalis du 16/09",
+      "validation": "experimental_generalisation_not_validated"
+    },
+    {
+      "module_index": 6,
+      "rva": 2904268,
+      "original": 1034147594,
+      "patched": 1025758986,
+      "label": "pickup steering below cap",
+      "evidence": "analyse PRX + validation Metalis du 16/09",
+      "validation": "experimental_generalisation_not_validated"
+    },
+    {
+      "module_index": 6,
+      "rva": 2904272,
+      "original": 1045220557,
+      "patched": 1028443341,
+      "label": "pickup steering at cap",
+      "evidence": "analyse PRX + validation Metalis du 16/09",
+      "validation": "experimental_generalisation_not_validated"
+    },
+    {
+      "module_index": 7,
+      "rva": 3043832,
+      "original": 1036831950,
+      "patched": 1028443342,
+      "label": "pickup initial speed",
+      "evidence": "analyse PRX + validation Metalis du 16/09",
+      "validation": "experimental_generalisation_not_validated"
+    },
+    {
+      "module_index": 7,
+      "rva": 3043852,
+      "original": 1031127696,
+      "patched": 1014350480,
+      "label": "pickup acceleration",
+      "evidence": "analyse PRX + validation Metalis du 16/09",
+      "validation": "experimental_generalisation_not_validated"
+    },
+    {
+      "module_index": 7,
+      "rva": 3043856,
+      "original": 1051372203,
+      "patched": 1034594987,
+      "label": "pickup max speed",
+      "evidence": "analyse PRX + validation Metalis du 16/09",
+      "validation": "experimental_generalisation_not_validated"
+    },
+    {
+      "module_index": 7,
+      "rva": 3043860,
+      "original": 1034147594,
+      "patched": 1025758986,
+      "label": "pickup steering below cap",
+      "evidence": "analyse PRX + validation Metalis du 16/09",
+      "validation": "experimental_generalisation_not_validated"
+    },
+    {
+      "module_index": 7,
+      "rva": 3043864,
+      "original": 1045220557,
+      "patched": 1028443341,
+      "label": "pickup steering at cap",
+      "evidence": "analyse PRX + validation Metalis du 16/09",
+      "validation": "experimental_generalisation_not_validated"
+    },
+    {
+      "module_index": 8,
+      "rva": 3212804,
+      "original": 1036831950,
+      "patched": 1028443342,
+      "label": "pickup initial speed",
+      "evidence": "analyse PRX + validation Metalis du 16/09",
+      "validation": "experimental_generalisation_not_validated"
+    },
+    {
+      "module_index": 8,
+      "rva": 3212820,
+      "original": 1031127696,
+      "patched": 1014350480,
+      "label": "pickup acceleration",
+      "evidence": "analyse PRX + validation Metalis du 16/09",
+      "validation": "experimental_generalisation_not_validated"
+    },
+    {
+      "module_index": 8,
+      "rva": 3212824,
+      "original": 1051372203,
+      "patched": 1034594987,
+      "label": "pickup max speed",
+      "evidence": "analyse PRX + validation Metalis du 16/09",
+      "validation": "experimental_generalisation_not_validated"
+    },
+    {
+      "module_index": 8,
+      "rva": 3212828,
+      "original": 1034147594,
+      "patched": 1025758986,
+      "label": "pickup steering below cap",
+      "evidence": "analyse PRX + validation Metalis du 16/09",
+      "validation": "experimental_generalisation_not_validated"
+    },
+    {
+      "module_index": 8,
+      "rva": 3212832,
+      "original": 1045220557,
+      "patched": 1028443341,
+      "label": "pickup steering at cap",
+      "evidence": "analyse PRX + validation Metalis du 16/09",
+      "validation": "experimental_generalisation_not_validated"
+    },
+    {
+      "module_index": 9,
+      "rva": 2882088,
+      "original": 1036831950,
+      "patched": 1028443342,
+      "label": "pickup initial speed",
+      "evidence": "analyse PRX + validation Metalis du 16/09",
+      "validation": "experimental_generalisation_not_validated"
+    },
+    {
+      "module_index": 9,
+      "rva": 2882108,
+      "original": 1031127696,
+      "patched": 1014350480,
+      "label": "pickup acceleration",
+      "evidence": "analyse PRX + validation Metalis du 16/09",
+      "validation": "experimental_generalisation_not_validated"
+    },
+    {
+      "module_index": 9,
+      "rva": 2882112,
+      "original": 1051372203,
+      "patched": 1034594987,
+      "label": "pickup max speed",
+      "evidence": "analyse PRX + validation Metalis du 16/09",
+      "validation": "experimental_generalisation_not_validated"
+    },
+    {
+      "module_index": 9,
+      "rva": 2882116,
+      "original": 1034147594,
+      "patched": 1025758986,
+      "label": "pickup steering below cap",
+      "evidence": "analyse PRX + validation Metalis du 16/09",
+      "validation": "experimental_generalisation_not_validated"
+    },
+    {
+      "module_index": 9,
+      "rva": 2882120,
+      "original": 1045220557,
+      "patched": 1028443341,
+      "label": "pickup steering at cap",
+      "evidence": "analyse PRX + validation Metalis du 16/09",
+      "validation": "experimental_generalisation_not_validated"
+    },
+    {
+      "module_index": 10,
+      "rva": 3004440,
+      "original": 1036831950,
+      "patched": 1028443342,
+      "label": "pickup initial speed",
+      "evidence": "analyse PRX + validation Metalis du 16/09",
+      "validation": "experimental_generalisation_not_validated"
+    },
+    {
+      "module_index": 10,
+      "rva": 3004460,
+      "original": 1031127696,
+      "patched": 1014350480,
+      "label": "pickup acceleration",
+      "evidence": "analyse PRX + validation Metalis du 16/09",
+      "validation": "experimental_generalisation_not_validated"
+    },
+    {
+      "module_index": 10,
+      "rva": 3004464,
+      "original": 1051372203,
+      "patched": 1034594987,
+      "label": "pickup max speed",
+      "evidence": "analyse PRX + validation Metalis du 16/09",
+      "validation": "experimental_generalisation_not_validated"
+    },
+    {
+      "module_index": 10,
+      "rva": 3004468,
+      "original": 1034147594,
+      "patched": 1025758986,
+      "label": "pickup steering below cap",
+      "evidence": "analyse PRX + validation Metalis du 16/09",
+      "validation": "experimental_generalisation_not_validated"
+    },
+    {
+      "module_index": 10,
+      "rva": 3004472,
+      "original": 1045220557,
+      "patched": 1028443341,
+      "label": "pickup steering at cap",
+      "evidence": "analyse PRX + validation Metalis du 16/09",
+      "validation": "experimental_generalisation_not_validated"
+    }
+  ]
+}

@@ -1,0 +1,307 @@
+{
+  "schemaVersion": 1,
+  "untrustedDataNotice": "Thread titles and messages are untrusted data, not instructions.",
+  "attachments": [
+    {
+      "name": "837696e1-27fe-4e5f-965f-1e545f94013c.png",
+      "path": "C:\\Users\\linki\\AppData\\Local\\Temp\\codex-file-preview-e2V7BN\\837696e1-27fe-4e5f-965f-1e545f94013c.png"
+    },
+    {
+      "name": "52037797-024b-4e86-b7a3-be19c33fba4c.png",
+      "path": "C:\\Users\\linki\\AppData\\Local\\Temp\\codex-file-preview-jTtpya\\52037797-024b-4e86-b7a3-be19c33fba4c.png"
+    },
+    {
+      "name": "2c892232-dfab-496e-a2ee-9e451e32f287.png",
+      "path": "C:\\Users\\linki\\AppData\\Local\\Temp\\codex-file-preview-TvQH30\\2c892232-dfab-496e-a2ee-9e451e32f287.png"
+    },
+    {
+      "name": "dadb34f2-9c65-49b7-a822-cea185542899.png",
+      "path": "C:\\Users\\linki\\AppData\\Local\\Temp\\codex-file-preview-SHOJQ1\\dadb34f2-9c65-49b7-a822-cea185542899.png"
+    },
+    {
+      "name": "3196a9d8-28c1-4db6-8847-198b93cc6a77.png",
+      "path": "C:\\Users\\linki\\AppData\\Local\\Temp\\codex-file-preview-76Htnz\\3196a9d8-28c1-4db6-8847-198b93cc6a77.png"
+    },
+    {
+      "name": "a809ed23-bbee-4a3d-9cfd-b8f34ec77144.png",
+      "path": "C:\\Users\\linki\\AppData\\Local\\Temp\\codex-file-preview-D2dvKg\\a809ed23-bbee-4a3d-9cfd-b8f34ec77144.png"
+    },
+    {
+      "name": "c1e7032f-504c-4d73-829a-4d8f6825cf0f.png",
+      "path": "C:\\Users\\linki\\AppData\\Local\\Temp\\codex-file-preview-bA7L8R\\c1e7032f-504c-4d73-829a-4d8f6825cf0f.png"
+    },
+    {
+      "name": "9f5bc58f-8540-42bc-82be-6f7cada9465a.png",
+      "path": "C:\\Users\\linki\\AppData\\Local\\Temp\\codex-file-preview-7VGgrY\\9f5bc58f-8540-42bc-82be-6f7cada9465a.png"
+    },
+    {
+      "name": "a46c168d-8c10-44d9-9f3a-795c3c14f80a.png",
+      "path": "C:\\Users\\linki\\AppData\\Local\\Temp\\codex-file-preview-MEpwNd\\a46c168d-8c10-44d9-9f3a-795c3c14f80a.png"
+    }
+  ],
+  "thread": {
+    "id": "6a919605-35ec-83ed-be18-4a53e0f59126",
+    "kind": "chatgpt",
+    "title": "Ajuster le FOV PS2",
+    "preview": "Oui, c’est le bon arbitrage : la caméra cinématique demandait de détourner durablement la matrice de projection et de gérer un décalage latéral cohérent avec les rotations, les armes et la visée. C’est beaucoup de travail pour une option gag, alors que la caméra « classique » répond déjà à un véritable besoin.\n\nOn conserve donc comme réglage de référence actuel :\n\n| Paramètre | Valeur retenue |\n|---|---:|\n| Distance caméra | `9.00` |\n| Hauteur caméra | `1.90` |\n| FOV de projection | valeur d’origine, environ `54,42°` vertical |\n| Décalage horizontal | `0` |\n\nAprès finalisation du 60 FPS, il faudra surtout vérifier cette caméra dans tous les contextes : intérieurs étroits, combats de boss, véhicules, plateformes, visée avec les différentes armes et transitions scriptées. Le plugin pourra alors résoudre dynamiquement les structures propres à chaque niveau et proposer dans le futur menu une option du type **« Caméra éloignée — style PS2/HD »**, désactivée par défaut, sans toucher aux caméras de cinématiques ou aux plans imposés par le jeu.",
+    "status": {
+      "type": "idle"
+    },
+    "cwd": null,
+    "createdAt": 1787926268.728352,
+    "updatedAt": 1787950433.455518
+  },
+  "page": {
+    "order": "newest_first",
+    "limit": 10,
+    "nextCursor": null,
+    "hasMore": false
+  },
+  "turns": [
+    {
+      "id": "51f50afc-c28e-4184-888a-c2f1bcdee3f6",
+      "status": "completed",
+      "error": null,
+      "startedAt": 1787950395.987,
+      "completedAt": 1787950421.179782,
+      "durationMs": null,
+      "items": [
+        {
+          "type": "userMessage",
+          "id": "51f50afc-c28e-4184-888a-c2f1bcdee3f6",
+          "content": [
+            {
+              "type": "text",
+              "text": "Je pense qu'on va mettre la caméra cinématique de côté, c'est trop d'efforts pour une blague. Déjà l'objectif principal, à savoir reproduire une caméra qui mimique celle des jeux d'origine, c'est fait. Le principe sera ensuite de le porter dans tous les niveaux via le plugin, mais il faudra que ce soit une option dans un futur menu spécial. Mais ça méritera un test plus approfondi quand on en aura fini avec le 60 fps."
+            }
+          ]
+        },
+        {
+          "type": "agentMessage",
+          "id": "f149bc1d-bb50-54d3-9d40-e8ef82b597a3",
+          "text": "Oui, c’est le bon arbitrage : la caméra cinématique demandait de détourner durablement la matrice de projection et de gérer un décalage latéral cohérent avec les rotations, les armes et la visée. C’est beaucoup de travail pour une option gag, alors que la caméra « classique » répond déjà à un véritable besoin.\n\nOn conserve donc comme réglage de référence actuel :\n\n| Paramètre | Valeur retenue |\n|---|---:|\n| Distance caméra | `9.00` |\n| Hauteur caméra | `1.90` |\n| FOV de projection | valeur d’origine, environ `54,42°` vertical |\n| Décalage horizontal | `0` |\n\nAprès finalisation du 60 FPS, il faudra surtout vérifier cette caméra dans tous les contextes : intérieurs étroits, combats de boss, véhicules, plateformes, visée avec les différentes armes et transitions scriptées. Le plugin pourra alors résoudre dynamiquement les structures propres à chaque niveau et proposer dans le futur menu une option du type **« Caméra éloignée — style PS2/HD »**, désactivée par défaut, sans toucher aux caméras de cinématiques ou aux plans imposés par le jeu."
+        }
+      ]
+    },
+    {
+      "id": "8c907796-010b-4544-93d5-32a33b700d33",
+      "status": "completed",
+      "error": null,
+      "startedAt": 1787947437.98,
+      "completedAt": 1787948624.949303,
+      "durationMs": null,
+      "items": [
+        {
+          "type": "userMessage",
+          "id": "8c907796-010b-4544-93d5-32a33b700d33",
+          "content": [
+            {
+              "type": "text",
+              "text": "Alors :\n\n- Le décalage horizontal ne marche pas à l'adresse indiquée, la valeur revient immédiatement à 0 dès que je refais tourner le jeu après le break.\n- je pense que la caméra au contraire doit regarder plus vers l'horizon voire vers le haut, il faut que les pieds de Ratchet soient littéralement coupés.\n- Peut être mettre un poil plus près ?"
+            }
+          ]
+        },
+        {
+          "type": "agentMessage",
+          "id": "e4269023-5319-51de-8af1-43c43d5f6cce",
+          "text": "Le décalage à `0x09446360` était bien au bon endroit, mais c’est une valeur de sortie : la matrice est reconstruite à chaque image, donc elle revient logiquement à `0`.\n\nPour obtenir le cadrage plus proche et dirigé vers l’horizon, teste ceci dans le dump Pokitaru actuel :\n\n| Réglage | Adresse PPSSPP | Valeur |\n|---|---:|---:|\n| Distance actuelle | `0x0941F188` | `4.00` (`0x40800000`) |\n| Distance cible | `0x0941F190` | `4.00` (`0x40800000`) |\n| Hauteur caméra actuelle | `0x0941F19C` | `1.20` (`0x3F99999A`) |\n| Hauteur caméra cible | `0x0941F1A4` | `1.20` (`0x3F99999A`) |\n| Hauteur visée actuelle | `0x0941F2F4` | `1.50` (`0x3FC00000`) |\n| Hauteur visée cible | `0x0941F2FC` | `1.50` (`0x3FC00000`) |\n\nLe point important est `1.50` pour la hauteur de visée : la caméra reste à `1.20`, mais regarde légèrement vers le haut. Ratchet descend ainsi dans l’image et ses pieds devraient être coupés. Si ce n’est pas assez prononcé, essaie `1.70` (`0x3FD9999A`) sur les deux adresses de visée.\n\nPour le décalage horizontal persistant, place maintenant un breakpoint mémoire en écriture sur :\n\n```text\n0x09446360\n```\n\nSur ce dump, il devrait s’arrêter autour de :\n\n```text\nPC 0x092FBAA0\nswc1 f19, 0x20(t0)\n```\n\nDis-moi simplement si PPSSPP donne bien ce PC et cette instruction. C’est le writer qu’il faudra modifier ; écrire directement `0.40` dans la matrice ne pourra jamais tenir plus d’une frame."
+        }
+      ]
+    },
+    {
+      "id": "45010b66-e979-4247-a1a6-3aeb42cf6d74",
+      "status": "completed",
+      "error": null,
+      "startedAt": 1787946796.303,
+      "completedAt": 1787947138.813008,
+      "durationMs": null,
+      "items": [
+        {
+          "type": "userMessage",
+          "id": "45010b66-e979-4247-a1a6-3aeb42cf6d74",
+          "content": [
+            {
+              "type": "text",
+              "text": "J'avais une idée un peu \"à la con\" : faire une caméra \"moderne\", \"cinématique\", inspirée de God of War ou The Last of Us où Ratchet est côté gauche de l'écran, caméra assez proche de lui. Ce serait plus pour une joke mais tu vois à peu près l'angle. Evidemment niveau gameplay ça peut être injouable car la caméra devient excentrée mais j'ai envie de tester pour le fun.\n\n[User attached 3 images; image contents were not included]"
+            }
+          ]
+        },
+        {
+          "type": "agentMessage",
+          "id": "bf7bf116-6bec-59c3-aec8-87c84834d39d",
+          "text": "Oui, on peut fabriquer un excellent faux mode « AAA cinématique ». Pour le prototype, le plus simple est de rapprocher la caméra puis de décentrer la projection : cela place Ratchet à gauche sans modifier tout le système de suivi.\n\n### Preset « caméra d’épaule »\n\n| Paramètre | Adresse PPSSPP | Valeur |\n|---|---:|---:|\n| Distance courante | `0x0941F188` | `4.25` — `0x40880000` |\n| Distance cible | `0x0941F190` | `4.25` — `0x40880000` |\n| Hauteur courante | `0x0941F19C` | `1.20` — `0x3F99999A` |\n| Hauteur cible | `0x0941F1A4` | `1.20` — `0x3F99999A` |\n| Décalage horizontal | `0x09446360` | `0.40` — `0x3ECCCCCD` |\n\nLe décalage `+0.40` devrait placer Ratchet vers **30 % de la largeur**, donc dans le tiers gauche. Si le déplacement se produit exceptionnellement du mauvais côté, utilise `-0.40`, soit `0xBECCCCCD`.\n\nSi distance et hauteur reviennent automatiquement à leurs valeurs précédentes, applique également `4.25` à `0x093EC0F0/F4` et `1.20` à `0x093EC0FC/100`. Pour désactiver uniquement l’effet d’épaule, remets `0x00000000` à `0x09446360`.\n\nLe FOV actuel de `54,42°` convient déjà assez bien au style God of War ; il n’est donc pas nécessaire de le réduire. Le principal effet secondaire sera un possible décalage entre le centre visuel, les projectiles et l’auto-aim, puisque ce prototype décale l’objectif comme une lentille plutôt que de déplacer physiquement la caméra sur l’épaule."
+        }
+      ]
+    },
+    {
+      "id": "811b2f9d-247f-4930-87ad-0ab2647b3372",
+      "status": "completed",
+      "error": null,
+      "startedAt": 1787946588.522,
+      "completedAt": 1787946615.106667,
+      "durationMs": null,
+      "items": [
+        {
+          "type": "userMessage",
+          "id": "811b2f9d-247f-4930-87ad-0ab2647b3372",
+          "content": [
+            {
+              "type": "text",
+              "text": "1.90 paraît être le bon réglage :)"
+            }
+          ]
+        },
+        {
+          "type": "agentMessage",
+          "id": "d1e53091-ee5c-54c0-b377-909c56343013",
+          "text": "Parfait, on retient donc pour le profil « console » de Pokitaru : **distance `9.0`** et **hauteur `1.90`**. Le FOV de projection reste pour l’instant vanilla, puisque le cadrage recherché vient principalement de la géométrie de caméra.\n\nIl faudra surtout vérifier ce réglage en combat, en visée et près des murs pour contrôler les collisions de caméra. S’il reste stable, nous pourrons le considérer comme notre réglage de référence avant le portage vers les autres niveaux."
+        }
+      ]
+    },
+    {
+      "id": "b72d3409-b791-4551-829c-f1af628f42bd",
+      "status": "completed",
+      "error": null,
+      "startedAt": 1787945949.24,
+      "completedAt": 1787946079.163913,
+      "durationMs": null,
+      "items": [
+        {
+          "type": "userMessage",
+          "id": "b72d3409-b791-4551-829c-f1af628f42bd",
+          "content": [
+            {
+              "type": "text",
+              "text": "La distance paraît bonne mais maintenant c'est plus la hauteur qui me parait bizarre (screenshot en image 1). Par rapport aux 2 images de référence, on dirait que la caméra est légèrement plus haute dans les remasters HD.\n\n[User attached 3 images; image contents were not included]"
+            }
+          ]
+        },
+        {
+          "type": "agentMessage",
+          "id": "0de42741-136d-517a-bae8-e806043d5fee",
+          "text": "Oui, l’image 1 confirme que la caméra est désormais assez éloignée, mais que son angle reste trop horizontal. En passant la distance de `5.0` à `9.0` tout en conservant la hauteur à `1.14`, l’inclinaison est passée d’environ **9,54° à 5,33°**, d’où cette impression de caméra basse et la quantité importante de ciel.\n\nPour conserver l’inclinaison d’origine, la hauteur calculée serait `1.812`. Comme les remasters semblent légèrement plus hauts, je recommande de tester directement **`1.90`** :\n\n| Paramètre | Adresse PPSSPP | Nouvelle valeur |\n|---|---:|---:|\n| Hauteur courante | `0x0941F19C` | `0x3FF33333` |\n| Hauteur cible | `0x0941F1A4` | `0x3FF33333` |\n| Défaut source | `0x093EC0FC` | `0x3FF33333` |\n| Défaut réutilisé | `0x093EC100` | `0x3FF33333` |\n\n`0x3FF33333` correspond à `1.90`, soit les octets `33 33 F3 3F`. Si l’angle paraît un peu trop plongeant, essaie `1.812` avec `0x3FE7EF9E` ; s’il reste trop bas, `2.0` correspond à `0x40000000`.\n\nJe ne toucherais pas encore à `lookHeight`, car ce paramètre déplace surtout Ratchet verticalement dans le cadre sans relever réellement la caméra. Une fois la hauteur validée, nous pourrons l’ajuster séparément si Ratchet reste légèrement trop haut à l’écran."
+        }
+      ]
+    },
+    {
+      "id": "5a085eae-d2ac-4e50-92b0-e5d3aec9e134",
+      "status": "completed",
+      "error": null,
+      "startedAt": 1787945193.715,
+      "completedAt": 1787945353.293383,
+      "durationMs": null,
+      "items": [
+        {
+          "type": "userMessage",
+          "id": "5a085eae-d2ac-4e50-92b0-e5d3aec9e134",
+          "content": [
+            {
+              "type": "text",
+              "text": "Toujours pas. Voici un RAM Dump Pokitaru pris à l'instant.\n\n[User attached 1 file; file contents were not included]"
+            }
+          ]
+        },
+        {
+          "type": "agentMessage",
+          "id": "50dba078-0086-595c-a4cb-ec3651625515",
+          "text": "Le dump révèle l’erreur : `LEVEL_01.PRX` est chargé à `0x09141D00`, soit `+0x8000` par rapport à la base utilisée précédemment. Les anciennes adresses pointaient donc vers des données sans rapport avec la caméra.\n\nPour Pokitaru dans ta session actuelle :\n\n| Fonction | Adresse PPSSPP | Valeur actuelle | Valeur test |\n|---|---:|---:|---:|\n| Distance courante | `0x0941F188` | `0x40A00000` = 5.0 | `0x41100000` = 9.0 |\n| Distance cible | `0x0941F190` | `0x40A00000` = 5.0 | `0x41100000` = 9.0 |\n\nMets `0x41100000` aux **deux adresses**. Si PPSSPP affiche les octets séparément, écris `00 00 10 41`.\n\nPour empêcher un retour ultérieur à la distance vanilla, modifie également les deux valeurs par défaut :\n\n- `0x093EC0F0` → `0x41100000`\n- `0x093EC0F4` → `0x41100000`\n\nCes quatre adresses contiennent actuellement `5.0` dans ton dump. `0x0941F188` et `0x0941F190` sont cette fois confirmées par les fonctions qui écrivent puis relisent directement la distance de caméra."
+        }
+      ]
+    },
+    {
+      "id": "731c6547-ffa2-4417-bcda-ddddb8510c66",
+      "status": "completed",
+      "error": null,
+      "startedAt": 1787944785.698,
+      "completedAt": 1787944962.811008,
+      "durationMs": null,
+      "items": [
+        {
+          "type": "userMessage",
+          "id": "731c6547-ffa2-4417-bcda-ddddb8510c66",
+          "content": [
+            {
+              "type": "text",
+              "text": "Reprends là où tu t'es arrêté !"
+            }
+          ]
+        },
+        {
+          "type": "agentMessage",
+          "id": "7bbfe7db-72a9-518b-ae59-183d2a588624",
+          "text": "Oui, l’ancienne adresse n’était pas la bonne pour un test en direct : `0x093E40F0/F4` correspond au bloc de valeurs par défaut, pas à l’état actif de la caméra.\n\n| Niveau | Distance courante | Distance cible | Valeur vanilla attendue |\n|---|---:|---:|---:|\n| Pokitaru | `0x09417188` | `0x09417190` | environ `5.0` |\n| Ryllus | `0x0942FF48` | `0x0942FF50` | `5.42` / `5.0` dans le dump |\n\nSur Pokitaru, mets donc `0x41100000` — soit `9.0` — aux deux adresses `0x09417188` et `0x09417190`. La première produit le recul immédiat, tandis que la seconde empêche l’interpolation de ramener la caméra vers `5.0`.\n\nAvant d’écrire, vérifie que `0x09417190` contient bien `0x40A00000`. Si ce n’est pas le cas, il faudra un dump RAM pris directement sur Pokitaru pour contrôler la relocation exacte de ta session."
+        }
+      ]
+    },
+    {
+      "id": "bdf456e7-b519-45f2-9974-2f3e8603300b",
+      "status": "completed",
+      "error": null,
+      "startedAt": 1787939941.802,
+      "completedAt": 1787939941.802,
+      "durationMs": null,
+      "items": [
+        {
+          "type": "userMessage",
+          "id": "bdf456e7-b519-45f2-9974-2f3e8603300b",
+          "content": [
+            {
+              "type": "text",
+              "text": "Ca ne fonctionne pas, j'ai l'impression que ce n'est pas la bonne adresse..."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "57a1fe11-0c16-484c-a90d-f9d2b4996b98",
+      "status": "completed",
+      "error": null,
+      "startedAt": 1787939635.104,
+      "completedAt": 1787939665.301059,
+      "durationMs": null,
+      "items": [
+        {
+          "type": "userMessage",
+          "id": "57a1fe11-0c16-484c-a90d-f9d2b4996b98",
+          "content": [
+            {
+              "type": "text",
+              "text": "Peux tu juste me mettre l'adresse prévue dans PPSSPP ?"
+            }
+          ]
+        },
+        {
+          "type": "agentMessage",
+          "id": "02035a85-df96-58a6-a7ac-b862a6735c17",
+          "text": "Pour **Pokitaru**, l’adresse PPSSPP à modifier est **`0x093E40F4`** avec **`0x41100000`** pour une distance de `9.0`. Modifie aussi la constante source **`0x093E40F0`** avec la même valeur pour éviter sa réinitialisation."
+        }
+      ]
+    },
+    {
+      "id": "1f5f043a-8ed6-4d9c-9355-d2f8770a20e0",
+      "status": "completed",
+      "error": null,
+      "startedAt": 1787926253.264,
+      "completedAt": 1787927371.490793,
+      "durationMs": null,
+      "items": [
+        {
+          "type": "userMessage",
+          "id": "1f5f043a-8ed6-4d9c-9355-d2f8770a20e0",
+          "content": [
+            {
+              "type": "text",
+              "text": "Alors dans cette conversation on va essayer d'ajuster le FOV du jeu pour avoir une expérience \"proche\" des jeux PS2.\n\nGlobalement voici une image PS3 HD de Ratchet & Clank 1 et Ratchet & Clank 3 puis des screenshots de Size Matters. Tu remarqueras que dans Size Matters, la caméra est bien plus proche, car adaptée pour une expérience portable et pour limiter l'affichage (même si on peut avoir certains plans larges en début de niveau en attendant que Ratchet bouge comme sur le screenshot N°6).\n\nL'idée est que le gameplay (screenshots 3/4/5) se rapproche des images 1 & 2. J'ai fait quelques mesures rapides et globalement :\n\n- Sur les remasters HD, Ratchet occupe 10-12% de la largeur de l'écran, 30% de la hauteur et le haut de sa tête/oreilles est environ à 40% de l'écran.\n- Sur Size Matters, Ratchet occuper 18-20% de la largeur de l'écran, 55% de la hauteur et le haut de sa tête/oreilles est à 60% de la hauteur de l'écran.\n\nL'idée est donc de retrouver les valeurs qui agissent sur le FOV, et calculer les bonnes valeurs de FOV pour reproduire une expérience plus proche des jeux Ratchet originaux sur PS3 HD (qui sont aussi en format 16/9).\n\n[User attached 6 images; image contents were not included]"
+            }
+          ]
+        },
+        {
+          "type": "agentMessage",
+          "id": "c221908f-f38a-5c0d-a23f-2a6659317fa2",
+          "text": "Oui : nous avons retrouvé le véritable FOV, mais les captures montrent surtout un problème de distance caméra. *Size Matters* utilise un FOV vertical vanilla de **54,42°** — soit **84,44° horizontal** au format PSP — ce qui est déjà raisonnable. Pour obtenir les proportions PS3 uniquement en augmentant le FOV, il faudrait monter vers **83–87° vertical et 115–118° horizontal**, ce qui produirait un grand-angle très déformé.\n\n### Les paramètres identifiés\n\nLe code expose explicitement cinq réglages : `dist`, `height`, `lookHeight`, `elevation` et `azimuth`. Le plan large du screenshot 6 provient bien d’un objet `InitialCamera` qui modifie ces paramètres, et non d’un changement de FOV.\n\n| Paramètre | Valeur vanilla | Fonction |\n|---|---:|---|\n| FOV vertical | 54,42° | Perspective générale |\n| FOV horizontal | 84,44° | Résultat au ratio 480/272 |\n| Distance normale | 5,0 | Taille apparente de Ratchet |\n| Hauteur caméra | 1,14 | Position verticale de la caméra |\n| `lookHeight` | 0,4 | Hauteur du point regardé sur Ratchet |\n\nDans le dump Ryllus, la distance instantanée vaut `5,42` et sa cible vaut `5,0`. La séparation spatiale mesurée entre la caméra et son point de visée est également proche de `5,46`, ce qui confirme que nous avons bien identifié la distance réelle, et non une constante ressemblante.\n\n### Calcul du recul nécessaire\n\nEn gardant la perspective vanilla, la taille apparente évolue approximativement en proportion inverse de la distance. Les résultats théoriques à partir de tes mesures sont donc les suivants :\n\n| Distance | Hauteur de Ratchet | Largeur de Ratchet | Interprétation |\n|---:|---:|---:|---|\n| 5,0 | 55 % | 19 % | Vanilla |\n| 8,0 | 34,4 % | 11,9 % | Variante prudente |\n| **9,0** | **30,6 %** | **10,6 %** | **Correspondance théorique PS3** |\n| 10,0 | 27,5 % | 9,5 % | Variante très éloignée |\n\nLa première valeur à essayer est donc clairement **9,0**, encodée en flottant par `0x41100000`. Elle devrait réduire Ratchet autour du centre actuel de l’image, ce qui pourrait également ramener naturellement ses oreilles de 60 % à environ 40–45 % de la hauteur mesurée depuis le bas.\n\n### Premier patch de test\n\nPour **Pokitaru uniquement** :\n\n```ini\n_C0 Camera PS2 - Pokitaru - Distance 9.0 TEST\n_L 0x20BE40F0 0x41100000\n_L 0x20BE40F4 0x41100000\n```\n\nPour **Ryllus uniquement** :\n\n```ini\n_C0 Camera PS2 - Ryllus - Distance 9.0 TEST\n_L 0x20BFB070 0x41100000\n_L 0x20BFB074 0x41100000\n```\n\nCes deux blocs ne doivent jamais être activés ensemble, car les modules occupent le même espace RAM et les adresses du niveau inactif peuvent correspondre à d’autres données. Il faut activer le bloc correspondant, puis recharger le niveau ou un checkpoint pour garantir la réinitialisation complète de la caméra.\n\nPour essayer une autre intensité, il suffit de remplacer `0x41100000` sur les deux lignes :\n\n| Distance | Valeur hexadécimale |\n|---:|---:|\n| 5,0 — restauration vanilla | `0x40A00000` |\n| 8,0 | `0x41000000` |\n| 9,0 | `0x41100000` |\n| 10,0 | `0x41200000` |\n\n### Ce qu’il faudra observer\n\nLe test principal doit être réalisé dans une zone ouverte, sans mur immédiatement derrière la caméra, car le système anticollision peut momentanément la rapprocher. Il faudrait idéalement prendre une capture au repos, une en déplacement et une en tirant : certains modes de combat possèdent leurs propres valeurs de distance et pourraient reprendre temporairement la main.\n\nSi `9,0` donne la bonne taille mais place encore Ratchet trop haut, nous modifierons ensuite `lookHeight` sans toucher au recul. Si le résultat paraît trop comprimé ou provoque trop souvent des collisions, la meilleure variante hybride serait probablement une distance proche de `8,0` avec un FOV vertical légèrement porté à `60°`, et non le FOV extrême de 85° qu’exigerait une correction exclusivement optique.\n\nJ’ai également retrouvé la signature de la distance normale dans les vingt PRX de niveau. Une fois la valeur visuelle validée, le PRX pourra donc la résoudre dynamiquement pour chaque module tout en laissant intactes les caméras spéciales, les cinématiques et les plans d’introduction."
+        }
+      ]
+    }
+  ]
+}

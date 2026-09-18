@@ -1,0 +1,59 @@
+start version=0.6.0-global-experimental.1 target=PPSSPP-1.19.3-Windows11 trace_schema=5 mode=detect_only default_policy=two_pass allowed_module=0 instrumentation=1 ra_overrides=0 poll_us=100000 stable=3 reference_base=0x09139D00 resolver=module_api+fallback_scan
+module detected key=LEVEL_03 index=3 matches=1 mode=detect_only writes=0 resolver=module_api base=0x0914BD00 delta=73728 entry=0x27BDFFC0 jit=0
+PPSSPP JIT marker accepted key=LEVEL_03 address=0x0915A080 word=0x683FA056; remaining guards valid
+trace saved path=ms0:/PSP/PLUGINS/SizeMattersWrapperProfiler/trace_L03_0001.json module=3 entries=33
+module detected key=LEVEL_04 index=4 matches=1 mode=detect_only writes=0 resolver=module_api base=0x0914BD00 delta=73728 entry=0x27BDFFC0 jit=0
+PPSSPP JIT marker accepted key=LEVEL_04 address=0x09159E54 word=0x686858D6; remaining guards valid
+start version=0.6.0-global-experimental.1 target=PPSSPP-1.19.3-Windows11 trace_schema=5 mode=global_60fps default_policy=two_pass allowed_module=0 instrumentation=1 ra_overrides=0 poll_us=100000 stable=3 reference_base=0x09139D00 resolver=module_api+fallback_scan
+custom policies use safe two_pass fallback key=LEVEL_04 callsites=13
+full patch armed key=LEVEL_04 static_writes=106 pending_constants=0 layers=15 caves=plugin_owned
+module armed key=LEVEL_04 index=4 mode=global_60fps callsites=36 two_pass=28 one_pass=8 custom_fallback=13 two_hook=0x0895B754 one_hook=0x0895B770 resolver=module_api base=0x0914BD00 delta=73728 entry=0x27BDFFC0 jit=0
+PPSSPP JIT marker accepted key=LEVEL_04 address=0x09159E54 word=0x680013F2; remaining guards valid
+start version=0.6.0-global-experimental.1 target=PPSSPP-1.19.3-Windows11 trace_schema=5 mode=global_60fps default_policy=two_pass allowed_module=0 instrumentation=1 ra_overrides=0 poll_us=100000 stable=3 reference_base=0x09139D00 resolver=module_api+fallback_scan
+start version=0.6.0-global-experimental.1 target=PPSSPP-1.19.3-Windows11 trace_schema=5 mode=global_60fps default_policy=two_pass allowed_module=0 instrumentation=1 ra_overrides=0 poll_us=100000 stable=3 reference_base=0x09139D00 resolver=module_api+fallback_scan
+custom policies use safe two_pass fallback key=LEVEL_04 callsites=13
+full patch armed key=LEVEL_04 static_writes=106 pending_constants=0 layers=15 caves=plugin_owned
+module armed key=LEVEL_04 index=4 mode=global_60fps callsites=36 two_pass=28 one_pass=8 custom_fallback=13 two_hook=0x0895B754 one_hook=0x0895B770 resolver=module_api base=0x0914BD00 delta=73728 entry=0x27BDFFC0 jit=0
+PPSSPP JIT marker accepted key=LEVEL_04 address=0x09159E54 word=0x680013F2; remaining guards valid
+start version=0.6.0-global-experimental.1 target=PPSSPP-1.19.3-Windows11 trace_schema=5 mode=global_60fps default_policy=two_pass allowed_module=0 instrumentation=1 ra_overrides=0 poll_us=100000 stable=3 reference_base=0x09139D00 resolver=module_api+fallback_scan
+custom policies use safe two_pass fallback key=LEVEL_04 callsites=13
+full patch armed key=LEVEL_04 static_writes=106 pending_constants=0 layers=15 caves=plugin_owned
+module armed key=LEVEL_04 index=4 mode=global_60fps callsites=36 two_pass=28 one_pass=8 custom_fallback=13 two_hook=0x0895B754 one_hook=0x0895B770 resolver=module_api base=0x0914BD00 delta=73728 entry=0x27BDFFC0 jit=0
+PPSSPP JIT marker accepted key=LEVEL_04 address=0x09159E54 word=0x680013F2; remaining guards valid
+start version=0.6.1-metalis-integration-dev.2 target=PPSSPP-1.19.3-Windows11 trace_schema=5 mode=global_60fps default_policy=two_pass allowed_module=0 instrumentation=1 ra_overrides=0 poll_us=100000 stable=3 reference_base=0x09139D00 resolver=module_api+fallback_scan
+custom policies use safe two_pass fallback key=LEVEL_04 callsites=13
+full patch armed key=LEVEL_04 static_writes=160 pending_constants=0 layers=15 caves=plugin_owned
+module armed key=LEVEL_04 index=4 mode=global_60fps callsites=36 two_pass=28 one_pass=8 custom_fallback=13 two_hook=0x0895BBF4 one_hook=0x0895BC10 resolver=module_api base=0x0914CD00 delta=77824 entry=0x27BDFFC0 jit=0
+PPSSPP JIT marker accepted key=LEVEL_04 address=0x0915AE54 word=0x680013F2; remaining guards valid
+frame_rate requested=30; deferred until verified module reload
+frame_rate requested=60; deferred until verified module reload
+start version=0.6.2-native-menu-dev.1 target=PPSSPP-1.19.3-Windows11 trace_schema=5 mode=global_60fps default_policy=two_pass allowed_module=0 instrumentation=1 ra_overrides=0 poll_us=100000 stable=3 reference_base=0x09139D00 resolver=module_api+fallback_scan
+menu frame_rate saved=60
+start version=0.6.2-native-menu-dev.1 target=PPSSPP-1.19.3-Windows11 trace_schema=5 mode=global_60fps default_policy=two_pass allowed_module=0 instrumentation=1 ra_overrides=0 poll_us=100000 stable=3 reference_base=0x09139D00 resolver=module_api+fallback_scan
+frame_rate requested=30; deferred until verified module reload
+frame_rate requested=60; deferred until verified module reload
+frame_rate requested=30; deferred until verified module reload
+frame_rate requested=60; deferred until verified module reload
+frame_rate requested=30; deferred until verified module reload
+frame_rate requested=60; deferred until verified module reload
+frame_rate requested=30; deferred until verified module reload
+frame_rate requested=60; deferred until verified module reload
+frame_rate requested=30; deferred until verified module reload
+frame_rate requested=60; deferred until verified module reload
+frame_rate requested=30; deferred until verified module reload
+frame_rate requested=60; deferred until verified module reload
+custom policies use safe two_pass fallback key=LEVEL_04 callsites=13
+full patch armed key=LEVEL_04 static_writes=160 pending_constants=0 layers=15 caves=plugin_owned
+module armed key=LEVEL_04 index=4 mode=global_60fps callsites=36 two_pass=28 one_pass=8 custom_fallback=13 two_hook=0x0895D5C4 one_hook=0x0895D5E0 resolver=module_api base=0x09159D00 delta=131072 entry=0x27BDFFC0 jit=0
+PPSSPP JIT marker accepted key=LEVEL_04 address=0x09167E54 word=0x684BBD86; remaining guards valid
+frame_rate requested=30; deferred until verified module reload
+trace saved path=ms0:/PSP/PLUGINS/SizeMattersWrapperProfiler/trace_L04_0001.json module=4 entries=36
+frame_rate applied=30 requested=30 key=LEVEL_15 game_writes=0
+module detected key=LEVEL_15 index=15 matches=2 mode=global_60fps writes=0 resolver=module_api base=0x09159D00 delta=131072 entry=0x27BDFFC0 jit=0
+trace saved path=ms0:/PSP/PLUGINS/SizeMattersWrapperProfiler/trace_L15_0002.json module=15 entries=6
+custom policies use safe two_pass fallback key=LEVEL_04 callsites=13
+frame_rate applied=30 requested=30 key=LEVEL_04 game_writes=0
+module detected key=LEVEL_04 index=4 matches=1 mode=global_60fps writes=0 resolver=module_api base=0x09159D00 delta=131072 entry=0x27BDFFC0 jit=0
+PPSSPP JIT marker accepted key=LEVEL_04 address=0x09167E54 word=0x68BA7F2E; remaining guards valid
+frame_rate requested=60; deferred until verified module reload
+trace saved path=ms0:/PSP/PLUGINS/SizeMattersWrapperProfiler/trace_L04_0003.json module=4 entries=36

@@ -1,0 +1,1683 @@
+{
+  "time": "2026-09-16T21:11:49.761Z",
+  "objects": [
+    {
+      "name": "VehicleController",
+      "descriptor": 157678816,
+      "object": 157712864,
+      "update": 154014684,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164313088,
+      "props": 157692608
+    },
+    {
+      "name": "ClankSawTorso",
+      "descriptor": 157678896,
+      "object": 157714144,
+      "update": 153586836,
+      "state": 0,
+      "timer": -158,
+      "pvars": 164313856,
+      "props": 157693744
+    },
+    {
+      "name": "DestructionDerby",
+      "descriptor": 157678976,
+      "object": 157714400,
+      "update": 153624556,
+      "state": 7,
+      "timer": 0,
+      "pvars": 0,
+      "props": 157693792
+    },
+    {
+      "name": "EnemyElectroTorso",
+      "descriptor": 157679056,
+      "object": 157715040,
+      "update": 153661832,
+      "state": 1,
+      "timer": 29.5,
+      "pvars": 164314304,
+      "props": 157693888
+    },
+    {
+      "name": "ObstacleWall",
+      "descriptor": 157679136,
+      "object": 157715552,
+      "update": 153824180,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164315696,
+      "props": 0
+    },
+    {
+      "name": "ObstacleSaw",
+      "descriptor": 157679216,
+      "object": 157717216,
+      "update": 153818916,
+      "state": 0,
+      "timer": 16,
+      "pvars": 164315904,
+      "props": 0
+    },
+    {
+      "name": "EnemyRamTorso",
+      "descriptor": 157679296,
+      "object": 157717856,
+      "update": 153666936,
+      "state": 1,
+      "timer": 93.5,
+      "pvars": 164316192,
+      "props": 157693968
+    },
+    {
+      "name": "MobyCollection",
+      "descriptor": 157679376,
+      "object": 157718496,
+      "update": 153791952,
+      "state": 4,
+      "timer": 0,
+      "pvars": 0,
+      "props": 157694080
+    },
+    {
+      "name": "DerbyTeleporterHealth",
+      "descriptor": 157679456,
+      "object": 157719776,
+      "update": 153621316,
+      "state": 0,
+      "timer": 293.5,
+      "pvars": 164317600,
+      "props": 0
+    },
+    {
+      "name": "ObstacleVent",
+      "descriptor": 157679536,
+      "object": 157720416,
+      "update": 153821212,
+      "state": 1,
+      "timer": 20,
+      "pvars": 164317888,
+      "props": 157694416
+    },
+    {
+      "name": "DerbyTeleporterPowerup",
+      "descriptor": 157679616,
+      "object": 157721952,
+      "update": 153622668,
+      "state": 2,
+      "timer": -335,
+      "pvars": 164318320,
+      "props": 0
+    },
+    {
+      "name": "ObstacleBouncer",
+      "descriptor": 157679696,
+      "object": 157722592,
+      "update": 153818096,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164318608,
+      "props": 0
+    },
+    {
+      "name": "ClankRamTorso",
+      "descriptor": 157679776,
+      "object": 157723872,
+      "update": 153584320,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164318768,
+      "props": 157694624
+    },
+    {
+      "name": "EnemySawTorso",
+      "descriptor": 157679856,
+      "object": 157724128,
+      "update": 153670596,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164319376,
+      "props": 157694672
+    },
+    {
+      "name": "ArenaController",
+      "descriptor": 157679936,
+      "object": 157724512,
+      "update": 153510372,
+      "state": 1,
+      "timer": 0,
+      "pvars": 164319968,
+      "props": 157694768
+    },
+    {
+      "name": "ClankBotFlingerVehicle",
+      "descriptor": 157680016,
+      "object": 157724896,
+      "update": 153577448,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164320032,
+      "props": 157694928
+    },
+    {
+      "name": "MicrobotToss",
+      "descriptor": 157680096,
+      "object": 157725536,
+      "update": 153783916,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164321984,
+      "props": 157695072
+    },
+    {
+      "name": "MicrobotTossTeleporter",
+      "descriptor": 157680176,
+      "object": 157726176,
+      "update": 153790888,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164322496,
+      "props": 0
+    },
+    {
+      "name": "MicrobotTossGoal",
+      "descriptor": 157680256,
+      "object": 157728224,
+      "update": 153788480,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164322816,
+      "props": 0
+    },
+    {
+      "name": "EnemyBotFlingerVehicle",
+      "descriptor": 157680336,
+      "object": 157728992,
+      "update": 153646648,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164322992,
+      "props": 157695408
+    },
+    {
+      "name": "ObstacleSpinningFloor",
+      "descriptor": 157680416,
+      "object": 157730272,
+      "update": 153820432,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164326560,
+      "props": 0
+    },
+    {
+      "name": "ClankElectroTorso",
+      "descriptor": 157680496,
+      "object": 157732192,
+      "update": 153582512,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164326752,
+      "props": 157695584
+    },
+    {
+      "name": "SmasherBot",
+      "descriptor": 157680576,
+      "object": 157732320,
+      "update": 153910976,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164327168,
+      "props": 157695616
+    },
+    {
+      "name": "MicroBotSurvival",
+      "descriptor": 157680656,
+      "object": 157732576,
+      "update": 153777596,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164327248,
+      "props": 157695664
+    },
+    {
+      "name": "SurvivalGround",
+      "descriptor": 157680736,
+      "object": 157733216,
+      "update": 153952140,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164327648,
+      "props": 157695760
+    },
+    {
+      "name": "SurvivalWall",
+      "descriptor": 157680816,
+      "object": 157752928,
+      "update": 153954844,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164328880,
+      "props": 157698240
+    },
+    {
+      "name": "SurvivalBotSpawner",
+      "descriptor": 157680896,
+      "object": 157753696,
+      "update": 153947420,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164329024,
+      "props": 157698352
+    },
+    {
+      "name": "SurvivalBotPort",
+      "descriptor": 157680976,
+      "object": 157754336,
+      "update": 153945932,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164329168,
+      "props": 157698448
+    },
+    {
+      "name": "SurvivalBGTile",
+      "descriptor": 157681056,
+      "object": 157754976,
+      "update": 153931216,
+      "state": 0,
+      "timer": 0,
+      "pvars": 0,
+      "props": 157698544
+    },
+    {
+      "name": "SurvivalBotTeleport",
+      "descriptor": 157681136,
+      "object": 157761504,
+      "update": 153949032,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164329296,
+      "props": 157699376
+    },
+    {
+      "name": "SurvivalReversePad",
+      "descriptor": 157681216,
+      "object": 157762272,
+      "update": 153952832,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164329856,
+      "props": 157699488
+    },
+    {
+      "name": "SurvivalTrapeze",
+      "descriptor": 157681296,
+      "object": 157762912,
+      "update": 153953656,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164329984,
+      "props": 157699584
+    },
+    {
+      "name": "ClankChallengeMenu",
+      "descriptor": 157681376,
+      "object": 157763296,
+      "update": 153580108,
+      "state": 3,
+      "timer": 0,
+      "pvars": 164330080,
+      "props": 157699648
+    },
+    {
+      "name": "ClankPlr",
+      "descriptor": 157681456,
+      "object": 157763424,
+      "update": 153583680,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164330096,
+      "props": 157699680
+    },
+    {
+      "name": "Level04StartMoby",
+      "descriptor": 157681536,
+      "object": 157763552,
+      "update": 153765624,
+      "state": 0,
+      "timer": 0,
+      "pvars": 0,
+      "props": 157699716
+    },
+    {
+      "name": "Level04Crane",
+      "descriptor": 157681616,
+      "object": 157763680,
+      "update": 153758072,
+      "state": 1,
+      "timer": 0,
+      "pvars": 164330112,
+      "props": 157699760
+    },
+    {
+      "name": "BoltController",
+      "descriptor": 157681696,
+      "object": 157763808,
+      "update": 153566220,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164330160,
+      "props": 157699792
+    },
+    {
+      "name": "GiantClankGrowthPad",
+      "descriptor": 157681776,
+      "object": 157763936,
+      "update": 153705600,
+      "state": 1,
+      "timer": 0,
+      "pvars": 164330176,
+      "props": 157699824
+    },
+    {
+      "name": "DeathTrigger",
+      "descriptor": 157681936,
+      "object": 157764192,
+      "update": 153608436,
+      "state": 1,
+      "timer": 0,
+      "pvars": 0,
+      "props": 157699860
+    },
+    {
+      "name": "TriggerCollection",
+      "descriptor": 157682016,
+      "object": 157764448,
+      "update": 154001580,
+      "state": 1,
+      "timer": 0,
+      "pvars": 0,
+      "props": 157699960
+    },
+    {
+      "name": "IntroMovie",
+      "descriptor": 157682176,
+      "object": 157765216,
+      "update": 153716244,
+      "state": 0,
+      "timer": 0,
+      "pvars": 0,
+      "props": 157700256
+    },
+    {
+      "name": "Level04HelpManager",
+      "descriptor": 157682256,
+      "object": 157765344,
+      "update": 153763312,
+      "state": 0,
+      "timer": 0,
+      "pvars": 0,
+      "props": 157700288
+    },
+    {
+      "name": "ContinuePoint",
+      "descriptor": 157682336,
+      "object": 157765472,
+      "update": 153589040,
+      "state": 0,
+      "timer": 0,
+      "pvars": 0,
+      "props": 157700312
+    },
+    {
+      "name": "RatchetShip",
+      "descriptor": 157682416,
+      "object": 157765984,
+      "update": 153852432,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164330240,
+      "props": 0
+    },
+    {
+      "name": "Level04Crusher",
+      "descriptor": 157682496,
+      "object": 157766112,
+      "update": 153761016,
+      "state": 4,
+      "timer": 0,
+      "pvars": 164330256,
+      "props": 157700368
+    },
+    {
+      "name": "DamageSphere",
+      "descriptor": 157682576,
+      "object": 157767648,
+      "update": 153608112,
+      "state": 0,
+      "timer": 0,
+      "pvars": 0,
+      "props": 157700576
+    },
+    {
+      "name": "SimpleSound",
+      "descriptor": 157682656,
+      "object": 157768288,
+      "update": 153908188,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164331888,
+      "props": 157700672
+    },
+    {
+      "name": "Fire",
+      "descriptor": 157682736,
+      "object": 157773152,
+      "update": 153680512,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164332192,
+      "props": 157701296
+    },
+    {
+      "name": "Hookshot",
+      "descriptor": 157682816,
+      "object": 157775712,
+      "update": 153714292,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164335632,
+      "props": 157701664
+    },
+    {
+      "name": "ConveyorBelt",
+      "descriptor": 157682896,
+      "object": 157776352,
+      "update": 153589728,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164335776,
+      "props": 157701920
+    },
+    {
+      "name": "EnemyController",
+      "descriptor": 157682976,
+      "object": 157776992,
+      "update": 153648584,
+      "state": 2,
+      "timer": 0,
+      "pvars": 164338368,
+      "props": 157702032
+    },
+    {
+      "name": "TMRobotTorsoB",
+      "descriptor": 157683056,
+      "object": 157777376,
+      "update": 153989564,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164339424,
+      "props": 157702224
+    },
+    {
+      "name": "Teleporter",
+      "descriptor": 157683136,
+      "object": 157779040,
+      "update": 153960972,
+      "state": 1,
+      "timer": 0,
+      "pvars": 164341040,
+      "props": 157703504
+    },
+    {
+      "name": "Level04SecretDoor",
+      "descriptor": 157683216,
+      "object": 157779424,
+      "update": 153764424,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164341088,
+      "props": 0
+    },
+    {
+      "name": "TitaniumBolt",
+      "descriptor": 157683296,
+      "object": 157779552,
+      "update": 153966616,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164341200,
+      "props": 157703636
+    },
+    {
+      "name": "FlyingCarLightweightDirectional",
+      "descriptor": 157683376,
+      "object": 157779680,
+      "update": 153695888,
+      "state": 0,
+      "timer": 7057,
+      "pvars": 164341360,
+      "props": 157703764
+    },
+    {
+      "name": "FlyingCarLightweightOrbit",
+      "descriptor": 157683456,
+      "object": 157780064,
+      "update": 153700148,
+      "state": 0,
+      "timer": 7057,
+      "pvars": 164341456,
+      "props": 157704096
+    },
+    {
+      "name": "RatchetShipAnimation",
+      "descriptor": 157683536,
+      "object": 157780192,
+      "update": 153856596,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164341504,
+      "props": 157704364
+    },
+    {
+      "name": "Crate",
+      "descriptor": 157683616,
+      "object": 157780320,
+      "update": 153591844,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164341792,
+      "props": 157704576
+    },
+    {
+      "name": "Level04ChallengeUnlocker",
+      "descriptor": 157683696,
+      "object": 157784416,
+      "update": 153755176,
+      "state": 0,
+      "timer": 0,
+      "pvars": 0,
+      "props": 157705104
+    },
+    {
+      "name": "vendor",
+      "descriptor": 157683776,
+      "object": 157784544,
+      "update": 154022996,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164342048,
+      "props": 157705136
+    },
+    {
+      "name": "FogMoby",
+      "descriptor": 157683856,
+      "object": 157784672,
+      "update": 153702628,
+      "state": 0,
+      "timer": 0,
+      "pvars": 0,
+      "props": 157705184
+    },
+    {
+      "name": "Ratchet",
+      "descriptor": 157683936,
+      "object": 157784800,
+      "update": 153843156,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164342064,
+      "props": 0
+    },
+    {
+      "name": "Region",
+      "descriptor": 157684016,
+      "object": 157784928,
+      "update": 153864896,
+      "state": 0,
+      "timer": 0,
+      "pvars": 0,
+      "props": 157705264
+    },
+    {
+      "name": "TieManipulator",
+      "descriptor": 157684096,
+      "object": 157785312,
+      "update": 153964848,
+      "state": 0,
+      "timer": 0,
+      "pvars": 0,
+      "props": 157705920
+    },
+    {
+      "name": "ClankPack",
+      "descriptor": 157684176,
+      "object": 157785568,
+      "update": 153583560,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164342080,
+      "props": 0
+    },
+    {
+      "name": "Helipack",
+      "descriptor": 157684256,
+      "object": 157785696,
+      "update": 153713316,
+      "state": 4,
+      "timer": 0,
+      "pvars": 164342096,
+      "props": 0
+    },
+    {
+      "name": "ClankHead",
+      "descriptor": 157684336,
+      "object": 157785824,
+      "update": 153583496,
+      "state": 0,
+      "timer": -0.08817163109779358,
+      "pvars": 0,
+      "props": 0
+    },
+    {
+      "name": "LightningAttack",
+      "descriptor": 157684416,
+      "object": 157785952,
+      "update": 153768776,
+      "state": 1,
+      "timer": -0.1428571194410324,
+      "pvars": 164342112,
+      "props": 0
+    },
+    {
+      "name": "EnemyHead",
+      "descriptor": 157684496,
+      "object": 157788512,
+      "update": 153662844,
+      "state": 0,
+      "timer": -0.0038281651213765144,
+      "pvars": 164342752,
+      "props": 0
+    },
+    {
+      "name": "BotFlingerArm",
+      "descriptor": 157684576,
+      "object": 157790432,
+      "update": 153570192,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164343296,
+      "props": 0
+    },
+    {
+      "name": "Microbot",
+      "descriptor": 157684656,
+      "object": 157791712,
+      "update": 153772772,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164344384,
+      "props": 0
+    },
+    {
+      "name": "ClankBotShrapnel",
+      "descriptor": 157684736,
+      "object": 157792992,
+      "update": 153579116,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164345392,
+      "props": 0
+    },
+    {
+      "name": "MicrobotTossBomb",
+      "descriptor": 157684816,
+      "object": 157794528,
+      "update": 153785520,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164345824,
+      "props": 0
+    },
+    {
+      "name": "VehicleHusk",
+      "descriptor": 157684896,
+      "object": 157795808,
+      "update": 154016788,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164346464,
+      "props": 0
+    },
+    {
+      "name": "SurvivalBot",
+      "descriptor": 157684976,
+      "object": 157798624,
+      "update": 153937824,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164346816,
+      "props": 0
+    },
+    {
+      "name": "SurvivalBridge",
+      "descriptor": 157685056,
+      "object": 157799904,
+      "update": 153950588,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164348336,
+      "props": 157706960
+    },
+    {
+      "name": "VehicleHuskSmasher",
+      "descriptor": 157685136,
+      "object": 157801184,
+      "update": 154017716,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164349664,
+      "props": 0
+    },
+    {
+      "name": "ShrapnelModel",
+      "descriptor": 157685216,
+      "object": 157801312,
+      "update": 153901772,
+      "state": 0,
+      "timer": 0,
+      "pvars": 0,
+      "props": 0
+    },
+    {
+      "name": "DerbyCrateHealth",
+      "descriptor": 157685296,
+      "object": 157801824,
+      "update": 153609368,
+      "state": 2,
+      "timer": 0,
+      "pvars": 164349680,
+      "props": 0
+    },
+    {
+      "name": "DerbyPowerupHealth",
+      "descriptor": 157685376,
+      "object": 157802592,
+      "update": 153615472,
+      "state": 2,
+      "timer": 0,
+      "pvars": 164349856,
+      "props": 0
+    },
+    {
+      "name": "GenericTieForm",
+      "descriptor": 157685456,
+      "object": 157803360,
+      "update": 153704120,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164350608,
+      "props": 0
+    },
+    {
+      "name": "VehicleMine",
+      "descriptor": 157685536,
+      "object": 157804384,
+      "update": 154018648,
+      "state": 1,
+      "timer": 0,
+      "pvars": 164350800,
+      "props": 0
+    },
+    {
+      "name": "VehicleMissile",
+      "descriptor": 157685616,
+      "object": 157805024,
+      "update": 154020768,
+      "state": 0,
+      "timer": 101,
+      "pvars": 164350880,
+      "props": 0
+    },
+    {
+      "name": "ShieldBubble",
+      "descriptor": 157685696,
+      "object": 157805664,
+      "update": 153873404,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164351072,
+      "props": 0
+    },
+    {
+      "name": "DerbyCratePowerup",
+      "descriptor": 157685776,
+      "object": 157806688,
+      "update": 153611532,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164367552,
+      "props": 0
+    },
+    {
+      "name": "TorsoAShot",
+      "descriptor": 157685856,
+      "object": 157806816,
+      "update": 153996960,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164367584,
+      "props": 157707144
+    },
+    {
+      "name": "TMRobotHeadB",
+      "descriptor": 157685936,
+      "object": 157809376,
+      "update": 153976040,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164368144,
+      "props": 157707712
+    },
+    {
+      "name": "HeadShrapnel",
+      "descriptor": 157686016,
+      "object": 157810144,
+      "update": 153711772,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164368864,
+      "props": 0
+    },
+    {
+      "name": "TorsoShrapnel",
+      "descriptor": 157686096,
+      "object": 157811296,
+      "update": 154000020,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164369232,
+      "props": 0
+    },
+    {
+      "name": "DerbyPowerup",
+      "descriptor": 157686176,
+      "object": 157812832,
+      "update": 153611676,
+      "state": 3,
+      "timer": 0,
+      "pvars": 164369712,
+      "props": 0
+    },
+    {
+      "name": "ClankForShipAnim",
+      "descriptor": 157686256,
+      "object": 157813472,
+      "update": 153583472,
+      "state": 0,
+      "timer": 0,
+      "pvars": 0,
+      "props": 157708208
+    },
+    {
+      "name": "Wrench",
+      "descriptor": 157686336,
+      "object": 157813600,
+      "update": 154025184,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164369872,
+      "props": 0
+    },
+    {
+      "name": "Blaster",
+      "descriptor": 157686416,
+      "object": 157813728,
+      "update": 153526580,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164370144,
+      "props": 0
+    },
+    {
+      "name": "BlasterAkimbo",
+      "descriptor": 157686496,
+      "object": 157813856,
+      "update": 153530824,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164370336,
+      "props": 0
+    },
+    {
+      "name": "DualBlasterHUD",
+      "descriptor": 157686576,
+      "object": 157813984,
+      "update": 153625440,
+      "state": 0,
+      "timer": 0,
+      "pvars": 0,
+      "props": 0
+    },
+    {
+      "name": "BlasterShot",
+      "descriptor": 157686656,
+      "object": 157814112,
+      "update": 153532516,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164370432,
+      "props": 0
+    },
+    {
+      "name": "Bombglove",
+      "descriptor": 157686736,
+      "object": 157815136,
+      "update": 153568584,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164371744,
+      "props": 0
+    },
+    {
+      "name": "Acidbomb",
+      "descriptor": 157686816,
+      "object": 157815264,
+      "update": 153463140,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164371824,
+      "props": 0
+    },
+    {
+      "name": "AcidbombEpoxy",
+      "descriptor": 157686896,
+      "object": 157816032,
+      "update": 153468472,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164372256,
+      "props": 0
+    },
+    {
+      "name": "AcidGloveHUD",
+      "descriptor": 157686976,
+      "object": 157817312,
+      "update": 153469776,
+      "state": 0,
+      "timer": 0,
+      "pvars": 0,
+      "props": 0
+    },
+    {
+      "name": "Flamethrower",
+      "descriptor": 157687056,
+      "object": 157817440,
+      "update": 153685588,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164372544,
+      "props": 0
+    },
+    {
+      "name": "Spitfire",
+      "descriptor": 157687136,
+      "object": 157817568,
+      "update": 153912828,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164373184,
+      "props": 0
+    },
+    {
+      "name": "BlitzGun",
+      "descriptor": 157687216,
+      "object": 157817824,
+      "update": 153541860,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164373264,
+      "props": 0
+    },
+    {
+      "name": "BlitzGunShot",
+      "descriptor": 157687296,
+      "object": 157817952,
+      "update": 153549084,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164373360,
+      "props": 0
+    },
+    {
+      "name": "BeeMineGlove",
+      "descriptor": 157687376,
+      "object": 157819872,
+      "update": 153522372,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164374800,
+      "props": 0
+    },
+    {
+      "name": "BeeMine",
+      "descriptor": 157687456,
+      "object": 157820000,
+      "update": 153515316,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164374880,
+      "props": 0
+    },
+    {
+      "name": "BeeMineShrapnel",
+      "descriptor": 157687536,
+      "object": 157820768,
+      "update": 153524796,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164375744,
+      "props": 0
+    },
+    {
+      "name": "ExplosiveBee",
+      "descriptor": 157687616,
+      "object": 157821536,
+      "update": 153675540,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164375968,
+      "props": 0
+    },
+    {
+      "name": "SwarmManager",
+      "descriptor": 157687696,
+      "object": 157825376,
+      "update": 153956968,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164380768,
+      "props": 0
+    },
+    {
+      "name": "BeeMineGloveHUD",
+      "descriptor": 157687776,
+      "object": 157825632,
+      "update": 153523956,
+      "state": 0,
+      "timer": 0,
+      "pvars": 0,
+      "props": 0
+    },
+    {
+      "name": "AgentsGlove",
+      "descriptor": 157687856,
+      "object": 157825760,
+      "update": 153497992,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164381056,
+      "props": 0
+    },
+    {
+      "name": "AgentsBomb",
+      "descriptor": 157687936,
+      "object": 157825888,
+      "update": 153492292,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164381136,
+      "props": 0
+    },
+    {
+      "name": "AgentOfDoom",
+      "descriptor": 157688016,
+      "object": 157826016,
+      "update": 153472492,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164381872,
+      "props": 0
+    },
+    {
+      "name": "AgentOfDoomShrapnel",
+      "descriptor": 157688096,
+      "object": 157827040,
+      "update": 153491508,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164383824,
+      "props": 0
+    },
+    {
+      "name": "AgentsGrenade",
+      "descriptor": 157688176,
+      "object": 157830112,
+      "update": 153500668,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164384688,
+      "props": 0
+    },
+    {
+      "name": "AgentsRocket",
+      "descriptor": 157688256,
+      "object": 157832160,
+      "update": 153505924,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164385072,
+      "props": 0
+    },
+    {
+      "name": "AgentsLaser",
+      "descriptor": 157688336,
+      "object": 157834208,
+      "update": 153503028,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164385392,
+      "props": 0
+    },
+    {
+      "name": "AgentController",
+      "descriptor": 157688416,
+      "object": 157836256,
+      "update": 153470464,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164385968,
+      "props": 0
+    },
+    {
+      "name": "ShockRocket",
+      "descriptor": 157688496,
+      "object": 157836384,
+      "update": 153893592,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164386016,
+      "props": 0
+    },
+    {
+      "name": "ShockRocketShot",
+      "descriptor": 157688576,
+      "object": 157836512,
+      "update": 153898148,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164386224,
+      "props": 0
+    },
+    {
+      "name": "ElectroBall",
+      "descriptor": 157688656,
+      "object": 157837280,
+      "update": 153634716,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164386608,
+      "props": 0
+    },
+    {
+      "name": "electricXplo",
+      "descriptor": 157688736,
+      "object": 157838048,
+      "update": 153627484,
+      "state": 0,
+      "timer": 0,
+      "pvars": 0,
+      "props": 157708544
+    },
+    {
+      "name": "ShieldCharger",
+      "descriptor": 157688816,
+      "object": 157838816,
+      "update": 153881852,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164386848,
+      "props": 0
+    },
+    {
+      "name": "StaticBarrierBelt",
+      "descriptor": 157688896,
+      "object": 157838944,
+      "update": 153921176,
+      "state": 0,
+      "timer": 0,
+      "pvars": 0,
+      "props": 0
+    },
+    {
+      "name": "ShieldChargerBolt",
+      "descriptor": 157688976,
+      "object": 157839072,
+      "update": 153891756,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164391088,
+      "props": 0
+    },
+    {
+      "name": "RatchetDecoyInner",
+      "descriptor": 157689056,
+      "object": 157839328,
+      "update": 153850444,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164391520,
+      "props": 0
+    },
+    {
+      "name": "RatchetDecoyOuter",
+      "descriptor": 157689136,
+      "object": 157839584,
+      "update": 153851808,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164392320,
+      "props": 0
+    },
+    {
+      "name": "Mootator",
+      "descriptor": 157689216,
+      "object": 157839840,
+      "update": 153804632,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164392336,
+      "props": 0
+    },
+    {
+      "name": "MutantCow",
+      "descriptor": 157689296,
+      "object": 157839968,
+      "update": 153807728,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164392768,
+      "props": 0
+    },
+    {
+      "name": "CowBell",
+      "descriptor": 157689376,
+      "object": 157841504,
+      "update": 153591292,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164395456,
+      "props": 0
+    },
+    {
+      "name": "MutantMadCow",
+      "descriptor": 157689456,
+      "object": 157844576,
+      "update": 153812052,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164396320,
+      "props": 0
+    },
+    {
+      "name": "CrossbowGun",
+      "descriptor": 157689536,
+      "object": 157844704,
+      "update": 153594220,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164396544,
+      "props": 0
+    },
+    {
+      "name": "CrossbowShot",
+      "descriptor": 157689616,
+      "object": 157844832,
+      "update": 153601284,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164396608,
+      "props": 0
+    },
+    {
+      "name": "SuckCannon",
+      "descriptor": 157689696,
+      "object": 157845600,
+      "update": 153923076,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164400304,
+      "props": 0
+    },
+    {
+      "name": "SuckCannonManager",
+      "descriptor": 157689776,
+      "object": 157845728,
+      "update": 153928872,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164401136,
+      "props": 0
+    },
+    {
+      "name": "SuckCannonCometTie",
+      "descriptor": 157689856,
+      "object": 157845856,
+      "update": 153925492,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164401776,
+      "props": 0
+    },
+    {
+      "name": "SuckCannonComet",
+      "descriptor": 157689936,
+      "object": 157847904,
+      "update": 154114316,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164402928,
+      "props": 0
+    },
+    {
+      "name": "LaserTracer",
+      "descriptor": 157690016,
+      "object": 157848928,
+      "update": 153732396,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164403504,
+      "props": 0
+    },
+    {
+      "name": "Ryno",
+      "descriptor": 157690096,
+      "object": 157849056,
+      "update": 153866820,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164404176,
+      "props": 0
+    },
+    {
+      "name": "RynoRocket",
+      "descriptor": 157690176,
+      "object": 157849184,
+      "update": 153869492,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164404480,
+      "props": 0
+    },
+    {
+      "name": "Hypershot",
+      "descriptor": 157690256,
+      "object": 157851872,
+      "update": 153715648,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164405744,
+      "props": 0
+    },
+    {
+      "name": "Sproutomatic",
+      "descriptor": 157690336,
+      "object": 157852000,
+      "update": 153919640,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164405808,
+      "props": 0
+    },
+    {
+      "name": "Polarizer",
+      "descriptor": 157690416,
+      "object": 157852128,
+      "update": 153827596,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164405824,
+      "props": 0
+    },
+    {
+      "name": "PDA",
+      "descriptor": 157690496,
+      "object": 157852256,
+      "update": 153824204,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164406224,
+      "props": 0
+    },
+    {
+      "name": "ShrinkRayRatchet",
+      "descriptor": 157690576,
+      "object": 157852384,
+      "update": 153907828,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164406240,
+      "props": 0
+    },
+    {
+      "name": "ShrinkBeam",
+      "descriptor": 157690656,
+      "object": 157852512,
+      "update": 153904548,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164406256,
+      "props": 0
+    },
+    {
+      "name": "BoxBreaker",
+      "descriptor": 157690736,
+      "object": 157852640,
+      "update": 153574664,
+      "state": 0,
+      "timer": 0,
+      "pvars": 0,
+      "props": 0
+    },
+    {
+      "name": "BoxBreakerHelp",
+      "descriptor": 157690816,
+      "object": 157852768,
+      "update": 153574820,
+      "state": 0,
+      "timer": 0,
+      "pvars": 0,
+      "props": 0
+    },
+    {
+      "name": "BoltGrabber",
+      "descriptor": 157690896,
+      "object": 157852896,
+      "update": 153567160,
+      "state": 0,
+      "timer": 0,
+      "pvars": 0,
+      "props": 0
+    },
+    {
+      "name": "MapOMaticGadget",
+      "descriptor": 157690976,
+      "object": 157853024,
+      "update": 153769952,
+      "state": 0,
+      "timer": 0,
+      "pvars": 0,
+      "props": 0
+    },
+    {
+      "name": "ArmorTorso",
+      "descriptor": 157691056,
+      "object": 157853152,
+      "update": 153512612,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164406416,
+      "props": 0
+    },
+    {
+      "name": "ArmorHelmet",
+      "descriptor": 157691136,
+      "object": 157854048,
+      "update": 153512492,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164406448,
+      "props": 0
+    },
+    {
+      "name": "ArmorLeftHand",
+      "descriptor": 157691216,
+      "object": 157854944,
+      "update": 153512540,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164406480,
+      "props": 157710480
+    },
+    {
+      "name": "ArmorRightHand",
+      "descriptor": 157691296,
+      "object": 157855840,
+      "update": 153512588,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164406512,
+      "props": 157710608
+    },
+    {
+      "name": "ArmorLeftFoot",
+      "descriptor": 157691376,
+      "object": 157856736,
+      "update": 153512516,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164406544,
+      "props": 0
+    },
+    {
+      "name": "ArmorRightFoot",
+      "descriptor": 157691456,
+      "object": 157857760,
+      "update": 153512564,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164406576,
+      "props": 0
+    },
+    {
+      "name": "CrystalGroundShard",
+      "descriptor": 157691536,
+      "object": 157858784,
+      "update": 153606272,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164406608,
+      "props": 0
+    },
+    {
+      "name": "ElectroshockWave",
+      "descriptor": 157691616,
+      "object": 157859808,
+      "update": 153640640,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164407760,
+      "props": 0
+    },
+    {
+      "name": "MobyIce",
+      "descriptor": 157691696,
+      "object": 157860192,
+      "update": 153796624,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164409552,
+      "props": 0
+    },
+    {
+      "name": "ChameleonDecoy",
+      "descriptor": 157691776,
+      "object": 157862240,
+      "update": 153575568,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164411792,
+      "props": 0
+    },
+    {
+      "name": "GravityCrystal",
+      "descriptor": 157691856,
+      "object": 157862496,
+      "update": 153710724,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164413232,
+      "props": 0
+    },
+    {
+      "name": "NapalmBubble",
+      "descriptor": 157691936,
+      "object": 157862752,
+      "update": 153815252,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164413632,
+      "props": 0
+    },
+    {
+      "name": "TripleWaveBeacon",
+      "descriptor": 157692016,
+      "object": 157862880,
+      "update": 154003336,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164413744,
+      "props": 0
+    },
+    {
+      "name": "Splash",
+      "descriptor": 157692096,
+      "object": 157863264,
+      "update": 153917920,
+      "state": 0,
+      "timer": 0,
+      "pvars": 0,
+      "props": 157710748
+    },
+    {
+      "name": "PowerupHealth",
+      "descriptor": 157692256,
+      "object": 157864928,
+      "update": 153837180,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164414160,
+      "props": 157711124
+    },
+    {
+      "name": "PowerupAmmo",
+      "descriptor": 157692336,
+      "object": 157865696,
+      "update": 153831760,
+      "state": 0,
+      "timer": 0,
+      "pvars": 164414400,
+      "props": 157711668
+    }
+  ],
+  "cpuBefore": {
+    "event": "cpu.status",
+    "ticket": "wf29-3",
+    "stepping": false,
+    "paused": false,
+    "pc": 154231188,
+    "ticks": 3050152348226
+  }
+}

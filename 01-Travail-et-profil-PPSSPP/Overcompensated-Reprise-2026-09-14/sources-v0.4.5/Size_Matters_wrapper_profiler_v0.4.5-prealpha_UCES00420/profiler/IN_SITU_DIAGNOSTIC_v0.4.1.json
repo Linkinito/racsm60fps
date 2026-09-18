@@ -1,0 +1,43 @@
+{
+  "schema": "rcsm-in-situ-diagnostic/2",
+  "date": "2026-08-24",
+  "source_version": "0.4.1-prealpha",
+  "target": "PPSSPP 1.19.3 / Windows 11 Family / UCES00420",
+  "status": "OBSERVER_EFFECT_CONFIRMED_AND_ADDRESSED_IN_0.4.2",
+  "mode": "detect_only",
+  "writes_to_game_code": 0,
+  "reported_reads": [
+    {
+      "reference_probe": "0x09148800",
+      "observed_word": "0xE7B40108",
+      "same_word_in_reference_dump_at": "0x09142800"
+    },
+    {
+      "reference_probe": "0x0914805C",
+      "observed_word": "0x45030001",
+      "same_word_in_reference_dump_at": "0x0914205C"
+    },
+    {
+      "reference_probe": "0x09148094",
+      "observed_word": "0x46052981",
+      "same_word_in_reference_dump_at": "0x09142094"
+    }
+  ],
+  "inference": {
+    "address_delta": 24576,
+    "address_delta_hex": "+0x6000",
+    "meaning": "The active rcp1 image begins 0x6000 above the reference dump layout; every failed probe read a word 0x6000 earlier in the reference image.",
+    "corroboration": "The v0.4.1 profiler PRX has a LOAD file size of 0x5BB4, whose next 0x1000 boundary is 0x6000. This strongly supports a loader-layout observer effect, without treating that allocation rule as a universal constant."
+  },
+  "v0.4.2_response": [
+    "enumerate loaded PSP modules and locate the current module named rcp1",
+    "derive runtime_delta = rcp1.text_addr - 0x09139D00",
+    "verify fingerprints and wrapper guards after applying runtime_delta",
+    "relocate all wrapper entries, suppression sites, callsite return addresses and single-mode configuration",
+    "rewrite only the profiler-owned tail jump when an instrumentation mode is explicitly enabled",
+    "fall back to a bounded unique-delta scan only if the module-manager API fails",
+    "keep detect_only at zero game-code and zero profiler-code writes"
+  ],
+  "hardcoded_0x6000_in_runtime": false,
+  "remaining_boundary": "Execution of v0.4.2 Stage 00 in the user's PPSSPP instance is still required."
+}

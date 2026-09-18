@@ -1,0 +1,20 @@
+{
+  "time": "2026-09-16T22:42:18.283Z",
+  "scope": "request/cancel only, no frequency or actor changes",
+  "before": {
+    "requested": 60,
+    "applied": 60,
+    "pending": 0
+  },
+  "queued": {
+    "requested": 30,
+    "applied": 60,
+    "pending": 1
+  },
+  "restored": {
+    "requested": 60,
+    "applied": 60,
+    "pending": 0
+  },
+  "pass": true
+}

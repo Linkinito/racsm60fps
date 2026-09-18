@@ -1,0 +1,177 @@
+﻿source_rva,mechanic,target_module,match_count,status
+0x00067060,Teleport emitter elapsed seconds,5,0,absent_or_not_unique; no transfer
+0x00067060,Teleport emitter elapsed seconds,6,0,absent_or_not_unique; no transfer
+0x00067060,Teleport emitter elapsed seconds,15,0,absent_or_not_unique; no transfer
+0x00067060,Teleport emitter elapsed seconds,21,0,absent_or_not_unique; no transfer
+0x00067060,Teleport emitter elapsed seconds,22,0,absent_or_not_unique; no transfer
+0x00067060,Teleport emitter elapsed seconds,23,0,absent_or_not_unique; no transfer
+0x0012CF9C,ClankSaw two float countdowns,1,0,absent_or_not_unique; no transfer
+0x0012CF9C,ClankSaw two float countdowns,2,0,absent_or_not_unique; no transfer
+0x0012CF9C,ClankSaw two float countdowns,3,0,absent_or_not_unique; no transfer
+0x0012CF9C,ClankSaw two float countdowns,5,0,absent_or_not_unique; no transfer
+0x0012CF9C,ClankSaw two float countdowns,6,0,absent_or_not_unique; no transfer
+0x0012CF9C,ClankSaw two float countdowns,7,0,absent_or_not_unique; no transfer
+0x0012CF9C,ClankSaw two float countdowns,9,0,absent_or_not_unique; no transfer
+0x0012CF9C,ClankSaw two float countdowns,10,0,absent_or_not_unique; no transfer
+0x0012CF9C,ClankSaw two float countdowns,15,0,absent_or_not_unique; no transfer
+0x0012CF9C,ClankSaw two float countdowns,21,0,absent_or_not_unique; no transfer
+0x0012CF9C,ClankSaw two float countdowns,22,0,absent_or_not_unique; no transfer
+0x0012CF9C,ClankSaw two float countdowns,23,0,absent_or_not_unique; no transfer
+0x0012CF9C,ClankSaw two float countdowns,24,0,absent_or_not_unique; no transfer
+0x001340A4,Nanotech fade timer -1 -> -0.5,1,0,absent_or_not_unique; no transfer
+0x001340A4,Nanotech fade timer -1 -> -0.5,2,0,absent_or_not_unique; no transfer
+0x001340A4,Nanotech fade timer -1 -> -0.5,3,0,absent_or_not_unique; no transfer
+0x001340A4,Nanotech fade timer -1 -> -0.5,5,0,absent_or_not_unique; no transfer
+0x001340A4,Nanotech fade timer -1 -> -0.5,6,0,absent_or_not_unique; no transfer
+0x001340A4,Nanotech fade timer -1 -> -0.5,7,0,absent_or_not_unique; no transfer
+0x001340A4,Nanotech fade timer -1 -> -0.5,9,0,absent_or_not_unique; no transfer
+0x001340A4,Nanotech fade timer -1 -> -0.5,10,0,absent_or_not_unique; no transfer
+0x001340A4,Nanotech fade timer -1 -> -0.5,15,0,absent_or_not_unique; no transfer
+0x001340A4,Nanotech fade timer -1 -> -0.5,21,0,absent_or_not_unique; no transfer
+0x001340A4,Nanotech fade timer -1 -> -0.5,22,0,absent_or_not_unique; no transfer
+0x001340A4,Nanotech fade timer -1 -> -0.5,23,0,absent_or_not_unique; no transfer
+0x001340A4,Nanotech fade timer -1 -> -0.5,24,0,absent_or_not_unique; no transfer
+0x001352FC,Nanotech attraction timer -1 -> -0.5,1,0,absent_or_not_unique; no transfer
+0x001352FC,Nanotech attraction timer -1 -> -0.5,2,0,absent_or_not_unique; no transfer
+0x001352FC,Nanotech attraction timer -1 -> -0.5,3,0,absent_or_not_unique; no transfer
+0x001352FC,Nanotech attraction timer -1 -> -0.5,5,0,absent_or_not_unique; no transfer
+0x001352FC,Nanotech attraction timer -1 -> -0.5,6,0,absent_or_not_unique; no transfer
+0x001352FC,Nanotech attraction timer -1 -> -0.5,7,0,absent_or_not_unique; no transfer
+0x001352FC,Nanotech attraction timer -1 -> -0.5,9,0,absent_or_not_unique; no transfer
+0x001352FC,Nanotech attraction timer -1 -> -0.5,10,0,absent_or_not_unique; no transfer
+0x001352FC,Nanotech attraction timer -1 -> -0.5,15,0,absent_or_not_unique; no transfer
+0x001352FC,Nanotech attraction timer -1 -> -0.5,21,0,absent_or_not_unique; no transfer
+0x001352FC,Nanotech attraction timer -1 -> -0.5,22,0,absent_or_not_unique; no transfer
+0x001352FC,Nanotech attraction timer -1 -> -0.5,23,0,absent_or_not_unique; no transfer
+0x001352FC,Nanotech attraction timer -1 -> -0.5,24,0,absent_or_not_unique; no transfer
+0x0013579C,TeleporterHealth countdown,1,0,absent_or_not_unique; no transfer
+0x0013579C,TeleporterHealth countdown,2,0,absent_or_not_unique; no transfer
+0x0013579C,TeleporterHealth countdown,3,0,absent_or_not_unique; no transfer
+0x0013579C,TeleporterHealth countdown,5,0,absent_or_not_unique; no transfer
+0x0013579C,TeleporterHealth countdown,6,0,absent_or_not_unique; no transfer
+0x0013579C,TeleporterHealth countdown,7,0,absent_or_not_unique; no transfer
+0x0013579C,TeleporterHealth countdown,9,0,absent_or_not_unique; no transfer
+0x0013579C,TeleporterHealth countdown,10,0,absent_or_not_unique; no transfer
+0x0013579C,TeleporterHealth countdown,15,0,absent_or_not_unique; no transfer
+0x0013579C,TeleporterHealth countdown,21,0,absent_or_not_unique; no transfer
+0x0013579C,TeleporterHealth countdown,22,0,absent_or_not_unique; no transfer
+0x0013579C,TeleporterHealth countdown,23,0,absent_or_not_unique; no transfer
+0x0013579C,TeleporterHealth countdown,24,0,absent_or_not_unique; no transfer
+0x00135CF0,TeleporterPowerup countdown,1,0,absent_or_not_unique; no transfer
+0x00135CF0,TeleporterPowerup countdown,2,0,absent_or_not_unique; no transfer
+0x00135CF0,TeleporterPowerup countdown,3,0,absent_or_not_unique; no transfer
+0x00135CF0,TeleporterPowerup countdown,5,0,absent_or_not_unique; no transfer
+0x00135CF0,TeleporterPowerup countdown,6,0,absent_or_not_unique; no transfer
+0x00135CF0,TeleporterPowerup countdown,7,0,absent_or_not_unique; no transfer
+0x00135CF0,TeleporterPowerup countdown,9,0,absent_or_not_unique; no transfer
+0x00135CF0,TeleporterPowerup countdown,10,0,absent_or_not_unique; no transfer
+0x00135CF0,TeleporterPowerup countdown,15,0,absent_or_not_unique; no transfer
+0x00135CF0,TeleporterPowerup countdown,21,0,absent_or_not_unique; no transfer
+0x00135CF0,TeleporterPowerup countdown,22,0,absent_or_not_unique; no transfer
+0x00135CF0,TeleporterPowerup countdown,23,0,absent_or_not_unique; no transfer
+0x00135CF0,TeleporterPowerup countdown,24,0,absent_or_not_unique; no transfer
+0x0013F584,EnemyElectro countdown E8,1,0,absent_or_not_unique; no transfer
+0x0013F584,EnemyElectro countdown E8,2,0,absent_or_not_unique; no transfer
+0x0013F584,EnemyElectro countdown E8,3,0,absent_or_not_unique; no transfer
+0x0013F584,EnemyElectro countdown E8,5,0,absent_or_not_unique; no transfer
+0x0013F584,EnemyElectro countdown E8,6,0,absent_or_not_unique; no transfer
+0x0013F584,EnemyElectro countdown E8,7,0,absent_or_not_unique; no transfer
+0x0013F584,EnemyElectro countdown E8,9,0,absent_or_not_unique; no transfer
+0x0013F584,EnemyElectro countdown E8,10,0,absent_or_not_unique; no transfer
+0x0013F584,EnemyElectro countdown E8,15,0,absent_or_not_unique; no transfer
+0x0013F584,EnemyElectro countdown E8,21,0,absent_or_not_unique; no transfer
+0x0013F584,EnemyElectro countdown E8,22,0,absent_or_not_unique; no transfer
+0x0013F584,EnemyElectro countdown E8,23,0,absent_or_not_unique; no transfer
+0x0013F584,EnemyElectro countdown E8,24,0,absent_or_not_unique; no transfer
+0x0013F688,EnemyElectro second float countdown,1,0,absent_or_not_unique; no transfer
+0x0013F688,EnemyElectro second float countdown,2,0,absent_or_not_unique; no transfer
+0x0013F688,EnemyElectro second float countdown,3,0,absent_or_not_unique; no transfer
+0x0013F688,EnemyElectro second float countdown,5,0,absent_or_not_unique; no transfer
+0x0013F688,EnemyElectro second float countdown,6,0,absent_or_not_unique; no transfer
+0x0013F688,EnemyElectro second float countdown,7,0,absent_or_not_unique; no transfer
+0x0013F688,EnemyElectro second float countdown,9,0,absent_or_not_unique; no transfer
+0x0013F688,EnemyElectro second float countdown,10,0,absent_or_not_unique; no transfer
+0x0013F688,EnemyElectro second float countdown,15,0,absent_or_not_unique; no transfer
+0x0013F688,EnemyElectro second float countdown,21,0,absent_or_not_unique; no transfer
+0x0013F688,EnemyElectro second float countdown,22,0,absent_or_not_unique; no transfer
+0x0013F688,EnemyElectro second float countdown,23,0,absent_or_not_unique; no transfer
+0x0013F688,EnemyElectro second float countdown,24,0,absent_or_not_unique; no transfer
+0x00140940,EnemyRam countdown,1,0,absent_or_not_unique; no transfer
+0x00140940,EnemyRam countdown,2,0,absent_or_not_unique; no transfer
+0x00140940,EnemyRam countdown,3,0,absent_or_not_unique; no transfer
+0x00140940,EnemyRam countdown,5,0,absent_or_not_unique; no transfer
+0x00140940,EnemyRam countdown,6,0,absent_or_not_unique; no transfer
+0x00140940,EnemyRam countdown,7,0,absent_or_not_unique; no transfer
+0x00140940,EnemyRam countdown,9,0,absent_or_not_unique; no transfer
+0x00140940,EnemyRam countdown,10,0,absent_or_not_unique; no transfer
+0x00140940,EnemyRam countdown,15,0,absent_or_not_unique; no transfer
+0x00140940,EnemyRam countdown,21,0,absent_or_not_unique; no transfer
+0x00140940,EnemyRam countdown,22,0,absent_or_not_unique; no transfer
+0x00140940,EnemyRam countdown,23,0,absent_or_not_unique; no transfer
+0x00140940,EnemyRam countdown,24,0,absent_or_not_unique; no transfer
+0x00140A8C,EnemyRam second countdown,1,0,absent_or_not_unique; no transfer
+0x00140A8C,EnemyRam second countdown,2,0,absent_or_not_unique; no transfer
+0x00140A8C,EnemyRam second countdown,3,0,absent_or_not_unique; no transfer
+0x00140A8C,EnemyRam second countdown,5,0,absent_or_not_unique; no transfer
+0x00140A8C,EnemyRam second countdown,6,0,absent_or_not_unique; no transfer
+0x00140A8C,EnemyRam second countdown,7,0,absent_or_not_unique; no transfer
+0x00140A8C,EnemyRam second countdown,9,0,absent_or_not_unique; no transfer
+0x00140A8C,EnemyRam second countdown,10,0,absent_or_not_unique; no transfer
+0x00140A8C,EnemyRam second countdown,15,0,absent_or_not_unique; no transfer
+0x00140A8C,EnemyRam second countdown,21,0,absent_or_not_unique; no transfer
+0x00140A8C,EnemyRam second countdown,22,0,absent_or_not_unique; no transfer
+0x00140A8C,EnemyRam second countdown,23,0,absent_or_not_unique; no transfer
+0x00140A8C,EnemyRam second countdown,24,0,absent_or_not_unique; no transfer
+0x00165A30,ObstacleSaw cycle timer,1,0,absent_or_not_unique; no transfer
+0x00165A30,ObstacleSaw cycle timer,2,0,absent_or_not_unique; no transfer
+0x00165A30,ObstacleSaw cycle timer,3,0,absent_or_not_unique; no transfer
+0x00165A30,ObstacleSaw cycle timer,5,0,absent_or_not_unique; no transfer
+0x00165A30,ObstacleSaw cycle timer,6,0,absent_or_not_unique; no transfer
+0x00165A30,ObstacleSaw cycle timer,7,0,absent_or_not_unique; no transfer
+0x00165A30,ObstacleSaw cycle timer,8,0,absent_or_not_unique; no transfer
+0x00165A30,ObstacleSaw cycle timer,9,0,absent_or_not_unique; no transfer
+0x00165A30,ObstacleSaw cycle timer,10,0,absent_or_not_unique; no transfer
+0x00165A30,ObstacleSaw cycle timer,15,0,absent_or_not_unique; no transfer
+0x00165A30,ObstacleSaw cycle timer,21,0,absent_or_not_unique; no transfer
+0x00165A30,ObstacleSaw cycle timer,22,0,absent_or_not_unique; no transfer
+0x00165A30,ObstacleSaw cycle timer,23,0,absent_or_not_unique; no transfer
+0x00165A30,ObstacleSaw cycle timer,24,0,absent_or_not_unique; no transfer
+0x0016686C,ObstacleVent cycle timer,1,0,absent_or_not_unique; no transfer
+0x0016686C,ObstacleVent cycle timer,2,0,absent_or_not_unique; no transfer
+0x0016686C,ObstacleVent cycle timer,3,0,absent_or_not_unique; no transfer
+0x0016686C,ObstacleVent cycle timer,5,0,absent_or_not_unique; no transfer
+0x0016686C,ObstacleVent cycle timer,6,0,absent_or_not_unique; no transfer
+0x0016686C,ObstacleVent cycle timer,7,0,absent_or_not_unique; no transfer
+0x0016686C,ObstacleVent cycle timer,9,0,absent_or_not_unique; no transfer
+0x0016686C,ObstacleVent cycle timer,10,0,absent_or_not_unique; no transfer
+0x0016686C,ObstacleVent cycle timer,15,0,absent_or_not_unique; no transfer
+0x0016686C,ObstacleVent cycle timer,21,0,absent_or_not_unique; no transfer
+0x0016686C,ObstacleVent cycle timer,22,0,absent_or_not_unique; no transfer
+0x0016686C,ObstacleVent cycle timer,23,0,absent_or_not_unique; no transfer
+0x0016686C,ObstacleVent cycle timer,24,0,absent_or_not_unique; no transfer
+0x001A31E4,Saw retraction animation divisor,1,0,absent_or_not_unique; no transfer
+0x001A31E4,Saw retraction animation divisor,2,0,absent_or_not_unique; no transfer
+0x001A31E4,Saw retraction animation divisor,3,0,absent_or_not_unique; no transfer
+0x001A31E4,Saw retraction animation divisor,5,0,absent_or_not_unique; no transfer
+0x001A31E4,Saw retraction animation divisor,6,0,absent_or_not_unique; no transfer
+0x001A31E4,Saw retraction animation divisor,7,0,absent_or_not_unique; no transfer
+0x001A31E4,Saw retraction animation divisor,9,0,absent_or_not_unique; no transfer
+0x001A31E4,Saw retraction animation divisor,10,0,absent_or_not_unique; no transfer
+0x001A31E4,Saw retraction animation divisor,15,0,absent_or_not_unique; no transfer
+0x001A31E4,Saw retraction animation divisor,21,0,absent_or_not_unique; no transfer
+0x001A31E4,Saw retraction animation divisor,22,0,absent_or_not_unique; no transfer
+0x001A31E4,Saw retraction animation divisor,23,0,absent_or_not_unique; no transfer
+0x001A31E4,Saw retraction animation divisor,24,0,absent_or_not_unique; no transfer
+0x001A329C,Saw extension animation divisor,1,0,absent_or_not_unique; no transfer
+0x001A329C,Saw extension animation divisor,2,0,absent_or_not_unique; no transfer
+0x001A329C,Saw extension animation divisor,3,0,absent_or_not_unique; no transfer
+0x001A329C,Saw extension animation divisor,5,0,absent_or_not_unique; no transfer
+0x001A329C,Saw extension animation divisor,6,0,absent_or_not_unique; no transfer
+0x001A329C,Saw extension animation divisor,7,0,absent_or_not_unique; no transfer
+0x001A329C,Saw extension animation divisor,9,0,absent_or_not_unique; no transfer
+0x001A329C,Saw extension animation divisor,10,0,absent_or_not_unique; no transfer
+0x001A329C,Saw extension animation divisor,15,0,absent_or_not_unique; no transfer
+0x001A329C,Saw extension animation divisor,21,0,absent_or_not_unique; no transfer
+0x001A329C,Saw extension animation divisor,22,0,absent_or_not_unique; no transfer
+0x001A329C,Saw extension animation divisor,23,0,absent_or_not_unique; no transfer
+0x001A329C,Saw extension animation divisor,24,0,absent_or_not_unique; no transfer

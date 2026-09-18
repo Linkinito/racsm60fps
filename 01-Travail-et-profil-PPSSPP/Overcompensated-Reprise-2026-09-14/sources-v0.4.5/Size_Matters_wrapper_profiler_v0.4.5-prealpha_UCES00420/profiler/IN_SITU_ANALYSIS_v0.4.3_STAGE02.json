@@ -1,0 +1,104 @@
+{
+  "schema": "rcsm-in-situ-analysis/1",
+  "date": "2026-08-25",
+  "game_id": "UCES00420",
+  "environment": "PPSSPP 1.19.3 / Windows 11 Home",
+  "plugin_version": "0.4.3-prealpha",
+  "mode": "full_module",
+  "inputs": {
+    "status_prefix_sha256": "45482c46abc45f7b5507487d19c249b85b0703fbd2c5860e0e91b0761acbe976",
+    "status_complete_sha256": "16cfdf4b67525a5c571103e5ed676a730956fe95687b55de2a1d4d5f9e1d9122",
+    "pokitaru_manual_trace_sha256": "88abf7b31bb550099ae3b469552a44f8feb0cb665a20dbe7ef7bf5947187f880",
+    "pokitaru_transition_trace_sha256": "0299c587cf2881a9f091113cdac1928aa3b549386dda7a76a51aa92116cfdcdc",
+    "ryllus_manual_trace_sha256": "be1b30acf5fd1544252e22a5148320ede0f7f0f3059a3521561ce2c461c5d378"
+  },
+  "chronology": [
+    "LEVEL_01 armed transactionally with all 55 known callsites.",
+    "A manual Pokitaru trace was exported at VBlank 21868.",
+    "A second Pokitaru trace was exported automatically at the module transition at VBlank 23348.",
+    "LEVEL_02 was recognized at the same runtime base and remained unpatched because allowed_module was 1.",
+    "A manual Ryllus trace was exported after 2466 VBlanks of residence."
+  ],
+  "pokitaru": {
+    "reference_base": "0x09139D00",
+    "runtime_base": "0x09140D00",
+    "address_delta": 28672,
+    "jit_marker": "0x680013F2",
+    "capture_start_vblank": 1028,
+    "transition_vblank": 23348,
+    "capture_vblanks": 22320,
+    "approximate_seconds_at_60_vblank_hz": 372.0,
+    "installed_callsites": 55,
+    "active_callsites": 34,
+    "inactive_callsites": 21,
+    "known_families": 27,
+    "active_families": 16,
+    "inactive_families": 11,
+    "total_hits": 496697,
+    "unknown_hits": 0,
+    "manual_to_transition": {
+      "vblanks": 1480,
+      "additional_hits": 17335,
+      "active_families": ["WF-005", "WF-027", "WF-051", "WF-036", "WF-015"]
+    },
+    "active_family_hits": {
+      "WF-005": 330600,
+      "WF-027": 90685,
+      "WF-051": 36219,
+      "WF-013": 14700,
+      "WF-011": 8700,
+      "WF-014": 4788,
+      "WF-012": 4350,
+      "WF-036": 4022,
+      "WF-033": 1488,
+      "WF-016": 303,
+      "WF-002": 246,
+      "WF-047": 224,
+      "WF-021": 216,
+      "WF-015": 106,
+      "WF-019": 25,
+      "WF-046": 25
+    },
+    "inactive_family_callsites": {
+      "WF-001": 3,
+      "WF-003": 1,
+      "WF-004": 1,
+      "WF-006": 1,
+      "WF-007": 3,
+      "WF-008": 2,
+      "WF-009": 2,
+      "WF-010": 2,
+      "WF-017": 3,
+      "WF-030": 1,
+      "WF-031": 1
+    }
+  },
+  "ryllus": {
+    "reference_base": "0x09139D00",
+    "runtime_base": "0x09140D00",
+    "address_delta": 28672,
+    "jit_marker": "0x6899D98A",
+    "capture_start_vblank": 23362,
+    "capture_end_vblank": 25828,
+    "capture_vblanks": 2466,
+    "approximate_seconds_at_60_vblank_hz": 41.1,
+    "known_callsites": 57,
+    "installed_callsites": 0,
+    "total_hits": 0,
+    "unknown_hits": 0
+  },
+  "validation": {
+    "trace_parser": "PASS for all three traces",
+    "full_pokitaru_redirects": "PASS",
+    "jit_marker_handling": "PASS for LEVEL_01 and LEVEL_02",
+    "module_transition": "PASS",
+    "level_allowlist": "PASS",
+    "gameplay_report": "Pokitaru completed, transition to Ryllus completed, and several Ryllus actions performed without reported fault"
+  },
+  "interpretation_limits": [
+    "Trace v3 records totals and first/last VBlank but not the number of distinct active VBlanks.",
+    "A total divided by the full first-to-last span can therefore mix active and inactive periods.",
+    "The v0.4.4 trace v4 adds per-VBlank multiplicity and gap histograms before comparative 30/60 FPS testing."
+  ],
+  "next_boundary": "Run v0.4.4 Stage 03 with all 57 Ryllus callsites and return the v4 transition/manual traces."
+}

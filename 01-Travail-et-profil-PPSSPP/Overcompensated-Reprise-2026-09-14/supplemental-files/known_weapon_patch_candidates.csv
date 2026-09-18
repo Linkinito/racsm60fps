@@ -1,0 +1,171 @@
+prx,system,patch,runtime_address,file_offset,detected_original,expected_original,patched_word,original_match,status,address_derivation
+LEVEL_01.PRX,Lacerator,Projectile age +1->+0.5,0x09251E44,0x1181B8,0x3C053F80,0x3C053F80,0x3C053F00,True,validated on LEVEL_01; signature identical,BlasterShot Update + 0x14
+LEVEL_02_clean.PRX,Lacerator,Projectile age +1->+0.5,0x09257CD8,0x11E04C,0x3C053F80,0x3C053F80,0x3C053F00,True,validated on LEVEL_01; signature identical,BlasterShot Update + 0x14
+LEVEL_03.PRX,Lacerator,Projectile age +1->+0.5,0x09251A64,0x117DD8,0x3C053F80,0x3C053F80,0x3C053F00,True,validated on LEVEL_01; signature identical,BlasterShot Update + 0x14
+LEVEL_04.PRX,Lacerator,Projectile age +1->+0.5,0x09259878,0x11FBEC,0x3C053F80,0x3C053F80,0x3C053F00,True,validated on LEVEL_01; signature identical,BlasterShot Update + 0x14
+LEVEL_05.PRX,Lacerator,Projectile age +1->+0.5,0x0924E394,0x114708,0x3C053F80,0x3C053F80,0x3C053F00,True,validated on LEVEL_01; signature identical,BlasterShot Update + 0x14
+LEVEL_06.PRX,Lacerator,Projectile age +1->+0.5,0x09249B88,0x10FEFC,0x3C053F80,0x3C053F80,0x3C053F00,True,validated on LEVEL_01; signature identical,BlasterShot Update + 0x14
+LEVEL_07.PRX,Lacerator,Projectile age +1->+0.5,0x092543C8,0x11A73C,0x3C053F80,0x3C053F80,0x3C053F00,True,validated on LEVEL_01; signature identical,BlasterShot Update + 0x14
+LEVEL_08.PRX,Lacerator,Projectile age +1->+0.5,0x0925F590,0x125904,0x3C053F80,0x3C053F80,0x3C053F00,True,validated on LEVEL_01; signature identical,BlasterShot Update + 0x14
+LEVEL_09.PRX,Lacerator,Projectile age +1->+0.5,0x0924BB30,0x111EA4,0x3C053F80,0x3C053F80,0x3C053F00,True,validated on LEVEL_01; signature identical,BlasterShot Update + 0x14
+LEVEL_10.PRX,Lacerator,Projectile age +1->+0.5,0x09250770,0x116AE4,0x3C053F80,0x3C053F80,0x3C053F00,True,validated on LEVEL_01; signature identical,BlasterShot Update + 0x14
+LEVEL_16.PRX,Lacerator,Projectile age +1->+0.5,0x09255B24,0x11BE98,0x3C053F80,0x3C053F80,0x3C053F00,True,validated on LEVEL_01; signature identical,BlasterShot Update + 0x14
+LEVEL_17.PRX,Lacerator,Projectile age +1->+0.5,0x09253A8C,0x119E00,0x3C053F80,0x3C053F80,0x3C053F00,True,validated on LEVEL_01; signature identical,BlasterShot Update + 0x14
+LEVEL_18.PRX,Lacerator,Projectile age +1->+0.5,0x09255EAC,0x11C220,0x3C053F80,0x3C053F80,0x3C053F00,True,validated on LEVEL_01; signature identical,BlasterShot Update + 0x14
+LEVEL_19.PRX,Lacerator,Projectile age +1->+0.5,0x092568E8,0x11CC5C,0x3C053F80,0x3C053F80,0x3C053F00,True,validated on LEVEL_01; signature identical,BlasterShot Update + 0x14
+LEVEL_22.PRX,Lacerator,Projectile age +1->+0.5,0x092312F0,0xF7664,0x3C053F80,0x3C053F80,0x3C053F00,True,validated on LEVEL_01; signature identical,BlasterShot Update + 0x14
+LEVEL_23.PRX,Lacerator,Projectile age +1->+0.5,0x092550AC,0x11B420,0x3C053F80,0x3C053F80,0x3C053F00,True,validated on LEVEL_01; signature identical,BlasterShot Update + 0x14
+LEVEL_24.PRX,Lacerator,Projectile age +1->+0.5,0x09248CD0,0x10F044,0x3C053F80,0x3C053F80,0x3C053F00,True,validated on LEVEL_01; signature identical,BlasterShot Update + 0x14
+LEVEL_01.PRX,Lacerator,Projectile speed divisor 30->60,0x09251870,0x117BE4,0x3C0641F0,0x3C0641F0,0x3C064270,True,validated on LEVEL_01; signature identical,BlasterShot init - 0x1F4
+LEVEL_02_clean.PRX,Lacerator,Projectile speed divisor 30->60,0x09257704,0x11DA78,0x3C0641F0,0x3C0641F0,0x3C064270,True,validated on LEVEL_01; signature identical,BlasterShot init - 0x1F4
+LEVEL_03.PRX,Lacerator,Projectile speed divisor 30->60,0x09251490,0x117804,0x3C0641F0,0x3C0641F0,0x3C064270,True,validated on LEVEL_01; signature identical,BlasterShot init - 0x1F4
+LEVEL_04.PRX,Lacerator,Projectile speed divisor 30->60,0x092592A4,0x11F618,0x3C0641F0,0x3C0641F0,0x3C064270,True,validated on LEVEL_01; signature identical,BlasterShot init - 0x1F4
+LEVEL_05.PRX,Lacerator,Projectile speed divisor 30->60,0x0924DDC0,0x114134,0x3C0641F0,0x3C0641F0,0x3C064270,True,validated on LEVEL_01; signature identical,BlasterShot init - 0x1F4
+LEVEL_06.PRX,Lacerator,Projectile speed divisor 30->60,0x092495B4,0x10F928,0x3C0641F0,0x3C0641F0,0x3C064270,True,validated on LEVEL_01; signature identical,BlasterShot init - 0x1F4
+LEVEL_07.PRX,Lacerator,Projectile speed divisor 30->60,0x09253DF4,0x11A168,0x3C0641F0,0x3C0641F0,0x3C064270,True,validated on LEVEL_01; signature identical,BlasterShot init - 0x1F4
+LEVEL_08.PRX,Lacerator,Projectile speed divisor 30->60,0x0925EFBC,0x125330,0x3C0641F0,0x3C0641F0,0x3C064270,True,validated on LEVEL_01; signature identical,BlasterShot init - 0x1F4
+LEVEL_09.PRX,Lacerator,Projectile speed divisor 30->60,0x0924B55C,0x1118D0,0x3C0641F0,0x3C0641F0,0x3C064270,True,validated on LEVEL_01; signature identical,BlasterShot init - 0x1F4
+LEVEL_10.PRX,Lacerator,Projectile speed divisor 30->60,0x0925019C,0x116510,0x3C0641F0,0x3C0641F0,0x3C064270,True,validated on LEVEL_01; signature identical,BlasterShot init - 0x1F4
+LEVEL_16.PRX,Lacerator,Projectile speed divisor 30->60,0x09255144,0x11B4B8,0x3C0641F0,0x3C0641F0,0x3C064270,True,validated on LEVEL_01; signature identical,BlasterShot init - 0x1F4
+LEVEL_17.PRX,Lacerator,Projectile speed divisor 30->60,0x092530AC,0x119420,0x3C0641F0,0x3C0641F0,0x3C064270,True,validated on LEVEL_01; signature identical,BlasterShot init - 0x1F4
+LEVEL_18.PRX,Lacerator,Projectile speed divisor 30->60,0x092554CC,0x11B840,0x3C0641F0,0x3C0641F0,0x3C064270,True,validated on LEVEL_01; signature identical,BlasterShot init - 0x1F4
+LEVEL_19.PRX,Lacerator,Projectile speed divisor 30->60,0x09255F08,0x11C27C,0x3C0641F0,0x3C0641F0,0x3C064270,True,validated on LEVEL_01; signature identical,BlasterShot init - 0x1F4
+LEVEL_22.PRX,Lacerator,Projectile speed divisor 30->60,0x09230D1C,0xF7090,0x3C0641F0,0x3C0641F0,0x3C064270,True,validated on LEVEL_01; signature identical,BlasterShot init - 0x1F4
+LEVEL_23.PRX,Lacerator,Projectile speed divisor 30->60,0x09254AD8,0x11AE4C,0x3C0641F0,0x3C0641F0,0x3C064270,True,validated on LEVEL_01; signature identical,BlasterShot init - 0x1F4
+LEVEL_24.PRX,Lacerator,Projectile speed divisor 30->60,0x092486FC,0x10EA70,0x3C0641F0,0x3C0641F0,0x3C064270,True,validated on LEVEL_01; signature identical,BlasterShot init - 0x1F4
+LEVEL_01.PRX,RYNO/T.E.L.T.,Helix angular step A1 /2,0x09410880,0x2D6BF4,0x3EC19D7F,0x3EC19D7F,0x3E419D7F,True,candidate; must be tested after speed/age,RynoRocket descriptor relative constant
+LEVEL_02_clean.PRX,RYNO/T.E.L.T.,Helix angular step A1 /2,0x0942A720,0x2F0A94,0x3EC19D7F,0x3EC19D7F,0x3E419D7F,True,candidate; must be tested after speed/age,RynoRocket descriptor relative constant
+LEVEL_03.PRX,RYNO/T.E.L.T.,Helix angular step A1 /2,0x09427208,0x2ED57C,0x3EC19D7F,0x3EC19D7F,0x3E419D7F,True,candidate; must be tested after speed/age,RynoRocket descriptor relative constant
+LEVEL_04.PRX,RYNO/T.E.L.T.,Helix angular step A1 /2,0x09423388,0x2E96FC,0x3EC19D7F,0x3EC19D7F,0x3E419D7F,True,candidate; must be tested after speed/age,RynoRocket descriptor relative constant
+LEVEL_05.PRX,RYNO/T.E.L.T.,Helix angular step A1 /2,0x093FCA10,0x2C2D84,0x3EC19D7F,0x3EC19D7F,0x3E419D7F,True,candidate; must be tested after speed/age,RynoRocket descriptor relative constant
+LEVEL_06.PRX,RYNO/T.E.L.T.,Helix angular step A1 /2,0x093FF5B8,0x2C592C,0x3EC19D7F,0x3EC19D7F,0x3E419D7F,True,candidate; must be tested after speed/age,RynoRocket descriptor relative constant
+LEVEL_07.PRX,RYNO/T.E.L.T.,Helix angular step A1 /2,0x09421ED8,0x2E824C,0x3EC19D7F,0x3EC19D7F,0x3E419D7F,True,candidate; must be tested after speed/age,RynoRocket descriptor relative constant
+LEVEL_08.PRX,RYNO/T.E.L.T.,Helix angular step A1 /2,0x09452B78,0x318EEC,0x3EC19D7F,0x3EC19D7F,0x3E419D7F,True,candidate; must be tested after speed/age,RynoRocket descriptor relative constant
+LEVEL_09.PRX,RYNO/T.E.L.T.,Helix angular step A1 /2,0x093F9EC0,0x2C0234,0x3EC19D7F,0x3EC19D7F,0x3E419D7F,True,candidate; must be tested after speed/age,RynoRocket descriptor relative constant
+LEVEL_10.PRX,RYNO/T.E.L.T.,Helix angular step A1 /2,0x09418428,0x2DE79C,0x3EC19D7F,0x3EC19D7F,0x3E419D7F,True,candidate; must be tested after speed/age,RynoRocket descriptor relative constant
+LEVEL_23.PRX,RYNO/T.E.L.T.,Helix angular step A1 /2,0x093E0B38,0x2A6EAC,0x3EC19D7F,0x3EC19D7F,0x3E419D7F,True,candidate; must be tested after speed/age,RynoRocket descriptor relative constant
+LEVEL_24.PRX,RYNO/T.E.L.T.,Helix angular step A1 /2,0x093DD260,0x2A35D4,0x3EC19D7F,0x3EC19D7F,0x3E419D7F,True,candidate; must be tested after speed/age,RynoRocket descriptor relative constant
+LEVEL_01.PRX,RYNO/T.E.L.T.,Helix angular step A2 /2,0x09410884,0x2D6BF8,0x3EC19D7F,0x3EC19D7F,0x3E419D7F,True,candidate; must be tested after speed/age,RynoRocket descriptor relative constant
+LEVEL_02_clean.PRX,RYNO/T.E.L.T.,Helix angular step A2 /2,0x0942A724,0x2F0A98,0x3EC19D7F,0x3EC19D7F,0x3E419D7F,True,candidate; must be tested after speed/age,RynoRocket descriptor relative constant
+LEVEL_03.PRX,RYNO/T.E.L.T.,Helix angular step A2 /2,0x0942720C,0x2ED580,0x3EC19D7F,0x3EC19D7F,0x3E419D7F,True,candidate; must be tested after speed/age,RynoRocket descriptor relative constant
+LEVEL_04.PRX,RYNO/T.E.L.T.,Helix angular step A2 /2,0x0942338C,0x2E9700,0x3EC19D7F,0x3EC19D7F,0x3E419D7F,True,candidate; must be tested after speed/age,RynoRocket descriptor relative constant
+LEVEL_05.PRX,RYNO/T.E.L.T.,Helix angular step A2 /2,0x093FCA14,0x2C2D88,0x3EC19D7F,0x3EC19D7F,0x3E419D7F,True,candidate; must be tested after speed/age,RynoRocket descriptor relative constant
+LEVEL_06.PRX,RYNO/T.E.L.T.,Helix angular step A2 /2,0x093FF5BC,0x2C5930,0x3EC19D7F,0x3EC19D7F,0x3E419D7F,True,candidate; must be tested after speed/age,RynoRocket descriptor relative constant
+LEVEL_07.PRX,RYNO/T.E.L.T.,Helix angular step A2 /2,0x09421EDC,0x2E8250,0x3EC19D7F,0x3EC19D7F,0x3E419D7F,True,candidate; must be tested after speed/age,RynoRocket descriptor relative constant
+LEVEL_08.PRX,RYNO/T.E.L.T.,Helix angular step A2 /2,0x09452B7C,0x318EF0,0x3EC19D7F,0x3EC19D7F,0x3E419D7F,True,candidate; must be tested after speed/age,RynoRocket descriptor relative constant
+LEVEL_09.PRX,RYNO/T.E.L.T.,Helix angular step A2 /2,0x093F9EC4,0x2C0238,0x3EC19D7F,0x3EC19D7F,0x3E419D7F,True,candidate; must be tested after speed/age,RynoRocket descriptor relative constant
+LEVEL_10.PRX,RYNO/T.E.L.T.,Helix angular step A2 /2,0x0941842C,0x2DE7A0,0x3EC19D7F,0x3EC19D7F,0x3E419D7F,True,candidate; must be tested after speed/age,RynoRocket descriptor relative constant
+LEVEL_23.PRX,RYNO/T.E.L.T.,Helix angular step A2 /2,0x093E0B3C,0x2A6EB0,0x3EC19D7F,0x3EC19D7F,0x3E419D7F,True,candidate; must be tested after speed/age,RynoRocket descriptor relative constant
+LEVEL_24.PRX,RYNO/T.E.L.T.,Helix angular step A2 /2,0x093DD264,0x2A35D8,0x3EC19D7F,0x3EC19D7F,0x3E419D7F,True,candidate; must be tested after speed/age,RynoRocket descriptor relative constant
+LEVEL_01.PRX,RYNO/T.E.L.T.,Helix angular step B1 /2,0x09410888,0x2D6BFC,0x3F20D97C,0x3F20D97C,0x3EA0D97C,True,candidate; must be tested after speed/age,RynoRocket descriptor relative constant
+LEVEL_02_clean.PRX,RYNO/T.E.L.T.,Helix angular step B1 /2,0x0942A728,0x2F0A9C,0x3F20D97C,0x3F20D97C,0x3EA0D97C,True,candidate; must be tested after speed/age,RynoRocket descriptor relative constant
+LEVEL_03.PRX,RYNO/T.E.L.T.,Helix angular step B1 /2,0x09427210,0x2ED584,0x3F20D97C,0x3F20D97C,0x3EA0D97C,True,candidate; must be tested after speed/age,RynoRocket descriptor relative constant
+LEVEL_04.PRX,RYNO/T.E.L.T.,Helix angular step B1 /2,0x09423390,0x2E9704,0x3F20D97C,0x3F20D97C,0x3EA0D97C,True,candidate; must be tested after speed/age,RynoRocket descriptor relative constant
+LEVEL_05.PRX,RYNO/T.E.L.T.,Helix angular step B1 /2,0x093FCA18,0x2C2D8C,0x3F20D97C,0x3F20D97C,0x3EA0D97C,True,candidate; must be tested after speed/age,RynoRocket descriptor relative constant
+LEVEL_06.PRX,RYNO/T.E.L.T.,Helix angular step B1 /2,0x093FF5C0,0x2C5934,0x3F20D97C,0x3F20D97C,0x3EA0D97C,True,candidate; must be tested after speed/age,RynoRocket descriptor relative constant
+LEVEL_07.PRX,RYNO/T.E.L.T.,Helix angular step B1 /2,0x09421EE0,0x2E8254,0x3F20D97C,0x3F20D97C,0x3EA0D97C,True,candidate; must be tested after speed/age,RynoRocket descriptor relative constant
+LEVEL_08.PRX,RYNO/T.E.L.T.,Helix angular step B1 /2,0x09452B80,0x318EF4,0x3F20D97C,0x3F20D97C,0x3EA0D97C,True,candidate; must be tested after speed/age,RynoRocket descriptor relative constant
+LEVEL_09.PRX,RYNO/T.E.L.T.,Helix angular step B1 /2,0x093F9EC8,0x2C023C,0x3F20D97C,0x3F20D97C,0x3EA0D97C,True,candidate; must be tested after speed/age,RynoRocket descriptor relative constant
+LEVEL_10.PRX,RYNO/T.E.L.T.,Helix angular step B1 /2,0x09418430,0x2DE7A4,0x3F20D97C,0x3F20D97C,0x3EA0D97C,True,candidate; must be tested after speed/age,RynoRocket descriptor relative constant
+LEVEL_23.PRX,RYNO/T.E.L.T.,Helix angular step B1 /2,0x093E0B40,0x2A6EB4,0x3F20D97C,0x3F20D97C,0x3EA0D97C,True,candidate; must be tested after speed/age,RynoRocket descriptor relative constant
+LEVEL_24.PRX,RYNO/T.E.L.T.,Helix angular step B1 /2,0x093DD268,0x2A35DC,0x3F20D97C,0x3F20D97C,0x3EA0D97C,True,candidate; must be tested after speed/age,RynoRocket descriptor relative constant
+LEVEL_01.PRX,RYNO/T.E.L.T.,Helix angular step B2 /2,0x0941088C,0x2D6C00,0x3F20D97C,0x3F20D97C,0x3EA0D97C,True,candidate; must be tested after speed/age,RynoRocket descriptor relative constant
+LEVEL_02_clean.PRX,RYNO/T.E.L.T.,Helix angular step B2 /2,0x0942A72C,0x2F0AA0,0x3F20D97C,0x3F20D97C,0x3EA0D97C,True,candidate; must be tested after speed/age,RynoRocket descriptor relative constant
+LEVEL_03.PRX,RYNO/T.E.L.T.,Helix angular step B2 /2,0x09427214,0x2ED588,0x3F20D97C,0x3F20D97C,0x3EA0D97C,True,candidate; must be tested after speed/age,RynoRocket descriptor relative constant
+LEVEL_04.PRX,RYNO/T.E.L.T.,Helix angular step B2 /2,0x09423394,0x2E9708,0x3F20D97C,0x3F20D97C,0x3EA0D97C,True,candidate; must be tested after speed/age,RynoRocket descriptor relative constant
+LEVEL_05.PRX,RYNO/T.E.L.T.,Helix angular step B2 /2,0x093FCA1C,0x2C2D90,0x3F20D97C,0x3F20D97C,0x3EA0D97C,True,candidate; must be tested after speed/age,RynoRocket descriptor relative constant
+LEVEL_06.PRX,RYNO/T.E.L.T.,Helix angular step B2 /2,0x093FF5C4,0x2C5938,0x3F20D97C,0x3F20D97C,0x3EA0D97C,True,candidate; must be tested after speed/age,RynoRocket descriptor relative constant
+LEVEL_07.PRX,RYNO/T.E.L.T.,Helix angular step B2 /2,0x09421EE4,0x2E8258,0x3F20D97C,0x3F20D97C,0x3EA0D97C,True,candidate; must be tested after speed/age,RynoRocket descriptor relative constant
+LEVEL_08.PRX,RYNO/T.E.L.T.,Helix angular step B2 /2,0x09452B84,0x318EF8,0x3F20D97C,0x3F20D97C,0x3EA0D97C,True,candidate; must be tested after speed/age,RynoRocket descriptor relative constant
+LEVEL_09.PRX,RYNO/T.E.L.T.,Helix angular step B2 /2,0x093F9ECC,0x2C0240,0x3F20D97C,0x3F20D97C,0x3EA0D97C,True,candidate; must be tested after speed/age,RynoRocket descriptor relative constant
+LEVEL_10.PRX,RYNO/T.E.L.T.,Helix angular step B2 /2,0x09418434,0x2DE7A8,0x3F20D97C,0x3F20D97C,0x3EA0D97C,True,candidate; must be tested after speed/age,RynoRocket descriptor relative constant
+LEVEL_23.PRX,RYNO/T.E.L.T.,Helix angular step B2 /2,0x093E0B44,0x2A6EB8,0x3F20D97C,0x3F20D97C,0x3EA0D97C,True,candidate; must be tested after speed/age,RynoRocket descriptor relative constant
+LEVEL_24.PRX,RYNO/T.E.L.T.,Helix angular step B2 /2,0x093DD26C,0x2A35E0,0x3F20D97C,0x3F20D97C,0x3EA0D97C,True,candidate; must be tested after speed/age,RynoRocket descriptor relative constant
+LEVEL_01.PRX,RYNO/T.E.L.T.,Rocket age +1->+0.5,0x092A33A0,0x169714,0x3C053F80,0x3C053F80,0x3C053F00,True,"candidate; dynamic behavior confirmed, patch not yet validated",RynoRocket Update + 0x8
+LEVEL_02_clean.PRX,RYNO/T.E.L.T.,Rocket age +1->+0.5,0x092C36C4,0x189A38,0x3C053F80,0x3C053F80,0x3C053F00,True,"candidate; dynamic behavior confirmed, patch not yet validated",RynoRocket Update + 0x8
+LEVEL_03.PRX,RYNO/T.E.L.T.,Rocket age +1->+0.5,0x092B7074,0x17D3E8,0x3C053F80,0x3C053F80,0x3C053F00,True,"candidate; dynamic behavior confirmed, patch not yet validated",RynoRocket Update + 0x8
+LEVEL_04.PRX,RYNO/T.E.L.T.,Rocket age +1->+0.5,0x092ABCBC,0x172030,0x3C053F80,0x3C053F80,0x3C053F00,True,"candidate; dynamic behavior confirmed, patch not yet validated",RynoRocket Update + 0x8
+LEVEL_05.PRX,RYNO/T.E.L.T.,Rocket age +1->+0.5,0x0929E830,0x164BA4,0x3C053F80,0x3C053F80,0x3C053F00,True,"candidate; dynamic behavior confirmed, patch not yet validated",RynoRocket Update + 0x8
+LEVEL_06.PRX,RYNO/T.E.L.T.,Rocket age +1->+0.5,0x09299104,0x15F478,0x3C053F80,0x3C053F80,0x3C053F00,True,"candidate; dynamic behavior confirmed, patch not yet validated",RynoRocket Update + 0x8
+LEVEL_07.PRX,RYNO/T.E.L.T.,Rocket age +1->+0.5,0x092B67D0,0x17CB44,0x3C053F80,0x3C053F80,0x3C053F00,True,"candidate; dynamic behavior confirmed, patch not yet validated",RynoRocket Update + 0x8
+LEVEL_08.PRX,RYNO/T.E.L.T.,Rocket age +1->+0.5,0x092CF980,0x195CF4,0x3C053F80,0x3C053F80,0x3C053F00,True,"candidate; dynamic behavior confirmed, patch not yet validated",RynoRocket Update + 0x8
+LEVEL_09.PRX,RYNO/T.E.L.T.,Rocket age +1->+0.5,0x092981B4,0x15E528,0x3C053F80,0x3C053F80,0x3C053F00,True,"candidate; dynamic behavior confirmed, patch not yet validated",RynoRocket Update + 0x8
+LEVEL_10.PRX,RYNO/T.E.L.T.,Rocket age +1->+0.5,0x092AD800,0x173B74,0x3C053F80,0x3C053F80,0x3C053F00,True,"candidate; dynamic behavior confirmed, patch not yet validated",RynoRocket Update + 0x8
+LEVEL_23.PRX,RYNO/T.E.L.T.,Rocket age +1->+0.5,0x092877EC,0x14DB60,0x3C053F80,0x3C053F80,0x3C053F00,True,"candidate; dynamic behavior confirmed, patch not yet validated",RynoRocket Update + 0x8
+LEVEL_24.PRX,RYNO/T.E.L.T.,Rocket age +1->+0.5,0x092839DC,0x149D50,0x3C053F80,0x3C053F80,0x3C053F00,True,"candidate; dynamic behavior confirmed, patch not yet validated",RynoRocket Update + 0x8
+LEVEL_01.PRX,RYNO/T.E.L.T.,Rocket speed 0.8->0.4,0x09410794,0x2D6B08,0x3F4CCCCE,0x3F4CCCCE,0x3ECCCCCE,True,candidate; constants verified,RynoRocket descriptor - 0x148
+LEVEL_02_clean.PRX,RYNO/T.E.L.T.,Rocket speed 0.8->0.4,0x0942A634,0x2F09A8,0x3F4CCCCE,0x3F4CCCCE,0x3ECCCCCE,True,candidate; constants verified,RynoRocket descriptor - 0x148
+LEVEL_03.PRX,RYNO/T.E.L.T.,Rocket speed 0.8->0.4,0x0942711C,0x2ED490,0x3F4CCCCE,0x3F4CCCCE,0x3ECCCCCE,True,candidate; constants verified,RynoRocket descriptor - 0x148
+LEVEL_04.PRX,RYNO/T.E.L.T.,Rocket speed 0.8->0.4,0x0942329C,0x2E9610,0x3F4CCCCE,0x3F4CCCCE,0x3ECCCCCE,True,candidate; constants verified,RynoRocket descriptor - 0x148
+LEVEL_05.PRX,RYNO/T.E.L.T.,Rocket speed 0.8->0.4,0x093FC924,0x2C2C98,0x3F4CCCCE,0x3F4CCCCE,0x3ECCCCCE,True,candidate; constants verified,RynoRocket descriptor - 0x148
+LEVEL_06.PRX,RYNO/T.E.L.T.,Rocket speed 0.8->0.4,0x093FF4CC,0x2C5840,0x3F4CCCCE,0x3F4CCCCE,0x3ECCCCCE,True,candidate; constants verified,RynoRocket descriptor - 0x148
+LEVEL_07.PRX,RYNO/T.E.L.T.,Rocket speed 0.8->0.4,0x09421DEC,0x2E8160,0x3F4CCCCE,0x3F4CCCCE,0x3ECCCCCE,True,candidate; constants verified,RynoRocket descriptor - 0x148
+LEVEL_08.PRX,RYNO/T.E.L.T.,Rocket speed 0.8->0.4,0x09452A8C,0x318E00,0x3F4CCCCE,0x3F4CCCCE,0x3ECCCCCE,True,candidate; constants verified,RynoRocket descriptor - 0x148
+LEVEL_09.PRX,RYNO/T.E.L.T.,Rocket speed 0.8->0.4,0x093F9DD4,0x2C0148,0x3F4CCCCE,0x3F4CCCCE,0x3ECCCCCE,True,candidate; constants verified,RynoRocket descriptor - 0x148
+LEVEL_10.PRX,RYNO/T.E.L.T.,Rocket speed 0.8->0.4,0x0941833C,0x2DE6B0,0x3F4CCCCE,0x3F4CCCCE,0x3ECCCCCE,True,candidate; constants verified,RynoRocket descriptor - 0x148
+LEVEL_23.PRX,RYNO/T.E.L.T.,Rocket speed 0.8->0.4,0x093E0A4C,0x2A6DC0,0x3F4CCCCE,0x3F4CCCCE,0x3ECCCCCE,True,candidate; constants verified,RynoRocket descriptor - 0x148
+LEVEL_24.PRX,RYNO/T.E.L.T.,Rocket speed 0.8->0.4,0x093DD174,0x2A34E8,0x3F4CCCCE,0x3F4CCCCE,0x3ECCCCCE,True,candidate; constants verified,RynoRocket descriptor - 0x148
+LEVEL_01.PRX,Shock Rocket,Explosion/electric phase 15->30,0x094111D0,0x2D7544,0x41700000,0x41700000,0x41F00000,True,candidate; constants verified,ShockRocketShot descriptor - 0x14
+LEVEL_02_clean.PRX,Shock Rocket,Explosion/electric phase 15->30,0x0942AD58,0x2F10CC,0x41700000,0x41700000,0x41F00000,True,candidate; constants verified,ShockRocketShot descriptor - 0x14
+LEVEL_03.PRX,Shock Rocket,Explosion/electric phase 15->30,0x09427840,0x2EDBB4,0x41700000,0x41700000,0x41F00000,True,candidate; constants verified,ShockRocketShot descriptor - 0x14
+LEVEL_04.PRX,Shock Rocket,Explosion/electric phase 15->30,0x094238B0,0x2E9C24,0x41700000,0x41700000,0x41F00000,True,candidate; constants verified,ShockRocketShot descriptor - 0x14
+LEVEL_05.PRX,Shock Rocket,Explosion/electric phase 15->30,0x093FD268,0x2C35DC,0x41700000,0x41700000,0x41F00000,True,candidate; constants verified,ShockRocketShot descriptor - 0x14
+LEVEL_06.PRX,Shock Rocket,Explosion/electric phase 15->30,0x09400250,0x2C65C4,0x41700000,0x41700000,0x41F00000,True,candidate; constants verified,ShockRocketShot descriptor - 0x14
+LEVEL_07.PRX,Shock Rocket,Explosion/electric phase 15->30,0x09422510,0x2E8884,0x41700000,0x41700000,0x41F00000,True,candidate; constants verified,ShockRocketShot descriptor - 0x14
+LEVEL_08.PRX,Shock Rocket,Explosion/electric phase 15->30,0x09453268,0x3195DC,0x41700000,0x41700000,0x41F00000,True,candidate; constants verified,ShockRocketShot descriptor - 0x14
+LEVEL_09.PRX,Shock Rocket,Explosion/electric phase 15->30,0x093FA4F8,0x2C086C,0x41700000,0x41700000,0x41F00000,True,candidate; constants verified,ShockRocketShot descriptor - 0x14
+LEVEL_10.PRX,Shock Rocket,Explosion/electric phase 15->30,0x09418F00,0x2DF274,0x41700000,0x41700000,0x41F00000,True,candidate; constants verified,ShockRocketShot descriptor - 0x14
+LEVEL_16.PRX,Shock Rocket,Explosion/electric phase 15->30,0x093F1A40,0x2B7DB4,0x41700000,0x41700000,0x41F00000,True,candidate; constants verified,ShockRocketShot descriptor - 0x14
+LEVEL_17.PRX,Shock Rocket,Explosion/electric phase 15->30,0x093E43E8,0x2AA75C,0x41700000,0x41700000,0x41F00000,True,candidate; constants verified,ShockRocketShot descriptor - 0x14
+LEVEL_18.PRX,Shock Rocket,Explosion/electric phase 15->30,0x093F4A50,0x2BADC4,0x41700000,0x41700000,0x41F00000,True,candidate; constants verified,ShockRocketShot descriptor - 0x14
+LEVEL_19.PRX,Shock Rocket,Explosion/electric phase 15->30,0x093EEAD8,0x2B4E4C,0x41700000,0x41700000,0x41F00000,True,candidate; constants verified,ShockRocketShot descriptor - 0x14
+LEVEL_23.PRX,Shock Rocket,Explosion/electric phase 15->30,0x093E1050,0x2A73C4,0x41700000,0x41700000,0x41F00000,True,candidate; constants verified,ShockRocketShot descriptor - 0x14
+LEVEL_24.PRX,Shock Rocket,Explosion/electric phase 15->30,0x093DD6D0,0x2A3A44,0x41700000,0x41700000,0x41F00000,True,candidate; constants verified,ShockRocketShot descriptor - 0x14
+LEVEL_01.PRX,Shock Rocket,Flight lifetime 60->120,0x094111C4,0x2D7538,0x42700000,0x42700000,0x42F00000,True,candidate; constants verified,ShockRocketShot descriptor - 0x20
+LEVEL_02_clean.PRX,Shock Rocket,Flight lifetime 60->120,0x0942AD4C,0x2F10C0,0x42700000,0x42700000,0x42F00000,True,candidate; constants verified,ShockRocketShot descriptor - 0x20
+LEVEL_03.PRX,Shock Rocket,Flight lifetime 60->120,0x09427834,0x2EDBA8,0x42700000,0x42700000,0x42F00000,True,candidate; constants verified,ShockRocketShot descriptor - 0x20
+LEVEL_04.PRX,Shock Rocket,Flight lifetime 60->120,0x094238A4,0x2E9C18,0x42700000,0x42700000,0x42F00000,True,candidate; constants verified,ShockRocketShot descriptor - 0x20
+LEVEL_05.PRX,Shock Rocket,Flight lifetime 60->120,0x093FD25C,0x2C35D0,0x42700000,0x42700000,0x42F00000,True,candidate; constants verified,ShockRocketShot descriptor - 0x20
+LEVEL_06.PRX,Shock Rocket,Flight lifetime 60->120,0x09400244,0x2C65B8,0x42700000,0x42700000,0x42F00000,True,candidate; constants verified,ShockRocketShot descriptor - 0x20
+LEVEL_07.PRX,Shock Rocket,Flight lifetime 60->120,0x09422504,0x2E8878,0x42700000,0x42700000,0x42F00000,True,candidate; constants verified,ShockRocketShot descriptor - 0x20
+LEVEL_08.PRX,Shock Rocket,Flight lifetime 60->120,0x0945325C,0x3195D0,0x42700000,0x42700000,0x42F00000,True,candidate; constants verified,ShockRocketShot descriptor - 0x20
+LEVEL_09.PRX,Shock Rocket,Flight lifetime 60->120,0x093FA4EC,0x2C0860,0x42700000,0x42700000,0x42F00000,True,candidate; constants verified,ShockRocketShot descriptor - 0x20
+LEVEL_10.PRX,Shock Rocket,Flight lifetime 60->120,0x09418EF4,0x2DF268,0x42700000,0x42700000,0x42F00000,True,candidate; constants verified,ShockRocketShot descriptor - 0x20
+LEVEL_16.PRX,Shock Rocket,Flight lifetime 60->120,0x093F1A34,0x2B7DA8,0x42700000,0x42700000,0x42F00000,True,candidate; constants verified,ShockRocketShot descriptor - 0x20
+LEVEL_17.PRX,Shock Rocket,Flight lifetime 60->120,0x093E43DC,0x2AA750,0x42700000,0x42700000,0x42F00000,True,candidate; constants verified,ShockRocketShot descriptor - 0x20
+LEVEL_18.PRX,Shock Rocket,Flight lifetime 60->120,0x093F4A44,0x2BADB8,0x42700000,0x42700000,0x42F00000,True,candidate; constants verified,ShockRocketShot descriptor - 0x20
+LEVEL_19.PRX,Shock Rocket,Flight lifetime 60->120,0x093EEACC,0x2B4E40,0x42700000,0x42700000,0x42F00000,True,candidate; constants verified,ShockRocketShot descriptor - 0x20
+LEVEL_23.PRX,Shock Rocket,Flight lifetime 60->120,0x093E1044,0x2A73B8,0x42700000,0x42700000,0x42F00000,True,candidate; constants verified,ShockRocketShot descriptor - 0x20
+LEVEL_24.PRX,Shock Rocket,Flight lifetime 60->120,0x093DD6C4,0x2A3A38,0x42700000,0x42700000,0x42F00000,True,candidate; constants verified,ShockRocketShot descriptor - 0x20
+LEVEL_01.PRX,Shock Rocket,Flight speed 0.8->0.4,0x094111C8,0x2D753C,0x3F4CCCCE,0x3F4CCCCE,0x3ECCCCCE,True,candidate; constants verified,ShockRocketShot descriptor - 0x1C
+LEVEL_02_clean.PRX,Shock Rocket,Flight speed 0.8->0.4,0x0942AD50,0x2F10C4,0x3F4CCCCE,0x3F4CCCCE,0x3ECCCCCE,True,candidate; constants verified,ShockRocketShot descriptor - 0x1C
+LEVEL_03.PRX,Shock Rocket,Flight speed 0.8->0.4,0x09427838,0x2EDBAC,0x3F4CCCCE,0x3F4CCCCE,0x3ECCCCCE,True,candidate; constants verified,ShockRocketShot descriptor - 0x1C
+LEVEL_04.PRX,Shock Rocket,Flight speed 0.8->0.4,0x094238A8,0x2E9C1C,0x3F4CCCCE,0x3F4CCCCE,0x3ECCCCCE,True,candidate; constants verified,ShockRocketShot descriptor - 0x1C
+LEVEL_05.PRX,Shock Rocket,Flight speed 0.8->0.4,0x093FD260,0x2C35D4,0x3F4CCCCE,0x3F4CCCCE,0x3ECCCCCE,True,candidate; constants verified,ShockRocketShot descriptor - 0x1C
+LEVEL_06.PRX,Shock Rocket,Flight speed 0.8->0.4,0x09400248,0x2C65BC,0x3F4CCCCE,0x3F4CCCCE,0x3ECCCCCE,True,candidate; constants verified,ShockRocketShot descriptor - 0x1C
+LEVEL_07.PRX,Shock Rocket,Flight speed 0.8->0.4,0x09422508,0x2E887C,0x3F4CCCCE,0x3F4CCCCE,0x3ECCCCCE,True,candidate; constants verified,ShockRocketShot descriptor - 0x1C
+LEVEL_08.PRX,Shock Rocket,Flight speed 0.8->0.4,0x09453260,0x3195D4,0x3F4CCCCE,0x3F4CCCCE,0x3ECCCCCE,True,candidate; constants verified,ShockRocketShot descriptor - 0x1C
+LEVEL_09.PRX,Shock Rocket,Flight speed 0.8->0.4,0x093FA4F0,0x2C0864,0x3F4CCCCE,0x3F4CCCCE,0x3ECCCCCE,True,candidate; constants verified,ShockRocketShot descriptor - 0x1C
+LEVEL_10.PRX,Shock Rocket,Flight speed 0.8->0.4,0x09418EF8,0x2DF26C,0x3F4CCCCE,0x3F4CCCCE,0x3ECCCCCE,True,candidate; constants verified,ShockRocketShot descriptor - 0x1C
+LEVEL_16.PRX,Shock Rocket,Flight speed 0.8->0.4,0x093F1A38,0x2B7DAC,0x3F4CCCCE,0x3F4CCCCE,0x3ECCCCCE,True,candidate; constants verified,ShockRocketShot descriptor - 0x1C
+LEVEL_17.PRX,Shock Rocket,Flight speed 0.8->0.4,0x093E43E0,0x2AA754,0x3F4CCCCE,0x3F4CCCCE,0x3ECCCCCE,True,candidate; constants verified,ShockRocketShot descriptor - 0x1C
+LEVEL_18.PRX,Shock Rocket,Flight speed 0.8->0.4,0x093F4A48,0x2BADBC,0x3F4CCCCE,0x3F4CCCCE,0x3ECCCCCE,True,candidate; constants verified,ShockRocketShot descriptor - 0x1C
+LEVEL_19.PRX,Shock Rocket,Flight speed 0.8->0.4,0x093EEAD0,0x2B4E44,0x3F4CCCCE,0x3F4CCCCE,0x3ECCCCCE,True,candidate; constants verified,ShockRocketShot descriptor - 0x1C
+LEVEL_23.PRX,Shock Rocket,Flight speed 0.8->0.4,0x093E1048,0x2A73BC,0x3F4CCCCE,0x3F4CCCCE,0x3ECCCCCE,True,candidate; constants verified,ShockRocketShot descriptor - 0x1C
+LEVEL_24.PRX,Shock Rocket,Flight speed 0.8->0.4,0x093DD6C8,0x2A3A3C,0x3F4CCCCE,0x3F4CCCCE,0x3ECCCCCE,True,candidate; constants verified,ShockRocketShot descriptor - 0x1C
+LEVEL_01.PRX,Sniper Mine,Mine countdown -1->-0.5,0x09266B80,0x12CEF4,0x3C04BF80,0x3C04BF80,0x3C04BF00,True,validated on LEVEL_01; signature identical,CrossbowShot Update + 0x94
+LEVEL_02_clean.PRX,Sniper Mine,Mine countdown -1->-0.5,0x09279EB0,0x140224,0x3C04BF80,0x3C04BF80,0x3C04BF00,True,validated on LEVEL_01; signature identical,CrossbowShot Update + 0x94
+LEVEL_03.PRX,Sniper Mine,Mine countdown -1->-0.5,0x09262088,0x1283FC,0x3C04BF80,0x3C04BF80,0x3C04BF00,True,validated on LEVEL_01; signature identical,CrossbowShot Update + 0x94
+LEVEL_04.PRX,Sniper Mine,Mine countdown -1->-0.5,0x0926A598,0x13090C,0x3C04BF80,0x3C04BF80,0x3C04BF00,True,validated on LEVEL_01; signature identical,CrossbowShot Update + 0x94
+LEVEL_05.PRX,Sniper Mine,Mine countdown -1->-0.5,0x0925C82C,0x122BA0,0x3C04BF80,0x3C04BF80,0x3C04BF00,True,validated on LEVEL_01; signature identical,CrossbowShot Update + 0x94
+LEVEL_06.PRX,Sniper Mine,Mine countdown -1->-0.5,0x09259354,0x11F6C8,0x3C04BF80,0x3C04BF80,0x3C04BF00,True,validated on LEVEL_01; signature identical,CrossbowShot Update + 0x94
+LEVEL_07.PRX,Sniper Mine,Mine countdown -1->-0.5,0x0926428C,0x12A600,0x3C04BF80,0x3C04BF80,0x3C04BF00,True,validated on LEVEL_01; signature identical,CrossbowShot Update + 0x94
+LEVEL_08.PRX,Sniper Mine,Mine countdown -1->-0.5,0x092743D0,0x13A744,0x3C04BF80,0x3C04BF80,0x3C04BF00,True,validated on LEVEL_01; signature identical,CrossbowShot Update + 0x94
+LEVEL_09.PRX,Sniper Mine,Mine countdown -1->-0.5,0x0925A800,0x120B74,0x3C04BF80,0x3C04BF80,0x3C04BF00,True,validated on LEVEL_01; signature identical,CrossbowShot Update + 0x94
+LEVEL_10.PRX,Sniper Mine,Mine countdown -1->-0.5,0x092609D8,0x126D4C,0x3C04BF80,0x3C04BF80,0x3C04BF00,True,validated on LEVEL_01; signature identical,CrossbowShot Update + 0x94
+LEVEL_16.PRX,Sniper Mine,Mine countdown -1->-0.5,0x09262CB0,0x129024,0x3C04BF80,0x3C04BF80,0x3C04BF00,True,validated on LEVEL_01; signature identical,CrossbowShot Update + 0x94
+LEVEL_17.PRX,Sniper Mine,Mine countdown -1->-0.5,0x09260BA4,0x126F18,0x3C04BF80,0x3C04BF80,0x3C04BF00,True,validated on LEVEL_01; signature identical,CrossbowShot Update + 0x94
+LEVEL_18.PRX,Sniper Mine,Mine countdown -1->-0.5,0x09261A24,0x127D98,0x3C04BF80,0x3C04BF80,0x3C04BF00,True,validated on LEVEL_01; signature identical,CrossbowShot Update + 0x94
+LEVEL_19.PRX,Sniper Mine,Mine countdown -1->-0.5,0x09262264,0x1285D8,0x3C04BF80,0x3C04BF80,0x3C04BF00,True,validated on LEVEL_01; signature identical,CrossbowShot Update + 0x94
+LEVEL_23.PRX,Sniper Mine,Mine countdown -1->-0.5,0x0925D11C,0x123490,0x3C04BF80,0x3C04BF80,0x3C04BF00,True,validated on LEVEL_01; signature identical,CrossbowShot Update + 0x94
+LEVEL_24.PRX,Sniper Mine,Mine countdown -1->-0.5,0x09254D00,0x11B074,0x3C04BF80,0x3C04BF80,0x3C04BF00,True,validated on LEVEL_01; signature identical,CrossbowShot Update + 0x94

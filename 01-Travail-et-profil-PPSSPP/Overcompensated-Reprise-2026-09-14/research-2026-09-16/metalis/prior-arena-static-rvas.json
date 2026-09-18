@@ -1,0 +1,246 @@
+{
+  "status": "HISTORICAL_EXPERIMENT_NOT_PERSISTENT",
+  "previous_base": "0x0914BD00",
+  "changes": [
+    {
+      "before": 1045220558,
+      "after": 1036831950,
+      "label": "Electro normal forward cap",
+      "originalFloat": 0.20000001788139343,
+      "rva": 3066244
+    },
+    {
+      "before": 1045220558,
+      "after": 1036831950,
+      "label": "Electro normal reverse cap",
+      "originalFloat": 0.20000001788139343,
+      "rva": 3066248
+    },
+    {
+      "before": 1033951612,
+      "after": 1025563004,
+      "label": "Electro normal turn step",
+      "originalFloat": 0.07853981852531433,
+      "rva": 3066252
+    },
+    {
+      "before": 1001786210,
+      "after": 985008994,
+      "label": "Electro normal forward accel",
+      "originalFloat": 0.005555556155741215,
+      "rva": 3066256
+    },
+    {
+      "before": 1001786210,
+      "after": 985008994,
+      "label": "Electro normal reverse accel",
+      "originalFloat": 0.005555556155741215,
+      "rva": 3066260
+    },
+    {
+      "before": 1010174818,
+      "after": 993397602,
+      "label": "Electro normal brake",
+      "originalFloat": 0.01111111231148243,
+      "rva": 3066264
+    },
+    {
+      "before": 1001786210,
+      "after": 985008994,
+      "label": "Electro normal coast",
+      "originalFloat": 0.005555556155741215,
+      "rva": 3066268
+    },
+    {
+      "before": 1049135241,
+      "after": 1040746633,
+      "label": "Ram normal forward cap",
+      "originalFloat": 0.2666666805744171,
+      "rva": 3066848
+    },
+    {
+      "before": 1039068912,
+      "after": 1030680304,
+      "label": "Ram normal reverse cap",
+      "originalFloat": 0.11666667461395264,
+      "rva": 3066852
+    },
+    {
+      "before": 1029076817,
+      "after": 1020688209,
+      "label": "Ram normal turn step",
+      "originalFloat": 0.05235988274216652,
+      "rva": 3066856
+    },
+    {
+      "before": 1001786210,
+      "after": 985008994,
+      "label": "Ram normal forward accel",
+      "originalFloat": 0.005555556155741215,
+      "rva": 3066860
+    },
+    {
+      "before": 993397602,
+      "after": 976620386,
+      "label": "Ram normal reverse accel",
+      "originalFloat": 0.0027777780778706074,
+      "rva": 3066864
+    },
+    {
+      "before": 1010174818,
+      "after": 993397602,
+      "label": "Ram normal brake",
+      "originalFloat": 0.01111111231148243,
+      "rva": 3066868
+    },
+    {
+      "before": 1001786210,
+      "after": 985008994,
+      "label": "Ram normal coast",
+      "originalFloat": 0.005555556155741215,
+      "rva": 3066872
+    },
+    {
+      "before": 1007009664,
+      "after": 1007009536,
+      "label": "ClankSaw two float countdowns",
+      "rva": 1232796
+    },
+    {
+      "before": 1006944128,
+      "after": 1006944000,
+      "label": "EnemyElectro countdown E8",
+      "rva": 1308036
+    },
+    {
+      "before": 1006944128,
+      "after": 1006944000,
+      "label": "EnemyElectro second float countdown",
+      "rva": 1308296
+    },
+    {
+      "before": 1006944128,
+      "after": 1006944000,
+      "label": "EnemyRam countdown",
+      "rva": 1313088
+    },
+    {
+      "before": 1006944128,
+      "after": 1006944000,
+      "label": "EnemyRam second countdown",
+      "rva": 1313420
+    },
+    {
+      "before": 1006944128,
+      "after": 1006944000,
+      "label": "ObstacleSaw cycle timer",
+      "rva": 1464880
+    },
+    {
+      "before": 1007140736,
+      "after": 1007140608,
+      "label": "ObstacleVent cycle timer",
+      "rva": 1468524
+    },
+    {
+      "before": 1045854033,
+      "after": 1037465425,
+      "label": "SpinningFloor angular increment",
+      "originalFloat": 0.20943953096866608,
+      "rva": 3048588
+    },
+    {
+      "before": 1032358025,
+      "after": 1023969417,
+      "label": "Vent fade-in increment",
+      "originalFloat": 0.06666667014360428,
+      "rva": 3048792
+    },
+    {
+      "before": 1032358025,
+      "after": 1023969417,
+      "label": "Vent fade-out increment",
+      "originalFloat": 0.06666667014360428,
+      "rva": 3048796
+    },
+    {
+      "before": 1053609166,
+      "after": 1045220558,
+      "label": "Ram charge cap forward",
+      "rva": 3066892
+    },
+    {
+      "before": 1039068912,
+      "after": 1030680304,
+      "label": "Ram charge cap reverse",
+      "rva": 3066896
+    },
+    {
+      "before": 1029076817,
+      "after": 1020688209,
+      "label": "Ram charge turn",
+      "rva": 3066900
+    },
+    {
+      "before": 1045220559,
+      "after": 1028443343,
+      "label": "Ram charge acceleration",
+      "rva": 3066904
+    },
+    {
+      "before": 993397602,
+      "after": 976620386,
+      "label": "Ram charge reverse accel",
+      "rva": 3066908
+    },
+    {
+      "before": 1018563426,
+      "after": 1001786210,
+      "label": "Ram charge brake",
+      "rva": 3066912
+    },
+    {
+      "before": 1001786210,
+      "after": 985008994,
+      "label": "Ram charge coast",
+      "rva": 3066916
+    },
+    {
+      "before": 3201092814,
+      "after": 3192704206,
+      "label": "Ram impulse low",
+      "rva": 3066772
+    },
+    {
+      "before": 3206125978,
+      "after": 3197737370,
+      "label": "Ram impulse high",
+      "rva": 3066784
+    },
+    {
+      "before": 983091,
+      "after": 1966182,
+      "label": "ClankSaw active/recharge integer durations",
+      "rva": 3023976
+    },
+    {
+      "before": 4915215,
+      "after": 9830430,
+      "label": "Ram charge/recharge integer durations",
+      "rva": 3066944
+    },
+    {
+      "before": 1006911984,
+      "after": 1006912112,
+      "label": "Saw retraction animation divisor",
+      "rva": 1716708
+    },
+    {
+      "before": 1006911984,
+      "after": 1006912112,
+      "label": "Saw extension animation divisor",
+      "rva": 1716892
+    }
+  ],
+  "warning": "Dynamic enemy velocities intentionally excluded. Player movement and rotation are in separate connection snapshots; do not infer actors persist across restart."
+}

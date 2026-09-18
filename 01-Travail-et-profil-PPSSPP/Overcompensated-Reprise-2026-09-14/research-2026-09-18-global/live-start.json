@@ -1,0 +1,55 @@
+{
+  "time": "2026-09-18T07:35:57.854Z",
+  "responses": [
+    {
+      "request": {
+        "event": "game.status"
+      },
+      "result": {
+        "event": "game.status",
+        "ticket": "audit-1",
+        "game": {
+          "id": "UCES00420",
+          "version": "1.00",
+          "title": "Ratchet and Clank: Size Matters"
+        },
+        "paused": false
+      }
+    },
+    {
+      "request": {
+        "event": "hle.module.list"
+      },
+      "result": {
+        "event": "hle.module.list",
+        "ticket": "audit-2",
+        "modules": [
+          {
+            "name": "mcp",
+            "address": 142622720,
+            "size": 1388800,
+            "isActive": true
+          },
+          {
+            "name": "rcp1",
+            "address": 150050816,
+            "size": 2746112,
+            "isActive": true
+          }
+        ]
+      }
+    },
+    {
+      "request": {
+        "event": "gpu.buffer.screenshot",
+        "saveBase64": "C:/Users/linki/Documents/PPSSPP/Overcompensated-Reprise-2026-09-14/research-2026-09-18-global/vanilla-start.png"
+      },
+      "result": {
+        "event": "error",
+        "message": "Neither CPU or GPU is stepping",
+        "level": 2,
+        "ticket": "audit-3"
+      }
+    }
+  ]
+}

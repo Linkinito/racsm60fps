@@ -1,0 +1,30 @@
+object_name,callback_rvas,status
+ArenaController,0x00119F8C; 0x00119F9C; 0x0011A4E4,requires cadence and damage audit; not validated
+ClankBotFlingerVehicle,0x0012A518; 0x0012A668; 0x0012AAE8; 0x0012A6A0,requires cadence and damage audit; not validated
+ClankElectroTorso,0x0012B844; 0x0012B9BC; 0x0012BEB0; 0x0012BA2C,requires cadence and damage audit; not validated
+ClankRamTorso,0x0012C3FC; 0x0012C544; 0x0012C5C0; 0x0012C850,requires cadence and damage audit; not validated
+ClankSawTorso,0x0012CDE4; 0x0012CF2C; 0x0012CF94; 0x0012D228,movement and rotation visually acceptable for captured instance; other systems pending
+ConveyorBelt,0x0012D948; 0x0012DAD8; 0x0012DAE0,requires cadence and damage audit; not validated
+DerbyPowerup,0x00133060; 0x00133094; 0x0013309C,requires cadence and damage audit; not validated
+DerbyTeleporterHealth,0x0013561C; 0x0013563C; 0x00135644,requires cadence and damage audit; not validated
+DerbyTeleporterPowerup,0x00135B5C; 0x00135B84; 0x00135B8C,requires cadence and damage audit; not validated
+DestructionDerby,0x001360C8; 0x00136214; 0x001362EC,requires cadence and damage audit; not validated
+ElectroBall,0x001389E8; 0x00138A58; 0x00138A9C,requires cadence and damage audit; not validated
+ElectroshockWave,0x001396E0; 0x001396E8; 0x0013A1C0,requires cadence and damage audit; not validated
+EnemyBotFlingerVehicle,0x0013A59C; 0x0013A750; 0x0013B938; 0x0013A788,requires cadence and damage audit; not validated
+EnemyElectroTorso,0x0013EA1C; 0x0013EC08; 0x0013F488; 0x0013EC90,requires cadence and damage audit; not validated
+EnemyRamTorso,0x0013FC24; 0x0013FE10; 0x00140878; 0x0013FEA4,requires cadence and damage audit; not validated
+EnemySawTorso,0x00140CD4; 0x00140E54; 0x001416C4; 0x00140ED4,requires cadence and damage audit; not validated
+Level04Crane,0x0015618C; 0x00156430; 0x00156C78,requires cadence and damage audit; not validated
+Level04Crusher,0x00156E64; 0x00157084; 0x001577F8,requires cadence and damage audit; not validated
+LightningAttack,0x001591C8; 0x00159208; 0x00159648,requires cadence and damage audit; not validated
+ObstacleBouncer,0x00165658; 0x0016568C; 0x001656F0,requires cadence and damage audit; not validated
+ObstacleSaw,0x001659E8; 0x00165A1C; 0x00165A24,requires cadence and damage audit; not validated
+ObstacleSpinningFloor,0x00165F8C; 0x00166008; 0x00166010,requires cadence and damage audit; not validated
+ObstacleVent,0x00166268; 0x00166314; 0x0016631C,requires cadence and damage audit; not validated
+ObstacleWall,0x00166CD0; 0x00166E50; 0x00166EB4,requires cadence and damage audit; not validated
+SmasherBot,0x0017BA44; 0x0017BB9C; 0x0017C1C0; 0x0017BBC8,requires cadence and damage audit; not validated
+TorsoAShot,0x00191870; 0x001910A8; 0x001911A0,requires cadence and damage audit; not validated
+VehicleController,0x00192D30; 0x00192E70; 0x001956DC,requires cadence and damage audit; not validated
+VehicleMine,0x00196624; 0x00196650; 0x00196658,requires cadence and damage audit; not validated
+VehicleMissile,0x00196A94; 0x00196AC4; 0x00196EA0,requires cadence and damage audit; not validated

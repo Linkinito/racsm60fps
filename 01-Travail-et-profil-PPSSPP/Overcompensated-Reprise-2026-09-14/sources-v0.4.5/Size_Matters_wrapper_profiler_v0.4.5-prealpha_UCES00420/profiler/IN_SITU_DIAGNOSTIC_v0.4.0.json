@@ -1,0 +1,49 @@
+{
+  "schema": "rcsm-in-situ-diagnostic/1",
+  "date": "2026-08-22",
+  "status": "BUG_CONFIRMED_AND_FIXED_IN_0.4.1",
+  "scope": "derived observations only; source dumps and game binaries are not packaged",
+  "reported_status_log": {
+    "sha256": "4a730b87ecd7aada6a733dc0b1910fcc4cc1a99d5fb5209e13bf5d2a0b08b2be",
+    "lines": 1,
+    "observation": "plugin start logged, no module detected and therefore no manual trace export"
+  },
+  "root_cause": {
+    "detection_anchor": "v0.4.0 compared a raw R_MIPS_LO16 operand with post-relocation memory",
+    "suppression_guard": "v0.4.0 compared a raw R_MIPS_26 jal with its relocated runtime instruction",
+    "control_path": "manual controls were polled only after a module had been recognized"
+  },
+  "runtime_evidence": [
+    {
+      "module_key": "LEVEL_01",
+      "source_dump_sha256": "5f68eceba120a58eb4c21c9dd1e9fc57ef96ab0ffcdbbb5fb17d37a60d599a3a",
+      "source_dump_bytes": 25165824,
+      "stable_probe": {"address": "0x09148800", "observed_word": "0xC60E0000"},
+      "two_pass_entry": "0x0914805C",
+      "entry_words": ["0x27BDFFC0", "0xE7B40020", "0xE7B60024", "0xE7B80028"],
+      "suppression_site": "0x09148094",
+      "suppression_observed": "0x0E451FE4",
+      "suppression_expected_runtime": "0x0E451FE4",
+      "callsites_matching_runtime_jal": 55,
+      "callsites_total": 55
+    },
+    {
+      "module_key": "LEVEL_02",
+      "source_dump_sha256": "960f7d11c3eabd8855673989a10b54f3cbdeb5c158fa279dae987d74540dbda2",
+      "source_dump_bytes": 25165824,
+      "stable_probe": {"address": "0x09148800", "observed_word": "0xC6000008"},
+      "two_pass_entry": "0x09148040",
+      "entry_words": ["0x27BDFFC0", "0xE7B40020", "0xE7B60024", "0xE7B80028"],
+      "suppression_site": "0x09148078",
+      "suppression_observed": "0x0E451FDD",
+      "suppression_expected_runtime": "0x0E451FDD",
+      "callsites_matching_runtime_jal": 57,
+      "callsites_total": 57
+    }
+  ],
+  "correction": {
+    "anchor": "one non-relocated word at 0x09148800, selected across all 15 profiles",
+    "suppression_guard": "runtime jal encoded from one_pass_inner",
+    "manual_control": "L+R+SELECT is always polled and logs an unmatched snapshot if detection still fails"
+  }
+}

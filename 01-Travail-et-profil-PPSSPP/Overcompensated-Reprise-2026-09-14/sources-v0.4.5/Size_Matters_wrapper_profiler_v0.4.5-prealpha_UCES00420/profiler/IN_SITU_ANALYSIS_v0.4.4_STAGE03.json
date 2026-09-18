@@ -1,0 +1,129 @@
+{
+  "schema": "rcsm-in-situ-analysis/1",
+  "date": "2026-08-25",
+  "game_id": "UCES00420",
+  "environment": "PPSSPP 1.19.3 / Windows 11 Home",
+  "plugin_version": "0.4.4-prealpha",
+  "mode": "full_module",
+  "inputs": {
+    "status_sha256": "4915ae24ca289b3814ba0777a787806056f61777f94e618502c8e8a3ca01a1b6",
+    "ryllus_manual_trace_sha256": "cd58287afb643c04504fa7c47af34ba1e9005d2d3027aec5aeb510d01e055bae",
+    "ryllus_transition_trace_sha256": "33b40b6e77727d48a2f4b56b1a749a388e54537a6f959d66f4bebf6b16054174",
+    "kalidon_manual_trace_sha256": "f4dd0f5912286a70fe4fea4ba5bdaf636385043a3b4a17815d56a260900c6551"
+  },
+  "chronology": [
+    "The status file contains an older appended v0.4.3 session, followed by the relevant v0.4.4 session.",
+    "LEVEL_02 was armed transactionally with all 57 known callsites at runtime delta +0x8000.",
+    "A manual Ryllus trace was exported at VBlank 43519.",
+    "A second Ryllus trace was exported automatically at the transition at VBlank 44195.",
+    "LEVEL_03 was recognized with 33 entries and remained unpatched because allowed_module was 2.",
+    "A manual Kalidon detection trace was exported after 2478 VBlanks of residence."
+  ],
+  "ryllus": {
+    "reference_base": "0x09139D00",
+    "runtime_base": "0x09141D00",
+    "address_delta": 32768,
+    "jit_marker": "0x680013F2",
+    "capture_start_vblank": 1371,
+    "transition_vblank": 44195,
+    "capture_vblanks": 42824,
+    "approximate_seconds_at_60_vblank_hz": 713.733,
+    "installed_callsites": 57,
+    "active_callsites": 38,
+    "inactive_callsites": 19,
+    "known_families": 29,
+    "active_families": 19,
+    "inactive_families": 10,
+    "total_hits": 122243,
+    "unknown_hits": 0,
+    "temporal_totals_across_callsites": {
+      "active_vblank_sum": 68780,
+      "same_vblank_hits": 53463,
+      "gap_1_vblank": 3,
+      "gap_2_vblank": 67865,
+      "gap_other_vblank": 874,
+      "gap_2_share_of_active_transitions": 0.98724,
+      "maximum_hits_per_vblank": 8
+    },
+    "active_family_hits": {
+      "WF-020": 26052,
+      "WF-013": 17520,
+      "WF-005": 16656,
+      "WF-032": 15526,
+      "WF-022": 13140,
+      "WF-004": 11600,
+      "WF-057": 6146,
+      "WF-014": 5760,
+      "WF-002": 5161,
+      "WF-017": 1074,
+      "WF-055": 961,
+      "WF-053": 558,
+      "WF-043": 501,
+      "WF-025": 430,
+      "WF-026": 416,
+      "WF-015": 298,
+      "WF-023": 201,
+      "WF-037": 174,
+      "WF-021": 69
+    },
+    "inactive_family_callsites": {
+      "WF-001": 3,
+      "WF-003": 1,
+      "WF-006": 1,
+      "WF-007": 3,
+      "WF-008": 2,
+      "WF-009": 2,
+      "WF-010": 2,
+      "WF-011": 2,
+      "WF-012": 1,
+      "WF-031": 1
+    },
+    "clank_section_candidate_families": {
+      "family_ids": ["WF-020", "WF-022", "WF-023", "WF-025", "WF-026", "WF-032"],
+      "combined_hits": 55765,
+      "basis": "Static object context includes ClankBot, CBEnterCutscene, Microbot and BotFlinger; first hits cluster in the later capture interval confirmed by the user as the Clank section."
+    },
+    "manual_to_transition": {
+      "vblanks": 676,
+      "approximate_seconds": 11.267,
+      "additional_hits": 2055,
+      "active_callsites": 5,
+      "callsite_deltas": {
+        "WF-005/0x09148294": 490,
+        "WF-005/0x091482B0": 490,
+        "WF-005/0x091482CC": 490,
+        "WF-015/0x0914B084": 298,
+        "WF-057/0x09265594": 287
+      }
+    }
+  },
+  "kalidon": {
+    "reference_base": "0x09139D00",
+    "runtime_base": "0x09141D00",
+    "address_delta": 32768,
+    "jit_marker": "0x689DD00A",
+    "capture_start_vblank": 44208,
+    "capture_end_vblank": 46686,
+    "capture_vblanks": 2478,
+    "approximate_seconds_at_60_vblank_hz": 41.3,
+    "known_callsites": 33,
+    "installed_callsites": 0,
+    "total_hits": 0,
+    "unknown_hits": 0
+  },
+  "validation": {
+    "trace_parser": "PASS for all three trace/4 files",
+    "full_ryllus_redirects": "PASS",
+    "temporal_invariants": "PASS",
+    "jit_marker_handling": "PASS for LEVEL_02 and LEVEL_03",
+    "module_transition": "PASS",
+    "level_allowlist": "PASS",
+    "gameplay_report": "Ryllus completed including the Clank section, transition to Kalidon completed, no fault reported"
+  },
+  "interpretation": [
+    "Across active callsites, 98.724% of transitions between active VBlanks have a two-VBlank gap. This is strong evidence of a roughly 30 Hz vanilla update rhythm on a 60 Hz VBlank clock.",
+    "Same-VBlank hits represent repeated wrapper calls within one simulation update and must not be confused with a higher frame cadence.",
+    "No ONE_PASS or TWO_PASS policy is assigned from this capture alone; a controlled 60 FPS comparison and gameplay measurement are still required."
+  ],
+  "next_boundary": "Run v0.4.5 Stage 04 with all 33 Kalidon callsites and return the trace/4 manual and transition captures."
+}

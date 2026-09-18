@@ -1,0 +1,1600 @@
+{
+  "version": "0.6.1-metalis-integration-dev.2",
+  "prx_sha256": "67c16bc1caafc6d340de785f4bf0e15de61ce40f41699a3699cb5b71cd8e9341",
+  "symbols": {
+    "__executable_start": 0,
+    "_ftext": 0,
+    "_main": 0,
+    "RCSM_AT": 16,
+    "RCSM_V0": 20,
+    "RCSM_V1": 24,
+    "RCSM_A0": 28,
+    "RCSM_A1": 32,
+    "RCSM_A2": 36,
+    "RCSM_A3": 40,
+    "RCSM_T0": 44,
+    "RCSM_T1": 48,
+    "RCSM_T2": 52,
+    "RCSM_T3": 56,
+    "RCSM_T4": 60,
+    "RCSM_T5": 64,
+    "RCSM_T6": 68,
+    "RCSM_T7": 72,
+    "RCSM_S0": 76,
+    "RCSM_S1": 80,
+    "RCSM_S2": 84,
+    "RCSM_S3": 88,
+    "RCSM_S4": 92,
+    "RCSM_S5": 96,
+    "RCSM_S6": 100,
+    "RCSM_S7": 104,
+    "RCSM_T8": 108,
+    "RCSM_T9": 112,
+    "RCSM_K0": 116,
+    "RCSM_K1": 120,
+    "RCSM_GP": 124,
+    "RCSM_FP": 128,
+    "RCSM_ORIGINAL_RA": 132,
+    "RCSM_HI": 136,
+    "RCSM_LO": 140,
+    "RCSM_FCR31": 144,
+    "RCSM_F0": 152,
+    "_exit": 160,
+    "_start": 236,
+    "module_start": 236,
+    "RCSM_COMMON_RA": 280,
+    "RCSM_FRAME_SIZE": 288,
+    "deregister_tm_clones": 472,
+    "register_tm_clones": 524,
+    "__do_global_dtors_aux": 596,
+    "call___do_global_dtors_aux": 796,
+    "frame_dummy": 816,
+    "call_frame_dummy": 876,
+    "rcsm_fps_request": 896,
+    "rcsm_fps_begin_module": 952,
+    "rcsm_fps_confirm": 1000,
+    "rcsm_fps_leave_module": 1068,
+    "rcsm_fps_pending": 1092,
+    "string_equal_ci": 1128,
+    "read_game_word": 1248,
+    "write_game_word": 1312,
+    "hook_address_for_module": 1372,
+    "vblank_thread": 1896,
+    "trim_ascii": 2024,
+    "copy_list_token": 2176,
+    "sync_game_code": 2412,
+    "read_patch_word": 2452,
+    "full_binding_still_present": 2600,
+    "parse_u32.part.0": 2712,
+    "parse_bool": 2940,
+    "parse_family_policy_list": 3144,
+    "parse_ra_policy_list": 3400,
+    "prepare_tail_jump.constprop.0": 3740,
+    "prepare_full_patch.constprop.0": 4540,
+    "resolve_current_module": 5152,
+    "log_line": 6124,
+    "load_config": 6360,
+    "export_trace.constprop.0.isra.0": 8128,
+    "deactivate_profile": 11296,
+    "__libcglue_init": 11856,
+    "__libcglue_deinit": 11864,
+    "rcsm_profiler_hook_c": 11872,
+    "module_stop": 12032,
+    "main": 12144,
+    "rcsm_profiler_hook_common": 18448,
+    "rcsm_profiler_hook_l01": 19020,
+    "rcsm_profiler_tail_l01": 19040,
+    "rcsm_profiler_hook_l01_one": 19048,
+    "rcsm_profiler_tail_l01_one": 19068,
+    "rcsm_profiler_hook_l02": 19076,
+    "rcsm_profiler_tail_l02": 19096,
+    "rcsm_profiler_hook_l02_one": 19104,
+    "rcsm_profiler_tail_l02_one": 19124,
+    "rcsm_profiler_hook_l03": 19132,
+    "rcsm_profiler_tail_l03": 19152,
+    "rcsm_profiler_hook_l03_one": 19160,
+    "rcsm_profiler_tail_l03_one": 19180,
+    "rcsm_profiler_hook_l04": 19188,
+    "rcsm_profiler_tail_l04": 19208,
+    "rcsm_profiler_hook_l04_one": 19216,
+    "rcsm_profiler_tail_l04_one": 19236,
+    "rcsm_profiler_hook_l05": 19244,
+    "rcsm_profiler_tail_l05": 19264,
+    "rcsm_profiler_hook_l05_one": 19272,
+    "rcsm_profiler_tail_l05_one": 19292,
+    "rcsm_profiler_hook_l06": 19300,
+    "rcsm_profiler_tail_l06": 19320,
+    "rcsm_profiler_hook_l06_one": 19328,
+    "rcsm_profiler_tail_l06_one": 19348,
+    "rcsm_profiler_hook_l07": 19356,
+    "rcsm_profiler_tail_l07": 19376,
+    "rcsm_profiler_hook_l07_one": 19384,
+    "rcsm_profiler_tail_l07_one": 19404,
+    "rcsm_profiler_hook_l08": 19412,
+    "rcsm_profiler_tail_l08": 19432,
+    "rcsm_profiler_hook_l08_one": 19440,
+    "rcsm_profiler_tail_l08_one": 19460,
+    "rcsm_profiler_hook_l09": 19468,
+    "rcsm_profiler_tail_l09": 19488,
+    "rcsm_profiler_hook_l09_one": 19496,
+    "rcsm_profiler_tail_l09_one": 19516,
+    "rcsm_profiler_hook_l10": 19524,
+    "rcsm_profiler_tail_l10": 19544,
+    "rcsm_profiler_hook_l10_one": 19552,
+    "rcsm_profiler_tail_l10_one": 19572,
+    "rcsm_profiler_hook_l15": 19580,
+    "rcsm_profiler_tail_l15": 19600,
+    "rcsm_profiler_hook_l15_one": 19608,
+    "rcsm_profiler_tail_l15_one": 19628,
+    "rcsm_profiler_hook_l21": 19636,
+    "rcsm_profiler_tail_l21": 19656,
+    "rcsm_profiler_hook_l21_one": 19664,
+    "rcsm_profiler_tail_l21_one": 19684,
+    "rcsm_profiler_hook_l22": 19692,
+    "rcsm_profiler_tail_l22": 19712,
+    "rcsm_profiler_hook_l22_one": 19720,
+    "rcsm_profiler_tail_l22_one": 19740,
+    "rcsm_profiler_hook_l23": 19748,
+    "rcsm_profiler_tail_l23": 19768,
+    "rcsm_profiler_hook_l23_one": 19776,
+    "rcsm_profiler_tail_l23_one": 19796,
+    "rcsm_profiler_hook_l24": 19804,
+    "rcsm_profiler_tail_l24": 19824,
+    "rcsm_profiler_hook_l24_one": 19832,
+    "rcsm_profiler_tail_l24_one": 19852,
+    "rcsm_find_module_profile": 19872,
+    "rcsm_profiles_equivalent": 19956,
+    "rcsm_validate_profile": 20092,
+    "rcsm_apply_address_delta": 20308,
+    "rcsm_relocate_profile": 20368,
+    "rcsm_identify_module_at_delta": 20768,
+    "rcsm_identify_module": 21740,
+    "rcsm_scan_module_deltas": 21752,
+    "rcsm_bind_profile": 22168,
+    "rcsm_record_hit": 22300,
+    "rcsm_stat_at": 22828,
+    "rcsm_encode_jal": 22896,
+    "rcsm_encode_j": 22912,
+    "rcsm_jal_reachable": 22928,
+    "rcsm_is_ppsspp_emuhack": 22964,
+    "rcsm_install_policy_redirects": 22984,
+    "rcsm_remove_policy_redirects": 23784,
+    "rcsm_classify_policy_redirects": 24296,
+    "rcsm_install_callsite_redirects": 24976,
+    "rcsm_remove_callsite_redirects": 25004,
+    "rcsm_classify_callsite_redirects": 25032,
+    "text_put_u32": 25052,
+    "rcsm_vformat": 25268,
+    "rcsm_format": 26332,
+    "move_jump": 26388,
+    "rcsm_full_module": 26560,
+    "rcsm_full_prepare": 26644,
+    "rcsm_full_preflight": 27532,
+    "rcsm_full_restore": 27792,
+    "rcsm_full_maintain": 28116,
+    "rcsm_full_install": 28444,
+    "rcsm_full_health": 28872,
+    "exit": 29196,
+    "strchr": 29212,
+    "strlen": 29584,
+    "strcmp": 29612,
+    "memset": 30188,
+    "memcpy": 30472,
+    "__do_global_ctors_aux": 31352,
+    "call___do_global_ctors_aux": 31448,
+    "_init": 31468,
+    "init": 31492,
+    "_fini": 31504,
+    "fini": 31520,
+    "sceDisplayWaitVblankStart": 31532,
+    "sceCtrlPeekBufferPositive": 31540,
+    "sceIoClose": 31548,
+    "sceIoOpen": 31556,
+    "sceIoRead": 31564,
+    "sceIoWrite": 31572,
+    "sceKernelSelfStopUnloadModule": 31580,
+    "sceKernelQueryModuleInfo": 31588,
+    "sceKernelGetModuleIdList": 31596,
+    "sceKernelWaitThreadEnd": 31604,
+    "sceKernelDelayThread": 31612,
+    "sceKernelCreateThread": 31620,
+    "sceKernelDeleteThread": 31628,
+    "sceKernelStartThread": 31636,
+    "sceKernelExitThread": 31644,
+    "sceKernelSuspendDispatchThread": 31652,
+    "sceKernelResumeDispatchThread": 31660,
+    "sceKernelGetThreadId": 31668,
+    "sceKernelDcacheWritebackInvalidateRange": 31676,
+    "sceKernelIcacheInvalidateRange": 31684,
+    "sceKernelExitGame": 31692,
+    "__lib_ent_top": 31704,
+    "__library_exports": 31704,
+    "__lib_ent_bottom": 31720,
+    "__lib_stub_top": 31728,
+    "__stub_module_sceDisplay": 31728,
+    "__stub_module_sceCtrl": 31748,
+    "__stub_module_IoFileMgrForUser": 31768,
+    "__stub_module_ModuleMgrForUser": 31788,
+    "__stub_module_ThreadManForUser": 31808,
+    "__stub_module_UtilsForUser": 31828,
+    "__stub_module_LoadExecForUser": 31848,
+    "__lib_stub_bottom": 31868,
+    "module_info": 31872,
+    "__syslib_exports": 31924,
+    "__stub_modulestr_sceDisplay": 31944,
+    "__stub_modulestr_sceCtrl": 31960,
+    "__stub_modulestr_IoFileMgrForUser": 31972,
+    "__stub_modulestr_ModuleMgrForUser": 31996,
+    "__stub_modulestr_ThreadManForUser": 32020,
+    "__stub_modulestr_UtilsForUser": 32044,
+    "__stub_modulestr_LoadExecForUser": 32064,
+    "$LC0": 36204,
+    "$LC1": 32184,
+    "$LC2": 32188,
+    "$LC3": 32196,
+    "$LC5": 32208,
+    "$LC6": 32264,
+    "$LC7": 32328,
+    "$LC8": 32376,
+    "$LC9": 32448,
+    "$LC10": 32508,
+    "$LC11": 32516,
+    "$LC12": 32528,
+    "$LC13": 32544,
+    "$LC14": 32564,
+    "$LC15": 32576,
+    "$LC16": 32592,
+    "$LC17": 32608,
+    "$LC18": 32620,
+    "$LC19": 32632,
+    "$LC20": 32644,
+    "$LC21": 32660,
+    "$LC22": 32676,
+    "$LC23": 32684,
+    "$LC24": 32700,
+    "$LC25": 32724,
+    "$LC26": 32744,
+    "$LC27": 32768,
+    "$LC28": 32784,
+    "$LC29": 32796,
+    "$LC30": 32808,
+    "$LC31": 32816,
+    "$LC32": 32824,
+    "$LC33": 32844,
+    "$LC34": 32864,
+    "$LC35": 32880,
+    "$LC36": 32896,
+    "$LC37": 32912,
+    "$LC38": 32924,
+    "$LC39": 32984,
+    "$LC40": 32996,
+    "$LC41": 33012,
+    "$LC43": 33020,
+    "$LC44": 33024,
+    "$LC45": 33032,
+    "$LC46": 33048,
+    "$LC47": 33092,
+    "$LC48": 33160,
+    "$LC49": 33200,
+    "$LC50": 33228,
+    "$LC51": 33260,
+    "$LC52": 33288,
+    "$LC53": 33344,
+    "$LC54": 33364,
+    "$LC55": 33384,
+    "$LC56": 33408,
+    "$LC57": 33432,
+    "$LC58": 33460,
+    "$LC59": 33608,
+    "$LC60": 33828,
+    "$LC61": 33852,
+    "$LC62": 34208,
+    "$LC63": 34248,
+    "$LC42": 34284,
+    "$LC64": 34288,
+    "$LC65": 34296,
+    "$LC66": 34360,
+    "$LC67": 34380,
+    "$LC68": 34600,
+    "$LC69": 34664,
+    "$LC70": 34752,
+    "$LC71": 34772,
+    "$LC72": 34824,
+    "$LC73": 34880,
+    "$LC74": 34944,
+    "$LC75": 35004,
+    "$LC76": 35060,
+    "$LC77": 35176,
+    "$LC78": 35236,
+    "$LC79": 35364,
+    "$LC80": 35456,
+    "$LC81": 35636,
+    "$LC82": 35696,
+    "$LC83": 35796,
+    "$LC84": 35888,
+    "$LC85": 36060,
+    "$LC86": 36096,
+    "$LC87": 36128,
+    "$LC88": 36140,
+    "$LC89": 36156,
+    "CSWTCH.143": 36612,
+    "CSWTCH.136": 36624,
+    "literal.0": 36644,
+    "literal.1": 36652,
+    "literal.2": 36668,
+    "digits.0": 36672,
+    "g_rcsm_total_callsite_count": 36692,
+    "g_rcsm_module_profile_count": 36696,
+    "g_rcsm_module_profiles": 36700,
+    "kModule24DetectionWords": 37420,
+    "kModule24Callsites": 37424,
+    "kModule23DetectionWords": 37608,
+    "kModule23Callsites": 37612,
+    "kModule22DetectionWords": 37804,
+    "kModule22Callsites": 37808,
+    "kModule21DetectionWords": 37896,
+    "kModule21Callsites": 37900,
+    "kModule15DetectionWords": 37948,
+    "kModule15Callsites": 37952,
+    "kModule10DetectionWords": 38000,
+    "kModule10Callsites": 38004,
+    "kModule9DetectionWords": 38284,
+    "kModule9Callsites": 38288,
+    "kModule8DetectionWords": 38536,
+    "kModule8Callsites": 38540,
+    "kModule7DetectionWords": 38996,
+    "kModule7Callsites": 39000,
+    "kModule6DetectionWords": 39368,
+    "kModule6Callsites": 39372,
+    "kModule5DetectionWords": 39636,
+    "kModule5Callsites": 39640,
+    "kModule4DetectionWords": 39960,
+    "kModule4Callsites": 39964,
+    "kModule3DetectionWords": 40252,
+    "kModule3Callsites": 40256,
+    "kModule2DetectionWords": 40520,
+    "kModule2Callsites": 40524,
+    "kModule1DetectionWords": 40980,
+    "kModule1Callsites": 40984,
+    "g_rcsm_detection_anchor_count": 41424,
+    "g_rcsm_detection_addresses": 41428,
+    "g_rcsm_reference_level_base": 41432,
+    "g_rcsm_full_module_count": 41436,
+    "g_rcsm_full_modules": 41440,
+    "kFull24": 42040,
+    "kFull23": 43768,
+    "kFull22": 45336,
+    "kFull21": 45608,
+    "kFull15": 45848,
+    "kFull10": 46088,
+    "kFull9": 47880,
+    "kFull8": 49672,
+    "kFull7": 51464,
+    "kFull6": 53256,
+    "kFull5": 55016,
+    "kFull4": 56776,
+    "kFull3": 59448,
+    "kFull2": 61240,
+    "kFull1": 63032,
+    "g_rcsm_cave_return_indices": 64840,
+    "g_rcsm_legacy_cave_addresses": 64848,
+    "g_rcsm_cave_templates": 64880,
+    "__EH_FRAME_BEGIN__": 66952,
+    "__FRAME_END__": 66952,
+    "__CTOR_LIST__": 67212,
+    "__CTOR_END__": 67216,
+    "__DTOR_LIST__": 67220,
+    "__DTOR_END__": 67224,
+    "_fdata": 67228,
+    "g_config": 67228,
+    "g_vblank_thread": 67848,
+    "g_monitor_thread": 67852,
+    "sce_newlib_main_thread_name": 67856,
+    "sce_newlib_attribute": 67860,
+    "sce_newlib_stack_kb_size": 67864,
+    "sce_newlib_priority": 67868,
+    "g_fps_choice": 67872,
+    "g_rcsm_fps_pending": 67884,
+    "g_rcsm_requested_fps": 67888,
+    "__TMC_END__": 67892,
+    "__TMC_LIST__": 67892,
+    "__dso_handle": 67892,
+    "__bss_start": 67896,
+    "_edata": 67896,
+    "_fbss": 67896,
+    "completed.2": 67896,
+    "dtor_idx.1": 67900,
+    "object.0": 67904,
+    "g_rcsm_last_patch_error": 67968,
+    "g_rcsm_installed_callsite_count": 67972,
+    "g_rcsm_equivalent_profile_matches": 67976,
+    "g_rcsm_active_module_index": 67980,
+    "g_rcsm_active_hook_count": 67984,
+    "g_rcsm_recording_enabled": 67988,
+    "g_rcsm_vblank_sample": 67992,
+    "g_rcsm_plugin_gp": 67996,
+    "g_rcsm_applied_fps": 68000,
+    "g_full_caves": 68032,
+    "g_full": 70080,
+    "g_last_detection": 73172,
+    "g_trace_sequence": 73208,
+    "g_snapshot_unknown_hits": 73212,
+    "g_snapshot_stats": 73216,
+    "g_binding": 75776,
+    "g_profiler": 76940,
+    "g_stop_requested": 79508,
+    "_end": 79512,
+    "_gp": 100656
+  },
+  "metalis": [
+    {
+      "offset": 13360,
+      "original": 1006910728,
+      "patched": 1006910600,
+      "flags": 16,
+      "layer": 1
+    },
+    {
+      "offset": 13384,
+      "original": 1006943496,
+      "patched": 1006943368,
+      "flags": 16,
+      "layer": 1
+    },
+    {
+      "offset": 85584,
+      "original": 1006910728,
+      "patched": 1006910600,
+      "flags": 16,
+      "layer": 1
+    },
+    {
+      "offset": 163488,
+      "original": 666763200,
+      "patched": 7,
+      "flags": 20,
+      "layer": 4
+    },
+    {
+      "offset": 163492,
+      "original": 2947547176,
+      "patched": 0,
+      "flags": 16,
+      "layer": 4
+    },
+    {
+      "offset": 163640,
+      "original": 1175483264,
+      "patched": 0,
+      "flags": 16,
+      "layer": 4
+    },
+    {
+      "offset": 196444,
+      "original": 1175872256,
+      "patched": 1176265472,
+      "flags": 16,
+      "layer": 4
+    },
+    {
+      "offset": 196476,
+      "original": 1175872257,
+      "patched": 1176265473,
+      "flags": 16,
+      "layer": 4
+    },
+    {
+      "offset": 196884,
+      "original": 1175872256,
+      "patched": 1176265472,
+      "flags": 16,
+      "layer": 4
+    },
+    {
+      "offset": 200388,
+      "original": 1174430982,
+      "patched": 1175217408,
+      "flags": 16,
+      "layer": 1
+    },
+    {
+      "offset": 200708,
+      "original": 707002370,
+      "patched": 707002369,
+      "flags": 16,
+      "layer": 1
+    },
+    {
+      "offset": 330376,
+      "original": 1006944128,
+      "patched": 1006944000,
+      "flags": 16,
+      "layer": 8
+    },
+    {
+      "offset": 330996,
+      "original": 1007009664,
+      "patched": 1007009536,
+      "flags": 16,
+      "layer": 8
+    },
+    {
+      "offset": 331972,
+      "original": 1007009664,
+      "patched": 1007009536,
+      "flags": 16,
+      "layer": 8
+    },
+    {
+      "offset": 421984,
+      "original": 1007041800,
+      "patched": 1007041672,
+      "flags": 16,
+      "layer": 2
+    },
+    {
+      "offset": 1109436,
+      "original": 1175413504,
+      "patched": 0,
+      "flags": 20,
+      "layer": 2
+    },
+    {
+      "offset": 1109440,
+      "original": 3859546160,
+      "patched": 0,
+      "flags": 16,
+      "layer": 2
+    },
+    {
+      "offset": 1118480,
+      "original": 1007075200,
+      "patched": 1007075072,
+      "flags": 16,
+      "layer": 2
+    },
+    {
+      "offset": 1118508,
+      "original": 1007075200,
+      "patched": 1007075072,
+      "flags": 16,
+      "layer": 2
+    },
+    {
+      "offset": 1137464,
+      "original": 1007107968,
+      "patched": 1007107840,
+      "flags": 16,
+      "layer": 8
+    },
+    {
+      "offset": 1144088,
+      "original": 1006944128,
+      "patched": 1006944000,
+      "flags": 16,
+      "layer": 2
+    },
+    {
+      "offset": 1144704,
+      "original": 1006944128,
+      "patched": 1006944000,
+      "flags": 16,
+      "layer": 2
+    },
+    {
+      "offset": 1146628,
+      "original": 1007009664,
+      "patched": 1007009536,
+      "flags": 16,
+      "layer": 2
+    },
+    {
+      "offset": 1147256,
+      "original": 1175282432,
+      "patched": 1,
+      "flags": 20,
+      "layer": 2
+    },
+    {
+      "offset": 1147260,
+      "original": 3861643268,
+      "patched": 0,
+      "flags": 16,
+      "layer": 2
+    },
+    {
+      "offset": 1151956,
+      "original": 1007041800,
+      "patched": 1007041672,
+      "flags": 16,
+      "layer": 2
+    },
+    {
+      "offset": 1166168,
+      "original": 1006911360,
+      "patched": 1006911232,
+      "flags": 16,
+      "layer": 2
+    },
+    {
+      "offset": 1166424,
+      "original": 1006911360,
+      "patched": 1006911232,
+      "flags": 16,
+      "layer": 2
+    },
+    {
+      "offset": 1176996,
+      "original": 1007043056,
+      "patched": 1007043184,
+      "flags": 16,
+      "layer": 2
+    },
+    {
+      "offset": 1178488,
+      "original": 1006976896,
+      "patched": 1006976768,
+      "flags": 16,
+      "layer": 2
+    },
+    {
+      "offset": 1195044,
+      "original": 1006976896,
+      "patched": 1006976768,
+      "flags": 16,
+      "layer": 2
+    },
+    {
+      "offset": 1206224,
+      "original": 1006976896,
+      "patched": 1006976768,
+      "flags": 16,
+      "layer": 4
+    },
+    {
+      "offset": 1208360,
+      "original": 604241922,
+      "patched": 604241924,
+      "flags": 16,
+      "layer": 4
+    },
+    {
+      "offset": 1232796,
+      "original": 1007009664,
+      "patched": 1007009536,
+      "flags": 16,
+      "layer": 2
+    },
+    {
+      "offset": 1247384,
+      "original": 1006944128,
+      "patched": 1006944000,
+      "flags": 16,
+      "layer": 2
+    },
+    {
+      "offset": 1249464,
+      "original": 1006911360,
+      "patched": 1006911232,
+      "flags": 16,
+      "layer": 2
+    },
+    {
+      "offset": 1249580,
+      "original": 1006911360,
+      "patched": 1006911232,
+      "flags": 16,
+      "layer": 2
+    },
+    {
+      "offset": 1252384,
+      "original": 1006944128,
+      "patched": 1006944000,
+      "flags": 16,
+      "layer": 2
+    },
+    {
+      "offset": 1261732,
+      "original": 1007009664,
+      "patched": 1007009536,
+      "flags": 16,
+      "layer": 2
+    },
+    {
+      "offset": 1266428,
+      "original": 1006944128,
+      "patched": 1006944000,
+      "flags": 16,
+      "layer": 2
+    },
+    {
+      "offset": 1267612,
+      "original": 1006944128,
+      "patched": 1006944000,
+      "flags": 16,
+      "layer": 2
+    },
+    {
+      "offset": 1268976,
+      "original": 1006944128,
+      "patched": 1006944000,
+      "flags": 16,
+      "layer": 2
+    },
+    {
+      "offset": 1308036,
+      "original": 1006944128,
+      "patched": 1006944000,
+      "flags": 16,
+      "layer": 2
+    },
+    {
+      "offset": 1308296,
+      "original": 1006944128,
+      "patched": 1006944000,
+      "flags": 16,
+      "layer": 2
+    },
+    {
+      "offset": 1313088,
+      "original": 1006944128,
+      "patched": 1006944000,
+      "flags": 16,
+      "layer": 2
+    },
+    {
+      "offset": 1313420,
+      "original": 1006944128,
+      "patched": 1006944000,
+      "flags": 16,
+      "layer": 2
+    },
+    {
+      "offset": 1331652,
+      "original": 1006911360,
+      "patched": 1006911232,
+      "flags": 16,
+      "layer": 2
+    },
+    {
+      "offset": 1332324,
+      "original": 1007075200,
+      "patched": 1007075072,
+      "flags": 16,
+      "layer": 2
+    },
+    {
+      "offset": 1332668,
+      "original": 872677379,
+      "patched": 872677382,
+      "flags": 16,
+      "layer": 2
+    },
+    {
+      "offset": 1378628,
+      "original": 1175741185,
+      "patched": 4,
+      "flags": 20,
+      "layer": 2
+    },
+    {
+      "offset": 1378632,
+      "original": 3861643272,
+      "patched": 0,
+      "flags": 16,
+      "layer": 2
+    },
+    {
+      "offset": 1464880,
+      "original": 1006944128,
+      "patched": 1006944000,
+      "flags": 16,
+      "layer": 2
+    },
+    {
+      "offset": 1468524,
+      "original": 1007140736,
+      "patched": 1007140608,
+      "flags": 16,
+      "layer": 2
+    },
+    {
+      "offset": 1512980,
+      "original": 1006944128,
+      "patched": 1006944000,
+      "flags": 16,
+      "layer": 2
+    },
+    {
+      "offset": 1515452,
+      "original": 1006976896,
+      "patched": 1006976768,
+      "flags": 16,
+      "layer": 2
+    },
+    {
+      "offset": 1528032,
+      "original": 1006944128,
+      "patched": 1006944000,
+      "flags": 16,
+      "layer": 2
+    },
+    {
+      "offset": 1528984,
+      "original": 1006910728,
+      "patched": 1006910600,
+      "flags": 16,
+      "layer": 2
+    },
+    {
+      "offset": 1529056,
+      "original": 1006944128,
+      "patched": 1006944000,
+      "flags": 16,
+      "layer": 2
+    },
+    {
+      "offset": 1539824,
+      "original": 1175751425,
+      "patched": 2,
+      "flags": 20,
+      "layer": 2
+    },
+    {
+      "offset": 1539868,
+      "original": 1175741185,
+      "patched": 3,
+      "flags": 20,
+      "layer": 2
+    },
+    {
+      "offset": 1539872,
+      "original": 1175871548,
+      "patched": 0,
+      "flags": 16,
+      "layer": 2
+    },
+    {
+      "offset": 1569808,
+      "original": 3324772368,
+      "patched": 5,
+      "flags": 20,
+      "layer": 2
+    },
+    {
+      "offset": 1569812,
+      "original": 1175872257,
+      "patched": 0,
+      "flags": 16,
+      "layer": 2
+    },
+    {
+      "offset": 1608372,
+      "original": 1006944128,
+      "patched": 1006944000,
+      "flags": 16,
+      "layer": 8
+    },
+    {
+      "offset": 1608712,
+      "original": 1006944128,
+      "patched": 1006944000,
+      "flags": 16,
+      "layer": 8
+    },
+    {
+      "offset": 1614552,
+      "original": 1006911488,
+      "patched": 1006911360,
+      "flags": 16,
+      "layer": 1
+    },
+    {
+      "offset": 1716708,
+      "original": 1006911984,
+      "patched": 1006912112,
+      "flags": 16,
+      "layer": 2
+    },
+    {
+      "offset": 1716892,
+      "original": 1006911984,
+      "patched": 1006912112,
+      "flags": 16,
+      "layer": 2
+    },
+    {
+      "offset": 1760736,
+      "original": 3337355272,
+      "patched": 6,
+      "flags": 20,
+      "layer": 2
+    },
+    {
+      "offset": 1760740,
+      "original": 3352100880,
+      "patched": 0,
+      "flags": 16,
+      "layer": 2
+    },
+    {
+      "offset": 3013880,
+      "original": 1114636288,
+      "patched": 1123024896,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3013884,
+      "original": 1114636288,
+      "patched": 1123024896,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3015704,
+      "original": 1073741824,
+      "patched": 1065353216,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3017792,
+      "original": 1010174818,
+      "patched": 1001786210,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3017796,
+      "original": 1099431936,
+      "patched": 1091043328,
+      "flags": 0,
+      "layer": 8
+    },
+    {
+      "offset": 3017804,
+      "original": 1037465425,
+      "patched": 1029076817,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3017808,
+      "original": 1045854033,
+      "patched": 1037465425,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3017816,
+      "original": 1036831949,
+      "patched": 1028443341,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3017820,
+      "original": 1048576000,
+      "patched": 1040187392,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3020628,
+      "original": 1008981591,
+      "patched": 1000593118,
+      "flags": 1,
+      "layer": 4
+    },
+    {
+      "offset": 3020632,
+      "original": 1065352377,
+      "patched": 1065353006,
+      "flags": 1,
+      "layer": 4
+    },
+    {
+      "offset": 3020640,
+      "original": 1022736672,
+      "patched": 1014349875,
+      "flags": 1,
+      "layer": 4
+    },
+    {
+      "offset": 3020644,
+      "original": 1065345667,
+      "patched": 1065351329,
+      "flags": 1,
+      "layer": 4
+    },
+    {
+      "offset": 3020652,
+      "original": 1097859072,
+      "patched": 1106247680,
+      "flags": 0,
+      "layer": 4
+    },
+    {
+      "offset": 3021056,
+      "original": 1031127697,
+      "patched": 1022739087,
+      "flags": 0,
+      "layer": 4
+    },
+    {
+      "offset": 3021064,
+      "original": 1039516303,
+      "patched": 1031642245,
+      "flags": 0,
+      "layer": 4
+    },
+    {
+      "offset": 3021072,
+      "original": 1015580809,
+      "patched": 1007192201,
+      "flags": 1,
+      "layer": 4
+    },
+    {
+      "offset": 3021080,
+      "original": 1036809592,
+      "patched": 1028437749,
+      "flags": 1,
+      "layer": 4
+    },
+    {
+      "offset": 3021084,
+      "original": 1065269400,
+      "patched": 1065332249,
+      "flags": 1,
+      "layer": 4
+    },
+    {
+      "offset": 3023976,
+      "original": 983091,
+      "patched": 1966182,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3028292,
+      "original": 1036831950,
+      "patched": 1028443342,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3028308,
+      "original": 1031127696,
+      "patched": 1014350480,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3028312,
+      "original": 1051372203,
+      "patched": 1042983595,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3028316,
+      "original": 1034147594,
+      "patched": 1025982779,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3028320,
+      "original": 1045220557,
+      "patched": 1037579919,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3032808,
+      "original": 1059760811,
+      "patched": 1051372203,
+      "flags": 0,
+      "layer": 8
+    },
+    {
+      "offset": 3037788,
+      "original": 1097859072,
+      "patched": 1106247680,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3037792,
+      "original": 1086324736,
+      "patched": 1094713344,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3046880,
+      "original": 1005763030,
+      "patched": 997374422,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3046884,
+      "original": 1010174817,
+      "patched": 1001786209,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3046888,
+      "original": 1015580809,
+      "patched": 1007192201,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3046892,
+      "original": 1023969417,
+      "patched": 1015580809,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3046896,
+      "original": 1023969417,
+      "patched": 1015580809,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3046900,
+      "original": 1023969417,
+      "patched": 1015580809,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3046904,
+      "original": 1023969417,
+      "patched": 1015580809,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3046908,
+      "original": 1023969417,
+      "patched": 1015580809,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3048588,
+      "original": 1045854033,
+      "patched": 1037465425,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3048792,
+      "original": 1032358025,
+      "patched": 1023969417,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3048796,
+      "original": 1032358025,
+      "patched": 1023969417,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3053192,
+      "original": 1052876159,
+      "patched": 1044487551,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3053196,
+      "original": 1052876159,
+      "patched": 1044487551,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3053200,
+      "original": 1059117436,
+      "patched": 1050728828,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3053204,
+      "original": 1059117436,
+      "patched": 1050728828,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3053216,
+      "original": 1058642330,
+      "patched": 1050253722,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3053884,
+      "original": 1123024896,
+      "patched": 1131413504,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3054404,
+      "original": 1077936128,
+      "patched": 1069547520,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3054408,
+      "original": 1077936128,
+      "patched": 1069547520,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3054412,
+      "original": 1077936128,
+      "patched": 1069547520,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3054416,
+      "original": 1077936128,
+      "patched": 1069547520,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3054420,
+      "original": 1077936128,
+      "patched": 1069547520,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3054424,
+      "original": 1077936128,
+      "patched": 1069547520,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3054428,
+      "original": 1077936128,
+      "patched": 1069547520,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3054464,
+      "original": 1033951612,
+      "patched": 1025563004,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3054468,
+      "original": 1033951612,
+      "patched": 1025563004,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3054472,
+      "original": 1042340220,
+      "patched": 1033951612,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3054476,
+      "original": 1042340220,
+      "patched": 1033951612,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3054480,
+      "original": 1042340220,
+      "patched": 1033951612,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3054484,
+      "original": 1042340220,
+      "patched": 1033951612,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3054488,
+      "original": 1042340220,
+      "patched": 1033951612,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3054492,
+      "original": 1042340220,
+      "patched": 1033951612,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3054500,
+      "original": 1114636288,
+      "patched": 1123024896,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3054512,
+      "original": 1097859072,
+      "patched": 1106247680,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3057368,
+      "original": 1041865114,
+      "patched": 1033476506,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3061368,
+      "original": 1047904911,
+      "patched": 1039516303,
+      "flags": 0,
+      "layer": 1
+    },
+    {
+      "offset": 3066244,
+      "original": 1045220558,
+      "patched": 1036831950,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3066248,
+      "original": 1045220558,
+      "patched": 1036831950,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3066252,
+      "original": 1033951612,
+      "patched": 1025563004,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3066256,
+      "original": 1001786210,
+      "patched": 985008994,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3066260,
+      "original": 1001786210,
+      "patched": 985008994,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3066264,
+      "original": 1010174818,
+      "patched": 993397602,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3066268,
+      "original": 1001786210,
+      "patched": 985008994,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3066772,
+      "original": 3201092814,
+      "patched": 3192704206,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3066784,
+      "original": 3206125978,
+      "patched": 3197737370,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3066848,
+      "original": 1049135241,
+      "patched": 1040746633,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3066852,
+      "original": 1039068912,
+      "patched": 1030680304,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3066856,
+      "original": 1029076817,
+      "patched": 1020688209,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3066860,
+      "original": 1001786210,
+      "patched": 985008994,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3066864,
+      "original": 993397602,
+      "patched": 976620386,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3066868,
+      "original": 1010174818,
+      "patched": 993397602,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3066872,
+      "original": 1001786210,
+      "patched": 985008994,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3066892,
+      "original": 1053609166,
+      "patched": 1045220558,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3066896,
+      "original": 1039068912,
+      "patched": 1030680304,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3066900,
+      "original": 1029076817,
+      "patched": 1020688209,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3066904,
+      "original": 1045220559,
+      "patched": 1028443343,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3066908,
+      "original": 993397602,
+      "patched": 976620386,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3066912,
+      "original": 1018563426,
+      "patched": 1001786210,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3066916,
+      "original": 1001786210,
+      "patched": 985008994,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3066944,
+      "original": 4915215,
+      "patched": 9830430,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3067544,
+      "original": 1045220558,
+      "patched": 1036831950,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3067548,
+      "original": 1032358025,
+      "patched": 1023969417,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3067552,
+      "original": 1033951612,
+      "patched": 1025563004,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3067556,
+      "original": 1001786210,
+      "patched": 985008994,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3067560,
+      "original": 993397602,
+      "patched": 976620386,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3067564,
+      "original": 1010174818,
+      "patched": 993397602,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3067568,
+      "original": 1001786210,
+      "patched": 985008994,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 3070884,
+      "original": 1106247680,
+      "patched": 1114636288,
+      "flags": 0,
+      "layer": 2
+    },
+    {
+      "offset": 630868,
+      "original": 239874681,
+      "patched": 0,
+      "flags": 50,
+      "layer": 1
+    }
+  ]
+}

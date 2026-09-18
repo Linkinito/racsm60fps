@@ -1,0 +1,31 @@
+{
+  "time": "2026-09-14T22:10:56.899Z",
+  "mode": "rollback",
+  "site": 152532556,
+  "entry": 144084224,
+  "steps": [
+    {
+      "event": "memory.write_u8",
+      "ticket": "wf29patch-8",
+      "value": 1
+    },
+    {
+      "event": "memory.write_u32",
+      "ticket": "wf29patch-9",
+      "value": 237333973
+    }
+  ],
+  "verifiedSuspended": true,
+  "cpu": {
+    "event": "cpu.status",
+    "ticket": "wf29patch-12",
+    "stepping": false,
+    "paused": false,
+    "pc": 142628724,
+    "ticks": 227077388309
+  },
+  "policy": 1,
+  "code": 237333973,
+  "installed": 1,
+  "success": true
+}

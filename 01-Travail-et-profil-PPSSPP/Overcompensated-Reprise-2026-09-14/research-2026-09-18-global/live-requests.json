@@ -1,0 +1,1 @@
+[{"event":"cpu.stepping","_noReply":true,"_delayMs":150},{"event":"gpu.buffer.renderColor","saveBase64":"C:/Users/linki/Documents/PPSSPP/Overcompensated-Reprise-2026-09-14/research-2026-09-18-global/vanilla-render.png"},{"event":"memory.read_u32","address":142872864},{"event":"cpu.resume","_noReply":true}]

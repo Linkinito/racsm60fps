@@ -1,0 +1,69 @@
+{
+  "schema": "rcsm-host-validation/2",
+  "status": "PASS",
+  "date": "2026-08-25",
+  "scope": "portable core, dynamic relocation, PPSSPP JIT marker handling, temporal VBlank statistics, two supplied runtime dumps, bounded formatter and trace v4 parser; v0.4.3 Stage02 and v0.4.4 Stage03 in-situ evidence recorded separately",
+  "tests": [
+    {
+      "name": "profiler_core",
+      "compiler": "/usr/bin/cc",
+      "flags": "-std=c11 -O2 -Wall -Wextra -Werror -pedantic -fsanitize=undefined",
+      "asan_status": "not used because LeakSanitizer cannot run under the execution ptrace environment",
+      "stdout": "{\"status\":\"PASS\",\"modules\":15,\"callsites\":493,\"max_active\":57,\"anchors\":1,\"callsite_redirects\":\"PASS\"}",
+      "checks": [
+        "profile validation and identification",
+        "reference, +0x6000 and +0x7000 detection with relocated suppression jal",
+        "PPSSPP 0x68xxxxxx accepted only at prologue word zero",
+        "foreign prologue opcode remains rejected",
+        "bounded unique-delta scan and full profile relocation",
+        "binary RA lookup, saturating counters and temporal VBlank metrics",
+        "transactional install and conditional removal",
+        "mismatch preflight produces zero writes",
+        "write failure rolls back all prior words",
+        "redirect health classification"
+      ]
+    },
+    {
+      "name": "runtime_dump_fingerprints",
+      "compiler": "/usr/bin/cc",
+      "flags": "same warnings and undefined-behavior sanitizer",
+      "stdout": "{\"status\":\"PASS\",\"runtime_scenarios\":7,\"deltas\":[0,24576,28672],\"ppsspp_jit_entry\":\"0x682BACB6\",\"modules\":[1,2],\"callsites\":[55,57]}",
+      "source_dump_sha256": {
+        "LEVEL_01": "5f68eceba120a58eb4c21c9dd1e9fc57ef96ab0ffcdbbb5fb17d37a60d599a3a",
+        "LEVEL_02": "960f7d11c3eabd8855673989a10b54f3cbdeb5c158fa279dae987d74540dbda2"
+      },
+      "checks": [
+        "LEVEL_01 identified from post-relocation memory",
+        "LEVEL_02 identified from post-relocation memory",
+        "both dumps identified after simulated +0x6000 and +0x7000 loader shifts",
+        "LEVEL_01 identified with the exact JIT marker observed in situ",
+        "all 55 and 57 runtime callsites target the wrapper relocated by the same delta"
+      ]
+    },
+    {
+      "name": "bounded_formatter",
+      "flags": "same warnings and sanitizers",
+      "stdout": "{\"status\":\"PASS\",\"formatter\":\"bounded\"}",
+      "checks": ["signed decimal including INT32_MIN", "unsigned decimal", "hexadecimal", "zero padding", "strings", "truncation", "null string"]
+    },
+    {
+      "name": "trace_v4_parser",
+      "runtime": "Python 3",
+      "stdout": "{\"status\": \"PASS\", \"trace_schema\": 4, \"entries\": 55, \"address_delta\": 28672}",
+      "checks": ["valid +0x7000 focused_pokitaru trace", "exactly two installed WF-019 entries", "reference/runtime RA consistency", "active/same-VBlank identity", "gap histogram identity", "CSV export", "exact corpus match", "invalid family rejection", "invalid temporal metric rejection"]
+    },
+    {
+      "name": "python_syntax",
+      "runtime": "python -m py_compile",
+      "status": "PASS"
+    },
+    {
+      "name": "gcc_static_analyzer_psp_sources",
+      "compiler": "psp-gcc 15.2.0",
+      "flags": "-O2 -G0 -std=c11 -Wall -Wextra -Werror -fanalyzer -fsyntax-only",
+      "files": ["psp_plugin_runtime.c", "rcsm_profiler_core.c", "rcsm_format.c", "wrapper_profiles.generated.c"],
+      "status": "PASS"
+    }
+  ],
+  "binaries_packaged_from_host_tests": false
+}

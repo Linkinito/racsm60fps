@@ -1,0 +1,17 @@
+{
+  "time": "2026-09-15T22:53:47.610Z",
+  "test": "ClankSaw angular step x0.5",
+  "cpuBefore": {
+    "event": "cpu.status",
+    "ticket": "wf29-3",
+    "stepping": false,
+    "paused": false,
+    "pc": 154231188,
+    "ticks": 1328746662226
+  },
+  "before": 0.07853981852531433,
+  "after": 0.039269909262657166,
+  "address": 155421600,
+  "originalWord": 1033951612,
+  "newWord": 1025563004
+}

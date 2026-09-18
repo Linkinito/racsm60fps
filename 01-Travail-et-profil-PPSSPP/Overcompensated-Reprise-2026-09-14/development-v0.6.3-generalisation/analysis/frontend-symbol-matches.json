@@ -1,0 +1,64 @@
+[
+  {
+    "symbol": "__0FRLEVELSTARTUP_Initi",
+    "size": 56,
+    "hits": [
+      "0x19154"
+    ]
+  },
+  {
+    "symbol": "__0FYLEVELSTARTUP_Core_Renderv",
+    "size": 360,
+    "hits": []
+  },
+  {
+    "symbol": "__0FTLEVELSTARTUP_Updatev",
+    "size": 5784,
+    "hits": []
+  },
+  {
+    "symbol": "__0FTLEVELSTARTUP_Renderv",
+    "size": 44,
+    "hits": [
+      "0x19128",
+      "0x1aa24",
+      "0x1aca0",
+      "0x1b1ac"
+    ]
+  },
+  {
+    "symbol": "__0FeLEVELSTARTUP_ReloadLocDatabasev",
+    "size": 1492,
+    "hits": []
+  },
+  {
+    "symbol": "__0FiLEVELSTARTUP_GetLegalMovieFileNameUi",
+    "size": 44,
+    "hits": [
+      "0x19000",
+      "0x1902c"
+    ]
+  },
+  {
+    "symbol": "__0FiLEVELSTARTUP_GetLogosMovieFileNameUi",
+    "size": 44,
+    "hits": [
+      "0x19000",
+      "0x1902c"
+    ]
+  },
+  {
+    "symbol": "__0FXLEVELSTARTUP_ShowDialogv",
+    "size": 88,
+    "hits": [
+      "0x19058"
+    ]
+  },
+  {
+    "symbol": "__0FbLEVELSTARTUP_MainMenuRenderv",
+    "size": 120,
+    "hits": [
+      "0x190b0"
+    ]
+  }
+]

@@ -1,0 +1,28 @@
+{
+  "time": "2026-09-18T07:38:00.777Z",
+  "responses": [
+    {
+      "request": {
+        "event": "gpu.buffer.renderColor",
+        "saveBase64": "C:/Users/linki/Documents/PPSSPP/Overcompensated-Reprise-2026-09-14/research-2026-09-18-global/vanilla-render.png"
+      },
+      "result": {
+        "event": "error",
+        "message": "Could not download output",
+        "level": 2,
+        "ticket": "audit-1"
+      }
+    },
+    {
+      "request": {
+        "event": "memory.read_u32",
+        "address": 142872864
+      },
+      "result": {
+        "event": "memory.read_u32",
+        "ticket": "audit-2",
+        "value": 0
+      }
+    }
+  ]
+}

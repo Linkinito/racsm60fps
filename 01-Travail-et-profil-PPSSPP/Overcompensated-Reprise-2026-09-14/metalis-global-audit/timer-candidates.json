@@ -1,0 +1,74 @@
+[
+  {
+    "rva": "0x12cf9c",
+    "object": "ClankSawTorso",
+    "expected": "0x3c05bf80",
+    "candidate": "0x3c05bf00",
+    "reason": "f20=-1 used by object+70 and pvars+4C countdowns",
+    "state": "NOT APPLIED; verify live words, all uses, timing ownership, existing patch conflicts"
+  },
+  {
+    "rva": "0x13f584",
+    "object": "EnemyElectroTorso",
+    "expected": "0x3c04bf80",
+    "candidate": "0x3c04bf00",
+    "reason": "countdown candidate; complete use audit pending",
+    "state": "NOT APPLIED; verify live words, all uses, timing ownership, existing patch conflicts"
+  },
+  {
+    "rva": "0x13f688",
+    "object": "EnemyElectroTorso",
+    "expected": "0x3c04bf80",
+    "candidate": "0x3c04bf00",
+    "reason": "countdown candidate; complete use audit pending",
+    "state": "NOT APPLIED; verify live words, all uses, timing ownership, existing patch conflicts"
+  },
+  {
+    "rva": "0x140940",
+    "object": "EnemyRamTorso",
+    "expected": "0x3c04bf80",
+    "candidate": "0x3c04bf00",
+    "reason": "countdown candidate; complete use audit pending",
+    "state": "NOT APPLIED; verify live words, all uses, timing ownership, existing patch conflicts"
+  },
+  {
+    "rva": "0x140a8c",
+    "object": "EnemyRamTorso",
+    "expected": "0x3c04bf80",
+    "candidate": "0x3c04bf00",
+    "reason": "countdown candidate; complete use audit pending",
+    "state": "NOT APPLIED; verify live words, all uses, timing ownership, existing patch conflicts"
+  },
+  {
+    "rva": "0x141788",
+    "object": "EnemySawTorso",
+    "expected": "0x3c04bf80",
+    "candidate": "0x3c04bf00",
+    "reason": "pvars+48 countdown",
+    "state": "NOT APPLIED; verify live words, all uses, timing ownership, existing patch conflicts"
+  },
+  {
+    "rva": "0x141898",
+    "object": "EnemySawTorso",
+    "expected": "0x3c04bf80",
+    "candidate": "0x3c04bf00",
+    "reason": "countdown candidate; complete use audit pending",
+    "state": "NOT APPLIED; verify live words, all uses, timing ownership, existing patch conflicts"
+  },
+  {
+    "rva": "0x165a30",
+    "object": "ObstacleSaw",
+    "expected": "0x3c04bf80",
+    "candidate": "0x3c04bf00",
+    "reason": "object+70 state-cycle countdown",
+    "state": "NOT APPLIED; verify live words, all uses, timing ownership, existing patch conflicts"
+  },
+  {
+    "rva": "0x1364cc",
+    "object": "DestructionDerby",
+    "expected": "0x3c04bf80",
+    "candidate": "0x3c04bf00",
+    "reason": "match controller countdown candidate; complete use audit pending",
+    "state": "NOT APPLIED; verify live words, all uses, timing ownership, existing patch conflicts"
+  }
+]

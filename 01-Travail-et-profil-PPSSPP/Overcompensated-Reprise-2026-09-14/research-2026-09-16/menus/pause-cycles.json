@@ -1,0 +1,42 @@
+[
+  {
+    "rva": "0x2cf7bc",
+    "raw_hex": "00000060a0a0a0ff00000000000000000000803fcdcc4c3ecdcc4c3d010000000000000000000000",
+    "color_words": [
+      "0x60000000",
+      "0xffa0a0a0"
+    ],
+    "value_min_max_up_down": [
+      0.0,
+      0.0,
+      1.0,
+      0.20000000298023224,
+      0.05000000074505806
+    ],
+    "direction_mode_counter": [
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "rva": "0x2cf7e4",
+    "raw_hex": "808080f0ffffffff00000000000000000000803fcdcc4c3ecdcc4c3d010000000000000000000000",
+    "color_words": [
+      "0xf0808080",
+      "0xffffffff"
+    ],
+    "value_min_max_up_down": [
+      0.0,
+      0.0,
+      1.0,
+      0.20000000298023224,
+      0.05000000074505806
+    ],
+    "direction_mode_counter": [
+      1,
+      0,
+      0
+    ]
+  }
+]

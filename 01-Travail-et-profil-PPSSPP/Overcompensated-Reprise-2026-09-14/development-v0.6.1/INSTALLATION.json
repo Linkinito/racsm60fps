@@ -1,0 +1,11 @@
+{
+  "frame_rate": 60,
+  "backup": "C:\\Users\\linki\\Documents\\PPSSPP\\Overcompensated-Reprise-2026-09-14\\sessions\\before-dev061-20260917-003800",
+  "current_process_unchanged": true,
+  "time": "2026-09-17T00:38:01.1585281+02:00",
+  "installed_prx_sha256": "67c16bc1caafc6d340de785f4bf0e15de61ce40f41699a3699cb5b71cd8e9341",
+  "runtime_tested": false,
+  "version": "0.6.1-metalis-integration-dev.2",
+  "restart_required": true,
+  "previous_prx_sha256": "906f026ec375934539baa3ba23866464ae2832f5f8af4366853e6dc4d6124f0d"
+}

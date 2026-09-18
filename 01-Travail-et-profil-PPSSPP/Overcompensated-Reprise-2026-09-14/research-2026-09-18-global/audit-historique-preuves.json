@@ -1,0 +1,40 @@
+{
+  "scope": "Read-only historical source/binary audit; no new in-game execution",
+  "conversation": {
+    "title": "Revoir le travail effectué",
+    "id": "01a0b0ad-babe-79e1-a191-76793e7c4a84",
+    "turns_read": 10,
+    "pagination_complete": true
+  },
+  "new_pickup_rows": 45,
+  "originals_verified_against_prx": 45,
+  "rows_differing_from_metalis": 27,
+  "differing_labels": [
+    "pickup max speed",
+    "pickup steering at cap",
+    "pickup steering below cap"
+  ],
+  "metalis_runtime_cave_guard": {
+    "template_word": "0x3C043F00",
+    "guard_requires": "0x3C043F80",
+    "condition_fails": true,
+    "consequence": "prepare_full_patch returns 0 for module4 in historical v0.6.3; 60fps installation refused and 30fps confirmation refused"
+  },
+  "original_prx_sha256": {
+    "LEVEL_01": "d10a81d076fb44987a45314a020cda2f7e8b39f860b957911ca9365464676571",
+    "LEVEL_02": "0037689a926197969231795c4d6b05980e5e94558394617b21e8b8bcd79bc8aa",
+    "LEVEL_03": "4b6cf5e41ab9f3f30e182f15752a4d9d264904794ce568582fa78ad8177e8b94",
+    "LEVEL_05": "af7474d3af87dd392717d45b2be30a3512ab5f6df3f449e1ac15ce9971a75bbb",
+    "LEVEL_06": "c7953cd34e82fbea8fca4125cd5f30581fa8450b858e454f83968b2cd0fec39c",
+    "LEVEL_07": "40e236a82cce9be46044a06945dcd0e7aab754e91d1eb7bb75b8040101dc233d",
+    "LEVEL_08": "c6906ca8805ec805063036429ecc86ce316efdd386641e87fc8c92dd90dad8a8",
+    "LEVEL_09": "5674dd1a09d43d0a35578a1252ce46035d6f64a139dc2660bb25a941f78e6370",
+    "LEVEL_10": "07f9010f78cf6f49f8fdad0dbf89ce20375dff600183117605c3ebf231583772"
+  },
+  "source_sha256": {
+    "development-v0.6.3-generalisation\\sources\\profiler\\generated\\generalisation-experiments.json": "f1994c0f7ad14032572b5a15302fab57f6b9f42a2b92421889c0ebae1b75e30c",
+    "development-v0.6.3-generalisation\\sources\\profiler\\generated\\metalis-experiments.json": "276e44e941895c9f67eb345ee2102de05b439c6106fe9e5acea13d569807fa5d",
+    "development-v0.6.3-generalisation\\sources\\profiler\\generated\\full_patch.generated.c": "6c88ca9769956bd272730fe0cee0d648ae4aaafba15d2a5f19c3eb7056718216",
+    "development-v0.6.3-generalisation\\sources\\profiler\\src\\psp_plugin_runtime.c": "b2f2a2c91054e2a623db5e41ed0df24462398709407dcb37ba97638b16bc8c5a"
+  }
+}

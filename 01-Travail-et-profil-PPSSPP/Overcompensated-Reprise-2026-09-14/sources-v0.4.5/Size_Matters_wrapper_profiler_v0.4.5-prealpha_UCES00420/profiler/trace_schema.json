@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/rcsm-wrapper-trace-v4.schema.json",
+  "title": "RCSM wrapper trace v4",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "game_id",
+    "plugin_version",
+    "target_environment",
+    "mode",
+    "reason",
+    "module_index",
+    "module_key",
+    "sample_unit",
+    "capture",
+    "unknown_hits",
+    "entries"
+  ],
+  "properties": {
+    "schema": {"const": "rcsm-wrapper-trace/4"},
+    "game_id": {"const": "UCES00420"},
+    "plugin_version": {"type": "string", "minLength": 1},
+    "target_environment": {"type": "string", "minLength": 1},
+    "mode": {"enum": ["detect_only", "single_pokitaru", "focused_pokitaru", "full_module"]},
+    "reason": {"enum": ["manual", "module_transition", "redirect_health_change", "plugin_stop"]},
+    "module_index": {
+      "enum": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 21, 22, 23, 24]
+    },
+    "module_key": {"pattern": "^LEVEL_[0-9]{2}$"},
+    "sample_unit": {"const": "vblank"},
+    "capture": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["start_sample", "end_sample", "installed_callsites", "equivalent_profile_matches", "reference_base", "runtime_base", "address_delta", "resolution_source"],
+      "properties": {
+        "start_sample": {"type": "integer", "minimum": 0, "maximum": 4294967295},
+        "end_sample": {"type": "integer", "minimum": 0, "maximum": 4294967295},
+        "installed_callsites": {"type": "integer", "minimum": 0, "maximum": 64},
+        "equivalent_profile_matches": {"type": "integer", "minimum": 1, "maximum": 15},
+        "reference_base": {"const": "0x09139D00"},
+        "runtime_base": {"type": "string", "pattern": "^0x[0-9A-F]{8}$"},
+        "address_delta": {"type": "integer", "minimum": -2147483648, "maximum": 2147483647},
+        "resolution_source": {"enum": ["module_api", "fallback_scan"]}
+      }
+    },
+    "unknown_hits": {"type": "integer", "minimum": 0, "maximum": 4294967295},
+    "entries": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 64,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["ra", "runtime_ra", "family_id", "installed", "hits", "first_sample", "last_sample", "active_vblanks", "same_vblank_hits", "max_hits_per_vblank", "gap_1_vblank", "gap_2_vblank", "gap_other_vblank"],
+        "properties": {
+          "ra": {"type": "string", "pattern": "^0x[0-9A-F]{8}$"},
+          "runtime_ra": {"type": "string", "pattern": "^0x[0-9A-F]{8}$"},
+          "family_id": {"type": "string", "pattern": "^WF-[0-9]{3}$"},
+          "installed": {"type": "boolean"},
+          "hits": {"type": "integer", "minimum": 0, "maximum": 4294967295},
+          "first_sample": {"type": "integer", "minimum": 0, "maximum": 4294967295},
+          "last_sample": {"type": "integer", "minimum": 0, "maximum": 4294967295},
+          "active_vblanks": {"type": "integer", "minimum": 0, "maximum": 4294967295},
+          "same_vblank_hits": {"type": "integer", "minimum": 0, "maximum": 4294967295},
+          "max_hits_per_vblank": {"type": "integer", "minimum": 0, "maximum": 4294967295},
+          "gap_1_vblank": {"type": "integer", "minimum": 0, "maximum": 4294967295},
+          "gap_2_vblank": {"type": "integer", "minimum": 0, "maximum": 4294967295},
+          "gap_other_vblank": {"type": "integer", "minimum": 0, "maximum": 4294967295}
+        }
+      }
+    }
+  }
+}

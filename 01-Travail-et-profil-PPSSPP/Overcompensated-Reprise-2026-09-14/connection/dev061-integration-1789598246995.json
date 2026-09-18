@@ -1,0 +1,5 @@
+{
+  "time": "2026-09-16T22:37:26.986Z",
+  "scope": "read-only integration check; not gameplay validation",
+  "error": "Error: New plugin not running: restart PPSSPP and load Metalis from the game save"
+}

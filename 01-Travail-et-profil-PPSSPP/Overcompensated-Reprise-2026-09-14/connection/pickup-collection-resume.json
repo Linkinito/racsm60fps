@@ -1,0 +1,14 @@
+{
+  "time": "2026-09-16T21:14:26.524Z",
+  "plan": "pickup-collection-1789593231151.json",
+  "cpu": {
+    "event": "cpu.status",
+    "ticket": "wf29-10",
+    "stepping": false,
+    "paused": false,
+    "pc": 142628724,
+    "ticks": 3050230120709
+  },
+  "installed": 1,
+  "persistent": true
+}

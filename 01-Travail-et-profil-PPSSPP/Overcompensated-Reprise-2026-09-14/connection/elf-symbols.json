@@ -1,0 +1,30 @@
+{
+  "g_binding": {
+    "value": 72576,
+    "size": 1164
+  },
+  "g_config": {
+    "value": 65020,
+    "size": 620
+  },
+  "g_profiler": {
+    "value": 73740,
+    "size": 2568
+  },
+  "rcsm_profiler_hook_l04": {
+    "value": 18004,
+    "size": 28
+  },
+  "rcsm_profiler_hook_l04_one": {
+    "value": 18032,
+    "size": 28
+  },
+  "g_rcsm_active_hook_count": {
+    "value": 65808,
+    "size": 4
+  },
+  "g_rcsm_active_module_index": {
+    "value": 65804,
+    "size": 4
+  }
+}

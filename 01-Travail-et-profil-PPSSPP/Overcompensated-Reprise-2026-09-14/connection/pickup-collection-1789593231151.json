@@ -1,0 +1,88 @@
+{
+  "time": "2026-09-16T21:13:51.149Z",
+  "changes": [
+    {
+      "address": 153620476,
+      "rva": 1266428,
+      "before": 1006944128,
+      "after": 1006944000,
+      "label": "Nanotech attraction timer -1 -> -0.5",
+      "verified": true
+    },
+    {
+      "address": 153615780,
+      "rva": 1261732,
+      "before": 1007009664,
+      "after": 1007009536,
+      "label": "Nanotech fade timer -1 -> -0.5",
+      "verified": true
+    },
+    {
+      "address": 155382340,
+      "rva": 3028292,
+      "before": 1036831950,
+      "after": 1028443342,
+      "label": "pickup initial speed",
+      "originalFloat": 0.10000000894069672,
+      "newFloat": 0.05000000447034836,
+      "verified": true
+    },
+    {
+      "address": 155382356,
+      "rva": 3028308,
+      "before": 1031127696,
+      "after": 1014350480,
+      "label": "pickup acceleration",
+      "originalFloat": 0.06000000238418579,
+      "newFloat": 0.015000000596046448,
+      "verified": true
+    },
+    {
+      "address": 155382360,
+      "rva": 3028312,
+      "before": 1051372203,
+      "after": 1042983595,
+      "label": "pickup max speed",
+      "originalFloat": 0.3333333432674408,
+      "newFloat": 0.1666666716337204,
+      "verified": true
+    },
+    {
+      "address": 155382364,
+      "rva": 3028316,
+      "before": 1034147594,
+      "after": 1025982779,
+      "label": "pickup steering below cap",
+      "originalFloat": 0.07999999821186066,
+      "newFloat": 0.04083369440532403,
+      "verified": true
+    },
+    {
+      "address": 155382368,
+      "rva": 3028320,
+      "before": 1045220557,
+      "after": 1037579919,
+      "label": "pickup steering at cap",
+      "originalFloat": 0.20000000298023224,
+      "newFloat": 0.1055728106660846,
+      "verified": true
+    }
+  ],
+  "status": "applied_verified_CPU_suspended",
+  "base": 152354048,
+  "plugin": 144011520,
+  "nano": {
+    "name": "DerbyPowerupHealth",
+    "descriptor": 157685376,
+    "object": 157802592,
+    "update": 153615472,
+    "state": 2,
+    "timer": 0,
+    "pvars": 164349856,
+    "props": 0,
+    "attractionTime": 31.000896453857422,
+    "fadeTime": -0.9992828369140625,
+    "target": 157714144,
+    "targetDescriptor": 157678896
+  }
+}

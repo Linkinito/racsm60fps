@@ -1,0 +1,30 @@
+{
+  "time": "2026-09-18T07:37:30.874Z",
+  "responses": [
+    {
+      "request": {
+        "event": "cpu.status"
+      },
+      "result": {
+        "event": "cpu.status",
+        "ticket": "audit-1",
+        "stepping": true,
+        "paused": false,
+        "pc": 142628724,
+        "ticks": 31499806109
+      }
+    },
+    {
+      "request": {
+        "event": "gpu.buffer.screenshot",
+        "saveBase64": "C:/Users/linki/Documents/PPSSPP/Overcompensated-Reprise-2026-09-14/research-2026-09-18-global/vanilla-start.png"
+      },
+      "result": {
+        "event": "error",
+        "message": "Could not download output",
+        "level": 2,
+        "ticket": "audit-2"
+      }
+    }
+  ]
+}

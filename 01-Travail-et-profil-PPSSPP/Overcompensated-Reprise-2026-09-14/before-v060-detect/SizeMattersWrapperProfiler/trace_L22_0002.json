@@ -1,0 +1,26 @@
+{
+  "schema": "rcsm-wrapper-trace/4",
+  "game_id": "UCES00420",
+  "plugin_version": "0.4.5-prealpha",
+  "target_environment": "PPSSPP 1.19.3 / Windows 11",
+  "mode": "full_module",
+  "reason": "module_transition",
+  "module_index": 22,
+  "module_key": "LEVEL_22",
+  "sample_unit": "vblank",
+  "capture": {"start_sample": 5646, "end_sample": 15513, "installed_callsites": 0, "equivalent_profile_matches": 1, "reference_base": "0x09139D00", "runtime_base": "0x09141D00", "address_delta": 32768, "resolution_source": "module_api"},
+  "unknown_hits": 0,
+  "entries": [
+    {"ra": "0x09147AE4", "runtime_ra": "0x0914FAE4", "family_id": "WF-005", "installed": false, "hits": 0, "first_sample": 0, "last_sample": 0, "active_vblanks": 0, "same_vblank_hits": 0, "max_hits_per_vblank": 0, "gap_1_vblank": 0, "gap_2_vblank": 0, "gap_other_vblank": 0},
+    {"ra": "0x09147B00", "runtime_ra": "0x0914FB00", "family_id": "WF-005", "installed": false, "hits": 0, "first_sample": 0, "last_sample": 0, "active_vblanks": 0, "same_vblank_hits": 0, "max_hits_per_vblank": 0, "gap_1_vblank": 0, "gap_2_vblank": 0, "gap_other_vblank": 0},
+    {"ra": "0x09147B1C", "runtime_ra": "0x0914FB1C", "family_id": "WF-005", "installed": false, "hits": 0, "first_sample": 0, "last_sample": 0, "active_vblanks": 0, "same_vblank_hits": 0, "max_hits_per_vblank": 0, "gap_1_vblank": 0, "gap_2_vblank": 0, "gap_other_vblank": 0},
+    {"ra": "0x0917A3B8", "runtime_ra": "0x091823B8", "family_id": "WF-002", "installed": false, "hits": 0, "first_sample": 0, "last_sample": 0, "active_vblanks": 0, "same_vblank_hits": 0, "max_hits_per_vblank": 0, "gap_1_vblank": 0, "gap_2_vblank": 0, "gap_other_vblank": 0},
+    {"ra": "0x0917AA94", "runtime_ra": "0x09182A94", "family_id": "WF-001", "installed": false, "hits": 0, "first_sample": 0, "last_sample": 0, "active_vblanks": 0, "same_vblank_hits": 0, "max_hits_per_vblank": 0, "gap_1_vblank": 0, "gap_2_vblank": 0, "gap_other_vblank": 0},
+    {"ra": "0x0917AAC8", "runtime_ra": "0x09182AC8", "family_id": "WF-001", "installed": false, "hits": 0, "first_sample": 0, "last_sample": 0, "active_vblanks": 0, "same_vblank_hits": 0, "max_hits_per_vblank": 0, "gap_1_vblank": 0, "gap_2_vblank": 0, "gap_other_vblank": 0},
+    {"ra": "0x0917AC44", "runtime_ra": "0x09182C44", "family_id": "WF-001", "installed": false, "hits": 0, "first_sample": 0, "last_sample": 0, "active_vblanks": 0, "same_vblank_hits": 0, "max_hits_per_vblank": 0, "gap_1_vblank": 0, "gap_2_vblank": 0, "gap_other_vblank": 0},
+    {"ra": "0x0917E8E4", "runtime_ra": "0x091868E4", "family_id": "WF-003", "installed": false, "hits": 0, "first_sample": 0, "last_sample": 0, "active_vblanks": 0, "same_vblank_hits": 0, "max_hits_per_vblank": 0, "gap_1_vblank": 0, "gap_2_vblank": 0, "gap_other_vblank": 0},
+    {"ra": "0x091867C0", "runtime_ra": "0x0918E7C0", "family_id": "WF-004", "installed": false, "hits": 0, "first_sample": 0, "last_sample": 0, "active_vblanks": 0, "same_vblank_hits": 0, "max_hits_per_vblank": 0, "gap_1_vblank": 0, "gap_2_vblank": 0, "gap_other_vblank": 0},
+    {"ra": "0x0923E378", "runtime_ra": "0x09246378", "family_id": "WF-006", "installed": false, "hits": 0, "first_sample": 0, "last_sample": 0, "active_vblanks": 0, "same_vblank_hits": 0, "max_hits_per_vblank": 0, "gap_1_vblank": 0, "gap_2_vblank": 0, "gap_other_vblank": 0},
+    {"ra": "0x09242F7C", "runtime_ra": "0x0924AF7C", "family_id": "WF-024", "installed": false, "hits": 0, "first_sample": 0, "last_sample": 0, "active_vblanks": 0, "same_vblank_hits": 0, "max_hits_per_vblank": 0, "gap_1_vblank": 0, "gap_2_vblank": 0, "gap_other_vblank": 0}
+  ]
+}

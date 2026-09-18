@@ -1,0 +1,17 @@
+{
+  "levels": 15,
+  "objects": 1927,
+  "unique_object_names": 538,
+  "callbacks": 5971,
+  "functions": 85452,
+  "candidate_sites": 38219,
+  "candidate_kinds": {
+    "integer_unit_read_modify_write": 6064,
+    "float_read_modify_write": 14286,
+    "float_multiplicative_read_modify_write": 10873,
+    "float_fixed_step_read_modify_write": 3565,
+    "float_constant_arithmetic_store": 3431
+  },
+  "candidate_sites_outside_wrapper_families": 37341,
+  "elapsed_seconds": 36.17
+}

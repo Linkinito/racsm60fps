@@ -1,0 +1,18 @@
+35:08:852 ExecLoader   N[BOOT]: Core\System.cpp:593 PPSSPP v1.19.3
+35:08:858 ExecLoader   N[G3D]: Core\Compatibility.cpp:165 UnitsPerMeter for UCES00420: 1.000000
+35:08:874 ExecLoader   E[IO]: File\FileUtil.cpp:979 CreateEmptyFile: failed to create 'C:/Program Files/PPSSPP/assets/flash0/wJpCzSBNnZfxSgoS': Accès refusé.
+35:08:991 root         N[BOOT]: UI\EmuScreen.cpp:381 Booted C:/Users/linki/Downloads/Ratchet & Clank - Size Matters (Europe) (PSN)/Ratchet & Clank - Size Matters (Europe) (PSN).iso...
+35:10:202 level load & E[SCEMODULE]: HLE\sceKernelModule.cpp:2540 UNTESTED sceKernelGetModuleIdList(09fcd540, 1024, 09fcd940)
+35:10:234 user_main    E[SCEMODULE]: HLE\sceKernelModule.cpp:2540 UNTESTED sceKernelGetModuleIdList(09fccd00, 1024, 09fcd100)
+35:11:403 user_main    E[SCEKERNEL]: HLE\sceKernelMutex.cpp:542 SCE_MUTEX_ERROR_NO_SUCH_MUTEX=sceKernelLockMutex(0, 1, 00000000)
+35:11:403 user_main    E[SCEKERNEL]: HLE\sceKernelMutex.cpp:621 SCE_MUTEX_ERROR_NO_SUCH_MUTEX=sceKernelUnlockMutex(0, 1)
+35:11:403 user_main    E[SCEKERNEL]: HLE\sceKernelMutex.cpp:542 SCE_MUTEX_ERROR_NO_SUCH_MUTEX=sceKernelLockMutex(0, 1, 00000000)
+35:11:403 user_main    E[SCEKERNEL]: HLE\sceKernelMutex.cpp:621 SCE_MUTEX_ERROR_NO_SUCH_MUTEX=sceKernelUnlockMutex(0, 1)
+35:11:435 user_main    E[SCEKERNEL]: HLE\sceKernelMutex.cpp:542 SCE_MUTEX_ERROR_NO_SUCH_MUTEX=sceKernelLockMutex(0, 1, 00000000)
+35:11:435 user_main    E[SCEKERNEL]: HLE\sceKernelMutex.cpp:621 SCE_MUTEX_ERROR_NO_SUCH_MUTEX=sceKernelUnlockMutex(0, 1)
+35:11:435 user_main    E[SCEKERNEL]: HLE\sceKernelMutex.cpp:542 SCE_MUTEX_ERROR_NO_SUCH_MUTEX=sceKernelLockMutex(0, 1, 00000000)
+35:11:435 user_main    E[SCEKERNEL]: HLE\sceKernelMutex.cpp:621 SCE_MUTEX_ERROR_NO_SUCH_MUTEX=sceKernelUnlockMutex(0, 1)
+35:11:435 user_main    E[SCEKERNEL]: HLE\sceKernelMutex.cpp:542 SCE_MUTEX_ERROR_NO_SUCH_MUTEX=sceKernelLockMutex(0, 1, 00000000)
+35:11:435 user_main    E[SCEKERNEL]: HLE\sceKernelMutex.cpp:621 SCE_MUTEX_ERROR_NO_SUCH_MUTEX=sceKernelUnlockMutex(0, 1)
+35:11:436 user_main    E[SCEKERNEL]: HLE\sceKernelMutex.cpp:542 SCE_MUTEX_ERROR_NO_SUCH_MUTEX=sceKernelLockMutex(0, 1, 00000000)
+35:11:436 user_main    E[SCEKERNEL]: HLE\sceKernelMutex.cpp:621 SCE_MUTEX_ERROR_NO_SUCH_MUTEX=sceKernelUnlockMutex(0, 1)

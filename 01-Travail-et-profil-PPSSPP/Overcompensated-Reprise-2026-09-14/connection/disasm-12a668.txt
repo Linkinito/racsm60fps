@@ -1,0 +1,14 @@
+0012A668 e0ffbd27 addiu     $sp, $sp, -0x20
+0012A66C 1000b0af sw        $s0, 0x10($sp)
+0012A670 25808000 move      $s0, $a0
+0012A674 5400048e lw        $a0, 0x54($s0)
+0012A678 25280002 move      $a1, $s0
+0012A67C 1400bfaf sw        $ra, 0x14($sp)
+0012A680 c44b060c jal       0x192f10
+0012A684 0000848c lw        $a0, ($a0)
+0012A688 d06c060c jal       0x19b340
+0012A68C 25200002 move      $a0, $s0
+0012A690 1000b08f lw        $s0, 0x10($sp)
+0012A694 1400bf8f lw        $ra, 0x14($sp)
+0012A698 0800e003 jr        $ra
+0012A69C 2000bd27 addiu     $sp, $sp, 0x20

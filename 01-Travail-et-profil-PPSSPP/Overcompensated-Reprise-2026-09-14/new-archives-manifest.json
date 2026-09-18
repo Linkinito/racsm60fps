@@ -1,0 +1,16 @@
+[
+  {
+    "source": "C:\\Users\\linki\\Downloads\\Size_Matters_wrapper_dispatcher_v0.5.0-prealpha_UCES00420.zip",
+    "copy": "C:\\Users\\linki\\Documents\\PPSSPP\\Overcompensated-Reprise-2026-09-14\\archives\\Size_Matters_wrapper_dispatcher_v0.5.0-prealpha_UCES00420.zip",
+    "sha256": "07863b80cdccdc3cd4710ea536b3f5f0847c54066946086a4b62c8e6840a13ab",
+    "bytes": 441621,
+    "members": 65
+  },
+  {
+    "source": "C:\\Users\\linki\\Downloads\\Overcompensated_v0.6.0_global_experimental_UCES00420.zip",
+    "copy": "C:\\Users\\linki\\Documents\\PPSSPP\\Overcompensated-Reprise-2026-09-14\\archives\\Overcompensated_v0.6.0_global_experimental_UCES00420.zip",
+    "sha256": "dc49303f338abf17330210a9dd72b58c1cf169bad22104068fa32534530c64f9",
+    "bytes": 467177,
+    "members": 60
+  }
+]

@@ -1,0 +1,45 @@
+{
+  "timestamp": "2026-09-16T22:26:19.304Z",
+  "endpoint": "ws://127.0.0.1:60907/debugger",
+  "requests": [
+    {
+      "event": "version",
+      "fields": {
+        "name": "Overcompensated local probe",
+        "version": "0.1.0"
+      },
+      "result": {
+        "event": "version",
+        "ticket": "probe-1",
+        "name": "PPSSPP",
+        "version": "v1.19.3"
+      }
+    },
+    {
+      "event": "game.status",
+      "fields": {},
+      "result": {
+        "event": "game.status",
+        "ticket": "probe-2",
+        "game": {
+          "id": "UCES00420",
+          "version": "1.00",
+          "title": "Ratchet and Clank: Size Matters"
+        },
+        "paused": false
+      }
+    },
+    {
+      "event": "memory.read_u32",
+      "fields": {
+        "address": 142872864
+      },
+      "result": {
+        "event": "memory.read_u32",
+        "ticket": "probe-3",
+        "value": 4
+      }
+    }
+  ],
+  "connected": true
+}

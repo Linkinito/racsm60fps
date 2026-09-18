@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "scope": "host simulation and trace parsing; no PPSSPP gameplay",
+  "asan_ubsan": false,
+  "suites": [
+    {
+      "suite": "test_menu",
+      "status": "PASS",
+      "output": "PASS native menu ownership, routing, three contexts, 24 list sizes, rebuild and bounds"
+    },
+    {
+      "suite": "test_fps_choice",
+      "status": "PASS",
+      "output": "fps_choice: PASS; deferred request, cancellation, failure and both directions"
+    },
+    {
+      "suite": "test_full_patch",
+      "status": "PASS",
+      "output": "full_patch: PASS; 600 module/delta/layer scenarios; 1393 injected write failures"
+    },
+    {
+      "suite": "test_profiler_core",
+      "status": "PASS",
+      "output": "{\"status\":\"PASS\",\"modules\":15,\"callsites\":493,\"max_active\":57,\"anchors\":1,\"policy_redirects\":\"PASS\"}"
+    },
+    {
+      "suite": "test_format",
+      "status": "PASS",
+      "output": "{\"status\":\"PASS\",\"formatter\":\"bounded\"}"
+    },
+    {
+      "suite": "test_trace_parser",
+      "status": "PASS",
+      "output": "{\"status\": \"PASS\", \"trace_schema\": 5, \"entries\": 55, \"address_delta\": 28672}"
+    }
+  ]
+}

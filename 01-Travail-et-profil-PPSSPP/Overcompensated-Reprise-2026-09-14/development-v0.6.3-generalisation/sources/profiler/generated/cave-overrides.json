@@ -1,0 +1,16 @@
+{
+  "status": "experimental_not_release_validated",
+  "label": "Generalisation du correctif de collision des debris",
+  "note": "La cave 7 est installee dans les quinze modules couverts : ce seul mot corrige les debris partout. Valeur verifiee avant ecriture par le generateur.",
+  "changes": [
+    {
+      "cave_index": 7,
+      "word_index": 34,
+      "original": 1006911360,
+      "patched": 1006911232,
+      "label": "debris collision dt 1.0 -> 0.5 (0x3C043F80 -> 0x3C043F00)",
+      "evidence": "connection/debris-collision-1789592905266.json",
+      "validation": "experimental_user_reported_normal"
+    }
+  ]
+}

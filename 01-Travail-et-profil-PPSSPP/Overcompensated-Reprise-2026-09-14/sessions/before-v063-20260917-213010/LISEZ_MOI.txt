@@ -1,0 +1,16 @@
+Sauvegarde reconstituee - etat AVANT l'installation de 0.6.3-generalisation-dev.1
+
+Attention : la copie automatique initiale a echoue (dossier vide). Cette sauvegarde a
+ete reconstituee a partir de copies archivees, verifiees par empreinte :
+
+  patch.prx          <- development-v0.6.2-menu/runtime-dev1/patch.prx
+                        (binaire dev.1 exact qui etait installe : SHA d1239a3f..., deja verifie)
+  RCSMProfiler.ini   <- sessions/before-native-menu-20260917-193300/SizeMattersWrapperProfiler/
+                        (meme fichier que celui installe : meme taille et meme date, 1040 o, 17/09 00:35)
+  plugin.ini         <- inchange, recopie depuis le dossier du plugin
+  status.log, traces, Overcompensated.fps
+                     <- jamais ecrases lors de l'installation : ce sont les fichiers d'origine
+
+Restauration complete :
+  copier le contenu de ce dossier dans PSP/PLUGINS/SizeMattersWrapperProfiler/ (PPSSPP ferme),
+  puis relancer le jeu depuis l'ISO propre, par une sauvegarde normale.

@@ -1,0 +1,20 @@
+000FBB60 e0ffbd27 addiu     $sp, $sp, -0x20
+000FBB64 1000b4e7 swc1      $f20, 0x10($sp)
+000FBB68 06650046 mov.s     $f20, $f12
+000FBB6C 1400b6e7 swc1      $f22, 0x14($sp)
+000FBB70 1800b0af sw        $s0, 0x18($sp)
+000FBB74 1c00bfaf sw        $ra, 0x1c($sp)
+000FBB78 73e3060c jal       0x1b8dcc
+000FBB7C 25808000 move      $s0, $a0
+000FBB80 06a30046 mov.s     $f12, $f20
+000FBB84 29e3060c jal       0x1b8ca4
+000FBB88 86050046 mov.s     $f22, $f0
+000FBB8C 000000e6 swc1      $f0, ($s0)
+000FBB90 00688044 mtc1      $zero, $f13
+000FBB94 04000de6 swc1      $f13, 4($s0)
+000FBB98 87b30046 neg.s     $f14, $f22
+000FBB9C 08000ee6 swc1      $f14, 8($s0)
+000FBBA0 0c000de6 swc1      $f13, 0xc($s0)
+000FBBA4 803f043c lui       $a0, 0x3f80
+000FBBA8 00608444 mtc1      $a0, $f12
+000FBBAC 14000de6 swc1      $f13, 0x14($s0)

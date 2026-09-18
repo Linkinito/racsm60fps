@@ -1,0 +1,47 @@
+{
+  "time": "2026-09-15T23:04:33.300Z",
+  "controller": {
+    "name": "VehicleController",
+    "descriptor": 157678816,
+    "object": 157712864,
+    "update": 154014684,
+    "pvars": 164313088,
+    "props": 157692608
+  },
+  "count": 4,
+  "enabled": 1,
+  "vehicles": [
+    {
+      "object": 157714144,
+      "name": "ClankSawTorso",
+      "descriptor": 157678896,
+      "pvars": 164313856,
+      "controllerMethods": 155378028,
+      "flags": 37393
+    },
+    {
+      "object": 157715040,
+      "name": "EnemyElectroTorso",
+      "descriptor": 157679056,
+      "pvars": 164314304,
+      "controllerMethods": 155385572,
+      "flags": 33297
+    },
+    {
+      "object": 157717856,
+      "name": "EnemyRamTorso",
+      "descriptor": 157679296,
+      "pvars": 164316192,
+      "controllerMethods": 155385920,
+      "flags": 1082129
+    },
+    {
+      "object": 157717984,
+      "name": "EnemyRamTorso",
+      "descriptor": 157679296,
+      "pvars": 164316472,
+      "controllerMethods": 155385920,
+      "flags": 33041
+    }
+  ]
+}

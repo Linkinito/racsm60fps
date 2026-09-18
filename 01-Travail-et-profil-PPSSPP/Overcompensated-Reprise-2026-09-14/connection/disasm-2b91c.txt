@@ -1,0 +1,31 @@
+0002B91C a0ffbd27 addiu     $sp, $sp, -0x60
+0002B920 4400b0af sw        $s0, 0x44($sp)
+0002B924 4800b1af sw        $s1, 0x48($sp)
+0002B928 4c00b2af sw        $s2, 0x4c($sp)
+0002B92C 5000bfaf sw        $ra, 0x50($sp)
+0002B930 2580c000 move      $s0, $a2
+0002B934 2588a000 move      $s1, $a1
+0002B938 25908000 move      $s2, $a0
+0002B93C 04004426 addiu     $a0, $s2, 4
+0002B940 08004526 addiu     $a1, $s2, 8
+0002B944 20000dc6 lwc1      $f13, 0x20($s0)
+0002B948 24000ec6 lwc1      $f14, 0x24($s0)
+0002B94C 5538000c jal       0xe154
+0002B950 28000fc6 lwc1      $f15, 0x28($s0)
+0002B954 04004cc6 lwc1      $f12, 4($s2)
+0002B958 08000dc6 lwc1      $f13, 8($s0)
+0002B95C 02630d46 mul.s     $f12, $f12, $f13
+0002B960 2000b027 addiu     $s0, $sp, 0x20
+0002B964 07630046 neg.s     $f12, $f12
+0002B968 d8ee030c jal       0xfbb60
+0002B96C 25200002 move      $a0, $s0
+0002B970 25202002 move      $a0, $s1
+0002B974 25282002 move      $a1, $s1
+0002B978 b6fe030c jal       0xffad8
+0002B97C 25300002 move      $a2, $s0
+0002B980 4400b08f lw        $s0, 0x44($sp)
+0002B984 4800b18f lw        $s1, 0x48($sp)
+0002B988 4c00b28f lw        $s2, 0x4c($sp)
+0002B98C 5000bf8f lw        $ra, 0x50($sp)
+0002B990 0800e003 jr        $ra
+0002B994 6000bd27 addiu     $sp, $sp, 0x60

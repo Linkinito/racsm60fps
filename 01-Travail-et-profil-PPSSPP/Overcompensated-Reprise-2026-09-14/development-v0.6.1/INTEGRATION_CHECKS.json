@@ -1,0 +1,10 @@
+{
+  "status": "PASS_STATIC_ONLY",
+  "unchanged_other_modules": 14,
+  "metalis_entries": 167,
+  "unique_addresses": true,
+  "unlock_last": true,
+  "generator_reproducible": true,
+  "added_original_words_verified": 54,
+  "scope": "generation only; see VALIDATION_SUMMARY.json"
+}

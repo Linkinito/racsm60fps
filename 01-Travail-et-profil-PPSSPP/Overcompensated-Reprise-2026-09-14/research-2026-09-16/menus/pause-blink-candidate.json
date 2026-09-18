@@ -1,0 +1,36 @@
+{
+  "status": "static_candidate_not_applied",
+  "module": "LEVEL_04.PRX",
+  "sha256": "6896122ac19973e928303dc94c40fa309b5f06e5fef6ab14f624987035a4dc37",
+  "function_rva": "0xA6A34",
+  "writes": [
+    {
+      "rva": "0x2cf7d0",
+      "expected": "0x3e4ccccd",
+      "replacement": "0x3dcccccd",
+      "original_float": 0.20000000298023224,
+      "replacement_float": 0.10000000149011612
+    },
+    {
+      "rva": "0x2cf7d4",
+      "expected": "0x3d4ccccd",
+      "replacement": "0x3ccccccd",
+      "original_float": 0.05000000074505806,
+      "replacement_float": 0.02500000037252903
+    },
+    {
+      "rva": "0x2cf7f8",
+      "expected": "0x3e4ccccd",
+      "replacement": "0x3dcccccd",
+      "original_float": 0.20000000298023224,
+      "replacement_float": 0.10000000149011612
+    },
+    {
+      "rva": "0x2cf7fc",
+      "expected": "0x3d4ccccd",
+      "replacement": "0x3ccccccd",
+      "original_float": 0.05000000074505806,
+      "replacement_float": 0.02500000037252903
+    }
+  ]
+}

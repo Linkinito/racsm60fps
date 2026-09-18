@@ -1,0 +1,12 @@
+﻿ra,runtime_ra,family_id,installed,hits,first_sample,last_sample,active_vblanks,same_vblank_hits,max_hits_per_vblank,gap_1_vblank,gap_2_vblank,gap_other_vblank
+0x09147AE4,0x0914FAE4,WF-005,False,0,0,0,0,0,0,0,0,0
+0x09147B00,0x0914FB00,WF-005,False,0,0,0,0,0,0,0,0,0
+0x09147B1C,0x0914FB1C,WF-005,False,0,0,0,0,0,0,0,0,0
+0x0917A3B8,0x091823B8,WF-002,False,0,0,0,0,0,0,0,0,0
+0x0917AA94,0x09182A94,WF-001,False,0,0,0,0,0,0,0,0,0
+0x0917AAC8,0x09182AC8,WF-001,False,0,0,0,0,0,0,0,0,0
+0x0917AC44,0x09182C44,WF-001,False,0,0,0,0,0,0,0,0,0
+0x0917E8E4,0x091868E4,WF-003,False,0,0,0,0,0,0,0,0,0
+0x091867C0,0x0918E7C0,WF-004,False,0,0,0,0,0,0,0,0,0
+0x0923E378,0x09246378,WF-006,False,0,0,0,0,0,0,0,0,0
+0x09242F7C,0x0924AF7C,WF-024,False,0,0,0,0,0,0,0,0,0

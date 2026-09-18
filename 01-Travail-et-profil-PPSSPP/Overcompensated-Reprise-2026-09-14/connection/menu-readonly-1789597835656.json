@@ -1,0 +1,45 @@
+{
+  "time": "2026-09-16T22:30:35.625Z",
+  "game": {
+    "event": "game.status",
+    "ticket": "wf29-1",
+    "game": {
+      "id": "UCES00420",
+      "version": "1.00",
+      "title": "Ratchet and Clank: Size Matters"
+    },
+    "paused": false
+  },
+  "module": {
+    "event": "memory.read_u32",
+    "ticket": "wf29-2",
+    "value": 4
+  },
+  "dataAddress": 157023512,
+  "base": 152354048,
+  "cpu": {
+    "event": "cpu.status",
+    "ticket": "wf29-5",
+    "stepping": false,
+    "paused": false,
+    "pc": 154231188,
+    "ticks": 4064455038117
+  },
+  "pauseData": {
+    "event": "memory.read",
+    "ticket": "wf29-6",
+    "base64": "EQAAABEAAAABAAAAEQAAAAAAAAAAAAAAAAAAABAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
+  },
+  "screen": 17,
+  "updateTarget": {
+    "event": "memory.read_u32",
+    "ticket": "wf29-7",
+    "value": 153066808
+  },
+  "targetRva": "0xae038",
+  "targetCode": {
+    "event": "memory.read",
+    "ticket": "wf29-8",
+    "base64": "q/hHDgAAAAAJAAAQAAAAAA=="
+  }
+}

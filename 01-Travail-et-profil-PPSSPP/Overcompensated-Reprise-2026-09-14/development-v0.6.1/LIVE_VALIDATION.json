@@ -1,0 +1,28 @@
+{
+  "runtime_integration_60fps": "PASS",
+  "gameplay_fidelity": "NOT_TESTED_THIS_TURN",
+  "request_cancel": "PASS",
+  "actual_transition_to_30fps": "NOT_TESTED",
+  "native_menu": "NOT_IMPLEMENTED",
+  "plugin_base": 144011520,
+  "module_base": 152358144,
+  "proofs": [
+    "C:\\Users\\linki\\Documents\\PPSSPP\\Overcompensated-Reprise-2026-09-14\\connection\\dev061-integration-1789598570306.json",
+    "C:\\Users\\linki\\Documents\\PPSSPP\\Overcompensated-Reprise-2026-09-14\\connection\\dev061-menu-readonly-1789598570147.json",
+    "C:\\Users\\linki\\Documents\\PPSSPP\\Overcompensated-Reprise-2026-09-14\\connection\\dev061-fps-mailbox-1789598539779.json"
+  ],
+  "active_menu": {
+    "screen": 3,
+    "address": 155320796,
+    "count": 7,
+    "routes": [
+      2,
+      4,
+      5,
+      12,
+      26,
+      6,
+      29
+    ]
+  }
+}

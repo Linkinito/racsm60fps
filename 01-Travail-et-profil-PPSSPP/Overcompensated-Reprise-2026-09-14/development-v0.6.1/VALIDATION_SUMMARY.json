@@ -1,0 +1,97 @@
+{
+  "timestamp": "2026-09-16T22:39:26.235999+00:00",
+  "version": "0.6.1-metalis-integration-dev.2",
+  "prx_sha256": "67c16bc1caafc6d340de785f4bf0e15de61ce40f41699a3699cb5b71cd8e9341",
+  "PSP_compiled": true,
+  "binary_audit_checks": 912,
+  "host_tests": {
+    "status": "PASS",
+    "scope": "host simulation and trace parsing; no PPSSPP gameplay",
+    "asan_ubsan": false,
+    "suites": [
+      {
+        "suite": "test_fps_choice",
+        "status": "PASS",
+        "output": "fps_choice: PASS; deferred request, cancellation, failure and both directions"
+      },
+      {
+        "suite": "test_full_patch",
+        "status": "PASS",
+        "output": "full_patch: PASS; 600 module/delta/layer scenarios; 1348 injected write failures"
+      },
+      {
+        "suite": "test_profiler_core",
+        "status": "PASS",
+        "output": "{\"status\":\"PASS\",\"modules\":15,\"callsites\":493,\"max_active\":57,\"anchors\":1,\"policy_redirects\":\"PASS\"}"
+      },
+      {
+        "suite": "test_format",
+        "status": "PASS",
+        "output": "{\"status\":\"PASS\",\"formatter\":\"bounded\"}"
+      },
+      {
+        "suite": "test_trace_parser",
+        "status": "PASS",
+        "output": "{\"status\": \"PASS\", \"trace_schema\": 5, \"entries\": 55, \"address_delta\": 28672}"
+      }
+    ]
+  },
+  "static": {
+    "status": "PASS_STATIC_ONLY",
+    "unchanged_other_modules": 14,
+    "metalis_entries": 167,
+    "unique_addresses": true,
+    "unlock_last": true,
+    "generator_reproducible": true,
+    "added_original_words_verified": 54,
+    "scope": "generation only; see VALIDATION_SUMMARY.json"
+  },
+  "installed_on_disk": true,
+  "running_process_version": "0.6.1-metalis-integration-dev.2",
+  "runtime_tested_new_build": true,
+  "native_menu_hook_implemented": false,
+  "fps_backend": "request/applied state; activation at verified module load; no in-round actor conversion",
+  "source_sha256": {
+    "src\\profiler_hook.S": "b058f78ac289d63e631f48126ae29c727d05f566ac6b1a56fb23403bfbef2f6c",
+    "src\\psp_plugin_runtime.c": "add9a2129dc288787583e51e993102fe63c60881817f9b55afd3a71b387d8c93",
+    "src\\rcsm_format.c": "17abb62d12ec004061a934c3cad0370b08f5180afa570f143d4e05d17273e9b0",
+    "src\\rcsm_fps_choice.c": "a3fc4298e4054ca5e9a3c6cbc45e0acc59ff95fb4e83f73715bb6611be70f345",
+    "src\\rcsm_full_patch.c": "a508758be04e29b0f2fb2324c5e9f9fdbb92c0da6a238f4328903d7c7efdd1eb",
+    "src\\rcsm_profiler_core.c": "b92c9b2f07f08fb0d7570c74c0549545e2cedce63120268b2a9a5a08e06a6987",
+    "include\\rcsm_format.h": "cb3749ac89cdb25bf600b11eb1ab47add1ab7b48c1e8dcb0c812b4a4e1ee6977",
+    "include\\rcsm_fps_choice.h": "1a94f29abb14f0cfe14230c3512522d622d32e108b4d5fd4da75a814d6a2ecec",
+    "include\\rcsm_full_patch.h": "9fc0ab55190c2ae1c4b50bd575952c7bddb0aa657abe5b51435cd29210610614",
+    "include\\rcsm_profiler_core.h": "605349147f88f1ff2ebc93e240be5b361748dfbccb37d38b38d5bacc2aef53d2",
+    "generated\\full_patch.generated.c": "f7ae754674ef5efac3770f15e6d0148f23c62b14cccf674879bb5b1e27708789",
+    "generated\\wrapper_profiles.generated.c": "5f27ec7591ea1d102e71a450f951e35cb8c089f63ad80572d47aae4219ea80a4",
+    "generated\\wrapper_profiles.generated.h": "28fad06186884493a0282a9982a841ab087ca0c08b1b50b1a240e77e9986fa64"
+  },
+  "runtime_test_scope": {
+    "runtime_integration_60fps": "PASS",
+    "gameplay_fidelity": "NOT_TESTED_THIS_TURN",
+    "request_cancel": "PASS",
+    "actual_transition_to_30fps": "NOT_TESTED",
+    "native_menu": "NOT_IMPLEMENTED",
+    "plugin_base": 144011520,
+    "module_base": 152358144,
+    "proofs": [
+      "C:\\Users\\linki\\Documents\\PPSSPP\\Overcompensated-Reprise-2026-09-14\\connection\\dev061-integration-1789598570306.json",
+      "C:\\Users\\linki\\Documents\\PPSSPP\\Overcompensated-Reprise-2026-09-14\\connection\\dev061-menu-readonly-1789598570147.json",
+      "C:\\Users\\linki\\Documents\\PPSSPP\\Overcompensated-Reprise-2026-09-14\\connection\\dev061-fps-mailbox-1789598539779.json"
+    ],
+    "active_menu": {
+      "screen": 3,
+      "address": 155320796,
+      "count": 7,
+      "routes": [
+        2,
+        4,
+        5,
+        12,
+        26,
+        6,
+        29
+      ]
+    }
+  }
+}

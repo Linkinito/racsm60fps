@@ -1,0 +1,311 @@
+{
+  "base": "C:\\Users\\linki\\Documents\\PPSSPP\\Overcompensated-Reprise-2026-09-14\\development-v0.6.2-menu\\sources\\profiler\\generated\\full_patch.generated.c",
+  "new": "C:\\Users\\linki\\Documents\\PPSSPP\\Overcompensated-Reprise-2026-09-14\\development-v0.6.3-generalisation\\sources\\profiler\\generated\\full_patch.generated.c",
+  "modules": {
+    "1": {
+      "base_count": 113,
+      "new_count": 118,
+      "added": [
+        {
+          "offset": "0x002D5DF8",
+          "original": "0x3DCCCCCE",
+          "patched": "0x3D4CCCCE"
+        },
+        {
+          "offset": "0x002D5E0C",
+          "original": "0x3D75C290",
+          "patched": "0x3C75C290"
+        },
+        {
+          "offset": "0x002D5E10",
+          "original": "0x3EAAAAAB",
+          "patched": "0x3DAAAAAB"
+        },
+        {
+          "offset": "0x002D5E14",
+          "original": "0x3DA3D70A",
+          "patched": "0x3D23D70A"
+        },
+        {
+          "offset": "0x002D5E18",
+          "original": "0x3E4CCCCD",
+          "patched": "0x3D4CCCCD"
+        }
+      ],
+      "removed": [],
+      "changed": []
+    },
+    "2": {
+      "base_count": 112,
+      "new_count": 117,
+      "added": [
+        {
+          "offset": "0x002EF308",
+          "original": "0x3DCCCCCE",
+          "patched": "0x3D4CCCCE"
+        },
+        {
+          "offset": "0x002EF31C",
+          "original": "0x3D75C290",
+          "patched": "0x3C75C290"
+        },
+        {
+          "offset": "0x002EF320",
+          "original": "0x3EAAAAAB",
+          "patched": "0x3DAAAAAB"
+        },
+        {
+          "offset": "0x002EF324",
+          "original": "0x3DA3D70A",
+          "patched": "0x3D23D70A"
+        },
+        {
+          "offset": "0x002EF328",
+          "original": "0x3E4CCCCD",
+          "patched": "0x3D4CCCCD"
+        }
+      ],
+      "removed": [],
+      "changed": []
+    },
+    "3": {
+      "base_count": 112,
+      "new_count": 117,
+      "added": [
+        {
+          "offset": "0x002EC780",
+          "original": "0x3DCCCCCE",
+          "patched": "0x3D4CCCCE"
+        },
+        {
+          "offset": "0x002EC794",
+          "original": "0x3D75C290",
+          "patched": "0x3C75C290"
+        },
+        {
+          "offset": "0x002EC798",
+          "original": "0x3EAAAAAB",
+          "patched": "0x3DAAAAAB"
+        },
+        {
+          "offset": "0x002EC79C",
+          "original": "0x3DA3D70A",
+          "patched": "0x3D23D70A"
+        },
+        {
+          "offset": "0x002EC7A0",
+          "original": "0x3E4CCCCD",
+          "patched": "0x3D4CCCCD"
+        }
+      ],
+      "removed": [],
+      "changed": []
+    },
+    "5": {
+      "base_count": 110,
+      "new_count": 115,
+      "added": [
+        {
+          "offset": "0x002C22F0",
+          "original": "0x3DCCCCCE",
+          "patched": "0x3D4CCCCE"
+        },
+        {
+          "offset": "0x002C2304",
+          "original": "0x3D75C290",
+          "patched": "0x3C75C290"
+        },
+        {
+          "offset": "0x002C2308",
+          "original": "0x3EAAAAAB",
+          "patched": "0x3DAAAAAB"
+        },
+        {
+          "offset": "0x002C230C",
+          "original": "0x3DA3D70A",
+          "patched": "0x3D23D70A"
+        },
+        {
+          "offset": "0x002C2310",
+          "original": "0x3E4CCCCD",
+          "patched": "0x3D4CCCCD"
+        }
+      ],
+      "removed": [],
+      "changed": []
+    },
+    "6": {
+      "base_count": 110,
+      "new_count": 115,
+      "added": [
+        {
+          "offset": "0x002C50B0",
+          "original": "0x3DCCCCCE",
+          "patched": "0x3D4CCCCE"
+        },
+        {
+          "offset": "0x002C50C4",
+          "original": "0x3D75C290",
+          "patched": "0x3C75C290"
+        },
+        {
+          "offset": "0x002C50C8",
+          "original": "0x3EAAAAAB",
+          "patched": "0x3DAAAAAB"
+        },
+        {
+          "offset": "0x002C50CC",
+          "original": "0x3DA3D70A",
+          "patched": "0x3D23D70A"
+        },
+        {
+          "offset": "0x002C50D0",
+          "original": "0x3E4CCCCD",
+          "patched": "0x3D4CCCCD"
+        }
+      ],
+      "removed": [],
+      "changed": []
+    },
+    "7": {
+      "base_count": 112,
+      "new_count": 117,
+      "added": [
+        {
+          "offset": "0x002E71F8",
+          "original": "0x3DCCCCCE",
+          "patched": "0x3D4CCCCE"
+        },
+        {
+          "offset": "0x002E720C",
+          "original": "0x3D75C290",
+          "patched": "0x3C75C290"
+        },
+        {
+          "offset": "0x002E7210",
+          "original": "0x3EAAAAAB",
+          "patched": "0x3DAAAAAB"
+        },
+        {
+          "offset": "0x002E7214",
+          "original": "0x3DA3D70A",
+          "patched": "0x3D23D70A"
+        },
+        {
+          "offset": "0x002E7218",
+          "original": "0x3E4CCCCD",
+          "patched": "0x3D4CCCCD"
+        }
+      ],
+      "removed": [],
+      "changed": []
+    },
+    "8": {
+      "base_count": 112,
+      "new_count": 117,
+      "added": [
+        {
+          "offset": "0x00310604",
+          "original": "0x3DCCCCCE",
+          "patched": "0x3D4CCCCE"
+        },
+        {
+          "offset": "0x00310614",
+          "original": "0x3D75C290",
+          "patched": "0x3C75C290"
+        },
+        {
+          "offset": "0x00310618",
+          "original": "0x3EAAAAAB",
+          "patched": "0x3DAAAAAB"
+        },
+        {
+          "offset": "0x0031061C",
+          "original": "0x3DA3D70A",
+          "patched": "0x3D23D70A"
+        },
+        {
+          "offset": "0x00310620",
+          "original": "0x3E4CCCCD",
+          "patched": "0x3D4CCCCD"
+        }
+      ],
+      "removed": [],
+      "changed": []
+    },
+    "9": {
+      "base_count": 112,
+      "new_count": 117,
+      "added": [
+        {
+          "offset": "0x002BFA28",
+          "original": "0x3DCCCCCE",
+          "patched": "0x3D4CCCCE"
+        },
+        {
+          "offset": "0x002BFA3C",
+          "original": "0x3D75C290",
+          "patched": "0x3C75C290"
+        },
+        {
+          "offset": "0x002BFA40",
+          "original": "0x3EAAAAAB",
+          "patched": "0x3DAAAAAB"
+        },
+        {
+          "offset": "0x002BFA44",
+          "original": "0x3DA3D70A",
+          "patched": "0x3D23D70A"
+        },
+        {
+          "offset": "0x002BFA48",
+          "original": "0x3E4CCCCD",
+          "patched": "0x3D4CCCCD"
+        }
+      ],
+      "removed": [],
+      "changed": []
+    },
+    "10": {
+      "base_count": 112,
+      "new_count": 117,
+      "added": [
+        {
+          "offset": "0x002DD818",
+          "original": "0x3DCCCCCE",
+          "patched": "0x3D4CCCCE"
+        },
+        {
+          "offset": "0x002DD82C",
+          "original": "0x3D75C290",
+          "patched": "0x3C75C290"
+        },
+        {
+          "offset": "0x002DD830",
+          "original": "0x3EAAAAAB",
+          "patched": "0x3DAAAAAB"
+        },
+        {
+          "offset": "0x002DD834",
+          "original": "0x3DA3D70A",
+          "patched": "0x3D23D70A"
+        },
+        {
+          "offset": "0x002DD838",
+          "original": "0x3E4CCCCD",
+          "patched": "0x3D4CCCCD"
+        }
+      ],
+      "removed": [],
+      "changed": []
+    }
+  },
+  "cave_differences": [
+    {
+      "cave_index": 7,
+      "word_index": 34,
+      "base": "0x3C043F80",
+      "new": "0x3C043F00"
+    }
+  ]
+}

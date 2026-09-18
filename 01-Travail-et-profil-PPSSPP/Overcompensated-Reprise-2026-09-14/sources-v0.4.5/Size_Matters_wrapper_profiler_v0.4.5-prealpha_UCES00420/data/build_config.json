@@ -1,0 +1,9 @@
+{
+  "schema_version": "0.2.0",
+  "required_root_layout": [
+    "project_sources",
+    "upload"
+  ],
+  "base_builder": "build_reference_corpus.py",
+  "no_game_binaries_in_output": true
+}

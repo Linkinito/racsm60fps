@@ -1,0 +1,28 @@
+{
+  "time": "2026-09-15T23:00:40.652Z",
+  "address": 152528980,
+  "condition": "a1 == 0x96695e0",
+  "enemy": {
+    "object": 157717984,
+    "name": "EnemyRamTorso",
+    "descriptor": 157679296,
+    "pvars": 164316472,
+    "controllerMethods": 155385920,
+    "flags": 1081617
+  },
+  "verified": {
+    "event": "cpu.breakpoint.list",
+    "ticket": "wf29-7",
+    "breakpoints": [
+      {
+        "address": 152528980,
+        "enabled": true,
+        "log": false,
+        "condition": "a1 == 0x96695e0",
+        "logFormat": null,
+        "symbol": null,
+        "code": "addiu sp,sp,-0x50"
+      }
+    ]
+  }
+}

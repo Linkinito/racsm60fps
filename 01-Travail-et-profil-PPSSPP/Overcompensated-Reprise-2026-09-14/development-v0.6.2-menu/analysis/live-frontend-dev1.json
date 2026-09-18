@@ -1,0 +1,71 @@
+{
+  "time": "2026-09-17T17:39:30.311Z",
+  "game": {
+    "event": "game.status",
+    "ticket": "menu-1",
+    "game": {
+      "id": "UCES00420",
+      "version": "1.00",
+      "title": "Ratchet and Clank: Size Matters"
+    },
+    "paused": false
+  },
+  "cpu": {
+    "event": "cpu.status",
+    "ticket": "menu-2",
+    "stepping": false,
+    "paused": false,
+    "pc": 142628724,
+    "ticks": 52666451609
+  },
+  "pb": 144011520,
+  "base": 150181888,
+  "menu": 151345904,
+  "g_rcsm_requested_fps": 60,
+  "g_rcsm_applied_fps": 0,
+  "g_rcsm_fps_pending": 1,
+  "g_rcsm_fps_saved": 60,
+  "g_rcsm_menu_installed": 1,
+  "g_rcsm_menu_open": 0,
+  "g_rcsm_menu_last_context": 0,
+  "header": "WCyXCAUAAAAEAAAAAACAPwAAgD8AAAAA0KUJ/x8fH3//////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+  "count": 5,
+  "selection": 4,
+  "nodes": [
+    {
+      "address": 151345200,
+      "text": 468,
+      "route": 99,
+      "rectangle": 261,
+      "enabled": 1
+    },
+    {
+      "address": 151344972,
+      "text": 469,
+      "route": 98,
+      "rectangle": 262,
+      "enabled": 1
+    },
+    {
+      "address": 151345428,
+      "text": 226,
+      "route": 79,
+      "rectangle": 263,
+      "enabled": 1
+    },
+    {
+      "address": 151345656,
+      "text": 370,
+      "route": 94,
+      "rectangle": 264,
+      "enabled": 1
+    },
+    {
+      "address": 144125328,
+      "text": "Overcompensated",
+      "route": 1331053906,
+      "rectangle": 4294967295,
+      "enabled": 1
+    }
+  ]
+}

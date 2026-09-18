@@ -1,0 +1,16 @@
+{
+  "time": "2026-09-16T21:04:21.072Z",
+  "changes": [],
+  "cpuBefore": {
+    "event": "cpu.status",
+    "ticket": "wf29-3",
+    "stepping": true,
+    "paused": false,
+    "pc": 142628724,
+    "ticks": 2967785758709
+  },
+  "base": 152354048,
+  "plugin": 144011520,
+  "error": "Error: Binding mismatch",
+  "status": "preflight_failed_CPU_state_check_required"
+}

@@ -1,0 +1,598 @@
+{
+  "time": "2026-09-15T23:06:07.370Z",
+  "captures": [
+    {
+      "pc": 152528980,
+      "ticks": 1454698472011,
+      "args": {
+        "a0": 164313856,
+        "a1": 157714144,
+        "a2": 155421592,
+        "a3": 155721084,
+        "ra": 152531484
+      },
+      "a0": {
+        "event": "memory.read",
+        "ticket": "wf29-17",
+        "base64": "xI9YvuY/rzw21Pq6BPi+PafSW7+pMwO/AAAAAAAAqDkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAOCeZwkAAAAAAAAAAAAAqMIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAUBRBCQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+      },
+      "a1": {
+        "event": "memory.read",
+        "ticket": "wf29-18",
+        "base64": "JKNbvwAAAAAmgwO/AAAAAAAAAAAAAIA/AAAAAAAAAAAmgwM/AAAAACSjW78AAAAAAEy1wgAAYEE/RHRCAACAPzD9ZQkAAAAAgBzHCWCKZglASuIJMDdmCQA7ywlFfBtwAAAAABGSAAD/////AAAAAAAAUEEAAAAAAAACAJwBAAA="
+      },
+      "a2": {
+        "event": "memory.read",
+        "ticket": "wf29-19",
+        "base64": "zszMPYmICD182SA9Ygu2OmILNjpiCzY7Ygu2OrWikTvNzMw9zcxMPgAAekQK1yM8CtejPAAAcEHNzKBBAAAAPgEAQD7PzEw8zczMPZqZGT7///8AzcxMPc3MzD3NzMw9zcxMPgAAwEAAAABBiYgIPs7MTD6TCgY/////MGZmZj8="
+      }
+    },
+    {
+      "pc": 152528980,
+      "ticks": 1454698480843,
+      "args": {
+        "a0": 164314304,
+        "a1": 157715040,
+        "a2": 155420292,
+        "a3": 20885990,
+        "ra": 152530884
+      },
+      "a0": {
+        "event": "memory.read",
+        "ticket": "wf29-23",
+        "base64": "hMPKO+dgHT9UJw09UifDPN9X0b6Rn2m/UBbSCaAW0gnUCkYJ1ApGCYwAADSXDBu/kkT7uqBXVz4AAAAA2AhcPkdmEbwuaB4/AAAAAEIHizp/ryc/peETPAAAAADvGbTCIZBlQf21cUIAAIA/8PbSCfBz1Anwb9MJ8P7TCWCfZwkAOMsJAAAAAAAAAAA4uVAJAAAqQ0KPFr5Rd1a+85ATwA=="
+      },
+      "a1": {
+        "event": "memory.read",
+        "ticket": "wf29-24",
+        "base64": "0A6mPgAAAABeKXI/AAAAAAAAAAAAAIA/AAAAAAAAAABeKXK/AAAAANAOpj4AAAAAGOCywgAAYEEv3HBCAACAP9D9ZQkAAAQAICLHCeCMZglITOIJwDdmCcA8ywmOdHl9AAAAABGCAACjo///AAAAAAAAAAAAAAAAAAACAHICAAA="
+      },
+      "a2": {
+        "event": "memory.read",
+        "ticket": "wf29-25",
+        "base64": "zsxMPs7MTD582aA9Ygu2O2ILtjtiCzY8Ygu2O7WikTvNzMw9zcxMPgAAekQAAIA/AACAPwcAAAAPAAAAAAAgQVF31j1Rd1Y+AAD/AP////8AAAA/AADAP83MzD3NzMw9zcxMPwAAgD/NzEw/AACAPwAAgD8AAIA/BwAAAA8AAAA="
+      }
+    },
+    {
+      "pc": 154067612,
+      "ticks": 1454698490449,
+      "args": {
+        "a0": 157717856,
+        "a1": 0,
+        "a2": 155420984,
+        "a3": 25266210,
+        "ra": 153667344
+      },
+      "a0": {
+        "event": "memory.read",
+        "ticket": "wf29-29",
+        "base64": "dlpaPgAAAAC6HHq/AAAAAAAAAAAAAIA/AAAAAAAAAAC6HHo/AAAAAHZaWj4AAAAAmGurwgAAYEGG+DNCAACAP8D+ZQkAAAAA4DrHCeCcZgmMUOIJEDhmCSBEywlBZO5wAAAAABGDEAD/////AAAAAAAAAAAAAAAAAAACAE8FAAC0BYO+AAAAANl5d78AAAAAAAAAAAAAgD8AAAAAAAAAAA=="
+      },
+      "a2": {
+        "event": "memory.read",
+        "ticket": "wf29-30",
+        "base64": "4IhDCcyIQwkPAEsAzcxMPpZDizyWQws9zsxMPc7MzD1iC7Y7BQAAAAgAAAAAAAA/ZmZmP///////////BAAEAM3MzD3NzEw+mpmZPs3MzD4AAHBBAAC0QYmICD3OzMw9taKROlF3Vj5/f39/MzNzP+xReD8AAAAAAADAQAAAgD8="
+      }
+    },
+    {
+      "pc": 152528980,
+      "ticks": 1454698490492,
+      "args": {
+        "a0": 164316192,
+        "a1": 157717856,
+        "a2": 155420896,
+        "a3": 0,
+        "ra": 154068080
+      },
+      "a0": {
+        "event": "memory.read",
+        "ticket": "wf29-34",
+        "base64": "qE96PWNDbj+eFss7AAAAAAAAAAAAAAAA8GnTCfCL1Anw8tQJ8G3TCfB+1AnwRdQJ8EbUCfBN1AkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAICAAAAAAAAAAAAAAAAAKjCAAAAAA=="
+      },
+      "a1": {
+        "event": "memory.read",
+        "ticket": "wf29-35",
+        "base64": "dlpaPgAAAAC6HHq/AAAAAAAAAAAAAIA/AAAAAAAAAAC6HHo/AAAAAHZaWj4AAAAAmGurwgAAYEGG+DNCAACAP8D+ZQkAAAAA4DrHCeCcZgmMUOIJEDhmCSBEywlBZO5wAAAAABGDEAD/////AAAAAAAAAAAAAAAAAAACAE8FAAA="
+      },
+      "a2": {
+        "event": "memory.read",
+        "ticket": "wf29-36",
+        "base64": "iYiIPvDu7j1Rd1Y9Ygu2O2ILNjtiCzY8Ygu2O7WikTvNzMw9zcxMPgAAekTOzMw+8O7uPVF3Vj3PzEw+Ygs2O2ILtjxiC7Y7taKRO83MzD3NzEw+AAB6ROCIQwnMiEMJDwBLAM3MTD6WQ4s8lkMLPc7MTD3OzMw9Ygu2OwUAAAA="
+      }
+    },
+    {
+      "pc": 154067612,
+      "ticks": 1454698498239,
+      "args": {
+        "a0": 157717984,
+        "a1": 0,
+        "a2": 155420984,
+        "a3": 19901582,
+        "ra": 153667344
+      },
+      "a0": {
+        "event": "memory.read",
+        "ticket": "wf29-40",
+        "base64": "tAWDvgAAAADZeXe/AAAAAAAAAAAAAIA/AAAAAAAAAADZeXc/AAAAALQFg74AAAAAV3fDwgAAYEGIQ0VCAACAP8D+ZQkAAAAAoD7HCQAAAAAAAAAAIDhmCThFywn7NefpAAAAABGBAAD/////AAAAAAAAAAAAAAAAAAACAHEFAABwVsc+AAAAABDNaz8AAAAAAAAAAAAAgD8AAAAAAAAAAA=="
+      },
+      "a2": {
+        "event": "memory.read",
+        "ticket": "wf29-41",
+        "base64": "4IhDCcyIQwkPAEsAzcxMPpZDizyWQws9zsxMPc7MzD1iC7Y7BQAAAAgAAAAAAAA/ZmZmP///////////BAAEAM3MzD3NzEw+mpmZPs3MzD4AAHBBAAC0QYmICD3OzMw9taKROlF3Vj5/f39/MzNzP+xReD8AAAAAAADAQAAAgD8="
+      }
+    },
+    {
+      "pc": 152528980,
+      "ticks": 1454698498282,
+      "args": {
+        "a0": 164316472,
+        "a1": 157717984,
+        "a2": 155420896,
+        "a3": 0,
+        "ra": 154068080
+      },
+      "a0": {
+        "event": "memory.read",
+        "ticket": "wf29-45",
+        "base64": "zszMvBLtsT6MCva9AAAAAD9fQb9vwie/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAKjCAAAAAA=="
+      },
+      "a1": {
+        "event": "memory.read",
+        "ticket": "wf29-46",
+        "base64": "tAWDvgAAAADZeXe/AAAAAAAAAAAAAIA/AAAAAAAAAADZeXc/AAAAALQFg74AAAAAV3fDwgAAYEGIQ0VCAACAP8D+ZQkAAAAAoD7HCQAAAAAAAAAAIDhmCThFywn7NefpAAAAABGBAAD/////AAAAAAAAAAAAAAAAAAACAHEFAAA="
+      },
+      "a2": {
+        "event": "memory.read",
+        "ticket": "wf29-47",
+        "base64": "iYiIPvDu7j1Rd1Y9Ygu2O2ILNjtiCzY8Ygu2O7WikTvNzMw9zcxMPgAAekTOzMw+8O7uPVF3Vj3PzEw+Ygs2O2ILtjxiC7Y7taKRO83MzD3NzEw+AAB6ROCIQwnMiEMJDwBLAM3MTD6WQ4s8lkMLPc7MTD3OzMw9Ygu2OwUAAAA="
+      }
+    },
+    {
+      "pc": 152528980,
+      "ticks": 1454702097851,
+      "args": {
+        "a0": 164313856,
+        "a1": 157714144,
+        "a2": 155421592,
+        "a3": 155721084,
+        "ra": 152531484
+      },
+      "a0": {
+        "event": "memory.read",
+        "ticket": "wf29-51",
+        "base64": "rSNXvuSmkzxMVNO62d21PafSW7+pMwO/AAAAAAAAqjkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAOCeZwkAAAAAAAAAAAAAqsIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAUBRBCQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+      },
+      "a1": {
+        "event": "memory.read",
+        "ticket": "wf29-52",
+        "base64": "TYtbvwAAAADwqgO/AAAAAAAAAAAAAIA/AAAAAAAAAADwqgM/AAAAAE2LW78AAAAAUqy1wgAAYEHQy3RCAACAPzD9ZQkAAAAAgBzHCWCKZglASuIJMDdmCQA7ywlFfBtwAAAAABGSAAD/////AAAAAAAAQEEAAAAAAAACAJwBAAA="
+      },
+      "a2": {
+        "event": "memory.read",
+        "ticket": "wf29-53",
+        "base64": "zszMPYmICD182SA9Ygu2OmILNjpiCzY7Ygu2OrWikTvNzMw9zcxMPgAAekQK1yM8CtejPAAAcEHNzKBBAAAAPgEAQD7PzEw8zczMPZqZGT7///8AzcxMPc3MzD3NzMw9zcxMPgAAwEAAAABBiYgIPs7MTD6TCgY/////MGZmZj8="
+      }
+    },
+    {
+      "pc": 152528980,
+      "ticks": 1454702106675,
+      "args": {
+        "a0": 164314304,
+        "a1": 157715040,
+        "a2": 155420292,
+        "a3": 20780304,
+        "ra": 152530884
+      },
+      "a0": {
+        "event": "memory.read",
+        "ticket": "wf29-57",
+        "base64": "c2dAPLroLD+92e08pb6ePN9X0b6Rn2m/UBbSCaAW0gnUCkYJ1ApGCYwAADTnLh6/6Lf0u2ayNj4AAAAA5zY6PgVq+bu0JSE/AAAAAFxRqrvAuSc/PGYaPAAAAAD3NbTCopplQTiIcUIAAIA/8PbSCfBz1Anwb9MJ8P7TCWCfZwkAOMsJAAAAAAAAAAA4uVAJAAAZQ0qDtr5Rd1a+ON0MwA=="
+      },
+      "a1": {
+        "event": "memory.read",
+        "ticket": "wf29-58",
+        "base64": "3iSMPgAAAAAvOXY/AAAAAAAAAAAAAIA/AAAAAAAAAAAvOXa/AAAAAN4kjD4AAAAA3eqywgAAYEE3yXBCAACAP9D9ZQkAAAQAICLHCeCMZglITOIJwDdmCcA8ywmOdHl9AAAAABGCAACjo///AAAAAAAAAAAAAAAAAAACAHICAAA="
+      },
+      "a2": {
+        "event": "memory.read",
+        "ticket": "wf29-59",
+        "base64": "zsxMPs7MTD582aA9Ygu2O2ILtjtiCzY8Ygu2O7WikTvNzMw9zcxMPgAAekQAAIA/AACAPwcAAAAPAAAAAAAgQVF31j1Rd1Y+AAD/AP////8AAAA/AADAP83MzD3NzMw9zcxMPwAAgD/NzEw/AACAPwAAgD8AAIA/BwAAAA8AAAA="
+      }
+    },
+    {
+      "pc": 154067612,
+      "ticks": 1454702116273,
+      "args": {
+        "a0": 157717856,
+        "a1": 0,
+        "a2": 155420984,
+        "a3": 25240752,
+        "ra": 153667344
+      },
+      "a0": {
+        "event": "memory.read",
+        "ticket": "wf29-63",
+        "base64": "YrKFPgAAAAA0Hne/AAAAAAAAAAAAAIA/AAAAAAAAAAA0Hnc/AAAAAGKyhT4AAAAApUqrwgAAYEFaCjRCAACAP8D+ZQkAAAAA4DrHCeCcZgmMUOIJEDhmCSBEywlBZO5wAAAAABGDEAD/////AAAAAAAAAAAAAAAAAAACAE8FAAAVB3++AAAAAAfvd78AAAAAAAAAAAAAgD8AAAAAAAAAAA=="
+      },
+      "a2": {
+        "event": "memory.read",
+        "ticket": "wf29-64",
+        "base64": "4IhDCcyIQwkPAEsAzcxMPpZDizyWQws9zsxMPc7MzD1iC7Y7BQAAAAgAAAAAAAA/ZmZmP///////////BAAEAM3MzD3NzEw+mpmZPs3MzD4AAHBBAAC0QYmICD3OzMw9taKROlF3Vj5/f39/MzNzP+xReD8AAAAAAADAQAAAgD8="
+      }
+    },
+    {
+      "pc": 152528980,
+      "ticks": 1454702116316,
+      "args": {
+        "a0": 164316192,
+        "a1": 157717856,
+        "a2": 155420896,
+        "a3": 0,
+        "ra": 154068080
+      },
+      "a0": {
+        "event": "memory.read",
+        "ticket": "wf29-68",
+        "base64": "ioiIPW0OcT9aG6s7AAAAAAAAAAAAAAAA8GnTCfCL1Anw8tQJ8G3TCfB+1AnwRdQJ8EbUCfBN1AkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAICAAAAAAAAAAAAAAAAAKrCAAAAAA=="
+      },
+      "a1": {
+        "event": "memory.read",
+        "ticket": "wf29-69",
+        "base64": "YrKFPgAAAAA0Hne/AAAAAAAAAAAAAIA/AAAAAAAAAAA0Hnc/AAAAAGKyhT4AAAAApUqrwgAAYEFaCjRCAACAP8D+ZQkAAAAA4DrHCeCcZgmMUOIJEDhmCSBEywlBZO5wAAAAABGDEAD/////AAAAAAAAAAAAAAAAAAACAE8FAAA="
+      },
+      "a2": {
+        "event": "memory.read",
+        "ticket": "wf29-70",
+        "base64": "iYiIPvDu7j1Rd1Y9Ygu2O2ILNjtiCzY8Ygu2O7WikTvNzMw9zcxMPgAAekTOzMw+8O7uPVF3Vj3PzEw+Ygs2O2ILtjxiC7Y7taKRO83MzD3NzEw+AAB6ROCIQwnMiEMJDwBLAM3MTD6WQ4s8lkMLPc7MTD3OzMw9Ygu2OwUAAAA="
+      }
+    },
+    {
+      "pc": 154067612,
+      "ticks": 1454702123994,
+      "args": {
+        "a0": 157717984,
+        "a1": 0,
+        "a2": 155420984,
+        "a3": 20046336,
+        "ra": 153667344
+      },
+      "a0": {
+        "event": "memory.read",
+        "ticket": "wf29-74",
+        "base64": "FQd/vgAAAAAH73e/AAAAAAAAAAAAAIA/AAAAAAAAAAAH73c/AAAAABUHf74AAAAA+4DDwgAAYEF9SEVCAACAP8D+ZQkAAAAAoD7HCQAAAAAAAAAAIDhmCThFywn7NefpAAAAABGBAAD/////AAAAAAAAAAAAAAAAAAACAHEFAABwVsc+AAAAABDNaz8AAAAAAAAAAAAAgD8AAAAAAAAAAA=="
+      },
+      "a2": {
+        "event": "memory.read",
+        "ticket": "wf29-75",
+        "base64": "4IhDCcyIQwkPAEsAzcxMPpZDizyWQws9zsxMPc7MzD1iC7Y7BQAAAAgAAAAAAAA/ZmZmP///////////BAAEAM3MzD3NzEw+mpmZPs3MzD4AAHBBAAC0QYmICD3OzMw9taKROlF3Vj5/f39/MzNzP+xReD8AAAAAAADAQAAAgD8="
+      }
+    },
+    {
+      "pc": 152528980,
+      "ticks": 1454702124037,
+      "args": {
+        "a0": 164316472,
+        "a1": 157717984,
+        "a2": 155420896,
+        "a3": 0,
+        "ra": 154068080
+      },
+      "a0": {
+        "event": "memory.read",
+        "ticket": "wf29-79",
+        "base64": "9kmfvAmACj4W8c+9AAAAAD9fQb9vwie/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAKrCAAAAAA=="
+      },
+      "a1": {
+        "event": "memory.read",
+        "ticket": "wf29-80",
+        "base64": "FQd/vgAAAAAH73e/AAAAAAAAAAAAAIA/AAAAAAAAAAAH73c/AAAAABUHf74AAAAA+4DDwgAAYEF9SEVCAACAP8D+ZQkAAAAAoD7HCQAAAAAAAAAAIDhmCThFywn7NefpAAAAABGBAAD/////AAAAAAAAAAAAAAAAAAACAHEFAAA="
+      },
+      "a2": {
+        "event": "memory.read",
+        "ticket": "wf29-81",
+        "base64": "iYiIPvDu7j1Rd1Y9Ygu2O2ILNjtiCzY8Ygu2O7WikTvNzMw9zcxMPgAAekTOzMw+8O7uPVF3Vj3PzEw+Ygs2O2ILtjxiC7Y7taKRO83MzD3NzEw+AAB6ROCIQwnMiEMJDwBLAM3MTD6WQ4s8lkMLPc7MTD3OzMw9Ygu2OwUAAAA="
+      }
+    },
+    {
+      "pc": 152528980,
+      "ticks": 1454705801990,
+      "args": {
+        "a0": 164313856,
+        "a1": 157714144,
+        "a2": 155421592,
+        "a3": 155721084,
+        "ra": 152531484
+      },
+      "a0": {
+        "event": "memory.read",
+        "ticket": "wf29-85",
+        "base64": "lrdVvunMeDzGDLK6rsOsPafSW7+pMwO/AAAAAAAArDkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAOCeZwkAAAAAAAAAAAAArMIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAUBRBCQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+      },
+      "a1": {
+        "event": "memory.read",
+        "ticket": "wf29-86",
+        "base64": "MHdbvwAAAAByzAO/AAAAAAAAAAAAAIA/AAAAAAAAAAByzAM/AAAAADB3W78AAAAAYQq2wgAAYEFtVHVCAACAPzD9ZQkAAAAAgBzHCWCKZglAyuAJMDdmCQA7ywlFfBtwAAAAABGSAAD/////AAAAAAAAMEEAAAAAAAACAJwBAAA="
+      },
+      "a2": {
+        "event": "memory.read",
+        "ticket": "wf29-87",
+        "base64": "zszMPYmICD182SA9Ygu2OmILNjpiCzY7Ygu2OrWikTvNzMw9zcxMPgAAekQK1yM8CtejPAAAcEHNzKBBAAAAPgEAQD7PzEw8zczMPZqZGT7///8AzcxMPc3MzD3NzMw9zcxMPgAAwEAAAABBiYgIPs7MTD6TCgY/////MGZmZj8="
+      }
+    },
+    {
+      "pc": 152528980,
+      "ticks": 1454705810836,
+      "args": {
+        "a0": 164314304,
+        "a1": 157715040,
+        "a2": 155420292,
+        "a3": 20664542,
+        "ra": 152530884
+      },
+      "a0": {
+        "event": "memory.read",
+        "ticket": "wf29-91",
+        "base64": "kraNPHP+OT8JZcg88Kt0PN9X0b6Rn2m/UBbSCaAW0gnUCkYJ1ApGCYwAADRcUyG/dOCOvNL+Ej4AAAAAtEAVPkm8z7sZmyM/AAAAAP6xgbzrvic/mKclPAAAAAA/WbTC65hlQc5bcUIAAIA/8PbSCfBz1Anwb9MJ8P7TCWCfZwkAOMsJAAAAAAAAAAA4uVAJAAAIQ3nfEL9Rd1a+fSkGwA=="
+      },
+      "a1": {
+        "event": "memory.read",
+        "ticket": "wf29-92",
+        "base64": "f6lfPgAAAACk0Xk/AAAAAAAAAAAAAIA/AAAAAAAAAACk0Xm/AAAAAH+pXz4AAAAAkfeywgAAYEH5unBCAACAP9D9ZQkAAAQAICLHCeCMZglIzOAJwDdmCcA8ywmOdHl9AAAAABGCAACjo///AAAAAAAAAAAAAAAAAAACAHICAAA="
+      },
+      "a2": {
+        "event": "memory.read",
+        "ticket": "wf29-93",
+        "base64": "zsxMPs7MTD582aA9Ygu2O2ILtjtiCzY8Ygu2O7WikTvNzMw9zcxMPgAAekQAAIA/AACAPwcAAAAPAAAAAAAgQVF31j1Rd1Y+AAD/AP////8AAAA/AADAP83MzD3NzMw9zcxMPwAAgD/NzEw/AACAPwAAgD8AAIA/BwAAAA8AAAA="
+      }
+    },
+    {
+      "pc": 154067612,
+      "ticks": 1454705820506,
+      "args": {
+        "a0": 157717856,
+        "a1": 0,
+        "a2": 155420984,
+        "a3": 25206634,
+        "ra": 153667344
+      },
+      "a0": {
+        "event": "memory.read",
+        "ticket": "wf29-97",
+        "base64": "XSCePgAAAAAyfHO/AAAAAAAAAAAAAIA/AAAAAAAAAAAyfHM/AAAAAF0gnj4AAAAAeSerwgAAYEExITRCAACAP8D+ZQkAAAAA4DrHCeCcZgmM0OAJEDhmCSBEywlBZO5wAAAAABGDEAD/////AAAAAAAAAAAAAAAAAAACAE8FAAC/pIC+AAAAAKrJd78AAAAAAAAAAAAAgD8AAAAAAAAAAA=="
+      },
+      "a2": {
+        "event": "memory.read",
+        "ticket": "wf29-98",
+        "base64": "4IhDCcyIQwkPAEsAzcxMPpZDizyWQws9zsxMPc7MzD1iC7Y7BQAAAAgAAAAAAAA/ZmZmP///////////BAAEAM3MzD3NzEw+mpmZPs3MzD4AAHBBAAC0QYmICD3OzMw9taKROlF3Vj5/f39/MzNzP+xReD8AAAAAAADAQAAAgD8="
+      }
+    },
+    {
+      "pc": 152528980,
+      "ticks": 1454705820549,
+      "args": {
+        "a0": 164316192,
+        "a1": 157717856,
+        "a2": 155420896,
+        "a3": 0,
+        "ra": 154068080
+      },
+      "a0": {
+        "event": "memory.read",
+        "ticket": "wf29-102",
+        "base64": "QOmTPd1ocz9dKZA7AAAAAAAAAAAAAAAA8GnTCfCL1Anw8tQJ8G3TCfB+1AnwRdQJ8EbUCfBN1AkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAICAAAAAAAAAAAAAAAAAKzCAAAAAA=="
+      },
+      "a1": {
+        "event": "memory.read",
+        "ticket": "wf29-103",
+        "base64": "XSCePgAAAAAyfHO/AAAAAAAAAAAAAIA/AAAAAAAAAAAyfHM/AAAAAF0gnj4AAAAAeSerwgAAYEExITRCAACAP8D+ZQkAAAAA4DrHCeCcZgmM0OAJEDhmCSBEywlBZO5wAAAAABGDEAD/////AAAAAAAAAAAAAAAAAAACAE8FAAA="
+      },
+      "a2": {
+        "event": "memory.read",
+        "ticket": "wf29-104",
+        "base64": "iYiIPvDu7j1Rd1Y9Ygu2O2ILNjtiCzY8Ygu2O7WikTvNzMw9zcxMPgAAekTOzMw+8O7uPVF3Vj3PzEw+Ygs2O2ILtjxiC7Y7taKRO83MzD3NzEw+AAB6ROCIQwnMiEMJDwBLAM3MTD6WQ4s8lkMLPc7MTD3OzMw9Ygu2OwUAAAA="
+      }
+    },
+    {
+      "pc": 154067612,
+      "ticks": 1454705828278,
+      "args": {
+        "a0": 157717984,
+        "a1": 0,
+        "a2": 155420984,
+        "a3": 20152838,
+        "ra": 153667344
+      },
+      "a0": {
+        "event": "memory.read",
+        "ticket": "wf29-108",
+        "base64": "v6SAvgAAAACqyXe/AAAAAAAAAAAAAIA/AAAAAAAAAACqyXc/AAAAAL+kgL4AAAAA3YfDwgAAYEEQTEVCAACAP8D+ZQkAAAAAoD7HCQAAAAAAAAAAIDhmCThFywn7NefpAAAAABGBAAD/////AAAAAAAAAAAAAAAAAAACAHEFAABwVsc+AAAAABDNaz8AAAAAAAAAAAAAgD8AAAAAAAAAAA=="
+      },
+      "a2": {
+        "event": "memory.read",
+        "ticket": "wf29-109",
+        "base64": "4IhDCcyIQwkPAEsAzcxMPpZDizyWQws9zsxMPc7MzD1iC7Y7BQAAAAgAAAAAAAA/ZmZmP///////////BAAEAM3MzD3NzEw+mpmZPs3MzD4AAHBBAAC0QYmICD3OzMw9taKROlF3Vj5/f39/MzNzP+xReD8AAAAAAADAQAAAgD8="
+      }
+    },
+    {
+      "pc": 152528980,
+      "ticks": 1454705828321,
+      "args": {
+        "a0": 164316472,
+        "a1": 157717984,
+        "a2": 155420896,
+        "a3": 0,
+        "ra": 154068080
+      },
+      "a0": {
+        "event": "memory.read",
+        "ticket": "wf29-113",
+        "base64": "O45jvJ5GMr39Oa+9AAAAAD9fQb9vwie/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAKzCAAAAAA=="
+      },
+      "a1": {
+        "event": "memory.read",
+        "ticket": "wf29-114",
+        "base64": "v6SAvgAAAACqyXe/AAAAAAAAAAAAAIA/AAAAAAAAAACqyXc/AAAAAL+kgL4AAAAA3YfDwgAAYEEQTEVCAACAP8D+ZQkAAAAAoD7HCQAAAAAAAAAAIDhmCThFywn7NefpAAAAABGBAAD/////AAAAAAAAAAAAAAAAAAACAHEFAAA="
+      },
+      "a2": {
+        "event": "memory.read",
+        "ticket": "wf29-115",
+        "base64": "iYiIPvDu7j1Rd1Y9Ygu2O2ILNjtiCzY8Ygu2O7WikTvNzMw9zcxMPgAAekTOzMw+8O7uPVF3Vj3PzEw+Ygs2O2ILtjxiC7Y7taKRO83MzD3NzEw+AAB6ROCIQwnMiEMJDwBLAM3MTD6WQ4s8lkMLPc7MTD3OzMw9Ygu2OwUAAAA="
+      }
+    },
+    {
+      "pc": 152528980,
+      "ticks": 1454709505134,
+      "args": {
+        "a0": 164313856,
+        "a1": 157714144,
+        "a2": 155421592,
+        "a3": 155721084,
+        "ra": 152531484
+      },
+      "a0": {
+        "event": "memory.read",
+        "ticket": "wf29-119",
+        "base64": "f0tUvsieUTzgApa6g6mjPafSW7+pMwO/AAAAAAAArjkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAOCeZwkAAAAAAAAAAAAArsIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAUBRBCQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
+      },
+      "a1": {
+        "event": "memory.read",
+        "ticket": "wf29-120",
+        "base64": "OmZbvwAAAACr6AO/AAAAAAAAAAAAAIA/AAAAAAAAAACr6AM/AAAAADpmW78AAAAAKWa2wgAAYEEZ3nVCAACAPzD9ZQkAAAAAgBzHCWCKZglASuIJMDdmCQA7ywlFfBtwAAAAABGSAAD/////AAAAAAAAIEEAAAAAAAACAJwBAAA="
+      },
+      "a2": {
+        "event": "memory.read",
+        "ticket": "wf29-121",
+        "base64": "zszMPYmICD182SA9Ygu2OmILNjpiCzY7Ygu2OrWikTvNzMw9zcxMPgAAekQK1yM8CtejPAAAcEHNzKBBAAAAPgEAQD7PzEw8zczMPZqZGT7///8AzcxMPc3MzD3NzMw9zcxMPgAAwEAAAABBiYgIPs7MTD6TCgY/////MGZmZj8="
+      }
+    },
+    {
+      "pc": 152528980,
+      "ticks": 1454709513928,
+      "args": {
+        "a0": 164314304,
+        "a1": 157715040,
+        "a2": 155420292,
+        "a3": 20537526,
+        "ra": 152530884
+      },
+      "a0": {
+        "event": "memory.read",
+        "ticket": "wf29-125",
+        "base64": "ajm7PKwERT9W1qg8ltorPN9X0b6Rn2m/UBbSCaAW0gnUCkYJ1ApGCYwAADQTNyS/QIa5vPXB2D0AAAAAZvzaPaFcprsMoCU/AAAAACy+sbwoxSc/mQIPPAAAAAC/d7TCGZxlQVMqcUIAAIA/8PbSCfBz1Anwb9MJ8P7TCWCfZwkAOMsJAAAAAAAAAAA4uVAJAADuQk19Rr9Rd1a+hev+vw=="
+      },
+      "a1": {
+        "event": "memory.read",
+        "ticket": "wf29-126",
+        "base64": "xuMiPgAAAACMvXw/AAAAAAAAAAAAAIA/AAAAAAAAAACMvXy/AAAAAMbjIj4AAAAAPgazwgAAYEG9sHBCAACAP9D9ZQkAAAQAICLHCeCMZglITOIJwDdmCcA8ywmOdHl9AAAAABGCAACjo///AAAAAAAAAAAAAAAAAAACAHICAAA="
+      },
+      "a2": {
+        "event": "memory.read",
+        "ticket": "wf29-127",
+        "base64": "zsxMPs7MTD582aA9Ygu2O2ILtjtiCzY8Ygu2O7WikTvNzMw9zcxMPgAAekQAAIA/AACAPwcAAAAPAAAAAAAgQVF31j1Rd1Y+AAD/AP////8AAAA/AADAP83MzD3NzMw9zcxMPwAAgD/NzEw/AACAPwAAgD8AAIA/BwAAAA8AAAA="
+      }
+    },
+    {
+      "pc": 154067612,
+      "ticks": 1454709523738,
+      "args": {
+        "a0": 157717856,
+        "a1": 0,
+        "a2": 155420984,
+        "a3": 25162912,
+        "ra": 153667344
+      },
+      "a0": {
+        "event": "memory.read",
+        "ticket": "wf29-131",
+        "base64": "s1u2PgAAAABFNm+/AAAAAAAAAAAAAIA/AAAAAAAAAABFNm8/AAAAALNbtj4AAAAAQwKrwgAAYEGPPTRCAACAP8D+ZQkAAAAA4DrHCeCcZgmMUOIJEDhmCSBEywlBZO5wAAAAABGDEAD/////AAAAAAAAAAAAAAAAAAACAE8FAACxrIW+AAAAAAAfd78AAAAAAAAAAAAAgD8AAAAAAAAAAA=="
+      },
+      "a2": {
+        "event": "memory.read",
+        "ticket": "wf29-132",
+        "base64": "4IhDCcyIQwkPAEsAzcxMPpZDizyWQws9zsxMPc7MzD1iC7Y7BQAAAAgAAAAAAAA/ZmZmP///////////BAAEAM3MzD3NzEw+mpmZPs3MzD4AAHBBAAC0QYmICD3OzMw9taKROlF3Vj5/f39/MzNzP+xReD8AAAAAAADAQAAAgD8="
+      }
+    },
+    {
+      "pc": 152528980,
+      "ticks": 1454709523781,
+      "args": {
+        "a0": 164316192,
+        "a1": 157717856,
+        "a2": 155420896,
+        "a3": 0,
+        "ra": 154068080
+      },
+      "a0": {
+        "event": "memory.read",
+        "ticket": "wf29-136",
+        "base64": "9kmfPW5kdT9G63I7AAAAAAAAAAAAAAAA8GnTCfCL1Anw8tQJ8G3TCfB+1AnwRdQJ8EbUCfBN1AkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAICAAAAAAAAAAAAAAAAAK7CAAAAAA=="
+      },
+      "a1": {
+        "event": "memory.read",
+        "ticket": "wf29-137",
+        "base64": "s1u2PgAAAABFNm+/AAAAAAAAAAAAAIA/AAAAAAAAAABFNm8/AAAAALNbtj4AAAAAQwKrwgAAYEGPPTRCAACAP8D+ZQkAAAAA4DrHCeCcZgmMUOIJEDhmCSBEywlBZO5wAAAAABGDEAD/////AAAAAAAAAAAAAAAAAAACAE8FAAA="
+      },
+      "a2": {
+        "event": "memory.read",
+        "ticket": "wf29-138",
+        "base64": "iYiIPvDu7j1Rd1Y9Ygu2O2ILNjtiCzY8Ygu2O7WikTvNzMw9zcxMPgAAekTOzMw+8O7uPVF3Vj3PzEw+Ygs2O2ILtjxiC7Y7taKRO83MzD3NzEw+AAB6ROCIQwnMiEMJDwBLAM3MTD6WQ4s8lkMLPc7MTD3OzMw9Ygu2OwUAAAA="
+      }
+    },
+    {
+      "pc": 154067612,
+      "ticks": 1454709531526,
+      "args": {
+        "a0": 157717984,
+        "a1": 0,
+        "a2": 155420984,
+        "a3": 20218972,
+        "ra": 153667344
+      },
+      "a0": {
+        "event": "memory.read",
+        "ticket": "wf29-142",
+        "base64": "sayFvgAAAAAAH3e/AAAAAAAAAAAAAIA/AAAAAAAAAAAAH3c/AAAAALGshb4AAAAA+4vDwgAAYEFKTkVCAACAP8D+ZQkAAAAAoD7HCQAAAAAAAAAAIDhmCThFywn7NefpAAAAABGBAAD/////AAAAAAAAAAAAAAAAAAACAHEFAABwVsc+AAAAABDNaz8AAAAAAAAAAAAAgD8AAAAAAAAAAA=="
+      },
+      "a2": {
+        "event": "memory.read",
+        "ticket": "wf29-143",
+        "base64": "4IhDCcyIQwkPAEsAzcxMPpZDizyWQws9zsxMPc7MzD1iC7Y7BQAAAAgAAAAAAAA/ZmZmP///////////BAAEAM3MzD3NzEw+mpmZPs3MzD4AAHBBAAC0QYmICD3OzMw9taKROlF3Vj5/f39/MzNzP+xReD8AAAAAAADAQAAAgD8="
+      }
+    },
+    {
+      "pc": 152528980,
+      "ticks": 1454709531569,
+      "args": {
+        "a0": 164316472,
+        "a1": 157717984,
+        "a2": 155420896,
+        "a3": 0,
+        "ra": 154068080
+      },
+      "a0": {
+        "event": "memory.read",
+        "ticket": "wf29-147",
+        "base64": "iogIvG/ORr5JopO9AAAAAD9fQb9vwie/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAK7CAAAAAA=="
+      },
+      "a1": {
+        "event": "memory.read",
+        "ticket": "wf29-148",
+        "base64": "sayFvgAAAAAAH3e/AAAAAAAAAAAAAIA/AAAAAAAAAAAAH3c/AAAAALGshb4AAAAA+4vDwgAAYEFKTkVCAACAP8D+ZQkAAAAAoD7HCQAAAAAAAAAAIDhmCThFywn7NefpAAAAABGBAAD/////AAAAAAAAAAAAAAAAAAACAHEFAAA="
+      },
+      "a2": {
+        "event": "memory.read",
+        "ticket": "wf29-149",
+        "base64": "iYiIPvDu7j1Rd1Y9Ygu2O2ILNjtiCzY8Ygu2O7WikTvNzMw9zcxMPgAAekTOzMw+8O7uPVF3Vj3PzEw+Ygs2O2ILtjxiC7Y7taKRO83MzD3NzEw+AAB6ROCIQwnMiEMJDwBLAM3MTD6WQ4s8lkMLPc7MTD3OzMw9Ygu2OwUAAAA="
+      }
+    }
+  ],
+  "success": true,
+  "cpu": {
+    "event": "cpu.status",
+    "ticket": "wf29-154",
+    "stepping": true,
+    "paused": false,
+    "pc": 152528980,
+    "ticks": 1454709531569
+  }
+}

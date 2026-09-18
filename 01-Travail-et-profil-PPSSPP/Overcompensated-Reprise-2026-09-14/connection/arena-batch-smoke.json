@@ -1,0 +1,14 @@
+{
+  "time": "2026-09-15T23:10:26.886Z",
+  "cpu": {
+    "event": "cpu.status",
+    "ticket": "wf29-2",
+    "stepping": true,
+    "paused": false,
+    "pc": 142628724,
+    "ticks": 1454809493909
+  },
+  "mismatches": [],
+  "pluginInstalled": 1,
+  "verified": true
+}

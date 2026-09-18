@@ -1,0 +1,17 @@
+﻿check,status,details
+bin_zip_integrity,PASS,bad_member=
+level2_clean_equals_bin_archive,PASS,clean_sha256=0037689a926197969231795c4d6b05980e5e94558394617b21e8b8bcd79bc8aa; archive_sha256=0037689a926197969231795c4d6b05980e5e94558394617b21e8b8bcd79bc8aa
+wrapper_callsite_total,PASS,actual=493; expected=493
+wrapper_family_total,PASS,actual=59; expected=59
+recovered_large_function_owner,PASS,callsite_assignments=1; recovered_families=1; expected=1
+recovered_level03_platform_evidence,PASS,module_index=3; owner_rva=0x00158A18; function_size_bytes=10760; exact_object=Lvl3Platform
+focus_family_total,PASS,actual=38; expected=38
+shared_pokitaru_ryllus_families,PASS,actual=18; expected=18
+pokitaru_ryllus_callsite_total,PASS,actual=112; expected=112
+multi_module_full_function_hashes_stable,PASS,multi_module_families=31; stable_full_hash_families=31; expected=31
+pokitaru_callers,PASS,actual=55; expected=55
+ryllus_callers,PASS,actual=57; expected=57
+profiler_capacity,PASS,maximum_active_module_callsites=57; capacity=64
+all_callsites_have_ra,PASS,rows=493
+all_family_ids_resolved,PASS,rows=493
+all_callsite_words_match_wrapper_jal,PASS,rows=493; expected_instruction=jal wrapper_two_pass (mot PRX relogeable)

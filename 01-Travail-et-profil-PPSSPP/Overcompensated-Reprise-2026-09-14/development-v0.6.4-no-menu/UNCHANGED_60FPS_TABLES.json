@@ -1,0 +1,8 @@
+{
+  "src/rcsm_full_patch.c": "a508758be04e29b0f2fb2324c5e9f9fdbb92c0da6a238f4328903d7c7efdd1eb",
+  "generated/full_patch.generated.c": "6c88ca9769956bd272730fe0cee0d648ae4aaafba15d2a5f19c3eb7056718216",
+  "src/rcsm_profiler_core.c": "b92c9b2f07f08fb0d7570c74c0549545e2cedce63120268b2a9a5a08e06a6987",
+  "src/profiler_hook.S": "b058f78ac289d63e631f48126ae29c727d05f566ac6b1a56fb23403bfbef2f6c",
+  "generated/wrapper_profiles.generated.c": "5f27ec7591ea1d102e71a450f951e35cb8c089f63ad80572d47aae4219ea80a4",
+  "generated/wrapper_profiles.generated.h": "28fad06186884493a0282a9982a841ab087ca0c08b1b50b1a240e77e9986fa64"
+}

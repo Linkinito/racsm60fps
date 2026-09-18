@@ -1,0 +1,198 @@
+{
+  "plaintext_sha256": "7e1ec222c550d93c48f7b97d1258c559c1cdc48d957c1fb176304288c2c72a58",
+  "size": 356128,
+  "bolts": 20973,
+  "skill_bytes": "020000000000",
+  "ram_candidates": [
+    {
+      "ram_offset": "0xc13c0",
+      "sha256": "e4328a00df1ea7f453f612dc1b36e3a569c8d919f625380ec79929cdca992bfc",
+      "bolts": 20522
+    }
+  ],
+  "slots": [
+    {
+      "slot": 0,
+      "offset": "0x1c40",
+      "fields": [
+        32768,
+        524
+      ],
+      "nonzero": 4782,
+      "changed_bytes": 5822,
+      "last_nonzero": "0x19be"
+    },
+    {
+      "slot": 1,
+      "offset": "0x5c40",
+      "fields": [
+        32768,
+        6952
+      ],
+      "nonzero": 5323,
+      "changed_bytes": 5860,
+      "last_nonzero": "0x1b26"
+    },
+    {
+      "slot": 2,
+      "offset": "0x9c40",
+      "fields": [
+        32768,
+        6616
+      ],
+      "nonzero": 5107,
+      "changed_bytes": 5082,
+      "last_nonzero": "0x19d6"
+    },
+    {
+      "slot": 3,
+      "offset": "0xdc40",
+      "fields": [
+        32768,
+        4799
+      ],
+      "nonzero": 3597,
+      "changed_bytes": 3542,
+      "last_nonzero": "0x12bd"
+    },
+    {
+      "slot": 4,
+      "offset": "0x11c40",
+      "fields": [
+        32768,
+        524
+      ],
+      "nonzero": 263,
+      "changed_bytes": 0,
+      "last_nonzero": "0x20a"
+    },
+    {
+      "slot": 5,
+      "offset": "0x15c40",
+      "fields": [
+        32768,
+        524
+      ],
+      "nonzero": 263,
+      "changed_bytes": 0,
+      "last_nonzero": "0x20a"
+    },
+    {
+      "slot": 6,
+      "offset": "0x19c40",
+      "fields": [
+        32768,
+        524
+      ],
+      "nonzero": 263,
+      "changed_bytes": 0,
+      "last_nonzero": "0x20a"
+    },
+    {
+      "slot": 7,
+      "offset": "0x1dc40",
+      "fields": [
+        32768,
+        524
+      ],
+      "nonzero": 263,
+      "changed_bytes": 0,
+      "last_nonzero": "0x20a"
+    },
+    {
+      "slot": 8,
+      "offset": "0x21c40",
+      "fields": [
+        32768,
+        524
+      ],
+      "nonzero": 263,
+      "changed_bytes": 0,
+      "last_nonzero": "0x20a"
+    },
+    {
+      "slot": 9,
+      "offset": "0x25c40",
+      "fields": [
+        32768,
+        524
+      ],
+      "nonzero": 263,
+      "changed_bytes": 0,
+      "last_nonzero": "0x20a"
+    },
+    {
+      "slot": 10,
+      "offset": "0x29c40",
+      "fields": [
+        32768,
+        524
+      ],
+      "nonzero": 263,
+      "changed_bytes": 0,
+      "last_nonzero": "0x20a"
+    },
+    {
+      "slot": 11,
+      "offset": "0x2dc40",
+      "fields": [
+        32768,
+        524
+      ],
+      "nonzero": 263,
+      "changed_bytes": 0,
+      "last_nonzero": "0x20a"
+    },
+    {
+      "slot": 12,
+      "offset": "0x31c40",
+      "fields": [
+        32768,
+        524
+      ],
+      "nonzero": 263,
+      "changed_bytes": 0,
+      "last_nonzero": "0x20a"
+    },
+    {
+      "slot": 13,
+      "offset": "0x35c40",
+      "fields": [
+        32768,
+        524
+      ],
+      "nonzero": 263,
+      "changed_bytes": 0,
+      "last_nonzero": "0x20a"
+    }
+  ],
+  "zero_candidate_current": true,
+  "zero_candidate_old": true,
+  "disk_saves": [
+    {
+      "path": "C:\\Users\\linki\\Documents\\PPSSPP\\PSP\\SAVEDATA\\UCES00420DATA0\\SECURE.BIN",
+      "size": 356144,
+      "sha256": "bd7abc29c357c68777cb13d1d8cd1ffdab08c3e616a01ed02a14c9eaa5a7ba34"
+    },
+    {
+      "path": "C:\\Users\\linki\\Documents\\PPSSPP\\PSP\\SAVEDATA\\UCES00420DATA1\\SECURE.BIN",
+      "size": 356144,
+      "sha256": "d26b21041b1fe6f279c4a7e3650464341497accf2e9c3ba0df872f18e874cac0"
+    },
+    {
+      "path": "C:\\Users\\linki\\Documents\\PPSSPP\\PSP\\SAVEDATA\\UCES00420DATA2\\SECURE.BIN",
+      "size": 356144,
+      "sha256": "179971964e358df9093aac6694595f54bb2fcf330dc26e10642f653a892bb8aa"
+    },
+    {
+      "path": "C:\\Users\\linki\\Documents\\PPSSPP\\PSP\\SAVEDATA\\UCES00420DATA3\\SECURE.BIN",
+      "size": 356144,
+      "sha256": "175de21de751cb950197fb0812a31feb05c39d9437312c628bf85cae27bac93a"
+    },
+    {
+      "path": "C:\\Users\\linki\\Documents\\PPSSPP\\PSP\\SAVEDATA\\UCES00420DATA4\\SECURE.BIN",
+      "size": 356144,
+      "sha256": "4bf1af998b695893df78d1bcb68c229231d572cdef5bf9c7e057ba1888d96648"
+    }
+  ]
+}

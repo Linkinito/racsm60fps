@@ -1,0 +1,28 @@
+000FFAD8 0000acc4 lwc1      $f12, ($a1)
+000FFADC 0000cdc4 lwc1      $f13, ($a2)
+000FFAE0 0400aec4 lwc1      $f14, 4($a1)
+000FFAE4 0c00cfc4 lwc1      $f15, 0xc($a2)
+000FFAE8 02640d46 mul.s     $f16, $f12, $f13
+000FFAEC 0400d1c4 lwc1      $f17, 4($a2)
+000FFAF0 0800b3c4 lwc1      $f19, 8($a1)
+000FFAF4 82740f46 mul.s     $f18, $f14, $f15
+000FFAF8 1800c0c4 lwc1      $f0, 0x18($a2)
+000FFAFC 82601146 mul.s     $f2, $f12, $f17
+000FFB00 1000c1c4 lwc1      $f1, 0x10($a2)
+000FFB04 0800c4c4 lwc1      $f4, 8($a2)
+000FFB08 82710146 mul.s     $f6, $f14, $f1
+000FFB0C 1c00c5c4 lwc1      $f5, 0x1c($a2)
+000FFB10 1400c7c4 lwc1      $f7, 0x14($a2)
+000FFB14 00841246 add.s     $f16, $f16, $f18
+000FFB18 02630446 mul.s     $f12, $f12, $f4
+000FFB1C 429a0546 mul.s     $f9, $f19, $f5
+000FFB20 82730746 mul.s     $f14, $f14, $f7
+000FFB24 80100646 add.s     $f2, $f2, $f6
+000FFB28 2000d2c4 lwc1      $f18, 0x20($a2)
+000FFB2C 1000a8c4 lwc1      $f8, 0x10($a1)
+000FFB30 c2980046 mul.s     $f3, $f19, $f0
+000FFB34 1400aac4 lwc1      $f10, 0x14($a1)
+000FFB38 00630e46 add.s     $f12, $f12, $f14
+000FFB3C 80100946 add.s     $f2, $f2, $f9
+000FFB40 82410d46 mul.s     $f6, $f8, $f13
+000FFB44 c2421146 mul.s     $f11, $f8, $f17

@@ -1,0 +1,38 @@
+[
+  {
+    "name": "__0FaDISPLAY_BuildFrustumPlanesP6HMATRIX4NCBP6KClipPlanes",
+    "value": "0x3674",
+    "size": 2240,
+    "section": 1
+  },
+  {
+    "name": "__0FbDISPLAY_SetVisibilityPlanesP6KClipPlanes",
+    "value": "0x33f0",
+    "size": 36,
+    "section": 1
+  },
+  {
+    "name": "g_clipMat",
+    "value": "0x4cf40",
+    "size": 64,
+    "section": 46
+  },
+  {
+    "name": "g_WorldClipPlanes",
+    "value": "0x4cf80",
+    "size": 256,
+    "section": 46
+  },
+  {
+    "name": "g_pCurrentClipPlanes",
+    "value": "0x2f58",
+    "size": 4,
+    "section": 35
+  },
+  {
+    "name": "__0FXHUD_SetWidgetVisibilityUib",
+    "value": "0x11c44",
+    "size": 252,
+    "section": 1
+  }
+]

@@ -1,0 +1,28 @@
+000218A0 b 0x219ec
+000218A4 nop 
+000218A8 lw $a0, -0xd80($s1)
+000218AC addiu $s3, $sp, 0x10
+000218B0 addiu $a1, $a0, 0x40
+000218B4 move $a0, $s3
+000218B8 jal 0x1add50
+000218BC ori $a2, $zero, 0x20
+000218C0 lui $a2, 5
+000218C4 lw $a0, -0xd80($s1)
+000218C8 move $a1, $zero
+000218CC jal 0x1ada9c
+000218D0 addiu $a2, $a2, 0x6f20
+000218D4 lw $a0, -0xd80($s1)
+000218D8 move $a1, $s3
+000218DC addiu $a0, $a0, 0x40
+000218E0 jal 0x1add50
+000218E4 ori $a2, $zero, 0x20
+000218E8 jal 0x22310
+000218EC nop 
+000218F0 jal 0x1f4ac
+000218F4 nop 
+000218F8 jal 0x21a80
+000218FC move $a0, $s2
+00021900 lw $a0, -0xd80($s1)
+00021904 ori $a1, $zero, 1
+00021908 sb $a1, ($a0)
+0002190C lw $a0, -0xd80($s1)

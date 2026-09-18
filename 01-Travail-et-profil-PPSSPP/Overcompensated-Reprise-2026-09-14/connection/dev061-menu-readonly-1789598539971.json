@@ -1,0 +1,69 @@
+{
+  "time": "2026-09-16T22:42:19.905Z",
+  "game": {
+    "event": "game.status",
+    "ticket": "wf29-1",
+    "game": {
+      "id": "UCES00420",
+      "version": "1.00",
+      "title": "Ratchet and Clank: Size Matters"
+    },
+    "paused": false
+  },
+  "module": {
+    "event": "memory.read_u32",
+    "ticket": "wf29-2",
+    "value": 4
+  },
+  "dataAddress": 157027608,
+  "base": 152358144,
+  "cpu": {
+    "event": "cpu.status",
+    "ticket": "wf29-5",
+    "stepping": false,
+    "paused": false,
+    "pc": 142628724,
+    "ticks": 31966472309
+  },
+  "pauseData": {
+    "event": "memory.read",
+    "ticket": "wf29-6",
+    "base64": "AwAAAAMAAAABAAAAAwAAAAAAAAAAAAAAAAAAAAIAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
+  },
+  "screen": 3,
+  "updateTarget": {
+    "event": "memory.read_u32",
+    "ticket": "wf29-7",
+    "value": 153070376
+  },
+  "menuAddress": 155313224,
+  "menuHeader": "PORBCQIAAAABAAAAAACAPwAAgD8AAAAA0KUJ/zc3N5f/////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+  "menuCount": 2,
+  "selection": 1,
+  "nodes": [
+    {
+      "address": 155312756,
+      "text": 448,
+      "direct": 0,
+      "route": 100,
+      "enabled": 1,
+      "visible": 1,
+      "base64": "wAEAAA8DAAD4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8WAwAAAQEAAGQAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    {
+      "address": 155312984,
+      "text": 449,
+      "direct": 0,
+      "route": 101,
+      "enabled": 1,
+      "visible": 1,
+      "base64": "wQEAABADAAD5AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8XAwAAAQEAAGUAAAAAAAAAAAAAAAAAAAAAAAAA"
+    }
+  ],
+  "targetRva": "0xade28",
+  "targetCode": {
+    "event": "memory.read",
+    "ticket": "wf29-13",
+    "base64": "ZQxIDgAAAACNAAAQAAAAAA=="
+  }
+}

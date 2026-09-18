@@ -1,0 +1,44 @@
+{
+  "schema": "rcsm-dispatcher-release/1",
+  "package": "Size_Matters_wrapper_dispatcher_v0.5.0-prealpha_UCES00420",
+  "game_id": "UCES00420",
+  "target": "PPSSPP 1.19.3 / Windows 11",
+  "status": "PREALPHA_REQUIRES_IN_GAME_VALIDATION",
+  "corpus": {
+    "modules": 15,
+    "callsites": 493,
+    "families": 59,
+    "metalis_callsites": 36,
+    "metalis_families": 21
+  },
+  "build": {
+    "toolchain": "psp-gcc (GCC) 15.2.0",
+    "validation_status": "PASS",
+    "checks_passed": 910,
+    "patch_prx_bytes": 46862,
+    "patch_prx_sha256": "b95b256c101a1a11872ca910aed4f5de8ca22c5e6bba77727b607d1316476a14"
+  },
+  "ready_zips": [
+    {
+      "file": "RCSMDispatcher_v0.5.0_STAGE05A_METALIS_ALL_TWO_PASS_UCES00420.zip",
+      "sha256": "189e18bb4bd1d41825e480ddf1ffb4bdbd7d7c4dc1964a016e766067737bf36b",
+      "two_pass_callsites": 36,
+      "one_pass_callsites": 0,
+      "recommended_first": true
+    },
+    {
+      "file": "RCSMDispatcher_v0.5.0_STAGE05B_METALIS_WF030_ONE_PASS_UCES00420.zip",
+      "sha256": "40c35d6b4c975a72739fdfe2fc5a045696e80002ea5f728b4fa47e5170f034f5",
+      "two_pass_callsites": 35,
+      "one_pass_callsites": 1,
+      "recommended_first": false
+    },
+    {
+      "file": "RCSMDispatcher_v0.5.0_STAGE05C_METALIS_ACTOR_CANDIDATES_UCES00420.zip",
+      "sha256": "7a0b3ba3d27a24eecc2ffb7d4bf260891e0748261ccb9c204c472ee1820e3820",
+      "two_pass_callsites": 27,
+      "one_pass_callsites": 9,
+      "recommended_first": false
+    }
+  ]
+}

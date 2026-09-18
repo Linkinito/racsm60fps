@@ -1,0 +1,27 @@
+Contenu : Overcompensated.fps.tmp
+
+De quoi il s'agit
+-----------------
+Restes du prototype de menu dev.1. Cette version a d'abord essaye d'ecrire le
+choix 30/60 en renommant un fichier temporaire vers Overcompensated.fps.
+Le renommage a ete refuse par le systeme de fichiers (destination deja
+existante), ce qui expliquait la persistance defaillante constatee.
+
+Le fichier contenait la valeur 30, alors que Overcompensated.fps contenait 60 :
+il ne representait donc pas l'etat reel et pouvait induire en erreur.
+
+La version dev.2 corrige le probleme en ecrivant directement les trois octets
+du fichier de preference, sans renommage. Le fichier temporaire n'est plus
+utilise.
+
+Rangement du 17 septembre 2026
+-----------------------------
+Deplace depuis :
+  C:\Users\linki\Documents\PPSSPP\PSP\PLUGINS\SizeMattersWrapperProfiler\Overcompensated.fps.tmp
+vers :
+  C:\Users\linki\Documents\PPSSPP\Overcompensated-Reprise-2026-09-14\sessions\attic-2026-09-17\
+
+Aucun autre fichier du dossier du plugin n'a ete modifie ni supprime.
+Ce fichier est conserve comme piece justificative : il peut etre supprime sans
+risque, ou remis a son ancien emplacement pour reproduire l'ancien bogue.
+

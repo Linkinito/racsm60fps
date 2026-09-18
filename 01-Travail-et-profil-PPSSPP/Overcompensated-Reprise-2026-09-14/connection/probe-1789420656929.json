@@ -1,0 +1,30 @@
+{
+  "timestamp": "2026-09-14T21:17:36.885Z",
+  "endpoint": "ws://127.0.0.1:60907/debugger",
+  "requests": [
+    {
+      "event": "version",
+      "fields": {
+        "name": "Overcompensated local probe",
+        "version": "0.1.0"
+      },
+      "result": {
+        "event": "version",
+        "ticket": "probe-1",
+        "name": "PPSSPP",
+        "version": "v1.19.3"
+      }
+    },
+    {
+      "event": "game.status",
+      "fields": {},
+      "result": {
+        "event": "game.status",
+        "ticket": "probe-2",
+        "game": null,
+        "paused": false
+      }
+    }
+  ],
+  "connected": true
+}

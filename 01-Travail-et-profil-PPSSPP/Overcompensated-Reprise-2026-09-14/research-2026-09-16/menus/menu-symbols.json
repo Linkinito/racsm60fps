@@ -1,0 +1,457 @@
+[
+  {
+    "name": "__0FkPAUSEMENU_UpdateNumberItemsPerWindowP6KtPAUSEMENU",
+    "value": 90836,
+    "size": 72,
+    "info": 2,
+    "section": 1
+  },
+  {
+    "name": "__0FfPAUSEMENU_CalculateScrollNeededP6KtPAUSEMENU",
+    "value": 91076,
+    "size": 228,
+    "info": 2,
+    "section": 1
+  },
+  {
+    "name": "__0FdPAUSEMODE_UpdateRequestStatesv",
+    "value": 96756,
+    "size": 92,
+    "info": 2,
+    "section": 1
+  },
+  {
+    "name": "__0FaPAUSEMODE_HandleScreenInitv",
+    "value": 96936,
+    "size": 8,
+    "info": 2,
+    "section": 1
+  },
+  {
+    "name": "__0FaPAUSEMODE_HandleScreenExitv",
+    "value": 96928,
+    "size": 8,
+    "info": 2,
+    "section": 1
+  },
+  {
+    "name": "__0FdPAUSEMODE_HandleScreenChangesv",
+    "value": 96848,
+    "size": 80,
+    "info": 2,
+    "section": 1
+  },
+  {
+    "name": "LEVELSTARTUP_G_CursorCycleFX",
+    "value": 54476,
+    "size": 40,
+    "info": 1,
+    "section": 35
+  },
+  {
+    "name": "PAUSEMODE_G_CursorLanguageFlagFx",
+    "value": 54556,
+    "size": 40,
+    "info": 1,
+    "section": 35
+  },
+  {
+    "name": "LEVELSTARTUP_sg_BackToMovie",
+    "value": 54596,
+    "size": 4,
+    "info": 1,
+    "section": 35
+  },
+  {
+    "name": "LEVELSTARTUP_sg_DialogBuffer",
+    "value": 278752,
+    "size": 256,
+    "info": 0,
+    "section": 46
+  },
+  {
+    "name": "__0FUPAUSEMODE_IsOkToExitv",
+    "value": 95768,
+    "size": 8,
+    "info": 18,
+    "section": 1
+  },
+  {
+    "name": "__0FoPAUSEMODE_GetGameModeOnPauseModeEntrancev",
+    "value": 95464,
+    "size": 16,
+    "info": 18,
+    "section": 1
+  },
+  {
+    "name": "__0FoPAUSEMODE_SetGameModeOnPauseModeEntrance6OGAME_MODE_LIST",
+    "value": 95480,
+    "size": 16,
+    "info": 18,
+    "section": 1
+  },
+  {
+    "name": "__0FdPAUSEMODE_InitAtGameResetDatav",
+    "value": 95496,
+    "size": 72,
+    "info": 18,
+    "section": 1
+  },
+  {
+    "name": "__0FOPAUSEMODE_InitUi",
+    "value": 95568,
+    "size": 104,
+    "info": 18,
+    "section": 1
+  },
+  {
+    "name": "__0FRLEVELSTARTUP_Initi",
+    "value": 101960,
+    "size": 56,
+    "info": 18,
+    "section": 1
+  },
+  {
+    "name": "__0FOPAUSEMODE_Exitv",
+    "value": 95708,
+    "size": 60,
+    "info": 18,
+    "section": 1
+  },
+  {
+    "name": "__0FRLEVELSTARTUP_Exitv",
+    "value": 102016,
+    "size": 8,
+    "info": 18,
+    "section": 1
+  },
+  {
+    "name": "__0FcPAUSEMODE_RefreshNoPauseModeUi",
+    "value": 96744,
+    "size": 12,
+    "info": 18,
+    "section": 1
+  },
+  {
+    "name": "__0FYLEVELSTARTUP_Core_Renderv",
+    "value": 101556,
+    "size": 360,
+    "info": 18,
+    "section": 1
+  },
+  {
+    "name": "__0FZPAUSEMODE_IsPauselessModev",
+    "value": 96304,
+    "size": 60,
+    "info": 18,
+    "section": 1
+  },
+  {
+    "name": "__0FQPAUSEMODE_Updatev",
+    "value": 95776,
+    "size": 244,
+    "info": 18,
+    "section": 1
+  },
+  {
+    "name": "__0FQPAUSEMODE_Renderv",
+    "value": 96020,
+    "size": 252,
+    "info": 18,
+    "section": 1
+  },
+  {
+    "name": "__0FTLEVELSTARTUP_Updatev",
+    "value": 103560,
+    "size": 5784,
+    "info": 18,
+    "section": 1
+  },
+  {
+    "name": "__0FTLEVELSTARTUP_Renderv",
+    "value": 101916,
+    "size": 44,
+    "info": 18,
+    "section": 1
+  },
+  {
+    "name": "__0FYPAUSEMODE_UpdateDebouncev",
+    "value": 96272,
+    "size": 32,
+    "info": 18,
+    "section": 1
+  },
+  {
+    "name": "__0FfPAUSEMODE_UpdateRefreshCountersv",
+    "value": 96516,
+    "size": 60,
+    "info": 18,
+    "section": 1
+  },
+  {
+    "name": "__0FfPAUSEMODE_GoIntoRoutedPauseModeb",
+    "value": 96440,
+    "size": 36,
+    "info": 18,
+    "section": 1
+  },
+  {
+    "name": "g_PAUSEMENU_WidgetHackColor",
+    "value": 53768,
+    "size": 4,
+    "info": 17,
+    "section": 35
+  },
+  {
+    "name": "__0FQPAUSEMENU_UpdateP6KtPAUSEMENUUi",
+    "value": 89748,
+    "size": 156,
+    "info": 18,
+    "section": 1
+  },
+  {
+    "name": "__0FePAUSEMENU_HideAllCustomCursorsP6KtPAUSEMENU",
+    "value": 90284,
+    "size": 132,
+    "info": 18,
+    "section": 1
+  },
+  {
+    "name": "__0FXPAUSEMENU_SeekSelectionP6KtPAUSEMENUUi",
+    "value": 89904,
+    "size": 228,
+    "info": 18,
+    "section": 1
+  },
+  {
+    "name": "__0FRPAUSEMENU_SetTextP6KtPAUSEMENUUiNCCb",
+    "value": 90132,
+    "size": 92,
+    "info": 18,
+    "section": 1
+  },
+  {
+    "name": "__0FpPAUSEMENU_SetScrollingItemSeparatorColorsP6KtPAUSEMENUUiTC",
+    "value": 90224,
+    "size": 16,
+    "info": 18,
+    "section": 1
+  },
+  {
+    "name": "__0FlPAUSEMENU_SetCurrentXYHighlightScalesP6KtPAUSEMENUfTC",
+    "value": 90240,
+    "size": 16,
+    "info": 18,
+    "section": 1
+  },
+  {
+    "name": "__0FnPAUSEMENU_SetCurrentActiveAndShowStatusP6KtPAUSEMENUbTC",
+    "value": 90256,
+    "size": 16,
+    "info": 18,
+    "section": 1
+  },
+  {
+    "name": "__0FcPAUSEMENU_SetCurrentWidgetIdP6KtPAUSEMENUUi",
+    "value": 90272,
+    "size": 12,
+    "info": 18,
+    "section": 1
+  },
+  {
+    "name": "__0FePAUSEMENU_BeginAddingMenuItemsP6KtPAUSEMENUPcUiTD",
+    "value": 90416,
+    "size": 224,
+    "info": 18,
+    "section": 1
+  },
+  {
+    "name": "__0FZPAUSEMENU_SetScreenLimitsP6KtPAUSEMENUsNDC",
+    "value": 91304,
+    "size": 216,
+    "info": 18,
+    "section": 1
+  },
+  {
+    "name": "__0FcPAUSEMENU_EndAddingMenuItemsP6KtPAUSEMENU",
+    "value": 90640,
+    "size": 196,
+    "info": 18,
+    "section": 1
+  },
+  {
+    "name": "__0FePAUSEMENU_IndividualItemHeightP6KtPAUSEMENU",
+    "value": 90908,
+    "size": 12,
+    "info": 18,
+    "section": 1
+  },
+  {
+    "name": "__0FgPAUSEMENU_CalculateItemsToRenderP6KtPAUSEMENUPUiTC",
+    "value": 90920,
+    "size": 156,
+    "info": 18,
+    "section": 1
+  },
+  {
+    "name": "__0FcPAUSEMENU_GetCurrentItemNodeP6KtPAUSEMENU",
+    "value": 91520,
+    "size": 48,
+    "info": 18,
+    "section": 1
+  },
+  {
+    "name": "__0FRPAUSEMENU_AddItemP6KtPAUSEMENUUiNECbNCC",
+    "value": 91568,
+    "size": 288,
+    "info": 18,
+    "section": 1
+  },
+  {
+    "name": "__0FQPAUSEMENU_RenderP6KtPAUSEMENU",
+    "value": 91856,
+    "size": 3556,
+    "info": 18,
+    "section": 1
+  },
+  {
+    "name": "PAUSEMODE_G_CursorCycleFx",
+    "value": 53808,
+    "size": 40,
+    "info": 17,
+    "section": 35
+  },
+  {
+    "name": "PAUSEMODE_G_CursorCycleFxUpperLight",
+    "value": 53848,
+    "size": 40,
+    "info": 17,
+    "section": 35
+  },
+  {
+    "name": "__0oPtPAUSEMODE_Datadtv",
+    "value": 196308,
+    "size": 80,
+    "info": 34,
+    "section": 1
+  },
+  {
+    "name": "__0FZPAUSEMODE_ResetPauseStackv",
+    "value": 95412,
+    "size": 52,
+    "info": 18,
+    "section": 1
+  },
+  {
+    "name": "__0fFStack76SePAUSEMODE_SCREENS4I_FResetv_v",
+    "value": 196472,
+    "size": 36,
+    "info": 34,
+    "section": 1
+  },
+  {
+    "name": "__0FoPAUSEMODE_RefreshSetPauseModeEntryScreenUi",
+    "value": 96476,
+    "size": 40,
+    "info": 18,
+    "section": 1
+  },
+  {
+    "name": "__0FkPAUSEMODE_UndoControlContextChackeryv",
+    "value": 95672,
+    "size": 36,
+    "info": 18,
+    "section": 1
+  },
+  {
+    "name": "__0FlPAUSEMODE_ChangeControlContextHackeryUi",
+    "value": 96364,
+    "size": 76,
+    "info": 18,
+    "section": 1
+  },
+  {
+    "name": "__0FWPAUSEMODE_SetPauseModeUib",
+    "value": 96576,
+    "size": 168,
+    "info": 18,
+    "section": 1
+  },
+  {
+    "name": "__0oFStack76SePAUSEMODE_SCREENS4I_dtv",
+    "value": 196428,
+    "size": 44,
+    "info": 34,
+    "section": 1
+  },
+  {
+    "name": "__0oFStack76SePAUSEMODE_SCREENS4I_ctv",
+    "value": 196388,
+    "size": 40,
+    "info": 34,
+    "section": 1
+  },
+  {
+    "name": "__0FYLEVELSTARTUP_GetCursorFXv",
+    "value": 100984,
+    "size": 12,
+    "info": 18,
+    "section": 1
+  },
+  {
+    "name": "__0FXLEVELSTARTUP_GetArrowFXv",
+    "value": 100996,
+    "size": 12,
+    "info": 18,
+    "section": 1
+  },
+  {
+    "name": "__0FeLEVELSTARTUP_ReloadLocDatabasev",
+    "value": 102068,
+    "size": 1492,
+    "info": 18,
+    "section": 1
+  },
+  {
+    "name": "__0FmLEVELSTARTUP_GetTrackReelMovieFileNameUi",
+    "value": 101236,
+    "size": 12,
+    "info": 18,
+    "section": 1
+  },
+  {
+    "name": "__0FnLEVELSTARTUP_GetFrontEndAttractFileNameUi",
+    "value": 101248,
+    "size": 12,
+    "info": 18,
+    "section": 1
+  },
+  {
+    "name": "__0FiLEVELSTARTUP_GetLegalMovieFileNameUi",
+    "value": 101260,
+    "size": 44,
+    "info": 18,
+    "section": 1
+  },
+  {
+    "name": "__0FiLEVELSTARTUP_GetLogosMovieFileNameUi",
+    "value": 101304,
+    "size": 44,
+    "info": 18,
+    "section": 1
+  },
+  {
+    "name": "__0FXLEVELSTARTUP_ShowDialogv",
+    "value": 101348,
+    "size": 88,
+    "info": 18,
+    "section": 1
+  },
+  {
+    "name": "__0FbLEVELSTARTUP_MainMenuRenderv",
+    "value": 101436,
+    "size": 120,
+    "info": 18,
+    "section": 1
+  }
+]

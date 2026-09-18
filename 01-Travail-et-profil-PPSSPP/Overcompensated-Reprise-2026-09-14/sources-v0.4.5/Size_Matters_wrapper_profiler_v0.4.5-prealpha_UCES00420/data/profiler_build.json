@@ -1,0 +1,33 @@
+{
+  "anchors": 1,
+  "equivalent_pairs": [
+    [
+      15,
+      21
+    ]
+  ],
+  "callsite_profile_bytes": 3944,
+  "active_stats_bytes": 2560,
+  "snapshot_stats_bytes": 2560,
+  "reference_level_base": "0x09139D00",
+  "relocation_test_deltas": [0, 24576, 28672],
+  "runtime_dump_scenarios": 7,
+  "ppsspp_emuhack_opcode": "0x68000000",
+  "ppsspp_emuhack_mask": "0xFC000000",
+  "observed_jit_entry": "0x682BACB6",
+  "focused_family": "WF-019",
+  "focused_callsites": 2,
+  "trace_schema": "rcsm-wrapper-trace/4",
+  "next_allowed_module": 3,
+  "next_stage": "04_FULL_KALIDON",
+  "host_validation": {
+    "status": "PASS",
+    "phase": "execute",
+    "compiler": "/usr/bin/cc",
+    "returncode": 0,
+    "stdout": "{\"status\":\"PASS\",\"modules\":15,\"callsites\":493,\"max_active\":57,\"anchors\":1,\"callsite_redirects\":\"PASS\"}",
+    "stderr": "",
+    "compiled_with_werror": true,
+    "binary_packaged": false
+  }
+}
