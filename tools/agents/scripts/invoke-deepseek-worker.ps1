@@ -12,6 +12,8 @@ param(
 
     [string]$Profile = "deepseek-flash-high",
 
+    [string]$CodexHome,
+
     [switch]$Force
 )
 
@@ -32,6 +34,64 @@ function Resolve-RepoPath {
     }
 
     return [System.IO.Path]::GetFullPath((Join-Path $RepoRoot $PathValue))
+}
+
+function Resolve-CodexHome {
+    param(
+        [string]$ExplicitPath,
+        [Parameter(Mandatory = $true)]
+        [string]$ProfileName
+    )
+
+    $Candidates = [System.Collections.Generic.List[string]]::new()
+
+    if (-not [string]::IsNullOrWhiteSpace($ExplicitPath)) {
+        $Candidates.Add($ExplicitPath)
+    }
+
+    if (-not [string]::IsNullOrWhiteSpace($env:CODEX_HOME)) {
+        $Candidates.Add($env:CODEX_HOME)
+    }
+
+    # When launched from the Codex desktop sandbox, HOME/USERPROFILE may be
+    # unavailable or refer to CodexSandboxOffline. The installed codex.exe path
+    # still normally lives under the real Windows user's AppData tree, so use it
+    # as a machine-local discovery source.
+    try {
+        $CodexCommand = Get-Command codex -ErrorAction Stop
+        $CodexSource = [System.IO.Path]::GetFullPath($CodexCommand.Source)
+
+        if ($CodexSource -match '^(?<profile>[A-Za-z]:\\Users\\[^\\]+)\\AppData\\Local\\') {
+            $Candidates.Add((Join-Path $Matches.profile ".codex"))
+        }
+    }
+    catch {
+        # The caller performs the definitive codex command check later.
+    }
+
+    foreach ($Base in @($env:USERPROFILE, $HOME)) {
+        if (-not [string]::IsNullOrWhiteSpace($Base)) {
+            $Candidates.Add((Join-Path $Base ".codex"))
+        }
+    }
+
+    foreach ($Candidate in ($Candidates | Select-Object -Unique)) {
+        try {
+            $FullCandidate = [System.IO.Path]::GetFullPath($Candidate)
+        }
+        catch {
+            continue
+        }
+
+        $ProfilePath = Join-Path $FullCandidate "$ProfileName.config.toml"
+
+        if ((Test-Path -LiteralPath $FullCandidate -PathType Container) -and
+            (Test-Path -LiteralPath $ProfilePath -PathType Leaf)) {
+            return $FullCandidate
+        }
+    }
+
+    throw "Could not resolve CODEX_HOME containing '$ProfileName.config.toml'. Pass -CodexHome explicitly or set CODEX_HOME."
 }
 
 # tools/agents/scripts -> repository root
@@ -62,15 +122,17 @@ if (-not (Test-Path -LiteralPath $OutputDirectory -PathType Container)) {
 }
 
 $CodexCommand = Get-Command codex -ErrorAction Stop
-$ProfilePath = Join-Path $HOME ".codex\$Profile.config.toml"
+$ResolvedCodexHome = Resolve-CodexHome -ExplicitPath $CodexHome -ProfileName $Profile
 
-if (-not (Test-Path -LiteralPath $ProfilePath -PathType Leaf)) {
-    throw "Codex profile not found: $ProfilePath"
-}
+# Set this before starting codex.exe. Child processes inherit it even when this
+# worker was itself launched from the Codex desktop sandbox account.
+$env:CODEX_HOME = $ResolvedCodexHome
+
+$ProfilePath = Join-Path $ResolvedCodexHome "$Profile.config.toml"
 
 # Codex GUI processes may not inherit a newly-created Windows environment
 # variable. If the current process does not have the DeepSeek key, hydrate it
-# from the user's persistent Windows environment without printing the secret.
+# from the persistent Windows environment without printing the secret.
 if ([string]::IsNullOrWhiteSpace($env:DEEPSEEK_API_KEY)) {
     $PersistentKey = [Environment]::GetEnvironmentVariable("DEEPSEEK_API_KEY", "User")
 
@@ -128,20 +190,17 @@ Push-Location $RepoRoot
 
 try {
     Write-Host "Starting DeepSeek worker '$Role' with profile '$Profile'..."
+    Write-Host "CODEX_HOME: $ResolvedCodexHome"
     Write-Host "Task:   $TaskPath"
     Write-Host "Output: $OutputPath"
 
-    # codex exec treats the argument as the instruction and piped stdin as
-    # additional task context. The explicit sandbox/approval flags prevent
-    # the non-interactive worker from modifying the repository or blocking
-    # on approval prompts.
-	$TaskContents | & $CodexCommand.Source exec `
-		--profile $Profile `
-		--ephemeral `
-		--sandbox read-only `
-		--config 'approval_policy="never"' `
-		--output-last-message $OutputPath `
-		$InstructionPrompt
+    $TaskContents | & $CodexCommand.Source exec `
+        --profile $Profile `
+        --ephemeral `
+        --sandbox read-only `
+        --config 'approval_policy="never"' `
+        --output-last-message $OutputPath `
+        $InstructionPrompt
 
     $ExitCode = $LASTEXITCODE
 }

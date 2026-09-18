@@ -10,7 +10,10 @@ param(
     [string]$Profile,
 
     [Parameter(Mandatory = $true)]
-    [string]$RolesCsv
+    [string]$RolesCsv,
+
+    [Parameter(Mandatory = $true)]
+    [string]$CodexHome
 )
 
 Set-StrictMode -Version Latest
@@ -22,6 +25,10 @@ $ManifestPath = Join-Path $MissionDirectory "mission.json"
 $WorkersDirectory = Join-Path $MissionDirectory "workers"
 $ReadyPath = Join-Path $MissionDirectory "READY_FOR_SOL_REVIEW.md"
 
+# Critical for detached runs launched from Codex desktop:
+# the child may execute under CodexSandboxOffline without a usable HOME.
+$env:CODEX_HOME = [System.IO.Path]::GetFullPath($CodexHome)
+
 function Read-Manifest {
     if (-not (Test-Path -LiteralPath $ManifestPath -PathType Leaf)) {
         throw "Mission manifest not found: $ManifestPath"
@@ -32,12 +39,12 @@ function Read-Manifest {
 
 function Write-Manifest {
     param([Parameter(Mandatory = $true)]$Manifest)
-
     $Manifest | ConvertTo-Json -Depth 8 | Set-Content -LiteralPath $ManifestPath -Encoding utf8
 }
 
 $Manifest = Read-Manifest
 $Manifest.status = "RUNNING"
+$Manifest.codexHome = $env:CODEX_HOME
 Write-Manifest $Manifest
 
 $Roles = @($RolesCsv -split "," | Where-Object { -not [string]::IsNullOrWhiteSpace($_) })
@@ -105,7 +112,6 @@ catch {
         Write-Manifest $Manifest
     }
     catch {
-        # Preserve original failure as process exit even if manifest update fails.
     }
 
     Write-Error $FailureText

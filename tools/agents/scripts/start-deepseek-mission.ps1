@@ -12,6 +12,8 @@ param(
 
     [string]$Profile = "deepseek-flash-high",
 
+    [string]$CodexHome,
+
     [switch]$Force
 )
 
@@ -29,6 +31,60 @@ function Resolve-RepoPath {
     }
 
     return [System.IO.Path]::GetFullPath((Join-Path $RepoRoot $PathValue))
+}
+
+function Resolve-CodexHome {
+    param(
+        [string]$ExplicitPath,
+        [Parameter(Mandatory = $true)]
+        [string]$ProfileName
+    )
+
+    $Candidates = [System.Collections.Generic.List[string]]::new()
+
+    if (-not [string]::IsNullOrWhiteSpace($ExplicitPath)) {
+        $Candidates.Add($ExplicitPath)
+    }
+
+    if (-not [string]::IsNullOrWhiteSpace($env:CODEX_HOME)) {
+        $Candidates.Add($env:CODEX_HOME)
+    }
+
+    try {
+        $CodexCommand = Get-Command codex -ErrorAction Stop
+        $CodexSource = [System.IO.Path]::GetFullPath($CodexCommand.Source)
+
+        if ($CodexSource -match '^(?<profile>[A-Za-z]:\\Users\\[^\\]+)\\AppData\\Local\\') {
+            $Candidates.Add((Join-Path $Matches.profile ".codex"))
+        }
+    }
+    catch {
+        # A clear error is raised below if no valid home can be resolved.
+    }
+
+    foreach ($Base in @($env:USERPROFILE, $HOME)) {
+        if (-not [string]::IsNullOrWhiteSpace($Base)) {
+            $Candidates.Add((Join-Path $Base ".codex"))
+        }
+    }
+
+    foreach ($Candidate in ($Candidates | Select-Object -Unique)) {
+        try {
+            $FullCandidate = [System.IO.Path]::GetFullPath($Candidate)
+        }
+        catch {
+            continue
+        }
+
+        $ProfilePath = Join-Path $FullCandidate "$ProfileName.config.toml"
+
+        if ((Test-Path -LiteralPath $FullCandidate -PathType Container) -and
+            (Test-Path -LiteralPath $ProfilePath -PathType Leaf)) {
+            return $FullCandidate
+        }
+    }
+
+    throw "Could not resolve CODEX_HOME containing '$ProfileName.config.toml'. Pass -CodexHome explicitly or set CODEX_HOME."
 }
 
 $RepoRoot = [System.IO.Path]::GetFullPath((Join-Path $PSScriptRoot "..\..\.."))
@@ -50,6 +106,11 @@ if (-not (Test-Path -LiteralPath $TaskPath -PathType Leaf)) {
     throw "Task file not found: $TaskPath"
 }
 
+$ResolvedCodexHome = Resolve-CodexHome -ExplicitPath $CodexHome -ProfileName $Profile
+
+# Persist into this process before the detached child is created.
+$env:CODEX_HOME = $ResolvedCodexHome
+
 if ((Test-Path -LiteralPath $MissionDirectory -PathType Container) -and -not $Force) {
     throw "Mission already exists: $MissionDirectory. Use -Force only if you intentionally want to restart this mission."
 }
@@ -59,8 +120,6 @@ if ($Force -and (Test-Path -LiteralPath $MissionDirectory -PathType Container)) 
 }
 
 New-Item -ItemType Directory -Path $WorkersDirectory -Force | Out-Null
-
-# Snapshot the exact task before launching any expensive work.
 Copy-Item -LiteralPath $TaskPath -Destination $TaskSnapshotPath -Force
 
 $GitBranch = $null
@@ -71,7 +130,6 @@ try {
     $GitHead = (& git -C $RepoRoot rev-parse HEAD 2>$null).Trim()
 }
 catch {
-    # Git provenance is useful but not required for mission execution.
 }
 
 $StartedAt = (Get-Date).ToUniversalTime().ToString("o")
@@ -84,6 +142,7 @@ $Manifest = [ordered]@{
     taskFile = $TaskPath
     taskSnapshot = $TaskSnapshotPath
     profile = $Profile
+    codexHome = $ResolvedCodexHome
     roles = @($Roles)
     repoRoot = $RepoRoot
     gitBranch = $GitBranch
@@ -160,7 +219,6 @@ Priority 0 remains faithful 30 FPS -> 60 FPS behavioral parity.
 $Resume | Set-Content -LiteralPath $ResumePath -Encoding utf8
 
 $PwshCommand = Get-Command pwsh -ErrorAction Stop
-
 $RolesCsv = $Roles -join ","
 
 $Process = Start-Process `
@@ -179,7 +237,9 @@ $Process = Start-Process `
         "-Profile",
         "`"$Profile`"",
         "-RolesCsv",
-        "`"$RolesCsv`""
+        "`"$RolesCsv`"",
+        "-CodexHome",
+        "`"$ResolvedCodexHome`""
     ) `
     -WorkingDirectory $RepoRoot `
     -RedirectStandardOutput $RunnerStdout `
@@ -192,9 +252,10 @@ $Manifest.status = "RUNNING"
 $Manifest | ConvertTo-Json -Depth 8 | Set-Content -LiteralPath $ManifestPath -Encoding utf8
 
 Write-Host "DeepSeek mission launched in detached mode."
-Write-Host "Mission: $MissionId"
-Write-Host "PID:     $($Process.Id)"
-Write-Host "State:   $ManifestPath"
-Write-Host "Resume:  $ResumePath"
+Write-Host "Mission:    $MissionId"
+Write-Host "PID:        $($Process.Id)"
+Write-Host "CODEX_HOME: $ResolvedCodexHome"
+Write-Host "State:      $ManifestPath"
+Write-Host "Resume:     $ResumePath"
 Write-Host ""
 Write-Host "The parent Codex session may end without losing the mission state."
