@@ -378,6 +378,73 @@ Do not modify original game assets unless the task explicitly requires an experi
 
 ---
 
+## Language policy
+
+The project uses two languages for two distinct purposes.
+
+### Communication with the project owner
+
+All direct communication with the project owner must be in **French** in a relatively simple manner as the owner knows little about reverse engineering but still knows a little bit of basics about programming.
+
+This includes:
+
+* explanations;
+* questions;
+* progress updates;
+* summaries presented in chat;
+* requests for manual tests;
+* descriptions of problems or proposed next steps.
+
+Technical vocabulary may remain in English when it is the standard terminology or when translating it would reduce precision. However think of anyone that could take the project with the same level of knowledge as the owner.
+
+### Persistent project artifacts
+
+All persistent technical artifacts created for the project must be in **English**.
+
+This includes:
+
+* research reports;
+* investigation notes;
+* reverse-engineering documentation;
+* evidence records;
+* experiment reports;
+* generated summaries;
+* agent reports;
+* schemas;
+* structured datasets;
+* trace annotations;
+* tool documentation;
+* source-code comments;
+* newly created README files;
+* commit messages.
+
+Unless there is a specific reason otherwise, newly introduced identifiers, tentative function names, structure-field names, filenames, and directory names should also use English.
+
+### Legacy material
+
+Do not translate or rewrite legacy files merely to enforce this language policy.
+
+Historical material must remain in its original form unless migration or documentation work explicitly requires a translated or normalized representation.
+
+When legacy French material is migrated into V2 documentation:
+
+* preserve the original source path;
+* write the new V2 documentation in English;
+* preserve technical meaning rather than performing a literal translation.
+
+### Agent output
+
+External or delegated agents must produce their persistent reports in English even when the task was requested in French.
+
+The parent agent should summarize or explain those results to the project owner in French.
+
+In short:
+
+**Conversation with the owner: French.**
+**Project knowledge and persistent artifacts: English.**
+
+---
+
 ## Final research objective
 
 A future researcher should be able to answer:
@@ -391,3 +458,4 @@ A future researcher should be able to answer:
 - How can the result be reproduced?
 
 If a patch works but none of these questions can be answered, the investigation is not finished.
+
