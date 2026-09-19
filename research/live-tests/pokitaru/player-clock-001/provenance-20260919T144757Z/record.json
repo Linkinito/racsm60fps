@@ -1,0 +1,169 @@
+{
+  "utc": "2026-09-19T14:47:55.290445+00:00",
+  "git_head": "c13068d134e5139985349fa0194e829bc15a167d",
+  "script_sha256": "be41edd2bf7264bd1348207460ae6dc01a0f133af78fc0f10106d1dc3172e5a5",
+  "scope": "Candidate filesystem provenance only; active ISO/config and selected save slot not established by file presence or Recent.",
+  "executable": {
+    "path": "C:\\Program Files\\PPSSPP\\PPSSPPWindows64.exe",
+    "bytes": 19806976,
+    "sha256": "27d3edbb06dc623dab60877d3e3a975aef4034c7d4fac464e92fd4998864d2ec"
+  },
+  "candidate_config": {
+    "path": "C:\\Users\\linki\\Documents\\PPSSPP\\PSP\\SYSTEM\\ppsspp.ini",
+    "bytes": 15579,
+    "sha256": "664d56b53908b7888aeedec14121ab25a1993787ada1c62a246304f721865b0c"
+  },
+  "selected_settings": {
+    "General": {
+      "CurrentDirectory": "C:/Users/linki/Downloads/Ratchet & Clank - Size Matters (Europe) (PSN)",
+      "EnableCheats": "False",
+      "EnablePlugins": "False",
+      "LoadPlugins": "True",
+      "RemoteISOPort": "60907",
+      "RemoteDebuggerOnStartup": "True",
+      "PauseOnLostFocus": "False",
+      "PauseWhenMinimized": "False",
+      "RunBehindPauseMenu": "False"
+    },
+    "CPU": {
+      "CPUCore": "1",
+      "CPUSpeed": "0",
+      "FastMemoryAccess": "False"
+    },
+    "Graphics": {
+      "GraphicsBackend": "2 (DIRECT3D11)",
+      "FrameSkip": "0",
+      "AutoFrameSkip": "False",
+      "VSync": "False",
+      "InternalResolution": "10",
+      "FrameRate": "30",
+      "FrameRate2": "-1"
+    },
+    "Control": {
+      "AnalogDeadzone": "0.151114",
+      "AnalogSensitivity": "1.100000",
+      "AnalogIsCircular": "True",
+      "AnalogInverseDeadzone": "0.000000"
+    }
+  },
+  "per_game_configs": [],
+  "saves": [
+    {
+      "path": "C:\\Users\\linki\\Documents\\PPSSPP\\PSP\\SAVEDATA\\UCES00420DATA0\\ICON0.PNG",
+      "bytes": 32768,
+      "sha256": "e4c0880a32a5052d10f56abb8b1bdc31b8f739491276d8092c499197d22588a9"
+    },
+    {
+      "path": "C:\\Users\\linki\\Documents\\PPSSPP\\PSP\\SAVEDATA\\UCES00420DATA0\\PARAM.SFO",
+      "bytes": 4912,
+      "sha256": "aff242be200ab92fe78556e670126fe3ebb658bdda246109547762adf253cc04"
+    },
+    {
+      "path": "C:\\Users\\linki\\Documents\\PPSSPP\\PSP\\SAVEDATA\\UCES00420DATA0\\SECURE.BIN",
+      "bytes": 356144,
+      "sha256": "bd7abc29c357c68777cb13d1d8cd1ffdab08c3e616a01ed02a14c9eaa5a7ba34"
+    },
+    {
+      "path": "C:\\Users\\linki\\Documents\\PPSSPP\\PSP\\SAVEDATA\\UCES00420DATA1\\ICON0.PNG",
+      "bytes": 32768,
+      "sha256": "e4c0880a32a5052d10f56abb8b1bdc31b8f739491276d8092c499197d22588a9"
+    },
+    {
+      "path": "C:\\Users\\linki\\Documents\\PPSSPP\\PSP\\SAVEDATA\\UCES00420DATA1\\PARAM.SFO",
+      "bytes": 4912,
+      "sha256": "d80e4ba4c1ecdf4e37917cd6fb7d415eef98fe73bdf5b5077c05ead04ffb0ab4"
+    },
+    {
+      "path": "C:\\Users\\linki\\Documents\\PPSSPP\\PSP\\SAVEDATA\\UCES00420DATA1\\SECURE.BIN",
+      "bytes": 356144,
+      "sha256": "d26b21041b1fe6f279c4a7e3650464341497accf2e9c3ba0df872f18e874cac0"
+    },
+    {
+      "path": "C:\\Users\\linki\\Documents\\PPSSPP\\PSP\\SAVEDATA\\UCES00420DATA2\\ICON0.PNG",
+      "bytes": 32768,
+      "sha256": "e4c0880a32a5052d10f56abb8b1bdc31b8f739491276d8092c499197d22588a9"
+    },
+    {
+      "path": "C:\\Users\\linki\\Documents\\PPSSPP\\PSP\\SAVEDATA\\UCES00420DATA2\\PARAM.SFO",
+      "bytes": 4912,
+      "sha256": "38a6eb8d84536af01998c15235627a4d8c6ab606f08b2833a3176da20af5ed5b"
+    },
+    {
+      "path": "C:\\Users\\linki\\Documents\\PPSSPP\\PSP\\SAVEDATA\\UCES00420DATA2\\SECURE.BIN",
+      "bytes": 356144,
+      "sha256": "179971964e358df9093aac6694595f54bb2fcf330dc26e10642f653a892bb8aa"
+    },
+    {
+      "path": "C:\\Users\\linki\\Documents\\PPSSPP\\PSP\\SAVEDATA\\UCES00420DATA3\\ICON0.PNG",
+      "bytes": 32768,
+      "sha256": "e4c0880a32a5052d10f56abb8b1bdc31b8f739491276d8092c499197d22588a9"
+    },
+    {
+      "path": "C:\\Users\\linki\\Documents\\PPSSPP\\PSP\\SAVEDATA\\UCES00420DATA3\\PARAM.SFO",
+      "bytes": 4912,
+      "sha256": "fdae97a534e9508961083da411d890fd84a5b5207b956d18c5d6f7d1c0e90ee0"
+    },
+    {
+      "path": "C:\\Users\\linki\\Documents\\PPSSPP\\PSP\\SAVEDATA\\UCES00420DATA3\\SECURE.BIN",
+      "bytes": 356144,
+      "sha256": "c729942172ff7a78959839b82b6d42a10aeda1844988f4a1a184d864f06339d7"
+    },
+    {
+      "path": "C:\\Users\\linki\\Documents\\PPSSPP\\PSP\\SAVEDATA\\UCES00420DATA4\\ICON0.PNG",
+      "bytes": 32768,
+      "sha256": "e4c0880a32a5052d10f56abb8b1bdc31b8f739491276d8092c499197d22588a9"
+    },
+    {
+      "path": "C:\\Users\\linki\\Documents\\PPSSPP\\PSP\\SAVEDATA\\UCES00420DATA4\\PARAM.SFO",
+      "bytes": 4912,
+      "sha256": "b793540e2bf4708d53418891db1ef5e2911e244cdb921625d34fcedd7d7ff9f7"
+    },
+    {
+      "path": "C:\\Users\\linki\\Documents\\PPSSPP\\PSP\\SAVEDATA\\UCES00420DATA4\\SECURE.BIN",
+      "bytes": 356144,
+      "sha256": "d6f9012e0989c7bdc233bf766be77469249928b33775862c591677735b4f0e19"
+    }
+  ],
+  "isos": [
+    {
+      "path": "C:\\Users\\linki\\Downloads\\Ratchet & Clank - Size Matters (Europe) (PSN)\\Ratchet & Clank - Size Matters (Europe) (PSN).iso",
+      "bytes": 993394688,
+      "sha256": "4dfd2f8e31e7f4ff40ede123ca34f6238abaf54dfafc01c82606dd4c755b15d4",
+      "level_01": [
+        {
+          "iso_path": "/PSP_GAME/USRDIR/BIN/LEVEL_01.PRX",
+          "extent": 31312,
+          "bytes": 3444725,
+          "magic_hex": "7f454c46010101000000000000000000",
+          "sha256": "d10a81d076fb44987a45314a020cda2f7e8b39f860b957911ca9365464676571",
+          "core_words": {
+            "0x151e0": "0x3c043d08",
+            "0x2fcfc": "0x2a240002",
+            "0x2fbbc": "0x46006506",
+            "0x96650": "0xc06fd09"
+          }
+        }
+      ]
+    },
+    {
+      "path": "C:\\Users\\linki\\Downloads\\Ratchet & Clank - Size Matters (Europe) (PSN)\\copy.iso",
+      "bytes": 944957440,
+      "sha256": "3ee17dcd0d2043a7d9ba310980999fb681e548d8b1cdf0c65a451a0289b895f7",
+      "level_01": [
+        {
+          "iso_path": "/PSP_GAME/USRDIR/BIN/LEVEL_01.PRX",
+          "extent": 20171,
+          "bytes": 3444725,
+          "magic_hex": "7f454c46010101000000000000000000",
+          "sha256": "d10a81d076fb44987a45314a020cda2f7e8b39f860b957911ca9365464676571",
+          "core_words": {
+            "0x151e0": "0x3c043d08",
+            "0x2fcfc": "0x2a240002",
+            "0x2fbbc": "0x46006506",
+            "0x96650": "0xc06fd09"
+          }
+        }
+      ]
+    }
+  ]
+}

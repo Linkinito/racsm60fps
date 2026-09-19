@@ -1,53 +1,57 @@
 # Current parent checkpoint
 
 - Project: Overcompensated V2 / UCES00420; Priority0 30->60 behavioral parity.
-- Branch: v2-research. Verified resume HEAD: 596800a4767b478f3b2c7237c80d35c458063981.
-- PLAYER-CLOCK-001 explicitly resumed by owner on 2026-09-19.
-- Active task: research/tasks/pokitaru-player-clock-001.md.
-- Support mission completed; handoff read and targeted parent review recorded.
-  No workers restarted. Infrastructure task remains complete.
+- Branch v2-research; session-start HEAD c13068d134e5139985349fa0194e829bc15a167d.
+- Active task: research/tasks/pokitaru-player-clock-001.md; resumed by owner.
+- NEW mission player-clock-a0-method-001 launched detached, launcher PID31876.
+  Explorer=replay/clocks; Mapper=relocation/normalization; Skeptic=isolation.
+  Completion not checked; no polling. Task research/tasks/player-clock-a0-method-001.md.
+- Completed player-clock-001-support and infrastructure missions not restarted.
 
 ## Durable findings
 
-See support mission parent-review.md for arbitration and precise evidence.
-Static verifier confirms player address operand has PSP relocation records.
-Code-base+0x5A838 interpretation is SUPERSEDED in the four-change map.
-Live read-only inspection: PPSSPP v1.20.4 / UCES00420, rcp1 at 0x09139D00;
-relocated pair forms 0x09471640; Ratchet identity remains UNKNOWN.
-Four decoded core words match reference originals (U JAL after relocation).
-Raw memory.read_u32 exposed emulator words at G/U; memory.disasm with
-replacements:false returned originals. Selected sites do not prove full vanilla.
-Latest evidence: research/live-tests/pokitaru/player-clock-001/
-inspection-1789828734941/record.json and script.mjs. Earlier attempts retained.
-No input, pause/resume, breakpoint, state load or memory writes requested.
+Current PPSSPP file/debugger version v1.20.4; owner reports emulator updated.
+Process PID3404: C:/Program Files/PPSSPP/PPSSPPWindows64.exe, no command-line
+ISO/config arguments. Port60907 observed; rediscover next session.
+Fresh read-only inspection-1789829201941 confirms original four core words through
+memory.disasm replacements:false (U after relocation). Raw reads expose emulator
+words at G/U. Candidate player address pair forms 0x09471640; identity UNKNOWN.
+Simple code-base+0x5A838 interpretation remains SUPERSEDED; see prior parent review.
 
-Owner reports normal boot from save, Pokitaru, vanilla. This updates prior scene
-uncertainty as testimony, not independent A0 verification. Process observed at
-C:/Program Files/PPSSPP/PPSSPPWindows64.exe, PID3404, port60907; rediscover on
-resume. Process command-line query denied.
+Owner identified ordinary save slot5 and full-name Europe PSN ISO (not copy.iso).
+Direct ISO9660 read confirms LEVEL_01.PRX hash exactly matches reference:
+d10a81d076fb44987a45314a020cda2f7e8b39f860b957911ca9365464676571.
+This closes reference-versus-user-ISO identity, not whole vanilla/runtime proof.
+ISO/exe/config hashes and method: provenance-20260919T144757Z/record.json + script.py.
+Candidate Documents/PPSSPP/PSP/SYSTEM config has no UCES00420 per-game file;
+active binding UNKNOWN. EnablePlugins false vs LoadPlugins true, FrameRate30,
+InternalResolution10 require exact version/runtime interpretation.
+15 ordinary-save files copied and hash-verified before/after; local snapshot in
+a0-staging-20260919T144841Z/local/save-snapshot, manifest beside it. All five slots
+copied without assuming DATA4 mapping. Original session not navigated or changed;
+no emulator/config clone launched. On-disk save copy does not preserve unsaved RAM.
+All paths above relative to research/live-tests/pokitaru/player-clock-001/.
 
 ## Hypotheses / unresolved gates
 
-No controlled gameplay result or new TESTED hypothesis. Mapper full-socle B3
-label conflicts with task: use D; B3 remains U+P. Rate predictions are conditional.
-Outside-loop counter divergence remains a prediction, not gameplay falsification.
-Active ISO/hash, independent LEVEL_01 provenance, full routes/plugin/config,
-save identity, player field semantics, replay and independent clocks remain to
-verify. Active emulator is 1.20.4, not worker-inspected bundled 1.19.3.
-WF-002/animation worker claims remain unreviewed until needed.
+No controlled gameplay result, no new TESTED claim. Full loaded code/routes,
+active config/plugins, isolated save lineage, replay support, player observables
+and independent cadence remain gates. Worker rate predictions stay conditional;
+full socle=D, B3=U+P. No hypothesis changed by filesystem provenance alone.
 
 ## NEXT ACTION
 
-Identify active ISO/config read-only; verify ISO-extracted LEVEL_01 and active
-routes/plugins. Preserve user session and establish isolated reproducible A0 from
-normal-save/cold-boot lineage. Check native replay on 1.20.4, validate player
-observables and independent cadence; then three A0 trials, short B0 and B1.
-Do not rerun completed workers or infrastructure tests.
+One compact future-session status check for player-clock-a0-method-001; read its
+PARENT_HANDOFF first, then targeted sections only. Review version-specific
+isolation/replay/normalization method. Build isolated config and working copy of
+preserved saves, select identified ISO/slot5, prove active paths/plugins, cold boot
+and verify normalized code. Validate clocks/player fields before three A0 trials,
+then B0/B1. Do not poll repeatedly or restart completed workers.
 
 ## Exact next-session files
 
 AGENTS.md -> CURRENT_STATE.md -> research/tasks/pokitaru-player-clock-001.md ->
-research/inbox/deepseek/missions/player-clock-001-support/parent-review.md ->
-research/live-tests/pokitaru/player-clock-001/RESUME.md.
-Use research/EVIDENCE_INDEX.md for deeper evidence. Static address evidence and
-map live in research/v2/pokitaru/. Do not routinely reread full worker reports.
+research/live-tests/pokitaru/player-clock-001/a0-preparation.md ->
+research/inbox/deepseek/missions/player-clock-a0-method-001/PARENT_HANDOFF.md
+(if complete). Mission task: research/tasks/player-clock-a0-method-001.md.
+Use research/EVIDENCE_INDEX.md for deeper evidence, not broad report rereads.

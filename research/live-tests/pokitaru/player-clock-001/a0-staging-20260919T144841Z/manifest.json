@@ -1,0 +1,88 @@
+{
+  "utc": "20260919T144841Z",
+  "source_root": "C:\\Users\\linki\\Documents\\PPSSPP\\PSP\\SAVEDATA",
+  "script_sha256": "d492fcc3911191e18ba558eb111c00f27097c329bc5291258006521ca48538ad",
+  "owner_report": {
+    "slot": 5,
+    "iso": "Ratchet & Clank - Size Matters (Europe) (PSN).iso",
+    "lineage": "Normal boot from ordinary save, Pokitaru, vanilla"
+  },
+  "scope": "All five game-save folders copied to preserve slot mapping; slot5-to-DATA4 mapping not independently established. Staging only: no emulator launched, no config copied, no original save changed.",
+  "files": [
+    {
+      "relative_path": "UCES00420DATA0/ICON0.PNG",
+      "bytes": 32768,
+      "sha256": "e4c0880a32a5052d10f56abb8b1bdc31b8f739491276d8092c499197d22588a9"
+    },
+    {
+      "relative_path": "UCES00420DATA0/PARAM.SFO",
+      "bytes": 4912,
+      "sha256": "aff242be200ab92fe78556e670126fe3ebb658bdda246109547762adf253cc04"
+    },
+    {
+      "relative_path": "UCES00420DATA0/SECURE.BIN",
+      "bytes": 356144,
+      "sha256": "bd7abc29c357c68777cb13d1d8cd1ffdab08c3e616a01ed02a14c9eaa5a7ba34"
+    },
+    {
+      "relative_path": "UCES00420DATA1/ICON0.PNG",
+      "bytes": 32768,
+      "sha256": "e4c0880a32a5052d10f56abb8b1bdc31b8f739491276d8092c499197d22588a9"
+    },
+    {
+      "relative_path": "UCES00420DATA1/PARAM.SFO",
+      "bytes": 4912,
+      "sha256": "d80e4ba4c1ecdf4e37917cd6fb7d415eef98fe73bdf5b5077c05ead04ffb0ab4"
+    },
+    {
+      "relative_path": "UCES00420DATA1/SECURE.BIN",
+      "bytes": 356144,
+      "sha256": "d26b21041b1fe6f279c4a7e3650464341497accf2e9c3ba0df872f18e874cac0"
+    },
+    {
+      "relative_path": "UCES00420DATA2/ICON0.PNG",
+      "bytes": 32768,
+      "sha256": "e4c0880a32a5052d10f56abb8b1bdc31b8f739491276d8092c499197d22588a9"
+    },
+    {
+      "relative_path": "UCES00420DATA2/PARAM.SFO",
+      "bytes": 4912,
+      "sha256": "38a6eb8d84536af01998c15235627a4d8c6ab606f08b2833a3176da20af5ed5b"
+    },
+    {
+      "relative_path": "UCES00420DATA2/SECURE.BIN",
+      "bytes": 356144,
+      "sha256": "179971964e358df9093aac6694595f54bb2fcf330dc26e10642f653a892bb8aa"
+    },
+    {
+      "relative_path": "UCES00420DATA3/ICON0.PNG",
+      "bytes": 32768,
+      "sha256": "e4c0880a32a5052d10f56abb8b1bdc31b8f739491276d8092c499197d22588a9"
+    },
+    {
+      "relative_path": "UCES00420DATA3/PARAM.SFO",
+      "bytes": 4912,
+      "sha256": "fdae97a534e9508961083da411d890fd84a5b5207b956d18c5d6f7d1c0e90ee0"
+    },
+    {
+      "relative_path": "UCES00420DATA3/SECURE.BIN",
+      "bytes": 356144,
+      "sha256": "c729942172ff7a78959839b82b6d42a10aeda1844988f4a1a184d864f06339d7"
+    },
+    {
+      "relative_path": "UCES00420DATA4/ICON0.PNG",
+      "bytes": 32768,
+      "sha256": "e4c0880a32a5052d10f56abb8b1bdc31b8f739491276d8092c499197d22588a9"
+    },
+    {
+      "relative_path": "UCES00420DATA4/PARAM.SFO",
+      "bytes": 4912,
+      "sha256": "b793540e2bf4708d53418891db1ef5e2911e244cdb921625d34fcedd7d7ff9f7"
+    },
+    {
+      "relative_path": "UCES00420DATA4/SECURE.BIN",
+      "bytes": 356144,
+      "sha256": "d6f9012e0989c7bdc233bf766be77469249928b33775862c591677735b4f0e19"
+    }
+  ]
+}

@@ -1,0 +1,569 @@
+{
+  "utc": "2026-09-19T14:46:41.842Z",
+  "gitHead": "c13068d134e5139985349fa0194e829bc15a167d",
+  "scriptSha256": "237a71c6a4596161f7a54e478b419439d09818b3af6d444ec4c006214aa06d5c",
+  "dirtyFiles": [
+    {
+      "path": "research/inbox/deepseek/missions/player-clock-a0-method-001/PARENT_HANDOFF.md",
+      "sha256": "b0a4886534c5094bea0f2f3d2890c0e945bc506ed347016923e2f763a7916a55"
+    },
+    {
+      "path": "research/inbox/deepseek/missions/player-clock-a0-method-001/RESUME.md",
+      "sha256": "0c48d020e6f41e647acf9b9b75e1296028bbff39165346dccab324fdce7b1bc2"
+    },
+    {
+      "path": "research/inbox/deepseek/missions/player-clock-a0-method-001/launch.json",
+      "sha256": "665ee8d06f7d4e31793ea2634063c1760d4df53de1c4383e536fe129c2cbf1f0"
+    },
+    {
+      "path": "research/inbox/deepseek/missions/player-clock-a0-method-001/mission.json",
+      "sha256": "0de0e63d6ef3a780356de325379f08db64cf8b82f63f86bad4a40a0738f4afc2"
+    },
+    {
+      "path": "research/inbox/deepseek/missions/player-clock-a0-method-001/parent-state.snapshot.md",
+      "sha256": "411c8901b18bc61d6fab741e8d53eb0b4b3d938772a5145107bb7531d413af43"
+    },
+    {
+      "path": "research/inbox/deepseek/missions/player-clock-a0-method-001/task.snapshot.md",
+      "sha256": "211c664727fefba9523f822b75eb0aebae5d5d20fc5366574753aa08b1326158"
+    },
+    {
+      "path": "research/inbox/deepseek/missions/player-clock-a0-method-001/workers/_logs/explorer.status.json",
+      "sha256": "873e49f7d53af37fcdcbc690acb934f7b4bc7e7cccb684e807209c1c7cdf18f4"
+    },
+    {
+      "path": "research/inbox/deepseek/missions/player-clock-a0-method-001/workers/_logs/mapper.status.json",
+      "sha256": "fcffa290d70b8fdd9027c3235774e30618879d79bf873435d5036919815bbae9"
+    },
+    {
+      "path": "research/inbox/deepseek/missions/player-clock-a0-method-001/workers/_logs/skeptic.status.json",
+      "sha256": "b71defdf52a7e1338f0cd7aa33ce7f313b9f3772c46510668ace8c7807003f03"
+    },
+    {
+      "path": "research/inbox/deepseek/missions/player-clock-a0-method-001/workers/panel-summary.json",
+      "sha256": "964413f47b780628309cd05937d5d6301b2873b49382f76441b91bf460825bdd"
+    },
+    {
+      "path": "research/tasks/player-clock-a0-method-001.md",
+      "sha256": "211c664727fefba9523f822b75eb0aebae5d5d20fc5366574753aa08b1326158"
+    },
+    {
+      "path": "CURRENT_STATE.md",
+      "sha256": "411c8901b18bc61d6fab741e8d53eb0b4b3d938772a5145107bb7531d413af43"
+    }
+  ],
+  "scope": "Read-only code inspection, not A0 validation or cadence measurement",
+  "userReportedProvenance": "Normal boot from a save, currently Pokitaru, vanilla (2026-09-19 owner reply); not independently verified.",
+  "requests": [
+    {
+      "event": "version",
+      "fields": {
+        "name": "PLAYER-CLOCK-001 read-only code inspection",
+        "version": "0.1"
+      },
+      "startMs": 243.1191,
+      "endMs": 244.7558,
+      "response": {
+        "event": "version",
+        "ticket": "pc-code-1",
+        "name": "PPSSPP",
+        "version": "v1.20.4"
+      }
+    },
+    {
+      "event": "game.status",
+      "fields": {},
+      "startMs": 244.7626,
+      "endMs": 245.0152,
+      "response": {
+        "event": "game.status",
+        "ticket": "pc-code-2",
+        "game": {
+          "id": "UCES00420",
+          "version": "1.00",
+          "title": "Ratchet and Clank: Size Matters"
+        },
+        "paused": false
+      }
+    },
+    {
+      "event": "cpu.status",
+      "fields": {},
+      "startMs": 245.0193,
+      "endMs": 245.2416,
+      "response": {
+        "event": "cpu.status",
+        "ticket": "pc-code-3",
+        "stepping": false,
+        "paused": false,
+        "pc": 142628724,
+        "ticks": 415540162809
+      }
+    },
+    {
+      "event": "hle.module.list",
+      "fields": {},
+      "startMs": 245.2454,
+      "endMs": 245.4534,
+      "response": {
+        "event": "hle.module.list",
+        "ticket": "pc-code-4",
+        "modules": [
+          {
+            "name": "mcp",
+            "address": 142622720,
+            "size": 1388800,
+            "isActive": true
+          },
+          {
+            "name": "rcp1",
+            "address": 152280320,
+            "size": 4634880,
+            "isActive": true
+          }
+        ]
+      }
+    },
+    {
+      "event": "memory.read_u32",
+      "fields": {
+        "address": 152366816,
+        "replacements": false
+      },
+      "startMs": 245.4867,
+      "endMs": 248.8174,
+      "response": {
+        "event": "memory.read_u32",
+        "ticket": "pc-code-5",
+        "value": 1747579214
+      }
+    },
+    {
+      "event": "memory.disasm",
+      "fields": {
+        "address": 152366816,
+        "count": 1,
+        "replacements": false
+      },
+      "startMs": 248.8299,
+      "endMs": 249.2854,
+      "response": {
+        "event": "memory.disasm",
+        "ticket": "pc-code-6",
+        "range": {
+          "start": 152366816,
+          "end": 152366820
+        },
+        "lines": [
+          {
+            "type": "opcode",
+            "address": 152366816,
+            "addressSize": 4,
+            "encoding": 1006910728,
+            "macroEncoding": null,
+            "backgroundColor": "#ffe0ff",
+            "name": "lui",
+            "params": "a0,0x3D08",
+            "symbol": null,
+            "function": "z_un_08f2e27c",
+            "dataSymbol": null,
+            "breakpoint": null,
+            "isCurrentPC": false,
+            "branch": null,
+            "relevantData": null,
+            "conditionMet": null,
+            "dataAccess": null
+          }
+        ],
+        "branchGuides": []
+      }
+    },
+    {
+      "event": "memory.read_u32",
+      "fields": {
+        "address": 152476156,
+        "replacements": false
+      },
+      "startMs": 249.3664,
+      "endMs": 249.6945,
+      "response": {
+        "event": "memory.read_u32",
+        "ticket": "pc-code-7",
+        "value": 707002370
+      }
+    },
+    {
+      "event": "memory.disasm",
+      "fields": {
+        "address": 152476156,
+        "count": 1,
+        "replacements": false
+      },
+      "startMs": 249.6993,
+      "endMs": 250.0252,
+      "response": {
+        "event": "memory.disasm",
+        "ticket": "pc-code-8",
+        "range": {
+          "start": 152476156,
+          "end": 152476160
+        },
+        "lines": [
+          {
+            "type": "opcode",
+            "address": 152476156,
+            "addressSize": 4,
+            "encoding": 707002370,
+            "macroEncoding": null,
+            "backgroundColor": "#e0ffe0",
+            "name": "slti",
+            "params": "a0,s1,0x2",
+            "symbol": null,
+            "function": "z_un_08f49494",
+            "dataSymbol": null,
+            "breakpoint": null,
+            "isCurrentPC": false,
+            "branch": null,
+            "relevantData": null,
+            "conditionMet": null,
+            "dataAccess": null
+          }
+        ],
+        "branchGuides": [
+          {
+            "top": 152476064,
+            "bottom": 152476232,
+            "direction": "down",
+            "lane": 0
+          },
+          {
+            "top": 152476080,
+            "bottom": 152476160,
+            "direction": "up",
+            "lane": 1
+          }
+        ]
+      }
+    },
+    {
+      "event": "memory.read_u32",
+      "fields": {
+        "address": 152475836,
+        "replacements": false
+      },
+      "startMs": 250.0388,
+      "endMs": 250.2799,
+      "response": {
+        "event": "memory.read_u32",
+        "ticket": "pc-code-9",
+        "value": 1174430982
+      }
+    },
+    {
+      "event": "memory.disasm",
+      "fields": {
+        "address": 152475836,
+        "count": 1,
+        "replacements": false
+      },
+      "startMs": 250.3006,
+      "endMs": 250.5142,
+      "response": {
+        "event": "memory.disasm",
+        "ticket": "pc-code-10",
+        "range": {
+          "start": 152475836,
+          "end": 152475840
+        },
+        "lines": [
+          {
+            "type": "opcode",
+            "address": 152475836,
+            "addressSize": 4,
+            "encoding": 1174430982,
+            "macroEncoding": null,
+            "backgroundColor": "#ffe8e8",
+            "name": "mov.s",
+            "params": "f20,f12",
+            "symbol": null,
+            "function": "z_un_08f49340",
+            "dataSymbol": null,
+            "breakpoint": null,
+            "isCurrentPC": false,
+            "branch": null,
+            "relevantData": null,
+            "conditionMet": null,
+            "dataAccess": null
+          }
+        ],
+        "branchGuides": []
+      }
+    },
+    {
+      "event": "memory.read_u32",
+      "fields": {
+        "address": 152896336,
+        "replacements": false
+      },
+      "startMs": 250.5272,
+      "endMs": 255.2359,
+      "response": {
+        "event": "memory.read_u32",
+        "ticket": "pc-code-11",
+        "value": 1748758006
+      }
+    },
+    {
+      "event": "memory.disasm",
+      "fields": {
+        "address": 152896336,
+        "count": 1,
+        "replacements": false
+      },
+      "startMs": 255.2532,
+      "endMs": 255.5657,
+      "response": {
+        "event": "memory.disasm",
+        "ticket": "pc-code-12",
+        "range": {
+          "start": 152896336,
+          "end": 152896340
+        },
+        "lines": [
+          {
+            "type": "opcode",
+            "address": 152896336,
+            "addressSize": 4,
+            "encoding": 239854665,
+            "macroEncoding": null,
+            "backgroundColor": "#ffffff",
+            "name": "jal",
+            "params": "zz_sceDisplayWaitVblankStart",
+            "symbol": null,
+            "function": null,
+            "dataSymbol": null,
+            "breakpoint": null,
+            "isCurrentPC": false,
+            "branch": {
+              "targetAddress": 154112292,
+              "register": null,
+              "isLinked": true,
+              "isLikely": false,
+              "symbol": "zz_sceDisplayWaitVblankStart"
+            },
+            "relevantData": null,
+            "conditionMet": null,
+            "dataAccess": null
+          }
+        ],
+        "branchGuides": []
+      }
+    },
+    {
+      "event": "memory.read_u32",
+      "fields": {
+        "address": 152476948,
+        "replacements": false
+      },
+      "startMs": 255.5835,
+      "endMs": 255.8483,
+      "response": {
+        "event": "memory.read_u32",
+        "ticket": "pc-code-13",
+        "value": 1007683911
+      }
+    },
+    {
+      "event": "memory.disasm",
+      "fields": {
+        "address": 152476948,
+        "count": 1,
+        "replacements": false
+      },
+      "startMs": 255.8558,
+      "endMs": 256.1043,
+      "response": {
+        "event": "memory.disasm",
+        "ticket": "pc-code-14",
+        "range": {
+          "start": 152476948,
+          "end": 152476956
+        },
+        "lines": [
+          {
+            "type": "macro",
+            "address": 152476948,
+            "addressSize": 8,
+            "encoding": 1007683911,
+            "macroEncoding": [
+              1007683911,
+              638588480
+            ],
+            "backgroundColor": "#ffffe0",
+            "name": "li",
+            "params": "s0,0x09471640",
+            "symbol": null,
+            "function": "z_un_08f497c0",
+            "dataSymbol": null,
+            "breakpoint": null,
+            "isCurrentPC": false,
+            "branch": null,
+            "relevantData": {
+              "address": 155653696,
+              "uintValue": 1060192902,
+              "stringValue": null
+            },
+            "conditionMet": null,
+            "dataAccess": null
+          }
+        ],
+        "branchGuides": []
+      }
+    },
+    {
+      "event": "memory.read_u32",
+      "fields": {
+        "address": 152476952,
+        "replacements": false
+      },
+      "startMs": 256.1238,
+      "endMs": 259.7639,
+      "response": {
+        "event": "memory.read_u32",
+        "ticket": "pc-code-15",
+        "value": 638588480
+      }
+    },
+    {
+      "event": "memory.disasm",
+      "fields": {
+        "address": 152476952,
+        "count": 1,
+        "replacements": false
+      },
+      "startMs": 259.7781,
+      "endMs": 260.0139,
+      "response": {
+        "event": "memory.disasm",
+        "ticket": "pc-code-16",
+        "range": {
+          "start": 152476948,
+          "end": 152476956
+        },
+        "lines": [
+          {
+            "type": "macro",
+            "address": 152476948,
+            "addressSize": 8,
+            "encoding": 1007683911,
+            "macroEncoding": [
+              1007683911,
+              638588480
+            ],
+            "backgroundColor": "#ffffe0",
+            "name": "li",
+            "params": "s0,0x09471640",
+            "symbol": null,
+            "function": "z_un_08f497c0",
+            "dataSymbol": null,
+            "breakpoint": null,
+            "isCurrentPC": false,
+            "branch": null,
+            "relevantData": {
+              "address": 155653696,
+              "uintValue": 1060192902,
+              "stringValue": null
+            },
+            "conditionMet": null,
+            "dataAccess": null
+          }
+        ],
+        "branchGuides": []
+      }
+    },
+    {
+      "event": "cpu.status",
+      "fields": {},
+      "startMs": 260.0298,
+      "endMs": 260.1654,
+      "response": {
+        "event": "cpu.status",
+        "ticket": "pc-code-17",
+        "stepping": false,
+        "paused": false,
+        "pc": 142628724,
+        "ticks": 415547570208
+      }
+    },
+    {
+      "event": "hle.module.list",
+      "fields": {},
+      "startMs": 260.1685,
+      "endMs": 260.2998,
+      "response": {
+        "event": "hle.module.list",
+        "ticket": "pc-code-18",
+        "modules": [
+          {
+            "name": "mcp",
+            "address": 142622720,
+            "size": 1388800,
+            "isActive": true
+          },
+          {
+            "name": "rcp1",
+            "address": 152280320,
+            "size": 4634880,
+            "isActive": true
+          }
+        ]
+      }
+    }
+  ],
+  "candidateModule": {
+    "name": "rcp1",
+    "address": 152280320,
+    "size": 4634880,
+    "isActive": true
+  },
+  "words": [
+    {
+      "rva": "0x151e0",
+      "address": "0x914eee0",
+      "memoryWord": "0x6829f14e",
+      "decodedWord": "0x3c043d08"
+    },
+    {
+      "rva": "0x2fcfc",
+      "address": "0x91699fc",
+      "memoryWord": "0x2a240002",
+      "decodedWord": "0x2a240002"
+    },
+    {
+      "rva": "0x2fbbc",
+      "address": "0x91698bc",
+      "memoryWord": "0x46006506",
+      "decodedWord": "0x46006506"
+    },
+    {
+      "rva": "0x96650",
+      "address": "0x91d0350",
+      "memoryWord": "0x683bedf6",
+      "decodedWord": "0x0e4be449"
+    },
+    {
+      "rva": "0x30014",
+      "address": "0x9169d14",
+      "memoryWord": "0x3c100947",
+      "decodedWord": "0x3c100947"
+    },
+    {
+      "rva": "0x30018",
+      "address": "0x9169d18",
+      "memoryWord": "0x26101640",
+      "decodedWord": "0x26101640"
+    }
+  ],
+  "restoration": "No input, state load, pause/resume, breakpoint or memory-write requests issued.",
+  "limits": "Unsynchronized reads may briefly suspend CPU internally. memory.disasm with replacements:false exposes decoded instructions separately from memory.read_u32, which can expose emulator-internal words. Selected words do not establish full module/ISO identity, vanilla routes, active config/plugins, or save lineage."
+}
