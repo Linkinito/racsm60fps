@@ -16,7 +16,13 @@ v1.20.4 and original core words. Candidate config/active routes remain unverifie
 15 ordinary-save files safely copied into a0-staging-20260919T144841Z/local/;
 manifest hashes verified, original session not navigated.
 
-NEXT ACTION: one future-session status check for new player-clock-a0-method-001;
+Method001 failed before analysis (Codex home/app-server access denied, zero reports).
+Failure reviewed in its parent-review.md. Method002 launched after explicit owner
+approval for elevated launcher access to Codex home/config; workers remain read-only.
+No completion check yet. Save audit save-audit-20260919T145713Z.json verified all15
+snapshot files and originals unchanged; no slot ordering or gameplay claim.
+
+NEXT ACTION: one future-session status check for player-clock-a0-method-002;
 read PARENT_HANDOFF first. Review isolation/replay/normalization recommendations,
 then build isolated working config/save copy and cold boot identified ISO/slot5.
 Prove active paths and vanilla code/routes, validate independent clocks/player

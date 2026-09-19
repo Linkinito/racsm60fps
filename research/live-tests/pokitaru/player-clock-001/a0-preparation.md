@@ -58,3 +58,27 @@ NEXT: arbitrate version-specific isolation options and input/counter APIs; build
 an isolated config and working save copy from the preserved snapshot, explicitly
 select the identified ISO and slot5, prove active paths/plugins, cold boot, verify
 normalized loaded code, then validate observables before A0 repetitions.
+
+## Recovery and snapshot audit
+
+Method001 was inspected once on the next owner continuation: all3 scopes failed
+at CLI startup, zero reports; Codex home and app-server access denied. Failure
+retained in that mission's parent-review.md. Elevated recovery initially rejected
+by automatic approval review; owner explicitly approved launcher access to Codex
+home/config. Method002 then launched detached with PID9980 and unchanged worker
+read-only sandbox. Its completion is not yet checked. Use method002 next; do not
+restart method001 or completed gameplay-support workers.
+
+audit-save-snapshot.py produced save-audit-20260919T145713Z.json: all15 copied
+files match manifest and current originals. SFO SAVEDATA_DIRECTORY strings match
+DATA0..DATA4 folder names, but in-game ordering is not proved by this. An initial
+strict UTF-8 title decode failed; final decoder retains raw hex and UNKNOWN for
+nonstandard title bytes instead of changing saves or silently replacing text.
+No emulator access, configuration changes or save writes occurred in this audit.
+Local cached api-reference/directory.json references v1.19.3; do not reuse cached
+sources as proof of active 1.20.4 behavior without version checks.
+
+At the owner's explicit subsequent status request, method002 was RUNNING with
+0 failed/3 pending and active runner. Process tree showed three child codex.exe
+processes (18532/8208/4088), with nonempty role logs. No final reports or handoff
+yet. This establishes process activity, not successful analysis or future completion.

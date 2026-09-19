@@ -1,18 +1,24 @@
 # Current parent checkpoint
 
 - Project: Overcompensated V2 / UCES00420; Priority0 30->60 behavioral parity.
-- Branch v2-research; session-start HEAD c13068d134e5139985349fa0194e829bc15a167d.
+- Branch v2-research; current HEAD 46ad9a447beeda8d9992af5c1e9026ab5ada4bea.
+  This checkpoint-only refresh follows the commit; mission runtime files remain local.
 - Active task: research/tasks/pokitaru-player-clock-001.md; resumed by owner.
-- NEW mission player-clock-a0-method-001 launched detached, launcher PID31876.
+- Mission player-clock-a0-method-001 FAILED at startup: all three workers,
+  zero reports, Codex home/app-server access denied under CodexSandboxOffline.
+  Failure reviewed and preserved. Recovery mission player-clock-a0-method-002
+  launched with elevated launcher PID9980, unchanged read-only worker sandbox.
+  Auto-review initially refused; owner explicitly approved Codex-home/config.
+  Owner-requested check: RUNNING, 0 failed, 3 pending, runner active. Three child
+  Codex processes and nonempty logs observed; no final reports/handoff yet.
   Explorer=replay/clocks; Mapper=relocation/normalization; Skeptic=isolation.
-  Completion not checked; no polling. Task research/tasks/player-clock-a0-method-001.md.
+  Task research/tasks/player-clock-a0-method-001.md. No completed work repeated.
 - Completed player-clock-001-support and infrastructure missions not restarted.
 
 ## Durable findings
 
-Current PPSSPP file/debugger version v1.20.4; owner reports emulator updated.
-Process PID3404: C:/Program Files/PPSSPP/PPSSPPWindows64.exe, no command-line
-ISO/config arguments. Port60907 observed; rediscover next session.
+PPSSPP v1.20.4, PID3404, C:/Program Files/PPSSPP/PPSSPPWindows64.exe;
+no ISO/config arguments. Port60907; rediscover next session.
 Fresh read-only inspection-1789829201941 confirms original four core words through
 memory.disasm replacements:false (U after relocation). Raw reads expose emulator
 words at G/U. Candidate player address pair forms 0x09471640; identity UNKNOWN.
@@ -31,6 +37,10 @@ a0-staging-20260919T144841Z/local/save-snapshot, manifest beside it. All five sl
 copied without assuming DATA4 mapping. Original session not navigated or changed;
 no emulator/config clone launched. On-disk save copy does not preserve unsaved RAM.
 All paths above relative to research/live-tests/pokitaru/player-clock-001/.
+Save audit save-audit-20260919T145713Z.json: all15 snapshot files still match
+manifest and originals; SFO directory strings agree with folder names. Titles
+contain nonstandard UTF-8 bytes retained as hex/UNKNOWN, not repaired.
+Cached api-reference sources were identified as v1.19.3, not active v1.20.4.
 
 ## Hypotheses / unresolved gates
 
@@ -41,7 +51,7 @@ full socle=D, B3=U+P. No hypothesis changed by filesystem provenance alone.
 
 ## NEXT ACTION
 
-One compact future-session status check for player-clock-a0-method-001; read its
+At next session, one status check for player-clock-a0-method-002; read its
 PARENT_HANDOFF first, then targeted sections only. Review version-specific
 isolation/replay/normalization method. Build isolated config and working copy of
 preserved saves, select identified ISO/slot5, prove active paths/plugins, cold boot
@@ -52,6 +62,6 @@ then B0/B1. Do not poll repeatedly or restart completed workers.
 
 AGENTS.md -> CURRENT_STATE.md -> research/tasks/pokitaru-player-clock-001.md ->
 research/live-tests/pokitaru/player-clock-001/a0-preparation.md ->
-research/inbox/deepseek/missions/player-clock-a0-method-001/PARENT_HANDOFF.md
+research/inbox/deepseek/missions/player-clock-a0-method-002/PARENT_HANDOFF.md
 (if complete). Mission task: research/tasks/player-clock-a0-method-001.md.
 Use research/EVIDENCE_INDEX.md for deeper evidence, not broad report rereads.

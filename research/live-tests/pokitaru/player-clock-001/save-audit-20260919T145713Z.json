@@ -1,0 +1,200 @@
+{
+  "utc": "2026-09-19T14:57:13.994267+00:00",
+  "script_sha256": "bfa37fd9795d4529bafc8037ffa218435af0e88ea912c868ba662e23281cd120",
+  "manifest_sha256": "6837882aaa93f4e2bccc8c220866bb3886d22d64e6b712fd571407ff837d5364",
+  "checks": [
+    {
+      "relative_path": "UCES00420DATA0/ICON0.PNG",
+      "snapshot_matches_manifest": true,
+      "original_still_matches_snapshot": true
+    },
+    {
+      "relative_path": "UCES00420DATA0/PARAM.SFO",
+      "snapshot_matches_manifest": true,
+      "original_still_matches_snapshot": true
+    },
+    {
+      "relative_path": "UCES00420DATA0/SECURE.BIN",
+      "snapshot_matches_manifest": true,
+      "original_still_matches_snapshot": true
+    },
+    {
+      "relative_path": "UCES00420DATA1/ICON0.PNG",
+      "snapshot_matches_manifest": true,
+      "original_still_matches_snapshot": true
+    },
+    {
+      "relative_path": "UCES00420DATA1/PARAM.SFO",
+      "snapshot_matches_manifest": true,
+      "original_still_matches_snapshot": true
+    },
+    {
+      "relative_path": "UCES00420DATA1/SECURE.BIN",
+      "snapshot_matches_manifest": true,
+      "original_still_matches_snapshot": true
+    },
+    {
+      "relative_path": "UCES00420DATA2/ICON0.PNG",
+      "snapshot_matches_manifest": true,
+      "original_still_matches_snapshot": true
+    },
+    {
+      "relative_path": "UCES00420DATA2/PARAM.SFO",
+      "snapshot_matches_manifest": true,
+      "original_still_matches_snapshot": true
+    },
+    {
+      "relative_path": "UCES00420DATA2/SECURE.BIN",
+      "snapshot_matches_manifest": true,
+      "original_still_matches_snapshot": true
+    },
+    {
+      "relative_path": "UCES00420DATA3/ICON0.PNG",
+      "snapshot_matches_manifest": true,
+      "original_still_matches_snapshot": true
+    },
+    {
+      "relative_path": "UCES00420DATA3/PARAM.SFO",
+      "snapshot_matches_manifest": true,
+      "original_still_matches_snapshot": true
+    },
+    {
+      "relative_path": "UCES00420DATA3/SECURE.BIN",
+      "snapshot_matches_manifest": true,
+      "original_still_matches_snapshot": true
+    },
+    {
+      "relative_path": "UCES00420DATA4/ICON0.PNG",
+      "snapshot_matches_manifest": true,
+      "original_still_matches_snapshot": true
+    },
+    {
+      "relative_path": "UCES00420DATA4/PARAM.SFO",
+      "snapshot_matches_manifest": true,
+      "original_still_matches_snapshot": true
+    },
+    {
+      "relative_path": "UCES00420DATA4/SECURE.BIN",
+      "snapshot_matches_manifest": true,
+      "original_still_matches_snapshot": true
+    }
+  ],
+  "sfo_metadata": [
+    {
+      "relative_path": "UCES00420DATA0/PARAM.SFO",
+      "fields": {
+        "SAVEDATA_DIRECTORY": {
+          "text": "UCES00420DATA0",
+          "raw_hex": "5543455330303432304441544130",
+          "format": "0x204",
+          "encoding_status": "UTF-8"
+        },
+        "SAVEDATA_TITLE": {
+          "text": null,
+          "raw_hex": "53617576656761726465206d6f646520736f6c6fc080454e5452",
+          "format": "0x204",
+          "encoding_status": "UNKNOWN"
+        },
+        "TITLE": {
+          "text": null,
+          "raw_hex": "52617463686574202620436c616e6b203a204c61207461696c6c652c20c3a76120636f6d707465e284a2c080454e5452",
+          "format": "0x204",
+          "encoding_status": "UNKNOWN"
+        }
+      }
+    },
+    {
+      "relative_path": "UCES00420DATA1/PARAM.SFO",
+      "fields": {
+        "SAVEDATA_DIRECTORY": {
+          "text": "UCES00420DATA1",
+          "raw_hex": "5543455330303432304441544131",
+          "format": "0x204",
+          "encoding_status": "UTF-8"
+        },
+        "SAVEDATA_TITLE": {
+          "text": null,
+          "raw_hex": "53617576656761726465206d6f646520736f6c6fc080454e5452",
+          "format": "0x204",
+          "encoding_status": "UNKNOWN"
+        },
+        "TITLE": {
+          "text": null,
+          "raw_hex": "52617463686574202620436c616e6b203a204c61207461696c6c652c20c3a76120636f6d707465e284a2c080454e5452",
+          "format": "0x204",
+          "encoding_status": "UNKNOWN"
+        }
+      }
+    },
+    {
+      "relative_path": "UCES00420DATA2/PARAM.SFO",
+      "fields": {
+        "SAVEDATA_DIRECTORY": {
+          "text": "UCES00420DATA2",
+          "raw_hex": "5543455330303432304441544132",
+          "format": "0x204",
+          "encoding_status": "UTF-8"
+        },
+        "SAVEDATA_TITLE": {
+          "text": null,
+          "raw_hex": "53617576656761726465206d6f646520736f6c6fc080454e5452",
+          "format": "0x204",
+          "encoding_status": "UNKNOWN"
+        },
+        "TITLE": {
+          "text": null,
+          "raw_hex": "52617463686574202620436c616e6b203a204c61207461696c6c652c20c3a76120636f6d707465e284a2c080454e5452",
+          "format": "0x204",
+          "encoding_status": "UNKNOWN"
+        }
+      }
+    },
+    {
+      "relative_path": "UCES00420DATA3/PARAM.SFO",
+      "fields": {
+        "SAVEDATA_DIRECTORY": {
+          "text": "UCES00420DATA3",
+          "raw_hex": "5543455330303432304441544133",
+          "format": "0x204",
+          "encoding_status": "UTF-8"
+        },
+        "SAVEDATA_TITLE": {
+          "text": null,
+          "raw_hex": "53617576656761726465206d6f646520736f6c6fc080454e5452",
+          "format": "0x204",
+          "encoding_status": "UNKNOWN"
+        },
+        "TITLE": {
+          "text": null,
+          "raw_hex": "52617463686574202620436c616e6b203a204c61207461696c6c652c20c3a76120636f6d707465e284a2c080454e5452",
+          "format": "0x204",
+          "encoding_status": "UNKNOWN"
+        }
+      }
+    },
+    {
+      "relative_path": "UCES00420DATA4/PARAM.SFO",
+      "fields": {
+        "SAVEDATA_DIRECTORY": {
+          "text": "UCES00420DATA4",
+          "raw_hex": "5543455330303432304441544134",
+          "format": "0x204",
+          "encoding_status": "UTF-8"
+        },
+        "SAVEDATA_TITLE": {
+          "text": null,
+          "raw_hex": "53617576656761726465206d6f646520736f6c6fc080454e5452",
+          "format": "0x204",
+          "encoding_status": "UNKNOWN"
+        },
+        "TITLE": {
+          "text": null,
+          "raw_hex": "52617463686574202620436c616e6b203a204c61207461696c6c652c20c3a76120636f6d707465e284a2c080454e5452",
+          "format": "0x204",
+          "encoding_status": "UNKNOWN"
+        }
+      }
+    }
+  ],
+  "scope": "Byte preservation and SFO strings only. No emulator launch or proof of in-game slot ordering, health, equipment, scene or RAM state."
+}
