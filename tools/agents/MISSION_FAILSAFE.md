@@ -1,79 +1,35 @@
-# Mission Failsafe Protocol
+# Detached mission failsafe
 
-Long Overcompensated research missions must survive loss of the parent Codex
-session, quota exhaustion, application restart, or context loss.
-
-## Principle
-
-The parent Sol session must not be the only place where mission state exists.
-
-Before expensive external research begins, the mission launcher persists:
-
-- the exact task snapshot;
-- mission status;
-- Git branch and HEAD;
-- assigned DeepSeek roles;
-- expected outputs;
-- explicit resume instructions.
-
-The external DeepSeek panel then runs in a detached PowerShell 7 process. The
-mission can therefore continue even if the parent Codex GUI session becomes
-unavailable.
-
-## Start a mission
-
-Example:
+Operational policy: docs/methodology/ORCHESTRATOR_POLICY.md.
+Persist CURRENT_STATE.md with the planned mission ID before launch.
 
 ```powershell
-.\tools\agents\scripts\start-deepseek-mission.ps1 `
-    -MissionId v1-parity-inventory `
-    -TaskFile research\tasks\v1-parity-inventory.md
+pwsh -NoProfile -ExecutionPolicy Bypass -File .\tools\agents\scripts\start-deepseek-mission.ps1 -MissionId <id> -TaskFile research\tasks\<task>.md
 ```
 
-The launcher returns quickly. It does not wait for the workers.
+The launcher returns immediately. Task, parent checkpoint, mission.json and
+RESUME.md already exist. A detached PowerShell runner owns completion; no parent
+callback or parent-model quota is required. CODEX_HOME propagates to children.
+Workers hydrate the API key from process or persistent Windows User/Machine.
+Secrets are never printed. Read-only workers emit full report plus compact JSON
+in the same response. Host scripts extract/aggregate and persist final state.
 
-Mission state is stored under:
-
-`research/inbox/deepseek/missions/<mission-id>/`
-
-## Inspect state
+Inspect once in a future session or on an explicit owner status request:
 
 ```powershell
-.\tools\agents\scripts\get-deepseek-mission-status.ps1 `
-    -MissionId v1-parity-inventory
+pwsh -NoProfile -ExecutionPolicy Bypass -File .\tools\agents\scripts\get-deepseek-mission-status.ps1 -MissionId <id>
 ```
 
-With no `-MissionId`, the script shows the most recently modified mission.
+Do not repeatedly poll. Work independently or end after launching.
+QUEUED/RUNNING means not complete. WORKERS_COMPLETE/READY_FOR_PARENT means reports,
+handoffs and READY_FOR_PARENT_REVIEW.md were persisted, not gameplay validation.
+WORKERS_FAILED/BLOCKED preserves successful scopes and diagnostics.
+After quota loss: read root startup files, inspect persisted state, read
+PARENT_HANDOFF.md first, then only necessary full-report sections. Never restart
+from memory or overwrite a completed mission. Legacy READY_FOR_SOL and
+sol-review.md remain supported. No paid OpenAI fallback is enabled implicitly.
 
-## Status values
-
-- `QUEUED`: checkpoint created, runner not yet confirmed active.
-- `RUNNING`: detached runner launched.
-- `WORKERS_COMPLETE`: all requested DeepSeek reports completed; Sol review is pending.
-- `WORKERS_FAILED`: at least part of the external worker phase failed.
-
-Review status is tracked separately because worker completion is not technical
-validation.
-
-## If the Codex quota is exhausted
-
-Do not restart the research from memory.
-
-After Codex access returns:
-
-1. Run the mission status script.
-2. Open the mission's `RESUME.md`.
-3. If present, open `READY_FOR_SOL_REVIEW.md`.
-4. Have Sol read the task snapshot and raw worker outputs.
-5. Produce the missing parent review.
-
-DeepSeek consensus does not become validation merely because Sol was unavailable.
-
-## Optional paid second-level fallback
-
-A separately billed OpenAI API-key Codex invocation can be configured as a
-distinct emergency reviewer if desired. It should not be enabled implicitly.
-API-key use is billed separately from ChatGPT subscription usage and must remain
-an explicit project-owner choice.
-
-Astra is an escalation model for difficult reasoning, not a quota failsafe.
+Detachment survives launcher/parent-session exit, not OS shutdown or deliberate
+process termination. Network/provider failures are recorded when the runner can
+handle them. An interrupted runner can leave stale RUNNING; the status command
+flags an unverified PID. Review diagnostics before any narrowly scoped retry.

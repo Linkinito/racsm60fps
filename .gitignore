@@ -103,7 +103,6 @@ Thumbs.db
 # SHA-256 verified identical to development-v0.6.3-generalisation/prx-reference/
 **/development-v0.6.1/verified-prx-inputs/
 
-@"
 
 # DeepSeek mission runtime logs
 research/inbox/deepseek/missions/**/mission-run*.log
@@ -118,4 +117,6 @@ research/live-tests/**/preflight-*.json
 
 # Local PPSSPP API reference copies
 research/live-tests/**/api-reference/
-"@ | Add-Content .gitignore
+
+# Keep external worker diagnostics local; preserve status JSON in Git.
+research/inbox/deepseek/missions/**/workers/_logs/*.log

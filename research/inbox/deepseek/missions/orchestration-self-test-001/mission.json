@@ -1,0 +1,28 @@
+{
+  "missionId": "orchestration-self-test-001",
+  "status": "WORKERS_COMPLETE",
+  "reviewStatus": "READY_FOR_PARENT",
+  "schemaVersion": 2,
+  "parentStateSha256": "D7F181665EF6A7B5E09A1D78B8AC8FE08357DB58ADF4F14DF246D20432C2BD26",
+  "createdAtUtc": "2026-09-19T14:24:37.7514757Z",
+  "taskFile": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\tasks\\orchestration-self-test.md",
+  "taskSnapshot": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\orchestration-self-test-001\\task.snapshot.md",
+  "profile": "deepseek-flash-high",
+  "codexHome": "C:\\Users\\linki\\.codex",
+  "roles": [
+    "explorer"
+  ],
+  "repoRoot": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS",
+  "gitBranch": "v2-research",
+  "gitHead": "16176887be256850225eb4cd46b81d3768b77083",
+  "workersDirectory": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\orchestration-self-test-001\\workers",
+  "panelSummary": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\orchestration-self-test-001\\workers\\panel-summary.json",
+  "parentReview": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\orchestration-self-test-001\\parent-review.md",
+  "parentHandoff": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\orchestration-self-test-001\\PARENT_HANDOFF.md",
+  "readyForReview": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\orchestration-self-test-001\\READY_FOR_PARENT_REVIEW.md",
+  "runnerStdout": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\orchestration-self-test-001\\mission-run.stdout.log",
+  "runnerStderr": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\orchestration-self-test-001\\mission-run.stderr.log",
+  "runnerPid": 36408,
+  "completedAtUtc": "2026-09-19T14:24:46.3691834Z",
+  "failure": null
+}

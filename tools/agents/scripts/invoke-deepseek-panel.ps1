@@ -121,16 +121,21 @@ foreach ($Role in $Roles) {
 `$status = [ordered]@{
     succeeded = `$false
     message = `$null
+    exitCode = 1
+    startedAtUtc = (Get-Date).ToUniversalTime().ToString("o")
+    completedAtUtc = `$null
 }
 try {
     & $WorkerScriptQ -Role $RoleQ -TaskFile $TaskQ -OutputFile $ReportQ -Profile $ProfileQ$ForceArgument
     `$status.succeeded = `$true
+    `$status.exitCode = 0
 }
 catch {
     `$status.message = (`$_ | Out-String).Trim()
     Write-Error `$_
 }
 finally {
+    `$status.completedAtUtc = (Get-Date).ToUniversalTime().ToString("o")
     `$status | ConvertTo-Json -Depth 4 | Set-Content -LiteralPath $StatusQ -Encoding utf8
 }
 if (-not `$status.succeeded) { exit 1 }
@@ -212,6 +217,8 @@ foreach ($Worker in $Workers) {
         role          = $Worker.role
         succeeded     = $Succeeded
         childSucceeded = $ChildSucceeded
+        exitCode = if ($ChildSucceeded) { 0 } else { 1 }
+        handoff = (Join-Path $ResolvedOutputDirectory "$($Worker.role)-handoff.json")
         report        = $Worker.report
         reportExists  = $ReportExists
         reportBytes   = $ReportBytes
@@ -274,8 +281,7 @@ if ($Failed.Count -gt 0) {
     throw "DeepSeek panel completed with failed or missing reports for: $FailedRoles"
 }
 
-# Successful runs keep only durable reports and the summary.
-Remove-Item -LiteralPath $LogDirectory -Recurse -Force -ErrorAction SilentlyContinue
+# Preserve child status and diagnostic logs for detached provenance.
 
 Write-Host ""
 Write-Host "DeepSeek panel completed successfully."

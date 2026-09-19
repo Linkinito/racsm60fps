@@ -1,0 +1,11 @@
+{
+  "checkedAtUtc": "2026-09-19T14:28:02.1558651Z",
+  "checkpointHashMatches": true,
+  "checkpointContainsMission": true,
+  "workerStartedAfterLauncherReturn": true,
+  "workerCompletedAfterLauncherReturn": true,
+  "launcherNoLongerRunning": true,
+  "manifestComplete": true,
+  "parentHandoffBytes": 926,
+  "codexHomeRecorded": true
+}

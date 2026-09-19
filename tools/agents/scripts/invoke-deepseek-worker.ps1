@@ -152,14 +152,15 @@ if ([string]::IsNullOrWhiteSpace($env:DEEPSEEK_API_KEY)) {
 $RoleInstructions = Get-Content -LiteralPath $RolePromptPath -Raw
 $TaskContents = Get-Content -LiteralPath $TaskPath -Raw
 
+$HandoffInstructions = Get-Content -LiteralPath (Join-Path $RepoRoot 'tools/agents/prompts/handoff.md') -Raw
+
 $InstructionPrompt = @"
 You are an external DeepSeek research worker for the Overcompensated V2 project.
 
 Before investigating, read and obey:
 - AGENTS.md
-- PROJECT_GOALS.md
-- MIGRATION.md
 - docs/methodology/EVIDENCE_LEVELS.md
+Read only task-relevant evidence; parent startup rules do not expand your assigned scope.
 
 Project priority:
 The primary objective is faithful behavioral parity between the original
@@ -183,7 +184,9 @@ Rules:
 - Use UNKNOWN when evidence is absent instead of estimating.
 - Prefer primary evidence over summaries when available.
 - Persistent technical output must be written in English.
-- Return a self-contained technical report suitable for review by the parent Sol agent.
+- Return a self-contained technical report suitable for review by the parent orchestrator.
+
+$HandoffInstructions
 "@
 
 Push-Location $RepoRoot
@@ -221,5 +224,6 @@ if ($OutputInfo.Length -eq 0) {
     throw "DeepSeek worker '$Role' created an empty report: $OutputPath"
 }
 
+& (Join-Path $PSScriptRoot 'export-parent-handoff.ps1') -ReportPath $OutputPath -Role $Role
 Write-Host "DeepSeek worker '$Role' completed successfully."
 Write-Host "Report: $OutputPath"

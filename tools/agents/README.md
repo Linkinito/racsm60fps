@@ -1,77 +1,40 @@
-# DeepSeek External Worker Tools
+# External DeepSeek worker tools
 
-These scripts let the parent Codex/Sol session invoke external DeepSeek workers
-without changing the parent ChatGPT-authenticated Codex session.
-
-## Design
-
-- `invoke-deepseek-worker.ps1` runs one DeepSeek worker.
-- `invoke-deepseek-panel.ps1` runs multiple independent roles in parallel.
-- Workers are forced into Codex `read-only` sandbox mode with approvals disabled.
-- The DeepSeek API key is never stored in the repository.
-- If the current process does not inherit `DEEPSEEK_API_KEY`, the worker script
-  attempts to load the persistent Windows User/Machine environment variable into
-  the child process without printing it.
-- Persistent technical reports are written in English.
-- The parent Sol agent remains responsible for synthesis and decisions.
-- Model agreement is not validation; deterministic evidence and controlled
-  gameplay tests remain authoritative.
+Parent policy: GPT-6 Astra, Medium. Workers: independent Explorer / Mapper /
+Skeptic through the existing external provider. No native OpenAI research agents.
+Read docs/methodology/ORCHESTRATOR_POLICY.md for reading budgets and handoff rules.
 
 ## Requirements
 
-The user-level Codex profile must exist:
+PowerShell7, codex CLI, a user-level deepseek-flash-high.config.toml and configured
+DeepSeek provider in CODEX_HOME. DEEPSEEK_API_KEY comes from the process or Windows
+User/Machine environment, never the repository. Pass -CodexHome explicitly when
+needed. Do not print configuration secrets. Workers use read-only sandbox and
+approval_policy=never. Reports are English.
 
-`%USERPROFILE%\.codex\deepseek-flash-high.config.toml`
+## Preferred workflow
 
-The DeepSeek provider must be configured in the user-level Codex configuration,
-and `DEEPSEEK_API_KEY` must exist as a persistent Windows environment variable.
+Persist CURRENT_STATE.md with mission ID, then use start-deepseek-mission.ps1.
+Default roles are explorer, mapper, skeptic. Use -Roles explorer for a cheap test.
+See MISSION_FAILSAFE.md for complete commands. No repeated parent polling.
 
-## Run one worker
+invoke-deepseek-panel.ps1 is the runner's synchronous internal panel; it launches
+independent child processes and waits locally. invoke-deepseek-worker.ps1 invokes
+the external provider. Full reports include a worker-authored compact JSON block;
+export-parent-handoff.ps1 extracts <role>-handoff.json and builds PARENT_HANDOFF.md.
+No parent call is used for aggregation. Invalid JSON/schema fails that scope;
+original reports and _logs status/diagnostics remain available.
 
-Example:
+New mission review path is parent-review.md; old sol-review.md is preserved.
+For legacy missions without compact data, export-parent-handoff.ps1
+-MissionDirectory <path> -Legacy creates a pointer-only handoff with explicit
+UNKNOWN, without rewriting historical reports or pretending to summarize them.
 
-```powershell
-.\tools\agents\scripts\invoke-deepseek-worker.ps1 `
-    -Role explorer `
-    -TaskFile research\tasks\kalidon-acid.md `
-    -OutputFile research\inbox\deepseek\kalidon-acid\explorer.md
-```
+Get-deepseek-mission-status.ps1 returns one compact JSON object with deterministic
+counts, sizes, wrapper exit codes, timestamps and required-file presence. Legacy
+panel summaries are supported (unrecorded exit codes remain null).
+Do not use -Force to restart an existing mission: launcher refuses evidence
+replacement. Recover only the failed scope with a new ID after diagnosis.
 
-Use `-Force` only when intentionally replacing an existing report.
-
-## Run a parallel panel
-
-Example:
-
-```powershell
-.\tools\agents\scripts\invoke-deepseek-panel.ps1 `
-    -TaskFile research\tasks\kalidon-acid.md `
-    -OutputDirectory research\inbox\deepseek\kalidon-acid
-```
-
-By default the panel launches:
-
-- `explorer`
-- `mapper`
-- `skeptic`
-
-The three roles work independently and write separate reports. The panel also
-writes `panel-summary.json`.
-
-You can run a subset:
-
-```powershell
-.\tools\agents\scripts\invoke-deepseek-panel.ps1 `
-    -TaskFile research\tasks\kalidon-acid.md `
-    -Roles explorer,skeptic `
-    -OutputDirectory research\inbox\deepseek\kalidon-acid
-```
-
-## Recommended parent-agent workflow
-
-1. Sol defines a narrow research question in a task file.
-2. Sol launches one worker or the three-role panel.
-3. Sol reads the resulting reports.
-4. Sol reconciles evidence and disagreements.
-5. Astra is used only when a materially difficult ambiguity remains.
-6. A deterministic experiment or gameplay comparison decides the technical claim.
+Tests: pwsh -NoProfile -ExecutionPolicy Bypass -File
+ tools/agents/tests/test-orchestration.ps1

@@ -1,0 +1,22 @@
+{
+  "taskFile": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\orchestration-self-test-001\\task.snapshot.md",
+  "profile": "deepseek-flash-high",
+  "startedAtUtc": "2026-09-19T14:24:38.5637541Z",
+  "completedAtUtc": "2026-09-19T14:24:46.3343799Z",
+  "roles": [
+    {
+      "role": "explorer",
+      "succeeded": true,
+      "childSucceeded": true,
+      "exitCode": 0,
+      "handoff": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\orchestration-self-test-001\\workers\\explorer-handoff.json",
+      "report": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\orchestration-self-test-001\\workers\\explorer.md",
+      "reportExists": true,
+      "reportBytes": 1176,
+      "stdoutLog": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\orchestration-self-test-001\\workers\\_logs\\explorer.stdout.log",
+      "stderrLog": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\orchestration-self-test-001\\workers\\_logs\\explorer.stderr.log",
+      "statusFile": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\orchestration-self-test-001\\workers\\_logs\\explorer.status.json",
+      "failureReason": null
+    }
+  ]
+}

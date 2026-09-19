@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "role": "explorer",
+  "sourceReport": "explorer.md",
+  "sourceSha256": "42BBA2C1BA8A0BA06C76F6A2DDCA38FB2CF1DF43385EBACE67784D3FAAE31AD4",
+  "established": "Receipt of the transport/persistence self-test task ORCHESTRATION_SELF_TEST_V1.",
+  "corroborated": "NONE",
+  "inferred": "NONE",
+  "contradictions": "NONE found; absence is not proof",
+  "rejected": "NONE",
+  "unknown": "Detachment, persistence across sessions, and all research claims.",
+  "top_hypotheses": "NONE",
+  "best_discriminating_test": "Host-side verification of task file/status and returned transport receipt.",
+  "blockers": "NONE",
+  "full_report_required": "no: transport receipt only"
+}

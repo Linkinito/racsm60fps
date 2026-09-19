@@ -116,11 +116,16 @@ if ((Test-Path -LiteralPath $MissionDirectory -PathType Container) -and -not $Fo
 }
 
 if ($Force -and (Test-Path -LiteralPath $MissionDirectory -PathType Container)) {
-    Remove-Item -LiteralPath $MissionDirectory -Recurse -Force
+    throw 'Existing missions are immutable at launch. Use a new mission ID; preserve prior evidence.'
 }
+$CheckpointPath = Join-Path $RepoRoot 'CURRENT_STATE.md'
+if (-not (Test-Path -LiteralPath $CheckpointPath)) { throw 'Persist CURRENT_STATE.md before launching.' }
+if ((Get-Item -LiteralPath $CheckpointPath).Length -gt 8192) { throw 'CURRENT_STATE.md exceeds 8 KB.' }
+if (-not (Get-Content -LiteralPath $CheckpointPath -Raw).Contains($MissionId)) { throw 'Record the mission ID in CURRENT_STATE.md before launch.' }
 
 New-Item -ItemType Directory -Path $WorkersDirectory -Force | Out-Null
 Copy-Item -LiteralPath $TaskPath -Destination $TaskSnapshotPath -Force
+Copy-Item -LiteralPath $CheckpointPath -Destination (Join-Path $MissionDirectory "parent-state.snapshot.md")
 
 $GitBranch = $null
 $GitHead = $null
@@ -137,7 +142,9 @@ $StartedAt = (Get-Date).ToUniversalTime().ToString("o")
 $Manifest = [ordered]@{
     missionId = $MissionId
     status = "QUEUED"
-    reviewStatus = "PENDING_SOL"
+    reviewStatus = "PENDING_PARENT"
+    schemaVersion = 2
+    parentStateSha256 = (Get-FileHash -LiteralPath $CheckpointPath -Algorithm SHA256).Hash
     createdAtUtc = $StartedAt
     taskFile = $TaskPath
     taskSnapshot = $TaskSnapshotPath
@@ -149,8 +156,9 @@ $Manifest = [ordered]@{
     gitHead = $GitHead
     workersDirectory = $WorkersDirectory
     panelSummary = (Join-Path $WorkersDirectory "panel-summary.json")
-    solReview = (Join-Path $MissionDirectory "sol-review.md")
-    readyForReview = (Join-Path $MissionDirectory "READY_FOR_SOL_REVIEW.md")
+    parentReview = (Join-Path $MissionDirectory "parent-review.md")
+    parentHandoff = (Join-Path $MissionDirectory "PARENT_HANDOFF.md")
+    readyForReview = (Join-Path $MissionDirectory "READY_FOR_PARENT_REVIEW.md")
     runnerStdout = $RunnerStdout
     runnerStderr = $RunnerStderr
     runnerPid = $null
@@ -160,67 +168,27 @@ $Manifest = [ordered]@{
 
 $Manifest | ConvertTo-Json -Depth 8 | Set-Content -LiteralPath $ManifestPath -Encoding utf8
 
-$Resume = @"
-# Overcompensated V2 — Mission Resume Checkpoint
+$Resume = @'
+# Mission resume checkpoint
 
-Mission: `$MissionId`
-
-This file exists so the investigation can be resumed even if the parent Codex
-session stops because of a usage limit, application restart, crash, or context loss.
-
-## Canonical mission state
-
-Read:
-
-- `mission.json`
-- `task.snapshot.md`
-- `workers/panel-summary.json` when present
-- `workers/explorer.md` when present
-- `workers/mapper.md` when present
-- `workers/skeptic.md` when present
-
-The governing project files remain:
-
-- `AGENTS.md`
-- `PROJECT_GOALS.md`
-- `MIGRATION.md`
-- `docs/methodology/EVIDENCE_LEVELS.md`
-
-## Resume procedure for Sol
-
-If `mission.json` says `WORKERS_COMPLETE`:
-
-1. Read the governing project files.
-2. Read `task.snapshot.md`.
-3. Read all worker reports and `workers/panel-summary.json`.
-4. Treat worker agreement as corroboration only, never validation.
-5. Write the parent review to `sol-review.md` in English.
-6. Identify contradictions, missing evidence, and deterministic next tests.
-7. Escalate to Astra only if a materially difficult ambiguity remains after normal review.
-8. Summarize the outcome to the project owner in French.
-9. Do not modify gameplay patches unless the original mission explicitly authorizes it.
-
-If `mission.json` says `WORKERS_FAILED`:
-
-1. Inspect `mission-run.stderr.log`.
-2. Inspect `workers/_logs/` if present.
-3. Preserve successful worker reports.
-4. Restart only the failed scope unless the evidence set itself must be regenerated.
-
-If the mission is still `QUEUED` or `RUNNING`, inspect the recorded runner PID
-and logs before starting a duplicate mission.
-
-## Important
-
-DeepSeek output is research evidence/hypothesis material, not authoritative truth.
-Priority 0 remains faithful 30 FPS -> 60 FPS behavioral parity.
-"@
+Read root AGENTS.md, CURRENT_STATE.md and the active task. Inspect mission.json
+once using get-deepseek-mission-status.ps1. Do not start a duplicate or poll.
+For WORKERS_COMPLETE / READY_FOR_PARENT (legacy READY_FOR_SOL is equivalent),
+read PARENT_HANDOFF.md first, then only sections needed to arbitrate disagreement,
+verify provenance or answer a concrete ambiguity. Write parent-review.md in English.
+Consensus is not validation. Preserve all original reports and contradictions.
+For WORKERS_FAILED, inspect failed role status and logs; retain successful scopes.
+For QUEUED/RUNNING, continue useful independent work or end the parent session.
+This detached runner completes without parent callbacks. Resume from persisted
+state after quota loss. No gameplay modifications without task authorization.
+'@
 
 $Resume | Set-Content -LiteralPath $ResumePath -Encoding utf8
 
 $PwshCommand = Get-Command pwsh -ErrorAction Stop
 $RolesCsv = $Roles -join ","
 
+try {
 $Process = Start-Process `
     -FilePath $PwshCommand.Source `
     -ArgumentList @(
@@ -246,10 +214,19 @@ $Process = Start-Process `
     -RedirectStandardError $RunnerStderr `
     -WindowStyle Hidden `
     -PassThru
+}
+catch {
+    $Manifest.status = 'WORKERS_FAILED'
+    $Manifest.reviewStatus = 'BLOCKED'
+    $Manifest.completedAtUtc = (Get-Date).ToUniversalTime().ToString('o')
+    $Manifest.failure = 'Detached runner could not be started. Inspect launcher error; no automatic retry.'
+    $Manifest | ConvertTo-Json -Depth 8 | Set-Content -LiteralPath $ManifestPath -Encoding utf8
+    throw
+}
 
-$Manifest.runnerPid = $Process.Id
-$Manifest.status = "RUNNING"
-$Manifest | ConvertTo-Json -Depth 8 | Set-Content -LiteralPath $ManifestPath -Encoding utf8
+# The runner is the sole manifest writer after launch: no stale parent overwrite.
+[ordered]@{launcherPid=$PID; runnerPid=$Process.Id; returnedAtUtc=(Get-Date).ToUniversalTime().ToString('o')} |
+    ConvertTo-Json | Set-Content -LiteralPath (Join-Path $MissionDirectory 'launch.json') -Encoding utf8
 
 Write-Host "DeepSeek mission launched in detached mode."
 Write-Host "Mission:    $MissionId"

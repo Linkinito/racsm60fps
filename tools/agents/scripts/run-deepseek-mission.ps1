@@ -23,7 +23,7 @@ $RepoRoot = [System.IO.Path]::GetFullPath((Join-Path $PSScriptRoot "..\..\.."))
 $PanelScript = Join-Path $PSScriptRoot "invoke-deepseek-panel.ps1"
 $ManifestPath = Join-Path $MissionDirectory "mission.json"
 $WorkersDirectory = Join-Path $MissionDirectory "workers"
-$ReadyPath = Join-Path $MissionDirectory "READY_FOR_SOL_REVIEW.md"
+$ReadyPath = Join-Path $MissionDirectory "READY_FOR_PARENT_REVIEW.md"
 
 # Critical for detached runs launched from Codex desktop:
 # the child may execute under CodexSandboxOffline without a usable HOME.
@@ -39,11 +39,14 @@ function Read-Manifest {
 
 function Write-Manifest {
     param([Parameter(Mandatory = $true)]$Manifest)
-    $Manifest | ConvertTo-Json -Depth 8 | Set-Content -LiteralPath $ManifestPath -Encoding utf8
+    $TemporaryPath = "$ManifestPath.tmp"
+    $Manifest | ConvertTo-Json -Depth 8 | Set-Content -LiteralPath $TemporaryPath -Encoding utf8
+    Move-Item -LiteralPath $TemporaryPath -Destination $ManifestPath -Force
 }
 
 $Manifest = Read-Manifest
 $Manifest.status = "RUNNING"
+$Manifest.runnerPid = $PID
 $Manifest.codexHome = $env:CODEX_HOME
 Write-Manifest $Manifest
 
@@ -59,45 +62,23 @@ try {
 
     $Manifest = Read-Manifest
     $Manifest.status = "WORKERS_COMPLETE"
-    $Manifest.reviewStatus = "READY_FOR_SOL"
+    $Manifest.reviewStatus = "READY_FOR_PARENT"
     $Manifest.completedAtUtc = (Get-Date).ToUniversalTime().ToString("o")
     $Manifest.failure = $null
-    Write-Manifest $Manifest
 
-    $Ready = @"
-# Ready for Sol review
+    & (Join-Path $PSScriptRoot 'export-parent-handoff.ps1') -MissionDirectory $MissionDirectory -Status $Manifest.status -ReviewStatus $Manifest.reviewStatus
+    $Ready = @'
+# Ready for parent review
 
-The external DeepSeek worker stage completed successfully.
-
-Mission: $($Manifest.missionId)
-
-Read, in this order:
-
-1. `AGENTS.md`
-2. `PROJECT_GOALS.md`
-3. `MIGRATION.md`
-4. `docs/methodology/EVIDENCE_LEVELS.md`
-5. `$($Manifest.taskSnapshot)`
-6. `$($Manifest.panelSummary)`
-7. `workers/explorer.md`
-8. `workers/mapper.md`
-9. `workers/skeptic.md`
-
-Then write the critical parent synthesis to:
-
-`$($Manifest.solReview)`
-
-Rules:
-
-- Do not treat agreement among workers as validation.
-- Distinguish OBSERVED / INFERRED / CORROBORATED / TESTED.
-- Preserve contradictions rather than averaging them away.
-- Identify the deterministic test that would resolve each material uncertainty.
-- Astra is escalation, not a quota fallback and not an authority of truth.
-- Priority 0 is 30 FPS -> 60 FPS behavioral parity.
-"@
+Read PARENT_HANDOFF.md first. Use mission.json and workers/panel-summary.json
+for deterministic completion evidence. Open full report sections only for
+disagreement, provenance verification, requested review or genuine ambiguity.
+Write parent-review.md in English. Worker completion is not gameplay validation.
+Update root CURRENT_STATE.md before ending the parent session.
+'@
 
     $Ready | Set-Content -LiteralPath $ReadyPath -Encoding utf8
+    Write-Manifest $Manifest
     exit 0
 }
 catch {
@@ -110,6 +91,8 @@ catch {
         $Manifest.completedAtUtc = (Get-Date).ToUniversalTime().ToString("o")
         $Manifest.failure = $FailureText
         Write-Manifest $Manifest
+        if (Test-Path -LiteralPath $ReadyPath) { Remove-Item -LiteralPath $ReadyPath -Force }
+        & (Join-Path $PSScriptRoot "export-parent-handoff.ps1") -MissionDirectory $MissionDirectory
     }
     catch {
     }
