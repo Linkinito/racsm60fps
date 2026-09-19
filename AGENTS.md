@@ -32,17 +32,22 @@ CURRENT_STATE is a checkpoint, not a history log. Verify actual Git HEAD on resu
 - Commit logical steps separately; separate infrastructure from research.
 
 ## Delegation and reading budget
-Parent policy: GPT-6 Astra, Medium. Use existing external DeepSeek Explorer /
-Mapper / Skeptic with distinct scopes; no native Codex/OpenAI research subagents.
-For broad exploration: define question, persist state, launch detached workers
-early, then do limited independent work or end. Never repeatedly poll workers.
-One status check on a future session or explicit owner request is sufficient.
-Before delegation, use only a few targeted substantial reads unless essential.
-After delegation, read PARENT_HANDOFF.md first. Full report sections are exceptions
-for disagreement, provenance, explicit handoff requests or evidentiary ambiguity.
-Use scripts for counts/status/log aggregation. No parent-model summary calls.
-Workers require no parent callback to finish. Preserve reports and failed scopes;
-never restart completed investigations from memory after quota interruption.
+Parent: GPT-6 Astra, Medium. Route before substantial research:
+deterministic script -> read-only Luna for bounded <=5-file lookup/triage ->
+detached DeepSeek for broad mapping/provenance/falsification -> Astra for live
+PPSSPP, experiment design/execution, causal arbitration and evidence decisions.
+Prefer one Luna; maximum two native workers. Use only required DeepSeek roles;
+justify the full trio. No duplicated investigation after delegation.
+Startup: AGENTS.md -> CURRENT_STATE.md -> active task; at most THREE additional
+substantial targeted reads before routing. Completed mission: PARENT_HANDOFF first;
+full reports/history only for a concrete exception. Never repeatedly poll workers.
+Research sessions must yield experimental evidence, a narrowed hypothesis,
+validated protocol or precise blocker; preparation alone needs a hard blocker.
+At most one substantial tooling detour per experiment; persist/delegate more.
+Keep PPSSPP source cache read-only; no reclone/rebuild/reinstall/environment
+duplication/reindex/version change without owner authorization. Default lookup: Luna.
+This is the final orchestration refactor; revisit only if a concrete experiment
+proves necessity. Details and quota failsafe: docs/methodology/ORCHESTRATOR_POLICY.md.
 
 ## Language and detailed policy
 Owner communication: simple French. Persistent artifacts, code comments, reports,

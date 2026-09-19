@@ -7,8 +7,9 @@ param(
     [Parameter(Mandatory = $true)]
     [string]$TaskFile,
 
+    [Parameter(Mandatory = $true)]
     [ValidateSet("explorer", "mapper", "skeptic")]
-    [string[]]$Roles = @("explorer", "mapper", "skeptic"),
+    [string[]]$Roles,
 
     [string]$Profile = "deepseek-flash-high",
 

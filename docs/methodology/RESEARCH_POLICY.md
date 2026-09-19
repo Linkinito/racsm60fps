@@ -40,8 +40,8 @@ materially incomplete, unless explicitly requested by the project owner.
 The default investigation chain is:
 
 1. The parent orchestrator defines the technical question.
-2. Deterministic tools and existing evidence are checked first.
-3. One or more DeepSeek workers may investigate independent aspects in parallel.
+2. Deterministic tools answer hashes/counts/diffs/trace parsing/status first.
+3. Bounded read-only lookups go to Luna; broad mapping/provenance/falsification goes to only the required detached DeepSeek roles. Follow ORCHESTRATOR_POLICY.md before parent research.
 4. A DeepSeek skeptical reviewer should independently challenge important hypotheses.
 5. The parent orchestrator reconciles the findings.
 6. Current parent model policy is GPT-6 Astra, Medium; reserve reasoning for arbitration and experiment design.
@@ -490,4 +490,3 @@ A future researcher should be able to answer:
 - How can the result be reproduced?
 
 If a patch works but none of these questions can be answered, the investigation is not finished.
-

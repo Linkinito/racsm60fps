@@ -1,3 +1,14 @@
+model = "gpt-6-astra"
+model_reasoning_effort = "medium"
+
 [agents]
 enabled = true
-max_concurrent_threads_per_session = 4
+max_concurrent_threads_per_session = 2
+
+[agents.luna_reader]
+description = "Bounded read-only source and repository lookup, normally 1-5 selected files."
+config_file = "agents/luna_reader.toml"
+
+[agents.luna_triage]
+description = "Bounded read-only comparison, classification and triage of selected compact evidence."
+config_file = "agents/luna_triage.toml"

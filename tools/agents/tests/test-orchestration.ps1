@@ -12,6 +12,12 @@ try {
         [Management.Automation.Language.Parser]::ParseFile($File.FullName, [ref]$Tokens, [ref]$ParseErrors) | Out-Null
         Assert ($ParseErrors.Count -eq 0) "Syntax: $($File.Name)"
     }
+    # Require an intentional paid-worker scope without launching any provider.
+    foreach ($Name in @('start-deepseek-mission.ps1', 'invoke-deepseek-panel.ps1')) {
+        $Command = Get-Command (Join-Path $Scripts $Name)
+        $RoleAttributes = @($Command.Parameters['Roles'].Attributes | Where-Object { $_ -is [Management.Automation.ParameterAttribute] })
+        Assert (@($RoleAttributes | Where-Object { $_.Mandatory }).Count -gt 0) "Explicit Roles required: $Name"
+    }
     New-Item -ItemType Directory -Path "$Fixture/workers/_logs" -Force | Out-Null
     $Manifest = @{missionId=$TestId; schemaVersion=2; status='RUNNING'; reviewStatus='PENDING_PARENT'; roles=@('explorer','mapper','skeptic'); runnerPid=$null; createdAtUtc=[DateTime]::UtcNow.ToString('o'); completedAtUtc=$null}
     $Manifest | ConvertTo-Json | Set-Content "$Fixture/mission.json"
@@ -50,7 +56,7 @@ try {
     & "$Scripts/export-parent-handoff.ps1" -MissionDirectory $Fixture -Legacy
     Assert ((Get-Content "$Fixture/PARENT_HANDOFF.md" -Raw).Contains('UNKNOWN')) 'Legacy synthesis invented'
     Assert ((Get-Item "$Root/CURRENT_STATE.md").Length -le 8192) 'Checkpoint too large'
-    'PASS: syntax, immutable full report/hash, extraction, malformed/oversize rejection, partial counts, legacy compatibility, checkpoint limit.'
+    'PASS: syntax, explicit role selection, immutable full report/hash, extraction, malformed/oversize rejection, partial counts, legacy compatibility, checkpoint limit.'
 } finally {
     # Delete only this generated fixture, using one native shell and checked root.
     if ($Fixture.StartsWith($Missions + [IO.Path]::DirectorySeparatorChar) -and (Split-Path $Fixture -Leaf) -eq $TestId -and (Test-Path -LiteralPath $Fixture)) {

@@ -4,7 +4,7 @@ Operational policy: docs/methodology/ORCHESTRATOR_POLICY.md.
 Persist CURRENT_STATE.md with the planned mission ID before launch.
 
 ```powershell
-pwsh -NoProfile -ExecutionPolicy Bypass -File .\tools\agents\scripts\start-deepseek-mission.ps1 -MissionId <id> -TaskFile research\tasks\<task>.md
+pwsh -NoProfile -ExecutionPolicy Bypass -File .\tools\agents\scripts\start-deepseek-mission.ps1 -MissionId <id> -TaskFile research\tasks\<task>.md -Roles explorer
 ```
 
 The launcher returns immediately. Task, parent checkpoint, mission.json and
@@ -13,6 +13,8 @@ callback or parent-model quota is required. CODEX_HOME propagates to children.
 Workers hydrate the API key from process or persistent Windows User/Machine.
 Secrets are never printed. Read-only workers emit full report plus compact JSON
 in the same response. Host scripts extract/aggregate and persist final state.
+Select the required role(s) explicitly; `explorer` above is an example, not a
+default trio. Luna does not replace this detached quota-independent mechanism.
 
 Inspect once in a future session or on an explicit owner status request:
 

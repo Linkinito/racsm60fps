@@ -1,67 +1,58 @@
 # Current parent checkpoint
 
-- Project: Overcompensated V2 / UCES00420; Priority0 30->60 behavioral parity.
-- Branch v2-research; current HEAD 46ad9a447beeda8d9992af5c1e9026ab5ada4bea.
-  This checkpoint-only refresh follows the commit; mission runtime files remain local.
-- Active task: research/tasks/pokitaru-player-clock-001.md; resumed by owner.
-- Mission player-clock-a0-method-001 FAILED at startup: all three workers,
-  zero reports, Codex home/app-server access denied under CodexSandboxOffline.
-  Failure reviewed and preserved. Recovery mission player-clock-a0-method-002
-  launched with elevated launcher PID9980, unchanged read-only worker sandbox.
-  Auto-review initially refused; owner explicitly approved Codex-home/config.
-  Owner-requested check: RUNNING, 0 failed, 3 pending, runner active. Three child
-  Codex processes and nonempty logs observed; no final reports/handoff yet.
-  Explorer=replay/clocks; Mapper=relocation/normalization; Skeptic=isolation.
-  Task research/tasks/player-clock-a0-method-001.md. No completed work repeated.
-- Completed player-clock-001-support and infrastructure missions not restarted.
+- Project: Overcompensated V2 / UCES00420; Priority0 original30 -> faithful60.
+- Branch v2-research; verified pre-refactor HEAD fc4386817f62c17dae58aa4ed89f47c8b76fbc75.
+- Active task: research/tasks/orchestration-routing-final.md, complete; local TOML,
+  explicit-role and orchestration fixture checks passed. Commit pending, then STOP.
+- PLAYER-CLOCK-001 suspended for this task; no gameplay continuation authorized
+  within the refactor. Resume task: research/tasks/pokitaru-player-clock-001.md.
 
-## Durable findings
+## Final routing
 
-PPSSPP v1.20.4, PID3404, C:/Program Files/PPSSPP/PPSSPPWindows64.exe;
-no ISO/config arguments. Port60907; rediscover next session.
-Fresh read-only inspection-1789829201941 confirms original four core words through
-memory.disasm replacements:false (U after relocation). Raw reads expose emulator
-words at G/U. Candidate player address pair forms 0x09471640; identity UNKNOWN.
-Simple code-base+0x5A838 interpretation remains SUPERSEDED; see prior parent review.
+Deterministic script -> read-only Luna (bounded 1-5 files, prefer1/max2) -> external
+DeepSeek (broad mapping/provenance/falsification, explicit required roles) -> Astra
+(live experiments, design, causal arbitration, evidence decisions).
+Project roles luna_reader/luna_triage: GPT-5.6 Luna Medium, read-only, approvals never.
+Project parent default GPT-6 Astra Medium; config reload requires reopening a task.
+Startup3 files, then at most3 additional substantial targeted reads before routing.
+No duplication; results-first; one tooling detour; PPSSPP cache read-only.
+No more orchestration refactor unless a concrete experiment proves necessity.
 
-Owner identified ordinary save slot5 and full-name Europe PSN ISO (not copy.iso).
-Direct ISO9660 read confirms LEVEL_01.PRX hash exactly matches reference:
-d10a81d076fb44987a45314a020cda2f7e8b39f860b957911ca9365464676571.
-This closes reference-versus-user-ISO identity, not whole vanilla/runtime proof.
-ISO/exe/config hashes and method: provenance-20260919T144757Z/record.json + script.py.
-Candidate Documents/PPSSPP/PSP/SYSTEM config has no UCES00420 per-game file;
-active binding UNKNOWN. EnablePlugins false vs LoadPlugins true, FrameRate30,
-InternalResolution10 require exact version/runtime interpretation.
-15 ordinary-save files copied and hash-verified before/after; local snapshot in
-a0-staging-20260919T144841Z/local/save-snapshot, manifest beside it. All five slots
-copied without assuming DATA4 mapping. Original session not navigated or changed;
-no emulator/config clone launched. On-disk save copy does not preserve unsaved RAM.
-All paths above relative to research/live-tests/pokitaru/player-clock-001/.
-Save audit save-audit-20260919T145713Z.json: all15 snapshot files still match
-manifest and originals; SFO directory strings agree with folder names. Titles
-contain nonstandard UTF-8 bytes retained as hex/UNKNOWN, not repaired.
-Cached api-reference sources were identified as v1.19.3, not active v1.20.4.
+## DeepSeek / quota failsafe
 
-## Hypotheses / unresolved gates
+Detached runner and no-parent-callback completion mechanism preserved. No new
+substantive research mission launched in this refactor; one bounded Luna schema
+lookup only. Explicit -Roles now required by launcher/panel; trio no longer default.
+Method001 startup failure preserved. Method002 finished 2026-09-19T15:06:01Z:
+WORKERS_FAILED/BLOCKED, 3 reports retained (24553/15764/25080 bytes), no valid compact
+handoffs: oversized fields (Explorer/Skeptic established; Mapper best_discriminating_test).
+Inspect its PARENT_HANDOFF first at research resume; diagnose role statuses,
+do not restart completed analyses. Failed handoff is not evidence of gameplay parity.
+Owner previously explicitly authorized launcher access to Codex home/DeepSeek config.
 
-No controlled gameplay result, no new TESTED claim. Full loaded code/routes,
-active config/plugins, isolated save lineage, replay support, player observables
-and independent cadence remain gates. Worker rate predictions stay conditional;
-full socle=D, B3=U+P. No hypothesis changed by filesystem provenance alone.
+## Preserved experimental state
 
-## NEXT ACTION
+Local copy: research/live-tests/pokitaru/player-clock-001/isolated-20260919T150446Z/.
+Latest launch-visible.json: PID29984, port60908; original PID3404/port60907 untouched.
+Owner authorized visible isolated window. Rediscover both PIDs/ports before use.
+Copy used PPSSPP v1.20.4 with independent portable memstick/config; no installed.txt,
+plugins/cheats off, original save snapshot copied, native resolution, hardware pads off.
+User slot5 is DATA4 by displayed save details: Ryllus, 4650 bolts, 08:40. Loaded copy,
+entered ship, selected Pokitaru. Arrival not yet verified; no A0 trial or patch.
+Isolated CPU deliberately paused via cpu.stepping for this refactor; pause evidence
+probe-1789848150041/record.json. Preserve this state; no unsaved-RAM parity claim.
+Selected core originals verified earlier; ISO LEVEL_01 matches reference SHA256
+ d10a81d076fb44987a45314a020cda2f7e8b39f860b957911ca9365464676571.
+Live player address/observables and full normalized code/routes remain unverified.
+Current research scripts/session artifacts remain uncommitted, separate from infra.
+Source cache api-reference/v1.20.4 now contains targeted upstream files; no rebuilding.
 
-At next session, one status check for player-clock-a0-method-002; read its
-PARENT_HANDOFF first, then targeted sections only. Review version-specific
-isolation/replay/normalization method. Build isolated config and working copy of
-preserved saves, select identified ISO/slot5, prove active paths/plugins, cold boot
-and verify normalized code. Validate clocks/player fields before three A0 trials,
-then B0/B1. Do not poll repeatedly or restart completed workers.
+## NEXT ACTION / exact files
 
-## Exact next-session files
-
-AGENTS.md -> CURRENT_STATE.md -> research/tasks/pokitaru-player-clock-001.md ->
-research/live-tests/pokitaru/player-clock-001/a0-preparation.md ->
-research/inbox/deepseek/missions/player-clock-a0-method-002/PARENT_HANDOFF.md
-(if complete). Mission task: research/tasks/player-clock-a0-method-001.md.
-Use research/EVIDENCE_INDEX.md for deeper evidence, not broad report rereads.
+Commit the completed infrastructure update with the exact requested message, then STOP.
+On owner research resume: AGENTS.md -> CURRENT_STATE.md ->
+research/tasks/pokitaru-player-clock-001.md ->
+research/inbox/deepseek/missions/player-clock-a0-method-002/PARENT_HANDOFF.md.
+Use research/EVIDENCE_INDEX.md; Luna for bounded versioned source/API lookups.
+Astra: rediscover isolated session, verify arrival/provenance, preserve known pause
+state, establish repeatable A0 and validated clocks/fields before ablations.

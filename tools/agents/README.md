@@ -1,7 +1,8 @@
 # External DeepSeek worker tools
 
 Parent policy: GPT-6 Astra, Medium. Workers: independent Explorer / Mapper /
-Skeptic through the existing external provider. No native OpenAI research agents.
+Skeptic through the existing external provider for broad research/falsification.
+Bounded read-only lookup/triage uses project Luna roles (prefer one, maximum two).
 Read docs/methodology/ORCHESTRATOR_POLICY.md for reading budgets and handoff rules.
 
 ## Requirements
@@ -15,7 +16,8 @@ approval_policy=never. Reports are English.
 ## Preferred workflow
 
 Persist CURRENT_STATE.md with mission ID, then use start-deepseek-mission.ps1.
-Default roles are explorer, mapper, skeptic. Use -Roles explorer for a cheap test.
+Explicit -Roles is required: select only the role(s) the question needs.
+The full trio requires a recorded multi-domain or consequential justification.
 See MISSION_FAILSAFE.md for complete commands. No repeated parent polling.
 
 invoke-deepseek-panel.ps1 is the runner's synchronous internal panel; it launches
