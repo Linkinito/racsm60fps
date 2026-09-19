@@ -18,6 +18,7 @@ promote historical claims. Paths are relative to research/. `R` below is
 | Giant Clank | R section7 **Giant Clank** and **Giant Clank identity** rows; sections8,13 |
 | Wrapper families | R section4 (493 sites /59 families); timing domains above; primary paths in reconciled-items.csv |
 | Support mission | [state](inbox/deepseek/missions/player-clock-001-support/mission.json), then PARENT_HANDOFF.md if present; legacy report sections only as needed |
+| Player-clock resume review | [bounded parent review](inbox/deepseek/missions/player-clock-001-support/parent-review.md); [live resume](live-tests/pokitaru/player-clock-001/RESUME.md); static relocation evidence: v2/pokitaru/player-address-evidence.json and verify-player-address.py |
 
 Historical `L/` prefix is defined in R's opening. Do not reopen original inventories
 merely to follow this index. Consult primary evidence only for specific verification.

@@ -1,0 +1,49 @@
+{
+  "source": "01-Travail-et-profil-PPSSPP/Overcompensated-Reprise-2026-09-14/development-v0.6.3-generalisation/prx-reference/LEVEL_01.PRX",
+  "source_sha256": "d10a81d076fb44987a45314a020cda2f7e8b39f860b957911ca9365464676571",
+  "script_sha256": "22ea249d603ab4209cba074b8cb23303199160f411a2ef4b5b91f2686d655aab",
+  "scope": "Static file observations only; no loader execution, live pointer, ISO provenance or gameplay validation.",
+  "load_segments": [
+    {
+      "index": 0,
+      "offset": "0x74",
+      "vaddr": "0x0",
+      "file_size": "0x2dd104",
+      "memory_size": "0x2dd104"
+    },
+    {
+      "index": 1,
+      "offset": "0x2dd178",
+      "vaddr": "0x2dd108",
+      "file_size": "0x1ac",
+      "memory_size": "0x18e728"
+    }
+  ],
+  "words": [
+    {
+      "rva": "0x30014",
+      "file_offset": "0x30088",
+      "word": "0x3c100006"
+    },
+    {
+      "rva": "0x30018",
+      "file_offset": "0x3008c",
+      "word": "0x2610a838"
+    }
+  ],
+  "relocations": [
+    {
+      "section_index": 2,
+      "file_offset": "0x2e8834",
+      "r_offset": "0x30014",
+      "r_info": "0x10005"
+    },
+    {
+      "section_index": 2,
+      "file_offset": "0x2e883c",
+      "r_offset": "0x30018",
+      "r_info": "0x10006"
+    }
+  ],
+  "conclusion": "The unrelocated operand 0x5A838 has relocation entries. A live player address cannot be justified by adding the code base alone; resolve loader semantics or capture the relocated pair and call argument."
+}

@@ -1,0 +1,262 @@
+{
+  "utc": "2026-09-19T14:36:58.094Z",
+  "gitHead": "596800a4767b478f3b2c7237c80d35c458063981",
+  "scriptSha256": "27edcffeecb1cb3eaed743252be29f7d15c5a8c44e8dda09765ff4eae2307b3a",
+  "dirtyFiles": [
+    {
+      "path": "research/live-tests/pokitaru/player-clock-001/inspect-code.mjs",
+      "sha256": "27edcffeecb1cb3eaed743252be29f7d15c5a8c44e8dda09765ff4eae2307b3a"
+    },
+    {
+      "path": "research/v2/pokitaru/player-address-evidence.json",
+      "sha256": "533359b28a67c493ed7b28b79103871f05898e0b26e0e6687602b2344e11e173"
+    },
+    {
+      "path": "research/v2/pokitaru/verify-player-address.py",
+      "sha256": "f79bbd55777b938553dda26992a2d0cd6c1bdd535433b554524a093d90748e4b"
+    },
+    {
+      "path": "CURRENT_STATE.md",
+      "sha256": "5576036d543c07c1bd0925e70694c3ee11fafe6a8a230bcc284c20c395bacb98"
+    },
+    {
+      "path": "research/v2/pokitaru/player-clock-socle-map.md",
+      "sha256": "29c50c751737cc52f67a2c2b583395fac53b931e32e92d8dc80be5ad9dbc0a61"
+    }
+  ],
+  "scope": "Read-only code inspection, not A0 validation or cadence measurement",
+  "userReportedProvenance": "Normal boot from a save, currently Pokitaru, vanilla (2026-09-19 owner reply); not independently verified.",
+  "requests": [
+    {
+      "event": "version",
+      "fields": {
+        "name": "PLAYER-CLOCK-001 read-only code inspection",
+        "version": "0.1"
+      },
+      "startMs": 277.7759,
+      "endMs": 279.3891,
+      "response": {
+        "event": "version",
+        "ticket": "pc-code-1",
+        "name": "PPSSPP",
+        "version": "v1.20.4"
+      }
+    },
+    {
+      "event": "game.status",
+      "fields": {},
+      "startMs": 279.396,
+      "endMs": 279.6454,
+      "response": {
+        "event": "game.status",
+        "ticket": "pc-code-2",
+        "game": {
+          "id": "UCES00420",
+          "version": "1.00",
+          "title": "Ratchet and Clank: Size Matters"
+        },
+        "paused": false
+      }
+    },
+    {
+      "event": "cpu.status",
+      "fields": {},
+      "startMs": 279.6496,
+      "endMs": 279.8598,
+      "response": {
+        "event": "cpu.status",
+        "ticket": "pc-code-3",
+        "stepping": false,
+        "paused": false,
+        "pc": 142628724,
+        "ticks": 285947699809
+      }
+    },
+    {
+      "event": "hle.module.list",
+      "fields": {},
+      "startMs": 279.8639,
+      "endMs": 280.0678,
+      "response": {
+        "event": "hle.module.list",
+        "ticket": "pc-code-4",
+        "modules": [
+          {
+            "name": "mcp",
+            "address": 142622720,
+            "size": 1388800,
+            "isActive": true
+          },
+          {
+            "name": "rcp1",
+            "address": 152280320,
+            "size": 4634880,
+            "isActive": true
+          }
+        ]
+      }
+    },
+    {
+      "event": "memory.read_u32",
+      "fields": {
+        "address": 152366816,
+        "replacements": false
+      },
+      "startMs": 280.1004,
+      "endMs": 285.1928,
+      "response": {
+        "event": "memory.read_u32",
+        "ticket": "pc-code-5",
+        "value": 1747579214
+      }
+    },
+    {
+      "event": "memory.read_u32",
+      "fields": {
+        "address": 152476156,
+        "replacements": false
+      },
+      "startMs": 285.2181,
+      "endMs": 286.3175,
+      "response": {
+        "event": "memory.read_u32",
+        "ticket": "pc-code-6",
+        "value": 707002370
+      }
+    },
+    {
+      "event": "memory.read_u32",
+      "fields": {
+        "address": 152475836,
+        "replacements": false
+      },
+      "startMs": 286.332,
+      "endMs": 286.5898,
+      "response": {
+        "event": "memory.read_u32",
+        "ticket": "pc-code-7",
+        "value": 1174430982
+      }
+    },
+    {
+      "event": "memory.read_u32",
+      "fields": {
+        "address": 152896336,
+        "replacements": false
+      },
+      "startMs": 286.6004,
+      "endMs": 291.1064,
+      "response": {
+        "event": "memory.read_u32",
+        "ticket": "pc-code-8",
+        "value": 1748758006
+      }
+    },
+    {
+      "event": "memory.read_u32",
+      "fields": {
+        "address": 152476948,
+        "replacements": false
+      },
+      "startMs": 291.1376,
+      "endMs": 291.5606,
+      "response": {
+        "event": "memory.read_u32",
+        "ticket": "pc-code-9",
+        "value": 1007683911
+      }
+    },
+    {
+      "event": "memory.read_u32",
+      "fields": {
+        "address": 152476952,
+        "replacements": false
+      },
+      "startMs": 291.5999,
+      "endMs": 295.0828,
+      "response": {
+        "event": "memory.read_u32",
+        "ticket": "pc-code-10",
+        "value": 638588480
+      }
+    },
+    {
+      "event": "cpu.status",
+      "fields": {},
+      "startMs": 295.1076,
+      "endMs": 295.3532,
+      "response": {
+        "event": "cpu.status",
+        "ticket": "pc-code-11",
+        "stepping": false,
+        "paused": false,
+        "pc": 153584680,
+        "ticks": 285952586274
+      }
+    },
+    {
+      "event": "hle.module.list",
+      "fields": {},
+      "startMs": 295.3567,
+      "endMs": 295.5476,
+      "response": {
+        "event": "hle.module.list",
+        "ticket": "pc-code-12",
+        "modules": [
+          {
+            "name": "mcp",
+            "address": 142622720,
+            "size": 1388800,
+            "isActive": true
+          },
+          {
+            "name": "rcp1",
+            "address": 152280320,
+            "size": 4634880,
+            "isActive": true
+          }
+        ]
+      }
+    }
+  ],
+  "candidateModule": {
+    "name": "rcp1",
+    "address": 152280320,
+    "size": 4634880,
+    "isActive": true
+  },
+  "words": [
+    {
+      "rva": "0x151e0",
+      "address": "0x914eee0",
+      "word": "0x6829f14e"
+    },
+    {
+      "rva": "0x2fcfc",
+      "address": "0x91699fc",
+      "word": "0x2a240002"
+    },
+    {
+      "rva": "0x2fbbc",
+      "address": "0x91698bc",
+      "word": "0x46006506"
+    },
+    {
+      "rva": "0x96650",
+      "address": "0x91d0350",
+      "word": "0x683bedf6"
+    },
+    {
+      "rva": "0x30014",
+      "address": "0x9169d14",
+      "word": "0x3c100947"
+    },
+    {
+      "rva": "0x30018",
+      "address": "0x9169d18",
+      "word": "0x26101640"
+    }
+  ],
+  "restoration": "No input, state load, pause/resume, breakpoint or memory-write requests issued.",
+  "limits": "Unsynchronized reads may briefly suspend CPU internally. replacements:false was requested; API semantics not independently checked. Selected words do not establish full module/ISO identity, vanilla routes, active config/plugins, or save lineage."
+}

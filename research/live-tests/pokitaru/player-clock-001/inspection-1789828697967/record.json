@@ -1,0 +1,433 @@
+{
+  "utc": "2026-09-19T14:38:17.852Z",
+  "gitHead": "596800a4767b478f3b2c7237c80d35c458063981",
+  "scriptSha256": "90177e7c89d660833f37e25b5a2edfc3adc7b34c35a184782beb354bf045f33c",
+  "dirtyFiles": [
+    {
+      "path": "research/live-tests/pokitaru/player-clock-001/inspect-code.mjs",
+      "sha256": "90177e7c89d660833f37e25b5a2edfc3adc7b34c35a184782beb354bf045f33c"
+    },
+    {
+      "path": "research/live-tests/pokitaru/player-clock-001/inspection-1789828618190/record.json",
+      "sha256": "ff63278b04215b0abf1f16701ffa97671b7f8b7196438d2e0e22a47040121893"
+    },
+    {
+      "path": "research/v2/pokitaru/player-address-evidence.json",
+      "sha256": "533359b28a67c493ed7b28b79103871f05898e0b26e0e6687602b2344e11e173"
+    },
+    {
+      "path": "research/v2/pokitaru/verify-player-address.py",
+      "sha256": "f79bbd55777b938553dda26992a2d0cd6c1bdd535433b554524a093d90748e4b"
+    },
+    {
+      "path": "CURRENT_STATE.md",
+      "sha256": "5576036d543c07c1bd0925e70694c3ee11fafe6a8a230bcc284c20c395bacb98"
+    },
+    {
+      "path": "research/v2/pokitaru/player-clock-socle-map.md",
+      "sha256": "29c50c751737cc52f67a2c2b583395fac53b931e32e92d8dc80be5ad9dbc0a61"
+    }
+  ],
+  "scope": "Read-only code inspection, not A0 validation or cadence measurement",
+  "userReportedProvenance": "Normal boot from a save, currently Pokitaru, vanilla (2026-09-19 owner reply); not independently verified.",
+  "requests": [
+    {
+      "event": "version",
+      "fields": {
+        "name": "PLAYER-CLOCK-001 read-only code inspection",
+        "version": "0.1"
+      },
+      "startMs": 270.3996,
+      "endMs": 272.1648,
+      "response": {
+        "event": "version",
+        "ticket": "pc-code-1",
+        "name": "PPSSPP",
+        "version": "v1.20.4"
+      }
+    },
+    {
+      "event": "game.status",
+      "fields": {},
+      "startMs": 272.1715,
+      "endMs": 272.5481,
+      "response": {
+        "event": "game.status",
+        "ticket": "pc-code-2",
+        "game": {
+          "id": "UCES00420",
+          "version": "1.00",
+          "title": "Ratchet and Clank: Size Matters"
+        },
+        "paused": false
+      }
+    },
+    {
+      "event": "cpu.status",
+      "fields": {},
+      "startMs": 272.5527,
+      "endMs": 272.8955,
+      "response": {
+        "event": "cpu.status",
+        "ticket": "pc-code-3",
+        "stepping": false,
+        "paused": false,
+        "pc": 142628724,
+        "ticks": 303658793209
+      }
+    },
+    {
+      "event": "hle.module.list",
+      "fields": {},
+      "startMs": 272.9007,
+      "endMs": 273.2432,
+      "response": {
+        "event": "hle.module.list",
+        "ticket": "pc-code-4",
+        "modules": [
+          {
+            "name": "mcp",
+            "address": 142622720,
+            "size": 1388800,
+            "isActive": true
+          },
+          {
+            "name": "rcp1",
+            "address": 152280320,
+            "size": 4634880,
+            "isActive": true
+          }
+        ]
+      }
+    },
+    {
+      "event": "memory.read_u32",
+      "fields": {
+        "address": 152366816,
+        "replacements": false
+      },
+      "startMs": 273.3428,
+      "endMs": 299.2077,
+      "response": {
+        "event": "memory.read_u32",
+        "ticket": "pc-code-5",
+        "value": 1747579214
+      }
+    },
+    {
+      "event": "memory.disasm",
+      "fields": {
+        "address": 152366816,
+        "count": 1,
+        "replacements": false
+      },
+      "startMs": 299.2316,
+      "endMs": 299.7416,
+      "response": {
+        "event": "memory.disasm",
+        "ticket": "pc-code-6",
+        "range": {
+          "start": 152366816,
+          "end": 152366820
+        },
+        "lines": [
+          {
+            "type": "opcode",
+            "address": 152366816,
+            "addressSize": 4,
+            "encoding": 1006910728,
+            "macroEncoding": null,
+            "backgroundColor": "#ffe0ff",
+            "name": "lui",
+            "params": "a0,0x3D08",
+            "symbol": null,
+            "function": "z_un_08f2e27c",
+            "dataSymbol": null,
+            "breakpoint": null,
+            "isCurrentPC": false,
+            "branch": null,
+            "relevantData": null,
+            "conditionMet": null,
+            "dataAccess": null
+          }
+        ],
+        "branchGuides": []
+      }
+    },
+    {
+      "event": "memory.read_u32",
+      "fields": {
+        "address": 152476156,
+        "replacements": false
+      },
+      "startMs": 299.8122,
+      "endMs": 300.2085,
+      "response": {
+        "event": "memory.read_u32",
+        "ticket": "pc-code-7",
+        "value": 707002370
+      }
+    },
+    {
+      "event": "memory.disasm",
+      "fields": {
+        "address": 152476156,
+        "count": 1,
+        "replacements": false
+      },
+      "startMs": 300.2136,
+      "endMs": 300.6088,
+      "response": {
+        "event": "memory.disasm",
+        "ticket": "pc-code-8",
+        "range": {
+          "start": 152476156,
+          "end": 152476160
+        },
+        "lines": [
+          {
+            "type": "opcode",
+            "address": 152476156,
+            "addressSize": 4,
+            "encoding": 707002370,
+            "macroEncoding": null,
+            "backgroundColor": "#e0ffe0",
+            "name": "slti",
+            "params": "a0,s1,0x2",
+            "symbol": null,
+            "function": "z_un_08f49494",
+            "dataSymbol": null,
+            "breakpoint": null,
+            "isCurrentPC": false,
+            "branch": null,
+            "relevantData": null,
+            "conditionMet": null,
+            "dataAccess": null
+          }
+        ],
+        "branchGuides": [
+          {
+            "top": 152476064,
+            "bottom": 152476232,
+            "direction": "down",
+            "lane": 0
+          },
+          {
+            "top": 152476080,
+            "bottom": 152476160,
+            "direction": "up",
+            "lane": 1
+          }
+        ]
+      }
+    },
+    {
+      "event": "memory.read_u32",
+      "fields": {
+        "address": 152475836,
+        "replacements": false
+      },
+      "startMs": 300.6199,
+      "endMs": 300.8887,
+      "response": {
+        "event": "memory.read_u32",
+        "ticket": "pc-code-9",
+        "value": 1174430982
+      }
+    },
+    {
+      "event": "memory.disasm",
+      "fields": {
+        "address": 152475836,
+        "count": 1,
+        "replacements": false
+      },
+      "startMs": 300.9124,
+      "endMs": 301.1606,
+      "response": {
+        "event": "memory.disasm",
+        "ticket": "pc-code-10",
+        "range": {
+          "start": 152475836,
+          "end": 152475840
+        },
+        "lines": [
+          {
+            "type": "opcode",
+            "address": 152475836,
+            "addressSize": 4,
+            "encoding": 1174430982,
+            "macroEncoding": null,
+            "backgroundColor": "#ffe8e8",
+            "name": "mov.s",
+            "params": "f20,f12",
+            "symbol": null,
+            "function": "z_un_08f49340",
+            "dataSymbol": null,
+            "breakpoint": null,
+            "isCurrentPC": false,
+            "branch": null,
+            "relevantData": null,
+            "conditionMet": null,
+            "dataAccess": null
+          }
+        ],
+        "branchGuides": []
+      }
+    },
+    {
+      "event": "memory.read_u32",
+      "fields": {
+        "address": 152896336,
+        "replacements": false
+      },
+      "startMs": 301.1711,
+      "endMs": 306.3226,
+      "response": {
+        "event": "memory.read_u32",
+        "ticket": "pc-code-11",
+        "value": 1748758006
+      }
+    },
+    {
+      "event": "memory.disasm",
+      "fields": {
+        "address": 152896336,
+        "count": 1,
+        "replacements": false
+      },
+      "startMs": 306.3407,
+      "endMs": 306.6813,
+      "response": {
+        "event": "memory.disasm",
+        "ticket": "pc-code-12",
+        "range": {
+          "start": 152896336,
+          "end": 152896340
+        },
+        "lines": [
+          {
+            "type": "opcode",
+            "address": 152896336,
+            "addressSize": 4,
+            "encoding": 239854665,
+            "macroEncoding": null,
+            "backgroundColor": "#ffffff",
+            "name": "jal",
+            "params": "zz_sceDisplayWaitVblankStart",
+            "symbol": null,
+            "function": null,
+            "dataSymbol": null,
+            "breakpoint": null,
+            "isCurrentPC": false,
+            "branch": {
+              "targetAddress": 154112292,
+              "register": null,
+              "isLinked": true,
+              "isLikely": false,
+              "symbol": "zz_sceDisplayWaitVblankStart"
+            },
+            "relevantData": null,
+            "conditionMet": null,
+            "dataAccess": null
+          }
+        ],
+        "branchGuides": []
+      }
+    },
+    {
+      "event": "memory.read_u32",
+      "fields": {
+        "address": 152476948,
+        "replacements": false
+      },
+      "startMs": 306.6973,
+      "endMs": 306.8848,
+      "response": {
+        "event": "memory.read_u32",
+        "ticket": "pc-code-13",
+        "value": 1007683911
+      }
+    },
+    {
+      "event": "memory.disasm",
+      "fields": {
+        "address": 152476948,
+        "count": 1,
+        "replacements": false
+      },
+      "startMs": 306.89,
+      "endMs": 307.1213,
+      "response": {
+        "event": "memory.disasm",
+        "ticket": "pc-code-14",
+        "range": {
+          "start": 152476948,
+          "end": 152476956
+        },
+        "lines": [
+          {
+            "type": "macro",
+            "address": 152476948,
+            "addressSize": 8,
+            "encoding": 1007683911,
+            "macroEncoding": [
+              1007683911,
+              638588480
+            ],
+            "backgroundColor": "#ffffe0",
+            "name": "li",
+            "params": "s0,0x09471640",
+            "symbol": null,
+            "function": "z_un_08f497c0",
+            "dataSymbol": null,
+            "breakpoint": null,
+            "isCurrentPC": false,
+            "branch": null,
+            "relevantData": {
+              "address": 155653696,
+              "uintValue": 1065242506,
+              "stringValue": null
+            },
+            "conditionMet": null,
+            "dataAccess": null
+          }
+        ],
+        "branchGuides": []
+      }
+    }
+  ],
+  "candidateModule": {
+    "name": "rcp1",
+    "address": 152280320,
+    "size": 4634880,
+    "isActive": true
+  },
+  "words": [
+    {
+      "rva": "0x151e0",
+      "address": "0x914eee0",
+      "memoryWord": "0x6829f14e",
+      "decodedWord": "0x3c043d08"
+    },
+    {
+      "rva": "0x2fcfc",
+      "address": "0x91699fc",
+      "memoryWord": "0x2a240002",
+      "decodedWord": "0x2a240002"
+    },
+    {
+      "rva": "0x2fbbc",
+      "address": "0x91698bc",
+      "memoryWord": "0x46006506",
+      "decodedWord": "0x46006506"
+    },
+    {
+      "rva": "0x96650",
+      "address": "0x91d0350",
+      "memoryWord": "0x683bedf6",
+      "decodedWord": "0x0e4be449"
+    }
+  ],
+  "error": "Error: Missing single decoded instruction"
+}

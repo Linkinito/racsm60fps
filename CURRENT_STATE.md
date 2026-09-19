@@ -1,47 +1,53 @@
 # Current parent checkpoint
 
 - Project: Overcompensated V2 / UCES00420; Priority0 30->60 behavioral parity.
-- Branch: v2-research. HEAD at checkpoint: 16176887be256850225eb4cd46b81d3768b77083 (infrastructure commit pending).
-- Phase: infrastructure completed; PLAYER-CLOCK-001 remains paused by owner.
-- Active task: research/tasks/orchestration-quota-aware.md (complete).
-- Current infrastructure mission: orchestration-self-test-001, WORKERS_COMPLETE /
-  READY_FOR_PARENT; host verification complete, one external Explorer response.
-- Research mission: player-clock-001-support, WORKERS_COMPLETE / READY_FOR_SOL;
-  preserved, not restarted; compact legacy pointer created, research review pending.
+- Branch: v2-research. Verified resume HEAD: 596800a4767b478f3b2c7237c80d35c458063981.
+- PLAYER-CLOCK-001 explicitly resumed by owner on 2026-09-19.
+- Active task: research/tasks/pokitaru-player-clock-001.md.
+- Support mission completed; handoff read and targeted parent review recorded.
+  No workers restarted. Infrastructure task remains complete.
 
-## Established findings affecting next action
+## Durable findings
 
-Thin startup, evidence index, worker-authored compact handoffs, deterministic status
-and detached completion are implemented. One real test completed after launcher
-exit; checkpoint/hash, CODEX_HOME and persistent-key hydration checks passed.
-Details: tools/agents/tests/SELF_TEST_RESULTS.md. No induced quota exhaustion or
-OS-restart survival is claimed. No further infrastructure API test is needed.
+See support mission parent-review.md for arbitration and precise evidence.
+Static verifier confirms player address operand has PSP relocation records.
+Code-base+0x5A838 interpretation is SUPERSEDED in the four-change map.
+Live read-only inspection: PPSSPP v1.20.4 / UCES00420, rcp1 at 0x09139D00;
+relocated pair forms 0x09471640; Ratchet identity remains UNKNOWN.
+Four decoded core words match reference originals (U JAL after relocation).
+Raw memory.read_u32 exposed emulator words at G/U; memory.disasm with
+replacements:false returned originals. Selected sites do not prove full vanilla.
+Latest evidence: research/live-tests/pokitaru/player-clock-001/
+inspection-1789828734941/record.json and script.mjs. Earlier attempts retained.
+No input, pause/resume, breakpoint, state load or memory writes requested.
 
-V1 review is complete. No controlled PLAYER-CLOCK-001 result exists. Prior live
-preflight was read-only and appeared to be Challax, not verified Pokitaru A0.
-Four core changes are documented; local physics instruction doubles its scalar
-(static evidence only). Use research/EVIDENCE_INDEX.md for precise evidence.
+Owner reports normal boot from save, Pokitaru, vanilla. This updates prior scene
+uncertainty as testimony, not independent A0 verification. Process observed at
+C:/Program Files/PPSSPP/PPSSPPWindows64.exe, PID3404, port60907; rediscover on
+resume. Process command-line query denied.
 
-## Hypotheses / blockers
+## Hypotheses / unresolved gates
 
-Player-clock alternatives remain untested; infrastructure changes no hypothesis.
-Clean reproducible Pokitaru scene and input/time provenance remain prerequisites.
-No infrastructure setup blocker. Parent Astra/Medium is session policy, not a
-model override performed by scripts. Research waits for owner's resume request.
+No controlled gameplay result or new TESTED hypothesis. Mapper full-socle B3
+label conflicts with task: use D; B3 remains U+P. Rate predictions are conditional.
+Outside-loop counter divergence remains a prediction, not gameplay falsification.
+Active ISO/hash, independent LEVEL_01 provenance, full routes/plugin/config,
+save identity, player field semantics, replay and independent clocks remain to
+verify. Active emulator is 1.20.4, not worker-inspected bundled 1.19.3.
+WF-002/animation worker claims remain unreviewed until needed.
 
 ## NEXT ACTION
 
-End this infrastructure task. On explicit PLAYER-CLOCK-001 resumption, read
-research/tasks/pokitaru-player-clock-001.md, then the support mission's
-PARENT_HANDOFF.md. It is a legacy pointer, so select only task-relevant full-report
-sections to arbitrate outstanding hypotheses. Do not rerun the completed mission.
-Establish clean Pokitaru A0 and provenance before any gameplay measurement.
+Identify active ISO/config read-only; verify ISO-extracted LEVEL_01 and active
+routes/plugins. Preserve user session and establish isolated reproducible A0 from
+normal-save/cold-boot lineage. Check native replay on 1.20.4, validate player
+observables and independent cadence; then three A0 trials, short B0 and B1.
+Do not rerun completed workers or infrastructure tests.
 
-## Required files for next parent
+## Exact next-session files
 
-Default: AGENTS.md -> CURRENT_STATE.md -> active task. For authorized research
-resumption: research/tasks/pokitaru-player-clock-001.md;
-research/inbox/deepseek/missions/player-clock-001-support/PARENT_HANDOFF.md;
-research/EVIDENCE_INDEX.md for targeted evidence. Operational detail only if needed:
-docs/methodology/ORCHESTRATOR_POLICY.md. Test evidence remains in
-research/inbox/deepseek/missions/orchestration-self-test-001/.
+AGENTS.md -> CURRENT_STATE.md -> research/tasks/pokitaru-player-clock-001.md ->
+research/inbox/deepseek/missions/player-clock-001-support/parent-review.md ->
+research/live-tests/pokitaru/player-clock-001/RESUME.md.
+Use research/EVIDENCE_INDEX.md for deeper evidence. Static address evidence and
+map live in research/v2/pokitaru/. Do not routinely reread full worker reports.
