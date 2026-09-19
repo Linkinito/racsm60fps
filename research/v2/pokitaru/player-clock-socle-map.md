@@ -1,0 +1,47 @@
+# PLAYER-CLOCK-001 — Pokitaru core socle map
+
+Date: 2026-09-19. Status: static reconstruction; gameplay effects not validated. Source `L/` = `01-Travail-et-profil-PPSSPP/Overcompensated-Reprise-2026-09-14/`.
+
+Primary sources: `L/archives/Pokitaru_60FPS_V1_two-builds.zip::pokitaru_v1/README_Pokitaru_V1.md`, the two INIs, and `L/development-v0.6.3-generalisation/prx-reference/LEVEL_01.PRX`. SHA256 `d10a81d076fb44987a45314a020cda2f7e8b39f860b957911ca9365464676571`, size 3,444,725. ELF PT_LOAD mapping is parsed, not assumed; these code sites happen to map to file offset RVA+0x74. Reference base 0x09139D00 is historical, not a reusable live base. Runtime JAL/high-low pairs undergo relocation. Scripts: `extract-socle.py` here and `../../inbox/deepseek/missions/v1-parity-inventory/verify-review.py`. Generated extracts: `socle-dataflow.asm`, `socle-callers.json`, and mission `parent-socle-context.asm`.
+
+## Four core changes
+
+| Component | Module / RVA / historical address / file offset | Original → candidate word | Correct decode | Evidence |
+|---|---|---|---|---|
+| VBlank unlock | LEVEL_01 / 0x96650 / 0x091D0350 / 0x966C4 | 0x0C06FD09 → 0 | file JAL target RVA 0x1BF424 → NOP | OBSERVED original word and branch context; gameplay cadence effect requires measurement. |
+| General delta | LEVEL_01 / 0x151E0 / 0x0914EEE0 / 0x15254 | 0x3C043D08 → 0x3C043C88 | lui a0,0x3D08 → lui a0,0x3C88; following ori a0,a0,0x8889 completes 0x3D088889 (~1/30) → 0x3C888889 (~1/60) | OBSERVED producer/dataflow; universal clock interpretation rejected. |
+| Player substep limit | LEVEL_01 / 0x2FCFC / 0x091699FC / 0x2FD70 | 0x2A240002 → 0x2A240001 | slti a0,s1,2 → slti a0,s1,1 | OBSERVED conditional loop limit; movement/animation consequences INFERRED. |
+| Local scalar compensation | LEVEL_01 / 0x2FBBC / 0x091698BC / 0x2FC30 | 0x46006506 → 0x460C6500 | mov.s f20,f12 → add.s f20,f12,f12 | OBSERVED local doubling, not halving and not accumulation with old f20; physics role INFERRED. |
+
+All four original file words were rechecked against the binary. No current RAM address or live patch is authorized solely by this table. Camera, Titanium Bolt, wrappers, level objects, weapons, breakables and particles are excluded from this four-component experiment.
+
+## Structural context and dataflow
+
+**VBlank.** Two calls to the same import stub occur at 0x9662C and 0x96650. The latter is conditional: a call at 0x96638 returns a value compared at 0x96648 to a stored value from global RVA 0x2B6E58 plus one. An outer condition tests byte RVA 0x2B6E50. Removing the second call does not imply every path runs at 60 FPS. Resolve import NIDs and measure outer-loop entries/VBlank/wall time separately. Registers a0/v0/s0/s4 and the preserved delay slot matter. Complete containing function boundary is not established by this extraction window.
+
+**Delta producer.** Function RVA 0x1517C loads the float into f20 at 0x151EC (JAL delay slot). Explicit f12=f20 arguments occur at 0x1521C, 0x15234, 0x15264 and 0x1526C for distinct callees. Thus multiple consumers are statically established, but animation identity is not. There is no demonstrated single global memory delta variable in this window.
+
+**Player caller.** The call at 0x15260 passes f20 to function 0x2FFF0. That function preserves f12 into its own f20 at 0x30024, forms state address RVA 0x5A838 in s0, and calls 0x2FB8C at 0x300F4 with f12=f20 at 0x300F8. Indirect callbacks/alternate paths must be accounted for; this is one statically visible chain. The binary uses a fixed module-relative structure here, not a pointer loaded from RVA 0x5A838.
+
+**Local scalar and loop.** Function 0x2FB8C receives state in a0, stores it in s0 and in global RVA 0x2B00C0, and stores/doubles incoming f12 into f20 at the patch site. It can exit early through state+0xD90 callback or absent state+0x594/+0x5AC paths. On the normal path, 0x360A4 is called **before** the loop with f12=f20. The loop is gated by state+0x95C bit 0x8000. Its normal body calls 0x353A4, 0x32004, 0x3BFF8, 0x3C88C, 0x32888, 0x39B74 and 0x1EBC4; the last two explicitly receive f20. s1 starts at zero, increments at 0x2FCF8, then compares against 2 (candidate 1). The alternate branch at 0x2FD48 calls 0x353A4 without the same loop. Global byte RVA 0x2B0208 is set from whether s1<1 and reset afterward; probable first-substep flag, **INFERRED**.
+
+**Concrete scalar consumers outside the loop.** Function 0x360A4 stores f20 into state+0x56C, adds it to several fields (+0x570/+0x574/+0x584/+0x588/+0x58C), and stores f20*30 into +0x578. It also uses state+0xF8 to choose +0x57C versus +0x580. These are useful timing/normalized-step candidates. They are **not yet named animation progress or grounded state**. Since this function lies outside the repeated body, the four-component socle need not conserve every counter even if locomotion matches.
+
+**Concrete position-like consumer inside the loop.** A branch in 0x39B74 adds state+0xA20/+0xA24/+0xA28 to state+0x30/+0x34/+0x38 and then replaces the added vector. Tentative labels: +0x30 vector position, +0xA20 pending displacement; units/axes/lifecycle need runtime checks. Do not label the latter velocity per second until measured. State+0xA20 vector is also copied to +0xF6C before the loop.
+
+## Observable candidates and confidence
+
+| Candidate | How to validate | Current status |
+|---|---|---|
+| player structure = loaded LEVEL_01 base+0x5A838 | entry a0/s0 capture in 0x2FB8C and correlation with controlled movement | INFERRED semantic identity; static address formation OBSERVED |
+| position vector +0x30/+0x34/+0x38 | one-axis movement, standing jump, stable idle; correlate rendered motion | INFERRED; world axes UNKNOWN |
+| displacement +0xA20/+0xA24/+0xA28 | sample before/after loop and actual position delta | INFERRED; not yet velocity |
+| state +0xF8 and flags +0x95C | correlate repeated idle/run/jump states and branch count | UNKNOWN semantics; accesses OBSERVED |
+| timing fields +0x56C..+0x58C | log incoming f12 and writes across arms, reset conditions | INFERRED timers/step, animation identity UNKNOWN |
+| animation ID/phase/playback rate | follow actual animation object/callback, require cyclic phase/reset correlated to visible cycle | UNKNOWN; do not substitute the timers above |
+| substep count | per-outer-invocation hits at 0x2FCB0 and branch flag | OBSERVED static limit; runtime count UNKNOWN |
+| VBlank and outer simulation count | emulator counter and separate 0x1517C/0x2FB8C counters | independent sources required |
+
+## Questions left open
+
+Animation could be updated inside substeps, outside them, both (e.g. animation pose and events separately), or through another delta consumer. No inspected instruction establishes its final ownership. WF-002's historical self-normalization cannot yet be joined to this loop; match the actual Pokitaru family callsite and trace caller context. A simple rate×iterations×delta model is falsifiable but insufficient for branch-dependent counters, collision and state transitions. The combined patch might accidentally restore one observable while altering another.

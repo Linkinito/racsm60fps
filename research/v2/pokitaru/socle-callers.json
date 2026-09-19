@@ -1,0 +1,133 @@
+{
+  "source": "01-Travail-et-profil-PPSSPP\\Overcompensated-Reprise-2026-09-14\\development-v0.6.3-generalisation\\prx-reference\\LEVEL_01.PRX",
+  "sha256": "d10a81d076fb44987a45314a020cda2f7e8b39f860b957911ca9365464676571",
+  "scan_scope": "aligned direct JAL candidates only; no indirect calls; data false positives possible",
+  "calls": [
+    {
+      "rva": "0x15260",
+      "target": "0x2fff0",
+      "context": [
+        "0001524C nop ",
+        "00015250 jal 0x6bab8",
+        "00015254 nop ",
+        "00015258 jal 0x93d10",
+        "0001525C nop ",
+        "00015260 jal 0x2fff0",
+        "00015264 mov.s $f12, $f20",
+        "00015268 jal 0x6b618"
+      ]
+    },
+    {
+      "rva": "0x15aa8",
+      "target": "0x1517c",
+      "context": [
+        "00015A94 nop ",
+        "00015A98 b 0x15ba8",
+        "00015A9C nop ",
+        "00015AA0 b 0x15ba8",
+        "00015AA4 nop ",
+        "00015AA8 jal 0x1517c",
+        "00015AAC nop ",
+        "00015AB0 jal 0x156dc"
+      ]
+    },
+    {
+      "rva": "0x15b18",
+      "target": "0x1517c",
+      "context": [
+        "00015B04 sw $a1, 0x6f00($a0)",
+        "00015B08 jal 0xaa330",
+        "00015B0C nop ",
+        "00015B10 beqz $v0, 0x15b20",
+        "00015B14 nop ",
+        "00015B18 jal 0x1517c",
+        "00015B1C nop ",
+        "00015B20 jal 0xa9f30"
+      ]
+    },
+    {
+      "rva": "0x1e4e8",
+      "target": "0x1ebc4",
+      "context": [
+        "0001E4D4 lw $a0, -0xd80($a2)",
+        "0001E4D8 lw $a2, 0x9a4($a1)",
+        "0001E4DC lui $a3, 5",
+        "0001E4E0 addu $a0, $a0, $a3",
+        "0001E4E4 sw $a2, 0x66e8($a0)",
+        "0001E4E8 jal 0x1ebc4",
+        "0001E4EC move $a0, $a1",
+        "0001E4F0 lw $ra, 0x10($sp)"
+      ]
+    },
+    {
+      "rva": "0x1e610",
+      "target": "0x1ebc4",
+      "context": [
+        "0001E5FC beqz $v0, 0x1e620",
+        "0001E600 nop ",
+        "0001E604 ori $a0, $zero, 2",
+        "0001E608 mtc1 $zero, $f12",
+        "0001E60C sw $a0, 0x9bc($s0)",
+        "0001E610 jal 0x1ebc4",
+        "0001E614 move $a0, $s0",
+        "0001E618 b 0x1e690"
+      ]
+    },
+    {
+      "rva": "0x2fc60",
+      "target": "0x360a4",
+      "context": [
+        "0002FC4C b 0x2fc5c",
+        "0002FC50 nop ",
+        "0002FC54 b 0x2ffc0",
+        "0002FC58 nop ",
+        "0002FC5C move $a0, $s0",
+        "0002FC60 jal 0x360a4",
+        "0002FC64 mov.s $f12, $f20",
+        "0002FC68 lwc1 $f12, 0xa20($s0)"
+      ]
+    },
+    {
+      "rva": "0x2fce4",
+      "target": "0x39b74",
+      "context": [
+        "0002FCD0 jal 0x3c88c",
+        "0002FCD4 move $a0, $s0",
+        "0002FCD8 jal 0x32888",
+        "0002FCDC move $a0, $s0",
+        "0002FCE0 move $a0, $s0",
+        "0002FCE4 jal 0x39b74",
+        "0002FCE8 mov.s $f12, $f20",
+        "0002FCEC move $a0, $s0"
+      ]
+    },
+    {
+      "rva": "0x2fcf0",
+      "target": "0x1ebc4",
+      "context": [
+        "0002FCDC move $a0, $s0",
+        "0002FCE0 move $a0, $s0",
+        "0002FCE4 jal 0x39b74",
+        "0002FCE8 mov.s $f12, $f20",
+        "0002FCEC move $a0, $s0",
+        "0002FCF0 jal 0x1ebc4",
+        "0002FCF4 mov.s $f12, $f20",
+        "0002FCF8 addiu $s1, $s1, 1"
+      ]
+    },
+    {
+      "rva": "0x300f4",
+      "target": "0x2fb8c",
+      "context": [
+        "000300E0 jal 0x2f304",
+        "000300E4 move $a0, $s5",
+        "000300E8 swc1 $f0, 0xe0($s0)",
+        "000300EC sw $s2, 0xe4($s0)",
+        "000300F0 move $a0, $s0",
+        "000300F4 jal 0x2fb8c",
+        "000300F8 mov.s $f12, $f20",
+        "000300FC jal 0x32b34"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "missionId": "v1-parity-inventory",
+  "status": "WORKERS_COMPLETE",
+  "reviewStatus": "SOL_REVIEW_COMPLETE",
+  "createdAtUtc": "2026-09-18T20:58:38.2164623Z",
+  "taskFile": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\tasks\\v1-parity-inventory.md",
+  "taskSnapshot": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\v1-parity-inventory\\task.snapshot.md",
+  "profile": "deepseek-flash-high",
+  "roles": [
+    "explorer",
+    "mapper",
+    "skeptic"
+  ],
+  "repoRoot": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS",
+  "gitBranch": "v2-research",
+  "gitHead": "e642941ee0cc97c8207b9889abd3e06c62d1b75f",
+  "workersDirectory": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\v1-parity-inventory\\workers",
+  "panelSummary": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\v1-parity-inventory\\workers\\panel-summary.json",
+  "solReview": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\v1-parity-inventory\\sol-review.md",
+  "readyForReview": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\v1-parity-inventory\\READY_FOR_SOL_REVIEW.md",
+  "runnerStdout": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\v1-parity-inventory\\mission-retry.stdout.log",
+  "runnerStderr": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\v1-parity-inventory\\mission-retry.stderr.log",
+  "runnerPid": 39572,
+  "completedAtUtc": "2026-09-18T21:09:23.1003114Z",
+  "failure": null,
+  "reviewedAtUtc": "2026-09-19T08:33:18.4318507Z"
+}

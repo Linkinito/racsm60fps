@@ -102,3 +102,20 @@ Thumbs.db
 # Duplicate PRX reference set.
 # SHA-256 verified identical to development-v0.6.3-generalisation/prx-reference/
 **/development-v0.6.1/verified-prx-inputs/
+
+@"
+
+# DeepSeek mission runtime logs
+research/inbox/deepseek/missions/**/mission-run*.log
+research/inbox/deepseek/missions/**/mission-retry*.log
+
+# Failed/recovery mission snapshots
+research/inbox/deepseek/missions/**/attempt-*/
+research/inbox/deepseek/missions/**/checkpoint-originals/
+
+# Live-test generated captures
+research/live-tests/**/preflight-*.json
+
+# Local PPSSPP API reference copies
+research/live-tests/**/api-reference/
+"@ | Add-Content .gitignore

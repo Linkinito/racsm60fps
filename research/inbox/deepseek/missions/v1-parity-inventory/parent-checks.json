@@ -1,0 +1,416 @@
+{
+  "scope": "Static file and recorded evidence checks, not gameplay validation",
+  "prx_path": "01-Travail-et-profil-PPSSPP\\Overcompensated-Reprise-2026-09-14\\development-v0.6.3-generalisation\\prx-reference\\LEVEL_01.PRX",
+  "prx_sha256": "d10a81d076fb44987a45314a020cda2f7e8b39f860b957911ca9365464676571",
+  "segments": [
+    [
+      1,
+      116,
+      0,
+      1833224,
+      3002628,
+      3002628,
+      5,
+      4
+    ],
+    [
+      1,
+      3002744,
+      3002632,
+      0,
+      428,
+      1632040,
+      6,
+      8
+    ]
+  ],
+  "core": [
+    {
+      "name": "vblank",
+      "rva": "0x96650",
+      "file_offset": "0x966c4",
+      "expected": "0xc06fd09",
+      "actual": "0xc06fd09",
+      "matches": true,
+      "patch": "0x0",
+      "original_decode": [
+        "jal 0x1bf424"
+      ],
+      "patched_decode": [
+        "nop"
+      ]
+    },
+    {
+      "name": "delta",
+      "rva": "0x151e0",
+      "file_offset": "0x15254",
+      "expected": "0x3c043d08",
+      "actual": "0x3c043d08",
+      "matches": true,
+      "patch": "0x3c043c88",
+      "original_decode": [
+        "lui $a0, 0x3d08"
+      ],
+      "patched_decode": [
+        "lui $a0, 0x3c88"
+      ]
+    },
+    {
+      "name": "substeps",
+      "rva": "0x2fcfc",
+      "file_offset": "0x2fd70",
+      "expected": "0x2a240002",
+      "actual": "0x2a240002",
+      "matches": true,
+      "patch": "0x2a240001",
+      "original_decode": [
+        "slti $a0, $s1, 2"
+      ],
+      "patched_decode": [
+        "slti $a0, $s1, 1"
+      ]
+    },
+    {
+      "name": "physics",
+      "rva": "0x2fbbc",
+      "file_offset": "0x2fc30",
+      "expected": "0x46006506",
+      "actual": "0x46006506",
+      "matches": true,
+      "patch": "0x460c6500",
+      "original_decode": [
+        "mov.s $f20, $f12"
+      ],
+      "patched_decode": [
+        "add.s $f20, $f12, $f12"
+      ]
+    }
+  ],
+  "artifact_hashes": {
+    "research\\inbox\\deepseek\\missions\\v1-parity-inventory\\task.snapshot.md": "665f3aa7caba5849d27d5f31e495ff52607521485125d47825573fdcb1ac954e",
+    "research\\tasks\\v1-parity-inventory.md": "665f3aa7caba5849d27d5f31e495ff52607521485125d47825573fdcb1ac954e",
+    "01-Travail-et-profil-PPSSPP\\Overcompensated-Reprise-2026-09-14\\trace-validation\\trace_L03_0004.csv": "03f10ac4becbce8587a8478d88b26bb21475c4f54c095ef8569f9b68df0e94c5",
+    "01-Travail-et-profil-PPSSPP\\Overcompensated-Reprise-2026-09-14\\trace-validation\\trace_L03_0005.csv": "03f10ac4becbce8587a8478d88b26bb21475c4f54c095ef8569f9b68df0e94c5"
+  },
+  "titanium_factor_decode": [
+    [
+      "lui $a0, 0x4000"
+    ],
+    [
+      "lui $a0, 0x3f80"
+    ]
+  ],
+  "ledger_columns": [
+    "module",
+    "level",
+    "rva",
+    "file_offset",
+    "section",
+    "file_word",
+    "reference_base",
+    "reference_address_NOT_live",
+    "runtime_vanilla_word_at_reference_base",
+    "patched_encoded",
+    "patch_interpretation",
+    "flags",
+    "layer",
+    "mechanic",
+    "source",
+    "binary_check",
+    "continuous",
+    "runtime_activation",
+    "validation",
+    "evidence",
+    "nearest_callback_NOT_proven_owner",
+    "callback_distance_bytes"
+  ],
+  "ledger_count": 1470,
+  "iso_recorded_results": [
+    {
+      "iso": "C:\\Users\\linki\\Downloads\\Ratchet & Clank - Size Matters (Europe) (PSN)\\copy.iso",
+      "matching": 14,
+      "compared": 15,
+      "level02": {
+        "path": "/PSP_GAME/USRDIR/BIN/LEVEL_02.PRX",
+        "offset": 44754944,
+        "bytes": 3567813,
+        "sha256": "811d9ba8cf4ddd1db9b0ebaebe6b592148f8cb43b445a8023d27794c28f1ea62",
+        "reference_match": false
+      }
+    },
+    {
+      "iso": "C:\\Users\\linki\\Downloads\\Ratchet & Clank - Size Matters (Europe) (PSN)\\Ratchet & Clank - Size Matters (Europe) (PSN).iso",
+      "matching": 15,
+      "compared": 15,
+      "level02": {
+        "path": "/PSP_GAME/USRDIR/BIN/LEVEL_02.PRX",
+        "offset": 67600384,
+        "bytes": 3567813,
+        "sha256": "0037689a926197969231795c4d6b05980e5e94558394617b21e8b8bcd79bc8aa",
+        "reference_match": true
+      }
+    }
+  ],
+  "supplemental_weapon_groups": {
+    "system": {
+      "Lacerator": 34,
+      "RYNO/T.E.L.T.": 72,
+      "Shock Rocket": 48,
+      "Sniper Mine": 16
+    }
+  },
+  "supplemental_weapon_columns": [
+    "prx",
+    "system",
+    "patch",
+    "runtime_address",
+    "file_offset",
+    "detected_original",
+    "expected_original",
+    "patched_word",
+    "original_match",
+    "status",
+    "address_derivation"
+  ],
+  "supplemental_weapon_count": 170,
+  "integration": {
+    "scope": "read-only integration check; not gameplay validation",
+    "base": 152358144,
+    "pluginBase": 144011520,
+    "sites": 167,
+    "callsites": 36,
+    "all_sites_pass": true
+  },
+  "pickup": {
+    "rows": 45,
+    "different": 27
+  },
+  "transfer_gaps": 176,
+  "archive_common_words": [
+    {
+      "rva": "0x96650",
+      "old": "0C06FD09",
+      "new": "00000000",
+      "binary_matches": true
+    },
+    {
+      "rva": "0x2fcfc",
+      "old": "2A240002",
+      "new": "2A240001",
+      "binary_matches": true
+    },
+    {
+      "rva": "0x151e0",
+      "old": "3C043D08",
+      "new": "3C043C88",
+      "binary_matches": true
+    },
+    {
+      "rva": "0x2fbbc",
+      "old": "46006506",
+      "new": "460C6500",
+      "binary_matches": true
+    },
+    {
+      "rva": "0x361c",
+      "old": "3C043D08",
+      "new": "3C043C88",
+      "binary_matches": true
+    },
+    {
+      "rva": "0x3634",
+      "old": "3C04BD08",
+      "new": "3C04BC88",
+      "binary_matches": true
+    },
+    {
+      "rva": "0x2d8608",
+      "old": "3E75C28F",
+      "new": "3DF5C28F",
+      "binary_matches": true
+    },
+    {
+      "rva": "0x17b78c",
+      "old": "3C044000",
+      "new": "3C043F80",
+      "binary_matches": true
+    },
+    {
+      "rva": "0x2cf328",
+      "old": "3E6EEEF0",
+      "new": "3DEEEEF0",
+      "binary_matches": true
+    },
+    {
+      "rva": "0x2cf3c8",
+      "old": "41D80000",
+      "new": "42580000",
+      "binary_matches": true
+    },
+    {
+      "rva": "0x2d9018",
+      "old": "3E4CCCCE",
+      "new": "3DCCCCCE",
+      "binary_matches": true
+    },
+    {
+      "rva": "0x185314",
+      "old": "2A240032",
+      "new": "2A240064",
+      "binary_matches": true
+    },
+    {
+      "rva": "0x18531c",
+      "old": "2A240035",
+      "new": "2A24006A",
+      "binary_matches": true
+    },
+    {
+      "rva": "0x137f5c",
+      "old": "3C043D08",
+      "new": "3C043C88",
+      "binary_matches": true
+    },
+    {
+      "rva": "0x2d28c0",
+      "old": "3E2AAAAB",
+      "new": "3DAAAAAB",
+      "binary_matches": true
+    },
+    {
+      "rva": "0x2d4ea0",
+      "old": "3E4CCCCE",
+      "new": "3DCCCCCE",
+      "binary_matches": true
+    },
+    {
+      "rva": "0x2d44f0",
+      "old": "3EAAAAAB",
+      "new": "3E2AAAAB",
+      "binary_matches": true
+    },
+    {
+      "rva": "0x2d95a8",
+      "old": "3EAAAAAB",
+      "new": "3E2AAAAB",
+      "binary_matches": true
+    },
+    {
+      "rva": "0x2d42dc",
+      "old": "3DCCCCCE",
+      "new": "3D4CCCCE",
+      "binary_matches": true
+    },
+    {
+      "rva": "0x2d874c",
+      "old": "3E088889",
+      "new": "3D888889",
+      "binary_matches": true
+    },
+    {
+      "rva": "0x12f644",
+      "old": "3C074000",
+      "new": "3C073F80",
+      "binary_matches": true
+    },
+    {
+      "rva": "0x1563e8",
+      "old": "3C063D08",
+      "new": "3C063C88",
+      "binary_matches": true
+    }
+  ],
+  "archive_words_missing_from_later_ledger": [
+    {
+      "rva": "0x2cf328",
+      "old": "3E6EEEF0",
+      "new": "3DEEEEF0",
+      "binary_matches": true
+    },
+    {
+      "rva": "0x2cf3c8",
+      "old": "41D80000",
+      "new": "42580000",
+      "binary_matches": true
+    },
+    {
+      "rva": "0x2d9018",
+      "old": "3E4CCCCE",
+      "new": "3DCCCCCE",
+      "binary_matches": true
+    },
+    {
+      "rva": "0x185314",
+      "old": "2A240032",
+      "new": "2A240064",
+      "binary_matches": true
+    },
+    {
+      "rva": "0x18531c",
+      "old": "2A240035",
+      "new": "2A24006A",
+      "binary_matches": true
+    },
+    {
+      "rva": "0x137f5c",
+      "old": "3C043D08",
+      "new": "3C043C88",
+      "binary_matches": true
+    },
+    {
+      "rva": "0x2d28c0",
+      "old": "3E2AAAAB",
+      "new": "3DAAAAAB",
+      "binary_matches": true
+    },
+    {
+      "rva": "0x2d4ea0",
+      "old": "3E4CCCCE",
+      "new": "3DCCCCCE",
+      "binary_matches": true
+    },
+    {
+      "rva": "0x2d44f0",
+      "old": "3EAAAAAB",
+      "new": "3E2AAAAB",
+      "binary_matches": true
+    },
+    {
+      "rva": "0x2d95a8",
+      "old": "3EAAAAAB",
+      "new": "3E2AAAAB",
+      "binary_matches": true
+    },
+    {
+      "rva": "0x2d42dc",
+      "old": "3DCCCCCE",
+      "new": "3D4CCCCE",
+      "binary_matches": true
+    },
+    {
+      "rva": "0x2d874c",
+      "old": "3E088889",
+      "new": "3D888889",
+      "binary_matches": true
+    },
+    {
+      "rva": "0x12f644",
+      "old": "3C074000",
+      "new": "3C073F80",
+      "binary_matches": true
+    },
+    {
+      "rva": "0x1563e8",
+      "old": "3C063D08",
+      "new": "3C063C88",
+      "binary_matches": true
+    }
+  ],
+  "review_counts": {
+    "included": 65,
+    "historical_candidate": 59,
+    "reported_30fps_number": 6,
+    "usable_reproducible_30fps_baseline": 0,
+    "essentially_unknown": 9
+  }
+}
