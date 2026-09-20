@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "role": "explorer",
+  "sourceReport": "explorer.md",
+  "sourceSha256": "367F28817C93ABDD612FD0D403654D48E2A85A7457FDBCDFEAB2F98AABCC71EF",
+  "established": "OBSERVED L01 PRX: 0x2D2C04=30.0f; 0x14CA70 init dt=1/rate + c.eq.s rate,60.0f; LaserTracer upd 0x148CEC only site +0x8-=1.0; 4 cfg blocks stride 0x250",
+  "corroborated": "All 15 repo PRXs SHA-256 match vanilla-reference-manifest.json; 2 PT_LOADs per module: off=0x74 vaddr=0 and off=vaddr+0x70",
+  "inferred": "TracerTiming_Init globals are computed once from rate=30.0 while LaserTracer_Update counts per call: split RATE_LOCAL + COUNTDOWN_PER_CALL; C1 effect UNKNOWN",
+  "contradictions": "Atlas 538 names; strict ord2 function-start union=531 (7 U1); 534 never materialized; explorer.md L05/07/08=130/165/212 vs re-derived 128/162/211",
+  "rejected": "Universal RVA+0x74 file mapping is false for PT_LOAD1 (off=vaddr+0x70); confirmed directly from ELF program headers",
+  "unknown": "534 membership; per-class callback cadence; T6/T7/T8 field semantics; owner of 0x2DD1F8 init pointer; static writer of 0x2D2C04; L15 vs L21 hash delta",
+  "top_hypotheses": "Per-call fixed-step consumers (Level01Waterfall +0x70-=1/60 at 0x151E7C) double in real time under C1 while tracer rate-derived constants stay 30-based",
+  "best_discriminating_test": "A0/C1 true-stop count plus field +0x70 slope for one Level01Waterfall instance; A0/B0 gap already 1.999967x at +0x2FCFC",
+  "blockers": "Session filesystem is read-only (write probe denied): no staging/explorer files or progress.json; no python/node/objdump/capstone/Add-Type",
+  "full_report_required": "yes: sec 1.3 register reconciliation, sec 1.4 PT_LOAD, sec 1.5 LaserTracer raw decode, sec 1.6 Waterfall sites; handoff cannot carry tables"
+}

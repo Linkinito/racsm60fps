@@ -1,0 +1,30 @@
+{
+  "missionId": "static-60fps-complete-audit-run-001",
+  "status": "WORKERS_COMPLETE",
+  "reviewStatus": "READY_FOR_PARENT",
+  "schemaVersion": 2,
+  "parentStateSha256": "33490CB42D7E185C94AB8DF6ECFB378C034F9596A31FE64D7FAFC38B3E55BE4C",
+  "createdAtUtc": "2026-09-20T21:34:57.3665569Z",
+  "taskFile": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\tasks\\static-60fps-complete-audit-run-001.md",
+  "taskSnapshot": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\static-60fps-complete-audit-run-001\\task.snapshot.md",
+  "profile": "deepseek-flash-high",
+  "codexHome": "C:\\Users\\linki\\.codex",
+  "roles": [
+    "explorer",
+    "mapper",
+    "skeptic"
+  ],
+  "repoRoot": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS",
+  "gitBranch": "v2-research",
+  "gitHead": "289964fac799ce88dc73bb904a5f44e8dc9c0de1",
+  "workersDirectory": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\static-60fps-complete-audit-run-001\\workers",
+  "panelSummary": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\static-60fps-complete-audit-run-001\\workers\\panel-summary.json",
+  "parentReview": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\static-60fps-complete-audit-run-001\\parent-review.md",
+  "parentHandoff": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\static-60fps-complete-audit-run-001\\PARENT_HANDOFF.md",
+  "readyForReview": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\static-60fps-complete-audit-run-001\\READY_FOR_PARENT_REVIEW.md",
+  "runnerStdout": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\static-60fps-complete-audit-run-001\\mission-run.stdout.log",
+  "runnerStderr": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\static-60fps-complete-audit-run-001\\mission-run.stderr.log",
+  "runnerPid": 54644,
+  "completedAtUtc": "2026-09-20T22:35:22.2366260Z",
+  "failure": null
+}

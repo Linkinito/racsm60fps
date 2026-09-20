@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "role": "mapper",
+  "sourceReport": "mapper.md",
+  "sourceSha256": "EF228724C74C76BC0BA6424383A27DD7AF221FCED4D0C09FB1B35CC33E9B1387",
+  "established": "OBSERVED(read-only bytes):L01 4 socle sites re-verified;21-module frame-gate table;16 per-module delta producers;LEVEL_15==LEVEL_21 byte-identical.",
+  "corroborated": "Frame-gate idiom(lw/addiu/bne/nop/jal)+2-word jr-ra wait stub+module-local frame counter; matches documented LEVEL_01 0x96650 and global 0x2B6E58.",
+  "inferred": "Gate jal at gateRVA+0x10 is the removable second VBlank wait in all 21 modules; LEVEL_16-20 vanilla player-loop threshold is already 1, not 2.",
+  "contradictions": "LEVEL_20 player loop slti=1 vs LEVEL_01 slti=2 (same loop shape); LEVEL_16-20 differ in seg1 mapping (vaddr==filesz0) and lack the L01 delta-producer shape.",
+  "rejected": "NONE newly rejected. Prior rejections preserved and re-checked: 0x151E8->0x884A4, universal dt*30->dt*60, universal RVA+0x74, 0x2B0208 as global selector.",
+  "unknown": "Per-class callback cadence/ownership; import identity of each module's wait stub; LEVEL_16/18 delta-producer RVA; LaserTracer rate==60 branch reachability.",
+  "top_hypotheses": "H1: the C1 socle is a per-module template; applying LEVEL_01 RVAs to another loaded module is a silent-desync class no LEVEL_01 test detects.",
+  "best_discriminating_test": "A0 vs B0(gate NOP only) true-stop cadence at the gate site, the player-loop tail, and one passive class callback in LEVEL_20, same scene/input.",
+  "blockers": "Read-only sandbox, approval never; no python/node/pwsh (PS5.1 ConstrainedLanguage); no runtime allowed. 534-name per-class audit not completable this session.",
+  "full_report_required": "yes: sections 3,4,6,7 (per-module tables, C1 verdicts, competing interpretations, discriminating tests) before any candidate is promoted."
+}

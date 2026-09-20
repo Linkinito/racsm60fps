@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "role": "skeptic",
+  "sourceReport": "skeptic.md",
+  "sourceSha256": "AE39892DDFC592CBAD8DD090DCBA25C4533DFBC3D46AB32862D27B081F92681F",
+  "established": "Primary bytes: LEVEL_01.PRX sha256 d10a81d0; words 0x96650=0C06FD09 0x151E0=3C043D08 0x2FCFC=2A240002 0x2FBBC=46006506; PT_LOAD0 off 74 vaddr 0; gate sb 1/0/1",
+  "corroborated": "Waterfall A0 29.9705Hz == A0 outer 7407252 ticks; C1 59.9391Hz == C1 outer 3703732 ticks, so that callback runs once per outer update; scope Pokitaru A0/C1 only",
+  "inferred": "C1 factor by consumer: per-call 1.0x ok, dt-scaled 0.5x, N-VEL-normalized 2.0x; outer-dispatched class residual is B0-inherited, not C1 threshold",
+  "contradictions": "Atlas 538/15 modules vs 534 union: +62 module instances, FRONTEND missing, LevelMusic in 15 vs 'no name in all 15'; CSV omits 0.025; CURRENT_STATE L76 stale on A0/B0",
+  "rejected": "No direct reader of gate 0x2B0208 in LEVEL_01 (imm=0x208 scan: 9 sites; only the two sb writers); supports rejecting post-loop-gate => LaserTracer dispatch",
+  "unknown": "Dispatch site per class (only Waterfall known); B0 class cadence; 0.55% +0x574 parity gap; 222MHz calibration; readers of 0x2D2Cxx table; M02-M24 identities",
+  "top_hypotheses": "H1 outer-dispatched residuals come from B0 VBlank unlock; H2 C1 halves substep dt consumers; H3 LaserTracer rate table is shared by >=9 module sites, rate-60 branch may be selectable",
+  "best_discriminating_test": "B0-only true-stop cadence at M01+0x151D78 with in-run decoded guards and ticks-only field deltas: ~59.94Hz means B0-inherited, ~119.9Hz means substep-dispatched",
+  "blockers": "Sandbox read-only: review/*.csv, conflicts.md, progress.json, SKEPTIC_HANDOFF.md could not be written (even TEMP denied); 529 of 538 names not individually vetted by me",
+  "full_report_required": "yes: sections 1-7, esp. 0 (primary byte verification), 2 (register reconciliation, 0.5% anomaly), 4 (missing evidence), 6 (B0 class test + DISPATCH_SITE field)"
+}

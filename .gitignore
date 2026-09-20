@@ -120,3 +120,10 @@ research/live-tests/**/api-reference/
 
 # Keep external worker diagnostics local; preserve status JSON in Git.
 research/inbox/deepseek/missions/**/workers/_logs/*.log
+
+# Detached DeepSeek runtime logs
+research/inbox/deepseek/missions/*/workers/_logs/*.stdout.log
+research/inbox/deepseek/missions/*/workers/_logs/*.stderr.log
+
+# Transient launch/runtime files
+research/inbox/deepseek/missions/*/launch.json

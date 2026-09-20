@@ -1,0 +1,1 @@
+candidate_id,mechanism_id,class,module,address,candidate_type,original_instruction,original_opcode,candidate_instruction,candidate_opcode,original_constant,candidate_constant,expected_effect,shared_scope,risk,confidence,status,manual_test_id,notes

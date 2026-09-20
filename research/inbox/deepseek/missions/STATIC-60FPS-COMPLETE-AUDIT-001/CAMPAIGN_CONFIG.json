@@ -1,0 +1,18 @@
+{
+  "campaign": "STATIC-60FPS-COMPLETE-AUDIT-001",
+  "orchestrator_first_run_id": "static-60fps-complete-audit-run-001",
+  "profile": "deepseek-flash-high",
+  "roles": [
+    "explorer",
+    "mapper",
+    "skeptic"
+  ],
+  "task_file": "research\\tasks\\static-60fps-complete-audit-run-001.md",
+  "instruction_kit": "research\\inbox\\deepseek\\missions\\STATIC-60FPS-COMPLETE-AUDIT-001",
+  "output_root": "reports\\STATIC-60FPS-COMPLETE-AUDIT-001",
+  "canonical_expected_names": 534,
+  "structured_corpus_names": 538,
+  "shard_size": 25,
+  "runtime_access": false,
+  "candidate_status": "UNVERIFIED_STATIC_CANDIDATE"
+}
