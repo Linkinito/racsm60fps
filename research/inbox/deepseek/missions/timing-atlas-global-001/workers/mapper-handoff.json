@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "role": "mapper",
+  "sourceReport": "mapper.md",
+  "sourceSha256": "BA379FF612E5DC941195DCE79F52AEE144714E5F6168379098D7DFFBCC6CCD71",
+  "established": "L01: 277 jalr/20458 jal; 0x1517C called only from 0x15AA8,0x15B18; limiter entry 0x96490 has single caller 0x94B38; L02 Data/BIN == clean 0037689a; report S1/S4",
+  "corroborated": "All 15 SP modules carry 30.0f and 60.0f .data constants, 244-318 jalr, 559-834 mov.s f12,f20; FRONTEND has 0/0/19/37; independent per-module ELF parse; report S3",
+  "inferred": "obj+0x40 -> class descriptor; slot 0x1C = weapon update, 0x20 = most common method (26 sites); 0xF8-stride entity pump callbacks +0xD4/+0xDC/+0xE0; report S2/S5",
+  "contradictions": "Prior 'six sceDisplay callsites' vs 13 jal sites into the stub section (7 into 0x1BF424); prior L02 contamination absent now (hash equals BACKUP clean); report S4",
+  "rejected": "Unconditional 'second VBlank wait': 0x96650 is a catch-up wait taken only when vcount != stored+1; section-wide sceDisplay counting; literal 0x208 flag store portability; report S1.3/S3",
+  "unknown": "Reader of .rodata state table 0x1C02C8; dispatcher loading 0x2D4158; runtime writer of 0x2D2C04; thread/loop relation of 0x94B38 vs 0x15A80; report S9",
+  "top_hypotheses": "H1 whole level frame 0x1517C doubles at B0 (engine-global); H2 only player chain doubles; H3 gate/rate-aware paths exempt (0x2B0208, 0x14CA70); H4 elevator is per-call 1/30 step; report S6",
+  "best_discriminating_test": "Per-second counts of base+0x1517C, base+0x2FB8C, base+0x1EBC4, base+0x96490 in A0 vs B0; all four x2 => H1, player-only x2 => H2; report S7",
+  "blockers": "Read-only mission, no runtime access; indirect dispatch owners unresolved for 0x148CEC/0x1C02C8; no Capstone/Python (ConstrainedLanguage) so scans are PowerShell byte patterns",
+  "full_report_required": "yes: S1 dispatcher map (VBlank catch-up, 3-caller weapon path), S2 descriptor records, S3 homology table, S8 scanner spec, S9 cadence-unknowables"
+}

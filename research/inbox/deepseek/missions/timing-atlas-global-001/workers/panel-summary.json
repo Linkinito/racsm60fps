@@ -1,0 +1,50 @@
+{
+  "taskFile": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\timing-atlas-global-001\\task.snapshot.md",
+  "profile": "deepseek-flash-high",
+  "startedAtUtc": "2026-09-20T00:39:14.9512141Z",
+  "completedAtUtc": "2026-09-20T01:11:13.8706260Z",
+  "roles": [
+    {
+      "role": "explorer",
+      "succeeded": true,
+      "childSucceeded": true,
+      "exitCode": 0,
+      "handoff": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\timing-atlas-global-001\\workers\\explorer-handoff.json",
+      "report": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\timing-atlas-global-001\\workers\\explorer.md",
+      "reportExists": true,
+      "reportBytes": 34595,
+      "stdoutLog": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\timing-atlas-global-001\\workers\\_logs\\explorer.stdout.log",
+      "stderrLog": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\timing-atlas-global-001\\workers\\_logs\\explorer.stderr.log",
+      "statusFile": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\timing-atlas-global-001\\workers\\_logs\\explorer.status.json",
+      "failureReason": null
+    },
+    {
+      "role": "mapper",
+      "succeeded": true,
+      "childSucceeded": true,
+      "exitCode": 0,
+      "handoff": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\timing-atlas-global-001\\workers\\mapper-handoff.json",
+      "report": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\timing-atlas-global-001\\workers\\mapper.md",
+      "reportExists": true,
+      "reportBytes": 29203,
+      "stdoutLog": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\timing-atlas-global-001\\workers\\_logs\\mapper.stdout.log",
+      "stderrLog": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\timing-atlas-global-001\\workers\\_logs\\mapper.stderr.log",
+      "statusFile": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\timing-atlas-global-001\\workers\\_logs\\mapper.status.json",
+      "failureReason": null
+    },
+    {
+      "role": "skeptic",
+      "succeeded": true,
+      "childSucceeded": true,
+      "exitCode": 0,
+      "handoff": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\timing-atlas-global-001\\workers\\skeptic-handoff.json",
+      "report": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\timing-atlas-global-001\\workers\\skeptic.md",
+      "reportExists": true,
+      "reportBytes": 15339,
+      "stdoutLog": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\timing-atlas-global-001\\workers\\_logs\\skeptic.stdout.log",
+      "stderrLog": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\timing-atlas-global-001\\workers\\_logs\\skeptic.stderr.log",
+      "statusFile": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\timing-atlas-global-001\\workers\\_logs\\skeptic.status.json",
+      "failureReason": null
+    }
+  ]
+}

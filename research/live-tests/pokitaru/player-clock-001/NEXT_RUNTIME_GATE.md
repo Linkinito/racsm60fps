@@ -11,8 +11,28 @@ level/player scheduling rate in this Pokitaru scene? No candidate correction yet
    `Get-Process PPSSPPWindows64 -ErrorAction SilentlyContinue | Select-Object Id,Path`
    Discover listening ports for those PIDs; match the executable to the existing
    `isolated-20260919T150446Z/local/app/` path. Never infer ownership from port
-   60908 or historical PID alone. If the isolated process is absent, stop with
-   that blocker; do not create another instance or touch the owner's session.
+   60908 or historical PID alone.
+
+   **Owner override — launching the existing isolated lab is authorized.** If no
+   matching PPSSPP process is running, locate and launch exactly ONE instance of
+   the already-prepared isolated laboratory under:
+   `research/live-tests/pokitaru/player-clock-001/isolated-20260919T150446Z/`
+
+   The prohibition on launching PPSSPP applies only to arbitrary, new, cloned,
+   rebuilt, replacement, or uncontrolled emulator instances. It does NOT prohibit
+   starting the existing isolated laboratory prepared for this experiment.
+
+   The runtime agent may launch that existing isolated executable, load its existing
+   UCES00420 laboratory session/checkpoint, connect to its debugger/API, pause or
+   unpause it, execute the authorized A0/B0 experiment, and close that isolated
+   instance during cleanup when appropriate. It must NOT launch or touch the user's
+   normal PPSSPP installation/session, create a second isolated copy, clone/download/
+   rebuild PPSSPP, modify PPSSPP source, change emulator version, create a new
+   emulator installation, or substitute another ISO/game build.
+
+   If the existing isolated lab cannot be identified or started without creating,
+   rebuilding, replacing, or materially reconfiguring the environment, stop with
+   that concrete blocker. Do not create a substitute lab.
 2. Read-only debugger requests: version, game.status, cpu.status, hle.module.list.
    Require UCES00420 and one active rcp1. Preserve initial pause/input/breakpoint
    state; do not remove user breakpoints. Historical base 0x09139D00 is a hint,

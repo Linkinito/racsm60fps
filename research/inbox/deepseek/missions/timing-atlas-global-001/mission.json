@@ -1,0 +1,30 @@
+{
+  "missionId": "timing-atlas-global-001",
+  "status": "WORKERS_COMPLETE",
+  "reviewStatus": "READY_FOR_PARENT",
+  "schemaVersion": 2,
+  "parentStateSha256": "A272D9E3DB2F4B4720DF5D64041516FC505CE07526261C78A530FDFF3FFAC1E7",
+  "createdAtUtc": "2026-09-20T00:39:14.4650225Z",
+  "taskFile": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\tasks\\timing-atlas-global-001.md",
+  "taskSnapshot": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\timing-atlas-global-001\\task.snapshot.md",
+  "profile": "deepseek-flash-high",
+  "codexHome": "C:\\Users\\linki\\.codex",
+  "roles": [
+    "explorer",
+    "mapper",
+    "skeptic"
+  ],
+  "repoRoot": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS",
+  "gitBranch": "v2-research",
+  "gitHead": "c038b38b5c3ea30bac37e987165b42fe500c68a1",
+  "workersDirectory": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\timing-atlas-global-001\\workers",
+  "panelSummary": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\timing-atlas-global-001\\workers\\panel-summary.json",
+  "parentReview": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\timing-atlas-global-001\\parent-review.md",
+  "parentHandoff": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\timing-atlas-global-001\\PARENT_HANDOFF.md",
+  "readyForReview": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\timing-atlas-global-001\\READY_FOR_PARENT_REVIEW.md",
+  "runnerStdout": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\timing-atlas-global-001\\mission-run.stdout.log",
+  "runnerStderr": "C:\\Users\\linki\\Documents\\PPSSPP\\RAC_60FPS\\research\\inbox\\deepseek\\missions\\timing-atlas-global-001\\mission-run.stderr.log",
+  "runnerPid": 9236,
+  "completedAtUtc": "2026-09-20T01:11:13.9307796Z",
+  "failure": null
+}

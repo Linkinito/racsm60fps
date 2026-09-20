@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "role": "skeptic",
+  "sourceReport": "skeptic.md",
+  "sourceSha256": "ED63900AEDDA5635F4F93964B20D1879CEA789ED33C272C1DBC7A05E0B058CB8",
+  "established": "L01: 0x2FCB0=0x2E240001 sltiu r4,r17,1, stored 0x2FCB4 into 0x2B0208; jal 0x360A4 once at 0x2FC60; 0x328A0 computes 1.0/(+0x578) then stores velocity +0x28C/290/294.",
+  "corroborated": "LaserTracer 0x14CA70: dt=1/rate at 0x14CA80, c.eq.s rate,60.0f at 0x14CB10 (lui 0x4270 at 0x14CB08) picking 0x3F376E98/0x3F036F4E; DAT_2D2C04=30.0f; 0x2DD1F8=0x14CA70.",
+  "inferred": "0x1BF42C-return is compared with a stored counter (counter-query-like); 0x1BF424 is wait-like; camera 0x361C/3634 is rate*1/30 disguised delta; 0x39B74 1/60-per-substep implies ~60 substeps/s.",
+  "contradictions": "REJECTED own prior skeptic claim: 0x2FCB0 dest is a0 not at, gate=1/0/1. Data/BIN/LEVEL_02.PRX now hashes 0037689a (clean) with slti imm=2: contamination not reproducible. LEVEL_15 vs 21 differ by only 14 bytes.",
+  "rejected": "Single shared 1/30 producer (59-77 per-call stamped literals/module); RVA+0x74 as universal file mapping (fails above 0x2DD108); bare addiu/slti/bne tail as a player-loop discriminator (41 hits in LEVEL_01); corpus covering all timing calls.",
+  "unknown": "B0 cadence effect (UNTESTED); identity of each of the 5 sceDisplay import stubs; whether NPC/projectile/camera/particle families share the outer cadence; 0x148CEC dispatch cadence; semantics of +0xA00..+0xA18, +0x9D4/+0x9D8, %3 damage path.",
+  "top_hypotheses": "H1: limiter removal doubles outer cadence only if 0x96650 is a real wait, unproven. H2: post-loop gate makes 0x148CEC's block run 2x per outer call, so one-pass designs leave it 2x. H3: F30 sites split into disguised-delta vs embedded-step.",
+  "best_discriminating_test": "A0: count loop passes (base+0x2FCFC) and 0x39B74 calls/s; ~60/s with 2 passes confirms the 1/60-per-substep premise. Then compare 0x148CEC gated-block rate in A0 vs candidate C.",
+  "blockers": "Static only, no runtime; sceDisplay import names absent from file so stub function identity stays INFERRED; no dispatcher resolved for the 0x2D4158 table; LEVEL_16-20 identity unverified.",
+  "full_report_required": "yes: section 2 (byte-level rejection of the prior skeptic gate claim and the LEVEL_02 re-hash), section 7 (scanner mapping/pitfall spec), section 5-6 (falsification results and ranked runtime queue)."
+}
