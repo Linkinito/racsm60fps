@@ -1,0 +1,80 @@
+{
+  "scope": "Selected current files and branch/ELF anchors only; no corpus scan or runtime",
+  "scriptSha256": "c45795d8d45bb8d38d44a31bdcf0780979d4158ab69854e357bdeb0f8c28e9cb",
+  "reports": {
+    "explorer": {
+      "size": 34595,
+      "sha256": "f618630938c26cd39a6a8ee2892b6d0c82ce009a9d9118b2aa84ebde195e10bf",
+      "handoffHashMatches": true
+    },
+    "mapper": {
+      "size": 29203,
+      "sha256": "ba379ff612e5dc941195dce79f52aee144714e5f6168379098d7dffbcc6ccd71",
+      "handoffHashMatches": true
+    },
+    "skeptic": {
+      "size": 15339,
+      "sha256": "ed63900aedda5635f4f93964b20d1879cea789ed33c272c1dbc7a05e0b058cb8",
+      "handoffHashMatches": true
+    }
+  },
+  "l01RegistryRows": 150,
+  "level01": {
+    "path": "02-Jeu-et-dumps\\Data\\BIN\\LEVEL_01.PRX",
+    "sha256": "d10a81d076fb44987a45314a020cda2f7e8b39f860b957911ca9365464676571",
+    "segments": [
+      {
+        "offset": "0x74",
+        "vaddr": "0x0",
+        "filesz": "0x2dd104",
+        "memsz": "0x2dd104"
+      },
+      {
+        "offset": "0x2dd178",
+        "vaddr": "0x2dd108",
+        "filesz": "0x1ac",
+        "memsz": "0x18e728"
+      }
+    ],
+    "limiterWords": {
+      "0x96620": "0x92846e50",
+      "0x96624": "0x10800010",
+      "0x96628": "0x0",
+      "0x9662c": "0xc06fd09",
+      "0x96630": "0x0",
+      "0x96634": "0x3c10002b",
+      "0x96638": "0xc06fd0b",
+      "0x9663c": "0x0",
+      "0x96640": "0x8e046e58",
+      "0x96644": "0x24840001",
+      "0x96648": "0x14440003",
+      "0x9664c": "0x0",
+      "0x96650": "0xc06fd09",
+      "0x96654": "0x0",
+      "0x96658": "0xc06fd0b",
+      "0x9665c": "0x0",
+      "0x96660": "0x10000003",
+      "0x96664": "0xae026e58",
+      "0x96668": "0xc06fd2d"
+    },
+    "rateBranch": "0x45000005",
+    "initPointer": {
+      "rva": "0x2dd1f8",
+      "fileOffset": "0x2dd268",
+      "word": "0x14ca70"
+    },
+    "branchDecode": {
+      "opcode": 5,
+      "rs": 2,
+      "rt": 4,
+      "target": "0x96658",
+      "meaning": "BNE skips second WAIT on inequality; equality falls through"
+    }
+  },
+  "level02": {
+    "path": "02-Jeu-et-dumps\\Data\\BIN\\LEVEL_02.PRX",
+    "sha256": "0037689a926197969231795c4d6b05980e5e94558394617b21e8b8bcd79bc8aa",
+    "loopRva": "0x34160",
+    "loopWord": "0x2a240002"
+  }
+}

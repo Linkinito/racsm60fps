@@ -1,5 +1,16 @@
 # Evidence address book
 
+## Current timing-atlas arbitration (2026-09-20)
+
+- [Canonical parent review](inbox/deepseek/missions/timing-atlas-global-001/parent-review.md): corrected VBlank branch, PT_LOAD mapping, restored LEVEL_02 provenance, player/weapon/phase dispatch, timing taxonomy and unresolved ownership. Static evidence only; B0 cadence UNTESTED.
+- [Exact next A0/B0 gate](live-tests/pokitaru/player-clock-001/NEXT_RUNTIME_GATE.md): seven primary counters, clocks/observer validation, branch outcomes, state slopes and exact relocated-word restoration. Prepared, not executed in the review.
+- [Next-session checkpoint](inbox/deepseek/missions/timing-atlas-global-001/NEXT_SESSION.md): minimal entry and load-bearing unknowns.
+- [Bounded parent static checks](inbox/deepseek/missions/timing-atlas-global-001/parent-static-checks.json), reproducible with `verify-review-anchors.py` beside it: report/handoff hashes, 150 registry rows, PT_LOAD mapping, BNE equality path, final store at 0x96664, rate BC1F, current LEVEL_02 hash and threshold at RVA 0x34160. No runtime evidence.
+- [Explorer](inbox/deepseek/missions/timing-atlas-global-001/workers/explorer.md) §2: complete 150 L01 candidate registry / 534-name union; §4: per-module R60 detector anchors with LEVEL_07 anomaly; §6: elevator and disputed Kalidon platform/fluid ownership. Use parent corrections before copying claims.
+- [Mapper](inbox/deepseek/missions/timing-atlas-global-001/workers/mapper.md) S1.2/6/9: phase-table callers, three-caller weapon dispatch and candidate 0xF8 entity-manager walk; S1.4: per-stub display callsites. Catch-up branch direction and universal file mapping REJECTED by parent.
+- [Skeptic](inbox/deepseek/missions/timing-atlas-global-001/workers/skeptic.md) §1/2/7: raw gate decode, two PT_LOADs, current LEVEL_02 clean rehash, LEVEL_15/21 bounded differences, scanner pitfalls. Twice-per-outer LaserTracer dispatch claim REJECTED.
+- [Accepted Ghidra note](v2/ghidra-timing-findings-2026-09-20.md) §4/5/8/9/10: N-VEL versus N-TIMER, weapon scalar contract, random-modulo limitation, tracer-local scope and cheat-unlocked progression caveat. Preserve evidence strength; a worker's narrower read does not erase accepted evidence.
+
 Open the indicated section only for the active question. These pointers do not
 promote historical claims. Paths are relative to research/. `R` below is
 [the parent V1 review](inbox/deepseek/missions/v1-parity-inventory/sol-review.md).
