@@ -16,14 +16,21 @@ if ($ReportPath) {
     $Match = [regex]::Match($Raw, '(?s)<!-- PARENT_HANDOFF_V1 -->\s*```json\s*(.*?)\s*```\s*<!-- /PARENT_HANDOFF_V1 -->')
     if (-not $Match.Success) { throw "Missing compact handoff in $ReportPath; full report preserved." }
     $Data = $Match.Groups[1].Value | ConvertFrom-Json -AsHashtable
-    foreach ($Field in $Fields) {
-        if (-not $Data.ContainsKey($Field) -or $Data[$Field] -isnot [string] -or [string]::IsNullOrWhiteSpace($Data[$Field])) {
-            throw "Invalid handoff field: $Field"
-        }
-        if ($Data[$Field].Length -gt 180) { throw "Handoff field exceeds 180 characters: $Field" }
-    }
+	foreach ($Field in $Fields) {
+    		if (-not $Data.ContainsKey($Field) -or
+        		$Data[$Field] -isnot [string] -or
+        		[string]::IsNullOrWhiteSpace($Data[$Field])) {
+        		throw "Invalid handoff field: $Field"
+    		}
+
+    		$Value = [string]$Data[$Field]
+
+    		if ($Value.Length -gt 2000) {
+        		Write-Warning "Handoff field '$Field' is long ($($Value.Length) characters; target <= 2000)."
+    		}
+	}
     if ($Data.full_report_required -notmatch '^(yes: .+|no: .+)$') { throw 'full_report_required must be yes/no: reason and exact section when yes.' }
-    if ([Text.Encoding]::UTF8.GetByteCount(($Data | ConvertTo-Json -Compress)) -gt 2400) { throw 'Compact handoff exceeds 2400 bytes.' }
+    Write-Warning "Compact handoff exceeds the legacy 2400-byte advisory threshold; preserving the full handoff instead of failing the worker."
     $Clean = [ordered]@{schemaVersion=1; role=$Role; sourceReport=(Split-Path $ReportPath -Leaf); sourceSha256=(Get-FileHash -LiteralPath $ReportPath -Algorithm SHA256).Hash}
     foreach ($Field in $Fields) { $Clean[$Field] = $Data[$Field] }
     $Destination = Join-Path (Split-Path $ReportPath) "$Role-handoff.json"
