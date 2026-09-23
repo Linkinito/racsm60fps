@@ -30,6 +30,10 @@ CURRENT_STATE is a checkpoint, not a history log. Verify actual Git HEAD on resu
   read-only. No concurrent source edits without isolation. Preserve original
   game assets; modify only for explicitly authorized experiments.
 - Commit logical steps separately; separate infrastructure from research.
+- GitHub publication is curated: publish development progress and critical
+  source/documentation only. Keep raw measurements, captures, experiment
+  outputs and experimental artifacts local. Do not bulk-push the research
+  branch; use an explicit file allowlist for each public update.
 
 ## Delegation and reading budget
 Parent: GPT-6 Astra, Medium. Route before substantial research:
