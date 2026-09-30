@@ -4,10 +4,11 @@ Research project to run *Ratchet & Clank: Size Matters* (PSP, EU `UCES00420`)
 at 60 FPS on PPSSPP **without changing how the game plays**.
 
 > **Status: experimental research.** No release-quality 60 FPS patch exists yet.
-> Individual corrections have been measured on a few objects; a first global
-> candidate (D1) is built but has not passed its first in-game acceptance test.
-> See [docs/DEVELOPMENT_STATUS_2026-09-23.md](docs/DEVELOPMENT_STATUS_2026-09-23.md)
-> and [CURRENT_STATE.md](CURRENT_STATE.md).
+> The 60 FPS core (C1) corrects Ratchet and most animations; six global
+> approaches were tested in game and rejected; targeted corrections now fix the
+> first enemy class completely (crab speed and attack timing) and work has
+> started on the particle system. See [docs/FINDINGS_2026-09-30.md](docs/FINDINGS_2026-09-30.md),
+> [docs/ROADMAP.md](docs/ROADMAP.md) and [CURRENT_STATE.md](CURRENT_STATE.md).
 
 ## The problem
 
@@ -35,14 +36,14 @@ level module is resident, verifies it by hash and by the original instruction
 words, and applies guarded, reversible timing corrections. The original ISO
 and game modules are never modified.
 
-The current strategy (see
-[reports/60FPS-STRATEGY-REVIEW-2026-09-27.md](reports/60FPS-STRATEGY-REVIEW-2026-09-27.md)):
+The current strategy (after the 2026-09-30 live tests):
 
-1. Build one **broad, inferred** global timing profile (D1) from the existing
-   engine knowledge and the legacy dispatcher.
-2. Play the game while hot-switching between original 30 FPS (A0) and the
-   candidate, and record discrepancies.
-3. Turn each measured discrepancy into a documented local exception.
+1. Keep the whole game at 60 Hz with the three-word core (C1).
+2. Correct fixed per-frame steps where they are applied, preferably once in a
+   **shared engine helper** (ground navigation, shrapnel physics, particle
+   animators), otherwise per class (e.g. an attack frame threshold).
+3. Hot-switch between original 30 FPS (A0) and corrections while playing, and
+   keep every correction reversible and documented.
 
 Priority 0 is faithful 30 → 60 FPS behaviour. Quality-of-life features
 (second analog stick, L2/R2, wider FOV closer to the PS2 games, new skill

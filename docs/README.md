@@ -7,7 +7,10 @@
 | [../README.md](../README.md) | Project overview |
 | [../PROJECT_GOALS.md](../PROJECT_GOALS.md) | Priorities: parity first, optional features later |
 | [TECHNICAL_OVERVIEW.md](TECHNICAL_OVERVIEW.md) | Timing problem, configurations A0–D1, core sites, legacy dispatcher |
-| [DEVELOPMENT_STATUS_2026-09-23.md](DEVELOPMENT_STATUS_2026-09-23.md) | Last curated development status |
+| [FINDINGS_2026-09-30.md](FINDINGS_2026-09-30.md) | Latest live findings: rejected global arms, working fixes, particle system |
+| [ROADMAP.md](ROADMAP.md) | Next steps |
+| [RUNTIME_GUIDE.md](RUNTIME_GUIDE.md) | How to switch corrections and use the probes live |
+| [DEVELOPMENT_STATUS_2026-09-23.md](DEVELOPMENT_STATUS_2026-09-23.md) | Earlier curated status (superseded in parts) |
 | [fr/ETAT_DU_PROJET.md](fr/ETAT_DU_PROJET.md) | Owner summary in French |
 | [PUBLICATION_POLICY.md](PUBLICATION_POLICY.md) | What may and may not be committed or published |
 

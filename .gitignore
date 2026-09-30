@@ -185,3 +185,6 @@ research/live-tests/pokitaru/gate-001/raw-recover.json
 research/live-tests/pokitaru/gate-001/raw-status-check.json
 research/live-tests/pokitaru/gate-001/raw-sweep.json
 research/v2/timing-markers/markers.csv
+
+# Raw live-experiment results stay local (result.json per switch).
+research/live-tests/**/raw/

@@ -1,64 +1,59 @@
 # État du projet — Overcompensated (60 FPS Size Matters)
 
-_Résumé pour le propriétaire, mis à jour le 30 septembre 2026. Le checkpoint
-technique (anglais) est `CURRENT_STATE.md`._
+_Résumé pour le propriétaire, mis à jour le 30 septembre 2026 (fin de séance).
+Checkpoint technique (anglais) : `CURRENT_STATE.md`. Détails : `docs/FINDINGS_2026-09-30.md`._
 
 ## Objectif
 
-Faire tourner *Ratchet & Clank: Size Matters* (UCES00420) à 60 FPS **avec
-exactement le même gameplay qu'à 30 FPS**. Ensuite seulement viendront les
-améliorations : second stick, L2/R2, meilleur FOV et nouveaux points de
-compétence.
+*Ratchet & Clank: Size Matters* (UCES00420) à 60 FPS avec **exactement le même
+gameplay qu'à 30 FPS**. Ensuite seulement : second stick, L2/R2, FOV, nouveaux
+points de compétence. Forme : un plugin PRX pour PPSSPP.
 
-Le patch prend la forme d'un **plugin PRX** chargé par PPSSPP. Le jeu vide et
-recharge son code à chaque niveau, donc un simple `.ini` de cheats ne suffit
-pas.
+## Ce qu'on a compris
 
-## Ce qu'on sait
+- **C1** (3 instructions) débloque le 60 FPS et corrige Ratchet et presque toutes
+  les animations, parce qu'elles utilisent le temps écoulé.
+- Tout le reste va 2× trop vite parce que le jeu avance d'un **pas fixe à chaque
+  frame** : déplacements des ennemis, compteurs d'attaque, particules, etc.
+  C'est surtout dans la mise à jour des objets (le « pump 1 ») et dans le système
+  de particules.
+- Il n'existe **pas de correction globale simple** : 6 approches globales ont été
+  testées en jeu et écartées (saccades, bugs, ou aucun effet).
 
-- La logique tourne à 30 Hz. Le joueur fait 2 sous-étapes par frame.
-- Débloquer à 60 FPS se fait en 3 changements (VBlank, delta 1/30 → 1/60,
-  boucle joueur 2 → 1). C'est la configuration **C1**. Le joueur bouge alors
-  à la bonne vitesse.
-- Mais des centaines d'objets comptent en frames et vont 2× trop vite :
-  ascenseurs, cascades, armes, ennemis, particules…
-- Un seul réglage global ne peut pas tout corriger. Certains éléments sont
-  déjà justes en C1 (Acidbomb, Flamethrower), d'autres non.
-- L'ancien plugin (v0.6.x) contient déjà un « dispatcher » centralisé :
-  59 familles de fonctions, 493 points d'appel et 15 niveaux compilés.
+## Ce qui est corrigé (expérimental, testé à l'œil)
 
-## Corrections mesurées (une par une)
+- **Crabes** : vitesse (navigation au sol divisée par deux, valable aussi pour les
+  robots TM et le TrainingBot) et timing des coups (seuil 27 → 54 frames).
 
-| Élément | Résultat |
-| --- | --- |
-| Timer Help (Pokitaru) | Corrigé et réversible (mesuré) |
-| Ascenseur Pokitaru | 2× trop rapide en C1 (10 s → 5 s), défaut confirmé |
-| Ascenseur Kalidon | Corrigé, à 1,76 % près |
-| Cascade et papillon (Pokitaru) | Corrections locales mesurées |
+## En cours
 
-## Où on en est
+- **Particules** (brume, éclaboussures de la cascade) : correction écrite, la
+  version 10 corrige le clignotement des versions 8 et 9, **pas encore testée**.
+- Vaguelettes, débris de caisses, feu : autres « animateurs » de particules à corriger.
+- `animdisp` (déplacement animé de PNJ/cinématiques) : mis de côté, il bloque le jeu.
 
-- **D1**, le candidat global, est compilé et passe 324 tests hors-ligne.
-- Au premier lancement : crash et plus de son. D1 a été désactivé.
-- **Blocage actuel :** PPSSPP ne démarre plus du tout, même sans D1. Windows
-  indique un crash dans le pilote graphique AMD (`amdxc64.dll`) avec le rendu
-  OpenGL. La cause n'est pas prouvée.
+## Outils disponibles
 
-## Prochaine étape
+Recensement des objets actifs, points d'arrêt sur écriture ou appel, coupure
+temporaire d'un sous-système, scan de valeurs, bascule des corrections en direct.
+Mode d'emploi : `docs/RUNTIME_GUIDE.md`.
 
-1. Remettre PPSSPP en marche : essayer un autre moteur de rendu (Vulkan ou
-   Direct3D 11) de façon réversible.
-2. Relancer D1 et le tester en jouant, avec la bascule A0 ↔ D1.
-3. Corriger au fur et à mesure les écarts constatés (exceptions locales).
+## Tester toi-même
 
-## Rangement du 30 septembre 2026
+1. Plugin `InterpGate` seul activé (les autres à `false`), PPSSPP en Vulkan.
+2. Aller à Pokitaru, puis dans un terminal à la racine du dépôt :
+   `python tools/runtime/fixes.py --target C1 --fix nav,crab --out research/live-tests/pokitaru/mes-tests/raw/essai-1`
+3. Revenir au jeu d'origine : `--target A0` (nouveau dossier `--out` à chaque fois).
+4. Ne pas utiliser `animdisp` (blocage du jeu).
 
-- Les branches GitHub qui contenaient des fichiers du jeu (PRX, sauvegardes,
-  dumps, désassemblage) ont été supprimées. Seule `main` reste publique.
-- L'historique Git local a été nettoyé : il passe d'environ 250 Mo à environ
-  4 Mo. Les fichiers retirés sont toujours sur le disque, simplement ignorés
-  par Git.
-- Une sauvegarde complète de l'ancien historique se trouve dans
-  `..\RAC_60FPS-backup-2026-09-30\`. **Ne jamais la publier.**
-- Les documents sont indexés dans `docs/README.md`. Règles de publication :
-  `docs/PUBLICATION_POLICY.md`.
+## Prochaines étapes
+
+Voir `docs/ROADMAP.md` : tester la version 10 des particules, monter un projet
+Ghidra annoté de Pokitaru (lecture beaucoup plus rapide du code), puis continuer
+ennemi par ennemi, les armes, et enfin un plugin qui s'applique tout seul.
+
+## Git et GitHub
+
+- `main` (public) : documentation, sources des plugins et outils. Aucun fichier du jeu.
+- `v2-research` (local seulement) : tout l'historique de recherche.
+- Sauvegarde de l'ancien historique : `..\RAC_60FPS-backup-2026-09-30\` (ne jamais publier).

@@ -1,5 +1,8 @@
 # Technical overview
 
+> Updated findings from the 2026-09-30 live session (rejected global arms,
+> working targeted fixes, particle system) are in [FINDINGS_2026-09-30.md](FINDINGS_2026-09-30.md).
+
 Condensed map of what is known about the 60 FPS problem in `UCES00420`.
 Every statement keeps the evidence level of its source; follow the links
 before relying on an address. Evidence levels:
