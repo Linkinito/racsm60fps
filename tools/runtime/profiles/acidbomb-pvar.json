@@ -1,0 +1,43 @@
+{
+  "name": "acidbomb-pvar",
+  "description": "Acidbomb projectile pvar profile. Set entity to the verified pvar address of one specific projectile instance.",
+  "evidence": "Static Pokitaru callback 0x107534: +0x0C/+0x34 are float32 explicit-delta countdowns; +0x08 and +0x10/+0x14/+0x18 are float32 per-call integration inputs. Units and spawn scaling remain unknown.",
+  "fields": [
+    {
+      "name": "gravityLike08",
+      "offset": "0x08",
+      "type": "float32",
+      "base": "entity"
+    },
+    {
+      "name": "deltaTimer0C",
+      "offset": "0x0C",
+      "type": "float32",
+      "base": "entity"
+    },
+    {
+      "name": "integration10",
+      "offset": "0x10",
+      "type": "float32",
+      "base": "entity"
+    },
+    {
+      "name": "integration14",
+      "offset": "0x14",
+      "type": "float32",
+      "base": "entity"
+    },
+    {
+      "name": "integration18",
+      "offset": "0x18",
+      "type": "float32",
+      "base": "entity"
+    },
+    {
+      "name": "deltaTimer34",
+      "offset": "0x34",
+      "type": "float32",
+      "base": "entity"
+    }
+  ]
+}

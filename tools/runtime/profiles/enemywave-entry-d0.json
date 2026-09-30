@@ -1,0 +1,11 @@
+{
+  "name": "enemywave-entry-d0",
+  "description": "Diagnostic entry only, after s0/s1 initialization. A binding here does not prove fixed-branch eligibility.",
+  "binding": {"breakpointRva": "0x137DB0", "registers": {"object": "s0", "pvar": "s1"}},
+  "fields": [
+    {"name": "timer0C", "offset": "0x0C", "type": "float32", "base": "pvar"},
+    {"name": "delayRandMax10", "offset": "0x10", "type": "float32", "base": "pvar"},
+    {"name": "state45", "offset": "0x45", "type": "uint8", "base": "object"},
+    {"name": "pvarPointer", "offset": "0x54", "type": "uint32", "base": "object"}
+  ]
+}

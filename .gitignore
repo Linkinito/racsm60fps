@@ -1,0 +1,187 @@
+# ============================================================
+# Ratchet & Clank: Size Matters - Overcompensated
+# ============================================================
+
+
+# ------------------------------------------------------------
+# Original game / extracted data / RAM dumps
+# ------------------------------------------------------------
+
+02-Jeu-et-dumps/
+
+*.iso
+*.cso
+*.chd
+*.dump
+*.dmp
+
+
+# Game-derived content: NEVER commit (copyright, Sony/Insomniac/High Impact).
+# Game modules, save data, memory captures, disassembly and string dumps.
+**/SAVEDATA/
+*.bin
+*.BIN
+*.SFO
+*.PNG
+*.asm
+*disassembly*.txt
+disasm-*.txt
+*.ascii.txt
+research/v2/disasm-corpus/
+
+
+# ------------------------------------------------------------
+# Local PPSSPP installation
+# ------------------------------------------------------------
+
+03-Emulateur/
+
+
+# ------------------------------------------------------------
+# Toolchains / third-party analysis dependencies
+# ------------------------------------------------------------
+
+**/toolchains/
+**/analysis-deps/
+
+
+# ------------------------------------------------------------
+# PPSSPP runtime data
+# ------------------------------------------------------------
+
+**/PPSSPP_STATE/
+**/*.ppst
+**/*.undo.ppst
+
+**/PSP/SYSTEM/DUMP/
+**/PSP/AUDIO/
+
+
+# ------------------------------------------------------------
+# Runtime / historical emulator snapshots
+# ------------------------------------------------------------
+
+**/snapshot-original/PPSSPP_STATE/
+**/sessions/**/PPSSPP_STATE/
+
+
+# ------------------------------------------------------------
+# Build artefacts
+# ------------------------------------------------------------
+
+**/build/
+**/build-debug/
+**/build-release/
+
+**/*.o
+**/*.a
+
+**/*.prx
+**/*.PRX
+**/*.elf
+
+
+# ------------------------------------------------------------
+# Python / temporary files
+# ------------------------------------------------------------
+
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+*.tmp
+*.temp
+*.bak
+~*
+
+
+# ------------------------------------------------------------
+# IDE / OS
+# ------------------------------------------------------------
+
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
+
+
+# ------------------------------------------------------------
+# Secrets
+# ------------------------------------------------------------
+
+.env
+.env.*
+*.key
+
+# Duplicate PRX reference set.
+# SHA-256 verified identical to development-v0.6.3-generalisation/prx-reference/
+**/development-v0.6.1/verified-prx-inputs/
+
+
+# DeepSeek mission runtime logs
+research/inbox/deepseek/missions/**/mission-run*.log
+research/inbox/deepseek/missions/**/mission-retry*.log
+
+# Failed/recovery mission snapshots
+research/inbox/deepseek/missions/**/attempt-*/
+research/inbox/deepseek/missions/**/checkpoint-originals/
+
+# Live-test generated captures
+research/live-tests/**/preflight-*.json
+
+# Local PPSSPP API reference copies
+research/live-tests/**/api-reference/
+
+# Keep external worker diagnostics local; preserve status JSON in Git.
+research/inbox/deepseek/missions/**/workers/_logs/*.log
+
+# Detached DeepSeek runtime logs
+research/inbox/deepseek/missions/*/workers/_logs/*.stdout.log
+research/inbox/deepseek/missions/*/workers/_logs/*.stderr.log
+
+# Transient launch/runtime files
+research/inbox/deepseek/missions/*/launch.json
+research/live-tests/pokitaru/hp-001/*.bin
+
+
+# ------------------------------------------------------------
+# Local-only artefacts (curated publication policy, see AGENTS.md)
+# ------------------------------------------------------------
+
+*.zip
+*.docx
+*.pdf
+*.xlsx
+*.log
+MANIFESTE_SHA256.csv
+_local/
+output/
+outputs/
+tmp/
+measurements/
+payload/
+
+# Legacy archive: keep sources/notes only, not generated analysis data.
+01-Travail-et-profil-PPSSPP/**/*.json
+01-Travail-et-profil-PPSSPP/**/*.csv
+01-Travail-et-profil-PPSSPP/**/*.png
+01-Travail-et-profil-PPSSPP/**/*.html
+01-Travail-et-profil-PPSSPP/**/*.fps
+01-Travail-et-profil-PPSSPP/**/*.ndjson
+01-Travail-et-profil-PPSSPP/**/*.sha256
+01-Travail-et-profil-PPSSPP/**/archives/
+01-Travail-et-profil-PPSSPP/**/prx-reference/
+
+# Raw captures larger than 5 MB stay local (regenerate from methods).
+reports/AGENT-SESSION-2026-09-21/rate-constants-extended.json
+reports/AGENT-SESSION-2026-09-21/rate-constants.json
+research/live-tests/pokitaru/blaster-001/xp-candidates-after-xp-1.json
+research/live-tests/pokitaru/gate-001/raw-cave-probe.json
+research/live-tests/pokitaru/gate-001/raw-cave-watch.json
+research/live-tests/pokitaru/gate-001/raw-cleanup2.json
+research/live-tests/pokitaru/gate-001/raw-pvar08.json
+research/live-tests/pokitaru/gate-001/raw-recover.json
+research/live-tests/pokitaru/gate-001/raw-status-check.json
+research/live-tests/pokitaru/gate-001/raw-sweep.json
+research/v2/timing-markers/markers.csv

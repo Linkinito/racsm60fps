@@ -1,79 +1,84 @@
-# Ratchet & Clank: Size Matters - 60 FPS Research Project
+# Overcompensated — Ratchet & Clank: Size Matters at 60 FPS
 
-This is an experimental research project about making *Ratchet & Clank: Size Matters*, developed by the now-defunct High Impact Games studio, run at 60 FPS on PPSSPP.
+Research project to run *Ratchet & Clank: Size Matters* (PSP, EU `UCES00420`)
+at 60 FPS on PPSSPP **without changing how the game plays**.
 
-For many years, players have wondered if a proper 60 FPS patch for this game was possible. Unlike many PSP games, *Size Matters* does not become playable at 60 FPS by changing one simple value or unlocking the framerate. Most attempts make the whole game run at double speed.
+> **Status: experimental research.** No release-quality 60 FPS patch exists yet.
+> Individual corrections have been measured on a few objects; a first global
+> candidate (D1) is built but has not passed its first in-game acceptance test.
+> See [docs/DEVELOPMENT_STATUS_2026-09-23.md](docs/DEVELOPMENT_STATUS_2026-09-23.md)
+> and [CURRENT_STATE.md](CURRENT_STATE.md).
 
-This project started mostly out of curiosity: could a 60 FPS patch be made for a game that has resisted a proper solution for almost 20 years?
+## The problem
 
-## About this project
+The game was built around fixed 30 Hz logic. Unlocking the framerate is easy;
+the problem is that many systems count *frames* rather than *time*, so they
+simply run twice as fast: weapons, projectiles, enemies, timers, platforms,
+elevators, particles, scripted events.
 
-I am not a reverse engineering expert. I only know some basics of coding, and very little about MIPS assembly, PSP internals, or low-level game patching.
+There is no single global speed value to fix. The engine mixes several timing
+domains:
 
-This is mostly a "for fun" and learning-oriented project. The goal is to understand how the game works, why it breaks at 60 FPS, and whether a playable patch can realistically be built.
+- an outer update loop, normally paced by two VBlank waits (30 Hz);
+- a shared frame delta (≈ 1/30 s) passed to some consumers;
+- a player update that runs **two substeps** per outer frame;
+- hundreds of per-object callbacks with hard-coded per-frame constants.
 
-ChatGPT 5.5 is being used as a research assistant to help:
+Each level is a separate game module (`LEVEL_xx.PRX`) that is unloaded and
+reloaded on every level change, which makes static cheat/`.ini` patches
+impractical beyond the basic unlock.
 
-- read and interpret disassembled MIPS code;
-- compare similar routines across level files;
-- identify likely timing, physics, animation, and update logic;
-- document findings;
-- convert discoveries into PPSSPP cheat codes or patch notes;
-- automate some of the reasoning and research workflow.
+## The approach
 
-All findings are manually tested in PPSSPP.
+A **companion PRX plugin** loaded by PPSSPP next to the game. It detects which
+level module is resident, verifies it by hash and by the original instruction
+words, and applies guarded, reversible timing corrections. The original ISO
+and game modules are never modified.
 
-## Current status
+The current strategy (see
+[reports/60FPS-STRATEGY-REVIEW-2026-09-27.md](reports/60FPS-STRATEGY-REVIEW-2026-09-27.md)):
 
-A basic 60 FPS patch has been successfully tested on several levels.
+1. Build one **broad, inferred** global timing profile (D1) from the existing
+   engine knowledge and the legacy dispatcher.
+2. Play the game while hot-switching between original 30 FPS (A0) and the
+   candidate, and record discrepancies.
+3. Turn each measured discrepancy into a documented local exception.
 
-The current base patch usually involves:
+Priority 0 is faithful 30 → 60 FPS behaviour. Quality-of-life features
+(second analog stick, L2/R2, wider FOV closer to the PS2 games, new skill
+points) come later and must stay separable from the core patch. See
+[PROJECT_GOALS.md](PROJECT_GOALS.md).
 
-- bypassing the level-specific 30 FPS limiter;
-- changing the main frame delta from 1/30 to 1/60;
-- reducing the player update loop from 2 iterations to 1.
+## Repository layout
 
-This makes the main player movement run at the correct speed in some levels.
+| Path | Contents |
+| --- | --- |
+| `docs/` | Documentation map, technical overview, methodology, legacy notes ([index](docs/README.md)) |
+| `docs/fr/` | Owner-facing summary in French |
+| `patches/experimental/` | Plugin sources and build scripts for experimental candidates (C1/D0/D1, recorders, companions) |
+| `patches/validated/` | Empty until a correction meets the validation gate |
+| `tools/runtime/` | PPSSPP debugger-API tools: observer, profile switch panels, probes, measurement scripts |
+| `tools/prx/` | Offline PRX recipe tooling |
+| `research/` | Evidence index, tasks, live-test reports, static maps (research branch only) |
+| `reports/` | Consolidated analysis reports (research branch only) |
+| `01-Travail-et-profil-PPSSPP/` | Legacy v0.4–v0.6 sources and notes, preserved for provenance (research branch only) |
+| `cheats/` | Tested PPSSPP cheat files (public `main` branch) |
 
-However, the game was clearly built around a fixed 30 FPS logic. Many secondary systems still run too fast or desync, including weapons, projectiles, enemies, boost timers, traps, item pickup animations, crate debris, and some scripted events.
+## Legal
 
-So this is not a finished 60 FPS patch yet. It is an ongoing research project.
+This repository contains **no game files**: no ISO, no game PRX modules, no
+save data, no memory dumps, no disassembly listings and no extracted assets or
+text. You need your own legitimate copy of the game. The publication rules are
+in [docs/PUBLICATION_POLICY.md](docs/PUBLICATION_POLICY.md).
 
-## Why this is difficult
+*Ratchet & Clank* is a trademark of Sony Interactive Entertainment. This is an
+unofficial fan research project, not affiliated with Sony, Insomniac Games or
+High Impact Games.
 
-*Size Matters* seems to use many independent frame-based systems. Even when the main player movement is fixed, other parts of the game may still assume that one frame equals one 30 FPS tick.
+## Contributing
 
-This means that a full 60 FPS conversion is not as simple as changing one global value. Some parts may need individual fixes, level-specific patches, or deeper binary modifications.
-
-## Repository goal
-
-This repository is meant to:
-
-- document the research;
-- share tested PPSSPP cheat codes;
-- track known issues;
-- help other people understand the problem;
-- maybe attract people with more reverse engineering experience.
-
-This is not intended to include any copyrighted game files, PRX files, ISO dumps, or decompiled source code.
-
-Only research notes, patch descriptions, and cheat codes should be shared here.
-
-## Legal note
-
-This project does not provide the game, game assets, PRX files, or ISO files.
-
-You must own a legitimate copy of *Ratchet & Clank: Size Matters* to test anything from this repository.
-
-## Contributions
-
-Help is welcome, especially from people familiar with:
-
-- PSP reverse engineering;
-- MIPS assembly;
-- PPSSPP debugging;
-- Ghidra;
-- binary patching;
-- game physics and timing systems.
-
-This project is still experimental, messy, and incomplete, but that is also what makes it interesting.
+Help is welcome, especially from people who know PSP reverse engineering,
+MIPS, PPSSPP debugging, Ghidra or game timing systems. The project started
+out of curiosity and is developed with the help of AI research assistants;
+every finding is tested in PPSSPP and labelled with its evidence level
+([docs/methodology/EVIDENCE_LEVELS.md](docs/methodology/EVIDENCE_LEVELS.md)).

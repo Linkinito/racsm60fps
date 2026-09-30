@@ -1,0 +1,175 @@
+/* Context-preserving call probe. Derived from the legacy profiler save set.
+ * Per-callsite stub saves k0/k1 and passes metadata in k0 without linking.
+ * No callback is skipped, rescaled, or called twice. No VFPU instruction used.
+ */
+.set noreorder
+.set noat
+.text
+.align 4
+.globl recorder_hook
+.ent recorder_hook
+recorder_hook:
+    addiu $sp,$sp,-288
+    sw $zero,0($sp)
+    sw $1,4($sp)
+    sw $2,8($sp)
+    sw $3,12($sp)
+    sw $4,16($sp)
+    sw $5,20($sp)
+    sw $6,24($sp)
+    sw $7,28($sp)
+    sw $8,32($sp)
+    sw $9,36($sp)
+    sw $10,40($sp)
+    sw $11,44($sp)
+    sw $12,48($sp)
+    sw $13,52($sp)
+    sw $14,56($sp)
+    sw $15,60($sp)
+    sw $16,64($sp)
+    sw $17,68($sp)
+    sw $18,72($sp)
+    sw $19,76($sp)
+    sw $20,80($sp)
+    sw $21,84($sp)
+    sw $22,88($sp)
+    sw $23,92($sp)
+    sw $24,96($sp)
+    sw $25,100($sp)
+    sw $28,112($sp)
+    sw $30,120($sp)
+    sw $31,124($sp)
+    sw $26,268($sp)
+    lw $26,288($sp)
+    sw $26,104($sp)
+    lw $26,292($sp)
+    sw $26,108($sp)
+    addiu $26,$sp,304
+    sw $26,116($sp)
+    mfhi $26
+    sw $26,256($sp)
+    mflo $26
+    sw $26,260($sp)
+    cfc1 $26,$31
+    sw $26,264($sp)
+    swc1 $f0,128($sp)
+    swc1 $f1,132($sp)
+    swc1 $f2,136($sp)
+    swc1 $f3,140($sp)
+    swc1 $f4,144($sp)
+    swc1 $f5,148($sp)
+    swc1 $f6,152($sp)
+    swc1 $f7,156($sp)
+    swc1 $f8,160($sp)
+    swc1 $f9,164($sp)
+    swc1 $f10,168($sp)
+    swc1 $f11,172($sp)
+    swc1 $f12,176($sp)
+    swc1 $f13,180($sp)
+    swc1 $f14,184($sp)
+    swc1 $f15,188($sp)
+    swc1 $f16,192($sp)
+    swc1 $f17,196($sp)
+    swc1 $f18,200($sp)
+    swc1 $f19,204($sp)
+    swc1 $f20,208($sp)
+    swc1 $f21,212($sp)
+    swc1 $f22,216($sp)
+    swc1 $f23,220($sp)
+    swc1 $f24,224($sp)
+    swc1 $f25,228($sp)
+    swc1 $f26,232($sp)
+    swc1 $f27,236($sp)
+    swc1 $f28,240($sp)
+    swc1 $f29,244($sp)
+    swc1 $f30,248($sp)
+    swc1 $f31,252($sp)
+    addu $4,$sp,$zero
+    lw $5,268($sp)
+    jal recorder_hit
+    nop
+    lwc1 $f0,128($sp)
+    lwc1 $f1,132($sp)
+    lwc1 $f2,136($sp)
+    lwc1 $f3,140($sp)
+    lwc1 $f4,144($sp)
+    lwc1 $f5,148($sp)
+    lwc1 $f6,152($sp)
+    lwc1 $f7,156($sp)
+    lwc1 $f8,160($sp)
+    lwc1 $f9,164($sp)
+    lwc1 $f10,168($sp)
+    lwc1 $f11,172($sp)
+    lwc1 $f12,176($sp)
+    lwc1 $f13,180($sp)
+    lwc1 $f14,184($sp)
+    lwc1 $f15,188($sp)
+    lwc1 $f16,192($sp)
+    lwc1 $f17,196($sp)
+    lwc1 $f18,200($sp)
+    lwc1 $f19,204($sp)
+    lwc1 $f20,208($sp)
+    lwc1 $f21,212($sp)
+    lwc1 $f22,216($sp)
+    lwc1 $f23,220($sp)
+    lwc1 $f24,224($sp)
+    lwc1 $f25,228($sp)
+    lwc1 $f26,232($sp)
+    lwc1 $f27,236($sp)
+    lwc1 $f28,240($sp)
+    lwc1 $f29,244($sp)
+    lwc1 $f30,248($sp)
+    lwc1 $f31,252($sp)
+    lw $26,264($sp)
+    ctc1 $26,$31
+    lw $26,256($sp)
+    mthi $26
+    lw $26,260($sp)
+    mtlo $26
+    lw $1,4($sp)
+    lw $2,8($sp)
+    lw $3,12($sp)
+    lw $4,16($sp)
+    lw $5,20($sp)
+    lw $6,24($sp)
+    lw $7,28($sp)
+    lw $8,32($sp)
+    lw $9,36($sp)
+    lw $10,40($sp)
+    lw $11,44($sp)
+    lw $12,48($sp)
+    lw $13,52($sp)
+    lw $14,56($sp)
+    lw $15,60($sp)
+    lw $16,64($sp)
+    lw $17,68($sp)
+    lw $18,72($sp)
+    lw $19,76($sp)
+    lw $20,80($sp)
+    lw $21,84($sp)
+    lw $22,88($sp)
+    lw $23,92($sp)
+    lw $24,96($sp)
+    lw $25,100($sp)
+    lw $28,112($sp)
+    lw $30,120($sp)
+    lw $31,124($sp)
+    lw $27,268($sp)
+    lw $26,0($27)
+    bne $26,$zero,recorder_direct
+    nop
+    lw $27,4($27)
+    addu $27,$27,$sp
+    lw $27,0($27)
+    b recorder_resolved
+    nop
+recorder_direct:
+    addu $27,$26,$zero
+recorder_resolved:
+    lw $26,104($sp)
+    addiu $sp,$sp,304
+    jr $27
+    lw $27,-12($sp)
+.end recorder_hook
+.globl recorder_hook_end
+recorder_hook_end:

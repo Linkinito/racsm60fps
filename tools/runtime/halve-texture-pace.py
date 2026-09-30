@@ -1,0 +1,118 @@
+#!/usr/bin/env python3
+"""Halve the texture-pace constant inside the two live call sites (RAM arm).
+
+Measured 2026-09-23: a texture-animation updater (RVA 0x08960C) does
+`counter[0x2B6584] += f12` every frame, and its two callers each materialize
+f12 = 1/30 with `lui $a0, 0x3D08` + `ori $a0, $a0, 0x8889`. Halving the pace
+means changing only the `lui` half: 0x3D08 -> 0x3C88 (0x3C888889 = 1/60).
+
+Sites (module RVAs, tracked LEVEL_01 image):
+  0x01564C  lui $a0, 0x3D08   ->  lui $a0, 0x3C88
+  0x026960  lui $a0, 0x3D08   ->  lui $a0, 0x3C88
+
+Guarded: each word is read first and must hold the expected before (or after)
+value; every write is read back; the log records before/after. Reversible.
+"""
+
+import argparse
+import base64
+import importlib.util
+import json
+from pathlib import Path
+import time
+
+REPO = Path(__file__).resolve().parents[2]
+CLIENT_PATH = REPO / "research/live-tests/pokitaru/waterfall-001/ppsspp-ws.py"
+LOG = REPO / "research/live-tests/pokitaru/waterfall-002-20260923/texture-pace-arm.json"
+BASE = 0x09139D00
+
+BEFORE = 0x3C043D08   # lui $a0, 0x3D08  (1/30 high half)
+AFTER = 0x3C043C88    # lui $a0, 0x3C88  (1/60 high half)
+
+WORDS = {
+    BASE + 0x01564C: (BEFORE, AFTER),
+    BASE + 0x026960: (BEFORE, AFTER),
+}
+COUNTER = 0x093F0284
+
+
+def load_client():
+    spec = importlib.util.spec_from_file_location("ppsspp_ws", CLIENT_PATH)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--mode", required=True, choices=("halve", "revert"))
+    parser.add_argument("--port", type=int, default=60907)
+    args = parser.parse_args()
+    ws = load_client()
+
+    class Writer(ws.DebuggerClient):
+        def write_word(self, address, word):
+            self.seq += 1
+            ticket = "agent-%d" % self.seq
+            self._send_frame(json.dumps({
+                "event": "memory.write_u32", "ticket": ticket,
+                "address": address, "value": word,
+            }).encode())
+            deadline = time.monotonic() + ws.REQUEST_TIMEOUT_S
+            while True:
+                reply = json.loads(self._recv_message())
+                if reply.get("ticket") == ticket:
+                    if reply.get("event") == "error":
+                        raise ws.WsError(str(reply))
+                    return reply
+                if time.monotonic() > deadline:
+                    raise ws.WsError("timeout waiting for memory.write_u32")
+
+    client = Writer("127.0.0.1", args.port)
+    client.connect()
+
+    def read_word(address):
+        reply = client.request("memory.read", {"address": address, "size": 4,
+                                               "replacements": False})
+        return int.from_bytes(base64.b64decode(reply.get("base64", ""))[:4], "little")
+
+    record = {"utc": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+              "mode": args.mode, "writes": []}
+    try:
+        cpu = client.request("cpu.status")
+        if cpu.get("stepping") or cpu.get("paused"):
+            raise ws.WsError("CPU is paused or stepping")
+        if client.request("cpu.breakpoint.list").get("breakpoints"):
+            raise ws.WsError("breakpoints are active")
+        for address, (before, after) in WORDS.items():
+            target = before if args.mode == "halve" else after
+            current = read_word(address)
+            if current != target:
+                raise ws.WsError("unexpected word at %#x: %#x (want %#x)"
+                                 % (address, current, target))
+        record["counterBefore"] = read_word(COUNTER)
+        for address, (before, after) in WORDS.items():
+            target = after if args.mode == "halve" else before
+            client.write_word(address, target)
+            check = read_word(address)
+            if check != target:
+                raise ws.WsError("readback failed at %#x: %#x" % (address, check))
+            record["writes"].append({"address": hex(address),
+                                     "before": hex(before), "after": hex(after)})
+        record["counterAfter"] = read_word(COUNTER)
+        record["result"] = "PASS"
+    except Exception as error:
+        record["result"] = "FAILED"
+        record["error"] = str(error)
+        raise
+    finally:
+        client.close()
+        if record["result"] == "PASS":
+            LOG.write_text(json.dumps(record, indent=1), encoding="utf-8")
+        print(json.dumps({"result": record["result"], "mode": args.mode,
+                          "writes": len(record["writes"]),
+                          "log": str(LOG)}, sort_keys=True))
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,12 @@
+{
+  "name": "agents-glove",
+  "description": "Auto-bound Agents Glove pvar countdown candidates.",
+  "binding": {
+    "breakpointRva": "0x10FD6C",
+    "registers": {"pvar": "s2"}
+  },
+  "fields": [
+    {"name": "counter14", "offset": "0x14", "type": "float32", "base": "pvar"},
+    {"name": "counter40", "offset": "0x40", "type": "float32", "base": "pvar"}
+  ]
+}

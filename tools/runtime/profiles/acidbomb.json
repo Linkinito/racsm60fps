@@ -1,0 +1,19 @@
+{
+  "name": "acidbomb",
+  "description": "Auto-bound Acidbomb projectile object and pvar timing/integration fields.",
+  "binding": {
+    "breakpointRva": "0x107540",
+    "registers": {"object": "a0", "pvar": "s2"}
+  },
+  "fields": [
+    {"name": "position30", "offset": "0x30", "type": "float32", "base": "object"},
+    {"name": "position34", "offset": "0x34", "type": "float32", "base": "object"},
+    {"name": "position38", "offset": "0x38", "type": "float32", "base": "object"},
+    {"name": "gravityLike08", "offset": "0x08", "type": "float32", "base": "pvar"},
+    {"name": "deltaTimer0C", "offset": "0x0C", "type": "float32", "base": "pvar"},
+    {"name": "integration10", "offset": "0x10", "type": "float32", "base": "pvar"},
+    {"name": "integration14", "offset": "0x14", "type": "float32", "base": "pvar"},
+    {"name": "integration18", "offset": "0x18", "type": "float32", "base": "pvar"},
+    {"name": "deltaTimer34", "offset": "0x34", "type": "float32", "base": "pvar"}
+  ]
+}

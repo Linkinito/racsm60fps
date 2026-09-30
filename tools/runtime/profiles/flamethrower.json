@@ -1,0 +1,12 @@
+{
+  "name": "flamethrower",
+  "description": "Auto-bound Flamethrower object and pvar timing counters.",
+  "binding": {
+    "breakpointRva": "0x13B904",
+    "registers": {"object": "s0", "pvar": "s1"}
+  },
+  "fields": [
+    {"name": "objectPhase70", "offset": "0x70", "type": "float32", "base": "object"},
+    {"name": "pvarPhase10", "offset": "0x10", "type": "float32", "base": "pvar"}
+  ]
+}

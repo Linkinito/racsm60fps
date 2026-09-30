@@ -1,0 +1,19 @@
+{
+  "name": "laser-tracer-runtime",
+  "description": "Laser Tracer pvar plus typed module configuration profile. Set entity to the verified active Laser Tracer pvar address.",
+  "evidence": "Static Pokitaru paths: pvar+0x08 is a float32 gate-conditioned decrement; module+0x2D2C4C is a float32 initializer value copied into pvar+0x08. Counter semantics and eligibility remain unverified.",
+  "fields": [
+    {
+      "name": "conditionedCounter08",
+      "offset": "0x08",
+      "type": "float32",
+      "base": "entity"
+    },
+    {
+      "name": "configuredValue2D2C4C",
+      "offset": "0x2D2C4C",
+      "type": "float32",
+      "base": "module"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "patch_id": "level01-waterfall-halfstep-001",
+  "game_id": "UCES00420",
+  "required_runtime_state": "C1 with 60 Hz outer update; waterfall constant block only; apply before entering the Pokitaru scene",
+  "evidence_status": "UNVERIFIED_STATIC_CANDIDATE",
+  "rationale": "Level01Waterfall callback runs once per outer update (TESTED, true stops). Its per-call fixed steps -1/60 on obj+0x70 and -0.025 on the second channel are read from the waterfall-only constant block 0x2D4880..0x2D489C at sites 0x151E78 / 0x151EA8. C1 doubles the outer frequency, so every real-time period driven by these steps halves (measured cycle halves). This edit halves the two constants so the C1 real-time periods match A0. One field edit cannot claim whole-object parity: the integer +0x79 step and the pvar+0x08 parity gate stay untouched until measured.",
+  "modules": [
+    {
+      "module": "LEVEL_01.PRX",
+      "source": "01-Travail-et-profil-PPSSPP/Overcompensated-Reprise-2026-09-14/development-v0.6.3-generalisation/prx-reference/LEVEL_01.PRX",
+      "sha256": "d10a81d076fb44987a45314a020cda2f7e8b39f860b957911ca9365464676571",
+      "edits": [
+        {
+          "rva": "0x2D4890",
+          "before_word": "0x3C888889",
+          "after_word": "0x3C088889",
+          "context": [
+            {"delta": "-0x8", "word": "0x40600000"},
+            {"delta": "-0x4", "word": "0x3F800000"},
+            {"delta": "0x4", "word": "0x3CCCCCCE"},
+            {"delta": "0x8", "word": "0x3F000000"},
+            {"delta": "0xC", "word": "0x3EAAAAAB"}
+          ]
+        },
+        {
+          "rva": "0x2D4894",
+          "before_word": "0x3CCCCCCE",
+          "after_word": "0x3C4CCCCD",
+          "context": [
+            {"delta": "-0x4", "word": "0x3C888889"},
+            {"delta": "0x4", "word": "0x3F000000"},
+            {"delta": "0x8", "word": "0x3EAAAAAB"},
+            {"delta": "0xC", "word": "0x3E19999A"}
+          ]
+        }
+      ]
+    }
+  ]
+}

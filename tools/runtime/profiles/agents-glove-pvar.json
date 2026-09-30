@@ -1,0 +1,19 @@
+{
+  "name": "agents-glove-pvar",
+  "description": "Agents Glove pvar profile. Set entity to the verified active weapon pvar address.",
+  "evidence": "Static Pokitaru callback 0x10FD58: pvar+0x14 and pvar+0x40 are float32 countdown-like fields, decrement by 1 per eligible call and use observed reset constants 180 and 23. Their exact gameplay roles remain unverified.",
+  "fields": [
+    {
+      "name": "counter14",
+      "offset": "0x14",
+      "type": "float32",
+      "base": "entity"
+    },
+    {
+      "name": "counter40",
+      "offset": "0x40",
+      "type": "float32",
+      "base": "entity"
+    }
+  ]
+}

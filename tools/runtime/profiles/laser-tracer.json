@@ -1,0 +1,12 @@
+{
+  "name": "laser-tracer",
+  "description": "Auto-bound Laser Tracer pvar counter plus module rate value.",
+  "binding": {
+    "breakpointRva": "0x148D28",
+    "registers": {"pvar": "s1"}
+  },
+  "fields": [
+    {"name": "conditionedCounter08", "offset": "0x08", "type": "float32", "base": "pvar"},
+    {"name": "configuredValue2D2C4C", "offset": "0x2D2C4C", "type": "float32", "base": "module"}
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "flamethrower-pvar",
+  "description": "Flamethrower pvar profile. Set entity to the verified active weapon pvar address, not the object address.",
+  "evidence": "Static Pokitaru callback 0x13B8F0: pvar+0x10 is float32, increments by 1 per eligible call and wraps at 90. Exact visible meaning remains unverified.",
+  "fields": [
+    {
+      "name": "phase10",
+      "offset": "0x10",
+      "type": "float32",
+      "base": "entity"
+    }
+  ]
+}

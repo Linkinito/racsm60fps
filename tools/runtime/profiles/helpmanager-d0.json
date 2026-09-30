@@ -1,0 +1,11 @@
+{
+  "name": "helpmanager-d0",
+  "description": "D0 calibration: source-bound help reminder timer; neighbours are integer controls.",
+  "binding": {"breakpointRva": "0x150F04", "registers": {"object": "a0", "pvar": "s1"}},
+  "fields": [
+    {"name": "timer1C", "offset": "0x1C", "type": "float32", "base": "pvar"},
+    {"name": "counter18", "offset": "0x18", "type": "uint32", "base": "pvar"},
+    {"name": "stateBits24", "offset": "0x24", "type": "uint32", "base": "pvar"},
+    {"name": "pvarPointer", "offset": "0x58", "type": "uint32", "base": "object"}
+  ]
+}

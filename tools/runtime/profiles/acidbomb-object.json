@@ -1,0 +1,25 @@
+{
+  "name": "acidbomb-object",
+  "description": "Acidbomb projectile object-position profile. Set entity to the verified object address of one specific projectile instance, not its pvar.",
+  "evidence": "Static Pokitaru callback 0x107534: object+0x30/+0x34/+0x38 are float32 position-like fields updated from pvar integration fields once per eligible call. Axis names and units remain unknown.",
+  "fields": [
+    {
+      "name": "position30",
+      "offset": "0x30",
+      "type": "float32",
+      "base": "entity"
+    },
+    {
+      "name": "position34",
+      "offset": "0x34",
+      "type": "float32",
+      "base": "entity"
+    },
+    {
+      "name": "position38",
+      "offset": "0x38",
+      "type": "float32",
+      "base": "entity"
+    }
+  ]
+}

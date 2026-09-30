@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "patch_id": "lvl3-elevator-progress-halfstep-001",
+  "game_id": "UCES00420",
+  "required_runtime_state": "C1 with 60 Hz outer update; apply before elevator initialization",
+  "evidence_status": "UNVERIFIED_STATIC_CANDIDATE",
+  "rationale": "The callback executes once per outer update. Its initializer computes (1/moveTime)*(1/30) into s1+0x0C; the active callback adds that value to s1+0x08 once per call. C1 doubles outer frequency. The edit changes only the 1/30 literal to exact 1/60.",
+  "modules": [
+    {
+      "module": "LEVEL_01.PRX",
+      "source": "01-Travail-et-profil-PPSSPP/Overcompensated-Reprise-2026-09-14/development-v0.6.3-generalisation/prx-reference/LEVEL_01.PRX",
+      "sha256": "d10a81d076fb44987a45314a020cda2f7e8b39f860b957911ca9365464676571",
+      "edits": [{"rva": "0x1563E8", "before_word": "0x3C063D08", "after_word": "0x3C063C88", "context": [{"delta": "0x4", "word": "0x34C68889"}, {"delta": "0x20", "word": "0x44866800"}, {"delta": "0x24", "word": "0x460D6302"}, {"delta": "0x28", "word": "0xE62C000C"}]}]
+    },
+    {
+      "module": "LEVEL_02.PRX",
+      "source": "01-Travail-et-profil-PPSSPP/Overcompensated-Reprise-2026-09-14/development-v0.6.3-generalisation/prx-reference/LEVEL_02.PRX",
+      "sha256": "0037689a926197969231795c4d6b05980e5e94558394617b21e8b8bcd79bc8aa",
+      "edits": [{"rva": "0x16B050", "before_word": "0x3C063D08", "after_word": "0x3C063C88", "context": [{"delta": "0x4", "word": "0x34C68889"}, {"delta": "0x20", "word": "0x44866800"}, {"delta": "0x24", "word": "0x460D6302"}, {"delta": "0x28", "word": "0xE62C000C"}]}]
+    },
+    {
+      "module": "LEVEL_03.PRX",
+      "source": "01-Travail-et-profil-PPSSPP/Overcompensated-Reprise-2026-09-14/development-v0.6.3-generalisation/prx-reference/LEVEL_03.PRX",
+      "sha256": "4b6cf5e41ab9f3f30e182f15752a4d9d264904794ce568582fa78ad8177e8b94",
+      "edits": [{"rva": "0x153BF4", "before_word": "0x3C063D08", "after_word": "0x3C063C88", "context": [{"delta": "0x4", "word": "0x34C68889"}, {"delta": "0x20", "word": "0x44866800"}, {"delta": "0x24", "word": "0x460D6302"}, {"delta": "0x28", "word": "0xE62C000C"}]}]
+    },
+    {
+      "module": "LEVEL_07.PRX",
+      "source": "01-Travail-et-profil-PPSSPP/Overcompensated-Reprise-2026-09-14/development-v0.6.3-generalisation/prx-reference/LEVEL_07.PRX",
+      "sha256": "40e236a82cce9be46044a06945dcd0e7aab754e91d1eb7bb75b8040101dc233d",
+      "edits": [{"rva": "0x166174", "before_word": "0x3C063D08", "after_word": "0x3C063C88", "context": [{"delta": "0x4", "word": "0x34C68889"}, {"delta": "0x20", "word": "0x44866800"}, {"delta": "0x24", "word": "0x460D6302"}, {"delta": "0x28", "word": "0xE62C000C"}]}]
+    },
+    {
+      "module": "LEVEL_24.PRX",
+      "source": "01-Travail-et-profil-PPSSPP/Overcompensated-Reprise-2026-09-14/development-v0.6.3-generalisation/prx-reference/LEVEL_24.PRX",
+      "sha256": "a4e3f6496b3d2d238767fbb72b9db274dc5179dbe4d6f71eea2ce1fee22480bf",
+      "edits": [{"rva": "0x1367B8", "before_word": "0x3C063D08", "after_word": "0x3C063C88", "context": [{"delta": "0x4", "word": "0x34C68889"}, {"delta": "0x20", "word": "0x44866800"}, {"delta": "0x24", "word": "0x460D6302"}, {"delta": "0x28", "word": "0xE62C000C"}]}]
+    }
+  ]
+}

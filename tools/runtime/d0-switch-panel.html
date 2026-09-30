@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A0 / D0</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#111722;color:#ecf1f9;font:16px system-ui,sans-serif;line-height:1.5;padding:32px}
+main{max-width:720px;margin:4vh auto}.eyebrow{font-size:12px;letter-spacing:.14em;color:#93a6c2;text-transform:uppercase}h1{font-size:34px;margin:12px 0}p{color:#aebbd0}
+.state{padding:20px;background:#1c2637;border:1px solid #354663;border-radius:14px;margin:26px 0}.state strong{display:block;font-size:24px;color:#fff}.buttons{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+button{border:1px solid #3c5070;background:#203049;border-radius:12px;color:#fff;text-align:left;padding:20px;cursor:pointer;font:inherit}button:hover{background:#2c4262}button:disabled{opacity:.45;cursor:wait}button strong{display:block;font-size:22px}button span{display:block;color:#b6c4d9;font-size:14px;margin-top:4px}#refresh{margin-top:14px;padding:9px 14px;font-size:14px}.note{font-size:14px}.error{color:#ffbaa7}footer{margin-top:36px;font-size:12px;color:#8394ad}@media(max-width:450px){body{padding:20px}.buttons{grid-template-columns:1fr}}
+</style>
+<main>
+<div class="eyebrow">Pokitaru · UCES00420 · experiment</div>
+<h1>Same session. Two profiles.</h1>
+<p>Switch while the game is running. No restart or save reload is needed.</p>
+<section class="state" aria-live="polite"><div id="caption">Current profile</div><strong id="state">Checking…</strong><div id="message"></div></section>
+<div class="buttons">
+<button data-target="A0"><strong>A0</strong><span>Original · 30 FPS</span></button>
+<button data-target="D0"><strong>D0</strong><span>Patch · 60 FPS</span></button>
+</div>
+<button id="refresh" data-target="status">Check current profile</button>
+<p class="note"><b>D0 here:</b> C1 core + corrected help timer.<br>Cascade and butterfly additions are separate; EnemyWave timing is awaiting a suitable test.</p>
+<p class="note">A game-save reload can restore A0. Check the current profile afterwards. Switches preserve the current scene; they do not reset enemies, timers or random choices.</p>
+<footer>Experimental comparison · successful switching does not establish gameplay parity.</footer>
+</main>
+<script>
+const token='__SESSION_TOKEN__';
+const buttons=[...document.querySelectorAll('button')];
+async function act(target){
+ buttons.forEach(b=>b.disabled=true);
+ document.querySelector('#caption').textContent=target==='status'?'Checking current profile':'Switch in progress';
+ const message=document.querySelector('#message');message.textContent='';message.className='';
+ try{
+  const response=await fetch('/switch',{method:'POST',headers:{'Content-Type':'application/json','X-Session':token},body:JSON.stringify({target})});
+  const result=await response.json();
+  const profile=result.after||result.recovery||result.before;
+  document.querySelector('#state').textContent=profile?.profile||'Unverified';
+  if(!response.ok){message.textContent=result.error||'Switch refused. Check the game before retrying.';message.className='error';}
+  else message.textContent=target==='status'?'Profile read from the game.':'Profile verified. You can continue playing.';
+  if(result.status==='UNRESOLVED')document.querySelector('#state').textContent='Unverified';
+ }catch(error){document.querySelector('#state').textContent='Disconnected';message.textContent='Open PPSSPP, then check the profile again.';message.className='error';}
+ finally{buttons.forEach(b=>b.disabled=false);document.querySelector('#caption').textContent='Current profile';}
+}
+buttons.forEach(b=>b.addEventListener('click',()=>act(b.dataset.target)));
+act('status');
+</script></html>

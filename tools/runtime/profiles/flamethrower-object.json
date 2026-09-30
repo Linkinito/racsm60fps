@@ -1,0 +1,13 @@
+{
+  "name": "flamethrower-object",
+  "description": "Flamethrower active object profile. Set entity to the verified active weapon object address, not its pvar.",
+  "evidence": "Static Pokitaru callback 0x13B8F0: object+0x70 is float32 and increments by 1 per eligible call before threshold handling. Runtime ownership and visible meaning remain unverified.",
+  "fields": [
+    {
+      "name": "phase70",
+      "offset": "0x70",
+      "type": "float32",
+      "base": "entity"
+    }
+  ]
+}
