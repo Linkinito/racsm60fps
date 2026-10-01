@@ -61,5 +61,10 @@ shared-helper-census.py, triage-helpers.py, class-table.py.
 3. Later: self-applying plugin (no debugger), port fixes to other levels by
    signature, animdisp asm wrapper, weapons (LaserTracer drain, Blaster), FRONTEND
    intro/language skip as separate dev-convenience plugin (owner request).
+4. Priority 2 (separate plugin, owner request 2026-10-01): docs/priority2/README.md
+   indexes 15 workstreams (right stick, L2/R2, camera speed/FOV, loading 20 FPS,
+   menus, blink, checkbox menu, debug menu, stats, objectives, RetroAchievements,
+   free camera, draw distance, Miniturret). Doc-only so far, NOTHING measured
+   (cloud session without game). Triage items 5-7 as possible Priority 0 defects first.
 Next-session files: AGENTS.md, this file, session log,
 patches/experimental/interp-gate/interp.c, tools/runtime/fixes.py.

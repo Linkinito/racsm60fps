@@ -28,3 +28,5 @@ Priority 0 remains faithful 30 -> 60 FPS behaviour (see [../PROJECT_GOALS.md](..
 
 - Developer convenience: skip language menu and intro videos (FRONTEND module).
 - Quality of life: second analog stick, L2/R2, wider FOV, new skill points.
+
+Detailed Priority 2 workstream notes: [priority2/README.md](priority2/README.md).
