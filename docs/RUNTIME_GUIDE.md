@@ -34,6 +34,7 @@ Keep raw outputs local (`research/live-tests/**/raw/` is ignored).
 
 | Tool | Use |
 |---|---|
+| `fix-monitor.py` | numeric check of fixes: rates per game second, timer durations, hook calls, A0 baseline ratios (needs `--fix telemetry`) |
 | `group-census.py` | list active pump-1 classes and instance counts |
 | `crab-probe.py --rva <callback>` | find an entity of a class and list which fields change |
 | `write-probe.py` | stop on writes to a field (`--address`, `--deref`, `--change`) and report the writing code |

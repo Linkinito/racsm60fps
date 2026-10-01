@@ -1,0 +1,1347 @@
+{
+ "status": "STATIC_PROFILE",
+ "classes": {
+  "Acidbomb": {
+   "update": "0x107534",
+   "updateLines": 181,
+   "deltaParam": true,
+   "usesDelta": true,
+   "positionWriters": [
+    "0x107534"
+   ],
+   "sharedPositionWriters": []
+  },
+  "AcidbombEpoxy": {
+   "update": "0x108a08",
+   "updateLines": 44,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "AcidGloveHUD": {
+   "update": "0x108f20",
+   "updateLines": 7,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "AgentController": {
+   "update": "0x1091d0",
+   "updateLines": 100,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "AgentOfDoom": {
+   "update": "0x1099bc",
+   "updateLines": 27,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [
+    "0x10c15c",
+    "0x10de64"
+   ],
+   "sharedPositionWriters": []
+  },
+  "AgentOfDoomShrapnel": {
+   "update": "0x10e404",
+   "updateLines": 8,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "AgentsBomb": {
+   "update": "0x10e714",
+   "updateLines": 19,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [
+    "0x10eb1c"
+   ],
+   "sharedPositionWriters": []
+  },
+  "AgentsGlove": {
+   "update": "0x10fd58",
+   "updateLines": 110,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "AgentsGrenade": {
+   "update": "0x1107cc",
+   "updateLines": 179,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "AgentsLaser": {
+   "update": "0x111104",
+   "updateLines": 66,
+   "deltaParam": true,
+   "usesDelta": true,
+   "positionWriters": [
+    "0x111104"
+   ],
+   "sharedPositionWriters": []
+  },
+  "AgentsRocket": {
+   "update": "0x111c54",
+   "updateLines": 114,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [
+    "0x111c54",
+    "0xcdd68"
+   ],
+   "sharedPositionWriters": [
+    "0xcdd68"
+   ]
+  },
+  "ArmorHelmet": {
+   "update": "0x11254c",
+   "updateLines": 7,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "ArmorLeftFoot": {
+   "update": "0x112564",
+   "updateLines": 7,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "ArmorLeftHand": {
+   "update": "0x11257c",
+   "updateLines": 7,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "ArmorPickup": {
+   "update": "0x112df4",
+   "updateLines": 135,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [
+    "0x7248"
+   ],
+   "sharedPositionWriters": [
+    "0x7248"
+   ]
+  },
+  "ArmorRightFoot": {
+   "update": "0x113340",
+   "updateLines": 7,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "ArmorRightHand": {
+   "update": "0x113358",
+   "updateLines": 7,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "ArmorTorso": {
+   "update": "0x113370",
+   "updateLines": 7,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "BeeMine": {
+   "update": "0x113e00",
+   "updateLines": 685,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [
+    "0x113d0c",
+    "0x178478",
+    "0xcdd68"
+   ],
+   "sharedPositionWriters": [
+    "0xcdd68"
+   ]
+  },
+  "BeeMineGlove": {
+   "update": "0x115990",
+   "updateLines": 52,
+   "deltaParam": true,
+   "usesDelta": true,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "BeeMineGloveHUD": {
+   "update": "0x115fc0",
+   "updateLines": 7,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "BeeMineShrapnel": {
+   "update": "0x116308",
+   "updateLines": 8,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "Blaster": {
+   "update": "0x116a00",
+   "updateLines": 487,
+   "deltaParam": true,
+   "usesDelta": true,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "BlasterAkimbo": {
+   "update": "0x117a94",
+   "updateLines": 14,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "BlasterShot": {
+   "update": "0x118130",
+   "updateLines": 198,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [
+    "0x118130"
+   ],
+   "sharedPositionWriters": []
+  },
+  "BlitzGun": {
+   "update": "0x11a5b0",
+   "updateLines": 382,
+   "deltaParam": true,
+   "usesDelta": true,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "BlitzGunShot": {
+   "update": "0x11c1e8",
+   "updateLines": 250,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "BoltController": {
+   "update": "0x1204c0",
+   "updateLines": 7,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "BoltCrankBolt": {
+   "update": "0x120a80",
+   "updateLines": 64,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [
+    "0x120a80"
+   ],
+   "sharedPositionWriters": []
+  },
+  "BoltCrankCam": {
+   "update": "0x120fb4",
+   "updateLines": 68,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "BoltGrabber": {
+   "update": "0x121264",
+   "updateLines": 7,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "Bombglove": {
+   "update": "0x1217f4",
+   "updateLines": 141,
+   "deltaParam": true,
+   "usesDelta": true,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "BoxBreaker": {
+   "update": "0x121d74",
+   "updateLines": 7,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "BoxBreakerHelp": {
+   "update": "0x121e10",
+   "updateLines": 14,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "BreakableObject": {
+   "update": "0x122080",
+   "updateLines": 7,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "Butterfly": {
+   "update": "0x122820",
+   "updateLines": 239,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [
+    "0x1226b0",
+    "0x122820"
+   ],
+   "sharedPositionWriters": []
+  },
+  "ChameleonDecoy": {
+   "update": "0x123248",
+   "updateLines": 24,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "ClankForShipAnim": {
+   "update": "0x123394",
+   "updateLines": 7,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "ClankPack": {
+   "update": "0x1233d4",
+   "updateLines": 8,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "ConditionalStartLocation": {
+   "update": "0x123424",
+   "updateLines": 15,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "ContinuePoint": {
+   "update": "0x1234d0",
+   "updateLines": 24,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "CowBell": {
+   "update": "0x1239b0",
+   "updateLines": 8,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "Crab": {
+   "update": "0x126f28",
+   "updateLines": 167,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [
+    "0x18ffbc",
+    "0x2a8f0"
+   ],
+   "sharedPositionWriters": [
+    "0x18ffbc",
+    "0x2a8f0"
+   ]
+  },
+  "CrabObjectController": {
+   "update": "0x127f18",
+   "updateLines": 102,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "CrabShrapnel": {
+   "update": "0x1281c8",
+   "updateLines": 42,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "CrankedObject": {
+   "update": "0x128c20",
+   "updateLines": 278,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [
+    "0x128c20"
+   ],
+   "sharedPositionWriters": []
+  },
+  "Crate": {
+   "update": "0x129558",
+   "updateLines": 7,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "CrateAmmo": {
+   "update": "0x129668",
+   "updateLines": 7,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "CrossbowGun": {
+   "update": "0x12b254",
+   "updateLines": 180,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "CrossbowShot": {
+   "update": "0x12cdec",
+   "updateLines": 240,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "CrystalGroundShard": {
+   "update": "0x12e168",
+   "updateLines": 63,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "DesignTest": {
+   "update": "0x12e898",
+   "updateLines": 15,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "DropshipB": {
+   "update": "0x12f850",
+   "updateLines": 154,
+   "deltaParam": true,
+   "usesDelta": true,
+   "positionWriters": [
+    "0x12e950"
+   ],
+   "sharedPositionWriters": []
+  },
+  "DropshipLaser": {
+   "update": "0x1305d8",
+   "updateLines": 48,
+   "deltaParam": true,
+   "usesDelta": true,
+   "positionWriters": [
+    "0x1305d8"
+   ],
+   "sharedPositionWriters": []
+  },
+  "DualBlasterHUD": {
+   "update": "0x1307b0",
+   "updateLines": 7,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "electricXplo": {
+   "update": "0x130fac",
+   "updateLines": 104,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "ElectroBall": {
+   "update": "0x132bec",
+   "updateLines": 73,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "ElectroshockWave": {
+   "update": "0x134310",
+   "updateLines": 107,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "EndMovie": {
+   "update": "0x1347ec",
+   "updateLines": 34,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "EnemyController": {
+   "update": "0x134fcc",
+   "updateLines": 56,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [
+    "0x1357c0",
+    "0x135c6c",
+    "0x1364c4",
+    "0x13679c"
+   ],
+   "sharedPositionWriters": []
+  },
+  "EnemyWave": {
+   "update": "0x137d9c",
+   "updateLines": 165,
+   "deltaParam": true,
+   "usesDelta": true,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "ExplosiveBee": {
+   "update": "0x1391b0",
+   "updateLines": 421,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [
+    "0x138594",
+    "0x1386c0"
+   ],
+   "sharedPositionWriters": []
+  },
+  "Fire": {
+   "update": "0x13a51c",
+   "updateLines": 134,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [
+    "0xcdd68",
+    "0xce1d8",
+    "0xce7e8"
+   ],
+   "sharedPositionWriters": [
+    "0xcdd68"
+   ]
+  },
+  "Flamethrower": {
+   "update": "0x13b8f0",
+   "updateLines": 91,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "FlyingCarLightweightDirectional": {
+   "update": "0x13e12c",
+   "updateLines": 64,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "FlyingCarLightweightOrbit": {
+   "update": "0x13f1d0",
+   "updateLines": 69,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "FlyingCarLightweightPathed": {
+   "update": "0x1401a8",
+   "updateLines": 69,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "FogMoby": {
+   "update": "0x141204",
+   "updateLines": 110,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "GlowCard": {
+   "update": "0x14187c",
+   "updateLines": 8,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "GravityCrystal": {
+   "update": "0x142e30",
+   "updateLines": 138,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "HeadShrapnel": {
+   "update": "0x143248",
+   "updateLines": 62,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "Helipack": {
+   "update": "0x143850",
+   "updateLines": 21,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "HutDoor": {
+   "update": "0x143fec",
+   "updateLines": 213,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [
+    "0x143fec"
+   ],
+   "sharedPositionWriters": []
+  },
+  "Hypershot": {
+   "update": "0x144954",
+   "updateLines": 42,
+   "deltaParam": true,
+   "usesDelta": true,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "InitialCamera": {
+   "update": "0x144be8",
+   "updateLines": 34,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "IntroMovie": {
+   "update": "0x144dd4",
+   "updateLines": 25,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "LaserTracer": {
+   "update": "0x148cec",
+   "updateLines": 97,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "Level01Boat": {
+   "update": "0x14eb68",
+   "updateLines": 563,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [
+    "0x14eb68"
+   ],
+   "sharedPositionWriters": []
+  },
+  "Level01Cutscene01": {
+   "update": "0x1503ac",
+   "updateLines": 29,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "Level01DoorTarget": {
+   "update": "0x15083c",
+   "updateLines": 91,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [
+    "0x15083c"
+   ],
+   "sharedPositionWriters": []
+  },
+  "Level01HelpManager": {
+   "update": "0x150ef8",
+   "updateLines": 153,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "Level01OceanSound": {
+   "update": "0x151654",
+   "updateLines": 113,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "Level01SkyController": {
+   "update": "0x1519a8",
+   "updateLines": 39,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "Level01Waterfall": {
+   "update": "0x151d78",
+   "updateLines": 114,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "LevelSettings": {
+   "update": "0x15299c",
+   "updateLines": 7,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "LunaCamera": {
+   "update": "0x1529f0",
+   "updateLines": 50,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "LunaCutscene": {
+   "update": "0x152ea0",
+   "updateLines": 17,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [
+    "0x191880"
+   ],
+   "sharedPositionWriters": [
+    "0x191880"
+   ]
+  },
+  "LunaNPC": {
+   "update": "0x154294",
+   "updateLines": 345,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [
+    "0x153f28",
+    "0x2be30"
+   ],
+   "sharedPositionWriters": []
+  },
+  "LunaPhotoTarget": {
+   "update": "0x155ce4",
+   "updateLines": 7,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "Lvl3Elevator": {
+   "update": "0x156710",
+   "updateLines": 304,
+   "deltaParam": true,
+   "usesDelta": true,
+   "positionWriters": [
+    "0x156710"
+   ],
+   "sharedPositionWriters": []
+  },
+  "MapOMaticGadget": {
+   "update": "0x1570a0",
+   "updateLines": 7,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "MatrixMoby": {
+   "update": "0x1570b8",
+   "updateLines": 7,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "MobyGroup": {
+   "update": "0x157160",
+   "updateLines": 32,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "MobyIce": {
+   "update": "0x15841c",
+   "updateLines": 188,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "Mootator": {
+   "update": "0x15a364",
+   "updateLines": 145,
+   "deltaParam": true,
+   "usesDelta": true,
+   "positionWriters": [
+    "0x199cf4"
+   ],
+   "sharedPositionWriters": [
+    "0x199cf4"
+   ]
+  },
+  "MutantCow": {
+   "update": "0x15af7c",
+   "updateLines": 371,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [
+    "0x190d6c"
+   ],
+   "sharedPositionWriters": [
+    "0x190d6c"
+   ]
+  },
+  "MutantMadCow": {
+   "update": "0x15c060",
+   "updateLines": 294,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [
+    "0x190d6c",
+    "0x199cf4"
+   ],
+   "sharedPositionWriters": [
+    "0x190d6c",
+    "0x199cf4"
+   ]
+  },
+  "NapalmBubble": {
+   "update": "0x15cce0",
+   "updateLines": 44,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "PathAnimal": {
+   "update": "0x15dd3c",
+   "updateLines": 201,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [
+    "0x15dd3c"
+   ],
+   "sharedPositionWriters": []
+  },
+  "PDA": {
+   "update": "0x15e380",
+   "updateLines": 13,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "Polarizer": {
+   "update": "0x15f058",
+   "updateLines": 191,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "PowerupAmmo": {
+   "update": "0x16009c",
+   "updateLines": 28,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [
+    "0x16013c",
+    "0x1602ac"
+   ],
+   "sharedPositionWriters": []
+  },
+  "PowerupHealth": {
+   "update": "0x1615c8",
+   "updateLines": 64,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [
+    "0x1619c8",
+    "0x162554"
+   ],
+   "sharedPositionWriters": []
+  },
+  "Ratchet": {
+   "update": "0x162fb8",
+   "updateLines": 7,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "RatchetDecoyInner": {
+   "update": "0x164c30",
+   "updateLines": 140,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "RatchetDecoyOuter": {
+   "update": "0x165184",
+   "updateLines": 9,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "RatchetShip": {
+   "update": "0x1653f4",
+   "updateLines": 7,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "RatchetShipAnimation": {
+   "update": "0x166438",
+   "updateLines": 159,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [
+    "0x167184",
+    "0xdf454"
+   ],
+   "sharedPositionWriters": []
+  },
+  "Region": {
+   "update": "0x1684a4",
+   "updateLines": 7,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "Ryno": {
+   "update": "0x168c28",
+   "updateLines": 188,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "RynoRocket": {
+   "update": "0x169698",
+   "updateLines": 103,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [
+    "0x169990",
+    "0x169ac8"
+   ],
+   "sharedPositionWriters": []
+  },
+  "SetCamera": {
+   "update": "0x16a670",
+   "updateLines": 73,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "ShakeyBush": {
+   "update": "0x16aba8",
+   "updateLines": 104,
+   "deltaParam": true,
+   "usesDelta": true,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "Sharkagator": {
+   "update": "0x16afd4",
+   "updateLines": 31,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "SharkagatorFin": {
+   "update": "0x16b830",
+   "updateLines": 168,
+   "deltaParam": true,
+   "usesDelta": true,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "ShieldCharger": {
+   "update": "0x16cb78",
+   "updateLines": 219,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "ShieldChargerBolt": {
+   "update": "0x16f228",
+   "updateLines": 88,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "ShockRocket": {
+   "update": "0x16f954",
+   "updateLines": 268,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "ShockRocketShot": {
+   "update": "0x170b20",
+   "updateLines": 360,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [
+    "0x1709ec"
+   ],
+   "sharedPositionWriters": []
+  },
+  "ShrapnelGeneric": {
+   "update": "0x171948",
+   "updateLines": 9,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "ShrinkBeam": {
+   "update": "0x17202c",
+   "updateLines": 64,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "ShrinkRayRatchet": {
+   "update": "0x172cfc",
+   "updateLines": 7,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "SkillPoint_L01": {
+   "update": "0x172fb8",
+   "updateLines": 98,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "SlideController": {
+   "update": "0x173788",
+   "updateLines": 18,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "Spitfire": {
+   "update": "0x173aa0",
+   "updateLines": 56,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [
+    "0x173aa0"
+   ],
+   "sharedPositionWriters": []
+  },
+  "Splash": {
+   "update": "0x174e84",
+   "updateLines": 38,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "Sproutomatic": {
+   "update": "0x17553c",
+   "updateLines": 40,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "StaticBarrierBelt": {
+   "update": "0x175b3c",
+   "updateLines": 7,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "SuckCannon": {
+   "update": "0x1762a8",
+   "updateLines": 164,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "SuckCannonComet": {
+   "update": "0x19adf4",
+   "updateLines": 352,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "SuckCannonCometTie": {
+   "update": "0x176c18",
+   "updateLines": 9,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "SuckCannonManager": {
+   "update": "0x17794c",
+   "updateLines": 241,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [
+    "0x11e050"
+   ],
+   "sharedPositionWriters": []
+  },
+  "SwarmManager": {
+   "update": "0x178a1c",
+   "updateLines": 97,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "Teleporter": {
+   "update": "0x1799c0",
+   "updateLines": 241,
+   "deltaParam": true,
+   "usesDelta": true,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "TieManipulator": {
+   "update": "0x17a8e4",
+   "updateLines": 111,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "TitaniumBolt": {
+   "update": "0x17afcc",
+   "updateLines": 122,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [
+    "0x7248"
+   ],
+   "sharedPositionWriters": [
+    "0x7248"
+   ]
+  },
+  "TMRobotHeadB": {
+   "update": "0x17d49c",
+   "updateLines": 451,
+   "deltaParam": true,
+   "usesDelta": true,
+   "positionWriters": [
+    "0x17bf14",
+    "0x18ffbc",
+    "0x2a8f0"
+   ],
+   "sharedPositionWriters": [
+    "0x18ffbc",
+    "0x2a8f0"
+   ]
+  },
+  "TMRobotTorsoB": {
+   "update": "0x180970",
+   "updateLines": 498,
+   "deltaParam": true,
+   "usesDelta": true,
+   "positionWriters": [
+    "0x17f80c",
+    "0x180970",
+    "0x2935c",
+    "0x2a8f0"
+   ],
+   "sharedPositionWriters": [
+    "0x2935c",
+    "0x2a8f0"
+   ]
+  },
+  "TMRobotTorsoCutscene": {
+   "update": "0x182678",
+   "updateLines": 14,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [
+    "0x191880"
+   ],
+   "sharedPositionWriters": [
+    "0x191880"
+   ]
+  },
+  "TorsoAShot": {
+   "update": "0x1827c4",
+   "updateLines": 107,
+   "deltaParam": true,
+   "usesDelta": true,
+   "positionWriters": [
+    "0x1827c4"
+   ],
+   "sharedPositionWriters": []
+  },
+  "TorsoShrapnel": {
+   "update": "0x1833b8",
+   "updateLines": 60,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "TrainingBot": {
+   "update": "0x185b34",
+   "updateLines": 201,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [
+    "0x18ffbc",
+    "0x2935c",
+    "0x2a8f0"
+   ],
+   "sharedPositionWriters": [
+    "0x18ffbc",
+    "0x2935c",
+    "0x2a8f0"
+   ]
+  },
+  "TrainingBotShrapnel": {
+   "update": "0x18670c",
+   "updateLines": 60,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "TriggerCollection": {
+   "update": "0x186e14",
+   "updateLines": 7,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "TriggeredDoor": {
+   "update": "0x187614",
+   "updateLines": 249,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [
+    "0x1872c8",
+    "0x187614"
+   ],
+   "sharedPositionWriters": []
+  },
+  "TripleWaveBeacon": {
+   "update": "0x188214",
+   "updateLines": 76,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "vendor": {
+   "update": "0x1886e8",
+   "updateLines": 64,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "WaterWaves": {
+   "update": "0x188aac",
+   "updateLines": 10,
+   "deltaParam": true,
+   "usesDelta": true,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "Wrench": {
+   "update": "0x189be8",
+   "updateLines": 115,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  },
+  "ZipLineController": {
+   "update": "0x18ccb8",
+   "updateLines": 7,
+   "deltaParam": false,
+   "usesDelta": false,
+   "positionWriters": [],
+   "sharedPositionWriters": []
+  }
+ }
+}

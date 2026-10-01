@@ -9,6 +9,10 @@
 | [TECHNICAL_OVERVIEW.md](TECHNICAL_OVERVIEW.md) | Timing problem, configurations A0–D1, core sites, legacy dispatcher |
 | [FINDINGS_2026-09-30.md](FINDINGS_2026-09-30.md) | Latest live findings: rejected global arms, working fixes, particle system |
 | [ROADMAP.md](ROADMAP.md) | Next steps |
+| [DECOMP_STATUS_2026-10-01.md](DECOMP_STATUS_2026-10-01.md) | Mass decompilation of LEVEL_01: pipeline, findings, limits |
+| [FIX_CATALOGUE_2026-10-01.md](FIX_CATALOGUE_2026-10-01.md) | Corrections ready for live testing and the test order |
+| [DECOMPILATION_FINDINGS.md](DECOMPILATION_FINDINGS.md) | All decompilation findings: engine map, fix families, plugins (FR: [fr/TROUVAILLES_DECOMPILATION.md](fr/TROUVAILLES_DECOMPILATION.md)) |
+| [../patches/experimental/enhancements/README.md](../patches/experimental/enhancements/README.md) | OCEnhance: optional camera/controls plugin |
 | [RUNTIME_GUIDE.md](RUNTIME_GUIDE.md) | How to switch corrections and use the probes live |
 | [DEVELOPMENT_STATUS_2026-09-23.md](DEVELOPMENT_STATUS_2026-09-23.md) | Earlier curated status (superseded in parts) |
 | [fr/ETAT_DU_PROJET.md](fr/ETAT_DU_PROJET.md) | Owner summary in French |

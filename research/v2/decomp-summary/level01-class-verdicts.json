@@ -1,0 +1,1355 @@
+{
+ "status": "STATIC_PROFILE",
+ "rows": [
+  {
+   "class": "Acidbomb",
+   "category": "Weapons & gadgets",
+   "verdict": "MIXED",
+   "fixedShapes": 3,
+   "deltaShapes": 7,
+   "frameTimers": 1,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "AcidbombEpoxy",
+   "category": "Weapons & gadgets",
+   "verdict": "STATIC",
+   "fixedShapes": 0,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "AcidGloveHUD",
+   "category": "Weapons & gadgets",
+   "verdict": "STATIC",
+   "fixedShapes": 0,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "AgentController",
+   "category": "Enemies & NPCs",
+   "verdict": "MIXED",
+   "fixedShapes": 3,
+   "deltaShapes": 1,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "AgentOfDoom",
+   "category": "Enemies & NPCs",
+   "verdict": "FIXED",
+   "fixedShapes": 8,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "AgentOfDoomShrapnel",
+   "category": "Enemies & NPCs",
+   "verdict": "STATIC",
+   "fixedShapes": 0,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "AgentsBomb",
+   "category": "Weapons & gadgets",
+   "verdict": "MIXED",
+   "fixedShapes": 7,
+   "deltaShapes": 2,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "AgentsGlove",
+   "category": "Weapons & gadgets",
+   "verdict": "MIXED",
+   "fixedShapes": 1,
+   "deltaShapes": 1,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "AgentsGrenade",
+   "category": "Enemies & NPCs",
+   "verdict": "MIXED",
+   "fixedShapes": 2,
+   "deltaShapes": 5,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "AgentsLaser",
+   "category": "Weapons & gadgets",
+   "verdict": "MIXED",
+   "fixedShapes": 2,
+   "deltaShapes": 4,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "AgentsRocket",
+   "category": "Weapons & gadgets",
+   "verdict": "MIXED",
+   "fixedShapes": 3,
+   "deltaShapes": 5,
+   "frameTimers": 1,
+   "timerConst1_30": 1
+  },
+  {
+   "class": "ArmorHelmet",
+   "category": "Other objects",
+   "verdict": "STATIC",
+   "fixedShapes": 0,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "ArmorLeftFoot",
+   "category": "Other objects",
+   "verdict": "STATIC",
+   "fixedShapes": 0,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "ArmorLeftHand",
+   "category": "Other objects",
+   "verdict": "STATIC",
+   "fixedShapes": 0,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "ArmorPickup",
+   "category": "Other objects",
+   "verdict": "MIXED",
+   "fixedShapes": 2,
+   "deltaShapes": 3,
+   "frameTimers": 1,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "ArmorRightFoot",
+   "category": "Other objects",
+   "verdict": "STATIC",
+   "fixedShapes": 0,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "ArmorRightHand",
+   "category": "Other objects",
+   "verdict": "STATIC",
+   "fixedShapes": 0,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "ArmorTorso",
+   "category": "Enemies & NPCs",
+   "verdict": "STATIC",
+   "fixedShapes": 0,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "BeeMine",
+   "category": "Weapons & gadgets",
+   "verdict": "MIXED",
+   "fixedShapes": 8,
+   "deltaShapes": 9,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "BeeMineGlove",
+   "category": "Weapons & gadgets",
+   "verdict": "MIXED",
+   "fixedShapes": 1,
+   "deltaShapes": 1,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "BeeMineGloveHUD",
+   "category": "Weapons & gadgets",
+   "verdict": "STATIC",
+   "fixedShapes": 0,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "BeeMineShrapnel",
+   "category": "Weapons & gadgets",
+   "verdict": "STATIC",
+   "fixedShapes": 0,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "Blaster",
+   "category": "Weapons & gadgets",
+   "verdict": "MIXED",
+   "fixedShapes": 5,
+   "deltaShapes": 5,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "BlasterAkimbo",
+   "category": "Weapons & gadgets",
+   "verdict": "MIXED",
+   "fixedShapes": 2,
+   "deltaShapes": 3,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "BlasterShot",
+   "category": "Weapons & gadgets",
+   "verdict": "MIXED",
+   "fixedShapes": 8,
+   "deltaShapes": 5,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "BlitzGun",
+   "category": "Weapons & gadgets",
+   "verdict": "MIXED",
+   "fixedShapes": 1,
+   "deltaShapes": 7,
+   "frameTimers": 1,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "BlitzGunShot",
+   "category": "Weapons & gadgets",
+   "verdict": "MIXED",
+   "fixedShapes": 1,
+   "deltaShapes": 3,
+   "frameTimers": 0,
+   "timerConst1_30": 1
+  },
+  {
+   "class": "BoltController",
+   "category": "Vehicles, platforms, doors",
+   "verdict": "STATIC",
+   "fixedShapes": 0,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "BoltCrankBolt",
+   "category": "Vehicles, platforms, doors",
+   "verdict": "FIXED",
+   "fixedShapes": 3,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "BoltCrankCam",
+   "category": "Vehicles, platforms, doors",
+   "verdict": "MIXED",
+   "fixedShapes": 1,
+   "deltaShapes": 4,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "BoltGrabber",
+   "category": "Vehicles, platforms, doors",
+   "verdict": "STATIC",
+   "fixedShapes": 0,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "Bombglove",
+   "category": "Weapons & gadgets",
+   "verdict": "DELTA",
+   "fixedShapes": 0,
+   "deltaShapes": 6,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "BoxBreaker",
+   "category": "Other objects",
+   "verdict": "STATIC",
+   "fixedShapes": 0,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "BoxBreakerHelp",
+   "category": "Other objects",
+   "verdict": "STATIC",
+   "fixedShapes": 0,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "BreakableObject",
+   "category": "Other objects",
+   "verdict": "STATIC",
+   "fixedShapes": 0,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "Butterfly",
+   "category": "Enemies & NPCs",
+   "verdict": "FIXED",
+   "fixedShapes": 5,
+   "deltaShapes": 0,
+   "frameTimers": 1,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "ChameleonDecoy",
+   "category": "Weapons & gadgets",
+   "verdict": "FIXED",
+   "fixedShapes": 1,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "ClankForShipAnim",
+   "category": "Vehicles, platforms, doors",
+   "verdict": "STATIC",
+   "fixedShapes": 0,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "ClankPack",
+   "category": "Other objects",
+   "verdict": "DELTA",
+   "fixedShapes": 0,
+   "deltaShapes": 2,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "ConditionalStartLocation",
+   "category": "Other objects",
+   "verdict": "STATIC",
+   "fixedShapes": 0,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "ContinuePoint",
+   "category": "Other objects",
+   "verdict": "STATIC",
+   "fixedShapes": 0,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "CowBell",
+   "category": "Enemies & NPCs",
+   "verdict": "STATIC",
+   "fixedShapes": 0,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "Crab",
+   "category": "Enemies & NPCs",
+   "verdict": "MIXED",
+   "fixedShapes": 12,
+   "deltaShapes": 6,
+   "frameTimers": 2,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "CrabObjectController",
+   "category": "Enemies & NPCs",
+   "verdict": "DELTA",
+   "fixedShapes": 0,
+   "deltaShapes": 4,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "CrabShrapnel",
+   "category": "Enemies & NPCs",
+   "verdict": "STATIC",
+   "fixedShapes": 0,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "CrankedObject",
+   "category": "Vehicles, platforms, doors",
+   "verdict": "MIXED",
+   "fixedShapes": 1,
+   "deltaShapes": 1,
+   "frameTimers": 1,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "Crate",
+   "category": "Other objects",
+   "verdict": "STATIC",
+   "fixedShapes": 0,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "CrateAmmo",
+   "category": "Other objects",
+   "verdict": "STATIC",
+   "fixedShapes": 0,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "CrossbowGun",
+   "category": "Weapons & gadgets",
+   "verdict": "MIXED",
+   "fixedShapes": 1,
+   "deltaShapes": 5,
+   "frameTimers": 1,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "CrossbowShot",
+   "category": "Weapons & gadgets",
+   "verdict": "MIXED",
+   "fixedShapes": 4,
+   "deltaShapes": 8,
+   "frameTimers": 1,
+   "timerConst1_30": 1
+  },
+  {
+   "class": "CrystalGroundShard",
+   "category": "Other objects",
+   "verdict": "FIXED",
+   "fixedShapes": 3,
+   "deltaShapes": 0,
+   "frameTimers": 1,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "DesignTest",
+   "category": "Other objects",
+   "verdict": "STATIC",
+   "fixedShapes": 0,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "DropshipB",
+   "category": "Vehicles, platforms, doors",
+   "verdict": "MIXED",
+   "fixedShapes": 1,
+   "deltaShapes": 5,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "DropshipLaser",
+   "category": "Weapons & gadgets",
+   "verdict": "MIXED",
+   "fixedShapes": 3,
+   "deltaShapes": 2,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "DualBlasterHUD",
+   "category": "Weapons & gadgets",
+   "verdict": "STATIC",
+   "fixedShapes": 0,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "electricXplo",
+   "category": "Other objects",
+   "verdict": "MIXED",
+   "fixedShapes": 2,
+   "deltaShapes": 2,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "ElectroBall",
+   "category": "Weapons & gadgets",
+   "verdict": "MIXED",
+   "fixedShapes": 0,
+   "deltaShapes": 2,
+   "frameTimers": 0,
+   "timerConst1_30": 1
+  },
+  {
+   "class": "ElectroshockWave",
+   "category": "Weapons & gadgets",
+   "verdict": "MIXED",
+   "fixedShapes": 4,
+   "deltaShapes": 4,
+   "frameTimers": 0,
+   "timerConst1_30": 1
+  },
+  {
+   "class": "EndMovie",
+   "category": "Other objects",
+   "verdict": "STATIC",
+   "fixedShapes": 0,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "EnemyController",
+   "category": "Enemies & NPCs",
+   "verdict": "MIXED",
+   "fixedShapes": 10,
+   "deltaShapes": 15,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "EnemyWave",
+   "category": "Enemies & NPCs",
+   "verdict": "MIXED",
+   "fixedShapes": 1,
+   "deltaShapes": 1,
+   "frameTimers": 1,
+   "timerConst1_30": 1
+  },
+  {
+   "class": "ExplosiveBee",
+   "category": "Enemies & NPCs",
+   "verdict": "MIXED",
+   "fixedShapes": 7,
+   "deltaShapes": 4,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "Fire",
+   "category": "Other objects",
+   "verdict": "MIXED",
+   "fixedShapes": 1,
+   "deltaShapes": 1,
+   "frameTimers": 1,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "Flamethrower",
+   "category": "Weapons & gadgets",
+   "verdict": "MIXED",
+   "fixedShapes": 5,
+   "deltaShapes": 2,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "FlyingCarLightweightDirectional",
+   "category": "Vehicles, platforms, doors",
+   "verdict": "FIXED",
+   "fixedShapes": 1,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "FlyingCarLightweightOrbit",
+   "category": "Vehicles, platforms, doors",
+   "verdict": "FIXED",
+   "fixedShapes": 1,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "FlyingCarLightweightPathed",
+   "category": "Vehicles, platforms, doors",
+   "verdict": "FIXED",
+   "fixedShapes": 1,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "FogMoby",
+   "category": "Other objects",
+   "verdict": "DELTA",
+   "fixedShapes": 0,
+   "deltaShapes": 2,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "GlowCard",
+   "category": "Vehicles, platforms, doors",
+   "verdict": "STATIC",
+   "fixedShapes": 0,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "GravityCrystal",
+   "category": "Weapons & gadgets",
+   "verdict": "MIXED",
+   "fixedShapes": 1,
+   "deltaShapes": 3,
+   "frameTimers": 1,
+   "timerConst1_30": 1
+  },
+  {
+   "class": "HeadShrapnel",
+   "category": "Enemies & NPCs",
+   "verdict": "DELTA",
+   "fixedShapes": 0,
+   "deltaShapes": 1,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "Helipack",
+   "category": "Other objects",
+   "verdict": "STATIC",
+   "fixedShapes": 0,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "HutDoor",
+   "category": "Vehicles, platforms, doors",
+   "verdict": "MIXED",
+   "fixedShapes": 15,
+   "deltaShapes": 1,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "Hypershot",
+   "category": "Weapons & gadgets",
+   "verdict": "DELTA",
+   "fixedShapes": 0,
+   "deltaShapes": 1,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "InitialCamera",
+   "category": "Other objects",
+   "verdict": "MIXED",
+   "fixedShapes": 1,
+   "deltaShapes": 4,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "IntroMovie",
+   "category": "Other objects",
+   "verdict": "FIXED",
+   "fixedShapes": 1,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "LaserTracer",
+   "category": "Weapons & gadgets",
+   "verdict": "MIXED",
+   "fixedShapes": 8,
+   "deltaShapes": 3,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "Level01Boat",
+   "category": "Vehicles, platforms, doors",
+   "verdict": "FIXED",
+   "fixedShapes": 2,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "Level01Cutscene01",
+   "category": "Other objects",
+   "verdict": "STATIC",
+   "fixedShapes": 0,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "Level01DoorTarget",
+   "category": "Vehicles, platforms, doors",
+   "verdict": "STATIC",
+   "fixedShapes": 0,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "Level01HelpManager",
+   "category": "Other objects",
+   "verdict": "FIXED",
+   "fixedShapes": 6,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 1
+  },
+  {
+   "class": "Level01OceanSound",
+   "category": "Other objects",
+   "verdict": "FIXED",
+   "fixedShapes": 3,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "Level01SkyController",
+   "category": "Other objects",
+   "verdict": "DELTA",
+   "fixedShapes": 0,
+   "deltaShapes": 1,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "Level01Waterfall",
+   "category": "Other objects",
+   "verdict": "MIXED",
+   "fixedShapes": 6,
+   "deltaShapes": 1,
+   "frameTimers": 1,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "LevelSettings",
+   "category": "Other objects",
+   "verdict": "STATIC",
+   "fixedShapes": 0,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "LunaCamera",
+   "category": "Enemies & NPCs",
+   "verdict": "FIXED",
+   "fixedShapes": 1,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "LunaCutscene",
+   "category": "Enemies & NPCs",
+   "verdict": "MIXED",
+   "fixedShapes": 3,
+   "deltaShapes": 1,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "LunaNPC",
+   "category": "Enemies & NPCs",
+   "verdict": "MIXED",
+   "fixedShapes": 4,
+   "deltaShapes": 4,
+   "frameTimers": 1,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "LunaPhotoTarget",
+   "category": "Enemies & NPCs",
+   "verdict": "STATIC",
+   "fixedShapes": 0,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "Lvl3Elevator",
+   "category": "Vehicles, platforms, doors",
+   "verdict": "MIXED",
+   "fixedShapes": 2,
+   "deltaShapes": 4,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "MapOMaticGadget",
+   "category": "Other objects",
+   "verdict": "STATIC",
+   "fixedShapes": 0,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "MatrixMoby",
+   "category": "Other objects",
+   "verdict": "STATIC",
+   "fixedShapes": 0,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "MobyGroup",
+   "category": "Other objects",
+   "verdict": "STATIC",
+   "fixedShapes": 0,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "MobyIce",
+   "category": "Other objects",
+   "verdict": "MIXED",
+   "fixedShapes": 1,
+   "deltaShapes": 3,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "Mootator",
+   "category": "Enemies & NPCs",
+   "verdict": "DELTA",
+   "fixedShapes": 0,
+   "deltaShapes": 2,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "MutantCow",
+   "category": "Enemies & NPCs",
+   "verdict": "MIXED",
+   "fixedShapes": 5,
+   "deltaShapes": 1,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "MutantMadCow",
+   "category": "Enemies & NPCs",
+   "verdict": "MIXED",
+   "fixedShapes": 5,
+   "deltaShapes": 1,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "NapalmBubble",
+   "category": "Other objects",
+   "verdict": "MIXED",
+   "fixedShapes": 1,
+   "deltaShapes": 1,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "PathAnimal",
+   "category": "Enemies & NPCs",
+   "verdict": "MIXED",
+   "fixedShapes": 6,
+   "deltaShapes": 2,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "PDA",
+   "category": "Other objects",
+   "verdict": "STATIC",
+   "fixedShapes": 0,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "Polarizer",
+   "category": "Weapons & gadgets",
+   "verdict": "MIXED",
+   "fixedShapes": 2,
+   "deltaShapes": 4,
+   "frameTimers": 1,
+   "timerConst1_30": 1
+  },
+  {
+   "class": "PowerupAmmo",
+   "category": "Other objects",
+   "verdict": "MIXED",
+   "fixedShapes": 5,
+   "deltaShapes": 3,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "PowerupHealth",
+   "category": "Other objects",
+   "verdict": "MIXED",
+   "fixedShapes": 5,
+   "deltaShapes": 1,
+   "frameTimers": 1,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "Ratchet",
+   "category": "Vehicles, platforms, doors",
+   "verdict": "STATIC",
+   "fixedShapes": 0,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "RatchetDecoyInner",
+   "category": "Weapons & gadgets",
+   "verdict": "FIXED",
+   "fixedShapes": 0,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 1
+  },
+  {
+   "class": "RatchetDecoyOuter",
+   "category": "Weapons & gadgets",
+   "verdict": "STATIC",
+   "fixedShapes": 0,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "RatchetShip",
+   "category": "Vehicles, platforms, doors",
+   "verdict": "STATIC",
+   "fixedShapes": 0,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "RatchetShipAnimation",
+   "category": "Vehicles, platforms, doors",
+   "verdict": "MIXED",
+   "fixedShapes": 7,
+   "deltaShapes": 7,
+   "frameTimers": 1,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "Region",
+   "category": "Other objects",
+   "verdict": "STATIC",
+   "fixedShapes": 0,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "Ryno",
+   "category": "Weapons & gadgets",
+   "verdict": "MIXED",
+   "fixedShapes": 2,
+   "deltaShapes": 2,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "RynoRocket",
+   "category": "Weapons & gadgets",
+   "verdict": "MIXED",
+   "fixedShapes": 4,
+   "deltaShapes": 5,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "SetCamera",
+   "category": "Other objects",
+   "verdict": "DELTA",
+   "fixedShapes": 0,
+   "deltaShapes": 3,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "ShakeyBush",
+   "category": "Other objects",
+   "verdict": "MIXED",
+   "fixedShapes": 1,
+   "deltaShapes": 3,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "Sharkagator",
+   "category": "Enemies & NPCs",
+   "verdict": "DELTA",
+   "fixedShapes": 0,
+   "deltaShapes": 3,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "SharkagatorFin",
+   "category": "Enemies & NPCs",
+   "verdict": "MIXED",
+   "fixedShapes": 1,
+   "deltaShapes": 5,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "ShieldCharger",
+   "category": "Weapons & gadgets",
+   "verdict": "MIXED",
+   "fixedShapes": 2,
+   "deltaShapes": 1,
+   "frameTimers": 1,
+   "timerConst1_30": 1
+  },
+  {
+   "class": "ShieldChargerBolt",
+   "category": "Weapons & gadgets",
+   "verdict": "FIXED",
+   "fixedShapes": 0,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 1
+  },
+  {
+   "class": "ShockRocket",
+   "category": "Weapons & gadgets",
+   "verdict": "MIXED",
+   "fixedShapes": 1,
+   "deltaShapes": 2,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "ShockRocketShot",
+   "category": "Weapons & gadgets",
+   "verdict": "MIXED",
+   "fixedShapes": 1,
+   "deltaShapes": 4,
+   "frameTimers": 0,
+   "timerConst1_30": 1
+  },
+  {
+   "class": "ShrapnelGeneric",
+   "category": "Enemies & NPCs",
+   "verdict": "STATIC",
+   "fixedShapes": 0,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "ShrinkBeam",
+   "category": "Other objects",
+   "verdict": "FIXED",
+   "fixedShapes": 5,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "ShrinkRayRatchet",
+   "category": "Vehicles, platforms, doors",
+   "verdict": "STATIC",
+   "fixedShapes": 0,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "SkillPoint_L01",
+   "category": "Other objects",
+   "verdict": "STATIC",
+   "fixedShapes": 0,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "SlideController",
+   "category": "Vehicles, platforms, doors",
+   "verdict": "STATIC",
+   "fixedShapes": 0,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "Spitfire",
+   "category": "Other objects",
+   "verdict": "MIXED",
+   "fixedShapes": 4,
+   "deltaShapes": 3,
+   "frameTimers": 1,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "Splash",
+   "category": "Other objects",
+   "verdict": "FIXED",
+   "fixedShapes": 3,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "Sproutomatic",
+   "category": "Weapons & gadgets",
+   "verdict": "STATIC",
+   "fixedShapes": 0,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "StaticBarrierBelt",
+   "category": "Other objects",
+   "verdict": "STATIC",
+   "fixedShapes": 0,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "SuckCannon",
+   "category": "Weapons & gadgets",
+   "verdict": "FIXED",
+   "fixedShapes": 1,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "SuckCannonComet",
+   "category": "Weapons & gadgets",
+   "verdict": "MIXED",
+   "fixedShapes": 1,
+   "deltaShapes": 6,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "SuckCannonCometTie",
+   "category": "Weapons & gadgets",
+   "verdict": "MIXED",
+   "fixedShapes": 1,
+   "deltaShapes": 1,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "SuckCannonManager",
+   "category": "Weapons & gadgets",
+   "verdict": "MIXED",
+   "fixedShapes": 5,
+   "deltaShapes": 1,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "SwarmManager",
+   "category": "Weapons & gadgets",
+   "verdict": "MIXED",
+   "fixedShapes": 2,
+   "deltaShapes": 1,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "Teleporter",
+   "category": "Vehicles, platforms, doors",
+   "verdict": "MIXED",
+   "fixedShapes": 4,
+   "deltaShapes": 7,
+   "frameTimers": 0,
+   "timerConst1_30": 1
+  },
+  {
+   "class": "TieManipulator",
+   "category": "Other objects",
+   "verdict": "MIXED",
+   "fixedShapes": 4,
+   "deltaShapes": 1,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "TitaniumBolt",
+   "category": "Weapons & gadgets",
+   "verdict": "MIXED",
+   "fixedShapes": 4,
+   "deltaShapes": 2,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "TMRobotHeadB",
+   "category": "Enemies & NPCs",
+   "verdict": "MIXED",
+   "fixedShapes": 5,
+   "deltaShapes": 13,
+   "frameTimers": 0,
+   "timerConst1_30": 1
+  },
+  {
+   "class": "TMRobotTorsoB",
+   "category": "Enemies & NPCs",
+   "verdict": "MIXED",
+   "fixedShapes": 3,
+   "deltaShapes": 12,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "TMRobotTorsoCutscene",
+   "category": "Enemies & NPCs",
+   "verdict": "MIXED",
+   "fixedShapes": 3,
+   "deltaShapes": 1,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "TorsoAShot",
+   "category": "Weapons & gadgets",
+   "verdict": "DELTA",
+   "fixedShapes": 0,
+   "deltaShapes": 4,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "TorsoShrapnel",
+   "category": "Enemies & NPCs",
+   "verdict": "DELTA",
+   "fixedShapes": 0,
+   "deltaShapes": 1,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "TrainingBot",
+   "category": "Enemies & NPCs",
+   "verdict": "MIXED",
+   "fixedShapes": 10,
+   "deltaShapes": 5,
+   "frameTimers": 2,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "TrainingBotShrapnel",
+   "category": "Enemies & NPCs",
+   "verdict": "DELTA",
+   "fixedShapes": 0,
+   "deltaShapes": 1,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "TriggerCollection",
+   "category": "Other objects",
+   "verdict": "STATIC",
+   "fixedShapes": 0,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "TriggeredDoor",
+   "category": "Vehicles, platforms, doors",
+   "verdict": "STATIC",
+   "fixedShapes": 0,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "TripleWaveBeacon",
+   "category": "Other objects",
+   "verdict": "FIXED",
+   "fixedShapes": 2,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "vendor",
+   "category": "Other objects",
+   "verdict": "STATIC",
+   "fixedShapes": 0,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "WaterWaves",
+   "category": "Other objects",
+   "verdict": "DELTA",
+   "fixedShapes": 0,
+   "deltaShapes": 1,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "Wrench",
+   "category": "Weapons & gadgets",
+   "verdict": "FIXED",
+   "fixedShapes": 2,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  },
+  {
+   "class": "ZipLineController",
+   "category": "Vehicles, platforms, doors",
+   "verdict": "STATIC",
+   "fixedShapes": 0,
+   "deltaShapes": 0,
+   "frameTimers": 0,
+   "timerConst1_30": 0
+  }
+ ]
+}

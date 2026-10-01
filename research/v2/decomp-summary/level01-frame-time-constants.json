@@ -1,0 +1,882 @@
+{
+ "status": "STATIC_CANDIDATE",
+ "sites": [
+  {
+   "site": "0x1e24",
+   "fn": "0x1e10",
+   "name": "FUN_00001e10",
+   "kind": "other",
+   "classes": []
+  },
+  {
+   "site": "0x2494",
+   "fn": "0x2388",
+   "name": "FUN_00002388",
+   "kind": "other",
+   "classes": [
+    "BoltCrankCam",
+    "Fire",
+    "InitialCamera",
+    "Ratchet",
+    "Sharkagator",
+    "Teleporter"
+   ]
+  },
+  {
+   "site": "0x308c",
+   "fn": "0x3060",
+   "name": "FUN_00003060",
+   "kind": "scale",
+   "classes": []
+  },
+  {
+   "site": "0x361c",
+   "fn": "0x35b0",
+   "name": "FUN_000035b0",
+   "kind": "scale",
+   "classes": []
+  },
+  {
+   "site": "0x37e0",
+   "fn": "0x37ac",
+   "name": "FUN_000037ac",
+   "kind": "scale",
+   "classes": []
+  },
+  {
+   "site": "0x79b8",
+   "fn": "0x7740",
+   "name": "FUN_00007740",
+   "kind": "scale",
+   "classes": []
+  },
+  {
+   "site": "0x7aa4",
+   "fn": "0x7740",
+   "name": "FUN_00007740",
+   "kind": "scale",
+   "classes": []
+  },
+  {
+   "site": "0x7af0",
+   "fn": "0x7740",
+   "name": "FUN_00007740",
+   "kind": "scale",
+   "classes": []
+  },
+  {
+   "site": "0x7b38",
+   "fn": "0x7740",
+   "name": "FUN_00007740",
+   "kind": "scale",
+   "classes": []
+  },
+  {
+   "site": "0xaab8",
+   "fn": "0xaa44",
+   "name": "FUN_0000aa44",
+   "kind": "scale",
+   "classes": []
+  },
+  {
+   "site": "0xca2c",
+   "fn": "0xca24",
+   "name": "FUN_0000ca24",
+   "kind": "scale",
+   "classes": []
+  },
+  {
+   "site": "0xcc8c",
+   "fn": "0xcc74",
+   "name": "FUN_0000cc74",
+   "kind": "other",
+   "classes": []
+  },
+  {
+   "site": "0x151e0",
+   "fn": "0x1517c",
+   "name": "P_MainUpdate_SharedDelta",
+   "kind": "other",
+   "classes": []
+  },
+  {
+   "site": "0x1564c",
+   "fn": "0x15400",
+   "name": "FUN_00015400",
+   "kind": "other",
+   "classes": []
+  },
+  {
+   "site": "0x262b0",
+   "fn": "0x262ac",
+   "name": "FUN_000262ac",
+   "kind": "other",
+   "classes": []
+  },
+  {
+   "site": "0x26960",
+   "fn": "0x2693c",
+   "name": "FUN_0002693c",
+   "kind": "other",
+   "classes": []
+  },
+  {
+   "site": "0x26c5c",
+   "fn": "0x26b80",
+   "name": "FUN_00026b80",
+   "kind": "other",
+   "classes": []
+  },
+  {
+   "site": "0x32f34",
+   "fn": "0x32f00",
+   "name": "FUN_00032f00",
+   "kind": "scale",
+   "classes": []
+  },
+  {
+   "site": "0x3bda8",
+   "fn": "0x39fd4",
+   "name": "FUN_00039fd4",
+   "kind": "scale",
+   "classes": [
+    "Fire",
+    "Ratchet",
+    "Sharkagator"
+   ]
+  },
+  {
+   "site": "0x3e170",
+   "fn": "0x3c88c",
+   "name": "FUN_0003c88c",
+   "kind": "timer_decrement",
+   "classes": []
+  },
+  {
+   "site": "0x3eb14",
+   "fn": "0x3c88c",
+   "name": "FUN_0003c88c",
+   "kind": "timer_decrement",
+   "classes": []
+  },
+  {
+   "site": "0x40824",
+   "fn": "0x3c88c",
+   "name": "FUN_0003c88c",
+   "kind": "timer_decrement",
+   "classes": []
+  },
+  {
+   "site": "0x4085c",
+   "fn": "0x3c88c",
+   "name": "FUN_0003c88c",
+   "kind": "timer_decrement",
+   "classes": []
+  },
+  {
+   "site": "0x40894",
+   "fn": "0x3c88c",
+   "name": "FUN_0003c88c",
+   "kind": "timer_decrement",
+   "classes": []
+  },
+  {
+   "site": "0x445a8",
+   "fn": "0x44598",
+   "name": "FUN_00044598",
+   "kind": "scale",
+   "classes": []
+  },
+  {
+   "site": "0x45284",
+   "fn": "0x44ed8",
+   "name": "FUN_00044ed8",
+   "kind": "timer_decrement",
+   "classes": []
+  },
+  {
+   "site": "0x4556c",
+   "fn": "0x44ed8",
+   "name": "FUN_00044ed8",
+   "kind": "timer_decrement",
+   "classes": []
+  },
+  {
+   "site": "0x4ac5c",
+   "fn": "0x4a4f0",
+   "name": "FUN_0004a4f0",
+   "kind": "timer_decrement",
+   "classes": []
+  },
+  {
+   "site": "0x575ec",
+   "fn": "0x570f0",
+   "name": "FUN_000570f0",
+   "kind": "timer_decrement",
+   "classes": []
+  },
+  {
+   "site": "0x57624",
+   "fn": "0x570f0",
+   "name": "FUN_000570f0",
+   "kind": "timer_decrement",
+   "classes": []
+  },
+  {
+   "site": "0x58768",
+   "fn": "0x5870c",
+   "name": "FUN_0005870c",
+   "kind": "scale",
+   "classes": []
+  },
+  {
+   "site": "0x5c2a0",
+   "fn": "0x5c298",
+   "name": "FUN_0005c298",
+   "kind": "scale",
+   "classes": []
+  },
+  {
+   "site": "0x5ce30",
+   "fn": "0x5c9cc",
+   "name": "FUN_0005c9cc",
+   "kind": "other",
+   "classes": []
+  },
+  {
+   "site": "0x5cfd4",
+   "fn": "0x5ceec",
+   "name": "FUN_0005ceec",
+   "kind": "scale",
+   "classes": []
+  },
+  {
+   "site": "0x5ffa0",
+   "fn": "0x5facc",
+   "name": "FUN_0005facc",
+   "kind": "timer_increment",
+   "classes": [
+    "BlitzGunShot",
+    "CrossbowShot",
+    "ElectroBall",
+    "GravityCrystal",
+    "RatchetDecoyInner",
+    "ShieldChargerBolt",
+    "ShockRocketShot"
+   ]
+  },
+  {
+   "site": "0x61550",
+   "fn": "0x613dc",
+   "name": "FUN_000613dc",
+   "kind": "timer_decrement",
+   "classes": []
+  },
+  {
+   "site": "0x64fa0",
+   "fn": "0x64f9c",
+   "name": "FUN_00064f9c",
+   "kind": "timer_increment",
+   "classes": [
+    "Teleporter"
+   ]
+  },
+  {
+   "site": "0x65174",
+   "fn": "0x650ec",
+   "name": "FUN_000650ec",
+   "kind": "scale",
+   "classes": [
+    "Teleporter"
+   ]
+  },
+  {
+   "site": "0x652b0",
+   "fn": "0x65228",
+   "name": "FUN_00065228",
+   "kind": "scale",
+   "classes": [
+    "Teleporter"
+   ]
+  },
+  {
+   "site": "0x65434",
+   "fn": "0x6539c",
+   "name": "FUN_0006539c",
+   "kind": "other",
+   "classes": [
+    "Teleporter"
+   ]
+  },
+  {
+   "site": "0x65874",
+   "fn": "0x65758",
+   "name": "FUN_00065758",
+   "kind": "scale",
+   "classes": []
+  },
+  {
+   "site": "0x65ab0",
+   "fn": "0x65a6c",
+   "name": "FUN_00065a6c",
+   "kind": "scale",
+   "classes": []
+  },
+  {
+   "site": "0x65ddc",
+   "fn": "0x65d78",
+   "name": "FUN_00065d78",
+   "kind": "scale",
+   "classes": []
+  },
+  {
+   "site": "0x6638c",
+   "fn": "0x661fc",
+   "name": "FUN_000661fc",
+   "kind": "scale",
+   "classes": []
+  },
+  {
+   "site": "0x6aa38",
+   "fn": "0x6aa08",
+   "name": "FUN_0006aa08",
+   "kind": "scale",
+   "classes": [
+    "AgentOfDoom",
+    "AgentsGlove",
+    "ArmorPickup",
+    "BeeMineGlove",
+    "Blaster",
+    "BlitzGun",
+    "Bombglove",
+    "Crab",
+    "CrossbowGun",
+    "DropshipB"
+   ]
+  },
+  {
+   "site": "0x6dfd0",
+   "fn": "0x6df94",
+   "name": "FUN_0006df94",
+   "kind": "scale",
+   "classes": []
+  },
+  {
+   "site": "0x6e01c",
+   "fn": "0x6df94",
+   "name": "FUN_0006df94",
+   "kind": "scale",
+   "classes": []
+  },
+  {
+   "site": "0x6e05c",
+   "fn": "0x6df94",
+   "name": "FUN_0006df94",
+   "kind": "scale",
+   "classes": []
+  },
+  {
+   "site": "0x6e0a8",
+   "fn": "0x6df94",
+   "name": "FUN_0006df94",
+   "kind": "scale",
+   "classes": []
+  },
+  {
+   "site": "0x6e0e8",
+   "fn": "0x6df94",
+   "name": "FUN_0006df94",
+   "kind": "scale",
+   "classes": []
+  },
+  {
+   "site": "0x6e134",
+   "fn": "0x6df94",
+   "name": "FUN_0006df94",
+   "kind": "scale",
+   "classes": []
+  },
+  {
+   "site": "0x6e174",
+   "fn": "0x6df94",
+   "name": "FUN_0006df94",
+   "kind": "scale",
+   "classes": []
+  },
+  {
+   "site": "0x6e1c0",
+   "fn": "0x6df94",
+   "name": "FUN_0006df94",
+   "kind": "scale",
+   "classes": []
+  },
+  {
+   "site": "0x83578",
+   "fn": "0x8341c",
+   "name": "FUN_0008341c",
+   "kind": "scale",
+   "classes": []
+  },
+  {
+   "site": "0x87298",
+   "fn": "0x87190",
+   "name": "FUN_00087190",
+   "kind": "timer_increment",
+   "classes": []
+  },
+  {
+   "site": "0xab6a8",
+   "fn": "0xab450",
+   "name": "FUN_000ab450",
+   "kind": "other",
+   "classes": []
+  },
+  {
+   "site": "0xaf508",
+   "fn": "0xaf4b0",
+   "name": "FUN_000af4b0",
+   "kind": "other",
+   "classes": []
+  },
+  {
+   "site": "0xb8e04",
+   "fn": "0xb8bcc",
+   "name": "FUN_000b8bcc",
+   "kind": "other",
+   "classes": []
+  },
+  {
+   "site": "0xbc268",
+   "fn": "0xbc1e4",
+   "name": "FUN_000bc1e4",
+   "kind": "other",
+   "classes": []
+  },
+  {
+   "site": "0xbe0d0",
+   "fn": "0xbe074",
+   "name": "FUN_000be074",
+   "kind": "other",
+   "classes": []
+  },
+  {
+   "site": "0xc0824",
+   "fn": "0xc0528",
+   "name": "FUN_000c0528",
+   "kind": "scale",
+   "classes": []
+  },
+  {
+   "site": "0xc5c28",
+   "fn": "0xc5b10",
+   "name": "FUN_000c5b10",
+   "kind": "other",
+   "classes": [
+    "AgentsRocket",
+    "DropshipB",
+    "ExplosiveBee",
+    "PowerupHealth",
+    "TMRobotTorsoB"
+   ]
+  },
+  {
+   "site": "0xc5c34",
+   "fn": "0xc5b10",
+   "name": "FUN_000c5b10",
+   "kind": "other",
+   "classes": [
+    "AgentsRocket",
+    "DropshipB",
+    "ExplosiveBee",
+    "PowerupHealth",
+    "TMRobotTorsoB"
+   ]
+  },
+  {
+   "site": "0xc5cb4",
+   "fn": "0xc5ca8",
+   "name": "FUN_000c5ca8",
+   "kind": "timer_decrement",
+   "classes": []
+  },
+  {
+   "site": "0xc5f8c",
+   "fn": "0xc5ed0",
+   "name": "FUN_000c5ed0",
+   "kind": "scale",
+   "classes": [
+    "BlitzGun",
+    "LunaCamera",
+    "Ryno",
+    "TMRobotHeadB",
+    "TMRobotTorsoB"
+   ]
+  },
+  {
+   "site": "0xc623c",
+   "fn": "0xc60bc",
+   "name": "FUN_000c60bc",
+   "kind": "timer_decrement",
+   "classes": []
+  },
+  {
+   "site": "0xc67fc",
+   "fn": "0xc66e0",
+   "name": "FUN_000c66e0",
+   "kind": "other",
+   "classes": [
+    "Acidbomb",
+    "HeadShrapnel",
+    "TMRobotHeadB",
+    "TorsoAShot",
+    "TorsoShrapnel",
+    "TrainingBot",
+    "TrainingBotShrapnel"
+   ]
+  },
+  {
+   "site": "0xc68fc",
+   "fn": "0xc68b8",
+   "name": "FUN_000c68b8",
+   "kind": "timer_increment",
+   "classes": []
+  },
+  {
+   "site": "0xc7138",
+   "fn": "0xc6f40",
+   "name": "FUN_000c6f40",
+   "kind": "other",
+   "classes": [
+    "BlitzGun"
+   ]
+  },
+  {
+   "site": "0xc71e0",
+   "fn": "0xc71d8",
+   "name": "FUN_000c71d8",
+   "kind": "timer_increment",
+   "classes": []
+  },
+  {
+   "site": "0xc7af4",
+   "fn": "0xc7af0",
+   "name": "FUN_000c7af0",
+   "kind": "scale",
+   "classes": [
+    "HeadShrapnel",
+    "TorsoShrapnel",
+    "TrainingBot",
+    "TrainingBotShrapnel"
+   ]
+  },
+  {
+   "site": "0xcee44",
+   "fn": "0xcede0",
+   "name": "FUN_000cede0",
+   "kind": "timer_increment",
+   "classes": []
+  },
+  {
+   "site": "0xcf19c",
+   "fn": "0xcf120",
+   "name": "FUN_000cf120",
+   "kind": "other",
+   "classes": []
+  },
+  {
+   "site": "0xd239c",
+   "fn": "0xd2270",
+   "name": "FUN_000d2270",
+   "kind": "timer_decrement",
+   "classes": []
+  },
+  {
+   "site": "0xd26e8",
+   "fn": "0xd25b8",
+   "name": "FUN_000d25b8",
+   "kind": "timer_decrement",
+   "classes": []
+  },
+  {
+   "site": "0xd2a7c",
+   "fn": "0xd2948",
+   "name": "FUN_000d2948",
+   "kind": "timer_decrement",
+   "classes": []
+  },
+  {
+   "site": "0xdf838",
+   "fn": "0xdf7b8",
+   "name": "FUN_000df7b8",
+   "kind": "scale",
+   "classes": [
+    "RatchetShipAnimation"
+   ]
+  },
+  {
+   "site": "0x111ca4",
+   "fn": "0x111c54",
+   "name": "AgentsRocket_Update",
+   "kind": "timer_increment",
+   "classes": [
+    "AgentsRocket"
+   ]
+  },
+  {
+   "site": "0x116964",
+   "fn": "0x1168a0",
+   "name": "FUN_001168a0",
+   "kind": "other",
+   "classes": [
+    "Blaster"
+   ]
+  },
+  {
+   "site": "0x11aca4",
+   "fn": "0x11a5b0",
+   "name": "BlitzGun_Update",
+   "kind": "scale",
+   "classes": [
+    "BlitzGun"
+   ]
+  },
+  {
+   "site": "0x121070",
+   "fn": "0x120fb4",
+   "name": "BoltCrankCam_Update",
+   "kind": "other",
+   "classes": [
+    "BoltCrankCam"
+   ]
+  },
+  {
+   "site": "0x1210c4",
+   "fn": "0x120fb4",
+   "name": "BoltCrankCam_Update",
+   "kind": "other",
+   "classes": [
+    "BoltCrankCam"
+   ]
+  },
+  {
+   "site": "0x12a4bc",
+   "fn": "0x12a440",
+   "name": "FUN_0012a440",
+   "kind": "other",
+   "classes": []
+  },
+  {
+   "site": "0x133fe8",
+   "fn": "0x133eb0",
+   "name": "FUN_00133eb0",
+   "kind": "scale",
+   "classes": [
+    "TripleWaveBeacon"
+   ]
+  },
+  {
+   "site": "0x134420",
+   "fn": "0x134310",
+   "name": "ElectroshockWave_Update",
+   "kind": "timer_decrement",
+   "classes": [
+    "ElectroshockWave"
+   ]
+  },
+  {
+   "site": "0x137f5c",
+   "fn": "0x137d9c",
+   "name": "EnemyWave_Update",
+   "kind": "timer_decrement",
+   "classes": [
+    "EnemyWave"
+   ]
+  },
+  {
+   "site": "0x13d684",
+   "fn": "0x13cf14",
+   "name": "FUN_0013cf14",
+   "kind": "scale",
+   "classes": []
+  },
+  {
+   "site": "0x13d930",
+   "fn": "0x13d838",
+   "name": "FUN_0013d838",
+   "kind": "other",
+   "classes": []
+  },
+  {
+   "site": "0x13e19c",
+   "fn": "0x13e12c",
+   "name": "FlyingCarLightweightDirectional_Update",
+   "kind": "scale",
+   "classes": [
+    "FlyingCarLightweightDirectional"
+   ]
+  },
+  {
+   "site": "0x13e5b4",
+   "fn": "0x13e398",
+   "name": "FUN_0013e398",
+   "kind": "scale",
+   "classes": []
+  },
+  {
+   "site": "0x13e998",
+   "fn": "0x13e958",
+   "name": "FUN_0013e958",
+   "kind": "scale",
+   "classes": []
+  },
+  {
+   "site": "0x13f274",
+   "fn": "0x13f1d0",
+   "name": "FlyingCarLightweightOrbit_Update",
+   "kind": "scale",
+   "classes": [
+    "FlyingCarLightweightOrbit"
+   ]
+  },
+  {
+   "site": "0x13f6a8",
+   "fn": "0x13f480",
+   "name": "FUN_0013f480",
+   "kind": "scale",
+   "classes": []
+  },
+  {
+   "site": "0x1409c4",
+   "fn": "0x14043c",
+   "name": "FUN_0014043c",
+   "kind": "scale",
+   "classes": [
+    "FlyingCarLightweightPathed"
+   ]
+  },
+  {
+   "site": "0x140d00",
+   "fn": "0x140c40",
+   "name": "FlyingCarLightweightPathed_slot0",
+   "kind": "scale",
+   "classes": [
+    "FlyingCarLightweightPathed"
+   ]
+  },
+  {
+   "site": "0x150f0c",
+   "fn": "0x150ef8",
+   "name": "Level01HelpManager_Update",
+   "kind": "timer_increment",
+   "classes": [
+    "Level01HelpManager"
+   ]
+  },
+  {
+   "site": "0x155820",
+   "fn": "0x155754",
+   "name": "FUN_00155754",
+   "kind": "other",
+   "classes": []
+  },
+  {
+   "site": "0x1563e8",
+   "fn": "0x1562dc",
+   "name": "Lvl3Elevator_slot0",
+   "kind": "scale",
+   "classes": [
+    "Lvl3Elevator"
+   ]
+  },
+  {
+   "site": "0x15e844",
+   "fn": "0x15e600",
+   "name": "FUN_0015e600",
+   "kind": "other",
+   "classes": [
+    "Polarizer"
+   ]
+  },
+  {
+   "site": "0x15f06c",
+   "fn": "0x15f058",
+   "name": "Polarizer_Update",
+   "kind": "timer_decrement",
+   "classes": [
+    "Polarizer"
+   ]
+  },
+  {
+   "site": "0x16014c",
+   "fn": "0x16013c",
+   "name": "FUN_0016013c",
+   "kind": "scale",
+   "classes": [
+    "PowerupAmmo"
+   ]
+  },
+  {
+   "site": "0x1619dc",
+   "fn": "0x1619c8",
+   "name": "FUN_001619c8",
+   "kind": "scale",
+   "classes": [
+    "PowerupHealth"
+   ]
+  },
+  {
+   "site": "0x167900",
+   "fn": "0x167184",
+   "name": "FUN_00167184",
+   "kind": "scale",
+   "classes": [
+    "RatchetShipAnimation"
+   ]
+  },
+  {
+   "site": "0x167bbc",
+   "fn": "0x167184",
+   "name": "FUN_00167184",
+   "kind": "scale",
+   "classes": [
+    "RatchetShipAnimation"
+   ]
+  },
+  {
+   "site": "0x16b5bc",
+   "fn": "0x16b3fc",
+   "name": "SharkagatorFin_slot0",
+   "kind": "scale",
+   "classes": [
+    "SharkagatorFin"
+   ]
+  },
+  {
+   "site": "0x16d014",
+   "fn": "0x16cb78",
+   "name": "ShieldCharger_Update",
+   "kind": "timer_increment",
+   "classes": [
+    "ShieldCharger"
+   ]
+  },
+  {
+   "site": "0x17a6d0",
+   "fn": "0x17a30c",
+   "name": "TieManipulator_slot0",
+   "kind": "scale",
+   "classes": [
+    "TieManipulator"
+   ]
+  },
+  {
+   "site": "0x17d4d0",
+   "fn": "0x17d49c",
+   "name": "TMRobotHeadB_Update",
+   "kind": "timer_increment",
+   "classes": [
+    "TMRobotHeadB"
+   ]
+  }
+ ]
+}

@@ -32,6 +32,17 @@ points de compétence. Forme : un plugin PRX pour PPSSPP.
 - Vaguelettes, débris de caisses, feu : autres « animateurs » de particules à corriger.
 - `animdisp` (déplacement animé de PNJ/cinématiques) : mis de côté, il bloque le jeu.
 
+## Point au 1er octobre 2026
+
+- Décompilation complète de Pokitaru (5045 fonctions) ; toutes les trouvailles sont décrites dans
+  `docs/fr/TROUVAILLES_DECOMPILATION.md` (version anglaise : `docs/DECOMPILATION_FINDINGS.md`).
+- Une vingtaine de familles de corrections prêtes (`docs/FIX_CATALOGUE_2026-10-01.md`).
+- Validé en jeu : déplacement et attaques des crabes, papillons.
+- Suivi chiffré : `tools/runtime/fix-monitor.py` compare chaque mesure avec le jeu original.
+- Plugin InterpGate allégé (7,8 Ko) : Dayni Moon ne plante plus.
+- Nouveau plugin facultatif OCEnhance : caméra au stick droit, L2/R2, FOV, distance/hauteur de
+  caméra (`patches/experimental/enhancements/README_FR.md`), pas encore testé en jeu.
+
 ## Outils disponibles
 
 Recensement des objets actifs, points d'arrêt sur écriture ou appel, coupure
@@ -40,11 +51,11 @@ Mode d'emploi : `docs/RUNTIME_GUIDE.md`.
 
 ## Tester toi-même
 
-1. Plugin `InterpGate` seul activé (les autres à `false`), PPSSPP en Vulkan.
+1. Plugin `InterpGate` (IG-v16f) activé, avec éventuellement `OCEnhance` (les autres à `false`), PPSSPP en Vulkan.
 2. Aller à Pokitaru, puis dans un terminal à la racine du dépôt :
    `python tools/runtime/fixes.py --target C1 --fix nav,crab --out research/live-tests/pokitaru/mes-tests/raw/essai-1`
 3. Revenir au jeu d'origine : `--target A0` (nouveau dossier `--out` à chaque fois).
-4. Ne pas utiliser `animdisp` (blocage du jeu).
+4. `animdisp` a été retiré (ce n'était pas une erreur de vitesse).
 
 ## Prochaines étapes
 

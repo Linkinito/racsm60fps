@@ -1,0 +1,11 @@
+{
+ "status": "STATIC_CANDIDATE",
+ "method": "Manual instruction review 2026-10-01 of functions excluded from level01-age70-sites.json (several 1.0 loads). Each listed `lui rX,0x3F80` feeds only `mtc1 rX,fY; add.s age,age,fY` for field +0x70; rX and fY are redefined before any other read on every path (checked to the epilogue).",
+ "rule": "entity age +0x70 += 1.0 per call -> 0.5",
+ "sites": [
+  {"site": "0x1696a0", "fn": "0x169698", "class": "RynoRocket", "before": "0x3c053f80", "note": "a1 redefined 0x1696B4, f14 redefined 0x169720/0x1698F0"},
+  {"site": "0x11c1f0", "fn": "0x11c1e8", "class": "BlitzGunShot", "before": "0x3c053f80", "note": "a1 redefined 0x11C20C, f12 redefined 0x11C228"},
+  {"site": "0x115124", "fn": "0x113e00", "class": "BeeMine", "before": "0x3c043f80", "note": "bee release every 8.0 age units; a0 redefined 0x115130, f13 0x11514C"},
+  {"site": "0x115224", "fn": "0x113e00", "class": "BeeMine", "before": "0x3c043f80", "note": "age vs DAT_2CDAA8; a0 redefined 0x115230, f13 redefined 0x1153D8 or epilogue"}
+ ]
+}

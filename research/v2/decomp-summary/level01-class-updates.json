@@ -1,0 +1,605 @@
+{
+ "status": "OBSERVED class registration table (name and pump-1 update RVA only); derived from research/v2/class-table/level01-classes.json",
+ "classes": [
+  {
+   "class": "Acidbomb",
+   "update": "0x107534"
+  },
+  {
+   "class": "AcidbombEpoxy",
+   "update": "0x108a08"
+  },
+  {
+   "class": "AcidGloveHUD",
+   "update": "0x108f20"
+  },
+  {
+   "class": "AgentController",
+   "update": "0x1091d0"
+  },
+  {
+   "class": "AgentOfDoom",
+   "update": "0x1099bc"
+  },
+  {
+   "class": "AgentOfDoomShrapnel",
+   "update": "0x10e404"
+  },
+  {
+   "class": "AgentsBomb",
+   "update": "0x10e714"
+  },
+  {
+   "class": "AgentsGlove",
+   "update": "0x10fd58"
+  },
+  {
+   "class": "AgentsGrenade",
+   "update": "0x1107cc"
+  },
+  {
+   "class": "AgentsLaser",
+   "update": "0x111104"
+  },
+  {
+   "class": "AgentsRocket",
+   "update": "0x111c54"
+  },
+  {
+   "class": "ArmorHelmet",
+   "update": "0x11254c"
+  },
+  {
+   "class": "ArmorLeftFoot",
+   "update": "0x112564"
+  },
+  {
+   "class": "ArmorLeftHand",
+   "update": "0x11257c"
+  },
+  {
+   "class": "ArmorPickup",
+   "update": "0x112df4"
+  },
+  {
+   "class": "ArmorRightFoot",
+   "update": "0x113340"
+  },
+  {
+   "class": "ArmorRightHand",
+   "update": "0x113358"
+  },
+  {
+   "class": "ArmorTorso",
+   "update": "0x113370"
+  },
+  {
+   "class": "BeeMine",
+   "update": "0x113e00"
+  },
+  {
+   "class": "BeeMineGlove",
+   "update": "0x115990"
+  },
+  {
+   "class": "BeeMineGloveHUD",
+   "update": "0x115fc0"
+  },
+  {
+   "class": "BeeMineShrapnel",
+   "update": "0x116308"
+  },
+  {
+   "class": "Blaster",
+   "update": "0x116a00"
+  },
+  {
+   "class": "BlasterAkimbo",
+   "update": "0x117a94"
+  },
+  {
+   "class": "BlasterShot",
+   "update": "0x118130"
+  },
+  {
+   "class": "BlitzGun",
+   "update": "0x11a5b0"
+  },
+  {
+   "class": "BlitzGunShot",
+   "update": "0x11c1e8"
+  },
+  {
+   "class": "BoltController",
+   "update": "0x1204c0"
+  },
+  {
+   "class": "BoltCrankBolt",
+   "update": "0x120a80"
+  },
+  {
+   "class": "BoltCrankCam",
+   "update": "0x120fb4"
+  },
+  {
+   "class": "BoltGrabber",
+   "update": "0x121264"
+  },
+  {
+   "class": "Bombglove",
+   "update": "0x1217f4"
+  },
+  {
+   "class": "BoxBreaker",
+   "update": "0x121d74"
+  },
+  {
+   "class": "BoxBreakerHelp",
+   "update": "0x121e10"
+  },
+  {
+   "class": "BreakableObject",
+   "update": "0x122080"
+  },
+  {
+   "class": "Butterfly",
+   "update": "0x122820"
+  },
+  {
+   "class": "ChameleonDecoy",
+   "update": "0x123248"
+  },
+  {
+   "class": "ClankForShipAnim",
+   "update": "0x123394"
+  },
+  {
+   "class": "ClankPack",
+   "update": "0x1233d4"
+  },
+  {
+   "class": "ConditionalStartLocation",
+   "update": "0x123424"
+  },
+  {
+   "class": "ContinuePoint",
+   "update": "0x1234d0"
+  },
+  {
+   "class": "CowBell",
+   "update": "0x1239b0"
+  },
+  {
+   "class": "Crab",
+   "update": "0x126f28"
+  },
+  {
+   "class": "CrabObjectController",
+   "update": "0x127f18"
+  },
+  {
+   "class": "CrabShrapnel",
+   "update": "0x1281c8"
+  },
+  {
+   "class": "CrankedObject",
+   "update": "0x128c20"
+  },
+  {
+   "class": "Crate",
+   "update": "0x129558"
+  },
+  {
+   "class": "CrateAmmo",
+   "update": "0x129668"
+  },
+  {
+   "class": "CrossbowGun",
+   "update": "0x12b254"
+  },
+  {
+   "class": "CrossbowShot",
+   "update": "0x12cdec"
+  },
+  {
+   "class": "CrystalGroundShard",
+   "update": "0x12e168"
+  },
+  {
+   "class": "DesignTest",
+   "update": "0x12e898"
+  },
+  {
+   "class": "DropshipB",
+   "update": "0x12f850"
+  },
+  {
+   "class": "DropshipLaser",
+   "update": "0x1305d8"
+  },
+  {
+   "class": "DualBlasterHUD",
+   "update": "0x1307b0"
+  },
+  {
+   "class": "electricXplo",
+   "update": "0x130fac"
+  },
+  {
+   "class": "ElectroBall",
+   "update": "0x132bec"
+  },
+  {
+   "class": "ElectroshockWave",
+   "update": "0x134310"
+  },
+  {
+   "class": "EndMovie",
+   "update": "0x1347ec"
+  },
+  {
+   "class": "EnemyController",
+   "update": "0x134fcc"
+  },
+  {
+   "class": "EnemyWave",
+   "update": "0x137d9c"
+  },
+  {
+   "class": "ExplosiveBee",
+   "update": "0x1391b0"
+  },
+  {
+   "class": "Fire",
+   "update": "0x13a51c"
+  },
+  {
+   "class": "Flamethrower",
+   "update": "0x13b8f0"
+  },
+  {
+   "class": "FlyingCarLightweightDirectional",
+   "update": "0x13e12c"
+  },
+  {
+   "class": "FlyingCarLightweightOrbit",
+   "update": "0x13f1d0"
+  },
+  {
+   "class": "FlyingCarLightweightPathed",
+   "update": "0x1401a8"
+  },
+  {
+   "class": "FogMoby",
+   "update": "0x141204"
+  },
+  {
+   "class": "GlowCard",
+   "update": "0x14187c"
+  },
+  {
+   "class": "GravityCrystal",
+   "update": "0x142e30"
+  },
+  {
+   "class": "HeadShrapnel",
+   "update": "0x143248"
+  },
+  {
+   "class": "Helipack",
+   "update": "0x143850"
+  },
+  {
+   "class": "HutDoor",
+   "update": "0x143fec"
+  },
+  {
+   "class": "Hypershot",
+   "update": "0x144954"
+  },
+  {
+   "class": "InitialCamera",
+   "update": "0x144be8"
+  },
+  {
+   "class": "IntroMovie",
+   "update": "0x144dd4"
+  },
+  {
+   "class": "LaserTracer",
+   "update": "0x148cec"
+  },
+  {
+   "class": "Level01Boat",
+   "update": "0x14eb68"
+  },
+  {
+   "class": "Level01Cutscene01",
+   "update": "0x1503ac"
+  },
+  {
+   "class": "Level01DoorTarget",
+   "update": "0x15083c"
+  },
+  {
+   "class": "Level01HelpManager",
+   "update": "0x150ef8"
+  },
+  {
+   "class": "Level01OceanSound",
+   "update": "0x151654"
+  },
+  {
+   "class": "Level01SkyController",
+   "update": "0x1519a8"
+  },
+  {
+   "class": "Level01Waterfall",
+   "update": "0x151d78"
+  },
+  {
+   "class": "LevelSettings",
+   "update": "0x15299c"
+  },
+  {
+   "class": "LunaCamera",
+   "update": "0x1529f0"
+  },
+  {
+   "class": "LunaCutscene",
+   "update": "0x152ea0"
+  },
+  {
+   "class": "LunaNPC",
+   "update": "0x154294"
+  },
+  {
+   "class": "LunaPhotoTarget",
+   "update": "0x155ce4"
+  },
+  {
+   "class": "Lvl3Elevator",
+   "update": "0x156710"
+  },
+  {
+   "class": "MapOMaticGadget",
+   "update": "0x1570a0"
+  },
+  {
+   "class": "MatrixMoby",
+   "update": "0x1570b8"
+  },
+  {
+   "class": "MobyGroup",
+   "update": "0x157160"
+  },
+  {
+   "class": "MobyIce",
+   "update": "0x15841c"
+  },
+  {
+   "class": "Mootator",
+   "update": "0x15a364"
+  },
+  {
+   "class": "MutantCow",
+   "update": "0x15af7c"
+  },
+  {
+   "class": "MutantMadCow",
+   "update": "0x15c060"
+  },
+  {
+   "class": "NapalmBubble",
+   "update": "0x15cce0"
+  },
+  {
+   "class": "PathAnimal",
+   "update": "0x15dd3c"
+  },
+  {
+   "class": "PDA",
+   "update": "0x15e380"
+  },
+  {
+   "class": "Polarizer",
+   "update": "0x15f058"
+  },
+  {
+   "class": "PowerupAmmo",
+   "update": "0x16009c"
+  },
+  {
+   "class": "PowerupHealth",
+   "update": "0x1615c8"
+  },
+  {
+   "class": "Ratchet",
+   "update": "0x162fb8"
+  },
+  {
+   "class": "RatchetDecoyInner",
+   "update": "0x164c30"
+  },
+  {
+   "class": "RatchetDecoyOuter",
+   "update": "0x165184"
+  },
+  {
+   "class": "RatchetShip",
+   "update": "0x1653f4"
+  },
+  {
+   "class": "RatchetShipAnimation",
+   "update": "0x166438"
+  },
+  {
+   "class": "Region",
+   "update": "0x1684a4"
+  },
+  {
+   "class": "Ryno",
+   "update": "0x168c28"
+  },
+  {
+   "class": "RynoRocket",
+   "update": "0x169698"
+  },
+  {
+   "class": "SetCamera",
+   "update": "0x16a670"
+  },
+  {
+   "class": "ShakeyBush",
+   "update": "0x16aba8"
+  },
+  {
+   "class": "Sharkagator",
+   "update": "0x16afd4"
+  },
+  {
+   "class": "SharkagatorFin",
+   "update": "0x16b830"
+  },
+  {
+   "class": "ShieldCharger",
+   "update": "0x16cb78"
+  },
+  {
+   "class": "ShieldChargerBolt",
+   "update": "0x16f228"
+  },
+  {
+   "class": "ShockRocket",
+   "update": "0x16f954"
+  },
+  {
+   "class": "ShockRocketShot",
+   "update": "0x170b20"
+  },
+  {
+   "class": "ShrapnelGeneric",
+   "update": "0x171948"
+  },
+  {
+   "class": "ShrinkBeam",
+   "update": "0x17202c"
+  },
+  {
+   "class": "ShrinkRayRatchet",
+   "update": "0x172cfc"
+  },
+  {
+   "class": "SkillPoint_L01",
+   "update": "0x172fb8"
+  },
+  {
+   "class": "SlideController",
+   "update": "0x173788"
+  },
+  {
+   "class": "Spitfire",
+   "update": "0x173aa0"
+  },
+  {
+   "class": "Splash",
+   "update": "0x174e84"
+  },
+  {
+   "class": "Sproutomatic",
+   "update": "0x17553c"
+  },
+  {
+   "class": "StaticBarrierBelt",
+   "update": "0x175b3c"
+  },
+  {
+   "class": "SuckCannon",
+   "update": "0x1762a8"
+  },
+  {
+   "class": "SuckCannonComet",
+   "update": "0x19adf4"
+  },
+  {
+   "class": "SuckCannonCometTie",
+   "update": "0x176c18"
+  },
+  {
+   "class": "SuckCannonManager",
+   "update": "0x17794c"
+  },
+  {
+   "class": "SwarmManager",
+   "update": "0x178a1c"
+  },
+  {
+   "class": "Teleporter",
+   "update": "0x1799c0"
+  },
+  {
+   "class": "TieManipulator",
+   "update": "0x17a8e4"
+  },
+  {
+   "class": "TitaniumBolt",
+   "update": "0x17afcc"
+  },
+  {
+   "class": "TMRobotHeadB",
+   "update": "0x17d49c"
+  },
+  {
+   "class": "TMRobotTorsoB",
+   "update": "0x180970"
+  },
+  {
+   "class": "TMRobotTorsoCutscene",
+   "update": "0x182678"
+  },
+  {
+   "class": "TorsoAShot",
+   "update": "0x1827c4"
+  },
+  {
+   "class": "TorsoShrapnel",
+   "update": "0x1833b8"
+  },
+  {
+   "class": "TrainingBot",
+   "update": "0x185b34"
+  },
+  {
+   "class": "TrainingBotShrapnel",
+   "update": "0x18670c"
+  },
+  {
+   "class": "TriggerCollection",
+   "update": "0x186e14"
+  },
+  {
+   "class": "TriggeredDoor",
+   "update": "0x187614"
+  },
+  {
+   "class": "TripleWaveBeacon",
+   "update": "0x188214"
+  },
+  {
+   "class": "vendor",
+   "update": "0x1886e8"
+  },
+  {
+   "class": "WaterWaves",
+   "update": "0x188aac"
+  },
+  {
+   "class": "Wrench",
+   "update": "0x189be8"
+  },
+  {
+   "class": "ZipLineController",
+   "update": "0x18ccb8"
+  }
+ ]
+}

@@ -1,0 +1,731 @@
+{
+ "status": "STATIC_CANDIDATE_NOT_TIMING_OR_PARITY_PROOF",
+ "methodSha256": "5ab94b09229a0d358e4d3a1aab3d235f91f6f0e790e4c37b757a78b94cafc3ff",
+ "classes": {
+  "Acidbomb": {
+   "0x28": {
+    "step": [
+     {
+      "fn": "0x1bdb84",
+      "delta": 1
+     }
+    ],
+    "init": [
+     {
+      "fn": "0x6c51c",
+      "literals": [
+       "1"
+      ]
+     }
+    ],
+    "compare": []
+   }
+  },
+  "AgentsRocket": {
+   "0x28": {
+    "step": [
+     {
+      "fn": "0x1bdb84",
+      "delta": 1
+     }
+    ],
+    "init": [
+     {
+      "fn": "0x6c51c",
+      "literals": [
+       "1"
+      ]
+     }
+    ],
+    "compare": []
+   }
+  },
+  "ArmorPickup": {
+   "0x4c": {
+    "step": [
+     {
+      "fn": "0x6a09c",
+      "delta": 1
+     },
+     {
+      "fn": "0x6a09c",
+      "delta": -1
+     },
+     {
+      "fn": "0x6a3c0",
+      "delta": -1
+     }
+    ],
+    "init": [
+     {
+      "fn": "0x1128f0",
+      "literals": [
+       "7"
+      ]
+     }
+    ],
+    "compare": []
+   }
+  },
+  "BlitzGun": {
+   "0x28": {
+    "step": [
+     {
+      "fn": "0x1bdb84",
+      "delta": 1
+     }
+    ],
+    "init": [
+     {
+      "fn": "0x6c51c",
+      "literals": [
+       "1"
+      ]
+     }
+    ],
+    "compare": []
+   }
+  },
+  "Butterfly": {
+   "0x6c": {
+    "step": [
+     {
+      "fn": "0x122820",
+      "delta": -1
+     }
+    ],
+    "init": [
+     {
+      "fn": "0x1226b0",
+      "literals": [
+       "6",
+       "9"
+      ]
+     }
+    ],
+    "compare": [
+     {
+      "fn": "0x122820",
+      "op": "==",
+      "literal": "0"
+     }
+    ]
+   }
+  },
+  "Crab": {
+   "0x60": {
+    "step": [
+     {
+      "fn": "0x12469c",
+      "delta": -1
+     },
+     {
+      "fn": "0x124e60",
+      "delta": -1
+     },
+     {
+      "fn": "0x125200",
+      "delta": -1
+     },
+     {
+      "fn": "0x1257d8",
+      "delta": -1
+     },
+     {
+      "fn": "0x125ae0",
+      "delta": -1
+     },
+     {
+      "fn": "0x126350",
+      "delta": -1
+     },
+     {
+      "fn": "0x126538",
+      "delta": -1
+     }
+    ],
+    "init": [
+     {
+      "fn": "0x12461c",
+      "literals": [
+       "0x2d",
+       "0x2d"
+      ]
+     },
+     {
+      "fn": "0x12469c",
+      "literals": [
+       "0x2d",
+       "0x2d"
+      ]
+     },
+     {
+      "fn": "0x125200",
+      "literals": [
+       "0x2d",
+       "0x2d"
+      ]
+     },
+     {
+      "fn": "0x125200",
+      "literals": [
+       "0x7fffffff"
+      ]
+     },
+     {
+      "fn": "0x1256dc",
+      "literals": [
+       "0xbfffffff",
+       "0x3c",
+       "0x1e"
+      ]
+     },
+     {
+      "fn": "0x126318",
+      "literals": [
+       "4"
+      ]
+     },
+     {
+      "fn": "0x12744c",
+      "literals": [
+       "0x2d",
+       "0x2d"
+      ]
+     },
+     {
+      "fn": "0x12744c",
+      "literals": [
+       "0x2d",
+       "0x2d"
+      ]
+     },
+     {
+      "fn": "0x12744c",
+      "literals": [
+       "0x3c",
+       "0x5a"
+      ]
+     },
+     {
+      "fn": "0x12744c",
+      "literals": [
+       "0x3c",
+       "0x78"
+      ]
+     },
+     {
+      "fn": "0x12744c",
+      "literals": [
+       "0x1e",
+       "0x5a"
+      ]
+     }
+    ],
+    "compare": [
+     {
+      "fn": "0x123ae8",
+      "op": "<",
+      "literal": "0xc"
+     },
+     {
+      "fn": "0x124e60",
+      "op": "<",
+      "literal": "1"
+     },
+     {
+      "fn": "0x125200",
+      "op": "<",
+      "literal": "1"
+     },
+     {
+      "fn": "0x1257d8",
+      "op": "<",
+      "literal": "1"
+     },
+     {
+      "fn": "0x125ae0",
+      "op": "<",
+      "literal": "1"
+     },
+     {
+      "fn": "0x126538",
+      "op": "<",
+      "literal": "1"
+     }
+    ]
+   },
+   "0x64": {
+    "step": [
+     {
+      "fn": "0x126f28",
+      "delta": -1
+     }
+    ],
+    "init": [
+     {
+      "fn": "0x11278",
+      "literals": [
+       "0xffffffef"
+      ]
+     },
+     {
+      "fn": "0x12744c",
+      "literals": [
+       "15"
+      ]
+     },
+     {
+      "fn": "0x12744c",
+      "literals": [
+       "8"
+      ]
+     },
+     {
+      "fn": "0x137b88",
+      "literals": [
+       "0x10"
+      ]
+     },
+     {
+      "fn": "0x137b88",
+      "literals": [
+       "0x30"
+      ]
+     },
+     {
+      "fn": "0x137b88",
+      "literals": [
+       "0x430"
+      ]
+     },
+     {
+      "fn": "0x6a3c0",
+      "literals": [
+       "0xfffffffe"
+      ]
+     },
+     {
+      "fn": "0x6a3c0",
+      "literals": [
+       "6"
+      ]
+     },
+     {
+      "fn": "0x6a598",
+      "literals": [
+       "0xfffffff9"
+      ]
+     }
+    ],
+    "compare": [
+     {
+      "fn": "0x126750",
+      "op": "<",
+      "literal": "1"
+     }
+    ]
+   }
+  },
+  "CrankedObject": {
+   "0x28": {
+    "step": [
+     {
+      "fn": "0x1bdb84",
+      "delta": 1
+     }
+    ],
+    "init": [
+     {
+      "fn": "0x6c51c",
+      "literals": [
+       "1"
+      ]
+     }
+    ],
+    "compare": []
+   }
+  },
+  "CrossbowGun": {
+   "0x28": {
+    "step": [
+     {
+      "fn": "0x1bdb84",
+      "delta": 1
+     }
+    ],
+    "init": [
+     {
+      "fn": "0x6c51c",
+      "literals": [
+       "1"
+      ]
+     }
+    ],
+    "compare": []
+   }
+  },
+  "CrossbowShot": {
+   "0x28": {
+    "step": [
+     {
+      "fn": "0x1bdb84",
+      "delta": 1
+     }
+    ],
+    "init": [
+     {
+      "fn": "0x6c51c",
+      "literals": [
+       "1"
+      ]
+     }
+    ],
+    "compare": []
+   }
+  },
+  "CrystalGroundShard": {
+   "0x28": {
+    "step": [
+     {
+      "fn": "0x1bdb84",
+      "delta": 1
+     }
+    ],
+    "init": [
+     {
+      "fn": "0x6c51c",
+      "literals": [
+       "1"
+      ]
+     }
+    ],
+    "compare": []
+   }
+  },
+  "EnemyWave": {
+   "0x15c": {
+    "step": [
+     {
+      "fn": "0x137d9c",
+      "delta": -1
+     }
+    ],
+    "init": [
+     {
+      "fn": "0x137d9c",
+      "literals": [
+       "0x15c",
+       "0x60"
+      ]
+     }
+    ],
+    "compare": []
+   }
+  },
+  "Fire": {
+   "0x28": {
+    "step": [
+     {
+      "fn": "0x1bdb84",
+      "delta": 1
+     }
+    ],
+    "init": [
+     {
+      "fn": "0x6c51c",
+      "literals": [
+       "1"
+      ]
+     }
+    ],
+    "compare": []
+   }
+  },
+  "GravityCrystal": {
+   "0x28": {
+    "step": [
+     {
+      "fn": "0x1bdb84",
+      "delta": 1
+     }
+    ],
+    "init": [
+     {
+      "fn": "0x6c51c",
+      "literals": [
+       "1"
+      ]
+     }
+    ],
+    "compare": []
+   }
+  },
+  "Level01Waterfall": {
+   "0x28": {
+    "step": [
+     {
+      "fn": "0x1bdb84",
+      "delta": 1
+     }
+    ],
+    "init": [
+     {
+      "fn": "0x6c51c",
+      "literals": [
+       "1"
+      ]
+     }
+    ],
+    "compare": []
+   }
+  },
+  "LunaNPC": {
+   "0x4a0": {
+    "step": [
+     {
+      "fn": "0x153f28",
+      "delta": -1
+     }
+    ],
+    "init": [
+     {
+      "fn": "0x154d7c",
+      "literals": [
+       "0x1e",
+       "0xf"
+      ]
+     }
+    ],
+    "compare": [
+     {
+      "fn": "0x153f28",
+      "op": "==",
+      "literal": "0"
+     }
+    ]
+   }
+  },
+  "Polarizer": {
+   "0x28": {
+    "step": [
+     {
+      "fn": "0x1bdb84",
+      "delta": 1
+     }
+    ],
+    "init": [
+     {
+      "fn": "0x6c51c",
+      "literals": [
+       "1"
+      ]
+     }
+    ],
+    "compare": []
+   }
+  },
+  "PowerupHealth": {
+   "0x4c": {
+    "step": [
+     {
+      "fn": "0x6a3c0",
+      "delta": -1
+     }
+    ],
+    "init": [
+     {
+      "fn": "0x1628a0",
+      "literals": [
+       "2"
+      ]
+     }
+    ],
+    "compare": []
+   }
+  },
+  "RatchetShipAnimation": {
+   "0x28": {
+    "step": [
+     {
+      "fn": "0x24490",
+      "delta": 1
+     },
+     {
+      "fn": "0x24508",
+      "delta": -1
+     }
+    ],
+    "init": [
+     {
+      "fn": "0x6c51c",
+      "literals": [
+       "1"
+      ]
+     }
+    ],
+    "compare": [
+     {
+      "fn": "0x24490",
+      "op": "==",
+      "literal": "0"
+     },
+     {
+      "fn": "0x24508",
+      "op": "==",
+      "literal": "0"
+     }
+    ]
+   }
+  },
+  "ShieldCharger": {
+   "0x28": {
+    "step": [
+     {
+      "fn": "0x1bdb84",
+      "delta": 1
+     }
+    ],
+    "init": [
+     {
+      "fn": "0x6c51c",
+      "literals": [
+       "1"
+      ]
+     }
+    ],
+    "compare": []
+   }
+  },
+  "Spitfire": {
+   "0x28": {
+    "step": [
+     {
+      "fn": "0x1bdb84",
+      "delta": 1
+     }
+    ],
+    "init": [
+     {
+      "fn": "0x6c51c",
+      "literals": [
+       "1"
+      ]
+     }
+    ],
+    "compare": []
+   }
+  },
+  "TrainingBot": {
+   "0x80": {
+    "step": [
+     {
+      "fn": "0x1844f0",
+      "delta": -1
+     },
+     {
+      "fn": "0x184674",
+      "delta": 1
+     },
+     {
+      "fn": "0x184a3c",
+      "delta": -1
+     },
+     {
+      "fn": "0x185150",
+      "delta": 1
+     },
+     {
+      "fn": "0x1853f0",
+      "delta": 1
+     },
+     {
+      "fn": "0x1855d8",
+      "delta": 1
+     },
+     {
+      "fn": "0x185b34",
+      "delta": -1
+     }
+    ],
+    "init": [
+     {
+      "fn": "0x1844f0",
+      "literals": [
+       "4",
+       "656613",
+       "10",
+       "30",
+       "60"
+      ]
+     },
+     {
+      "fn": "0x186164",
+      "literals": [
+       "0x1e",
+       "0x3c"
+      ]
+     },
+     {
+      "fn": "0x186164",
+      "literals": [
+       "0x3c",
+       "0x5a"
+      ]
+     },
+     {
+      "fn": "0x186164",
+      "literals": [
+       "0x3c",
+       "0x5a"
+      ]
+     }
+    ],
+    "compare": [
+     {
+      "fn": "0x1844f0",
+      "op": "<",
+      "literal": "1"
+     },
+     {
+      "fn": "0x184a3c",
+      "op": "<",
+      "literal": "1"
+     },
+     {
+      "fn": "0x185150",
+      "op": "<",
+      "literal": "0x35"
+     },
+     {
+      "fn": "0x1853f0",
+      "op": "==",
+      "literal": "2"
+     },
+     {
+      "fn": "0x185b34",
+      "op": "<",
+      "literal": "1"
+     }
+    ]
+   },
+   "0x7c": {
+    "step": [
+     {
+      "fn": "0x185b34",
+      "delta": -1
+     }
+    ],
+    "init": [
+     {
+      "fn": "0x183f30",
+      "literals": [
+       "0xf"
+      ]
+     }
+    ],
+    "compare": []
+   }
+  }
+ }
+}

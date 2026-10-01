@@ -1,0 +1,71 @@
+[
+ {
+  "rva": "0x190d6c",
+  "classes": [
+   "AgentOfDoom",
+   "MutantCow",
+   "MutantMadCow"
+  ],
+  "callers": [
+   "0x1901f4"
+  ]
+ },
+ {
+  "rva": "0x191154",
+  "classes": [
+   "AgentOfDoom",
+   "MutantCow",
+   "MutantMadCow"
+  ],
+  "callers": [
+   "0x191590"
+  ]
+ },
+ {
+  "rva": "0x1913a4",
+  "classes": [
+   "AgentOfDoom",
+   "MutantCow",
+   "MutantMadCow"
+  ],
+  "callers": [
+   "0x191590"
+  ]
+ },
+ {
+  "rva": "0x2935c",
+  "classes": [
+   "Crab",
+   "TMRobotHeadB",
+   "TMRobotTorsoB",
+   "TrainingBot"
+  ],
+  "callers": [
+   "0x29098"
+  ]
+ },
+ {
+  "rva": "0x2a8f0",
+  "classes": [
+   "Crab",
+   "TMRobotHeadB",
+   "TMRobotTorsoB",
+   "TrainingBot"
+  ],
+  "callers": [
+   "0x29098",
+   "0x292c0"
+  ]
+ },
+ {
+  "rva": "0x7248",
+  "classes": [
+   "ArmorPickup",
+   "TitaniumBolt"
+  ],
+  "callers": [
+   "0x112df4",
+   "0x17afcc"
+  ]
+ }
+]

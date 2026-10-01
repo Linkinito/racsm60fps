@@ -1,0 +1,344 @@
+{
+ "status": "STATIC_CANDIDATE_NOT_TIMING_OR_PARITY_PROOF",
+ "counter": "0x2af28c",
+ "methodSha256": "4b0919afec5044da4e58f0694b05139ce1951987aa7207e85e11142ed80ed1d4",
+ "prxSha256": "d10a81d076fb44987a45314a020cda2f7e8b39f860b957911ca9365464676571",
+ "missing": [],
+ "groups": [
+  {
+   "function": "0x3060",
+   "role": "camera input stamp (pair with 0x7168)",
+   "lui": "0x3184",
+   "luiWord": "0x3c04002b",
+   "loads": [
+    {
+     "site": "0x3188",
+     "word": "0x8c84f28c",
+     "op": "lw"
+    }
+   ],
+   "otherUses": [],
+   "exclusive": true
+  },
+  {
+   "function": "0x7168",
+   "role": "frames since camera input stamp",
+   "lui": "0x7174",
+   "luiWord": "0x3c04002b",
+   "loads": [
+    {
+     "site": "0x7178",
+     "word": "0x8c84f28c",
+     "op": "lw"
+    }
+   ],
+   "otherUses": [],
+   "exclusive": true
+  },
+  {
+   "function": "0x48a6c",
+   "role": "counter & 1 trigger",
+   "lui": "0x48be0",
+   "luiWord": "0x3c04002b",
+   "loads": [
+    {
+     "site": "0x48be4",
+     "word": "0x8c84f28c",
+     "op": "lw"
+    }
+   ],
+   "otherUses": [],
+   "exclusive": true
+  },
+  {
+   "function": "0x8341c",
+   "role": "self-contained min interval in seconds (counter / 30)",
+   "lui": "0x83554",
+   "luiWord": "0x3c05002b",
+   "loads": [
+    {
+     "site": "0x83558",
+     "word": "0x8ca5f28c",
+     "op": "lw"
+    }
+   ],
+   "otherUses": [],
+   "exclusive": true
+  },
+  {
+   "function": "0xb5508",
+   "role": "input double-press window < 4 frames",
+   "lui": "0xb5564",
+   "luiWord": "0x3c11002b",
+   "loads": [
+    {
+     "site": "0xb55b0",
+     "word": "0x8e25f28c",
+     "op": "lw"
+    }
+   ],
+   "otherUses": [],
+   "exclusive": true
+  },
+  {
+   "function": "0x104c80",
+   "role": "HUD sprite rotation angle counter * k / 30",
+   "lui": "0x104de8",
+   "luiWord": "0x3c06002b",
+   "loads": [
+    {
+     "site": "0x104df0",
+     "word": "0x8cc5f28c",
+     "op": "lw"
+    }
+   ],
+   "otherUses": [],
+   "exclusive": true
+  },
+  {
+   "function": "0x1107cc",
+   "role": "AgentsGrenade_Update: counter % n trigger",
+   "lui": "0x110ae4",
+   "luiWord": "0x3c05002b",
+   "loads": [
+    {
+     "site": "0x110aec",
+     "word": "0x8ca5f28c",
+     "op": "lw"
+    }
+   ],
+   "otherUses": [],
+   "exclusive": true
+  },
+  {
+   "function": "0x149284",
+   "role": "spark spawn deadline counter + rand%10+10",
+   "lui": "0x149354",
+   "luiWord": "0x3c11002b",
+   "loads": [
+    {
+     "site": "0x149358",
+     "word": "0x8e24f28c",
+     "op": "lw"
+    },
+    {
+     "site": "0x1493a8",
+     "word": "0x8e25f28c",
+     "op": "lw"
+    }
+   ],
+   "otherUses": [],
+   "exclusive": true
+  },
+  {
+   "function": "0x1525c8",
+   "role": "deadline check (pair with 0x1526B8)",
+   "lui": "0x1525cc",
+   "luiWord": "0x3c04002b",
+   "loads": [
+    {
+     "site": "0x1525d0",
+     "word": "0x8c84f28c",
+     "op": "lw"
+    }
+   ],
+   "otherUses": [],
+   "exclusive": true
+  },
+  {
+   "function": "0x1526b8",
+   "role": "deadline set counter + 5",
+   "lui": "0x152704",
+   "luiWord": "0x3c04002b",
+   "loads": [
+    {
+     "site": "0x152708",
+     "word": "0x8c84f28c",
+     "op": "lw"
+    }
+   ],
+   "otherUses": [],
+   "exclusive": true
+  },
+  {
+   "function": "0x159928",
+   "role": "counter & 3 trigger",
+   "lui": "0x159a2c",
+   "luiWord": "0x3c04002b",
+   "loads": [
+    {
+     "site": "0x159a30",
+     "word": "0x8c84f28c",
+     "op": "lw"
+    }
+   ],
+   "otherUses": [],
+   "exclusive": true
+  },
+  {
+   "function": "0x15f058",
+   "role": "Polarizer_Update counter & 3 trigger",
+   "lui": "0x15f4ec",
+   "luiWord": "0x3c04002b",
+   "loads": [
+    {
+     "site": "0x15f4f0",
+     "word": "0x8c84f28c",
+     "op": "lw"
+    }
+   ],
+   "otherUses": [],
+   "exclusive": true
+  },
+  {
+   "function": "0x163274",
+   "role": "counter % 5 trigger",
+   "lui": "0x163350",
+   "luiWord": "0x3c04002b",
+   "loads": [
+    {
+     "site": "0x163354",
+     "word": "0x8c84f28c",
+     "op": "lw"
+    }
+   ],
+   "otherUses": [],
+   "exclusive": true
+  },
+  {
+   "function": "0x172fb8",
+   "role": "SkillPoint_L01 time window (counter - start) < 0xAC8",
+   "lui": "0x17304c",
+   "luiWord": "0x3c05002b",
+   "loads": [
+    {
+     "site": "0x173050",
+     "word": "0x8ca5f28c",
+     "op": "lw"
+    }
+   ],
+   "otherUses": [],
+   "exclusive": true
+  },
+  {
+   "function": "0x172fb8",
+   "role": "SkillPoint_L01 time window (counter - start) < 0xAC8",
+   "lui": "0x1730d4",
+   "luiWord": "0x3c05002b",
+   "loads": [
+    {
+     "site": "0x1730dc",
+     "word": "0x8ca5f28c",
+     "op": "lw"
+    }
+   ],
+   "otherUses": [],
+   "exclusive": true
+  },
+  {
+   "function": "0x172fb8",
+   "role": "SkillPoint_L01 time window (counter - start) < 0xAC8",
+   "lui": "0x173138",
+   "luiWord": "0x3c13002b",
+   "loads": [
+    {
+     "site": "0x17313c",
+     "word": "0x8e64f28c",
+     "op": "lw"
+    },
+    {
+     "site": "0x173180",
+     "word": "0x8e66f28c",
+     "op": "lw"
+    },
+    {
+     "site": "0x173208",
+     "word": "0x8e64f28c",
+     "op": "lw"
+    },
+    {
+     "site": "0x17325c",
+     "word": "0x8e64f28c",
+     "op": "lw"
+    }
+   ],
+   "otherUses": [],
+   "exclusive": true
+  },
+  {
+   "function": "0x172fb8",
+   "role": "SkillPoint_L01 time window (counter - start) < 0xAC8",
+   "lui": "0x17330c",
+   "luiWord": "0x3c04002b",
+   "loads": [
+    {
+     "site": "0x173310",
+     "word": "0x8c85f28c",
+     "op": "lw"
+    }
+   ],
+   "otherUses": [],
+   "exclusive": true
+  },
+  {
+   "function": "0x172fb8",
+   "role": "SkillPoint_L01 time window (counter - start) < 0xAC8",
+   "lui": "0x17338c",
+   "luiWord": "0x3c04002b",
+   "loads": [
+    {
+     "site": "0x173390",
+     "word": "0x8c85f28c",
+     "op": "lw"
+    }
+   ],
+   "otherUses": [],
+   "exclusive": true
+  },
+  {
+   "function": "0x172fb8",
+   "role": "SkillPoint_L01 time window (counter - start) < 0xAC8",
+   "lui": "0x1733f8",
+   "luiWord": "0x3c04002b",
+   "loads": [
+    {
+     "site": "0x1733fc",
+     "word": "0x8c85f28c",
+     "op": "lw"
+    }
+   ],
+   "otherUses": [],
+   "exclusive": true
+  },
+  {
+   "function": "0x17f24c",
+   "role": "counter & 1 trigger",
+   "lui": "0x17f250",
+   "luiWord": "0x3c05002b",
+   "loads": [
+    {
+     "site": "0x17f254",
+     "word": "0x8ca5f28c",
+     "op": "lw"
+    }
+   ],
+   "otherUses": [],
+   "exclusive": true
+  },
+  {
+   "function": "0x189ecc",
+   "role": "counter % 3 trigger",
+   "lui": "0x18a11c",
+   "luiWord": "0x3c04002b",
+   "loads": [
+    {
+     "site": "0x18a120",
+     "word": "0x8c84f28c",
+     "op": "lw"
+    }
+   ],
+   "otherUses": [],
+   "exclusive": true
+  }
+ ]
+}

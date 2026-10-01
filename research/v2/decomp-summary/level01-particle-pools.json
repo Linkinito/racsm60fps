@@ -1,0 +1,735 @@
+{
+ "status": "STATIC_INVENTORY_OBSERVED_ROLES_INFERRED",
+ "methodSha256": "cac90f7eaaaa24a7bd01ab1e3245822c0d7ae0f6a32dd0369a280e2a2eb584b9",
+ "registrationFunction": "0x8ba64",
+ "pools": [
+  {
+   "animator": "0x14d484",
+   "animatorName": "FUN_0014d484",
+   "recordSize": "0x34",
+   "registeredBy": "0x14d35c",
+   "classes": [],
+   "animatorKinds": {
+    "field_accum": 5
+   },
+   "animatorFields": [
+    "0x0",
+    "0x10",
+    "0x8",
+    "0xc"
+   ]
+  },
+  {
+   "animator": "0x1722e8",
+   "animatorName": "FUN_001722e8",
+   "recordSize": "0x14",
+   "registeredBy": "0x171b3c",
+   "classes": [],
+   "animatorKinds": {},
+   "animatorFields": []
+  },
+  {
+   "animator": "0x17291c",
+   "animatorName": "FUN_0017291c",
+   "recordSize": "0x14",
+   "registeredBy": "0x171cd8",
+   "classes": [],
+   "animatorKinds": {},
+   "animatorFields": []
+  },
+  {
+   "animator": "0x174738",
+   "animatorName": "FUN_00174738",
+   "recordSize": "0x3c",
+   "registeredBy": "0x174080",
+   "classes": [],
+   "animatorKinds": {
+    "field_accum": 4
+   },
+   "animatorFields": [
+    "0x0",
+    "0x20",
+    "0x4",
+    "0x8"
+   ]
+  },
+  {
+   "animator": "0x19516c",
+   "animatorName": "FUN_0019516c",
+   "recordSize": "0x3c",
+   "registeredBy": "0x1950b0",
+   "classes": [],
+   "animatorKinds": {
+    "field_accum": 2
+   },
+   "animatorFields": [
+    "0x18",
+    "0x34"
+   ]
+  },
+  {
+   "animator": "0x1957b4",
+   "animatorName": "FUN_001957b4",
+   "recordSize": "0x3c",
+   "registeredBy": "0x19510c",
+   "classes": [],
+   "animatorKinds": {
+    "float_const": 4,
+    "field_accum": 4
+   },
+   "animatorFields": [
+    "0x0",
+    "0x10",
+    "0x1c",
+    "0x2c",
+    "0x30",
+    "0x4",
+    "0x8",
+    "0xc"
+   ]
+  },
+  {
+   "animator": "0x19c0c4",
+   "animatorName": "FUN_0019c0c4",
+   "recordSize": "0x38",
+   "registeredBy": "0x19c02c",
+   "classes": [],
+   "animatorKinds": {
+    "field_accum": 1
+   },
+   "animatorFields": [
+    "0x0"
+   ]
+  },
+  {
+   "animator": "0x19c6e8",
+   "animatorName": "FUN_0019c6e8",
+   "recordSize": "0x48",
+   "registeredBy": "0x19c078",
+   "classes": [],
+   "animatorKinds": {
+    "field_accum": 1
+   },
+   "animatorFields": [
+    "0x0"
+   ]
+  },
+  {
+   "animator": "0x19dd84",
+   "animatorName": "FUN_0019dd84",
+   "recordSize": "0x34",
+   "registeredBy": "0x19dcc8",
+   "classes": [],
+   "animatorKinds": {
+    "field_accum": 3
+   },
+   "animatorFields": [
+    "0x0",
+    "0x18"
+   ]
+  },
+  {
+   "animator": "0x19ed08",
+   "animatorName": "FUN_0019ed08",
+   "recordSize": "0x14",
+   "registeredBy": "0x19eba8",
+   "classes": [],
+   "animatorKinds": {
+    "field_accum": 2
+   },
+   "animatorFields": [
+    "0x0"
+   ]
+  },
+  {
+   "animator": "0x19f388",
+   "animatorName": "FUN_0019f388",
+   "recordSize": "0x20",
+   "registeredBy": "0x19f1e4",
+   "classes": [],
+   "animatorKinds": {
+    "field_accum": 4
+   },
+   "animatorFields": [
+    "0x0",
+    "0x18",
+    "0x4",
+    "0xc"
+   ]
+  },
+  {
+   "animator": "0x19fbc8",
+   "animatorName": "FUN_0019fbc8",
+   "recordSize": "0x24",
+   "registeredBy": "0x19f8c0",
+   "classes": [],
+   "animatorKinds": {
+    "field_accum": 1
+   },
+   "animatorFields": [
+    "0x0"
+   ]
+  },
+  {
+   "animator": "0x1a05f0",
+   "animatorName": "FUN_001a05f0",
+   "recordSize": "0x30",
+   "registeredBy": "0x1a022c",
+   "classes": [],
+   "animatorKinds": {
+    "field_accum": 1
+   },
+   "animatorFields": [
+    "0x0"
+   ]
+  },
+  {
+   "animator": "0x1a0d94",
+   "animatorName": "&LAB_001a0d94",
+   "recordSize": "0x2c",
+   "registeredBy": "0x1a0be0",
+   "classes": [],
+   "animatorKinds": {},
+   "animatorFields": []
+  },
+  {
+   "animator": "0x1a1578",
+   "animatorName": "FUN_001a1578",
+   "recordSize": "0x28",
+   "registeredBy": "0x1a1194",
+   "classes": [],
+   "animatorKinds": {
+    "field_accum": 4
+   },
+   "animatorFields": [
+    "0x0",
+    "0x4",
+    "0x8",
+    "0xc"
+   ]
+  },
+  {
+   "animator": "0x1a1f40",
+   "animatorName": "FUN_001a1f40",
+   "recordSize": "0x20",
+   "registeredBy": "0x1a1c70",
+   "classes": [],
+   "animatorKinds": {
+    "field_accum": 4
+   },
+   "animatorFields": [
+    "0x0",
+    "0x4",
+    "0x8",
+    "0xc"
+   ]
+  },
+  {
+   "animator": "0x1a2a14",
+   "animatorName": "FUN_001a2a14",
+   "recordSize": "0x28",
+   "registeredBy": "0x1a2350",
+   "classes": [],
+   "animatorKinds": {
+    "field_accum": 1
+   },
+   "animatorFields": [
+    "0x0"
+   ]
+  },
+  {
+   "animator": "0x1a36b8",
+   "animatorName": "FUN_001a36b8",
+   "recordSize": "0x14",
+   "registeredBy": "0x1a363c",
+   "classes": [],
+   "animatorKinds": {},
+   "animatorFields": []
+  },
+  {
+   "animator": "0x271bc",
+   "animatorName": "FUN_000271bc",
+   "recordSize": "0x38",
+   "registeredBy": "0x26fb8",
+   "classes": [],
+   "animatorKinds": {
+    "float_const": 1
+   },
+   "animatorFields": [
+    "0x0"
+   ]
+  },
+  {
+   "animator": "0x60100",
+   "animatorName": "FUN_00060100",
+   "recordSize": "0x28",
+   "registeredBy": "0x5f940",
+   "classes": [],
+   "animatorKinds": {
+    "int_step": 1
+   },
+   "animatorFields": [
+    "0x32"
+   ]
+  },
+  {
+   "animator": "0x661fc",
+   "animatorName": "FUN_000661fc",
+   "recordSize": "0x2c",
+   "registeredBy": "0x650a0",
+   "classes": [
+    "Teleporter"
+   ],
+   "animatorKinds": {
+    "field_accum": 3
+   },
+   "animatorFields": [
+    "0x20",
+    "0x8"
+   ]
+  },
+  {
+   "animator": "0x7e810",
+   "animatorName": "P_ParticleAnim_7E810",
+   "recordSize": "0x6c",
+   "registeredBy": "0x7e410",
+   "classes": [
+    "Acidbomb",
+    "AgentsLaser",
+    "AgentsRocket",
+    "Blaster",
+    "BlasterAkimbo",
+    "BlitzGun",
+    "CrabShrapnel",
+    "DropshipB",
+    "ExplosiveBee",
+    "Fire",
+    "Flamethrower",
+    "HeadShrapnel",
+    "PowerupHealth",
+    "TMRobotTorsoB",
+    "TorsoAShot",
+    "TorsoShrapnel",
+    "TrainingBot",
+    "TrainingBotShrapnel",
+    "Wrench"
+   ],
+   "animatorKinds": {},
+   "animatorFields": []
+  },
+  {
+   "animator": "0x7f194",
+   "animatorName": "FUN_0007f194",
+   "recordSize": "0x70",
+   "registeredBy": "0x7e570",
+   "classes": [
+    "Acidbomb",
+    "BlitzGunShot"
+   ],
+   "animatorKinds": {},
+   "animatorFields": []
+  },
+  {
+   "animator": "0x7edc0",
+   "animatorName": "FUN_0007edc0",
+   "recordSize": "0x70",
+   "registeredBy": "0x7e6c0",
+   "classes": [
+    "Acidbomb",
+    "AgentOfDoom",
+    "AgentsLaser",
+    "BeeMine",
+    "BlitzGunShot",
+    "Fire",
+    "Flamethrower",
+    "HeadShrapnel",
+    "Polarizer",
+    "TMRobotHeadB",
+    "Teleporter",
+    "TorsoAShot",
+    "TorsoShrapnel",
+    "TrainingBot",
+    "TrainingBotShrapnel"
+   ],
+   "animatorKinds": {},
+   "animatorFields": []
+  },
+  {
+   "animator": "uint param_3",
+   "animatorName": "uint param_3",
+   "recordSize": "undefined2 param_4",
+   "registeredBy": "0x8ba64",
+   "classes": [
+    "Acidbomb",
+    "AgentOfDoom",
+    "AgentsLaser",
+    "AgentsRocket",
+    "BeeMine",
+    "Blaster",
+    "BlasterAkimbo",
+    "BlitzGun",
+    "BlitzGunShot",
+    "CrabShrapnel",
+    "DropshipB",
+    "ExplosiveBee",
+    "Fire",
+    "Flamethrower",
+    "HeadShrapnel",
+    "LunaCamera",
+    "MobyIce",
+    "Polarizer",
+    "PowerupHealth",
+    "RatchetShipAnimation",
+    "Ryno",
+    "SlideController",
+    "TMRobotHeadB",
+    "TMRobotTorsoB",
+    "Teleporter",
+    "TorsoAShot",
+    "TorsoShrapnel",
+    "TrainingBot",
+    "TrainingBotShrapnel",
+    "Wrench"
+   ],
+   "animatorKinds": {},
+   "animatorFields": []
+  },
+  {
+   "animator": "0xc60bc",
+   "animatorName": "FUN_000c60bc",
+   "recordSize": "0x6c",
+   "registeredBy": "0xc5e48",
+   "classes": [
+    "BlitzGun",
+    "LunaCamera",
+    "Ryno",
+    "TMRobotHeadB",
+    "TMRobotTorsoB"
+   ],
+   "animatorKinds": {},
+   "animatorFields": []
+  },
+  {
+   "animator": "0xc8248",
+   "animatorName": "FUN_000c8248",
+   "recordSize": "0x54",
+   "registeredBy": "0xc7924",
+   "classes": [],
+   "animatorKinds": {
+    "field_accum": 4
+   },
+   "animatorFields": [
+    "0x0",
+    "0x10",
+    "0x8",
+    "0xc"
+   ]
+  },
+  {
+   "animator": "0xcac58",
+   "animatorName": "FUN_000cac58",
+   "recordSize": "0x44",
+   "registeredBy": "0xca300",
+   "classes": [
+    "Acidbomb",
+    "BeeMine",
+    "BlitzGun",
+    "BlitzGunShot",
+    "ExplosiveBee",
+    "MobyIce",
+    "Ryno"
+   ],
+   "animatorKinds": {
+    "field_accum": 5
+   },
+   "animatorFields": [
+    "0x0",
+    "0x10",
+    "0x24",
+    "0x4",
+    "0x8"
+   ]
+  },
+  {
+   "animator": "0xcb238",
+   "animatorName": "FUN_000cb238",
+   "recordSize": "0x40",
+   "registeredBy": "0xca9c4",
+   "classes": [],
+   "animatorKinds": {
+    "field_accum": 1
+   },
+   "animatorFields": [
+    "0x0"
+   ]
+  },
+  {
+   "animator": "0xcb6c4",
+   "animatorName": "FUN_000cb6c4",
+   "recordSize": "0x2c",
+   "registeredBy": "0xcabfc",
+   "classes": [],
+   "animatorKinds": {
+    "field_accum": 1
+   },
+   "animatorFields": [
+    "0x0"
+   ]
+  },
+  {
+   "animator": "0xccf1c",
+   "animatorName": "FUN_000ccf1c",
+   "recordSize": "0x3c",
+   "registeredBy": "0xcd1a0",
+   "classes": [],
+   "animatorKinds": {
+    "int_step": 1
+   },
+   "animatorFields": [
+    "0x30"
+   ]
+  },
+  {
+   "animator": "0xcede0",
+   "animatorName": "FUN_000cede0",
+   "recordSize": "0x4c",
+   "registeredBy": "0xcf064",
+   "classes": [],
+   "animatorKinds": {},
+   "animatorFields": []
+  },
+  {
+   "animator": "0xcf958",
+   "animatorName": "FUN_000cf958",
+   "recordSize": "0x24",
+   "registeredBy": "0xcf6f4",
+   "classes": [
+    "Fire"
+   ],
+   "animatorKinds": {
+    "float_const": 1,
+    "field_accum": 3
+   },
+   "animatorFields": [
+    "0x0",
+    "0x4",
+    "0x8",
+    "0xc"
+   ]
+  },
+  {
+   "animator": "0xd0610",
+   "animatorName": "FUN_000d0610",
+   "recordSize": "0x24",
+   "registeredBy": "0xd0280",
+   "classes": [],
+   "animatorKinds": {},
+   "animatorFields": []
+  },
+  {
+   "animator": "0xd0ae4",
+   "animatorName": "FUN_000d0ae4",
+   "recordSize": "0x24",
+   "registeredBy": "0xd0300",
+   "classes": [],
+   "animatorKinds": {},
+   "animatorFields": []
+  },
+  {
+   "animator": "0xd0fec",
+   "animatorName": "FUN_000d0fec",
+   "recordSize": "0x24",
+   "registeredBy": "0xd0508",
+   "classes": [],
+   "animatorKinds": {},
+   "animatorFields": []
+  },
+  {
+   "animator": "0xd3f18",
+   "animatorName": "FUN_000d3f18",
+   "recordSize": "0x38",
+   "registeredBy": "0xd3ebc",
+   "classes": [],
+   "animatorKinds": {
+    "float_const": 1
+   },
+   "animatorFields": [
+    "0x0"
+   ]
+  },
+  {
+   "animator": "0xd4bc8",
+   "animatorName": "FUN_000d4bc8",
+   "recordSize": "0x38",
+   "registeredBy": "0xd4b6c",
+   "classes": [],
+   "animatorKinds": {
+    "field_accum": 1
+   },
+   "animatorFields": [
+    "0x0"
+   ]
+  },
+  {
+   "animator": "0xd58c0",
+   "animatorName": "FUN_000d58c0",
+   "recordSize": "0x2c",
+   "registeredBy": "0xd5860",
+   "classes": [],
+   "animatorKinds": {
+    "field_accum": 2
+   },
+   "animatorFields": [
+    "0x0",
+    "0x18"
+   ]
+  },
+  {
+   "animator": "0xd7078",
+   "animatorName": "FUN_000d7078",
+   "recordSize": "0x14",
+   "registeredBy": "0xd702c",
+   "classes": [],
+   "animatorKinds": {
+    "field_accum": 1
+   },
+   "animatorFields": [
+    "0x0"
+   ]
+  },
+  {
+   "animator": "0xd7568",
+   "animatorName": "FUN_000d7568",
+   "recordSize": "0x30",
+   "registeredBy": "0xd750c",
+   "classes": [],
+   "animatorKinds": {
+    "float_const": 1
+   },
+   "animatorFields": [
+    "0x0"
+   ]
+  },
+  {
+   "animator": "0xd7fe4",
+   "animatorName": "FUN_000d7fe4",
+   "recordSize": "0x3c",
+   "registeredBy": "0xd7f88",
+   "classes": [],
+   "animatorKinds": {
+    "int_step": 1,
+    "field_accum": 2
+   },
+   "animatorFields": [
+    "0x0",
+    "0x3a",
+    "0x8"
+   ]
+  },
+  {
+   "animator": "0xd927c",
+   "animatorName": "FUN_000d927c",
+   "recordSize": "0x4c",
+   "registeredBy": "0xd8e28",
+   "classes": [
+    "SlideController"
+   ],
+   "animatorKinds": {
+    "field_accum": 4
+   },
+   "animatorFields": [
+    "0x0",
+    "0x10",
+    "0x8",
+    "0xc"
+   ]
+  },
+  {
+   "animator": "0xd9ee8",
+   "animatorName": "FUN_000d9ee8",
+   "recordSize": "0x48",
+   "registeredBy": "0xd8e88",
+   "classes": [],
+   "animatorKinds": {},
+   "animatorFields": []
+  },
+  {
+   "animator": "param_7",
+   "animatorName": "param_7",
+   "recordSize": "0x14",
+   "registeredBy": "0xdcab4",
+   "classes": [],
+   "animatorKinds": {},
+   "animatorFields": []
+  },
+  {
+   "animator": "0xde23c",
+   "animatorName": "P_ParticleAnim_Waterfall",
+   "recordSize": "0x50",
+   "registeredBy": "0xdd224",
+   "classes": [],
+   "animatorKinds": {
+    "float_const": 2,
+    "field_accum": 5
+   },
+   "animatorFields": [
+    "0x0",
+    "0x10",
+    "0x18",
+    "0x20",
+    "0x4",
+    "0x48",
+    "0x8"
+   ]
+  },
+  {
+   "animator": "0xde8a8",
+   "animatorName": "P_ParticleAnim_DE8A8",
+   "recordSize": "0x40",
+   "registeredBy": "0xde1dc",
+   "classes": [],
+   "animatorKinds": {
+    "field_accum": 4
+   },
+   "animatorFields": [
+    "0x0",
+    "0x18",
+    "0x4",
+    "0x8"
+   ]
+  },
+  {
+   "animator": "0xdfe30",
+   "animatorName": "FUN_000dfe30",
+   "recordSize": "0x44",
+   "registeredBy": "0xdfdb4",
+   "classes": [
+    "RatchetShipAnimation"
+   ],
+   "animatorKinds": {
+    "field_accum": 5,
+    "float_const": 1
+   },
+   "animatorFields": [
+    "0x0",
+    "0x18",
+    "0x20",
+    "0x4",
+    "0x8"
+   ]
+  },
+  {
+   "animator": "0xe09b0",
+   "animatorName": "FUN_000e09b0",
+   "recordSize": "0x1c",
+   "registeredBy": "0xe07b8",
+   "classes": [],
+   "animatorKinds": {
+    "float_const": 1
+   },
+   "animatorFields": [
+    "0x14"
+   ]
+  }
+ ]
+}

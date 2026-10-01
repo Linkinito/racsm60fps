@@ -1,0 +1,4945 @@
+{
+ "status": "STATIC_CANDIDATE_NOT_TIMING_OR_PARITY_PROOF",
+ "sharedThreshold": 12,
+ "scanMethodSha256": "685dc3256fe910347178b4e89d020d4948cd62572f91179a3f189a8ed431f402",
+ "methodSha256": "601c47073715e0d4461f24a3fd150ef3421c47771db42ebc70840aee95802da6",
+ "classes": [
+  {
+   "class": "Crab",
+   "steps": 24,
+   "counts": {
+    "field_accum": 11,
+    "int_step": 12,
+    "int_vs_float": 1
+   },
+   "functions": [
+    "0x124114",
+    "0x12469c",
+    "0x124e60",
+    "0x125200",
+    "0x1254cc",
+    "0x1257d8",
+    "0x125ae0",
+    "0x126350",
+    "0x126538",
+    "0x126f28",
+    "0x134f60",
+    "0x2935c",
+    "0x2a8f0",
+    "0x8a944",
+    "0xe080"
+   ],
+   "floatThresholds": [
+    "DAT_002cf3c8"
+   ]
+  },
+  {
+   "class": "TrainingBot",
+   "steps": 23,
+   "counts": {
+    "field_accum": 11,
+    "int_step": 12
+   },
+   "functions": [
+    "0x134f60",
+    "0x183a50",
+    "0x183e5c",
+    "0x1844f0",
+    "0x184674",
+    "0x184a3c",
+    "0x185150",
+    "0x1853f0",
+    "0x1855d8",
+    "0x185b34",
+    "0x2935c",
+    "0x2a8f0",
+    "0x8a944",
+    "0xe080"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "HutDoor",
+   "steps": 21,
+   "counts": {
+    "int_step": 1,
+    "float_const": 6,
+    "field_accum": 14
+   },
+   "functions": [
+    "0x143dc8",
+    "0x143fec",
+    "0x8a944"
+   ],
+   "floatThresholds": [
+    "DAT_002d28a8"
+   ]
+  },
+  {
+   "class": "MutantCow",
+   "steps": 18,
+   "counts": {
+    "float_const": 2,
+    "field_accum": 16
+   },
+   "functions": [
+    "0x15af7c",
+    "0x1901f4",
+    "0x190d6c",
+    "0x191154",
+    "0x1913a4",
+    "0x19a318"
+   ],
+   "floatThresholds": [
+    "DAT_002d9c08"
+   ]
+  },
+  {
+   "class": "MutantMadCow",
+   "steps": 18,
+   "counts": {
+    "float_const": 2,
+    "field_accum": 16
+   },
+   "functions": [
+    "0x15c060",
+    "0x1901f4",
+    "0x190d6c",
+    "0x191154",
+    "0x1913a4",
+    "0x19a318"
+   ],
+   "floatThresholds": [
+    "DAT_002d9c08"
+   ]
+  },
+  {
+   "class": "TMRobotTorsoB",
+   "steps": 17,
+   "counts": {
+    "field_accum": 12,
+    "float_const": 1,
+    "int_step": 4
+   },
+   "functions": [
+    "0x134f60",
+    "0x14908",
+    "0x17eccc",
+    "0x180970",
+    "0x2935c",
+    "0x2a8f0",
+    "0x8a944",
+    "0xe080"
+   ],
+   "floatThresholds": [
+    "DAT_003696b0"
+   ]
+  },
+  {
+   "class": "TMRobotHeadB",
+   "steps": 14,
+   "counts": {
+    "field_accum": 8,
+    "float_const": 3,
+    "int_step": 3
+   },
+   "functions": [
+    "0x134f60",
+    "0x14908",
+    "0x17be18",
+    "0x17d49c",
+    "0x2a8f0",
+    "0x8a944",
+    "0xe080"
+   ],
+   "floatThresholds": [
+    "DAT_002d878c",
+    "DAT_003696b0"
+   ]
+  },
+  {
+   "class": "PowerupAmmo",
+   "steps": 14,
+   "counts": {
+    "float_const": 5,
+    "field_accum": 9
+   },
+   "functions": [
+    "0x16013c",
+    "0x1602ac",
+    "0x160660",
+    "0x160988",
+    "0x161014"
+   ],
+   "floatThresholds": [
+    "DAT_002d5dd0",
+    "DAT_002d5de8",
+    "DAT_002d5e0c"
+   ]
+  },
+  {
+   "class": "AgentOfDoom",
+   "steps": 13,
+   "counts": {
+    "float_const": 2,
+    "int_step": 4,
+    "field_accum": 7
+   },
+   "functions": [
+    "0x1099bc",
+    "0x10a734",
+    "0x10aa68",
+    "0x10b1d0",
+    "0x10c890",
+    "0x10de64",
+    "0x1901f4",
+    "0x190d6c"
+   ],
+   "floatThresholds": [
+    "DAT_002d9c08"
+   ]
+  },
+  {
+   "class": "BoltCrankBolt",
+   "steps": 11,
+   "counts": {
+    "field_accum": 6,
+    "int_step": 1,
+    "float_const": 4
+   },
+   "functions": [
+    "0x12085c",
+    "0x120a80",
+    "0x120e90",
+    "0x8a944",
+    "0xe080"
+   ],
+   "floatThresholds": [
+    "DAT_002ce878",
+    "DAT_002ce880",
+    "DAT_002ce884"
+   ]
+  },
+  {
+   "class": "AgentsBomb",
+   "steps": 10,
+   "counts": {
+    "field_accum": 8,
+    "float_const": 2
+   },
+   "functions": [
+    "0x10c890",
+    "0x10eb1c",
+    "0x10edc0"
+   ],
+   "floatThresholds": [
+    "DAT_002cd28c",
+    "DAT_002cd290"
+   ]
+  },
+  {
+   "class": "EnemyController",
+   "steps": 10,
+   "counts": {
+    "float_const": 4,
+    "int_step": 6
+   },
+   "functions": [
+    "0x13524c",
+    "0x1357c0",
+    "0x1360dc",
+    "0x13679c"
+   ],
+   "floatThresholds": [
+    "DAT_002ca388 * fVar8",
+    "DAT_002ca390 * fVar8",
+    "DAT_002d12e0",
+    "DAT_002d12f0"
+   ]
+  },
+  {
+   "class": "RatchetShipAnimation",
+   "steps": 8,
+   "counts": {
+    "int_step": 4,
+    "field_accum": 2,
+    "float_const": 2
+   },
+   "functions": [
+    "0x165a20",
+    "0x166438",
+    "0x167184",
+    "0x24490",
+    "0x24508",
+    "0xdf454",
+    "0xdf7b8"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "PowerupHealth",
+   "steps": 8,
+   "counts": {
+    "field_accum": 3,
+    "float_const": 5
+   },
+   "functions": [
+    "0x1615c8",
+    "0x1619c8",
+    "0x1628a0",
+    "0x318c0",
+    "0xc75a4"
+   ],
+   "floatThresholds": [
+    "DAT_002b0164",
+    "DAT_002d6008",
+    "DAT_002d6024"
+   ]
+  },
+  {
+   "class": "BeeMine",
+   "steps": 8,
+   "counts": {
+    "int_step": 4,
+    "field_accum": 2,
+    "float_const": 2
+   },
+   "functions": [
+    "0x113e00",
+    "0x178234",
+    "0xcdbc0"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "BlasterShot",
+   "steps": 8,
+   "counts": {
+    "float_const": 3,
+    "field_accum": 5
+   },
+   "functions": [
+    "0x118130",
+    "0x11916c"
+   ],
+   "floatThresholds": [
+    "DAT_002ce1b8",
+    "DAT_002ce1bc"
+   ]
+  },
+  {
+   "class": "LaserTracer",
+   "steps": 8,
+   "counts": {
+    "field_accum": 5,
+    "float_const": 3
+   },
+   "functions": [
+    "0x145144",
+    "0x145568",
+    "0x14be54"
+   ],
+   "floatThresholds": [
+    "DAT_002d2d74",
+    "DAT_002d2d80"
+   ]
+  },
+  {
+   "class": "ExplosiveBee",
+   "steps": 7,
+   "counts": {
+    "field_accum": 4,
+    "float_const": 3
+   },
+   "functions": [
+    "0x11d974",
+    "0x138594",
+    "0x1391b0",
+    "0x318c0"
+   ],
+   "floatThresholds": [
+    "DAT_002b0164",
+    "DAT_002ce784"
+   ]
+  },
+  {
+   "class": "Level01HelpManager",
+   "steps": 7,
+   "counts": {
+    "int_step": 6,
+    "int_vs_float": 1
+   },
+   "functions": [
+    "0x150ef8",
+    "0x9f614"
+   ],
+   "floatThresholds": [
+    "DAT_002d4688"
+   ]
+  },
+  {
+   "class": "FlyingCarLightweightDirectional",
+   "steps": 7,
+   "counts": {
+    "int_step": 6,
+    "float_const": 1
+   },
+   "functions": [
+    "0x13df30",
+    "0x13e12c"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "CrateAmmo",
+   "steps": 6,
+   "counts": {
+    "int_step": 4,
+    "float_const": 2
+   },
+   "functions": [
+    "0x1296e8",
+    "0x12a000",
+    "0x18edc0",
+    "0x27a3c",
+    "0x8a944"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "SuckCannonManager",
+   "steps": 6,
+   "counts": {
+    "int_step": 3,
+    "field_accum": 3
+   },
+   "functions": [
+    "0x17794c",
+    "0x27a3c"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "CrossbowShot",
+   "steps": 6,
+   "counts": {
+    "int_step": 1,
+    "float_const": 5
+   },
+   "functions": [
+    "0x12cdec",
+    "0x5facc"
+   ],
+   "floatThresholds": [
+    "DAT_002ca378 * fVar16",
+    "DAT_002ca37c * fVar16",
+    "DAT_002ca380 * fVar16"
+   ]
+  },
+  {
+   "class": "GravityCrystal",
+   "steps": 6,
+   "counts": {
+    "int_step": 1,
+    "float_const": 2,
+    "field_accum": 3
+   },
+   "functions": [
+    "0x142e30",
+    "0x5facc",
+    "0xd850c"
+   ],
+   "floatThresholds": [
+    "DAT_002d25f8"
+   ]
+  },
+  {
+   "class": "CrystalGroundShard",
+   "steps": 6,
+   "counts": {
+    "field_accum": 4,
+    "float_const": 1,
+    "int_step": 1
+   },
+   "functions": [
+    "0x12e168",
+    "0xd850c"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "Level01Waterfall",
+   "steps": 6,
+   "counts": {
+    "float_const": 5,
+    "int_step": 1
+   },
+   "functions": [
+    "0x151d78",
+    "0xdec9c"
+   ],
+   "floatThresholds": [
+    "DAT_002c9920",
+    "DAT_002d488c",
+    "DAT_002d4890",
+    "DAT_002d4894",
+    "DAT_002d489c"
+   ]
+  },
+  {
+   "class": "FlyingCarLightweightPathed",
+   "steps": 6,
+   "counts": {
+    "float_const": 1,
+    "int_step": 5
+   },
+   "functions": [
+    "0x1401a8",
+    "0x140c40"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "PathAnimal",
+   "steps": 6,
+   "counts": {
+    "field_accum": 6
+   },
+   "functions": [
+    "0x15dd3c"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "LunaNPC",
+   "steps": 5,
+   "counts": {
+    "int_step": 4,
+    "field_accum": 1
+   },
+   "functions": [
+    "0x153af8",
+    "0x153f28",
+    "0x2be30",
+    "0x77c90"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "Teleporter",
+   "steps": 5,
+   "counts": {
+    "float_const": 4,
+    "int_step": 1
+   },
+   "functions": [
+    "0x1799c0",
+    "0x64f9c",
+    "0x8a944"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "Blaster",
+   "steps": 5,
+   "counts": {
+    "field_accum": 1,
+    "float_const": 1,
+    "int_step": 1,
+    "int_vs_float": 2
+   },
+   "functions": [
+    "0x1168a0",
+    "0x116a00",
+    "0xfd31c",
+    "0xfda04"
+   ],
+   "floatThresholds": [
+    "DAT_002cdd98",
+    "DAT_002cdd9c"
+   ]
+  },
+  {
+   "class": "Butterfly",
+   "steps": 5,
+   "counts": {
+    "field_accum": 4,
+    "int_step": 1
+   },
+   "functions": [
+    "0x122820"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "ShrinkBeam",
+   "steps": 5,
+   "counts": {
+    "float_const": 5
+   },
+   "functions": [
+    "0x17202c"
+   ],
+   "floatThresholds": [
+    "DAT_002d75cc",
+    "DAT_002d75d4"
+   ]
+  },
+  {
+   "class": "TieManipulator",
+   "steps": 5,
+   "counts": {
+    "int_step": 1,
+    "field_accum": 4
+   },
+   "functions": [
+    "0x17a30c",
+    "0x17a8e4"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "TitaniumBolt",
+   "steps": 4,
+   "counts": {
+    "field_accum": 4
+   },
+   "functions": [
+    "0x17afcc",
+    "0x7248"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "Ratchet",
+   "steps": 4,
+   "counts": {
+    "float_const": 2,
+    "int_step": 2
+   },
+   "functions": [
+    "0x34668",
+    "0x41e40",
+    "0x77c90",
+    "0x77cd0"
+   ],
+   "floatThresholds": [
+    "DAT_002b04f4"
+   ]
+  },
+  {
+   "class": "ShieldCharger",
+   "steps": 4,
+   "counts": {
+    "int_step": 3,
+    "float_const": 1
+   },
+   "functions": [
+    "0x16c748",
+    "0x16cb78",
+    "0x9f614"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "ElectroshockWave",
+   "steps": 4,
+   "counts": {
+    "float_const": 4
+   },
+   "functions": [
+    "0x134310"
+   ],
+   "floatThresholds": [
+    "DAT_002d10a8"
+   ]
+  },
+  {
+   "class": "Flamethrower",
+   "steps": 4,
+   "counts": {
+    "float_const": 3,
+    "int_step": 1
+   },
+   "functions": [
+    "0x13b8f0"
+   ],
+   "floatThresholds": [
+    "DAT_002d19a0"
+   ]
+  },
+  {
+   "class": "RynoRocket",
+   "steps": 4,
+   "counts": {
+    "float_const": 1,
+    "field_accum": 3
+   },
+   "functions": [
+    "0x169698",
+    "0x169ac8"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "SharkagatorFin",
+   "steps": 4,
+   "counts": {
+    "field_accum": 2,
+    "float_const": 2
+   },
+   "functions": [
+    "0x16b3fc",
+    "0x16b830"
+   ],
+   "floatThresholds": [
+    "DAT_002d708c",
+    "DAT_002d7090"
+   ]
+  },
+  {
+   "class": "Spitfire",
+   "steps": 4,
+   "counts": {
+    "field_accum": 3,
+    "float_const": 1
+   },
+   "functions": [
+    "0x173aa0"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "Crate",
+   "steps": 3,
+   "counts": {
+    "int_step": 3
+   },
+   "functions": [
+    "0x12a000",
+    "0x18edc0",
+    "0x27a3c"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "Sharkagator",
+   "steps": 3,
+   "counts": {
+    "float_const": 3
+   },
+   "functions": [
+    "0x34668",
+    "0x41e40",
+    "0x50c30"
+   ],
+   "floatThresholds": [
+    "DAT_002b04f4"
+   ]
+  },
+  {
+   "class": "BlitzGunShot",
+   "steps": 3,
+   "counts": {
+    "int_step": 1,
+    "float_const": 2
+   },
+   "functions": [
+    "0x11c1e8",
+    "0x5facc"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "ShockRocketShot",
+   "steps": 3,
+   "counts": {
+    "int_step": 1,
+    "float_const": 2
+   },
+   "functions": [
+    "0x170b20",
+    "0x5facc"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "AgentsRocket",
+   "steps": 3,
+   "counts": {
+    "int_step": 1,
+    "field_accum": 2
+   },
+   "functions": [
+    "0xcdbc0"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "Acidbomb",
+   "steps": 3,
+   "counts": {
+    "field_accum": 3
+   },
+   "functions": [
+    "0x107534"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "AgentController",
+   "steps": 3,
+   "counts": {
+    "int_step": 3
+   },
+   "functions": [
+    "0x109020",
+    "0x1091d0"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "DropshipLaser",
+   "steps": 3,
+   "counts": {
+    "field_accum": 3
+   },
+   "functions": [
+    "0x1305d8"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "Level01OceanSound",
+   "steps": 3,
+   "counts": {
+    "float_const": 3
+   },
+   "functions": [
+    "0x151654"
+   ],
+   "floatThresholds": [
+    "DAT_002d474c"
+   ]
+  },
+  {
+   "class": "Splash",
+   "steps": 3,
+   "counts": {
+    "field_accum": 2,
+    "float_const": 1
+   },
+   "functions": [
+    "0x174e84"
+   ],
+   "floatThresholds": [
+    "DAT_002d7a1c"
+   ]
+  },
+  {
+   "class": "SwarmManager",
+   "steps": 3,
+   "counts": {
+    "int_step": 2,
+    "float_const": 1
+   },
+   "functions": [
+    "0x1786e4",
+    "0x178758"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "LunaCutscene",
+   "steps": 3,
+   "counts": {
+    "field_accum": 3
+   },
+   "functions": [
+    "0x191880"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "TMRobotTorsoCutscene",
+   "steps": 3,
+   "counts": {
+    "field_accum": 3
+   },
+   "functions": [
+    "0x191880"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "Mootator",
+   "steps": 3,
+   "counts": {
+    "field_accum": 3
+   },
+   "functions": [
+    "0x19a318"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "ArmorPickup",
+   "steps": 2,
+   "counts": {
+    "field_accum": 2
+   },
+   "functions": [
+    "0x7248"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "ElectroBall",
+   "steps": 2,
+   "counts": {
+    "int_step": 1,
+    "float_const": 1
+   },
+   "functions": [
+    "0x5facc"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "RatchetDecoyInner",
+   "steps": 2,
+   "counts": {
+    "int_step": 1,
+    "float_const": 1
+   },
+   "functions": [
+    "0x5facc"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "ShieldChargerBolt",
+   "steps": 2,
+   "counts": {
+    "int_step": 1,
+    "float_const": 1
+   },
+   "functions": [
+    "0x5facc"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "CrossbowGun",
+   "steps": 2,
+   "counts": {
+    "int_step": 2
+   },
+   "functions": [
+    "0x12b14c",
+    "0x9f614"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "BlasterAkimbo",
+   "steps": 2,
+   "counts": {
+    "field_accum": 1,
+    "float_const": 1
+   },
+   "functions": [
+    "0xfd31c",
+    "0xfda04"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "Wrench",
+   "steps": 2,
+   "counts": {
+    "field_accum": 1,
+    "int_step": 1
+   },
+   "functions": [
+    "0x189be8",
+    "0xffe68"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "AgentsGrenade",
+   "steps": 2,
+   "counts": {
+    "float_const": 2
+   },
+   "functions": [
+    "0x1107cc"
+   ],
+   "floatThresholds": [
+    "DAT_002cd46c"
+   ]
+  },
+  {
+   "class": "AgentsLaser",
+   "steps": 2,
+   "counts": {
+    "float_const": 2
+   },
+   "functions": [
+    "0x111868"
+   ],
+   "floatThresholds": [
+    "DAT_002cd520"
+   ]
+  },
+  {
+   "class": "electricXplo",
+   "steps": 2,
+   "counts": {
+    "float_const": 2
+   },
+   "functions": [
+    "0x130fac"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "Level01Boat",
+   "steps": 2,
+   "counts": {
+    "int_step": 1,
+    "float_const": 1
+   },
+   "functions": [
+    "0x14eb68"
+   ],
+   "floatThresholds": [
+    "DAT_002d42fc"
+   ]
+  },
+  {
+   "class": "Lvl3Elevator",
+   "steps": 2,
+   "counts": {
+    "field_accum": 2
+   },
+   "functions": [
+    "0x156710"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "Polarizer",
+   "steps": 2,
+   "counts": {
+    "field_accum": 2
+   },
+   "functions": [
+    "0x15f058"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "Ryno",
+   "steps": 2,
+   "counts": {
+    "int_step": 1,
+    "float_const": 1
+   },
+   "functions": [
+    "0x168a6c",
+    "0x168c28"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "SuckCannon",
+   "steps": 2,
+   "counts": {
+    "int_step": 2
+   },
+   "functions": [
+    "0x175cac",
+    "0x1771a4"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "TripleWaveBeacon",
+   "steps": 2,
+   "counts": {
+    "float_const": 2
+   },
+   "functions": [
+    "0x188214"
+   ],
+   "floatThresholds": [
+    "DAT_002d95e4"
+   ]
+  },
+  {
+   "class": "Fire",
+   "steps": 1,
+   "counts": {
+    "float_const": 1
+   },
+   "functions": [
+    "0x41e40"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "RatchetShip",
+   "steps": 1,
+   "counts": {
+    "int_step": 1
+   },
+   "functions": [
+    "0x8a944"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "vendor",
+   "steps": 1,
+   "counts": {
+    "int_step": 1
+   },
+   "functions": [
+    "0x8a944"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "BoxBreakerHelp",
+   "steps": 1,
+   "counts": {
+    "int_step": 1
+   },
+   "functions": [
+    "0x9f614"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "AgentsGlove",
+   "steps": 1,
+   "counts": {
+    "int_step": 1
+   },
+   "functions": [
+    "0x10fd58"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "BeeMineGlove",
+   "steps": 1,
+   "counts": {
+    "int_step": 1
+   },
+   "functions": [
+    "0x115e94"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "BlitzGun",
+   "steps": 1,
+   "counts": {
+    "int_step": 1
+   },
+   "functions": [
+    "0x11a178"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "BoltCrankCam",
+   "steps": 1,
+   "counts": {
+    "float_const": 1
+   },
+   "functions": [
+    "0x120fb4"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "ChameleonDecoy",
+   "steps": 1,
+   "counts": {
+    "float_const": 1
+   },
+   "functions": [
+    "0x123248"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "CrankedObject",
+   "steps": 1,
+   "counts": {
+    "field_accum": 1
+   },
+   "functions": [
+    "0x128c20"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "DropshipB",
+   "steps": 1,
+   "counts": {
+    "float_const": 1
+   },
+   "functions": [
+    "0x12f850"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "EnemyWave",
+   "steps": 1,
+   "counts": {
+    "int_step": 1
+   },
+   "functions": [
+    "0x137d9c"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "FlyingCarLightweightOrbit",
+   "steps": 1,
+   "counts": {
+    "float_const": 1
+   },
+   "functions": [
+    "0x13f1d0"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "InitialCamera",
+   "steps": 1,
+   "counts": {
+    "float_const": 1
+   },
+   "functions": [
+    "0x144be8"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "IntroMovie",
+   "steps": 1,
+   "counts": {
+    "float_const": 1
+   },
+   "functions": [
+    "0x144dd4"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "LunaCamera",
+   "steps": 1,
+   "counts": {
+    "float_const": 1
+   },
+   "functions": [
+    "0x1529f0"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "MobyIce",
+   "steps": 1,
+   "counts": {
+    "float_const": 1
+   },
+   "functions": [
+    "0x15841c"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "NapalmBubble",
+   "steps": 1,
+   "counts": {
+    "float_const": 1
+   },
+   "functions": [
+    "0x15cce0"
+   ],
+   "floatThresholds": [
+    "DAT_002d5ac0"
+   ]
+  },
+  {
+   "class": "ShakeyBush",
+   "steps": 1,
+   "counts": {
+    "field_accum": 1
+   },
+   "functions": [
+    "0x16aba8"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "ShockRocket",
+   "steps": 1,
+   "counts": {
+    "int_step": 1
+   },
+   "functions": [
+    "0x16f80c"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "AgentOfDoomShrapnel",
+   "steps": 1,
+   "counts": {
+    "int_step": 1
+   },
+   "functions": [
+    "0x191d7c"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "BeeMineShrapnel",
+   "steps": 1,
+   "counts": {
+    "int_step": 1
+   },
+   "functions": [
+    "0x191d7c"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "CowBell",
+   "steps": 1,
+   "counts": {
+    "int_step": 1
+   },
+   "functions": [
+    "0x191d7c"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "CrabShrapnel",
+   "steps": 1,
+   "counts": {
+    "int_step": 1
+   },
+   "functions": [
+    "0x191d7c"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "HeadShrapnel",
+   "steps": 1,
+   "counts": {
+    "int_step": 1
+   },
+   "functions": [
+    "0x191d7c"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "ShrapnelGeneric",
+   "steps": 1,
+   "counts": {
+    "int_step": 1
+   },
+   "functions": [
+    "0x191d7c"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "TorsoShrapnel",
+   "steps": 1,
+   "counts": {
+    "int_step": 1
+   },
+   "functions": [
+    "0x191d7c"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "TrainingBotShrapnel",
+   "steps": 1,
+   "counts": {
+    "int_step": 1
+   },
+   "functions": [
+    "0x191d7c"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "SuckCannonComet",
+   "steps": 1,
+   "counts": {
+    "float_const": 1
+   },
+   "functions": [
+    "0x19adf4"
+   ],
+   "floatThresholds": []
+  },
+  {
+   "class": "SuckCannonCometTie",
+   "steps": 1,
+   "counts": {
+    "float_const": 1
+   },
+   "functions": [
+    "0x19adf4"
+   ],
+   "floatThresholds": []
+  }
+ ],
+ "engineShared": [
+  {
+   "rva": "0x6a3c0",
+   "update": null,
+   "usesDelta": false,
+   "kinds": {
+    "int_step": 2
+   },
+   "fields": [
+    "0x4c",
+    "0x4e"
+   ],
+   "literals": [],
+   "classes": 40
+  },
+  {
+   "rva": "0x6a598",
+   "update": null,
+   "usesDelta": false,
+   "kinds": {
+    "int_step": 1
+   },
+   "fields": [
+    "0x4e"
+   ],
+   "literals": [],
+   "classes": 40
+  },
+  {
+   "rva": "0x6a09c",
+   "update": null,
+   "usesDelta": false,
+   "kinds": {
+    "int_step": 2
+   },
+   "fields": [
+    "0x4c"
+   ],
+   "literals": [],
+   "classes": 28
+  },
+  {
+   "rva": "0x6cf30",
+   "update": null,
+   "usesDelta": false,
+   "kinds": {
+    "field_accum": 4
+   },
+   "fields": [
+    "0",
+    "0x0"
+   ],
+   "literals": [],
+   "classes": 26
+  },
+  {
+   "rva": "0x1bdc64",
+   "update": null,
+   "usesDelta": false,
+   "kinds": {
+    "int_step": 1
+   },
+   "fields": [
+    "0x28"
+   ],
+   "literals": [],
+   "classes": 24
+  },
+  {
+   "rva": "0x1bdadc",
+   "update": null,
+   "usesDelta": false,
+   "kinds": {
+    "int_step": 1
+   },
+   "fields": [
+    "0x88"
+   ],
+   "literals": [],
+   "classes": 23
+  },
+  {
+   "rva": "0x6c318",
+   "update": null,
+   "usesDelta": false,
+   "kinds": {
+    "float_const": 1
+   },
+   "fields": [
+    "1"
+   ],
+   "literals": [],
+   "classes": 21
+  },
+  {
+   "rva": "0x1bdb84",
+   "update": null,
+   "usesDelta": false,
+   "kinds": {
+    "int_step": 1
+   },
+   "fields": [
+    "0x28"
+   ],
+   "literals": [],
+   "classes": 21
+  },
+  {
+   "rva": "0x1bd9f0",
+   "update": null,
+   "usesDelta": false,
+   "kinds": {
+    "int_step": 1
+   },
+   "fields": [
+    "0x88"
+   ],
+   "literals": [],
+   "classes": 15
+  }
+ ],
+ "functionSteps": {
+  "0xfa0": {
+   "kinds": {
+    "field_accum": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x40"
+   ]
+  },
+  "0x7248": {
+   "kinds": {
+    "field_accum": 2
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x34",
+    "0x38"
+   ]
+  },
+  "0x7740": {
+   "kinds": {
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0"
+   ]
+  },
+  "0x9b80": {
+   "kinds": {
+    "float_const": 4
+   },
+   "usesDelta": false,
+   "fields": [
+    "0"
+   ]
+  },
+  "0xcd68": {
+   "kinds": {
+    "field_accum": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x1c"
+   ]
+  },
+  "0xd9c8": {
+   "kinds": {
+    "float_const": 6
+   },
+   "usesDelta": false,
+   "fields": [
+    "0",
+    "1",
+    "2"
+   ]
+  },
+  "0xe080": {
+   "kinds": {
+    "field_accum": 6
+   },
+   "usesDelta": false,
+   "fields": [
+    "0xc",
+    "0xe",
+    "10",
+    "4",
+    "6",
+    "8"
+   ]
+  },
+  "0x14908": {
+   "kinds": {
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "4"
+   ]
+  },
+  "0x159dc": {
+   "kinds": {
+    "int_step": 2
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x56f00"
+   ]
+  },
+  "0x21dd8": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0xc4"
+   ]
+  },
+  "0x21e54": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0xc4"
+   ]
+  },
+  "0x24490": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x28"
+   ]
+  },
+  "0x24508": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x28"
+   ]
+  },
+  "0x271bc": {
+   "kinds": {
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x0"
+   ]
+  },
+  "0x27a3c": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x28"
+   ]
+  },
+  "0x2832c": {
+   "kinds": {
+    "float_const": 2
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x24",
+    "0x34"
+   ]
+  },
+  "0x285c0": {
+   "kinds": {
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "6"
+   ]
+  },
+  "0x2935c": {
+   "kinds": {
+    "field_accum": 3
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x34",
+    "0x38"
+   ]
+  },
+  "0x2a8f0": {
+   "kinds": {
+    "field_accum": 2
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x34",
+    "0x38"
+   ]
+  },
+  "0x2be30": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0xb"
+   ]
+  },
+  "0x2eb90": {
+   "kinds": {
+    "float_const": 3
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x68",
+    "0x70",
+    "0x74"
+   ]
+  },
+  "0x2ef34": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x169c"
+   ]
+  },
+  "0x3015c": {
+   "kinds": {
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x30"
+   ]
+  },
+  "0x318c0": {
+   "kinds": {
+    "field_accum": 1,
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x964",
+    "0xaa4"
+   ]
+  },
+  "0x33c0c": {
+   "kinds": {
+    "field_accum": 1
+   },
+   "usesDelta": true,
+   "fields": [
+    "0x34"
+   ]
+  },
+  "0x34668": {
+   "kinds": {
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0"
+   ]
+  },
+  "0x34b44": {
+   "kinds": {
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0"
+   ]
+  },
+  "0x3511c": {
+   "kinds": {
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x130"
+   ]
+  },
+  "0x3520c": {
+   "kinds": {
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x128"
+   ]
+  },
+  "0x36170": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x980"
+   ]
+  },
+  "0x38c74": {
+   "kinds": {
+    "field_accum": 3
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x29c",
+    "0x2a0",
+    "0x2a4"
+   ]
+  },
+  "0x39b74": {
+   "kinds": {
+    "field_accum": 4,
+    "float_const": 2,
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x2b4",
+    "0x2d0",
+    "0x30",
+    "0x34",
+    "0x38",
+    "0x97c",
+    "0xa1c"
+   ]
+  },
+  "0x3c88c": {
+   "kinds": {
+    "float_const": 11,
+    "field_accum": 9
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x138",
+    "0x160",
+    "0x1ac",
+    "0x30",
+    "0x34",
+    "0x38",
+    "0x70",
+    "0xa54",
+    "0xd10"
+   ]
+  },
+  "0x41e40": {
+   "kinds": {
+    "float_const": 1
+   },
+   "usesDelta": true,
+   "fields": [
+    "0"
+   ]
+  },
+  "0x42c04": {
+   "kinds": {
+    "field_accum": 3
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x9d4",
+    "0x9d8"
+   ]
+  },
+  "0x43d9c": {
+   "kinds": {
+    "float_const": 2
+   },
+   "usesDelta": false,
+   "fields": [
+    "0xaa4"
+   ]
+  },
+  "0x44ed8": {
+   "kinds": {
+    "float_const": 2
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x558"
+   ]
+  },
+  "0x45944": {
+   "kinds": {
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "1"
+   ]
+  },
+  "0x45a3c": {
+   "kinds": {
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x2e9"
+   ]
+  },
+  "0x46438": {
+   "kinds": {
+    "float_const": 1,
+    "field_accum": 3
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x30",
+    "0x34",
+    "0x38",
+    "0xb98"
+   ]
+  },
+  "0x4a4f0": {
+   "kinds": {
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x138"
+   ]
+  },
+  "0x4b938": {
+   "kinds": {
+    "field_accum": 2
+   },
+   "usesDelta": false,
+   "fields": [
+    "0xce0",
+    "0xce4"
+   ]
+  },
+  "0x4c17c": {
+   "kinds": {
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0xc5c"
+   ]
+  },
+  "0x4c338": {
+   "kinds": {
+    "int_step": 2
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x20",
+    "0xe8"
+   ]
+  },
+  "0x4cd08": {
+   "kinds": {
+    "field_accum": 1
+   },
+   "usesDelta": true,
+   "fields": [
+    "0xc10"
+   ]
+  },
+  "0x4db6c": {
+   "kinds": {
+    "float_const": 2
+   },
+   "usesDelta": false,
+   "fields": [
+    "0xc54",
+    "0xc58"
+   ]
+  },
+  "0x5081c": {
+   "kinds": {
+    "float_const": 9,
+    "field_accum": 3
+   },
+   "usesDelta": true,
+   "fields": [
+    "0x30",
+    "0x34",
+    "0x38"
+   ]
+  },
+  "0x50c30": {
+   "kinds": {
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0xd"
+   ]
+  },
+  "0x53620": {
+   "kinds": {
+    "int_vs_float": 1
+   },
+   "usesDelta": false,
+   "fields": []
+  },
+  "0x570f0": {
+   "kinds": {
+    "field_accum": 4,
+    "float_const": 3
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x138",
+    "0x1ac",
+    "0x30",
+    "0x34",
+    "0x38"
+   ]
+  },
+  "0x57e68": {
+   "kinds": {
+    "float_const": 10
+   },
+   "usesDelta": false,
+   "fields": [
+    "0xc",
+    "0xd",
+    "0xe"
+   ]
+  },
+  "0x59384": {
+   "kinds": {
+    "float_const": 2
+   },
+   "usesDelta": false,
+   "fields": [
+    "0xb0c",
+    "0xb10"
+   ]
+  },
+  "0x59d04": {
+   "kinds": {
+    "float_const": 1,
+    "field_accum": 5
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x30",
+    "0x34",
+    "0x38",
+    "0xb00"
+   ]
+  },
+  "0x5b460": {
+   "kinds": {
+    "float_const": 2
+   },
+   "usesDelta": false,
+   "fields": [
+    "0xf10",
+    "0xf58"
+   ]
+  },
+  "0x5c9cc": {
+   "kinds": {
+    "field_accum": 2
+   },
+   "usesDelta": false,
+   "fields": [
+    "0xefc"
+   ]
+  },
+  "0x5e030": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x203"
+   ]
+  },
+  "0x5e218": {
+   "kinds": {
+    "field_accum": 3,
+    "float_const": 2,
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x0",
+    "0x10",
+    "0x20",
+    "0x205",
+    "0x4",
+    "0x8"
+   ]
+  },
+  "0x5e4b8": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x204"
+   ]
+  },
+  "0x5e774": {
+   "kinds": {
+    "field_accum": 3
+   },
+   "usesDelta": true,
+   "fields": [
+    "0x0",
+    "0x4",
+    "0x8"
+   ]
+  },
+  "0x5facc": {
+   "kinds": {
+    "int_step": 1,
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x24",
+    "0x31"
+   ]
+  },
+  "0x60100": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x32"
+   ]
+  },
+  "0x613dc": {
+   "kinds": {
+    "field_accum": 2
+   },
+   "usesDelta": true,
+   "fields": [
+    "0x1c"
+   ]
+  },
+  "0x63e48": {
+   "kinds": {
+    "float_const": 2
+   },
+   "usesDelta": false,
+   "fields": [
+    "0",
+    "0x0"
+   ]
+  },
+  "0x6438c": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x8"
+   ]
+  },
+  "0x64f9c": {
+   "kinds": {
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x28"
+   ]
+  },
+  "0x65758": {
+   "kinds": {
+    "field_accum": 5,
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x38",
+    "0x3c",
+    "0x40",
+    "0x60",
+    "100"
+   ]
+  },
+  "0x65a6c": {
+   "kinds": {
+    "field_accum": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x60"
+   ]
+  },
+  "0x65d78": {
+   "kinds": {
+    "field_accum": 2
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x50"
+   ]
+  },
+  "0x661fc": {
+   "kinds": {
+    "field_accum": 3
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x20",
+    "0x8"
+   ]
+  },
+  "0x687fc": {
+   "kinds": {
+    "field_accum": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x44"
+   ]
+  },
+  "0x6a09c": {
+   "kinds": {
+    "int_step": 2
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x4c"
+   ]
+  },
+  "0x6a3c0": {
+   "kinds": {
+    "int_step": 2
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x4c",
+    "0x4e"
+   ]
+  },
+  "0x6a598": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x4e"
+   ]
+  },
+  "0x6b2a0": {
+   "kinds": {
+    "int_step": 2
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x4c",
+    "0x4e"
+   ]
+  },
+  "0x6b30c": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x4c"
+   ]
+  },
+  "0x6b7f4": {
+   "kinds": {
+    "int_step": 2
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x4e"
+   ]
+  },
+  "0x6c318": {
+   "kinds": {
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "1"
+   ]
+  },
+  "0x6cf30": {
+   "kinds": {
+    "field_accum": 4
+   },
+   "usesDelta": false,
+   "fields": [
+    "0",
+    "0x0"
+   ]
+  },
+  "0x6da08": {
+   "kinds": {
+    "float_const": 6
+   },
+   "usesDelta": false,
+   "fields": [
+    "0",
+    "1",
+    "2"
+   ]
+  },
+  "0x6edb4": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x2a70"
+   ]
+  },
+  "0x7076c": {
+   "kinds": {
+    "float_const": 6
+   },
+   "usesDelta": false,
+   "fields": [
+    "0",
+    "1",
+    "2"
+   ]
+  },
+  "0x71354": {
+   "kinds": {
+    "float_const": 6
+   },
+   "usesDelta": false,
+   "fields": [
+    "0",
+    "1",
+    "2"
+   ]
+  },
+  "0x76bcc": {
+   "kinds": {
+    "field_accum": 1
+   },
+   "usesDelta": true,
+   "fields": [
+    "8"
+   ]
+  },
+  "0x77c90": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x30"
+   ]
+  },
+  "0x77cd0": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x1c"
+   ]
+  },
+  "0x77d10": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x1c"
+   ]
+  },
+  "0x81500": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x8"
+   ]
+  },
+  "0x81af0": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x31c"
+   ]
+  },
+  "0x82f10": {
+   "kinds": {
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x68"
+   ]
+  },
+  "0x83e34": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x30"
+   ]
+  },
+  "0x86414": {
+   "kinds": {
+    "int_step": 3
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x188",
+    "0x1fc",
+    "0x200"
+   ]
+  },
+  "0x86724": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x188"
+   ]
+  },
+  "0x86868": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x168"
+   ]
+  },
+  "0x87190": {
+   "kinds": {
+    "int_step": 4
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x168",
+    "0x1f8",
+    "500"
+   ]
+  },
+  "0x874a4": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x204"
+   ]
+  },
+  "0x87a84": {
+   "kinds": {
+    "float_const": 4
+   },
+   "usesDelta": true,
+   "fields": [
+    "0x94",
+    "0x98"
+   ]
+  },
+  "0x8a944": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "6"
+   ]
+  },
+  "0x91adc": {
+   "kinds": {
+    "int_step": 5
+   },
+   "usesDelta": false,
+   "fields": [
+    "8"
+   ]
+  },
+  "0x91c10": {
+   "kinds": {
+    "int_step": 6
+   },
+   "usesDelta": false,
+   "fields": [
+    "8"
+   ]
+  },
+  "0x970b4": {
+   "kinds": {
+    "int_step": 2
+   },
+   "usesDelta": false,
+   "fields": [
+    "2"
+   ]
+  },
+  "0x98904": {
+   "kinds": {
+    "float_const": 2
+   },
+   "usesDelta": true,
+   "fields": [
+    "0"
+   ]
+  },
+  "0x9f614": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x3c"
+   ]
+  },
+  "0xa2a98": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x0"
+   ]
+  },
+  "0xa2dec": {
+   "kinds": {
+    "field_accum": 2
+   },
+   "usesDelta": false,
+   "fields": [
+    "8"
+   ]
+  },
+  "0xa3314": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0"
+   ]
+  },
+  "0xa87dc": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x34"
+   ]
+  },
+  "0xa8880": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x38"
+   ]
+  },
+  "0xa8a64": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x34"
+   ]
+  },
+  "0xba588": {
+   "kinds": {
+    "float_const": 2
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x1c28",
+    "0x40"
+   ]
+  },
+  "0xbc978": {
+   "kinds": {
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x1c28"
+   ]
+  },
+  "0xc30a0": {
+   "kinds": {
+    "field_accum": 2
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x24"
+   ]
+  },
+  "0xc41a0": {
+   "kinds": {
+    "field_accum": 2
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x2c"
+   ]
+  },
+  "0xc5ca8": {
+   "kinds": {
+    "float_const": 1,
+    "field_accum": 5
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x0",
+    "0x18",
+    "0x28",
+    "0x2c",
+    "0x3c",
+    "0x5c"
+   ]
+  },
+  "0xc68b8": {
+   "kinds": {
+    "float_const": 1,
+    "field_accum": 5
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x0",
+    "0x10",
+    "0x14",
+    "0x34",
+    "0x3c",
+    "0x5c"
+   ]
+  },
+  "0xc71d8": {
+   "kinds": {
+    "float_const": 1,
+    "field_accum": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x30",
+    "0x4c"
+   ]
+  },
+  "0xc75a4": {
+   "kinds": {
+    "field_accum": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x18"
+   ]
+  },
+  "0xc7984": {
+   "kinds": {
+    "field_accum": 3
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x10",
+    "0x14",
+    "0x4c"
+   ]
+  },
+  "0xc8248": {
+   "kinds": {
+    "field_accum": 4
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x0",
+    "0x10",
+    "0x8",
+    "0xc"
+   ]
+  },
+  "0xc9ed8": {
+   "kinds": {
+    "field_accum": 8
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x10",
+    "0x14",
+    "0x20",
+    "0x24",
+    "0x28",
+    "0x48",
+    "0x4c",
+    "0xc"
+   ]
+  },
+  "0xca6f8": {
+   "kinds": {
+    "field_accum": 4,
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x10",
+    "0x14",
+    "0x18",
+    "0x28",
+    "0x30"
+   ]
+  },
+  "0xcac58": {
+   "kinds": {
+    "field_accum": 5
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x0",
+    "0x10",
+    "0x24",
+    "0x4",
+    "0x8"
+   ]
+  },
+  "0xcb238": {
+   "kinds": {
+    "field_accum": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x0"
+   ]
+  },
+  "0xcb6c4": {
+   "kinds": {
+    "field_accum": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x0"
+   ]
+  },
+  "0xccf1c": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x30"
+   ]
+  },
+  "0xcd240": {
+   "kinds": {
+    "int_vs_float": 1
+   },
+   "usesDelta": true,
+   "fields": []
+  },
+  "0xcd7a0": {
+   "kinds": {
+    "field_accum": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x28"
+   ]
+  },
+  "0xcdbc0": {
+   "kinds": {
+    "int_step": 1,
+    "field_accum": 2
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x44",
+    "0x54"
+   ]
+  },
+  "0xce09c": {
+   "kinds": {
+    "field_accum": 2,
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x18",
+    "0x28"
+   ]
+  },
+  "0xce640": {
+   "kinds": {
+    "int_step": 1,
+    "field_accum": 2
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x44",
+    "0x58"
+   ]
+  },
+  "0xcf958": {
+   "kinds": {
+    "float_const": 1,
+    "field_accum": 3
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x0",
+    "0x4",
+    "0x8",
+    "0xc"
+   ]
+  },
+  "0xd1fd0": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x10"
+   ]
+  },
+  "0xd2270": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x10"
+   ]
+  },
+  "0xd25b8": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x10"
+   ]
+  },
+  "0xd2948": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x10"
+   ]
+  },
+  "0xd3f18": {
+   "kinds": {
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x0"
+   ]
+  },
+  "0xd4bc8": {
+   "kinds": {
+    "field_accum": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x0"
+   ]
+  },
+  "0xd58c0": {
+   "kinds": {
+    "field_accum": 2
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x0",
+    "0x18"
+   ]
+  },
+  "0xd7078": {
+   "kinds": {
+    "field_accum": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x0"
+   ]
+  },
+  "0xd7568": {
+   "kinds": {
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x0"
+   ]
+  },
+  "0xd7fe4": {
+   "kinds": {
+    "int_step": 1,
+    "field_accum": 2
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x0",
+    "0x3a",
+    "0x8"
+   ]
+  },
+  "0xd850c": {
+   "kinds": {
+    "field_accum": 3
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x10",
+    "0x14",
+    "0xc"
+   ]
+  },
+  "0xd927c": {
+   "kinds": {
+    "field_accum": 4
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x0",
+    "0x10",
+    "0x8",
+    "0xc"
+   ]
+  },
+  "0xdbe9c": {
+   "kinds": {
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "7"
+   ]
+  },
+  "0xdce3c": {
+   "kinds": {
+    "field_accum": 2
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x20"
+   ]
+  },
+  "0xde23c": {
+   "kinds": {
+    "float_const": 2,
+    "field_accum": 5
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x0",
+    "0x10",
+    "0x18",
+    "0x20",
+    "0x4",
+    "0x48",
+    "0x8"
+   ]
+  },
+  "0xde8a8": {
+   "kinds": {
+    "field_accum": 4
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x0",
+    "0x18",
+    "0x4",
+    "0x8"
+   ]
+  },
+  "0xdec9c": {
+   "kinds": {
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x4"
+   ]
+  },
+  "0xdf454": {
+   "kinds": {
+    "field_accum": 1,
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x38",
+    "0x4"
+   ]
+  },
+  "0xdf7b8": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": true,
+   "fields": [
+    "0"
+   ]
+  },
+  "0xdfe30": {
+   "kinds": {
+    "field_accum": 5,
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x0",
+    "0x18",
+    "0x20",
+    "0x4",
+    "0x8"
+   ]
+  },
+  "0xe09b0": {
+   "kinds": {
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x14"
+   ]
+  },
+  "0xe196c": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0"
+   ]
+  },
+  "0xfd31c": {
+   "kinds": {
+    "field_accum": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0xc"
+   ]
+  },
+  "0xfda04": {
+   "kinds": {
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0"
+   ]
+  },
+  "0xffe68": {
+   "kinds": {
+    "field_accum": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x84"
+   ]
+  },
+  "0x105ab8": {
+   "kinds": {
+    "float_const": 2
+   },
+   "usesDelta": false,
+   "fields": [
+    "8"
+   ]
+  },
+  "0x107534": {
+   "kinds": {
+    "field_accum": 3
+   },
+   "usesDelta": true,
+   "fields": [
+    "0x30",
+    "0x34",
+    "0x38"
+   ]
+  },
+  "0x109020": {
+   "kinds": {
+    "int_step": 2
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x44"
+   ]
+  },
+  "0x1091d0": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x26"
+   ]
+  },
+  "0x1099bc": {
+   "kinds": {
+    "float_const": 1,
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x70",
+    "0xf1"
+   ]
+  },
+  "0x10a734": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x6c"
+   ]
+  },
+  "0x10aa68": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x6c"
+   ]
+  },
+  "0x10b1d0": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0xe0"
+   ]
+  },
+  "0x10c890": {
+   "kinds": {
+    "field_accum": 3
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x5c",
+    "0x60",
+    "100"
+   ]
+  },
+  "0x10de64": {
+   "kinds": {
+    "field_accum": 2
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x30",
+    "0x34"
+   ]
+  },
+  "0x10eb1c": {
+   "kinds": {
+    "field_accum": 5
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x1c",
+    "0x20",
+    "0x30",
+    "0x34",
+    "0x38"
+   ]
+  },
+  "0x10edc0": {
+   "kinds": {
+    "float_const": 2
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x2c",
+    "0x70"
+   ]
+  },
+  "0x10fd58": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x40"
+   ]
+  },
+  "0x1107cc": {
+   "kinds": {
+    "float_const": 2
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x1c",
+    "0x4"
+   ]
+  },
+  "0x111868": {
+   "kinds": {
+    "float_const": 2
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x70"
+   ]
+  },
+  "0x112758": {
+   "kinds": {
+    "field_accum": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x30"
+   ]
+  },
+  "0x113e00": {
+   "kinds": {
+    "float_const": 2,
+    "int_step": 2
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x1c",
+    "0x38",
+    "0x50"
+   ]
+  },
+  "0x115e94": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x40"
+   ]
+  },
+  "0x1168a0": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x40"
+   ]
+  },
+  "0x116a00": {
+   "kinds": {
+    "int_vs_float": 2
+   },
+   "usesDelta": true,
+   "fields": []
+  },
+  "0x118130": {
+   "kinds": {
+    "float_const": 1,
+    "field_accum": 5
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x30",
+    "0x34",
+    "0x38",
+    "0x70"
+   ]
+  },
+  "0x11916c": {
+   "kinds": {
+    "float_const": 2
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x9c",
+    "0xa0"
+   ]
+  },
+  "0x11a178": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x40"
+   ]
+  },
+  "0x11c1e8": {
+   "kinds": {
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x70"
+   ]
+  },
+  "0x11d974": {
+   "kinds": {
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x26"
+   ]
+  },
+  "0x11ec70": {
+   "kinds": {
+    "float_const": 2,
+    "int_step": 2
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x26",
+    "0x2c",
+    "0x2e",
+    "0x40"
+   ]
+  },
+  "0x12085c": {
+   "kinds": {
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x34"
+   ]
+  },
+  "0x120a80": {
+   "kinds": {
+    "float_const": 2
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x34",
+    "0x70"
+   ]
+  },
+  "0x120c7c": {
+   "kinds": {
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x34"
+   ]
+  },
+  "0x120e90": {
+   "kinds": {
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "1"
+   ]
+  },
+  "0x120fb4": {
+   "kinds": {
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x70"
+   ]
+  },
+  "0x121370": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x40"
+   ]
+  },
+  "0x122820": {
+   "kinds": {
+    "field_accum": 4,
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x30",
+    "0x34",
+    "0x38",
+    "0x6c",
+    "0x70"
+   ]
+  },
+  "0x123248": {
+   "kinds": {
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x70"
+   ]
+  },
+  "0x124114": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x158"
+   ]
+  },
+  "0x12469c": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x60"
+   ]
+  },
+  "0x124e60": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x60"
+   ]
+  },
+  "0x125200": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x60"
+   ]
+  },
+  "0x1254cc": {
+   "kinds": {
+    "int_step": 1,
+    "int_vs_float": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x60"
+   ]
+  },
+  "0x1257d8": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x60"
+   ]
+  },
+  "0x125ae0": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x60"
+   ]
+  },
+  "0x126350": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x60"
+   ]
+  },
+  "0x126538": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x60"
+   ]
+  },
+  "0x126f28": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "100"
+   ]
+  },
+  "0x128c20": {
+   "kinds": {
+    "field_accum": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x34"
+   ]
+  },
+  "0x1296e8": {
+   "kinds": {
+    "float_const": 2
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x34"
+   ]
+  },
+  "0x12a000": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x0"
+   ]
+  },
+  "0x12b14c": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x40"
+   ]
+  },
+  "0x12cdec": {
+   "kinds": {
+    "float_const": 4
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x0",
+    "0x4",
+    "0x70",
+    "0x8"
+   ]
+  },
+  "0x12e168": {
+   "kinds": {
+    "float_const": 1,
+    "field_accum": 1,
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x10",
+    "0x70",
+    "4"
+   ]
+  },
+  "0x12f850": {
+   "kinds": {
+    "float_const": 1
+   },
+   "usesDelta": true,
+   "fields": [
+    "0x1c"
+   ]
+  },
+  "0x1305d8": {
+   "kinds": {
+    "field_accum": 3
+   },
+   "usesDelta": true,
+   "fields": [
+    "0x30",
+    "0x34",
+    "0x38"
+   ]
+  },
+  "0x130fac": {
+   "kinds": {
+    "float_const": 2
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x138",
+    "0x70"
+   ]
+  },
+  "0x134310": {
+   "kinds": {
+    "float_const": 4
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x0",
+    "0x240",
+    "0x244",
+    "0x24c"
+   ]
+  },
+  "0x134f60": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x158"
+   ]
+  },
+  "0x13524c": {
+   "kinds": {
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x70"
+   ]
+  },
+  "0x1357c0": {
+   "kinds": {
+    "float_const": 2
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x0",
+    "0x38"
+   ]
+  },
+  "0x1360dc": {
+   "kinds": {
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x10"
+   ]
+  },
+  "0x13679c": {
+   "kinds": {
+    "int_step": 6
+   },
+   "usesDelta": true,
+   "fields": [
+    "0x18"
+   ]
+  },
+  "0x137d9c": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": true,
+   "fields": [
+    "0x15c"
+   ]
+  },
+  "0x138594": {
+   "kinds": {
+    "field_accum": 3
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x30",
+    "0x34",
+    "0x38"
+   ]
+  },
+  "0x1391b0": {
+   "kinds": {
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x1c"
+   ]
+  },
+  "0x13ab84": {
+   "kinds": {
+    "field_accum": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x4"
+   ]
+  },
+  "0x13b20c": {
+   "kinds": {
+    "field_accum": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x54"
+   ]
+  },
+  "0x13b8f0": {
+   "kinds": {
+    "float_const": 3,
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x0",
+    "0x40",
+    "0x70"
+   ]
+  },
+  "0x13c3d8": {
+   "kinds": {
+    "int_step": 2
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x4",
+    "0x8"
+   ]
+  },
+  "0x13df30": {
+   "kinds": {
+    "int_step": 6
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x18"
+   ]
+  },
+  "0x13e12c": {
+   "kinds": {
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x70"
+   ]
+  },
+  "0x13f1d0": {
+   "kinds": {
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x70"
+   ]
+  },
+  "0x1401a8": {
+   "kinds": {
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x70"
+   ]
+  },
+  "0x140c40": {
+   "kinds": {
+    "int_step": 5
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x2c"
+   ]
+  },
+  "0x142e30": {
+   "kinds": {
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x1c"
+   ]
+  },
+  "0x143dc8": {
+   "kinds": {
+    "float_const": 6
+   },
+   "usesDelta": false,
+   "fields": [
+    "0",
+    "1",
+    "2"
+   ]
+  },
+  "0x143fec": {
+   "kinds": {
+    "field_accum": 14
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x30",
+    "0x34",
+    "0x38",
+    "10"
+   ]
+  },
+  "0x144be8": {
+   "kinds": {
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x70"
+   ]
+  },
+  "0x144dd4": {
+   "kinds": {
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x70"
+   ]
+  },
+  "0x145144": {
+   "kinds": {
+    "field_accum": 2
+   },
+   "usesDelta": true,
+   "fields": [
+    "0x18"
+   ]
+  },
+  "0x145568": {
+   "kinds": {
+    "float_const": 3
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x114",
+    "0x68"
+   ]
+  },
+  "0x1463d4": {
+   "kinds": {
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x148"
+   ]
+  },
+  "0x149828": {
+   "kinds": {
+    "field_accum": 2,
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x68",
+    "0xb8"
+   ]
+  },
+  "0x14be54": {
+   "kinds": {
+    "field_accum": 3
+   },
+   "usesDelta": true,
+   "fields": [
+    "0x0",
+    "0x4",
+    "0x8"
+   ]
+  },
+  "0x14cc8c": {
+   "kinds": {
+    "field_accum": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x0"
+   ]
+  },
+  "0x14d484": {
+   "kinds": {
+    "field_accum": 5
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x0",
+    "0x10",
+    "0x8",
+    "0xc"
+   ]
+  },
+  "0x14eb68": {
+   "kinds": {
+    "int_step": 1,
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x1c",
+    "0x44"
+   ]
+  },
+  "0x150ef8": {
+   "kinds": {
+    "int_vs_float": 1,
+    "int_step": 5
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x0",
+    "0x10",
+    "0x18",
+    "0x4",
+    "0x8"
+   ]
+  },
+  "0x151654": {
+   "kinds": {
+    "float_const": 3
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x0",
+    "0x70"
+   ]
+  },
+  "0x151d78": {
+   "kinds": {
+    "int_step": 1,
+    "float_const": 4
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x0",
+    "0x1c",
+    "0x4",
+    "0x79",
+    "0x8"
+   ]
+  },
+  "0x1529f0": {
+   "kinds": {
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x70"
+   ]
+  },
+  "0x153af8": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x4a0"
+   ]
+  },
+  "0x153f28": {
+   "kinds": {
+    "int_step": 1,
+    "field_accum": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x490",
+    "0x4a0"
+   ]
+  },
+  "0x156710": {
+   "kinds": {
+    "field_accum": 2
+   },
+   "usesDelta": true,
+   "fields": [
+    "0x34",
+    "8"
+   ]
+  },
+  "0x15841c": {
+   "kinds": {
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x1c"
+   ]
+  },
+  "0x15af7c": {
+   "kinds": {
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x70"
+   ]
+  },
+  "0x15c060": {
+   "kinds": {
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x70"
+   ]
+  },
+  "0x15cce0": {
+   "kinds": {
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x0"
+   ]
+  },
+  "0x15dd3c": {
+   "kinds": {
+    "field_accum": 6
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x30",
+    "0x34",
+    "0x38",
+    "0x70"
+   ]
+  },
+  "0x15e8c8": {
+   "kinds": {
+    "field_accum": 9
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x0",
+    "0x10",
+    "0x14",
+    "0x24",
+    "0x28"
+   ]
+  },
+  "0x15f058": {
+   "kinds": {
+    "field_accum": 2
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x0"
+   ]
+  },
+  "0x16013c": {
+   "kinds": {
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x4"
+   ]
+  },
+  "0x1602ac": {
+   "kinds": {
+    "field_accum": 2,
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x34",
+    "0x38",
+    "0xc"
+   ]
+  },
+  "0x160660": {
+   "kinds": {
+    "float_const": 2
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x14"
+   ]
+  },
+  "0x160988": {
+   "kinds": {
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x10"
+   ]
+  },
+  "0x161014": {
+   "kinds": {
+    "field_accum": 7
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x4",
+    "0x8"
+   ]
+  },
+  "0x1615c8": {
+   "kinds": {
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x4c"
+   ]
+  },
+  "0x1619c8": {
+   "kinds": {
+    "field_accum": 1,
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x30",
+    "0x38"
+   ]
+  },
+  "0x1628a0": {
+   "kinds": {
+    "float_const": 2
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x28"
+   ]
+  },
+  "0x165a20": {
+   "kinds": {
+    "field_accum": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x70"
+   ]
+  },
+  "0x166438": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x108"
+   ]
+  },
+  "0x167184": {
+   "kinds": {
+    "float_const": 1
+   },
+   "usesDelta": true,
+   "fields": [
+    "0x70"
+   ]
+  },
+  "0x168a6c": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x40"
+   ]
+  },
+  "0x168c28": {
+   "kinds": {
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x70"
+   ]
+  },
+  "0x169698": {
+   "kinds": {
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x70"
+   ]
+  },
+  "0x169ac8": {
+   "kinds": {
+    "field_accum": 3
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x30",
+    "0x34",
+    "0x38"
+   ]
+  },
+  "0x16aba8": {
+   "kinds": {
+    "field_accum": 1
+   },
+   "usesDelta": true,
+   "fields": [
+    "0x50"
+   ]
+  },
+  "0x16b3fc": {
+   "kinds": {
+    "field_accum": 1,
+    "float_const": 2
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x38",
+    "0xd"
+   ]
+  },
+  "0x16b830": {
+   "kinds": {
+    "field_accum": 1
+   },
+   "usesDelta": true,
+   "fields": [
+    "0x38"
+   ]
+  },
+  "0x16c748": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x40"
+   ]
+  },
+  "0x16cb78": {
+   "kinds": {
+    "int_step": 1,
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x1080",
+    "0x70"
+   ]
+  },
+  "0x16f80c": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x40"
+   ]
+  },
+  "0x170b20": {
+   "kinds": {
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x70"
+   ]
+  },
+  "0x17202c": {
+   "kinds": {
+    "float_const": 5
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x1c",
+    "0x20",
+    "0x88"
+   ]
+  },
+  "0x173aa0": {
+   "kinds": {
+    "field_accum": 3,
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x30",
+    "0x34",
+    "0x38",
+    "0x70"
+   ]
+  },
+  "0x174738": {
+   "kinds": {
+    "field_accum": 4
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x0",
+    "0x20",
+    "0x4",
+    "0x8"
+   ]
+  },
+  "0x174e84": {
+   "kinds": {
+    "field_accum": 2,
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x0",
+    "0x4",
+    "0xc"
+   ]
+  },
+  "0x175cac": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x40"
+   ]
+  },
+  "0x1771a4": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x4c"
+   ]
+  },
+  "0x177348": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "4"
+   ]
+  },
+  "0x17794c": {
+   "kinds": {
+    "int_step": 2,
+    "field_accum": 3
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x30",
+    "0x34",
+    "0x38",
+    "0x4",
+    "0x40"
+   ]
+  },
+  "0x178234": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x0"
+   ]
+  },
+  "0x1786e4": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0"
+   ]
+  },
+  "0x178758": {
+   "kinds": {
+    "float_const": 1,
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x70",
+    "0x7c"
+   ]
+  },
+  "0x1799c0": {
+   "kinds": {
+    "float_const": 3
+   },
+   "usesDelta": true,
+   "fields": [
+    "0x70"
+   ]
+  },
+  "0x17a30c": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x1fc"
+   ]
+  },
+  "0x17a8e4": {
+   "kinds": {
+    "field_accum": 4
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x44",
+    "0x48",
+    "0x4c",
+    "0x6c"
+   ]
+  },
+  "0x17afcc": {
+   "kinds": {
+    "field_accum": 2
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x40",
+    "0x48"
+   ]
+  },
+  "0x17be18": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x158"
+   ]
+  },
+  "0x17d49c": {
+   "kinds": {
+    "float_const": 2
+   },
+   "usesDelta": true,
+   "fields": [
+    "0x3a",
+    "0xd"
+   ]
+  },
+  "0x17eccc": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x158"
+   ]
+  },
+  "0x180970": {
+   "kinds": {
+    "int_step": 1,
+    "field_accum": 1
+   },
+   "usesDelta": true,
+   "fields": [
+    "0x3a",
+    "0x70"
+   ]
+  },
+  "0x183a50": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x34"
+   ]
+  },
+  "0x183e5c": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x158"
+   ]
+  },
+  "0x1844f0": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x80"
+   ]
+  },
+  "0x184674": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x80"
+   ]
+  },
+  "0x184a3c": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x80"
+   ]
+  },
+  "0x185150": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x80"
+   ]
+  },
+  "0x1853f0": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x80"
+   ]
+  },
+  "0x1855d8": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x80"
+   ]
+  },
+  "0x185b34": {
+   "kinds": {
+    "int_step": 2
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x7c",
+    "0x80"
+   ]
+  },
+  "0x188214": {
+   "kinds": {
+    "float_const": 2
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x1c",
+    "0x20"
+   ]
+  },
+  "0x189be8": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0xdc"
+   ]
+  },
+  "0x18a6c8": {
+   "kinds": {
+    "float_const": 1,
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x102",
+    "0x1c"
+   ]
+  },
+  "0x18db74": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x4c"
+   ]
+  },
+  "0x18e1bc": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0xcc"
+   ]
+  },
+  "0x18e650": {
+   "kinds": {
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x74"
+   ]
+  },
+  "0x18edc0": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0xcc"
+   ]
+  },
+  "0x1901f4": {
+   "kinds": {
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x3c"
+   ]
+  },
+  "0x190d6c": {
+   "kinds": {
+    "field_accum": 2
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x34",
+    "0x38"
+   ]
+  },
+  "0x191154": {
+   "kinds": {
+    "field_accum": 6
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x34",
+    "0x38"
+   ]
+  },
+  "0x1913a4": {
+   "kinds": {
+    "field_accum": 5
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x34",
+    "0x38"
+   ]
+  },
+  "0x191880": {
+   "kinds": {
+    "field_accum": 3
+   },
+   "usesDelta": true,
+   "fields": [
+    "0x30",
+    "0x34",
+    "0x38"
+   ]
+  },
+  "0x191d7c": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": true,
+   "fields": [
+    "8"
+   ]
+  },
+  "0x193c20": {
+   "kinds": {
+    "field_accum": 3
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x0",
+    "0x8",
+    "0xc"
+   ]
+  },
+  "0x19516c": {
+   "kinds": {
+    "field_accum": 2
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x18",
+    "0x34"
+   ]
+  },
+  "0x1957b4": {
+   "kinds": {
+    "float_const": 4,
+    "field_accum": 4
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x0",
+    "0x10",
+    "0x1c",
+    "0x2c",
+    "0x30",
+    "0x4",
+    "0x8",
+    "0xc"
+   ]
+  },
+  "0x1963b4": {
+   "kinds": {
+    "float_const": 2
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x0",
+    "0x48"
+   ]
+  },
+  "0x198858": {
+   "kinds": {
+    "float_const": 5,
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x108",
+    "0x10c",
+    "0x110",
+    "0x118"
+   ]
+  },
+  "0x19a318": {
+   "kinds": {
+    "field_accum": 3
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x60",
+    "0x68",
+    "100"
+   ]
+  },
+  "0x19adf4": {
+   "kinds": {
+    "float_const": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x1c"
+   ]
+  },
+  "0x19c0c4": {
+   "kinds": {
+    "field_accum": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x0"
+   ]
+  },
+  "0x19c6e8": {
+   "kinds": {
+    "field_accum": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x0"
+   ]
+  },
+  "0x19dd84": {
+   "kinds": {
+    "field_accum": 3
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x0",
+    "0x18"
+   ]
+  },
+  "0x19ed08": {
+   "kinds": {
+    "field_accum": 2
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x0"
+   ]
+  },
+  "0x19f388": {
+   "kinds": {
+    "field_accum": 4
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x0",
+    "0x18",
+    "0x4",
+    "0xc"
+   ]
+  },
+  "0x19fbc8": {
+   "kinds": {
+    "field_accum": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x0"
+   ]
+  },
+  "0x1a05f0": {
+   "kinds": {
+    "field_accum": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x0"
+   ]
+  },
+  "0x1a1578": {
+   "kinds": {
+    "field_accum": 4
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x0",
+    "0x4",
+    "0x8",
+    "0xc"
+   ]
+  },
+  "0x1a1f40": {
+   "kinds": {
+    "field_accum": 4
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x0",
+    "0x4",
+    "0x8",
+    "0xc"
+   ]
+  },
+  "0x1a2a14": {
+   "kinds": {
+    "field_accum": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x0"
+   ]
+  },
+  "0x1ac838": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x4"
+   ]
+  },
+  "0x1bd9f0": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x88"
+   ]
+  },
+  "0x1bdadc": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x88"
+   ]
+  },
+  "0x1bdb84": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x28"
+   ]
+  },
+  "0x1bdc64": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x28"
+   ]
+  },
+  "0x1bddec": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x20"
+   ]
+  },
+  "0x1bde34": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x20"
+   ]
+  },
+  "0x1bde84": {
+   "kinds": {
+    "int_step": 1
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x20"
+   ]
+  },
+  "0x1bdee4": {
+   "kinds": {
+    "int_step": 2
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x60",
+    "0x68"
+   ]
+  },
+  "0x1be004": {
+   "kinds": {
+    "int_step": 2
+   },
+   "usesDelta": false,
+   "fields": [
+    "0x68",
+    "100"
+   ]
+  }
+ }
+}

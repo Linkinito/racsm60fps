@@ -1,0 +1,554 @@
+{
+ "status": "STATIC_CANDIDATE_NOT_TIMING_OR_PARITY_PROOF",
+ "functions": {
+  "0x77c90": {
+   "classes": [
+    "LunaNPC",
+    "Ratchet"
+   ],
+   "stepFields": [
+    "0x30"
+   ],
+   "literals": [
+    "9"
+   ]
+  },
+  "0x77cd0": {
+   "classes": [
+    "Ratchet"
+   ],
+   "stepFields": [
+    "0x1c"
+   ],
+   "literals": [
+    "2"
+   ]
+  },
+  "0x9f614": {
+   "classes": [
+    "BoxBreakerHelp",
+    "CrossbowGun",
+    "Level01HelpManager",
+    "ShieldCharger"
+   ],
+   "stepFields": [
+    "0x3c"
+   ],
+   "literals": [
+    "2",
+    "3",
+    "4",
+    "0x10",
+    "0x110"
+   ]
+  },
+  "0xcdbc0": {
+   "classes": [
+    "AgentsRocket",
+    "BeeMine"
+   ],
+   "stepFields": [
+    "0x44"
+   ],
+   "literals": [
+    "09",
+    "0x18"
+   ]
+  },
+  "0xdf7b8": {
+   "classes": [
+    "RatchetShipAnimation"
+   ],
+   "stepFields": [
+    "0"
+   ],
+   "literals": [
+    "8",
+    "0x10",
+    "0x18"
+   ]
+  },
+  "0x1091d0": {
+   "classes": [
+    "AgentController"
+   ],
+   "stepFields": [
+    "0x26"
+   ],
+   "literals": [
+    "0x27"
+   ]
+  },
+  "0x10a734": {
+   "classes": [
+    "AgentOfDoom"
+   ],
+   "stepFields": [
+    "0x6c"
+   ],
+   "literals": [
+    "2"
+   ]
+  },
+  "0x10aa68": {
+   "classes": [
+    "AgentOfDoom"
+   ],
+   "stepFields": [
+    "0x6c"
+   ],
+   "literals": [
+    "2"
+   ]
+  },
+  "0x10b1d0": {
+   "classes": [
+    "AgentOfDoom"
+   ],
+   "stepFields": [
+    "0xe0"
+   ],
+   "literals": [
+    "2"
+   ]
+  },
+  "0x10fd58": {
+   "classes": [
+    "AgentsGlove"
+   ],
+   "stepFields": [
+    "0x40"
+   ],
+   "literals": [
+    "2",
+    "4",
+    "9",
+    "0x40"
+   ]
+  },
+  "0x113e00": {
+   "classes": [
+    "BeeMine"
+   ],
+   "stepFields": [
+    "0x38",
+    "0x50"
+   ],
+   "literals": [
+    "2",
+    "3",
+    "4",
+    "5",
+    "07",
+    "0x18",
+    "0x1d"
+   ]
+  },
+  "0x115e94": {
+   "classes": [
+    "BeeMineGlove"
+   ],
+   "stepFields": [
+    "0x40"
+   ],
+   "literals": [
+    "9",
+    "0x40"
+   ]
+  },
+  "0x1168a0": {
+   "classes": [
+    "Blaster"
+   ],
+   "stepFields": [
+    "0x40"
+   ],
+   "literals": [
+    "7",
+    "9",
+    "0x40"
+   ]
+  },
+  "0x11a178": {
+   "classes": [
+    "BlitzGun"
+   ],
+   "stepFields": [
+    "0x40"
+   ],
+   "literals": [
+    "7",
+    "9",
+    "0x40"
+   ]
+  },
+  "0x122820": {
+   "classes": [
+    "Butterfly"
+   ],
+   "stepFields": [
+    "0x6c"
+   ],
+   "literals": [
+    "2",
+    "4",
+    "0x10"
+   ]
+  },
+  "0x12469c": {
+   "classes": [
+    "Crab"
+   ],
+   "stepFields": [
+    "0x60"
+   ],
+   "literals": [
+    "7"
+   ]
+  },
+  "0x125200": {
+   "classes": [
+    "Crab"
+   ],
+   "stepFields": [
+    "0x60"
+   ],
+   "literals": [
+    "2",
+    "3",
+    "7",
+    "8"
+   ]
+  },
+  "0x1254cc": {
+   "classes": [
+    "Crab"
+   ],
+   "stepFields": [
+    "0x60"
+   ],
+   "literals": [
+    "0xd"
+   ]
+  },
+  "0x126f28": {
+   "classes": [
+    "Crab"
+   ],
+   "stepFields": [
+    "100"
+   ],
+   "literals": [
+    "8"
+   ]
+  },
+  "0x12b14c": {
+   "classes": [
+    "CrossbowGun"
+   ],
+   "stepFields": [
+    "0x40"
+   ],
+   "literals": [
+    "7",
+    "9",
+    "0x40"
+   ]
+  },
+  "0x13679c": {
+   "classes": [
+    "EnemyController"
+   ],
+   "stepFields": [
+    "0x18"
+   ],
+   "literals": [
+    "2"
+   ]
+  },
+  "0x137d9c": {
+   "classes": [
+    "EnemyWave"
+   ],
+   "stepFields": [
+    "0x15c"
+   ],
+   "literals": [
+    "2",
+    "4",
+    "05",
+    "0xc"
+   ]
+  },
+  "0x13b8f0": {
+   "classes": [
+    "Flamethrower"
+   ],
+   "stepFields": [
+    "0x40"
+   ],
+   "literals": [
+    "5"
+   ]
+  },
+  "0x14eb68": {
+   "classes": [
+    "Level01Boat"
+   ],
+   "stepFields": [
+    "0x44"
+   ],
+   "literals": [
+    "2",
+    "07"
+   ]
+  },
+  "0x150ef8": {
+   "classes": [
+    "Level01HelpManager"
+   ],
+   "stepFields": [
+    "0x0",
+    "0x10",
+    "0x18",
+    "0x4",
+    "0x8"
+   ],
+   "literals": [
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "0x1f",
+    "0x24",
+    "599"
+   ]
+  },
+  "0x153f28": {
+   "classes": [
+    "LunaNPC"
+   ],
+   "stepFields": [
+    "0x4a0"
+   ],
+   "literals": [
+    "8",
+    "10"
+   ]
+  },
+  "0x166438": {
+   "classes": [
+    "RatchetShipAnimation"
+   ],
+   "stepFields": [
+    "0x108"
+   ],
+   "literals": [
+    "2",
+    "3",
+    "5",
+    "8",
+    "0x10",
+    "0x18"
+   ]
+  },
+  "0x168a6c": {
+   "classes": [
+    "Ryno"
+   ],
+   "stepFields": [
+    "0x40"
+   ],
+   "literals": [
+    "7",
+    "0x40"
+   ]
+  },
+  "0x16c748": {
+   "classes": [
+    "ShieldCharger"
+   ],
+   "stepFields": [
+    "0x40"
+   ],
+   "literals": [
+    "4",
+    "8",
+    "9",
+    "0x10",
+    "0x40",
+    "0x100"
+   ]
+  },
+  "0x16cb78": {
+   "classes": [
+    "ShieldCharger"
+   ],
+   "stepFields": [
+    "0x1080"
+   ],
+   "literals": [
+    "2",
+    "3",
+    "5",
+    "07"
+   ]
+  },
+  "0x16f80c": {
+   "classes": [
+    "ShockRocket"
+   ],
+   "stepFields": [
+    "0x40"
+   ],
+   "literals": [
+    "7",
+    "9",
+    "0x40"
+   ]
+  },
+  "0x17794c": {
+   "classes": [
+    "SuckCannonManager"
+   ],
+   "stepFields": [
+    "0x4",
+    "0x40"
+   ],
+   "literals": [
+    "2"
+   ]
+  },
+  "0x178234": {
+   "classes": [
+    "BeeMine"
+   ],
+   "stepFields": [
+    "0x0"
+   ],
+   "literals": [
+    "2"
+   ]
+  },
+  "0x178758": {
+   "classes": [
+    "SwarmManager"
+   ],
+   "stepFields": [
+    "0x7c"
+   ],
+   "literals": [
+    "5"
+   ]
+  },
+  "0x17a30c": {
+   "classes": [
+    "TieManipulator"
+   ],
+   "stepFields": [
+    "0x1fc"
+   ],
+   "literals": [
+    "8"
+   ]
+  },
+  "0x180970": {
+   "classes": [
+    "TMRobotTorsoB"
+   ],
+   "stepFields": [
+    "0x3a"
+   ],
+   "literals": [
+    "2"
+   ]
+  },
+  "0x183a50": {
+   "classes": [
+    "TrainingBot"
+   ],
+   "stepFields": [
+    "0x34"
+   ],
+   "literals": [
+    "0xc",
+    "0x10"
+   ]
+  },
+  "0x1844f0": {
+   "classes": [
+    "TrainingBot"
+   ],
+   "stepFields": [
+    "0x80"
+   ],
+   "literals": [
+    "2",
+    "3",
+    "0xc"
+   ]
+  },
+  "0x184674": {
+   "classes": [
+    "TrainingBot"
+   ],
+   "stepFields": [
+    "0x80"
+   ],
+   "literals": [
+    "9",
+    "0xb",
+    "0xe"
+   ]
+  },
+  "0x185150": {
+   "classes": [
+    "TrainingBot"
+   ],
+   "stepFields": [
+    "0x80"
+   ],
+   "literals": [
+    "0x31",
+    "0x35"
+   ]
+  },
+  "0x1853f0": {
+   "classes": [
+    "TrainingBot"
+   ],
+   "stepFields": [
+    "0x80"
+   ],
+   "literals": [
+    "2"
+   ]
+  },
+  "0x1855d8": {
+   "classes": [
+    "TrainingBot"
+   ],
+   "stepFields": [
+    "0x80"
+   ],
+   "literals": [
+    "0x1f",
+    "0x22"
+   ]
+  },
+  "0x189be8": {
+   "classes": [
+    "Wrench"
+   ],
+   "stepFields": [
+    "0xdc"
+   ],
+   "literals": [
+    "5",
+    "6"
+   ]
+  }
+ }
+}

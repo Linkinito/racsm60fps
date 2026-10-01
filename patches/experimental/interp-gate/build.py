@@ -17,7 +17,7 @@ def main():
     build.mkdir(parents=True); shutil.copy2(HERE/'interp.c', build/'interp.c')
     env = os.environ.copy(); env['PATH'] = str(SDK/'bin')+os.pathsep+env.get('PATH', '')
     cc = SDK/'bin/psp-gcc.exe'; pspsdk = SDK/'psp/sdk'
-    flags = ['-O2', '-G0', '-std=c11', '-Wall', '-Wextra', '-Werror', '-fno-strict-aliasing',
+    flags = ['-O2', '-G0', '-std=c11', '-Wall', '-Wextra', '-Werror', '-fno-strict-aliasing', '-fno-math-errno',
              '-D_PSP_FW_VERSION=660', '-I.', '-I'+(SDK/'psp/include').as_posix(), '-I'+(pspsdk/'include').as_posix()]
     def run(cmd):
         r = subprocess.run([str(x) for x in cmd], cwd=build, env=env, text=True,
@@ -29,15 +29,17 @@ def main():
     run([cc, '-G0', '-c', 'stub.S', '-o', 'stub.o'])
     run([cc, *flags, '-L'+(SDK/'psp/lib').as_posix(), '-L'+(pspsdk/'lib').as_posix(),
          '-specs='+(pspsdk/'lib/prxspecs').as_posix(), '-Wl,-q,-T'+(pspsdk/'lib/linkfile.prx').as_posix(),
-         '-Wl,-zmax-page-size=128', 'interp.o', 'stub.o', (pspsdk/'lib/prxexports.o').as_posix(), '-o', 'patch.elf'])
+         '-Wl,-zmax-page-size=128', '-nostdlib', '-nostartfiles', 'interp.o', 'stub.o', (pspsdk/'lib/prxexports.o').as_posix(), '-lpspmodinfo', '-lgcc', '-o', 'patch.elf'])
     nm = subprocess.run([str(SDK/'bin/psp-nm.exe'), 'patch.elf'], cwd=build, env=env, text=True,
                         stdout=subprocess.PIPE, check=True).stdout
     symbols = {}
-    for name in ('ig_state', 'ig_pump', 'ig_entity', 'ig_move', 'ig_nav_move', 'ig_fix', 'ig_debris', 'ig_anim_disp', 'ig_pfix', 'ig_pwrap_stub', 'ig_particles'):
+    for name in ('ig_fix', 'ig_debris', 'ig_pfix', 'ig_pwrap_stub', 'ig_particles', 'ig_disp', 'ig_disp_stub0', 'ig_disp_stub1', 'ig_disp_stub2', 'ig_disp_stub3', 'ig_disp_stub4', 'ig_tel', 'ig_tel_pump', 'ig_watch', 'ig_pmap', 'ig_pa_speed', 'ig_cnt', 'ig_saved', 'ig_clock', 'ig_sp', 'ig_upd', 'ig_spawn', 'ig_spawn_stub0', 'ig_spawn_stub1'):
         m = re.findall(r'(?m)^([0-9a-fA-F]+) [A-Za-z] %s$' % name, nm)
         if len(m) != 1: raise RuntimeError('missing symbol '+name)
         symbols[name] = int(m[0], 16)
-    run([SDK/'bin/psp-fixup-imports.exe', 'patch.elf'])
+    heads = subprocess.run([str(SDK/'bin/psp-objdump.exe'), '-h', 'patch.elf'], cwd=build, env=env, text=True,
+                           stdout=subprocess.PIPE, check=True).stdout
+    if re.search(r'\.lib\.stub\s+0*[1-9a-f]', heads): run([SDK/'bin/psp-fixup-imports.exe', 'patch.elf'])   # IG-v16 imports nothing
     run([SDK/'bin/psp-prxgen.exe', 'patch.elf', 'patch.prx'])
     package = build/'InterpGate'; package.mkdir()
     shutil.copy2(build/'patch.prx', package/'patch.prx'); shutil.copy2(HERE/'plugin.ini', package/'plugin.ini')

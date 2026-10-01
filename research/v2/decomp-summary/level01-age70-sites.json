@@ -1,0 +1,48 @@
+{
+ "status": "STATIC_CANDIDATE",
+ "rule": "entity age +0x70 += 1.0 per call -> 0.5 (single 1.0 load per function)",
+ "sites": [
+  {
+   "site": "0x118144",
+   "fn": "0x118130",
+   "class": "BlasterShot",
+   "before": "0x3c053f80"
+  },
+  {
+   "site": "0x13e13c",
+   "fn": "0x13e12c",
+   "class": "FlyingCarLightweightDirectional",
+   "before": "0x3c043f80"
+  },
+  {
+   "site": "0x13f1e8",
+   "fn": "0x13f1d0",
+   "class": "FlyingCarLightweightOrbit",
+   "before": "0x3c043f80"
+  },
+  {
+   "site": "0x1401c0",
+   "fn": "0x1401a8",
+   "class": "FlyingCarLightweightPathed",
+   "before": "0x3c043f80"
+  },
+  {
+   "site": "0x170b30",
+   "fn": "0x170b20",
+   "class": "ShockRocketShot",
+   "before": "0x3c043f80"
+  },
+  {
+   "site": "0x17875c",
+   "fn": "0x178758",
+   "class": "SwarmManager",
+   "before": "0x3c053f80"
+  },
+  {
+   "site": "0x19ae58",
+   "fn": "0x19adf4",
+   "class": "SuckCannonComet",
+   "before": "0x3c043f80"
+  }
+ ]
+}
