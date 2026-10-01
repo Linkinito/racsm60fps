@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Targeted LEVEL_01 60 FPS fixes on top of C1, switchable live (experimental RAM).
 
-Requires the InterpGate plugin (IG-v16f, lean) as the only plugin. Each fix is a guarded
+Requires the InterpGate plugin (IG-v17, lean) as the only plugin. Each fix is a guarded
 set of word writes; wrappers live in the plugin, data fixes are direct writes.
   nav       ground-navigation displacement halved (0x2A8F0 callers)       [owner: crab speed OK]
   nav2      second navigation mode 0x2935C (Crab/TM robots/TrainingBot)
@@ -21,6 +21,8 @@ set of word writes; wrappers live in the plugin, data fixes are direct writes.
   crab      crab attack frame threshold 27 -> 54 (data RVA 0x2CF3C8)    [owner: timing OK]
   particles waterfall particle animator 0xDE23C half-step (walker jalr site 0x8CE54)
   pathanimals PathAnimal walk speed x0.5 (stub at 0x15DE70), turn spring refit and fall gravity (data)
+  weapondt  weapon update gets 2 x delta in the single C1 substep (A0 ran it twice per frame)
+  infammo   TEST AID: weapons do not consume ammo (7 weapon functions; not part of parity)
   crabtimers reviewed Crab state/cooldown reloads x2 (replaces the quarantined timer-patches Crab batch)
   butterfly Butterfly flap/speed steps halved, speed and turn springs refitted (+ timer-patches --class Butterfly)
   laserbeam LaserTracer beam fade in/out frames x2 and texture scroll steps halved
@@ -46,7 +48,7 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parents[2]
 spec = importlib.util.spec_from_file_location('pump_gate', REPO/'tools/runtime/pump-gate.py')
 pg = importlib.util.module_from_spec(spec); spec.loader.exec_module(pg)
-BUILD = REPO/'patches/experimental/interp-gate/build/IG-v16f'
+BUILD = REPO/'patches/experimental/interp-gate/build/IG-v17'
 WRAPPERS = {  # name: (callee RVA, call sites, wrapper symbol, enable symbol, word offset)
     # Register-transparent asm stubs (IG-v11) halve the displacement vector passed in a2.
     'nav': (0x2A8F0, (0x29188, 0x29334), 'ig_disp_stub0', 'ig_disp', 0),
@@ -101,6 +103,10 @@ for _s, _w in ((0x308C, 0x3C063D08), (0x361C, 0x3C043D08), (0x37E0, 0x3C043D08))
 for _s in (0x79B8, 0x7AA4, 0x7AF0, 0x7B38):
     DATA['cam%#x' % _s] = (_s, 0x3C043D08, 0x3C043C88)
 DATA['cam0x2aa500'] = (0x2AA500, 0x3F19999A, int.from_bytes(struct.pack('<f', 1 - 0.4 ** 0.5), 'little'))
+# Negative speed caps use their own `lui 0xBD08` (-1/30): yaw 0x3634 and pitch 0x37F8. Without them only one
+# direction was corrected (owner 2026-10-02: L / stick left still 2x fast, R correct).
+for _s in (0x3634, 0x37F8):
+    DATA['cam%#x' % _s] = (_s, 0x3C04BD08, 0x3C04BC88)
 CAMERA = [k for k in DATA if k.startswith('cam0x')]
 def _f2w(x): return int.from_bytes(struct.pack('<f', x), 'little')
 # PathAnimal_Update: pos += fwd * speed with the per-instance speed loaded at 0x15DE70 (`lwc1 f12,4(s1)`);
@@ -194,7 +200,23 @@ DATA['bspringk'] = (0x2CEDC8, 0x3CA3D70A, _f2w(0.01256)); DATA['bspringd'] = (0x
 CRABTIMERS = []
 for _r in json.loads((REPO/'research/v2/crab-timer-audit-20261001/crab-timer-recipe-v2.json').read_text(encoding='utf-8'))['sites']:
     DATA['ct' + _r['site']] = (int(_r['site'], 16), int(_r['before'], 16), int(_r['after'], 16)); CRABTIMERS.append('ct' + _r['site'])
-ALIASES = {'crabtimers': set(CRABTIMERS), 'butterfly': {'bflap1', 'bflap2', 'bspeed1', 'bspeed2', 'bspringk', 'bspringd', 'sp0x2ced8ck', 'sp0x2ced90d', 'sp0x2cedbck', 'sp0x2cedc0d'},
+# infammo (TEST AID, not parity): weapon ammo is field +0x40 of the inventory entry returned by 0x1F71C
+# (Blaster stock found live at module+0x2AEA4C; decrement 0x1168E8 by write breakpoint 2026-10-02). Same
+# shape in 7 weapon functions: 5 `addiu a0,a0,-1` -> +0, LaserTracer 2 `subu a1,a1,a0` -> `addu a1,a1,zero`.
+INFAMMO = []
+# 0x175D08 (SuckCannon) excluded: its "ammo" is the sucked objects (owner: infinite but fires nothing).
+for _s in (0x110160, 0x115EF8, 0x1168E8, 0x11A1C0, 0x12B178, 0x13B9C8, 0x168B88, 0x16C958, 0x16F884):
+    DATA['ammo%#x' % _s] = (_s, 0x2484FFFF, 0x24840000); INFAMMO.append('ammo%#x' % _s)
+for _s in (0x14790C, 0x147C04):
+    DATA['ammo%#x' % _s] = (_s, 0x00A42823, 0x00A02821); INFAMMO.append('ammo%#x' % _s)
+# weapondt: in A0 the player substep loop (0x2FB8C) runs twice per 30 Hz frame and passes the full frame delta
+# (1/30) to P_Player_WeaponUpdate each time, so delta-based weapon timers advance 2/30 s per frame. C1 runs the
+# loop once with 1/60: weapons run at half the original rate (Blaster measured 4.2 -> 2.0 shots/s, 2026-10-02).
+# The delay slot `mov.s f12,f20` of the weapon call (0x2FCF4) becomes `add.s f12,f20,f20` (2 x delta).
+DATA['weapondt'] = (0x2FCF4, 0x4600A306, 0x4614A300)
+# experiment: the other delta consumer of the loop, 0x39B74 (delay slot 0x2FCE8), role UNKNOWN
+DATA['substepdt'] = (0x2FCE8, 0x4600A306, 0x4614A300)
+ALIASES = {'infammo': set(INFAMMO), 'crabtimers': set(CRABTIMERS), 'butterfly': {'bflap1', 'bflap2', 'bspeed1', 'bspeed2', 'bspringk', 'bspringd', 'sp0x2ced8ck', 'sp0x2ced90d', 'sp0x2cedbck', 'sp0x2cedc0d'},
            'laserbeam': set(LASERBEAM), 'spawn': {'spawn0', 'spawn1', 'telemetry'}, 'springs': set(SPRINGS), 'luna': {'lunastep', 'lunaidle1', 'lunaidle2', 'sp0x2d4e94k', 'sp0x2d4e98d', 'sp0x2d4d5ck', 'sp0x2d4d60d'},
            'clock': {'clock', 'telemetry'}, 'waterfall': {'wfparity', 'wfscroll1', 'wfscroll2'}, 'phases': set(PHASES), 'pathanimals': {'pathanimal', 'pathgrav', 'sp0x2d5b34k', 'sp0x2d5b38d'}, 'crank': {'crankframes', 'crankdrop'},
            'particles-all': {'particles-all', 'particles'}}
@@ -202,7 +224,7 @@ FIXES = (*WRAPPERS, *DATA, *CODESTUBS, *RUNTIME, 'particles', 'particles-all', '
 
 def resident(c, symbols):
     mods = [m for m in c.request('hle.module.list')['modules'] if m.get('isActive')]
-    other = [m['name'] for m in mods if m['name'] not in ('mcp', 'rcp1', 'InterpGate')]
+    other = [m['name'] for m in mods if m['name'] not in ('mcp', 'rcp1', 'InterpGate', 'OCEnhance')]   # OCEnhance: optional camera/controls plugin
     if other: raise RuntimeError('refusing: other plugins resident: %s' % other)
     game = [m for m in mods if m['name'] == 'rcp1']; ig = [m for m in mods if m['name'] == 'InterpGate']
     if len(game) != 1 or game[0]['size'] != pg.MODULE_SIZE: raise RuntimeError('LEVEL_01 not unique')

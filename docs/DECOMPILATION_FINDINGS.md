@@ -90,3 +90,14 @@ Global arms D1, G1, G, GI, F1, H, I: rejected live on 2026-09-30.
 - Telemetry: count-up timer durations (crab +0x60) are not yet captured.
 - 16 butterflies with another configuration (speed 0.025-0.04) were not adjusted live.
 - Frame-counter stamps with unknown readers left on the game clock: `0x54EFC`, `0x77098`, `0x783B0`, `0x106698`.
+
+## 7. Live session 2026-10-02 (summary)
+
+Owner-accepted from a clean boot with telemetry: `crabtimers` (crab state durations x0.99, cooldown x1.00 vs A0),
+`camera` including the negative caps, `frames30` for the HUD hide delay, `springs`, `spawn`, `butterfly`, and the
+OCEnhance features (right stick yaw, vertical look by moving the per-frame default target pitch `0x2AA40C` together
+with the pitch, R3 = game recentre `0x2C84` without crouching). Rejected: `particles-all` (colour corruption; motion of
+debris/waves lives in per-particle callbacks). Open: Blaster fire rate is halved by C1 itself (A0 4.2 vs C1 2.0 shots/s,
+measured); the cooldown is not the limiter (`weapondt` had no effect); next candidate is the other delta consumer of
+the player substep loop, `0x39B74`. Still 2x: bolts flying to Ratchet, teleporter and help-box animations, waterfall
+particles and water scroll, crate debris; Ryno fires too fast. Weapon ammo: inventory entry +0x40 from `0x1F71C`.

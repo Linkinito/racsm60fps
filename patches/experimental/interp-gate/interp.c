@@ -183,7 +183,7 @@ static void tel_sample(void) {
     for (i = 0; i < WATCHES; i++) {
         volatile Watch *w = &ig_watch[i];
         uint32_t k = w->kind, a = w->addr;
-        float v[3] = {0.0f, 0.0f, 0.0f}, d;
+        float v[3] = {0.0f, 0.0f, 0.0f}, d, prev;
         if (k == 0u || k > 4u || a < 0x08800000u || a >= 0x0A000000u - 16u || (a & (k == 3u ? 1u : 3u))) continue;
         if (k == 1u || k == 4u) {
             for (j = 0; j < (k == 4u ? 3u : 1u); j++) {
@@ -195,6 +195,7 @@ static void tel_sample(void) {
         } else if (k == 2u) v[0] = (float)*(volatile int32_t *)(uintptr_t)a;
         else v[0] = (float)*(volatile int16_t *)(uintptr_t)a;
         if (w->n++ == 0u) { w->last[0] = v[0]; w->last[1] = v[1]; w->last[2] = v[2]; continue; }
+        prev = w->last[0];
         if (k == 4u) {
             float dx = v[0] - w->last[0], dy = v[1] - w->last[1], dz = v[2] - w->last[2];
             d = __builtin_sqrtf(dx * dx + dy * dy + dz * dz);
@@ -205,10 +206,13 @@ static void tel_sample(void) {
             float ad = d < 0.0f ? -d : d;
             if (w->jump_limit > 0.0f && ad > w->jump_limit) {
                 w->jumps++;
-                if (k != 4u && d > 0.0f) {
-                    w->reloads++; w->last_reload = v[0];
-                    if (v[0] > w->max_reload) w->max_reload = v[0];
-                    if (w->min_reload == 0.0f || v[0] < w->min_reload) w->min_reload = v[0];
+                if (k != 4u) {
+                    /* countdown reload: the new value is the duration; count-up reset (IG-v17):
+                     * the value reached before the reset is the duration */
+                    float dur = d > 0.0f ? v[0] : prev;
+                    w->reloads++; w->last_reload = dur;
+                    if (dur > w->max_reload) w->max_reload = dur;
+                    if (w->min_reload == 0.0f || dur < w->min_reload) w->min_reload = dur;
                 }
                 continue;
             }

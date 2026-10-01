@@ -88,3 +88,14 @@ Solutions globales D1, G1, G, GI, F1, H, I : rejetées en jeu le 30/09.
 - Suivi chiffré : mesurer la durée des minuteries qui comptent vers le haut (crabe +0x60).
 - 16 papillons d'une autre configuration n'ont pas été ajustés en direct.
 - Horodatages du compteur aux lecteurs inconnus laissés sur l'horloge du jeu : `0x54EFC`, `0x77098`, `0x783B0`, `0x106698`.
+
+## 7. Session en jeu du 2 octobre 2026 (résumé)
+
+Validé par le propriétaire (jeu fraîchement lancé, mesures à l'appui) : `crabtimers` (durées des états du crabe x0,99,
+récupération x1,00), `camera` avec les deux sens de rotation, `frames30` pour la disparition du HUD, `springs`,
+`spawn`, `butterfly`, et les options OCEnhance (stick droit, regard haut/bas, R3 = recentrage sans s'accroupir).
+Rejeté : `particles-all` (couleurs abîmées ; le mouvement des débris et vaguelettes est calculé par particule).
+Ouvert : la cadence du Blaster est divisée par deux par C1 lui-même (4,2 tirs/s en original contre 2,0 en 60 FPS,
+mesuré) ; le délai n'est pas en cause (`weapondt` sans effet) ; prochaine piste : `0x39B74`. Encore 2x : boulons,
+animations du téléporteur et de la boîte d'aide, particules et eau de la cascade, débris de caisses ; le TELT tire
+trop vite. Munitions : champ +0x40 de la fiche d'arme renvoyée par `0x1F71C`.
