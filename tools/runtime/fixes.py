@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Targeted LEVEL_01 60 FPS fixes on top of C1, switchable live (experimental RAM).
 
-Requires the InterpGate plugin (IG-v17, lean) as the only plugin. Each fix is a guarded
+Requires the InterpGate plugin (IG-v19, lean) as the only plugin. Each fix is a guarded
 set of word writes; wrappers live in the plugin, data fixes are direct writes.
   nav       ground-navigation displacement halved (0x2A8F0 callers)       [owner: crab speed OK]
   nav2      second navigation mode 0x2935C (Crab/TM robots/TrainingBot)
@@ -17,6 +17,7 @@ set of word writes; wrappers live in the plugin, data fixes are direct writes.
   boatfade  Level01Boat per-call fade step halved (data 0x2D42FC)
   laser     LaserTracer per-call +0x68 steps 1.25/1.5 halved (data 0x2D2D68, 0x2D2D80)
   cows      displacement helpers 0x190D6C/0x191154/0x1913A4 (MutantCow/MadCow, AgentOfDoom)
+  physstep bolts and crate debris physics half-step (0x2832C callers)
   debris    debris physics half-step (0x191D7C callers, 8 shrapnel classes)
   crab      crab attack frame threshold 27 -> 54 (data RVA 0x2CF3C8)    [owner: timing OK]
   particles waterfall particle animator 0xDE23C half-step (walker jalr site 0x8CE54)
@@ -31,6 +32,8 @@ set of word writes; wrappers live in the plugin, data fixes are direct writes.
   luna      LunaNPC step 0x2D4EA8 halved, idle timer x2, Luna turn springs
   crank     BoltCrankBolt frames step 1.0 -> 0.5 (0x120C38) and runtime drop step 0x2CE884 halved
   laseracc  LaserTracer runtime accumulator step 0x2D2D74 halved (role INFERRED)
+  camfilters exact 60 Hz conversion of the 20 critically damped camera filters (init literal, k, exp)
+  particles-rate  every particle animator updates at 30 Hz but still draws at 60 Hz (IG-v19 byte-exact restore)
   particles-all  generic particle half-step for every registered animator (particles = waterfall only)
   waterfall Level01Waterfall spawn every 4th update (was 2nd) and texture scroll steps halved
   phases    24 exclusive per-call fade/countdown/phase constants halved (level01-phase-steps.json)
@@ -48,7 +51,7 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parents[2]
 spec = importlib.util.spec_from_file_location('pump_gate', REPO/'tools/runtime/pump-gate.py')
 pg = importlib.util.module_from_spec(spec); spec.loader.exec_module(pg)
-BUILD = REPO/'patches/experimental/interp-gate/build/IG-v17'
+BUILD = REPO/'patches/experimental/interp-gate/build/IG-v19'
 WRAPPERS = {  # name: (callee RVA, call sites, wrapper symbol, enable symbol, word offset)
     # Register-transparent asm stubs (IG-v11) halve the displacement vector passed in a2.
     'nav': (0x2A8F0, (0x29188, 0x29334), 'ig_disp_stub0', 'ig_disp', 0),
@@ -58,6 +61,9 @@ WRAPPERS = {  # name: (callee RVA, call sites, wrapper symbol, enable symbol, wo
     'cow3': (0x1913A4, (0x19163C,), 'ig_disp_stub4', 'ig_disp', 32),
     'debris': (0x191D7C, (0x10E41C, 0x116320, 0x1239C8, 0x128230, 0x14328C, 0x17195C, 0x1833FC, 0x186750),
                'ig_debris', 'ig_fix', 0),
+    # physstep: generic small-object physics step 0x2832C (bolts 0x11EE20, crate debris pool 0x2ED88), per call
+    # life -= 1, pos += vel + g/2, vel.y += g -> IG-v18 ig_phys keeps half of each change.
+    'physstep': (0x2832C, (0x2ED88, 0x11EE20), 'ig_phys', 'ig_fix', 4),
     # animdisp (0x6C318) REJECTED: absolute point, not a per-call step; wrapper removed in IG-v16.
 }
 DATA = {'crab': (0x2CF3C8, 0x41D80000, 0x42580000),
@@ -216,11 +222,32 @@ for _s in (0x14790C, 0x147C04):
 DATA['weapondt'] = (0x2FCF4, 0x4600A306, 0x4614A300)
 # experiment: the other delta consumer of the loop, 0x39B74 (delay slot 0x2FCE8), role UNKNOWN
 DATA['substepdt'] = (0x2FCE8, 0x4600A306, 0x4614A300)
-ALIASES = {'infammo': set(INFAMMO), 'crabtimers': set(CRABTIMERS), 'butterfly': {'bflap1', 'bflap2', 'bspeed1', 'bspeed2', 'bspringk', 'bspringd', 'sp0x2ced8ck', 'sp0x2ced90d', 'sp0x2cedbck', 'sp0x2cedc0d'},
+# rynorate (candidate): Ryno refire counter moby+0x70 = 24.0 on fire (0x168A6C, DAT 0x2D6A90 exclusive) and
+# -= 1.0 per Ryno_Update call. Owner: TELT (Ryno) fires too fast at 60 FPS -> 24 -> 48 if Ryno_Update runs once
+# per frame (to confirm with fix-monitor probe Ryno/refire70: A0 vs C1 duration).
+DATA['rynorate'] = (0x2D6A90, 0x41C00000, 0x42400000)
+# camfilters: camera filters are exact critically damped steps with dt = 1/30 baked in: per filter omega (data),
+# k = omega x 1/30 computed at init by 0xCA24 (one `lui 0x3D08` at 0xCA2C for all) and e = exp(-omega/30)
+# precomputed in data (all 20 verified). 60 Hz is exact with k = omega/60 and e = sqrt(e): patch the init literal,
+# the already computed k words and the e words. Camera follow/placement smoothing (0x49A0, 0x804C, 0xAE14, ...).
+def _f32mul(a, bw): return int.from_bytes(struct.pack('<f', struct.unpack('<f', struct.pack('<I', a))[0] * struct.unpack('<f', struct.pack('<I', bw))[0]), 'little')
+CAMFILTERS = ['camf_init']
+DATA['camf_init'] = (0xCA2C, 0x3C043D08, 0x3C043C88)
+if _RAW.exists():
+    for _src, _k, _e in [(r, r+4, r+8) for r in (0x2AA3E0, 0x2AA418, 0x2AA434, 0x2AA440, 0x2AA44C, 0x2AA45C, 0x2AA468, 0x2AA474,
+                        0x2AA480, 0x2AA490, 0x2AA4B8, 0x2AA4C8, 0x2AA4D4, 0x2AA4E0, 0x2AA4EC, 0x2AA57C, 0x2AA588, 0x2AA594, 0x2AA5A0)] + [(0x2AA5B8, 0x2AA5C0, 0x2AA5C4)]:
+        _om = int.from_bytes(_B[0x74+_src:0x78+_src], 'little'); _ew = int.from_bytes(_B[0x74+_e:0x78+_e], 'little')
+        DATA['camf%#x' % _k] = (_k, _f32mul(_om, 0x3D088889), _f32mul(_om, 0x3C888889))
+        DATA['camf%#x' % _e] = (_e, _ew, _f2w(struct.unpack('<f', struct.pack('<I', _ew))[0] ** 0.5))
+        CAMFILTERS += ['camf%#x' % _k, 'camf%#x' % _e]
+# helphint: Level01HelpManager shows the wrench-throw hint after 18000 update frames (10 min at 30 Hz):
+# `sltiu a0,a0,18000` at 0x150FC0. 36000 does not fit a signed 16-bit immediate; 32767 = 9.1 min at 60 Hz.
+DATA['helphint'] = (0x150FC0, 0x2C844650, 0x2C847FFF)
+ALIASES = {'camfilters': set(CAMFILTERS), 'particles-rate': {'particles-rate', 'particles', 'telemetry'}, 'infammo': set(INFAMMO), 'crabtimers': set(CRABTIMERS), 'butterfly': {'bflap1', 'bflap2', 'bspeed1', 'bspeed2', 'bspringk', 'bspringd', 'sp0x2ced8ck', 'sp0x2ced90d', 'sp0x2cedbck', 'sp0x2cedc0d'},
            'laserbeam': set(LASERBEAM), 'spawn': {'spawn0', 'spawn1', 'telemetry'}, 'springs': set(SPRINGS), 'luna': {'lunastep', 'lunaidle1', 'lunaidle2', 'sp0x2d4e94k', 'sp0x2d4e98d', 'sp0x2d4d5ck', 'sp0x2d4d60d'},
            'clock': {'clock', 'telemetry'}, 'waterfall': {'wfparity', 'wfscroll1', 'wfscroll2'}, 'phases': set(PHASES), 'pathanimals': {'pathanimal', 'pathgrav', 'sp0x2d5b34k', 'sp0x2d5b38d'}, 'crank': {'crankframes', 'crankdrop'},
            'particles-all': {'particles-all', 'particles'}}
-FIXES = (*WRAPPERS, *DATA, *CODESTUBS, *RUNTIME, 'particles', 'particles-all', 'telemetry', 'clock')
+FIXES = (*WRAPPERS, *DATA, *CODESTUBS, *RUNTIME, 'particles', 'particles-all', 'particles-rate', 'telemetry', 'clock')
 
 def resident(c, symbols):
     mods = [m for m in c.request('hle.module.list')['modules'] if m.get('isActive')]
@@ -276,7 +303,8 @@ def state(c, base, addr):
     pm = c.read(addr['ig_pmap'], 5*len(PARTICLE_POOLS)); en = {pm[5*i]-base: pm[5*i+2] for i in range(len(PARTICLE_POOLS))}
     site = 'off' if w == JALR_T0 else 'on' if w == pg.jal(addr['ig_pwrap_stub']) and c.read(addr['ig_pfix'], 1)[0] else 'MIXED'
     fixes['particles'] = 'on' if site == 'on' and en.get(PARTICLE_ANIMATOR) else 'off' if site == 'off' else site
-    fixes['particles-all'] = 'on' if site == 'on' and all(en.get(r) for r, _ in PARTICLE_POOLS) else 'off' if site != 'MIXED' else site
+    fixes['particles-all'] = 'on' if site == 'on' and all(en.get(r) == 1 for r, _ in PARTICLE_POOLS) else 'off' if site != 'MIXED' else site
+    fixes['particles-rate'] = 'on' if site == 'on' and all(en.get(r) == 2 for r, _ in PARTICLE_POOLS) else 'off' if site != 'MIXED' else site
     fixes['telemetry'] = 'on' if telemetry else 'off'
     cw = [(c.read(base+r, 1)[0], o, n) for r, o, n in clock_words(addr['ig_clock'], base)]
     fixes['clock'] = 'off' if all(w == o for w, o, _ in cw) else 'on' if all(w == n for w, _, n in cw) else 'MIXED'
@@ -342,7 +370,7 @@ def main():
         for i, (rva, size) in enumerate(PARTICLE_POOLS):
             e = addr['ig_pmap']+20*i
             put(e, base+rva); put(e+4, size)
-            put(e+8, 1 if 'particles-all' in want or ('particles' in want and rva == PARTICLE_ANIMATOR) else 0)
+            put(e+8, 2 if 'particles-rate' in want else 1 if 'particles-all' in want or ('particles' in want and rva == PARTICLE_ANIMATOR) else 0)
         put(addr['ig_pmap']+20*len(PARTICLE_POOLS), 0)
         put(addr['ig_pfix'], 1 if 'particles' in want else 0)
         put(base+PARTICLE_SITE, pg.jal(addr['ig_pwrap_stub']) if 'particles' in want else JALR_T0)

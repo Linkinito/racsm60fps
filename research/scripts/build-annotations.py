@@ -85,6 +85,44 @@ FUNCTIONS = {  # rva: (name or None to keep, plate comment)
     0x156710: (None, 'Lvl3Elevator: progress +8 += +0xC per call (moby+0x54 data); init 0x1563E8 computes '
                '(1/moveTime)*(1/30) (fix "elevator").'),
     0x14EB68: (None, 'Level01Boat: fade/progress moby+0x70 -= 1/15 per call (0x2D42FC, fix "boatfade"); countdown seconds x 30.'),
+    0x2FB8C: (None, 'Player substep loop (domain 8): when player flag +0x95C & 0x8000, runs its body twice per frame in A0 '
+              '(C1 slti 2->1 at 0x2FCFC) and passes the full frame delta to 0x39B74 (delay slot 0x2FCE8) and '
+              'P_Player_WeaponUpdate (0x2FCF4) each time: dt consumers got 2 x 1/30 per A0 frame. See docs/WHY_60FPS_IS_HARD.md.'),
+    0x39B74: ('P_Player_StepTimed', 'Player step that receives the frame delta; calls 0x32588 (player timers).'),
+    0x32588: ('P_Player_TimersTick', 'Player timers +0xA00/+0xA08/+0xA0C/+0xA14/+0xA18 -= dt (idle/fidget timers, reloads '
+              'rand(10..24) from 0x2B0138..48). Run twice per frame in A0 -> half speed in C1 (fix "substepdt").'),
+    0x1EBC4: (None, 'P_Player_WeaponUpdate: f20 = delta; calls the held weapon class slot (+0x1C) via jalr 0x1F2D0 with that '
+              'delta. Other callers 0x1E4E8/0x1E610 pass 0 (weapon switch).'),
+    0x116A00: (None, 'Blaster_Update(dt, moby): pvar = moby+0x58; refire cooldown pvar+4 -= dt (reloaded on fire), hold timer '
+               'pvar+0xB4 += dt (re-arm past 0.3, double shot 0.4333); fires through 0x116534 when cooldown == 0 and '
+               'gun state +0x45 is 0/4. Measured A0 4.2 shots/s, C1 2.0 shots/s (2026-10-02).'),
+    0x116534: ('Blaster_Fire', 'Spawns shots (0x1167E8) and consumes ammo (0x1168A0).'),
+    0x1168A0: ('Blaster_UseAmmo', 'Inventory entry 0x1F71C(2, id) +0x40 -= 1 (0x1168E8; fix "infammo").'),
+    0x1F71C: ('P_Inventory_GetEntry', 'Returns the weapon inventory entry (ammo at +0x40). Blaster entry at module+0x2AEA0C.'),
+    0x2832C: ('P_SmallPhys_Step', 'Small-object physics per call: rec+0x24 life -= 1, pos += vel + g/2, vel.y += g, '
+              '+0x34 -= 1 when settled. Bolts (0x11EE20) and crate debris (0x2ED88). Fix "physstep" (IG-v18 ig_phys).'),
+    0x11EC70: ('BoltPool_Update', 'Bolt pool (0x4686B4, table 0x2CE790) per-frame update -> 0x2832C.'),
+    0x2EB90: ('PhysPool_Update', 'Generic physics pool (0x46A230, table 0x2B008C) per-frame update -> 0x2832C; fed by '
+              'Crate/CrateAmmo through 0x2E92C (crate debris are NOT particles).'),
+    0x2E92C: ('PhysPool_Spawn', 'Spawns an object into the generic physics pool (crate debris).'),
+    0x93E60: ('P_ObjPool_Init', 'Initialises an object pool list with a callback table (+0x10 = per-frame update). 10 pools.'),
+    0x93F64: ('P_ObjPool_Alloc', 'Allocates from an object pool (bolts etc.).'),
+    0x64F9C: ('P_FxEmitter_Tick', 'Emitter timer += 1/30 per call (0x64FA0, fix "frametimers"); spawns effect particles at '
+              'its interval (teleporter). Emitted particles still move per call (fix "particles-rate").'),
+    0x2C84: ('P_Camera_Recentre', 'Recentres the camera behind the player when the pad word has L+R held (== 0x300); '
+             'OCEnhance R3 injects L+R only inside this call.'),
+    0xB958: ('P_Camera_ApplyDefaults', 'Every frame copies default params, incl. target pitch 0x2AA40C -> 0x2DD4D8 '
+             '(OCEnhance moves that default for vertical look).'),
+    0x804C: ('P_Camera_AutoPitch', 'Auto pitch toward the target pitch 0x2DD4D8 (active while moving).'),
+    0x9444: ('P_Camera_Place', 'Camera placement with ground collision; writes pitch 0x2DD4C4.'),
+    0x88180: ('P_Model_DrawMesh', 'Emits mesh texture offsets (GE UOFFSET 0x4A / VOFFSET 0x4B) from mesh data +0x24/+0x28.'),
+    0xCA24: ('P_Camera_InitFilters', 'Computes k = omega x 1/30 (one lui at 0xCA2C) for the 20 critically damped camera filters '
+             '(omega, k, exp(-omega/30)); exact 60 Hz: k = omega/60, e = sqrt(e) (fix "camfilters").'),
+    0x49A0: (None, 'Camera smoothing with the exact critically damped step: v=(v+e k)E; x=t+v+e E; v-= x k (constants 0x2AA474..).'),
+    0x5C650: (None, 'Player-side damped filter (0x2B0FD8 triplet) inside the player substep loop: already 60 Hz in A0, no fix.'),
+    0x150EF8: (None, 'Level01HelpManager: view-map hint timer += 1/30 (0x150F0C, "frametimers"); wrench hint after 18000 frames '
+               '(sltiu 0x150FC0, "helphint").'),
+    0x168C28: (None, 'Ryno_Update: refire counter moby+0x70 = 24 on fire (0x168A6C, DAT 0x2D6A90), -1 per call (candidate "rynorate").'),
 }
 ADDRESS = {  # rva: comment (instruction or data)
     0x96650: 'C1: second VBlank wait (jal) -> nop.',
@@ -94,6 +132,10 @@ ADDRESS = {  # rva: comment (instruction or data)
     0x8CE54: 'jalr t0 (particle animator); fix "particles" -> jal ig_pwrap_stub.',
     0x2AF28C: 'Global frame counter (+1 per frame in 0x13F0C).',
     0x2CF3C8: 'Crab attack threshold 27.0 frames (fix "crab" -> 54).',
+    0x2AEA4C: 'Blaster ammo (inventory entry +0x40), found live 2026-10-02.',
+    0x2AA40C: 'Default target pitch 0.0, copied every frame by 0xB958 (OCEnhance vertical look).',
+    0x2FCE8: 'Delay slot mov.s f12,f20 of jal 0x39B74 (fix "substepdt" -> add.s, 2 x dt).',
+    0x2FCF4: 'Delay slot mov.s f12,f20 of jal P_Player_WeaponUpdate (fix "weapondt" -> add.s, 2 x dt).',
     0x2AA3C0: 'View constants: FOV 0.5498, near 1.0, far 10000; +0x30 distance 5.0; +0x3C height 1.14 (OCEnhance).',
 }
 

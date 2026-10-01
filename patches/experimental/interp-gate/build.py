@@ -33,7 +33,7 @@ def main():
     nm = subprocess.run([str(SDK/'bin/psp-nm.exe'), 'patch.elf'], cwd=build, env=env, text=True,
                         stdout=subprocess.PIPE, check=True).stdout
     symbols = {}
-    for name in ('ig_fix', 'ig_debris', 'ig_pfix', 'ig_pwrap_stub', 'ig_particles', 'ig_disp', 'ig_disp_stub0', 'ig_disp_stub1', 'ig_disp_stub2', 'ig_disp_stub3', 'ig_disp_stub4', 'ig_tel', 'ig_tel_pump', 'ig_watch', 'ig_pmap', 'ig_pa_speed', 'ig_cnt', 'ig_saved', 'ig_clock', 'ig_sp', 'ig_upd', 'ig_spawn', 'ig_spawn_stub0', 'ig_spawn_stub1'):
+    for name in ('ig_fix', 'ig_debris', 'ig_phys', 'ig_pfix', 'ig_pwrap_stub', 'ig_particles', 'ig_disp', 'ig_disp_stub0', 'ig_disp_stub1', 'ig_disp_stub2', 'ig_disp_stub3', 'ig_disp_stub4', 'ig_tel', 'ig_tel_pump', 'ig_watch', 'ig_pmap', 'ig_pa_speed', 'ig_cnt', 'ig_saved', 'ig_clock', 'ig_sp', 'ig_upd', 'ig_spawn', 'ig_spawn_stub0', 'ig_spawn_stub1'):
         m = re.findall(r'(?m)^([0-9a-fA-F]+) [A-Za-z] %s$' % name, nm)
         if len(m) != 1: raise RuntimeError('missing symbol '+name)
         symbols[name] = int(m[0], 16)

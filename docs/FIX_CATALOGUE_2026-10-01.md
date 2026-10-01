@@ -36,6 +36,11 @@ installed as the only plugin; the tool refuses another loaded build) or
 | `frames30` (HUD) | x30 conversions incl. HUD timers | HUD | HUD hide delay owner-accepted 2026-10-02 (2 s); bolts flying to Ratchet still 2x |
 | `weapondt` | 2 x delta into P_Player_WeaponUpdate (delay slot `0x2FCF4`) | weapons | REJECTED as the Blaster fix: rate unchanged (cooldown is not the limiter). Blaster A0 4.2 shots/s vs C1 2.0 shots/s (measured) |
 | `substepdt` | 2 x delta into `0x39B74` (delay slot `0x2FCE8`), role UNKNOWN | player/weapons | experiment prepared, untested |
+| `physstep` | IG-v18 half-step on `0x2832C` (life -1, pos += vel + g/2, vel.y += g per call) for the bolt pool and the generic physics pool fed by crates | bolts flying to Ratchet, crate debris | untested (owner saw both 2x) |
+| `particles-rate` | IG-v19: every particle animator still runs every frame (drawing) but its records are restored byte-exactly on every second update (30 Hz state, no field-type assumption) | all particles incl. waterfall mist/splashes, teleporter effect, waves | untested; replaces the rejected particles-all |
+| `camfilters` | exact 60 Hz conversion of the 20 critically damped camera filters: init literal `0xCA2C` 1/30 -> 1/60, computed k = omega/30 -> omega/60, exp(-omega/30) -> sqrt | camera follow/placement smoothing | untested |
+| `rynorate` | Ryno refire counter 24 -> 48 frames (`0x2D6A90`), if Ryno_Update runs once per frame (probe Ryno/refire70 first) | Ryno ("TELT") | candidate, untested |
+| `helphint` | wrench-throw hint after 18000 frames: `sltiu` at `0x150FC0` -> 32767 (9.1 min at 60 Hz; 36000 does not fit) | Level01HelpManager | untested |
 | `infammo` | ammo decrement neutralised (9 `addiu -1` + LaserTracer 2) | TEST AID | works for all owned weapons except Acidbomb; SuckCannon excluded (broke it) |
 | `butterfly` | flap/speed steps halved (`0x2CEDA8..B4`), speed spring refit, + `timer-patches --class Butterfly`; values are drawn at butterfly init | Butterfly | owner-accepted 2026-10-01 (with a live instance edit for existing butterflies; telemetry x1.00 vs A0) |
 | `firerate` | Fire_Update emission accumulator `acc += 0.667` per call -> 0.333 (`0x2D1708`, Fire-only) | Fire (particle density) | untested |

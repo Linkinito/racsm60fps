@@ -52,6 +52,28 @@ int ig_debris(void *moby, float *phys, void *params, float f12) {
     return r;
 }
 
+/* Generic small-object physics step (IG-v18). LEVEL_01 0x2832C (f12, f13, a0 record, a1 queue,
+ * a2 float pos[3], a3, t0 float *gravity) steps once per update: record +0x24 life -= 1, pos += vel +
+ * g/2, vel.y += g, +0x34 timer -= 1 when settled. Used by the bolt pool (0x11EE20) and the generic
+ * physics pool fed by Crate/CrateAmmo (crate debris, 0x2ED88). ig_fix slot 1 (old animdisp slot):
+ * [4] enable, [5] original, [6] calls. Half of each change is kept; a velocity component whose sign
+ * flips (bounce) keeps its full change. */
+typedef void (*PhysFn)(float, float, uint8_t *, int *, float *, void *, float *);
+void ig_phys(float f12, float f13, uint8_t *rec, int *q, float *pos, void *a3, float *g) {
+    PhysFn f = (PhysFn)(uintptr_t)ig_fix[5];
+    float *vel = (float *)(rec + 4), *life = (float *)(rec + 0x24), *tim = (float *)(rec + 0x34);
+    float p0, p1, p2, v0, v1, v2, l, t;
+    if (!ig_fix[4]) { f(f12, f13, rec, q, pos, a3, g); return; }
+    p0 = pos[0]; p1 = pos[1]; p2 = pos[2]; v0 = vel[0]; v1 = vel[1]; v2 = vel[2]; l = *life; t = *tim;
+    f(f12, f13, rec, q, pos, a3, g);
+    ig_fix[6]++;
+    pos[0] = halve(p0, pos[0]); pos[1] = halve(p1, pos[1]); pos[2] = halve(p2, pos[2]);
+    if (v0 * vel[0] >= 0.0f) vel[0] = halve(v0, vel[0]);
+    if (v1 * vel[1] >= 0.0f) vel[1] = halve(v1, vel[1]);
+    if (v2 * vel[2] >= 0.0f) vel[2] = halve(v2, vel[2]);
+    *life = halve(l, *life); *tim = halve(t, *tim);
+}
+
 /* Generic particle animator half-step (IG-v13; walker site 0x8CE54 `jalr t0` ->
  * `jal ig_pwrap_stub`, which stores the animator in ig_ptarget). Animator arguments
  * (OBSERVED 0xDE23C, 0x1A05F0): a0 vertex output, a1 first vertex index, a2 emitter-
@@ -68,11 +90,12 @@ int ig_debris(void *moby, float *phys, void *params, float f12) {
  * Adjacent float pairs/triples whose length the animator preserved (rotations of unit
  * vectors; IG-v8 flicker) are rescaled to that length after halving. */
 typedef int (*AnimFn)(void *, int, void *, void *);
+extern volatile uint32_t ig_upd;
 volatile uint32_t ig_ptarget;
 volatile uint32_t ig_pfix[8];
 #define PMAPS 64u
 volatile uint32_t ig_pmap[PMAPS][5];
-#define SNAPW 8192u
+#define SNAPW 12288u
 #define PNODES 64u
 static uint32_t psnap[SNAPW];
 static uint32_t pnode_base[PNODES], pnode_off[PNODES]; static uint16_t pnode_first[PNODES], pnode_count[PNODES];
@@ -97,6 +120,34 @@ static void renorm(volatile uint32_t *now, const uint32_t *was, uint32_t done, u
     *used |= ((1u << n) - 1u) << i;
 }
 
+static int particles_restore(volatile uint32_t *map, void *out, int first, void *head, void *params, AnimFn anim) {
+    uint32_t node, n = 0, k = 0, i, j, words = map[1] / 4u;
+    int r;
+    for (node = *(volatile uint32_t *)((char *)head + 4); node && node != (uint32_t)(uintptr_t)head && n < PNODES;
+         node = *(volatile uint32_t *)(uintptr_t)(node + 4), n++) {
+        uint32_t base = *(volatile uint32_t *)(uintptr_t)(node + 8);
+        uint16_t pf = *(volatile uint16_t *)(uintptr_t)(node + 12), pc = *(volatile uint16_t *)(uintptr_t)(node + 14);
+        if (k + (uint32_t)pc * words > SNAPW || base < 0x08800000u || base >= 0x0A000000u) { ig_pfix[4]++; pc = 0; pnode_base[n] = 0; }
+        else pnode_base[n] = base;
+        pnode_first[n] = pf; pnode_count[n] = pc; pnode_off[n] = k;
+        for (i = 0; i < (uint32_t)pc * words; i++) psnap[k + i] = ((volatile uint32_t *)(uintptr_t)(base + map[1] * pf))[i];
+        k += (uint32_t)pc * words;
+    }
+    r = anim(out, first, head, params);
+    ig_pfix[2]++;
+    for (j = 0, node = *(volatile uint32_t *)((char *)head + 4); j < n && node && node != (uint32_t)(uintptr_t)head;
+         j++, node = *(volatile uint32_t *)(uintptr_t)(node + 4)) {
+        uint32_t base = pnode_base[j];
+        if (!base || *(volatile uint32_t *)(uintptr_t)(node + 8) != base) continue;
+        for (i = 0; i < (uint32_t)pnode_count[j] * words; i++)
+            ((volatile uint32_t *)(uintptr_t)(base + map[1] * pnode_first[j]))[i] = psnap[pnode_off[j] + i];
+        *(volatile uint16_t *)(uintptr_t)(node + 12) = pnode_first[j];
+        *(volatile uint16_t *)(uintptr_t)(node + 14) = pnode_count[j];
+        ig_pfix[3] += pnode_count[j]; map[4] += pnode_count[j];
+    }
+    return r;
+}
+
 int ig_particles(void *out, int first, void *head, void *params) {
     AnimFn anim = (AnimFn)(uintptr_t)ig_ptarget;
     volatile uint32_t *map = 0;
@@ -107,6 +158,13 @@ int ig_particles(void *out, int first, void *head, void *params) {
             if (ig_pmap[i][0] == ig_ptarget) { if (ig_pmap[i][2]) map = ig_pmap[i]; break; }
     if (!map || map[1] < 8u || map[1] > 128u || (map[1] & 3u)) return anim(out, first, head, params);
     words = map[1] / 4u;
+    /* Mode 2 (IG-v19, half-rate): on every second main update the animator still runs (it also emits the
+     * vertices, so particles stay drawn) but every record and the instance first/count are restored
+     * byte-exactly afterwards, so state advances at 30 Hz with no assumption about field types. */
+    if (map[2] == 2u) {
+        if (!(ig_upd & 1u)) { ig_pfix[2]++; return anim(out, first, head, params); }
+        return particles_restore(map, out, first, head, params, anim);
+    }
     for (node = *(volatile uint32_t *)((char *)head + 4); node && node != (uint32_t)(uintptr_t)head && n < PNODES;
          node = *(volatile uint32_t *)(uintptr_t)(node + 4), n++) {
         uint32_t base = *(volatile uint32_t *)(uintptr_t)(node + 8);

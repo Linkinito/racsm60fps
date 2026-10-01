@@ -39,6 +39,12 @@ PROBES = {
                      'a0Frames': [[4, 4], [10, 10], [30, 60], [60, 90]]}],
     'Lvl3Elevator': [{'name': 'progress', 'path': [0x54, 0x8], 'kind': 'f32', 'limit': 0.5,
                       'note': 'trip seconds = 1/activeRate if progress spans 0..1 (A0 Pokitaru trip measured 10 s)'}],
+    # Blaster (Blaster_Update 0x116A00, pvar = moby+0x58): refire cooldown pvar+4 (-= dt, reloaded on fire)
+    # and hold timer pvar+0xB4 (+= dt, re-arm past 0.3). Both only advance through P_Player_WeaponUpdate.
+    'Blaster': [{'name': 'cooldown', 'path': [0x58, 0x4], 'kind': 'f32', 'limit': 0.1},
+                {'name': 'holdTimer', 'path': [0x58, 0xB4], 'kind': 'f32', 'limit': 0.1}],
+    # Ryno (Ryno_Update 0x168C28): refire counter moby+0x70 = 24.0 on fire, -1.0 per call.
+    'Ryno': [{'name': 'refire70', 'path': [0x70], 'kind': 'f32', 'limit': 2.0}],
     'BoltCrankBolt': [{'name': 'framesLeft70', 'path': [0x70], 'kind': 'f32', 'limit': 2.0, 'rateA0': 30.0}],
     'Level01Boat': [{'name': 'fade70', 'path': [0x70], 'kind': 'f32', 'limit': 0.5, 'rateA0': 2.0}],
 }

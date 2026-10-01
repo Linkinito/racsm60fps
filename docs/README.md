@@ -11,6 +11,7 @@
 | [ROADMAP.md](ROADMAP.md) | Next steps |
 | [DECOMP_STATUS_2026-10-01.md](DECOMP_STATUS_2026-10-01.md) | Mass decompilation of LEVEL_01: pipeline, findings, limits |
 | [FIX_CATALOGUE_2026-10-01.md](FIX_CATALOGUE_2026-10-01.md) | Corrections ready for live testing and the test order |
+| [WHY_60FPS_IS_HARD.md](WHY_60FPS_IS_HARD.md) | The eight time domains of the engine and why no single global patch works (FR: [fr/POURQUOI_LE_60FPS_EST_DIFFICILE.md](fr/POURQUOI_LE_60FPS_EST_DIFFICILE.md)) |
 | [DECOMPILATION_FINDINGS.md](DECOMPILATION_FINDINGS.md) | All decompilation findings: engine map, fix families, plugins (FR: [fr/TROUVAILLES_DECOMPILATION.md](fr/TROUVAILLES_DECOMPILATION.md)) |
 | [../patches/experimental/enhancements/README.md](../patches/experimental/enhancements/README.md) | OCEnhance: optional camera/controls plugin |
 | [RUNTIME_GUIDE.md](RUNTIME_GUIDE.md) | How to switch corrections and use the probes live |

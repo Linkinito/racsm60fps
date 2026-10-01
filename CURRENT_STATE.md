@@ -68,6 +68,9 @@ Session 2026-10-02 log: research/live-tests/pokitaru/session-2026-10-02/SESSION-
 crabtimers, camera incl. 0x3634/0x37F8, frames30 HUD, springs, spawn, butterfly, OCE-v5; rejected particles-all).
 1. Restart PPSSPP first (grew to ~14 GB during debugging). Blaster: C1 halves fire rate (A0 4.2 vs C1 2.0
    shots/s, ammo-decrement meter); test `substepdt` (2 x delta into 0x39B74) with the meter; check Ryno too fast.
+1b. Built offline (untested): IG-v18 `physstep` (bolts + crate debris = 0x2832C, NOT particles), IG-v19
+   `particles-rate` (half-rate update, full-rate draw, byte-exact restore). Installed: IG-v19. Domain map:
+   docs/WHY_60FPS_IS_HARD.md. Water scroll: no writer in LEVEL_01 (likely EBOOT geometry).
 2. Per-particle work: crate debris 0x1A05F0, waterfall 0xDE23C, waves 0x7E810 (per-record callback at +0);
    find the waterfall water-scroll source; bolts flying to Ratchet; teleporter/help-box UI animations.
 3. TrainingBot timer list review before activation (same generator weakness as Crab).
