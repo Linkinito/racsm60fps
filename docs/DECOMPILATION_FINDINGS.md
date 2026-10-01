@@ -50,7 +50,7 @@ and rejected (judder, broken interactions); the work is therefore targeted, fami
 | Family | Mechanism found | Correction | Status |
 |---|---|---|---|
 | nav, nav2 | ground movers `0x2A8F0`, `0x2935C` add a per-call vector | asm stub halves the vector | owner-accepted (crabs) |
-| crab + timer-patches Crab | state timer +0x60 (count-up, threshold 27 at `0x2CF3C8`), 45 duration immediates | x2 | owner-accepted |
+| crab, crabtimers | state timer data+0x60 (19 reload sites; attack threshold 27 at `0x2CF3C8`) and cooldown data+0x64 = trunc(helper x 15.0) | x2 / 30.0 | `crab` owner-accepted; generated `timer-patches` Crab batch REJECTED by the GPT-6 audit (10 non-timer sites incl. shared lifecycle flags `0x6A48C/0x6A4A8`); reviewed `crabtimers` untested |
 | butterfly | speed/flap steps drawn at init (`0x2CEDA8..B4`), speed spring | halve, refit | owner-accepted (telemetry x1.00) |
 | cows | three movers `0x190D6C/0x191154/0x1913A4` | asm stubs | untested |
 | frametimers | 29 literal 1/30 timer steps (EnemyWave, Help, Teleporter, ...) | 1/60 | untested |

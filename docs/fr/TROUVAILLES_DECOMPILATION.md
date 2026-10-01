@@ -50,7 +50,7 @@ donc famille par famille.
 | Famille | Ce qui a été trouvé | Correction | État |
 |---|---|---|---|
 | nav, nav2 | déplacements au sol par vecteur fixe par appel | vecteur divisé par 2 | validé (crabes) |
-| crab + minuteries du crabe | minuterie d'état et seuil d'attaque 27, 45 durées | x2 | validé |
+| crab, crabtimers | minuterie d'état (19 rechargements) et seuil d'attaque 27 ; délai de récupération 15,0 x (1 à 1,3) | x2 / 30,0 | `crab` validé ; l'ancien lot de 29 instructions est REJETÉ par l'audit de GPT-6 (10 n'étaient pas des minuteries, dont des drapeaux partagés par toutes les entités) ; `crabtimers` révisé à tester |
 | butterfly | vitesse et battement d'ailes tirés à l'apparition, ressort | /2, réajusté | validé (mesure x1,00) |
 | cows | trois fonctions de déplacement (vaches mutantes, Agent of Doom) | /2 | à tester |
 | frametimers | 29 minuteries qui retirent 1/30 par appel | 1/60 | à tester |

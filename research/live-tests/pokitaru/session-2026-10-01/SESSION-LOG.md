@@ -23,3 +23,9 @@ Raw outputs (ignored): `raw/`. Evidence levels per docs/methodology/EVIDENCE_LEV
    untouched. Owner: butterflies normal speed, game stable.
 Open: crab stateTimer (+0x60) counts up; plugin records only upward reloads (durations not yet
 measured). Instance edits need a guarded tool (class record offset from decompilation + ranges).
+
+Post-session audit (GPT-6, `research/v2/crab-timer-audit-20261001/REPORT.md`): 10 of the 29 words written by
+`timer-patches.py --class Crab` in step 5 were not timers (animation id 15, a capacity check, entity flag ORs,
+including the shared lifecycle helper 0x6A48C/0x6A4A8 that affects every entity). Step 5's owner observation
+is therefore NOT acceptance of that batch; the session state was also contaminated by the step-6 incident.
+Reviewed replacement: `fixes.py --fix crabtimers` (19 reload sites + cooldown 15.0 -> 30.0), untested.

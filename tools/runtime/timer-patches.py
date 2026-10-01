@@ -4,6 +4,8 @@
 Spec: research/v2/decomp-summary/level01-timer-patch-spec.json (STATIC_CANDIDATE).
 Every site word is checked against its original (or patched) value before any write;
 CPU paused during writes; a JSON record is written. Works with or without C1.
+Crab activation is quarantined: its generated list contains non-timer sites.
+Status and restoration remain available. See research/v2/crab-timer-audit-20261001/REPORT.md.
 Usage: python tools/runtime/timer-patches.py --class Crab --target on|off|status --out <new dir>
 """
 import argparse, hashlib, importlib.util, json, time
@@ -14,11 +16,19 @@ spec = importlib.util.spec_from_file_location('pump_gate', REPO/'tools/runtime/p
 pg = importlib.util.module_from_spec(spec); spec.loader.exec_module(pg)
 SPEC = REPO/'research/v2/decomp-summary/level01-timer-patch-spec.json'
 
+def require_activation_review(cls, target):
+    """Reject a known-invalid batch before connecting to the emulator."""
+    if cls == 'Crab' and target == 'on':
+        raise ValueError('Crab timer activation is quarantined: 10 of 29 sites are not timers. '
+                         'Use status/off for inspection/restoration; a reviewed replacement is pending. '
+                         'See research/v2/crab-timer-audit-20261001/REPORT.md')
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument('--class', dest='cls', required=True); ap.add_argument('--target', choices=('on', 'off', 'status'), required=True)
     ap.add_argument('--out', type=Path, required=True); ap.add_argument('--port', type=int, default=60907)
     a = ap.parse_args()
+    require_activation_review(a.cls, a.target)
     sites = json.loads(SPEC.read_text(encoding='utf-8'))['classes'].get(a.cls)
     if not sites: raise SystemExit('no spec for class ' + a.cls)
     uniq = {s['site']: s for s in sites}

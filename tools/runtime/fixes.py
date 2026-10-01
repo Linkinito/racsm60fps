@@ -21,6 +21,7 @@ set of word writes; wrappers live in the plugin, data fixes are direct writes.
   crab      crab attack frame threshold 27 -> 54 (data RVA 0x2CF3C8)    [owner: timing OK]
   particles waterfall particle animator 0xDE23C half-step (walker jalr site 0x8CE54)
   pathanimals PathAnimal walk speed x0.5 (stub at 0x15DE70), turn spring refit and fall gravity (data)
+  crabtimers reviewed Crab state/cooldown reloads x2 (replaces the quarantined timer-patches Crab batch)
   butterfly Butterfly flap/speed steps halved, speed and turn springs refitted (+ timer-patches --class Butterfly)
   laserbeam LaserTracer beam fade in/out frames x2 and texture scroll steps halved
   spawn     particle density: continuous emitters (same call site on consecutive updates) get half their count
@@ -186,7 +187,14 @@ if _RAW.exists():
 DATA['bflap1'] = (0x2CEDA8, 0x3F555556, 0x3ED55556); DATA['bflap2'] = (0x2CEDAC, 0x3F955556, 0x3F155556)
 DATA['bspeed1'] = (0x2CEDB0, 0x3C23D70B, 0x3BA3D70B); DATA['bspeed2'] = (0x2CEDB4, 0x3D088889, 0x3C888889)
 DATA['bspringk'] = (0x2CEDC8, 0x3CA3D70A, _f2w(0.01256)); DATA['bspringd'] = (0x2CEDCC, 0x3E4CCCCD, _f2w(0.50025))
-ALIASES = {'butterfly': {'bflap1', 'bflap2', 'bspeed1', 'bspeed2', 'bspringk', 'bspringd', 'sp0x2ced8ck', 'sp0x2ced90d', 'sp0x2cedbck', 'sp0x2cedc0d'},
+# crabtimers: reviewed replacement for the quarantined `timer-patches.py --class Crab` batch (10 of its 29
+# sites were animation ids, a capacity check and entity/lifecycle flag ORs, see
+# research/v2/crab-timer-audit-20261001/REPORT.md): 19 reload sites of Crab data+0x60 x2 and the data+0x64
+# cooldown trunc(helper * 15.0) -> 30.0 (research/v2/crab-timer-audit-20261001/crab-timer-recipe-v2.json).
+CRABTIMERS = []
+for _r in json.loads((REPO/'research/v2/crab-timer-audit-20261001/crab-timer-recipe-v2.json').read_text(encoding='utf-8'))['sites']:
+    DATA['ct' + _r['site']] = (int(_r['site'], 16), int(_r['before'], 16), int(_r['after'], 16)); CRABTIMERS.append('ct' + _r['site'])
+ALIASES = {'crabtimers': set(CRABTIMERS), 'butterfly': {'bflap1', 'bflap2', 'bspeed1', 'bspeed2', 'bspringk', 'bspringd', 'sp0x2ced8ck', 'sp0x2ced90d', 'sp0x2cedbck', 'sp0x2cedc0d'},
            'laserbeam': set(LASERBEAM), 'spawn': {'spawn0', 'spawn1', 'telemetry'}, 'springs': set(SPRINGS), 'luna': {'lunastep', 'lunaidle1', 'lunaidle2', 'sp0x2d4e94k', 'sp0x2d4e98d', 'sp0x2d4d5ck', 'sp0x2d4d60d'},
            'clock': {'clock', 'telemetry'}, 'waterfall': {'wfparity', 'wfscroll1', 'wfscroll2'}, 'phases': set(PHASES), 'pathanimals': {'pathanimal', 'pathgrav', 'sp0x2d5b34k', 'sp0x2d5b38d'}, 'crank': {'crankframes', 'crankdrop'},
            'particles-all': {'particles-all', 'particles'}}

@@ -1,0 +1,18 @@
+{
+  "status": "STATIC_AUDIT_NO_GAMEPLAY_PARITY",
+  "functions": {},
+  "addresses": {
+    "0x124058": "REJECTED timer patch: linked wave-manager byte count compared with capacity12. Doubling this is not duration scaling. Audit20261001.",
+    "0x1276d0": "REJECTED timer patch: animation identifier15 passed to helper0x6AD50; not a duration. Audit20261001.",
+    "0x12775c": "REJECTED timer patch: animation identifier15 passed to helper0x6AD50; not a duration. Audit20261001.",
+    "0x127888": "REJECTED timer patch: animation identifier15 passed to helper0x6AD50; not a duration. Audit20261001.",
+    "0x127914": "REJECTED timer patch: animation identity comparison with helper0x6AED0 result; not a duration. Audit20261001.",
+    "0x12792c": "REJECTED timer patch: animation identifier15 passed to helper0x6AD50; not a duration. Audit20261001.",
+    "0x127a24": "REJECTED timer patch: OR bit8 into direct entity+0x64 flags. Distinct from indirect Crab data+0x64 cooldown. Audit20261001.",
+    "0x137ba4": "REJECTED timer patch: OR bit16 into registered entity+0x64 flags. Wave registration, not a Crab timer. Audit20261001.",
+    "0x6a48c": "REJECTED timer patch: OR bits1/2 into entity+0x64 lifecycle flags in shared helper. Not a timer. Audit20261001.",
+    "0x6a4a8": "REJECTED timer patch: OR bits1/2 into entity+0x64 lifecycle flags in shared helper. Not a timer. Audit20261001.",
+    "0x127560": "OBSERVED cooldown reload to indirect Crab data+0x64: trunc(helper0x2172C*15), statically15/16/18/19. Helper is a selector, not random. Integer-immediate batch misses this. Live cadence UNKNOWN. Audit20261001.",
+    "0x127950": "OBSERVED reset of indirect Crab data+0x60 on state-D entry (state identity corroborated by recovered switch). Distinct from cooldown+0x64. Audit20261001."
+  }
+}

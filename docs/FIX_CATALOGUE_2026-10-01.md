@@ -1,5 +1,12 @@
 # Fix catalogue — ready for live testing (2026-10-01)
 
+**Audit correction:** the generated Crab timer batch is REJECTED and activation
+is quarantined: ten of its 29 unique sites change animation identity, object
+flags or wave capacity. Status/restoration remain available. The earlier owner
+observation is retained, not generalized to acceptance of the batch. See
+[the audit](../research/v2/crab-timer-audit-20261001/REPORT.md). Other classes
+from the same generator require explicit dataflow review before live use.
+
 All entries are experimental and derived statically from the full LEVEL_01
 decompilation, except where "owner-accepted" is stated. None is a measured
 parity result. Apply them with `tools/runtime/fixes.py` (InterpGate **IG-v16f**
@@ -13,7 +20,8 @@ installed as the only plugin; the tool refuses another loaded build) or
 | `nav2` | same for the second navigation move `0x2935C` (site `0x29164`) | same | untested |
 | `cows` | same for `0x190D6C` / `0x191154` / `0x1913A4` (sites `0x190388`, `0x1915F4`, `0x19163C`) | MutantCow, MutantMadCow, AgentOfDoom | untested |
 | `crab` | attack threshold data `0x2CF3C8` 27 -> 54 | Crab | owner-accepted |
-| `timer-patches.py --class Crab` | all crab state durations x2 (45 immediates: `rand % 45 + 45`, `% 60 + 30/90/120`, `% 30 + 90`, `4`) | Crab | owner-accepted 2026-10-01 together with `crab` (attack timing OK) |
+| `timer-patches.py --class Crab` | generated 45 rows / 29 unique sites; 19 reload candidates, 10 non-timer sites; misses float-derived cooldown +0x64 | Crab | **REJECTED batch; activation blocked**. Historical attack-rhythm observation retained; replacement and parity measurements pending |
+| `crabtimers` | reviewed replacement (`research/scripts/crab-timer-recipe.py` -> `crab-timer-audit-20261001/crab-timer-recipe-v2.json`): the 19 corroborated data+0x60 reload sites x2 (random `rand%m+o` -> `rand%2m+2o`, same range in seconds) and the data+0x64 cooldown `trunc(helper*15.0)` -> 30.0 at `0x12754C`; the ten rejected sites stay original | Crab | untested (needs a clean boot, A0 baseline, then `--fix nav,nav2,crab,crabtimers`) |
 | `timer-patches.py --class TrainingBot` | state durations x2 (30/60, 60/90 frames, threshold 53) | TrainingBot | untested |
 | `frametimers` | 29 hard-coded `1/30` timer steps -> `1/60` (EnemyWave state 1 `0x137F5C`, Help `0x150F0C`, Teleporter `0x64FA0`, ElectroshockWave, AgentsRocket, Polarizer, ShieldCharger, TMRobotHeadB, shots) | 9+ classes and engine paths | untested (subset of the rejected F1) |
 | `laser` | LaserTracer adds 1.25 (`0x149828`, beam active) and 1.5 (`0x145568`) to field `+0x68` per call; both data constants (`0x2D2D68`, `0x2D2D80`, LaserTracer-only) halved | LaserTracer | untested; role of `+0x68` (drain accumulator) INFERRED |
@@ -68,7 +76,8 @@ laser beam (laserbeam), springs, float clock users `0x104C80`/`0x8341C` (clock, 
 EnemyWave `+0x15C` is an enemy count, not a timer (no fix). Left on the game counter on purpose:
 `0x54EFC` (stamp read outside LEVEL_01?), `0x77098`/`0x783B0` (cache last-use stamps), `0x106698`
 (object spawn stamp, readers unknown). `pathturn` is superseded by the spring refit.
-Remaining static work: other levels (port by signature), FRONTEND/EBOOT systems outside LEVEL_01.
+Remaining static work: reopen LEVEL_01 timer dataflow review after the Crab batch
+rejection; other levels and FRONTEND/EBOOT remain pending. Do not port the rejected batch.
 Rejected (static): pickups `0x7248` is a look-at matrix builder (ArmorPickup/TitaniumBolt camera),
 not a displacement integrator.
 
@@ -96,11 +105,14 @@ Ratios near 1.0 (OK) mean the measured rate in game seconds matches A0; ~2.0 mea
 
 ## Suggested owner test order (Pokitaru)
 
-1. IG-v14 is installed (`PSP/PLUGINS/InterpGate/patch.prx`, sha256 `d2e65872...`).
-   Record an A0 baseline with the monitor (above) near the crabs.
+1. The latest owner session used IG-v16f. Check the actual loaded build and plugin
+   enablement before testing; later owner work disabled InterpGate. Record a clean
+   A0 baseline with the monitor (above) near the crabs.
 2. `fixes.py --target C1 --fix nav,nav2` -> crabs and training bots move normally?
-3. Add `timer-patches.py --class Crab --target on` -> crab idle/attack/recovery rhythm normal?
-4. `timer-patches.py --class TrainingBot --target on` near the training area.
+3. From a clean boot: `fixes.py --target C1 --fix nav,nav2,crab,crabtimers,telemetry` (the
+   quarantined `timer-patches.py --class Crab` batch stays off). Attack rhythm, recovery and
+   cooldown as in A0?
+4. Review TrainingBot's generated list before enabling it near the training area.
 5. `fixes.py --target C1 --fix nav,nav2,frametimers` -> Help reminders, teleporter,
    enemy waves (delay between waves) at original pace? Anything slower than A0?
 6. `fixes.py --target C1 --fix nav,nav2,cows` where mutant cows / Agent of Doom appear.

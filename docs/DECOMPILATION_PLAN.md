@@ -3,11 +3,21 @@
 Goal: an annotated Ghidra project of LEVEL_01 that makes fixed-step logic readable
 and searchable, not a recompilable decompilation. Outputs stay local (copyright).
 
-Status: the first bounded annotation/decompilation pilot is implemented and
-TESTED for pipeline execution/preservation. Ten functions and two callsites are
-covered; complete Pokitaru timing understanding and gameplay parity remain
-UNKNOWN. Evidence: research/v2/targeted-decompilation-pilot-20260930/REPORT.md.
-Reproduction: research/scripts/ghidra/README.md.
+Current status (2026-10-01): Claude's separate local mass corpus reports
+5,045/5,045 functions decompiled; see docs/DECOMP_STATUS_2026-10-01.md. The
+bounded pilot subsequently passed reopening/preservation with 15 functions.
+Complete timing understanding and gameplay parity remain UNKNOWN.
+
+Active task: research/v2/crab-timer-audit-20261001/REPORT.md. The generated Crab
+29-word batch contains ten non-timer sites and its activation is quarantined.
+Trace the distinct +0x60/+0x64 lifecycles, replace the rejected batch with an
+explicit reviewed recipe, then measure from clean A0/C runs. This finding
+reopens the claim that LEVEL_01 static timing review is closed. Audit other
+classes made by the same generator before applying/porting them.
+
+Historical pilot details below remain useful method/provenance evidence:
+research/v2/targeted-decompilation-pilot-20260930/REPORT.md and
+research/scripts/ghidra/README.md. They are not the current coverage inventory.
 
 Existing assets (owner machine): Ghidra 12.0.4 with the Allegrex extension
 (`AppData/Roaming/ghidra/ghidra_12.0.4_PUBLIC/Extensions/ghidra-allegrex`), Java 26.0.1, project
