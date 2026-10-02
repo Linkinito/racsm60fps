@@ -1,44 +1,53 @@
-# Parent orchestration policy
+# Research ownership and backup policy
 
-## Scope and model policy
+## Scope and ownership
 
-Goal: maximize validated experimental output while minimizing parent quota.
-Parent: GPT-6 Astra, Medium reasoning. Project configuration expresses this default;
-an already-running task may retain its host-selected model. Do not silently claim
-a live model switch. This is the final bounded orchestration refactor: no recursive
-architecture improvement unless a concrete experiment proves it necessary.
+Goal: faithful 30 FPS -> 60 FPS behavioral parity with reproducible evidence.
+Owner decision, 2026-10-03, supersedes the former mandatory routing hierarchy:
+GPT owns function decompilation and Ghidra annotations; Claude is the primary
+in-game reference and owns gameplay experiments; DeepSeek is the backup.
+This changes responsibilities, not the running model or installed configuration.
+Do not claim a live model switch or rebuild the existing orchestration tools.
 Research requirements remain in [RESEARCH_POLICY.md](RESEARCH_POLICY.md);
 evidence meanings in [EVIDENCE_LEVELS.md](EVIDENCE_LEVELS.md).
 
-## Routing hierarchy and parent research gate
+## Primary responsibilities and backup gate
 
-Apply this gate before every substantial parent research question, in order:
+Use the following division of work:
 
 1. **Deterministic script:** hashes, counts, diffs, numeric aggregation, trace
    parsing, status checks, file existence and repetitive transformations. Do not
    spend an LLM call on an answer a script can provide.
-2. **Luna:** bounded read-only work, normally 1–5 relevant files: targeted repository
-   or source lookup, symbols/calls, exact API schemas, compact-result comparison,
-   classification, summaries of already-selected material, PPSSPP cache lookup.
-   Use project roles `luna_reader` / `luna_triage`, GPT-5.6 Luna, Medium. Prefer one;
-   maximum two concurrent native workers. Do not automatically launch both roles.
-3. **External DeepSeek:** broad/exhaustive repository or static mapping, cross-module
-   or cross-version analysis, large MIPS/dataflow questions, provenance reconstruction,
-   independent falsification, and work that must continue after parent quota loss.
-   Select only required Explorer/Mapper/Skeptic roles. The full trio requires a
-   genuinely multi-domain or consequential question and a recorded justification.
-4. **Astra parent:** current live PPSSPP control, RAM/register/breakpoint work,
-   savestate/input orchestration, A/B/C execution and design, next discriminating
-   test, material conflicts, causal synthesis, evidence promotion/rejection and
-   final V2 decisions. Capability alone does not justify retaining a lookup.
+2. **GPT:** targeted static analysis, function decompilation, call/dataflow analysis,
+   and Ghidra names, types and comments. Preserve binary/address provenance and
+   mark tentative interpretations. Prepare concrete hypotheses and discriminating
+   test requests from static findings; reconcile returned measurements with code.
+3. **Claude:** primary live PPSSPP control, RAM/register/breakpoint work,
+   savestate/input orchestration, gameplay changes within authorized experiments,
+   A/B/C test design/execution and reproducible measurements. Record environment,
+   inputs, patches, contradictions and missing evidence so GPT can use the results.
+4. **DeepSeek backup:** use only for a recorded blocker, primary unavailability
+   (including quota loss), or a justified independent second opinion. Existing
+   detached read-only Explorer/Mapper/Skeptic roles remain available. Select only
+   required scopes; the full trio requires a recorded justification. Broad mapping
+   alone no longer requires automatic delegation to DeepSeek.
+
+Luna remains optional bounded read-only support, normally 1–5 selected files,
+using `luna_reader` / `luna_triage`. Prefer one; maximum two concurrent native
+workers. GPT does not have to delegate its decompilation or annotation work.
 
 Luna never controls PPSSPP, changes gameplay or files, declares TESTED, performs
-exhaustive research, or duplicates the parent. After a worker owns a question,
-Astra must not independently redo it. Parent arbitration may inspect the exact
+exhaustive research, or duplicates the primary. After a worker owns a question,
+GPT must not independently redo it. Arbitration may inspect the exact
 evidence needed to resolve a material conflict; this is not a parallel remapping.
 Luna is not a replacement for the detached DeepSeek quota failsafe.
+Neither a static interpretation, an annotation, a working patch nor model
+agreement establishes gameplay parity. Evidence promotion requires the project
+criteria regardless of which primary produced the evidence.
+Assign file/project ownership and isolate concurrent source or Ghidra project
+writes; live gameplay ownership does not authorize unrelated repository changes.
 
-## Project Luna configuration
+## Existing optional-support configuration
 
 `.codex/config.toml` declares the parent default and enables native agents with
 `agents.max_concurrent_threads_per_session = 2`. The two role entries refer to
@@ -47,6 +56,8 @@ Luna is not a replacement for the detached DeepSeek quota failsafe.
 Existing unrelated roles are preserved. Role prompts forbid further delegation,
 live emulator/app access, file writes and evidence promotion.
 
+The existing model/support defaults are preserved; they do not override the new
+GPT/Claude/DeepSeek ownership or make Luna/DeepSeek mandatory.
 These are project defaults for a trusted project, not a claim that a running
 desktop task hot-reloaded its model or capacity. Reopen/start a task to load the
 new configuration; no manual TOML editing or PPSSPP setup change is required.
@@ -76,24 +87,26 @@ NEXT ACTION. Do not turn this exception into another architecture refactor.
 Keep the existing internal PPSSPP copy as a persistent read-only source cache.
 Without explicit owner authorization, do not reclone, rebuild, reinstall, duplicate
 the environment, broadly reindex, upgrade or downgrade it. Default source lookup
-is Luna. Astra may inspect one or two exact files/functions only for an already
-precise question that immediately unblocks the live experiment. Record source
+is handled by GPT for a precise static question, with optional bounded Luna
+support. Inspect only relevant files/functions and record source
 version/hash; cached 1.19.3 material is not proof of active 1.20.4 semantics.
 
 ## Thin startup / reading budget
 
 Read AGENTS.md, CURRENT_STATE.md (preferred <=4096 bytes, hard limit8192), then
 only its active task. Verify Git branch/HEAD cheaply. Allow at most THREE additional
-substantial targeted reads before routing the research question. If a DeepSeek
+substantial targeted reads before narrowing the question or using bounded support.
+If a DeepSeek backup
 mission completed, read PARENT_HANDOFF.md first after startup. Full worker reports
 and historical corpus are exception-only reads, never routine resume material.
 Use research/EVIDENCE_INDEX.md to select precise sections. Do not routinely read
 inventories, old experiments, full reports or V1 history. Parse raw traces
 deterministically before review. Reference evidence; do not copy it into state.
 
-## Launch early, never poll
+## Backup launch, never poll
 
-For broad research: define a bounded question and only the required worker scopes; persist
+Once the backup gate is met, record why DeepSeek is needed, define a bounded
+question and only the required worker scopes; persist
 CURRENT_STATE with planned mission ID; launch detached workers early; record the
 mission; do useful independent work or end. Launcher snapshots parent state
 before any child starts and refuses a checkpoint missing the mission ID.

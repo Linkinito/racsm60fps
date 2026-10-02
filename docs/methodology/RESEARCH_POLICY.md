@@ -35,16 +35,16 @@ materially incomplete, unless explicitly requested by the project owner.
 
 ---
 
-## Investigation escalation chain
+## Investigation ownership and backup
 
-The default investigation chain is:
+Owner decision, 2026-10-03, replaces the former mandatory routing chain:
 
-1. The parent orchestrator defines the technical question.
+1. Define the technical question and its static/live ownership.
 2. Deterministic tools answer hashes/counts/diffs/trace parsing/status first.
-3. Bounded read-only lookups go to Luna; broad mapping/provenance/falsification goes to only the required detached DeepSeek roles. Follow ORCHESTRATOR_POLICY.md before parent research.
-4. A DeepSeek skeptical reviewer should independently challenge important hypotheses.
-5. The parent orchestrator reconciles the findings.
-6. Current parent model policy is GPT-6 Astra, Medium; reserve reasoning for arbitration and experiment design.
+3. GPT owns function decompilation, static analysis and Ghidra annotations directly. Luna is optional bounded read-only support.
+4. Claude is the primary in-game reference and owns gameplay experiments, live PPSSPP work and reproducible A/B/C measurements.
+5. GPT reconciles static findings with Claude's documented measurements; preserve contradictions and uncertainty.
+6. DeepSeek is the backup for a recorded blocker, unavailable primary or justified independent second opinion. Follow ORCHESTRATOR_POLICY.md; no automatic mapping or skeptical-review mission is required.
 7. No model consensus constitutes validation.
 8. Important gameplay claims ultimately require reproducible evidence or controlled testing.
 
@@ -156,7 +156,25 @@ to:
 
 ## Agent roles
 
+### Static analysis and Ghidra primary — GPT
+
+- decompile functions and analyze calls/dataflow;
+- annotate Ghidra names, types and comments with provenance;
+- distinguish observed code behavior from inferred gameplay meaning;
+- prepare bounded test requests and reconcile live results with static evidence.
+
+### In-game primary — Claude
+
+- control PPSSPP and execute authorized gameplay experiments;
+- design and run reproducible A/B/C comparisons;
+- preserve environment, inputs, patch provenance and contradictory results;
+- supply measurements needed to assess static hypotheses and gameplay parity.
+
+The roles share evidence criteria; neither role alone establishes parity.
+
 ### Explorer
+
+Backup role only; apply the DeepSeek backup gate before launch.
 
 Typical model:
 - DeepSeek Flash
@@ -180,6 +198,8 @@ Explorer conclusions enter the project as research findings, not validated facts
 
 ### Independent reviewer
 
+Backup role only; record why an independent second opinion is needed.
+
 Typical model:
 - DeepSeek Flash in an independent context.
 
@@ -195,8 +215,8 @@ Whenever possible, the reviewer should receive raw evidence rather than the firs
 
 ### Technical reviewer
 
-Current parent model:
-- GPT-6 Astra, Medium.
+Primary:
+- GPT, working from static evidence and Claude's documented live measurements.
 
 Purpose:
 - investigate contradictions;
@@ -212,7 +232,8 @@ The technical reviewer should actively search for reasons a proposed conclusion 
 
 ### Expensive architectural analysis
 
-The current parent is already Astra; this is a reasoning-scope gate, not a requirement for another model call.
+This is a reasoning-scope gate, not a requirement for another model call or a
+change of primary ownership.
 
 Use only when:
 - lower-cost agents disagree on an important issue;
@@ -221,7 +242,7 @@ Use only when:
 - reverse engineering requires a substantial conceptual leap;
 - a blocking issue remains unresolved after normal investigation.
 
-Astra should not routinely reread bulk repository content that can be summarized or filtered beforehand.
+GPT should not routinely reread bulk repository content that can be summarized or filtered beforehand.
 
 ---
 

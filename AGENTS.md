@@ -26,8 +26,9 @@ CURRENT_STATE is a checkpoint, not a history log. Verify actual Git HEAD on resu
 - Experimental patches: patches/experimental/. Validated: patches/validated/
   only after reproducibility, causal understanding, regression checks, documented
   evidence and environment. Prefer root causes; preserve superseded fixes.
-- Never expose secrets in prompts, files, logs or reports. External workers are
-  read-only. No concurrent source edits without isolation. Preserve original
+- Never expose secrets in prompts, files, logs or reports. Detached research
+  workers are read-only; Claude owns authorized live gameplay experiments.
+  No concurrent source edits without isolation. Preserve original
   game assets; modify only for explicitly authorized experiments.
 - Commit logical steps separately; separate infrastructure from research.
 - GitHub publication is curated: publish development progress and critical
@@ -38,23 +39,31 @@ CURRENT_STATE is a checkpoint, not a history log. Verify actual Git HEAD on resu
   memory captures, disassembly listings, string dumps, zips of those.
   v2-research is local-only; only main is public. docs/PUBLICATION_POLICY.md.
 
-## Delegation and reading budget
-Parent: GPT-6 Astra, Medium. Route before substantial research:
-deterministic script -> read-only Luna for bounded <=5-file lookup/triage ->
-detached DeepSeek for broad mapping/provenance/falsification -> Astra for live
-PPSSPP, experiment design/execution, causal arbitration and evidence decisions.
-Prefer one Luna; maximum two native workers. Use only required DeepSeek roles;
-justify the full trio. No duplicated investigation after delegation.
+## Research ownership and reading budget
+Owner decision, 2026-10-03: GPT owns function decompilation and Ghidra annotations;
+Claude is the primary in-game reference and owns gameplay experiments, PPSSPP
+control and reproducible A/B/C measurements. DeepSeek is the backup, not a routine
+stage. Use it for an explicit blocker, unavailable primary or justified second
+opinion; record the reason and use only required read-only roles.
+Use deterministic tools for mechanical work. GPT handles its static research
+directly; Luna is optional bounded read-only support, not a mandatory route.
+Prefer one native worker if needed; maximum two. No duplicated investigation
+after delegation. No automatic DeepSeek trio.
+Static findings and live measurements must retain provenance and uncertainty;
+neither role alone nor model agreement establishes gameplay parity.
 Startup: AGENTS.md -> CURRENT_STATE.md -> active task; at most THREE additional
-substantial targeted reads before routing. Completed mission: PARENT_HANDOFF first;
+substantial targeted reads before narrowing the question or using bounded support.
+Completed backup mission: PARENT_HANDOFF first;
 full reports/history only for a concrete exception. Never repeatedly poll workers.
 Research sessions must yield experimental evidence, a narrowed hypothesis,
 validated protocol or precise blocker; preparation alone needs a hard blocker.
 At most one substantial tooling detour per experiment; persist/delegate more.
 Keep PPSSPP source cache read-only; no reclone/rebuild/reinstall/environment
-duplication/reindex/version change without owner authorization. Default lookup: Luna.
-This is the final orchestration refactor; revisit only if a concrete experiment
-proves necessity. Details and quota failsafe: docs/methodology/ORCHESTRATOR_POLICY.md.
+duplication/reindex/version change without owner authorization. GPT may perform
+targeted source lookup for its static question; bounded support is optional.
+Preserve the existing tools/configuration; this ownership change does not require
+another infrastructure refactor. Details and backup failsafe:
+docs/methodology/ORCHESTRATOR_POLICY.md.
 
 ## Language and detailed policy
 Owner communication: simple French. Persistent artifacts, code comments, reports,
