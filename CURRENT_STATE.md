@@ -23,6 +23,15 @@ ray particles 0xC9ED8 (life from table 0x2CE3E8 = 9/14, shared with record age c
 IG-v24 "30 Hz island" built+installed (blitzhalf class update at 30 Hz, raycb, segrate mode 3,
 original table) but NOT validly measured: runs 85-91 had PPSSPP in background (fps 25..200) -> INVALID.
 
+## Static, end of session (INFERRED, measure before relying on it)
+
+- Equipped weapon updates run in the substep loop: per-call logic there is already correct at 60 Hz.
+  Removed from groups: frametimers 0x16D014 (ShieldCharger), frames30 0x11A1E0 (BlitzGun) and the three
+  mixed-context Crossbow sites. `laser2`, `laserfadein`, `laserfadeout` are probable double corrections.
+- Predictions for the 10 unmeasured weapons: research/v2/weapons-static-20261002/NOTES.md
+  (weapondt needed: Bombglove, BeeMineGlove, Mootator; projectiles 2x fast: AgentOfDoom, BeeMine,
+  ShockRocketShot, SuckCannonComet, NapalmBubble; rays: ShieldChargerBolt, CrossbowShot).
+
 ## Environment
 
 PPSSPP 1.20.4 Vulkan restarted by Claude (was 2.8 GB); InterpGate IG-v24 installed

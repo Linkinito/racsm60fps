@@ -104,13 +104,19 @@ if _RAW.exists():
 # only from the player substep loop body (0x3C88C, 0x44ED8, 0x4A4F0, 0x570F0). The body ran twice per A0
 # frame, so 60 calls/s in A0 and in C1: already correct, halving them makes them 2x slow (0x4A4F0 gates the
 # fire-enable bit 0x95C&0x20 on player timer +0x138). Kept as individual keys, removed from the group.
-SUBSTEP_FT = {0x3E170, 0x3EB14, 0x40824, 0x4085C, 0x40894, 0x45284, 0x4556C, 0x4AC5C, 0x575EC, 0x57624}
+SUBSTEP_FT = {0x3E170, 0x3EB14, 0x40824, 0x4085C, 0x40894, 0x45284, 0x4556C, 0x4AC5C, 0x575EC, 0x57624,
+              0x16D014}   # ShieldCharger_Update: equipped weapon update runs in the substep loop (2026-10-02b)
 FRAMETIMERS = [k for k in DATA if k.startswith('ft0x') and DATA[k][0] not in SUBSTEP_FT]
 # frames30: `lui rX,0x41F0` (30.0) used to convert seconds/sixtieths into 30 Hz frame
 # counts or per-frame rates -> 60.0 (research/v2/decomp-summary/level01-frames30-sites.json).
 for _r in json.loads((REPO/'research/v2/decomp-summary/level01-frames30-sites.json').read_text(encoding='utf-8'))['sites']:
     _w = int(_r['before'], 16); DATA['f30' + _r['site']] = (int(_r['site'], 16), _w, (_w & 0xFFFF0000) | 0x4270)
-FRAMES30 = [k for k in DATA if k.startswith('f300x')]
+# Context exclusion (research/v2/weapons-static-20261002/NOTES.md): 0x11A1E0 is in 0x11A178, called only by
+# BlitzGun_Update (equipped weapon update = player substep loop, already correct at 60 Hz); the three Crossbow
+# sites are in 0x12C01C, called by CrossbowGun_Update (substep) AND CrossbowShot_Update (pump 1): mixed context,
+# one word cannot fit both. Kept as individual keys, removed from the group.
+FRAMES30_EXCLUDED = {0x11A1E0, 0x12C8E8, 0x12CA00, 0x12CBCC}
+FRAMES30 = [k for k in DATA if k.startswith('f300x') and DATA[k][0] not in FRAMES30_EXCLUDED]
 # age70: entity age counter +0x70 += 1.0 per call -> 0.5 (projectiles/flying cars; one 1.0 load per function)
 for _r in json.loads((REPO/'research/v2/decomp-summary/level01-age70-sites.json').read_text(encoding='utf-8'))['sites']:
     _w = int(_r['before'], 16); DATA['age' + _r['site']] = (int(_r['site'], 16), _w, (_w & 0xFFFF0000) | 0x3F00)

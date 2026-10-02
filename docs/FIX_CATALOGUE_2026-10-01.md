@@ -25,6 +25,13 @@ IG-v20 animlat, IG-v21/22 rayhalf, IG-v23 particle mode 3 (`segrate`), IG-v24 30
 The fix tool rewrites the preceding branch after a delay-slot edit (PPSSPP JIT); earlier tests of
 delay-slot sites (weapondt, substepdt, 3 crabtimers words, frames30 0x14F218, frametimers 0x16D014,
 lunaidle1, k30calls 0x17A6D0, tbtimers 0x18531C) may not have been active.
+**Weapon-context check (static, 2026-10-02 end):** the equipped weapon's update runs in the player substep
+loop (already 60 calls/s in A0 and C1). Fix sites only reached from weapon updates: `laser2`, `laserfadein`,
+`laserfadeout` (LaserTracer weapon functions) are probably double corrections, measure before use;
+`ft0x16d014` (ShieldCharger) and `f300x11a1e0` (BlitzGun) removed from their groups; Crossbow frames30
+sites are mixed-context (weapon + projectile), removed from the group. Spawn-time values handed to
+pump-1 projectiles (`bshot_speed`, `rr_speed`) stay valid (measured). Details:
+research/v2/weapons-static-20261002/ (local research branch).
 Suggested order: `domain8` (Blaster meter), `teleporterfx`, `k30calls` (crate pickups), `skyrot`.
 
 All entries are experimental and derived statically from the full LEVEL_01
