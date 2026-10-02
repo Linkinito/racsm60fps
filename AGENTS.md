@@ -9,6 +9,12 @@ ends, update CURRENT_STATE.md: durable findings, changed/rejected hypotheses,
 blockers, exact NEXT ACTION and exact next-session files. Prefer <=4 KB; max8 KB.
 CURRENT_STATE is a checkpoint, not a history log. Verify actual Git HEAD on resume.
 
+Owner quota rule, 2026-10-03: check the account's remaining five-hour Codex quota
+at session checkpoints. At approximately10% remaining, stop research, summarize
+the work, update the checkpoint and relevant documents, commit logical steps,
+and publish a curated project-authored file allowlist to GitHub main. This does
+not authorize bulk publication of v2-research or any game-derived raw evidence.
+
 ## Non-negotiable project rules
 - Priority 0: original 30 FPS -> faithful 60 FPS behavioral parity (UCES00420).
   No silent rebalancing or optional Priority 2 features. Scope details:

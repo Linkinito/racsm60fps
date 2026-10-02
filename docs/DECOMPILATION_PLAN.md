@@ -38,7 +38,8 @@ The Downloads path in the original draft was the separate extension distribution
      types only after offsets/layout are established by code/runtime evidence;
    - known engine functions: main update 0x1517C, pump 1 0x6B7F4, pump 2 0x6E6D4,
      player 0x2FFF0/0x2FB8C, navigation 0x28FFC..0x2A8F0, animation 0x76448/0x76AA4,
-     particles 0x8CC18 + animators 0x7E810/0xDE23C/0xDE8A8, health 0x38700/0x312AC,
+     particles 0x8CC18 + animators 0x7E810/0xDE23C/0xDE8A8,
+     damage receiver 0x38540 (health store at internal site0x38700), health getter0x312AC,
      shrapnel 0x191D7C, animated displacement 0x6C318;
    - source-path strings -> candidate namespaces (EFFECTS, ENGINE, ...), after
      binding their references; unimplemented in the first pilot.
