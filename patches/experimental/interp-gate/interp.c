@@ -74,6 +74,55 @@ void ig_phys(float f12, float f13, uint8_t *rec, int *q, float *pos, void *a3, f
     *life = halve(l, *life); *tim = halve(t, *tim);
 }
 
+/* Animation end-event latency (IG-v20). LEVEL_01 0x76BCC (f12 step, a0 channel, a1, a2) advances an
+ * animation channel once per main update (callers 0x785B8/0x78618/0x78658): time += step; when
+ * length < time (strict) it sets channel+0x20 bit 4 and clamps (non-looping) or wraps (looping). Readers
+ * (player state machine, weapons, entities) run earlier in the next update and consume bit 4, so a
+ * non-looping end is seen ceil(L/step)+2 updates after the start: 15 frames in A0 for the Ryno shot
+ * animation (L = 13/30), 28 at 60 Hz instead of 30 (TESTED 2026-10-02b). For non-looping channels the
+ * wrapper withholds a newly raised bit 4 for ig_anim[3] extra calls (default 2 at 60 Hz) while the pose
+ * stays clamped at the end, which restores the A0 latency of 2/30 s. Looping channels are untouched.
+ * ig_anim: [0] enable, [1] original address, [2] events delayed, [3] extra calls (0 = 2),
+ *          [4] table overflows (event passed undelayed), [5] events released. */
+typedef void (*AnimAdvFn)(float, uint8_t *, void *, void *);
+volatile uint32_t ig_anim[6] = {0u, 0u, 0u, 0u, 0u, 0u};
+#define AHOLD 32
+static struct { uint8_t *ch; uint8_t *seq; uint32_t left; } ahold[AHOLD];
+
+void ig_animadv(float step, uint8_t *ch, void *a1, void *a2) {
+    AnimAdvFn f = (AnimAdvFn)(uintptr_t)ig_anim[1];
+    uint32_t before, after, extra;
+    uint8_t *seq;
+    int k, freek = -1, loops;
+    if (!ig_anim[0] || !ch) { f(step, ch, a1, a2); return; }
+    before = *(volatile uint32_t *)(ch + 0x20);
+    seq = *(uint8_t **)(ch + 4);
+    loops = (before & 1u) || (!(before & 2u) && seq && (*(uint16_t *)(seq + 0x2c) & 2u));
+    f(step, ch, a1, a2);
+    if (loops || !seq) return;
+    after = *(volatile uint32_t *)(ch + 0x20);
+    for (k = 0; k < AHOLD; k++) {
+        if (ahold[k].ch == ch && ahold[k].seq != seq) ahold[k].ch = 0;   /* new animation on the channel */
+        if (ahold[k].ch == ch) break;
+        if (!ahold[k].ch && freek < 0) freek = k;
+    }
+    if ((before & 4u) || !(after & 4u)) {             /* no newly raised end event this call */
+        if (k < AHOLD && !(after & 4u) && *(float *)(ch + 8) < *(float *)(seq + 0x28)) ahold[k].ch = 0;
+        return;
+    }
+    extra = ig_anim[3] ? ig_anim[3] : 2u;
+    if (k == AHOLD) {
+        if (freek < 0) { ig_anim[4]++; return; }
+        k = freek; ahold[k].ch = ch; ahold[k].seq = seq; ahold[k].left = extra; ig_anim[2]++;
+    }
+    if (ahold[k].left) {
+        ahold[k].left--;
+        *(volatile uint32_t *)(ch + 0x20) = after & ~4u;  /* withhold; time stays clamped at the end */
+        return;
+    }
+    ahold[k].ch = 0; ig_anim[5]++;                     /* release the event now */
+}
+
 /* Generic particle animator half-step (IG-v13; walker site 0x8CE54 `jalr t0` ->
  * `jal ig_pwrap_stub`, which stores the animator in ig_ptarget). Animator arguments
  * (OBSERVED 0xDE23C, 0x1A05F0): a0 vertex output, a1 first vertex index, a2 emitter-
@@ -120,8 +169,9 @@ static void renorm(volatile uint32_t *now, const uint32_t *was, uint32_t done, u
     *used |= ((1u << n) - 1u) << i;
 }
 
+static uint32_t pnode_ext[PNODES][12];   /* mode 3: node words 0x10..0x3F (e.g. ray state counters) */
 static int particles_restore(volatile uint32_t *map, void *out, int first, void *head, void *params, AnimFn anim) {
-    uint32_t node, n = 0, k = 0, i, j, words = map[1] / 4u;
+    uint32_t node, n = 0, k = 0, i, j, words = map[1] / 4u, ext = map[2] == 3u;
     int r;
     for (node = *(volatile uint32_t *)((char *)head + 4); node && node != (uint32_t)(uintptr_t)head && n < PNODES;
          node = *(volatile uint32_t *)(uintptr_t)(node + 4), n++) {
@@ -132,6 +182,7 @@ static int particles_restore(volatile uint32_t *map, void *out, int first, void 
         pnode_first[n] = pf; pnode_count[n] = pc; pnode_off[n] = k;
         for (i = 0; i < (uint32_t)pc * words; i++) psnap[k + i] = ((volatile uint32_t *)(uintptr_t)(base + map[1] * pf))[i];
         k += (uint32_t)pc * words;
+        if (ext) for (i = 0; i < 12u; i++) pnode_ext[n][i] = ((volatile uint32_t *)(uintptr_t)node)[4 + i];
     }
     r = anim(out, first, head, params);
     ig_pfix[2]++;
@@ -143,6 +194,7 @@ static int particles_restore(volatile uint32_t *map, void *out, int first, void 
             ((volatile uint32_t *)(uintptr_t)(base + map[1] * pnode_first[j]))[i] = psnap[pnode_off[j] + i];
         *(volatile uint16_t *)(uintptr_t)(node + 12) = pnode_first[j];
         *(volatile uint16_t *)(uintptr_t)(node + 14) = pnode_count[j];
+        if (ext) for (i = 0; i < 12u; i++) ((volatile uint32_t *)(uintptr_t)node)[4 + i] = pnode_ext[j][i];
         ig_pfix[3] += pnode_count[j]; map[4] += pnode_count[j];
     }
     return r;
@@ -161,7 +213,9 @@ int ig_particles(void *out, int first, void *head, void *params) {
     /* Mode 2 (IG-v19, half-rate): on every second main update the animator still runs (it also emits the
      * vertices, so particles stay drawn) but every record and the instance first/count are restored
      * byte-exactly afterwards, so state advances at 30 Hz with no assumption about field types. */
-    if (map[2] == 2u) {
+    /* Mode 3 (IG-v23): mode 2 plus the node words 0x10..0x3F changed during the call are restored too (segment
+     * animator 0x60100 decrements the parent ray state count +0x32 when a segment dies). */
+    if (map[2] == 2u || map[2] == 3u) {
         if (!(ig_upd & 1u)) { ig_pfix[2]++; return anim(out, first, head, params); }
         return particles_restore(map, out, first, head, params, anim);
     }
@@ -353,5 +407,57 @@ void ig_tel_pump(float dt) {
 }
 
 /* No main thread: returning 0 keeps the module resident. */
+/* Segmented-ray state machine at A0 rate (IG-v21). LEVEL_01 0x5FACC (a0 = ray state, called once per
+ * pump-1 update by BlitzGunShot 0x11CCA8, CrossbowShot 0x12D350, ShieldChargerBolt 0x16F328, and non-weapon
+ * users) builds one segment per call, holds with `+0x24 += 1/30` per call, removes one segment per call,
+ * then reaches state 3, which destroys the owner (Tremblator shock wave: age 14 in A0 and C1, TESTED
+ * 2026-10-02b). Integer segment steps cannot be halved, so at 60 Hz the wrapper runs it on every other
+ * main update (parity of ig_upd): exactly the A0 sequence at 30 Hz. Exclusive with ft0x5ffa0.
+ * ig_seg: [0] enable, [1] original address, [2] calls passed, [3] calls skipped. */
+typedef void (*SegFn)(void *);
+volatile uint32_t ig_seg[4] = {0u, 0u, 0u, 0u};
+
+void ig_seghalf(void *ray) {
+    SegFn f = (SegFn)(uintptr_t)ig_seg[1];
+    /* IG-v22: same parity source as particle mode 2 (ig_upd, advanced by the pump-1 telemetry hook), so the
+     * ray machine (pump 1) and its segment animator 0x60100 (particle walker) run in the same 60 Hz frame of
+     * each 30 Hz pair, as in A0 (machine before animator). Requires telemetry. */
+    if (ig_seg[0] && (ig_upd & 1u)) { ig_seg[3]++; return; }
+    ig_seg[2]++;
+    f(ray);
+}
+
+/* 30 Hz islands (IG-v24). Exact 30 -> 60 Hz conversion for self-contained effect logic: the logic runs on
+ * every other main update (ig_upd parity, as particle mode 2/3 and rayhalf), drawing stays at 60 Hz.
+ * ig_classhalf: replaces a pump-1 class update pointer (group +0x1C; entity +0x40 = group). Entries are
+ *   (group, original update) pairs written by fixes.py; on running updates the class gets 2 x dt.
+ *   ig_chalf: [0] enable, [1] updates skipped, [2 + 2i] group, [3 + 2i] original update.
+ * ig_cbhalf: per-record particle callback (record +0 function pointer) installed by the spawner patch;
+ *   ig_cb: [0] enable, [1] original callback, [2] calls passed, [3] calls skipped.
+ * First use: Tremblator shock wave (BlitzGunShot entity + ray particles 0xC9ED8 + segment animator mode 3). */
+#define CHN 4
+typedef void (*UpdFn)(float, void *);
+typedef void (*CbFn)(void *);
+volatile uint32_t ig_chalf[2 + 2 * CHN];
+volatile uint32_t ig_cb[4];
+
+void ig_classhalf(float dt, uint8_t *ent) {
+    uint32_t grp = *(volatile uint32_t *)(ent + 0x40);
+    UpdFn f = 0;
+    int i;
+    for (i = 0; i < CHN; i++)
+        if (ig_chalf[2 + 2 * i] == grp) { f = (UpdFn)(uintptr_t)ig_chalf[3 + 2 * i]; break; }
+    if (!f) return;
+    if (ig_chalf[0] && (ig_upd & 1u)) { ig_chalf[1]++; return; }
+    f(ig_chalf[0] ? dt * 2.0f : dt, ent);
+}
+
+void ig_cbhalf(void *rec) {
+    CbFn f = (CbFn)(uintptr_t)ig_cb[1];
+    if (ig_cb[0] && (ig_upd & 1u)) { ig_cb[3]++; return; }
+    ig_cb[2]++;
+    f(rec);
+}
+
 int module_start(SceSize args, void *argp) { (void)args; (void)argp; return 0; }
 int module_stop(SceSize args, void *argp) { (void)args; (void)argp; return 0; }

@@ -22,6 +22,10 @@ def require_activation_review(cls, target):
         raise ValueError('Crab timer activation is quarantined: 10 of 29 sites are not timers. '
                          'Use status/off for inspection/restoration; a reviewed replacement is pending. '
                          'See research/v2/crab-timer-audit-20261001/REPORT.md')
+    if cls == 'TrainingBot' and target == 'on':
+        raise ValueError('TrainingBot timer activation is quarantined: 0x18456C is an animation id, 0x18531C '
+                         'doubles only the upper bound of a 50..52 window. Use fixes.py `tbtimers` (reviewed). '
+                         'See research/v2/call-context-20261002/REPORT.md (F9)')
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])

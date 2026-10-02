@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """Targeted LEVEL_01 60 FPS fixes on top of C1, switchable live (experimental RAM).
 
-Requires the InterpGate plugin (IG-v19, lean) as the only plugin. Each fix is a guarded
+Requires the InterpGate plugin (IG-v24, lean) as the only plugin. Each fix is a guarded
 set of word writes; wrappers live in the plugin, data fixes are direct writes.
   nav       ground-navigation displacement halved (0x2A8F0 callers)       [owner: crab speed OK]
   nav2      second navigation mode 0x2935C (Crab/TM robots/TrainingBot)
-  frametimers  28 hard-coded 1/30 timer steps -> 1/60 (EnemyWave, Help, Teleporter, ...)
+  frametimers  19 hard-coded 1/30 timer steps -> 1/60 (EnemyWave, Help, Teleporter, ...); 10 player substep sites excluded
   frames30  17 x30.0 seconds->frames conversions -> x60.0 (boat countdown, crossbow, BlitzGun, HUD/pickup timers, particle 0x60100)
   age70     projectile/flying-car age +0x70 += 1.0 -> 0.5 (BlasterShot, ShockRocketShot, FlyingCars, Swarm, SuckCannonComet)
   elevator  Lvl3Elevator progress increment initializer 1/30 -> 1/60 (apply before the elevator initializes)
@@ -22,7 +22,19 @@ set of word writes; wrappers live in the plugin, data fixes are direct writes.
   crab      crab attack frame threshold 27 -> 54 (data RVA 0x2CF3C8)    [owner: timing OK]
   particles waterfall particle animator 0xDE23C half-step (walker jalr site 0x8CE54)
   pathanimals PathAnimal walk speed x0.5 (stub at 0x15DE70), turn spring refit and fall gravity (data)
+  blitzhalf IG-v24: BlitzGunShot class update at 30 Hz (2 x dt); with segrate + raycb = Tremblator 30 Hz island (candidate)
+  raycb     IG-v24: ray particle callback 0xC9ED8 at 30 Hz (Tremblator, Acidbomb rays) (candidate)
+  segrate   segment animator 0x60100 at 30 Hz (particle mode 2, this animator only; with rayhalf) (candidate)
+  rayhalf   IG-v22: ray state machine 0x5FACC at 30 Hz for Tremblator/Crossbow/ShieldCharger shots (candidate)
+  animlat   IG-v20: non-looping animation end events delivered 2/30 s after the end like A0 (candidate)
   weapondt  weapon update gets 2 x delta in the single C1 substep (A0 ran it twice per frame)
+  domain8   weapondt + substepdt + framescale: the whole player substep loop gets A0 time per call (candidate)
+  framescale player frame scale +0x578 = dt x 30 -> dt x 60 (0x360E8; read only by substep code) (candidate)
+  skyrot    Level01SkyController per-call sky angle step halved (0x2D47D8) (candidate)
+  teleporterfx Teleporter particle effects: 7 literal 1/30 per-call rates -> 1/60 (candidate)
+  groupfade four global fade channels 0x2B2A80.. ramp 1/30 per frame -> 1/60 (role UNKNOWN) (candidate)
+  tbtimers  reviewed TrainingBot timers x2 (12 words; replaces the quarantined generated list) (candidate)
+  k30calls  11 literal 1/30 per-call motion rates (pickup pop, flying cars, TieManipulator, crank cam, Polarizer, beacon) (candidate)
   infammo   TEST AID: weapons do not consume ammo (7 weapon functions; not part of parity)
   crabtimers reviewed Crab state/cooldown reloads x2 (replaces the quarantined timer-patches Crab batch)
   butterfly Butterfly flap/speed steps halved, speed and turn springs refitted (+ timer-patches --class Butterfly)
@@ -51,7 +63,7 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parents[2]
 spec = importlib.util.spec_from_file_location('pump_gate', REPO/'tools/runtime/pump-gate.py')
 pg = importlib.util.module_from_spec(spec); spec.loader.exec_module(pg)
-BUILD = REPO/'patches/experimental/interp-gate/build/IG-v19'
+BUILD = REPO/'patches/experimental/interp-gate/build/IG-v24'
 WRAPPERS = {  # name: (callee RVA, call sites, wrapper symbol, enable symbol, word offset)
     # Register-transparent asm stubs (IG-v11) halve the displacement vector passed in a2.
     'nav': (0x2A8F0, (0x29188, 0x29334), 'ig_disp_stub0', 'ig_disp', 0),
@@ -64,6 +76,13 @@ WRAPPERS = {  # name: (callee RVA, call sites, wrapper symbol, enable symbol, wo
     # physstep: generic small-object physics step 0x2832C (bolts 0x11EE20, crate debris pool 0x2ED88), per call
     # life -= 1, pos += vel + g/2, vel.y += g -> IG-v18 ig_phys keeps half of each change.
     'physstep': (0x2832C, (0x2ED88, 0x11EE20), 'ig_phys', 'ig_fix', 4),
+    # animlat (IG-v20): animation end event latency. 0x76BCC advances a channel once per update and raises
+    # end bit 4 on the first update past the end; readers see it one update later. Non-looping end events are
+    # withheld 2 extra 60 Hz calls so they arrive 2/30 s after the end as in A0 (Ryno cadence 28 -> 30 frames).
+    # rayhalf (IG-v21): segmented-ray state machine 0x5FACC (per-call segments, 1/30 hold, per-call removal, state 3
+    # destroys the owner) run on every other 60 Hz frame at the weapon call sites (Tremblator, Crossbow, ShieldCharger).
+    'rayhalf': (0x5FACC, (0x11CCA8, 0x12D350, 0x16F328), 'ig_seghalf', 'ig_seg', 0),
+    'animlat': (0x76BCC, (0x785B8, 0x78618, 0x78658), 'ig_animadv', 'ig_anim', 0),
     # animdisp (0x6C318) REJECTED: absolute point, not a per-call step; wrapper removed in IG-v16.
 }
 DATA = {'crab': (0x2CF3C8, 0x41D80000, 0x42580000),
@@ -81,7 +100,12 @@ if _RAW.exists():
         if _r['kind'].startswith('timer') and _s != 0x151E0:
             _w = int.from_bytes(_B[0x74+_s:0x78+_s], 'little')
             DATA['ft' + _r['site']] = (_s, _w, (_w & 0xFFFF0000) | 0x3C88)
-FRAMETIMERS = [k for k in DATA if k.startswith('ft0x')]
+# Context exclusion (research/v2/call-context-20261002/REPORT.md): these 1/30 steps sit in functions reached
+# only from the player substep loop body (0x3C88C, 0x44ED8, 0x4A4F0, 0x570F0). The body ran twice per A0
+# frame, so 60 calls/s in A0 and in C1: already correct, halving them makes them 2x slow (0x4A4F0 gates the
+# fire-enable bit 0x95C&0x20 on player timer +0x138). Kept as individual keys, removed from the group.
+SUBSTEP_FT = {0x3E170, 0x3EB14, 0x40824, 0x4085C, 0x40894, 0x45284, 0x4556C, 0x4AC5C, 0x575EC, 0x57624}
+FRAMETIMERS = [k for k in DATA if k.startswith('ft0x') and DATA[k][0] not in SUBSTEP_FT]
 # frames30: `lui rX,0x41F0` (30.0) used to convert seconds/sixtieths into 30 Hz frame
 # counts or per-frame rates -> 60.0 (research/v2/decomp-summary/level01-frames30-sites.json).
 for _r in json.loads((REPO/'research/v2/decomp-summary/level01-frames30-sites.json').read_text(encoding='utf-8'))['sites']:
@@ -143,7 +167,9 @@ PHASES = []
 for _r in json.loads((REPO/'research/v2/decomp-summary/level01-phase-steps.json').read_text(encoding='utf-8'))['sites']:
     _k = 'ph' + _r['constant']
     if _r['verdict'] == 'PATCH_CANDIDATE' and int(_r['constant'], 16) not in {v[0] for v in DATA.values()}:
-        DATA[_k] = (int(_r['constant'], 16), int(_r['before'], 16), int(_r['after'], 16)); PHASES.append(_k)
+        DATA[_k] = (int(_r['constant'], 16), int(_r['before'], 16), int(_r['after'], 16))
+        if int(_r['constant'], 16) != 0x2B0E70:   # only user 0x56A04 is substep-only: already correct in C1
+            PHASES.append(_k)
 # clock: clock users of the frame counter 0x2AF28C (+1 per frame) load the plugin's half-rate copy
 # ig_clock[0] instead (lui/lw pairs, research/v2/decomp-summary/level01-clock-sites.json). Needs the
 # pump-1 hook (implies telemetry) that refreshes the copy every main update.
@@ -225,6 +251,9 @@ DATA['substepdt'] = (0x2FCE8, 0x4600A306, 0x4614A300)
 # rynorate (candidate): Ryno refire counter moby+0x70 = 24.0 on fire (0x168A6C, DAT 0x2D6A90 exclusive) and
 # -= 1.0 per Ryno_Update call. Owner: TELT (Ryno) fires too fast at 60 FPS -> 24 -> 48 if Ryno_Update runs once
 # per frame (to confirm with fix-monitor probe Ryno/refire70: A0 vs C1 duration).
+# CAUTION (call-context 2026-10-02): the equipped weapon's update is called from P_Player_WeaponUpdate inside the
+# substep loop (Blaster OBSERVED); if Ryno_Update runs there, -1.0 per call is already 60/s in A0 and C1 and
+# rynorate would make refire 2x slow. Probe before enabling.
 DATA['rynorate'] = (0x2D6A90, 0x41C00000, 0x42400000)
 # camfilters: camera filters are exact critically damped steps with dt = 1/30 baked in: per filter omega (data),
 # k = omega x 1/30 computed at init by 0xCA24 (one `lui 0x3D08` at 0xCA2C for all) and e = exp(-omega/30)
@@ -243,11 +272,100 @@ if _RAW.exists():
 # helphint: Level01HelpManager shows the wrench-throw hint after 18000 update frames (10 min at 30 Hz):
 # `sltiu a0,a0,18000` at 0x150FC0. 36000 does not fit a signed 16-bit immediate; 32767 = 9.1 min at 60 Hz.
 DATA['helphint'] = (0x150FC0, 0x2C844650, 0x2C847FFF)
-ALIASES = {'camfilters': set(CAMFILTERS), 'particles-rate': {'particles-rate', 'particles', 'telemetry'}, 'infammo': set(INFAMMO), 'crabtimers': set(CRABTIMERS), 'butterfly': {'bflap1', 'bflap2', 'bspeed1', 'bspeed2', 'bspringk', 'bspringd', 'sp0x2ced8ck', 'sp0x2ced90d', 'sp0x2cedbck', 'sp0x2cedc0d'},
+# framescale (candidate, static 2026-10-02): P_Player_TimingFields (0x360A4, once per frame, outside the substep
+# loop) stores +0x578 = dt x 30.0 (`lui a0,0x41F0` at 0x360E8). Only substep code reads it (0x42C04 gun-pose
+# countdowns +0x9D4/+0x9D8 -= +0x578, 0x328A0 velocity / +0x578, 0x59D04 speed / +0x578): A0 1.0 per call at
+# 60 calls/s, C1 0.5 per call at 60 calls/s. x60.0 restores 1.0 per call. Not in frames30.
+DATA['framescale'] = (0x360E8, 0x3C0441F0, 0x3C044270)
+# skyrot (candidate, static): Level01SkyController_Update adds DAT 0x2D47D8 (0.000556) to the sky angle per call,
+# no delta; only user. Exact half (exponent - 1).
+DATA['skyrot'] = (0x2D47D8, 0x3A11A373, 0x3991A373)
+# teleporterfx (candidate, static): Teleporter particle effects advance per call with literal 1/30 rates
+# (`lui 0x3D08` + `ori 0x8889`): progress rate (1/30)/duration set at spawn 0x6539C and re-set by the record
+# callbacks 0x65758/0x65A6C, per-call step +0x54 (0x65228 -> callback 0x65D78), callback 0x65D78 increment,
+# emitter rate 0x650EC and animator 0x661FC. All run once per frame (pump 1 / particle walker), none reads the
+# delta; classified "scale" by the 1/30 census, hence missing from frametimers. 1/30 -> 1/60.
+TELEPORTERFX = []
+for _s in (0x65434, 0x65874, 0x65AB0, 0x652B0, 0x65DDC, 0x65174, 0x6638C):
+    _w = int.from_bytes(_B[0x74+_s:0x78+_s], 'little') if _RAW.exists() else 0
+    DATA['tp%#x' % _s] = (_s, _w, (_w & 0xFFFF0000) | 0x3C88); TELEPORTERFX.append('tp%#x' % _s)
+# groupfade (candidate, static): 0x6DF94 (called only by pump 1, once per frame) ramps four global fade channels
+# 0x2B2A80..0x2B2A8C toward 0/1 by DAT 0x2B2A7C (0.5) x 1/30 per call: 2 s in A0, 1 s in C1. Consumer 0x6DDE4
+# (pump 2) gates a per-moby draw effect 0x784A4 on flag bits DAT_002af280+0x1900; visible role UNKNOWN.
+GROUPFADE = []
+for _s in (0x6DFD0, 0x6E01C, 0x6E05C, 0x6E0A8, 0x6E0E8, 0x6E134, 0x6E174, 0x6E1C0):
+    _w = int.from_bytes(_B[0x74+_s:0x78+_s], 'little') if _RAW.exists() else 0
+    DATA['gf%#x' % _s] = (_s, _w, (_w & 0xFFFF0000) | 0x3C88); GROUPFADE.append('gf%#x' % _s)
+# k30calls (candidates, static re-audit research/v2/decomp-summary/level01-k30-context-audit.json): literal 1/30 in
+# per-call motion of functions that never receive the delta, per-frame context (old census label "scale"/"other"):
+# PowerupAmmo/PowerupHealth pop motion pos += v/30 (state-1 helpers 0x16013C, 0x1619C8), flying cars speed x 1/30
+# (Directional 0x13E12C, Orbit 0x13F1D0, Pathed 0x14043C + init 0x140C40), TieManipulator init per-call angle rates,
+# BoltCrankCam (1/30)/DAT step, Polarizer (1/30)/DAT rate, TripleWaveBeacon alpha step (255/t)/30. 1/30 -> 1/60.
+K30CALLS = []
+for _s in (0x16014C, 0x1619DC, 0x13E19C, 0x13F274, 0x1409C4, 0x140D00, 0x17A6D0, 0x121070, 0x1210C4, 0x15E844, 0x133FE8):
+    _w = int.from_bytes(_B[0x74+_s:0x78+_s], 'little') if _RAW.exists() else 0
+    DATA['kc%#x' % _s] = (_s, _w, (_w & 0xFFFF0000) | 0x3C88); K30CALLS.append('kc%#x' % _s)
+# tbtimers (reviewed replacement for the quarantined generated TrainingBot list; report F9). Field +0x80 (short)
+# per-call counter of the pump-1 TrainingBot states, +0x7C hit-immunity countdown (15 calls). x2 in 60 Hz calls:
+#   random reloads rand%30+60 / rand%60+90 (0x186164): moduli and offsets x2 (same range in seconds);
+#   float reload rand*30.0+60.0 (0x1844F0, missed by the integer generator): 30.0 -> 60.0, 60.0 -> 120.0;
+#   window 50 <= v < 53 (0x185150): both bounds x2 (generator doubled only the upper one);
+#   event at v == 2 (0x1853F0) -> 4; hit immunity 15 -> 30 (TrainingBot_slot3 0x18421C).
+# Excluded: 0x18456C `li a1,10` is the P_Anim_Start animation id, not a duration.
+TBTIMERS = []
+for _s, _o, _n in ((0x1862D4, 0x3412001E, 0x3412003C), (0x1862F8, 0x2644003C, 0x26440078),
+                   (0x1863A0, 0x3412003C, 0x34120078), (0x1863C4, 0x2644005A, 0x264400B4),
+                   (0x1865DC, 0x3412003C, 0x34120078), (0x186600, 0x2644005A, 0x264400B4),
+                   (0x184580, 0x3C0441F0, 0x3C044270), (0x18459C, 0x3C044270, 0x3C0442F0),
+                   (0x185314, 0x2A240032, 0x2A240064), (0x18531C, 0x2A240035, 0x2A24006A),
+                   (0x185450, 0x34050002, 0x34050004), (0x18421C, 0x3404000F, 0x3404001E)):
+    DATA['tb%#x' % _s] = (_s, _o, _n); TBTIMERS.append('tb%#x' % _s)
+# blastershot (candidate, measured defect 2026-10-02b): BlasterShot moves `pos += v` and ages +1.0 per update;
+# v = 21.0 / (10.0 x 0.016667 x 30.0) = 4.2 per update (0x117AE4) and it dies at age 10.0 x 0.016667 x 30.0 = 5
+# (BlasterShot_Update 0x118130). A0 ~126 u/s, C1 ~250 u/s and half the life. 30.0 -> 60.0 in both formulas gives
+# 2.1 per update for 10 updates: same speed in u/s, same lifetime and range at 60 Hz. Exclusive with age0x118144.
+DATA['bshot_speed'] = (0x117B70, 0x3C0641F0, 0x3C064270)
+DATA['bshot_life'] = (0x118178, 0x3C0541F0, 0x3C054270)
+# rynorocket (candidate, measured defect 2026-10-02b): RynoRocket moves dir x speed per update and lives 36 updates;
+# A0 ~24 u/s for ~1.13 s, C1 ~48 u/s for ~0.57 s (same 0.8 step, same age count). Exclusive data: speed 0.8
+# (0x2D6A94, read only by Ryno fire 0x168590), life 36.0 (0x2D6B94, RynoRocket_Update + guidance 0x16A080),
+# per-call homing turn caps 0x2D6B80..0x2D6B8C (table read by 0x16A080). Halve speed and caps, double life.
+# Random wobble kicks per call (0x16A080 -> 0xF470C) are not converted (residual, UNKNOWN visibility).
+# Ryno refire (24 calls, substep context) measured ~7.6% fast in C1, NOT 2x: `rynorate` is REJECTED.
+RYNOROCKET = ['rr_speed', 'rr_life', 'rr_turn0', 'rr_turn1', 'rr_turn2', 'rr_turn3']
+DATA['rr_speed'] = (0x2D6A94, 0x3F4CCCCE, 0x3ECCCCCE)
+DATA['rr_life'] = (0x2D6B94, 0x42100000, 0x42900000)
+for _i, (_a, _w) in enumerate(((0x2D6B80, 0x3EC19D7F), (0x2D6B84, 0x3EC19D7F), (0x2D6B88, 0x3F20D97C), (0x2D6B8C, 0x3F20D97C))):
+    DATA['rr_turn%d' % _i] = (_a, _w, _w - 0x00800000)
+# blitzshot (candidate, measured 2026-10-02b): BlitzGunShot (Tremblator shock wave, 8 static records per shot) ages
+# +1.0 per update and dies at the integer table DAT 0x2CE3E8[level] = 9 / 14 updates (only reader BlitzGunShot_Update,
+# also passed as particle lifetime to 0xC9CC0). A0 life ~0.40 s, C1 ~0.17 s. Table x2 (18 / 28). Exclusive with age0x11c1f0.
+DATA['blitz_life0'] = (0x2CE3E8, 9, 18)
+DATA['blitz_life1'] = (0x2CE3EC, 14, 28)
+# rayfix (candidate): segmented-ray timing as data. Hold `+0x24 += 1/30` per call in 0x5FACC (ft0x5ffa0) and the
+# segment fade step 1/(seconds x 30.0) in the segment pool animator 0x60100 (f30 0x60378/0x603A4/0x603E4). Rays of
+# Tremblator, Crossbow, ShieldCharger and non-weapon users (pump-1 / particle walker, once per frame). Exclusive with rayhalf.
+ALIASES = {'domain8': {'weapondt', 'substepdt', 'framescale'}, 'rayfix': {'ft0x5ffa0', 'f300x60378', 'f300x603a4', 'f300x603e4'}, 'segfade': {'f300x60378', 'f300x603a4', 'f300x603e4'}, 'blastershot': {'bshot_speed', 'bshot_life'}, 'blitzshot': {'blitz_life0', 'blitz_life1'}, 'rynorocket': set(RYNOROCKET), 'tbtimers': set(TBTIMERS), 'teleporterfx': set(TELEPORTERFX), 'groupfade': set(GROUPFADE), 'k30calls': set(K30CALLS),'camfilters': set(CAMFILTERS), 'particles-rate': {'particles-rate', 'particles', 'telemetry'}, 'infammo': set(INFAMMO), 'crabtimers': set(CRABTIMERS), 'butterfly': {'bflap1', 'bflap2', 'bspeed1', 'bspeed2', 'bspringk', 'bspringd', 'sp0x2ced8ck', 'sp0x2ced90d', 'sp0x2cedbck', 'sp0x2cedc0d'},
            'laserbeam': set(LASERBEAM), 'spawn': {'spawn0', 'spawn1', 'telemetry'}, 'springs': set(SPRINGS), 'luna': {'lunastep', 'lunaidle1', 'lunaidle2', 'sp0x2d4e94k', 'sp0x2d4e98d', 'sp0x2d4d5ck', 'sp0x2d4d60d'},
            'clock': {'clock', 'telemetry'}, 'waterfall': {'wfparity', 'wfscroll1', 'wfscroll2'}, 'phases': set(PHASES), 'pathanimals': {'pathanimal', 'pathgrav', 'sp0x2d5b34k', 'sp0x2d5b38d'}, 'crank': {'crankframes', 'crankdrop'},
            'particles-all': {'particles-all', 'particles'}}
-FIXES = (*WRAPPERS, *DATA, *CODESTUBS, *RUNTIME, 'particles', 'particles-all', 'particles-rate', 'telemetry', 'clock')
+FIXES = (*WRAPPERS, *DATA, *CODESTUBS, *RUNTIME, 'particles', 'particles-all', 'particles-rate', 'segrate', 'telemetry', 'clock')
+SEG_ANIMATOR = 0x60100   # segmented-ray segment pool animator (segrate: particle mode 3 for this animator only)
+# 30 Hz islands (IG-v24): pump-1 class updates run on every other main update (group +0x1C -> ig_classhalf)
+CLASSHALF = {'blitzhalf': 0x11C1E8}          # BlitzGunShot (Tremblator shock wave records)
+# ray particle callback 0xC9ED8 (life -1, pos += v, fade per call) installed by 0xC9CC0: lui/addiu at 0xC9D74/0xC9D78
+CB_LUI, CB_ADDIU, CB_FN = 0xC9D74, 0xC9D78, 0xC9ED8
+FIXES = (*FIXES, *CLASSHALF, 'raycb')
+def _hi(a): return (a + 0x8000) >> 16 & 0xFFFF
+def cb_words(target, base):
+    return [(CB_LUI, 0x3C040000 | _hi(base + CB_FN), 0x3C040000 | _hi(target)),
+            (CB_ADDIU, 0x24840000 | ((base + CB_FN) & 0xFFFF), 0x24840000 | (target & 0xFFFF))]
+def find_group(c, base, upd, wrapper):
+    mgr = c.read(base + 0x2CA0D0, 1)[0]; arr, n = c.read(mgr + 0x34, 2)
+    for i in range(min(n, 256)):
+        g = arr + i * 0x50; p = c.read(g + 0x1C, 1)[0]
+        if p in (base + upd, wrapper): return g, p
+    return None, None
 
 def resident(c, symbols):
     mods = [m for m in c.request('hle.module.list')['modules'] if m.get('isActive')]
@@ -261,6 +379,13 @@ def resident(c, symbols):
         if [_sigword(w) for w in c.read(addr[name], len(sig))] != sig:
             raise RuntimeError('loaded InterpGate is not %s (code signature mismatch at %s)' % (BUILD.name, name))
     return game[0]['address'], addr
+
+def _is_branch(w):
+    """MIPS/Allegrex branch or jump (the next word is its delay slot)."""
+    op = w >> 26
+    if op in (2, 3, 4, 5, 6, 7, 0x14, 0x15, 0x16, 0x17, 1): return True
+    if op == 0x11 and ((w >> 21) & 31) == 8: return True        # bc1f/bc1t(l)
+    return op == 0 and (w & 0x3F) in (8, 9)                     # jr / jalr
 
 def _sigword(w):
     """Relocation-free part of an instruction: j/jal keep the opcode only, others the upper half."""
@@ -302,12 +427,19 @@ def state(c, base, addr):
     w = c.read(base+PARTICLE_SITE, 1)[0]
     pm = c.read(addr['ig_pmap'], 5*len(PARTICLE_POOLS)); en = {pm[5*i]-base: pm[5*i+2] for i in range(len(PARTICLE_POOLS))}
     site = 'off' if w == JALR_T0 else 'on' if w == pg.jal(addr['ig_pwrap_stub']) and c.read(addr['ig_pfix'], 1)[0] else 'MIXED'
-    fixes['particles'] = 'on' if site == 'on' and en.get(PARTICLE_ANIMATOR) else 'off' if site == 'off' else site
+    fixes['particles'] = 'on' if site == 'on' and en.get(PARTICLE_ANIMATOR) else 'off' if site != 'MIXED' else site
     fixes['particles-all'] = 'on' if site == 'on' and all(en.get(r) == 1 for r, _ in PARTICLE_POOLS) else 'off' if site != 'MIXED' else site
     fixes['particles-rate'] = 'on' if site == 'on' and all(en.get(r) == 2 for r, _ in PARTICLE_POOLS) else 'off' if site != 'MIXED' else site
+    fixes['segrate'] = 'on' if site == 'on' and en.get(SEG_ANIMATOR) == 3 else 'off' if site != 'MIXED' else site
     fixes['telemetry'] = 'on' if telemetry else 'off'
     cw = [(c.read(base+r, 1)[0], o, n) for r, o, n in clock_words(addr['ig_clock'], base)]
     fixes['clock'] = 'off' if all(w == o for w, o, _ in cw) else 'on' if all(w == n for w, _, n in cw) else 'MIXED'
+    chon = c.read(addr['ig_chalf'], 1)[0]
+    for name, rva in CLASSHALF.items():
+        g, p = find_group(c, base, rva, addr['ig_classhalf'])
+        fixes[name] = 'off' if g is None or p == base + rva else 'on' if chon else 'MIXED'
+    cbw = [(c.read(base + r, 1)[0], o, n) for r, o, n in cb_words(addr['ig_cbhalf'], base)]
+    fixes['raycb'] = 'off' if all(w == o for w, o, _ in cbw) else 'on' if all(w == n for w, _, n in cbw) and c.read(addr['ig_cb'], 1)[0] else 'MIXED'
     return core_state, fixes
 
 def main():
@@ -334,6 +466,14 @@ def main():
     for k, v in ALIASES.items():
         if k in want: want = (want - {k}) | v
     if 'frametimers' in want: want = (want - {'frametimers'}) | set(FRAMETIMERS)
+    if want & {'rayhalf', 'segrate', 'raycb', *CLASSHALF}: want |= {'telemetry'}
+    if 'blitzhalf' in want and want & {'rayhalf', 'blitz_life0', 'blitz_life1', 'age0x11c1f0'}: ap.error('blitzhalf already runs BlitzGunShot (and its ray machine and life table) at 30 Hz')           # IG-v22 half-rate parity comes from the pump-1 hook
+    if 'segrate' in want and want & {'f300x60378', 'f300x603a4', 'f300x603e4'}: ap.error('segrate and segfade double-correct the ray segments')
+    # teleporterfx rates are consumed by particle callbacks/animators that particles-rate already runs at 30 Hz
+    if 'rayhalf' in want and 'ft0x5ffa0' in want: ap.error('rayhalf and frametimers 0x5FFA0 double-correct the ray hold')
+    if 'age0x11c1f0' in want and want & {'blitz_life0', 'blitz_life1'}: ap.error('blitzshot and age70 (0x11c1f0) double-correct BlitzGunShot')
+    if 'age0x118144' in want and want & {'bshot_speed', 'bshot_life'}: ap.error('blastershot and age70 (0x118144) double-correct BlasterShot')
+    if 'particles-rate' in want and want & set(TELEPORTERFX): ap.error('teleporterfx and particles-rate double-correct the Teleporter effects')
     if want - (set(FIXES) | set(DATA)) - {'cows', 'frametimers', 'laser', 'frames30', 'age70', 'camera', 'fov'}: ap.error('unknown fix')
     if a.target == 'A0' and want - {'telemetry'}: ap.error('A0 takes no fixes (telemetry only)')
     manifest = json.loads((BUILD/'manifest.json').read_text(encoding='utf-8'))
@@ -349,7 +489,15 @@ def main():
         if cpu.get('paused') or cpu.get('stepping'): raise RuntimeError('CPU must be running')
         c.request('cpu.stepping'); paused = True
         def put(address, value):
-            if c.read(address, 1)[0] != value: c.write(address, value); rec['writes'] += 1
+            if c.read(address, 1)[0] != value:
+                c.write(address, value); rec['writes'] += 1
+                # PPSSPP keeps a branch and its delay slot translated together: a delay-slot edit is not
+                # executed until the branch is rewritten (OBSERVED 2026-09-26 waterfall-004 and 2026-10-02:
+                # weapondt read back correctly but WeaponUpdate still got 1/60 until 0x2FCF0 was rewritten).
+                if base <= address < base + 0x1BF1AC:
+                    prev = c.read(address - 4, 1)[0]
+                    if _is_branch(prev):
+                        c.write(address - 4, prev); rec['jitRefresh'] = rec.get('jitRefresh', 0) + 1
         exp = pg.expected(base, a.target)
         for name, (callee, sites, sym, en, off) in WRAPPERS.items():
             on = name in want
@@ -370,15 +518,26 @@ def main():
         for i, (rva, size) in enumerate(PARTICLE_POOLS):
             e = addr['ig_pmap']+20*i
             put(e, base+rva); put(e+4, size)
-            put(e+8, 2 if 'particles-rate' in want else 1 if 'particles-all' in want or ('particles' in want and rva == PARTICLE_ANIMATOR) else 0)
+            put(e+8, 2 if 'particles-rate' in want else 3 if ('segrate' in want and rva == SEG_ANIMATOR) else 1 if 'particles-all' in want or ('particles' in want and rva == PARTICLE_ANIMATOR) else 0)
         put(addr['ig_pmap']+20*len(PARTICLE_POOLS), 0)
-        put(addr['ig_pfix'], 1 if 'particles' in want else 0)
-        put(base+PARTICLE_SITE, pg.jal(addr['ig_pwrap_stub']) if 'particles' in want else JALR_T0)
+        site_on = 'particles' in want or 'segrate' in want
+        put(addr['ig_pfix'], 1 if site_on else 0)
+        put(base+PARTICLE_SITE, pg.jal(addr['ig_pwrap_stub']) if site_on else JALR_T0)
         for r in (pg.VBLANK, pg.DELTA, pg.LOOP): put(base+r, exp[r])
         put(addr['ig_tel']+8, base+pg.PUMP1); put(addr['ig_tel']+4, 1 if 'telemetry' in want else 0)
         put(addr['ig_clock']+4, base+0x2AF28C); put(addr['ig_clock'], c.read(base+0x2AF28C, 1)[0] >> 1)
         put(base+pg.CALL, pg.jal(addr['ig_tel_pump']) if 'telemetry' in want else exp[pg.CALL])
         for r, o, n in clock_words(addr['ig_clock'], base): put(base+r, n if 'clock' in want else o)
+        for k, (name, rva) in enumerate(CLASSHALF.items()):
+            g, p = find_group(c, base, rva, addr['ig_classhalf'])
+            if g is None:
+                if name in want: raise RuntimeError('%s: class group not present (fire once first)' % name)
+                continue
+            put(addr['ig_chalf'] + 4 * (2 + 2 * k), g); put(addr['ig_chalf'] + 4 * (3 + 2 * k), base + rva)
+            put(g + 0x1C, addr['ig_classhalf'] if name in want else base + rva)
+        put(addr['ig_chalf'], 1 if want & set(CLASSHALF) else 0)
+        put(addr['ig_cb'] + 4, base + CB_FN); put(addr['ig_cb'], 1 if 'raycb' in want else 0)
+        for r, o, n in cb_words(addr['ig_cbhalf'], base): put(base + r, n if 'raycb' in want else o)
         after = state(c, base, addr)
         if after[0] != a.target or any((v == 'on') != (k in want) for k, v in after[1].items() if k not in rec.get('skipped', [])):
             raise RuntimeError('post-write state %r' % (after,))

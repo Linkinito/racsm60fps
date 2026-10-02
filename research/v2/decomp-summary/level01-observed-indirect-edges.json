@@ -1,0 +1,7 @@
+{
+ "status": "Curated indirect call edges with live provenance; input to call-contexts.py. Add only edges observed in PPSSPP (breakpoint, call probe) or proven statically, with the source.",
+ "edges": [
+  {"site": "0x1f2d0", "caller": "0x1ebc4", "target": "0x116a00", "region": "substep", "f12": "dt",
+   "evidence": "OBSERVED 2026-10-02 live: Blaster_Update called from P_Player_WeaponUpdate jalr 0x1F2D0 (return 0x2FCF8 in the substep loop); research/live-tests/pokitaru/session-2026-10-02/SESSION-LOG.md item 14"}
+ ]
+}

@@ -7,6 +7,26 @@ observation is retained, not generalized to acceptance of the batch. See
 [the audit](../research/v2/crab-timer-audit-20261001/REPORT.md). Other classes
 from the same generator require explicit dataflow review before live use.
 
+**Context correction (2026-10-02):** the call-context map
+([report](../research/v2/call-context-20261002/REPORT.md)) shows that 10 `frametimers` sites and the
+phase constant `0x2B0E70` sit in player substep code that already runs 60 calls/s in A0 and C1; they are
+removed from the groups (individual keys kept). New static candidates: `framescale` (player frame scale
++0x578, `0x360E8` x30 -> x60), `skyrot` (sky angle step `0x2D47D8` halved), alias `domain8` =
+`weapondt` + `substepdt` + `framescale`. `rynorate` needs the Ryno probe first (may be already correct). Also new from the 1/30 re-audit:
+`teleporterfx` (Teleporter effects, 7 sites), `groupfade` (4 global fade channels, role UNKNOWN),
+`k30calls` (pickup pop motion, flying cars, TieManipulator, crank cam, Polarizer, beacon; 11 sites).
+TrainingBot generated list quarantined (anim id + half window); reviewed `tbtimers` (12 words).
+**Weapons session (2026-10-02 evening, measured):** see [WEAPONS_PARITY_2026-10-02.md](WEAPONS_PARITY_2026-10-02.md).
+TESTED 1:1 (single location): `weapondt` (Blaster 4.133 vs 4.134 shots/s; Tremblator 46.0 vs 23.0x2
+frames), `blastershot` (speed 125.7 vs 125.9 u/s), `rynorocket` (23.94 vs 23.97 u/s), `animlat`
+(IG-v20; Ryno 30.08 vs 15.0x2 frames). REJECTED by measurement: `rynorate`. New plugin builds:
+IG-v20 animlat, IG-v21/22 rayhalf, IG-v23 particle mode 3 (`segrate`), IG-v24 30 Hz islands
+(`blitzhalf`, `raycb`, untested). Data aliases `blitzshot`, `rayfix`, `segfade` (Tremblator rays, not 1:1).
+The fix tool rewrites the preceding branch after a delay-slot edit (PPSSPP JIT); earlier tests of
+delay-slot sites (weapondt, substepdt, 3 crabtimers words, frames30 0x14F218, frametimers 0x16D014,
+lunaidle1, k30calls 0x17A6D0, tbtimers 0x18531C) may not have been active.
+Suggested order: `domain8` (Blaster meter), `teleporterfx`, `k30calls` (crate pickups), `skyrot`.
+
 All entries are experimental and derived statically from the full LEVEL_01
 decompilation, except where "owner-accepted" is stated. None is a measured
 parity result. Apply them with `tools/runtime/fixes.py` (InterpGate **IG-v16f**

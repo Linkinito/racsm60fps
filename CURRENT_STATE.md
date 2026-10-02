@@ -1,83 +1,46 @@
-# Current checkpoint — 2026-10-01 late audit
+# Current checkpoint — 2026-10-02 evening (weapons session)
 
 Priority0: UCES00420 original30 -> faithful60 parity; experimental only.
-Branch v2-research is local-only. Actual HEAD after audit commits: b30d34e (verified); slice tooling
-07450e1; quarantine 5dbb7b3. Verify HEAD on resume; never bulk-push this branch.
-Active task: research/v2/crab-timer-audit-20261001/REPORT.md.
-Evidence entry: research/EVIDENCE_INDEX.md -> Crab timer batch rejection.
+Branch v2-research is local-only; main is the curated public branch (allowlist). Verify HEAD on resume.
+Owner focus: the 13 weapons, 1:1 measured parity ("1:1 ou rien").
+Active log: research/live-tests/pokitaru/session-2026-10-02b/SESSION-LOG.md.
+Summary: docs/WEAPONS_PARITY_2026-10-02.md (FR: docs/fr/ARMES_PARITE_2026-10-02.md).
+Static map: research/v2/call-context-20261002/REPORT.md. Fixes: docs/FIX_CATALOGUE_2026-10-01.md.
 
-## Current decision / blocker
+## Measured 1:1 (TESTED, single location, frame-exact where stated)
 
-REJECTED: generated Crab timer batch. 45 rows =29 unique sites; TEN sites
-change animation IDs, entity flags or wave capacity, not duration. Runtime
-activation now refuses before connecting; status/off remain available.
-Tests:3 offline guard cases pass. No live mutation or emulator inspection in
-this audit. Original generated dataset preserved as evidence, not manually edited.
-Nineteen reload candidates remain; no reviewed replacement enabled yet.
-Other generated classes (especially TrainingBot) need dataflow review before use.
-The earlier claim that LEVEL_01 static timing analysis is closed is superseded.
+- Blaster (id 2): `weapondt` cadence 4.133 vs A0 4.134 shots/s; `blastershot` speed 125.7 vs 125.9.
+- Ryno (id 15): `animlat` cadence 30.08 @60 vs 15.0 @30 frames; `rynorocket` 23.94 vs 23.97 u/s.
+- Tremblator (id 3): cadence `weapondt` 46.0 @60 vs 23.0 @30 frames.
+- REJECTED: `rynorate`. Root cause of old "weapondt no effect": PPSSPP JIT keeps branch + delay slot;
+  fixes.py now rewrites the preceding branch (jitRefresh).
 
-OBSERVED instructions: transition0x12744c clears indirect data+0x60 at0x127950;
-its old-state-D path reloads DISTINCT +0x64 from trunc(helper0x2172c*15).
-Helper selects1.0/1.1/1.2/1.3 via global0x2DF3D0 ->15/16/18/19, not random15..29.
-Update0x126F28 decrements +0x64 before state dispatch; selector0x126750 tests it
-before choosing stateD. This cooldown is MISSED by the integer-immediate batch.
-Doubling the float before truncation is not exactly twice the original integer.
-Random modulus doubling also changes sampled distribution. Rates/eligibility/
-full gameplay parity UNKNOWN; do not promote owner impression to measured parity.
-Butterfly +0x6c is a signed16 countdown at entity+0x54, consumed by0x122820 and
-reloaded via0x1226B0; its two-site timer classification remains experimental.
+## Open: Tremblator shock wave (A0: phase 3 at 13, gone at 14 frames @30 Hz -> 26/28 @60)
 
-## Claude work reviewed / runtime last reported
+Best so far rayhalf + segfade 24.45/25.45; mode 3 23.4/24.4. Chain: BlitzGunShot records -> ray state
+machine 0x5FACC (state 3 destroys, 0x11CCD4) -> segment animator 0x60100 (decrements ray count) +
+ray particles 0xC9ED8 (life from table 0x2CE3E8 = 9/14, shared with record age check).
+IG-v24 "30 Hz island" built+installed (blitzhalf class update at 30 Hz, raycb, segrate mode 3,
+original table) but NOT validly measured: runs 85-91 had PPSSPP in background (fps 25..200) -> INVALID.
 
-Mass corpus: research/v2/decomp-candidates/_local/20261001-mass/,
-PokitaruMass20261001.gpr;5045/5045 decompiled per docs/DECOMP_STATUS_2026-10-01.md.
-Annotations and summaries: research/v2/decomp-summary/. Catalogue:
-docs/FIX_CATALOGUE_2026-10-01.md (now warns about rejected batch).
-PPSSPP1.20.4 Vulkan; latest owner session IG-v16f lean7.8KB, Dayni loaded;
-IG-v15a had crashed Dayni (memory pressure INFERRED). Later owner work disabled
-InterpGate in plugin.ini; do not infer current loaded state or re-enable blindly.
-OCEnhance installed by Claude (optional Priority2, separate from parity).
+## Environment
 
-Owner session: research/live-tests/pokitaru/session-2026-10-01/SESSION-LOG.md.
-Crab motion and attack rhythm accepted visually with combined fixes; this does
-not validate the rejected timer batch. Butterfly10 instances measured x1.00 vsA0;
-16 other configurations untouched. Prior wrong-pointer edit restored35 words;
-later results may be affected. Use clean boots for fresh evidence.
-Other catalogue families largely INFERRED/untested. Clock window correction
-must not be combined with doubled2760 skill-point threshold. Rejected static:
-animdisp0x6C318 absolute point; pickups0x7248 look-at matrix.
-
-## Ghidra preservation / audit artifacts
-
-Ghidra12.0.4 Allegrex, Java26.0.1; canonical PRX SHA in reports.
-Original C:/Users/linki/SIZEMATTERS60FPS.gpr preserved. Prior r2 local copy
-reopened and verified15 functions,54806 APPLIED relocations,36 initialized
-blocks matching source,zero loaded-byte changes. Prior quota interruption closed.
-New mass-copy slice: slices/crab-timer-audit-001/, five functions plus bounded
-instruction ranges exported successfully; invocation/method/output hashes local.
-Twelve audit EOL comments applied to that Ghidra copy, save success; no function
-names/entries changed. Source annotations.json beside active report; no separate
-read-only verification of saved comments. Source base annotation set preserved.
-Raw C/P-code/instructions/database stay ignored; only authored methods/reports
-committed. Detailed hashes and rejection-site table are in the active report.
+PPSSPP 1.20.4 Vulkan restarted by Claude (was 2.8 GB); InterpGate IG-v24 installed
+(sha256 331e1d7d…323b; rollback builds IG-v19..v23 in patches/experimental/interp-gate/build/).
+fixes.py targets IG-v24. Keep the PPSSPP window in the foreground during measurements; polling must be
+throttled. Fire injection works (input.buttons.press/send, circle). Ammo test aid: set-ammo.py.
+Weapon ids: 2 Blaster, 3 BlitzGun, 4 Bombglove, 5 AgentsGlove, 6 BeeMineGlove, 7 ShieldCharger,
+8 ShockRocket, 9 CrossbowGun, 10 Flamethrower, 11 LaserTracer, 12 SuckCannon, 13 Mootator, 15 Ryno.
 
 ## Exact NEXT ACTION
 
-Session 2026-10-02 log: research/live-tests/pokitaru/session-2026-10-02/SESSION-LOG.md (owner-accepted:
-crabtimers, camera incl. 0x3634/0x37F8, frames30 HUD, springs, spawn, butterfly, OCE-v5; rejected particles-all).
-1. Restart PPSSPP first (grew to ~14 GB during debugging). Blaster: C1 halves fire rate (A0 4.2 vs C1 2.0
-   shots/s, ammo-decrement meter); test `substepdt` (2 x delta into 0x39B74) with the meter; check Ryno too fast.
-1a. Next live test order (clean boot, A0 baseline + monitor): physstep (bolts, crate debris), particles-rate
-   (waterfall, teleporter), camfilters (camera follow), Blaster probes + weapondt/substepdt, Ryno probe ->
-   rynorate, helphint.
-1b. Built offline (untested): IG-v18 `physstep` (bolts + crate debris = 0x2832C, NOT particles), IG-v19
-   `particles-rate` (half-rate update, full-rate draw, byte-exact restore). Installed: IG-v19. Domain map:
-   docs/WHY_60FPS_IS_HARD.md. Water scroll: no writer in LEVEL_01 (likely EBOOT geometry).
-2. Per-particle work: crate debris 0x1A05F0, waterfall 0xDE23C, waves 0x7E810 (per-record callback at +0);
-   find the waterfall water-scroll source; bolts flying to Ratchet; teleporter/help-box UI animations.
-3. TrainingBot timer list review before activation (same generator weakness as Crab).
-Next files only: AGENTS.md, CURRENT_STATE.md, active REPORT above. Then targeted
-sources via EVIDENCE_INDEX: timer-patches.py, timer-patch-spec.py, selected local
-slice manifest/C/instructions. Do not reread mass inventory or old session history.
-Quota at final research check: five-hour88%,weekly99%; weekly limit binds first.
+1. Owner loads Pokitaru, Tremblator, foreground window. Fire once (creates group), then
+   `fixes.py --target C1 --fix weapondt,animlat,blitzhalf,raycb,segrate`; `ray-stats.py --seconds 30
+   --autofire 2` (check valid=true). Target 26/28. Then A0 control (13/14).
+2. Next weapons, same protocol (A0 vs C1 cadence via ryno-probe --lite --weapon N, projectiles via
+   projectile-tracker --weapon N, code read, fix, C1+fix): CrossbowGun 9 and ShieldCharger 7 share the
+   ray machine; then ShockRocket 8, Bombglove 4, BeeMine 6, AgentsGlove 5, Flamethrower 10,
+   LaserTracer 11, SuckCannon 12, Mootator 13. Static notes: research/v2/weapons-static-20261002/.
+3. Later: visual review of animlat outside weapons.
+Next files only: AGENTS.md, CURRENT_STATE.md, the session log; then targeted sources via
+research/EVIDENCE_INDEX.md.

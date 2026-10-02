@@ -1,0 +1,951 @@
+{
+ "status": "STATIC review queue (INFERRED): class update never receives the delta; old delta shapes are per-call unless driven by another time source",
+ "methodSha256": "d227f18de5b06f1ea46d21d750c97e51c43a548c37f804fff9659897a669828f",
+ "inputs": {
+  "level01-class-verdicts.json": "ceb7cebb2b71506249a72cc38d52a4d35d9825ef5560ee70bc8df302ddd80fee",
+  "level01-call-contexts.json": "d596061efe81420783f1057ff0d8adc35f6b1bff4e5d83e55212c62b30973226",
+  "level01-fixed-step-candidates.json": "9596991d475943b59af2e2812c4b8d8356525ac7bee1bc9b93814b1ac0d945ec",
+  "fixes.py": "8d13434cbd3952f0299b4d3c57e042c8960713bd34aefcc1882bd88e759b174a"
+ },
+ "count": 53,
+ "classes": [
+  {
+   "class": "Crab",
+   "oldVerdict": "MIXED",
+   "deltaShapes": 6,
+   "fixedShapes": 12,
+   "stepFunctions": [
+    "0x124114",
+    "0x12469c",
+    "0x124e60",
+    "0x125200",
+    "0x1254cc",
+    "0x1257d8",
+    "0x125ae0",
+    "0x126350",
+    "0x126538",
+    "0x126f28",
+    "0x134f60",
+    "0x2935c",
+    "0x2a8f0",
+    "0x8a944",
+    "0xe080"
+   ],
+   "stepFunctionsWithFix": {
+    "0x12469c": [
+     "ct0x124860",
+     "ct0x124884"
+    ],
+    "0x125200": [
+     "ct0x125368",
+     "ct0x125374"
+    ],
+    "0x1254cc": [
+     "crab"
+    ]
+   },
+   "uncovered": [
+    "0x124114",
+    "0x124e60",
+    "0x1257d8",
+    "0x125ae0",
+    "0x126350",
+    "0x126538",
+    "0x126f28",
+    "0x134f60",
+    "0x2935c",
+    "0x2a8f0",
+    "0x8a944",
+    "0xe080"
+   ]
+  },
+  {
+   "class": "TrainingBot",
+   "oldVerdict": "MIXED",
+   "deltaShapes": 5,
+   "fixedShapes": 10,
+   "stepFunctions": [
+    "0x134f60",
+    "0x183a50",
+    "0x183e5c",
+    "0x1844f0",
+    "0x184674",
+    "0x184a3c",
+    "0x185150",
+    "0x1853f0",
+    "0x1855d8",
+    "0x185b34",
+    "0x2935c",
+    "0x2a8f0",
+    "0x8a944",
+    "0xe080"
+   ],
+   "stepFunctionsWithFix": {
+    "0x1844f0": [
+     "tb0x184580",
+     "tb0x18459c"
+    ],
+    "0x185150": [
+     "tb0x185314",
+     "tb0x18531c"
+    ],
+    "0x1853f0": [
+     "tb0x185450"
+    ]
+   },
+   "uncovered": [
+    "0x134f60",
+    "0x183a50",
+    "0x183e5c",
+    "0x184674",
+    "0x184a3c",
+    "0x1855d8",
+    "0x185b34",
+    "0x2935c",
+    "0x2a8f0",
+    "0x8a944",
+    "0xe080"
+   ]
+  },
+  {
+   "class": "TMRobotHeadB",
+   "oldVerdict": "MIXED",
+   "deltaShapes": 13,
+   "fixedShapes": 5,
+   "stepFunctions": [
+    "0x134f60",
+    "0x14908",
+    "0x17be18",
+    "0x17d49c",
+    "0x2a8f0",
+    "0x8a944",
+    "0xe080"
+   ],
+   "stepFunctionsWithFix": {
+    "0x17d49c": [
+     "ft0x17d4d0"
+    ]
+   },
+   "uncovered": [
+    "0x134f60",
+    "0x14908",
+    "0x17be18",
+    "0x2a8f0",
+    "0x8a944",
+    "0xe080"
+   ]
+  },
+  {
+   "class": "MutantCow",
+   "oldVerdict": "MIXED",
+   "deltaShapes": 1,
+   "fixedShapes": 5,
+   "stepFunctions": [
+    "0x15af7c",
+    "0x1901f4",
+    "0x190d6c",
+    "0x191154",
+    "0x1913a4",
+    "0x19a318"
+   ],
+   "stepFunctionsWithFix": {
+    "0x1901f4": [
+     "cow1"
+    ]
+   },
+   "uncovered": [
+    "0x15af7c",
+    "0x190d6c",
+    "0x191154",
+    "0x1913a4",
+    "0x19a318"
+   ]
+  },
+  {
+   "class": "MutantMadCow",
+   "oldVerdict": "MIXED",
+   "deltaShapes": 1,
+   "fixedShapes": 5,
+   "stepFunctions": [
+    "0x15c060",
+    "0x1901f4",
+    "0x190d6c",
+    "0x191154",
+    "0x1913a4",
+    "0x19a318"
+   ],
+   "stepFunctionsWithFix": {
+    "0x1901f4": [
+     "cow1"
+    ]
+   },
+   "uncovered": [
+    "0x15c060",
+    "0x190d6c",
+    "0x191154",
+    "0x1913a4",
+    "0x19a318"
+   ]
+  },
+  {
+   "class": "PowerupHealth",
+   "oldVerdict": "MIXED",
+   "deltaShapes": 1,
+   "fixedShapes": 5,
+   "stepFunctions": [
+    "0x1615c8",
+    "0x1619c8",
+    "0x1628a0",
+    "0x318c0",
+    "0xc75a4"
+   ],
+   "stepFunctionsWithFix": {
+    "0x1619c8": [
+     "kc0x1619dc"
+    ]
+   },
+   "uncovered": [
+    "0x1615c8",
+    "0x1628a0",
+    "0x318c0",
+    "0xc75a4"
+   ]
+  },
+  {
+   "class": "AgentsBomb",
+   "oldVerdict": "MIXED",
+   "deltaShapes": 2,
+   "fixedShapes": 7,
+   "stepFunctions": [
+    "0x10c890",
+    "0x10eb1c",
+    "0x10edc0"
+   ],
+   "stepFunctionsWithFix": {},
+   "uncovered": [
+    "0x10c890",
+    "0x10eb1c",
+    "0x10edc0"
+   ]
+  },
+  {
+   "class": "ExplosiveBee",
+   "oldVerdict": "MIXED",
+   "deltaShapes": 4,
+   "fixedShapes": 7,
+   "stepFunctions": [
+    "0x11d974",
+    "0x138594",
+    "0x1391b0",
+    "0x318c0"
+   ],
+   "stepFunctionsWithFix": {
+    "0x1391b0": [
+     "ph0x2d152c"
+    ]
+   },
+   "uncovered": [
+    "0x11d974",
+    "0x138594",
+    "0x318c0"
+   ]
+  },
+  {
+   "class": "LunaNPC",
+   "oldVerdict": "MIXED",
+   "deltaShapes": 4,
+   "fixedShapes": 4,
+   "stepFunctions": [
+    "0x153af8",
+    "0x153f28",
+    "0x2be30",
+    "0x77c90"
+   ],
+   "stepFunctionsWithFix": {
+    "0x153f28": [
+     "lunastep"
+    ]
+   },
+   "uncovered": [
+    "0x153af8",
+    "0x2be30",
+    "0x77c90"
+   ]
+  },
+  {
+   "class": "BeeMine",
+   "oldVerdict": "MIXED",
+   "deltaShapes": 9,
+   "fixedShapes": 8,
+   "stepFunctions": [
+    "0x113e00",
+    "0x178234",
+    "0xcdbc0"
+   ],
+   "stepFunctionsWithFix": {
+    "0x113e00": [
+     "age0x115124",
+     "age0x115224",
+     "ph0x2cdaa4",
+     "ph0x2cdabc"
+    ]
+   },
+   "uncovered": [
+    "0x178234",
+    "0xcdbc0"
+   ]
+  },
+  {
+   "class": "BlasterAkimbo",
+   "oldVerdict": "MIXED",
+   "deltaShapes": 3,
+   "fixedShapes": 2,
+   "stepFunctions": [
+    "0xfd31c",
+    "0xfda04"
+   ],
+   "stepFunctionsWithFix": {},
+   "uncovered": [
+    "0xfd31c",
+    "0xfda04"
+   ]
+  },
+  {
+   "class": "GravityCrystal",
+   "oldVerdict": "MIXED",
+   "deltaShapes": 3,
+   "fixedShapes": 1,
+   "stepFunctions": [
+    "0x142e30",
+    "0x5facc",
+    "0xd850c"
+   ],
+   "stepFunctionsWithFix": {
+    "0x5facc": [
+     "ft0x5ffa0"
+    ]
+   },
+   "uncovered": [
+    "0x142e30",
+    "0xd850c"
+   ]
+  },
+  {
+   "class": "HutDoor",
+   "oldVerdict": "MIXED",
+   "deltaShapes": 1,
+   "fixedShapes": 15,
+   "stepFunctions": [
+    "0x143dc8",
+    "0x143fec",
+    "0x8a944"
+   ],
+   "stepFunctionsWithFix": {
+    "0x143fec": [
+     "sp0x2d289ck",
+     "sp0x2d28a0d"
+    ]
+   },
+   "uncovered": [
+    "0x143dc8",
+    "0x8a944"
+   ]
+  },
+  {
+   "class": "LaserTracer",
+   "oldVerdict": "MIXED",
+   "deltaShapes": 3,
+   "fixedShapes": 8,
+   "stepFunctions": [
+    "0x145144",
+    "0x145568",
+    "0x14be54"
+   ],
+   "stepFunctionsWithFix": {
+    "0x145568": [
+     "laser2"
+    ]
+   },
+   "uncovered": [
+    "0x145144",
+    "0x14be54"
+   ]
+  },
+  {
+   "class": "TitaniumBolt",
+   "oldVerdict": "MIXED",
+   "deltaShapes": 2,
+   "fixedShapes": 4,
+   "stepFunctions": [
+    "0x17afcc",
+    "0x7248"
+   ],
+   "stepFunctionsWithFix": {},
+   "uncovered": [
+    "0x17afcc",
+    "0x7248"
+   ]
+  },
+  {
+   "class": "AgentsGrenade",
+   "oldVerdict": "MIXED",
+   "deltaShapes": 5,
+   "fixedShapes": 2,
+   "stepFunctions": [
+    "0x1107cc"
+   ],
+   "stepFunctionsWithFix": {},
+   "uncovered": [
+    "0x1107cc"
+   ]
+  },
+  {
+   "class": "AgentsRocket",
+   "oldVerdict": "MIXED",
+   "deltaShapes": 5,
+   "fixedShapes": 3,
+   "stepFunctions": [
+    "0xcdbc0"
+   ],
+   "stepFunctionsWithFix": {},
+   "uncovered": [
+    "0xcdbc0"
+   ]
+  },
+  {
+   "class": "ArmorPickup",
+   "oldVerdict": "MIXED",
+   "deltaShapes": 3,
+   "fixedShapes": 2,
+   "stepFunctions": [
+    "0x7248"
+   ],
+   "stepFunctionsWithFix": {},
+   "uncovered": [
+    "0x7248"
+   ]
+  },
+  {
+   "class": "CrankedObject",
+   "oldVerdict": "MIXED",
+   "deltaShapes": 1,
+   "fixedShapes": 1,
+   "stepFunctions": [
+    "0x128c20"
+   ],
+   "stepFunctionsWithFix": {},
+   "uncovered": [
+    "0x128c20"
+   ]
+  },
+  {
+   "class": "CrossbowGun",
+   "oldVerdict": "MIXED",
+   "deltaShapes": 5,
+   "fixedShapes": 1,
+   "stepFunctions": [
+    "0x12b14c",
+    "0x9f614"
+   ],
+   "stepFunctionsWithFix": {
+    "0x12b14c": [
+     "ammo0x12b178"
+    ]
+   },
+   "uncovered": [
+    "0x9f614"
+   ]
+  },
+  {
+   "class": "CrossbowShot",
+   "oldVerdict": "MIXED",
+   "deltaShapes": 8,
+   "fixedShapes": 4,
+   "stepFunctions": [
+    "0x12cdec",
+    "0x5facc"
+   ],
+   "stepFunctionsWithFix": {
+    "0x5facc": [
+     "ft0x5ffa0"
+    ]
+   },
+   "uncovered": [
+    "0x12cdec"
+   ]
+  },
+  {
+   "class": "Fire",
+   "oldVerdict": "MIXED",
+   "deltaShapes": 1,
+   "fixedShapes": 1,
+   "stepFunctions": [
+    "0x41e40"
+   ],
+   "stepFunctionsWithFix": {},
+   "uncovered": [
+    "0x41e40"
+   ]
+  },
+  {
+   "class": "HeadShrapnel",
+   "oldVerdict": "DELTA",
+   "deltaShapes": 1,
+   "fixedShapes": 0,
+   "stepFunctions": [
+    "0x191d7c"
+   ],
+   "stepFunctionsWithFix": {},
+   "uncovered": [
+    "0x191d7c"
+   ]
+  },
+  {
+   "class": "InitialCamera",
+   "oldVerdict": "MIXED",
+   "deltaShapes": 4,
+   "fixedShapes": 1,
+   "stepFunctions": [
+    "0x144be8"
+   ],
+   "stepFunctionsWithFix": {},
+   "uncovered": [
+    "0x144be8"
+   ]
+  },
+  {
+   "class": "Level01Waterfall",
+   "oldVerdict": "MIXED",
+   "deltaShapes": 1,
+   "fixedShapes": 6,
+   "stepFunctions": [
+    "0x151d78",
+    "0xdec9c"
+   ],
+   "stepFunctionsWithFix": {
+    "0x151d78": [
+     "wfparity",
+     "wfscroll1",
+     "wfscroll2"
+    ]
+   },
+   "uncovered": [
+    "0xdec9c"
+   ]
+  },
+  {
+   "class": "LunaCutscene",
+   "oldVerdict": "MIXED",
+   "deltaShapes": 1,
+   "fixedShapes": 3,
+   "stepFunctions": [
+    "0x191880"
+   ],
+   "stepFunctionsWithFix": {},
+   "uncovered": [
+    "0x191880"
+   ]
+  },
+  {
+   "class": "MobyIce",
+   "oldVerdict": "MIXED",
+   "deltaShapes": 3,
+   "fixedShapes": 1,
+   "stepFunctions": [
+    "0x15841c"
+   ],
+   "stepFunctionsWithFix": {},
+   "uncovered": [
+    "0x15841c"
+   ]
+  },
+  {
+   "class": "NapalmBubble",
+   "oldVerdict": "MIXED",
+   "deltaShapes": 1,
+   "fixedShapes": 1,
+   "stepFunctions": [
+    "0x15cce0"
+   ],
+   "stepFunctionsWithFix": {},
+   "uncovered": [
+    "0x15cce0"
+   ]
+  },
+  {
+   "class": "Ryno",
+   "oldVerdict": "MIXED",
+   "deltaShapes": 2,
+   "fixedShapes": 2,
+   "stepFunctions": [
+    "0x168a6c",
+    "0x168c28"
+   ],
+   "stepFunctionsWithFix": {
+    "0x168a6c": [
+     "ammo0x168b88",
+     "rynorate"
+    ]
+   },
+   "uncovered": [
+    "0x168c28"
+   ]
+  },
+  {
+   "class": "ShieldCharger",
+   "oldVerdict": "MIXED",
+   "deltaShapes": 1,
+   "fixedShapes": 2,
+   "stepFunctions": [
+    "0x16c748",
+    "0x16cb78",
+    "0x9f614"
+   ],
+   "stepFunctionsWithFix": {
+    "0x16c748": [
+     "ammo0x16c958"
+    ],
+    "0x16cb78": [
+     "ft0x16d014"
+    ]
+   },
+   "uncovered": [
+    "0x9f614"
+   ]
+  },
+  {
+   "class": "Spitfire",
+   "oldVerdict": "MIXED",
+   "deltaShapes": 3,
+   "fixedShapes": 4,
+   "stepFunctions": [
+    "0x173aa0"
+   ],
+   "stepFunctionsWithFix": {},
+   "uncovered": [
+    "0x173aa0"
+   ]
+  },
+  {
+   "class": "SuckCannonManager",
+   "oldVerdict": "MIXED",
+   "deltaShapes": 1,
+   "fixedShapes": 5,
+   "stepFunctions": [
+    "0x17794c",
+    "0x27a3c"
+   ],
+   "stepFunctionsWithFix": {
+    "0x17794c": [
+     "ph0x2d7e80"
+    ]
+   },
+   "uncovered": [
+    "0x27a3c"
+   ]
+  },
+  {
+   "class": "SwarmManager",
+   "oldVerdict": "MIXED",
+   "deltaShapes": 1,
+   "fixedShapes": 2,
+   "stepFunctions": [
+    "0x1786e4",
+    "0x178758"
+   ],
+   "stepFunctionsWithFix": {
+    "0x178758": [
+     "age0x17875c"
+    ]
+   },
+   "uncovered": [
+    "0x1786e4"
+   ]
+  },
+  {
+   "class": "TMRobotTorsoCutscene",
+   "oldVerdict": "MIXED",
+   "deltaShapes": 1,
+   "fixedShapes": 3,
+   "stepFunctions": [
+    "0x191880"
+   ],
+   "stepFunctionsWithFix": {},
+   "uncovered": [
+    "0x191880"
+   ]
+  },
+  {
+   "class": "TieManipulator",
+   "oldVerdict": "MIXED",
+   "deltaShapes": 1,
+   "fixedShapes": 4,
+   "stepFunctions": [
+    "0x17a30c",
+    "0x17a8e4"
+   ],
+   "stepFunctionsWithFix": {
+    "0x17a30c": [
+     "kc0x17a6d0"
+    ]
+   },
+   "uncovered": [
+    "0x17a8e4"
+   ]
+  },
+  {
+   "class": "TorsoShrapnel",
+   "oldVerdict": "DELTA",
+   "deltaShapes": 1,
+   "fixedShapes": 0,
+   "stepFunctions": [
+    "0x191d7c"
+   ],
+   "stepFunctionsWithFix": {},
+   "uncovered": [
+    "0x191d7c"
+   ]
+  },
+  {
+   "class": "TrainingBotShrapnel",
+   "oldVerdict": "DELTA",
+   "deltaShapes": 1,
+   "fixedShapes": 0,
+   "stepFunctions": [
+    "0x191d7c"
+   ],
+   "stepFunctionsWithFix": {},
+   "uncovered": [
+    "0x191d7c"
+   ]
+  },
+  {
+   "class": "electricXplo",
+   "oldVerdict": "MIXED",
+   "deltaShapes": 2,
+   "fixedShapes": 2,
+   "stepFunctions": [
+    "0x130fac"
+   ],
+   "stepFunctionsWithFix": {},
+   "uncovered": [
+    "0x130fac"
+   ]
+  },
+  {
+   "class": "AgentsGlove",
+   "oldVerdict": "MIXED",
+   "deltaShapes": 1,
+   "fixedShapes": 1,
+   "stepFunctions": [
+    "0x10fd58"
+   ],
+   "stepFunctionsWithFix": {
+    "0x10fd58": [
+     "ammo0x110160"
+    ]
+   },
+   "uncovered": []
+  },
+  {
+   "class": "BlasterShot",
+   "oldVerdict": "MIXED",
+   "deltaShapes": 5,
+   "fixedShapes": 8,
+   "stepFunctions": [
+    "0x118130",
+    "0x11916c"
+   ],
+   "stepFunctionsWithFix": {
+    "0x118130": [
+     "age0x118144"
+    ],
+    "0x11916c": [
+     "ph0x2ce1bc"
+    ]
+   },
+   "uncovered": []
+  },
+  {
+   "class": "BlitzGunShot",
+   "oldVerdict": "MIXED",
+   "deltaShapes": 3,
+   "fixedShapes": 1,
+   "stepFunctions": [
+    "0x11c1e8",
+    "0x5facc"
+   ],
+   "stepFunctionsWithFix": {
+    "0x11c1e8": [
+     "age0x11c1f0"
+    ],
+    "0x5facc": [
+     "ft0x5ffa0"
+    ]
+   },
+   "uncovered": []
+  },
+  {
+   "class": "BoltCrankCam",
+   "oldVerdict": "MIXED",
+   "deltaShapes": 4,
+   "fixedShapes": 1,
+   "stepFunctions": [
+    "0x120fb4"
+   ],
+   "stepFunctionsWithFix": {
+    "0x120fb4": [
+     "kc0x121070",
+     "kc0x1210c4"
+    ]
+   },
+   "uncovered": []
+  },
+  {
+   "class": "CrabObjectController",
+   "oldVerdict": "DELTA",
+   "deltaShapes": 4,
+   "fixedShapes": 0,
+   "stepFunctions": [],
+   "stepFunctionsWithFix": {},
+   "uncovered": []
+  },
+  {
+   "class": "ElectroBall",
+   "oldVerdict": "MIXED",
+   "deltaShapes": 2,
+   "fixedShapes": 0,
+   "stepFunctions": [
+    "0x5facc"
+   ],
+   "stepFunctionsWithFix": {
+    "0x5facc": [
+     "ft0x5ffa0"
+    ]
+   },
+   "uncovered": []
+  },
+  {
+   "class": "ElectroshockWave",
+   "oldVerdict": "MIXED",
+   "deltaShapes": 4,
+   "fixedShapes": 4,
+   "stepFunctions": [
+    "0x134310"
+   ],
+   "stepFunctionsWithFix": {
+    "0x134310": [
+     "ft0x134420"
+    ]
+   },
+   "uncovered": []
+  },
+  {
+   "class": "Flamethrower",
+   "oldVerdict": "MIXED",
+   "deltaShapes": 2,
+   "fixedShapes": 5,
+   "stepFunctions": [
+    "0x13b8f0"
+   ],
+   "stepFunctionsWithFix": {
+    "0x13b8f0": [
+     "ammo0x13b9c8"
+    ]
+   },
+   "uncovered": []
+  },
+  {
+   "class": "FogMoby",
+   "oldVerdict": "DELTA",
+   "deltaShapes": 2,
+   "fixedShapes": 0,
+   "stepFunctions": [],
+   "stepFunctionsWithFix": {},
+   "uncovered": []
+  },
+  {
+   "class": "Level01SkyController",
+   "oldVerdict": "DELTA",
+   "deltaShapes": 1,
+   "fixedShapes": 0,
+   "stepFunctions": [],
+   "stepFunctionsWithFix": {},
+   "uncovered": []
+  },
+  {
+   "class": "PathAnimal",
+   "oldVerdict": "MIXED",
+   "deltaShapes": 2,
+   "fixedShapes": 6,
+   "stepFunctions": [
+    "0x15dd3c"
+   ],
+   "stepFunctionsWithFix": {
+    "0x15dd3c": [
+     "pathgrav"
+    ]
+   },
+   "uncovered": []
+  },
+  {
+   "class": "Polarizer",
+   "oldVerdict": "MIXED",
+   "deltaShapes": 4,
+   "fixedShapes": 2,
+   "stepFunctions": [
+    "0x15f058"
+   ],
+   "stepFunctionsWithFix": {
+    "0x15f058": [
+     "ft0x15f06c"
+    ]
+   },
+   "uncovered": []
+  },
+  {
+   "class": "SetCamera",
+   "oldVerdict": "DELTA",
+   "deltaShapes": 3,
+   "fixedShapes": 0,
+   "stepFunctions": [],
+   "stepFunctionsWithFix": {},
+   "uncovered": []
+  },
+  {
+   "class": "ShockRocket",
+   "oldVerdict": "MIXED",
+   "deltaShapes": 2,
+   "fixedShapes": 1,
+   "stepFunctions": [
+    "0x16f80c"
+   ],
+   "stepFunctionsWithFix": {
+    "0x16f80c": [
+     "ammo0x16f884"
+    ]
+   },
+   "uncovered": []
+  },
+  {
+   "class": "ShockRocketShot",
+   "oldVerdict": "MIXED",
+   "deltaShapes": 4,
+   "fixedShapes": 1,
+   "stepFunctions": [
+    "0x170b20",
+    "0x5facc"
+   ],
+   "stepFunctionsWithFix": {
+    "0x170b20": [
+     "age0x170b30",
+     "ph0x2d754c"
+    ],
+    "0x5facc": [
+     "ft0x5ffa0"
+    ]
+   },
+   "uncovered": []
+  }
+ ]
+}
