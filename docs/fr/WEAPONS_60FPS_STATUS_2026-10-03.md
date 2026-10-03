@@ -56,5 +56,7 @@ et deux corrections mesurées d'abord sur Pokitaru s'y ajoutent : la mise à jou
 des armes reçoit deux fois le pas de temps C1 (en A0 elle tournait deux fois
 par image ; à 60 FPS le Blaster tirait deux fois moins vite), et les formules
 de vitesse et de durée de vie des tirs du Blaster utilisent 60 mises à jour par
-seconde. Une recherche hors jeu les trouve dans tous les niveaux normaux ; le
-niveau 02 (déjà une seule passe par image) est exclu de la correction du pas de temps.
+seconde. Une recherche hors jeu les trouve dans tous les niveaux normaux. (Une
+note précédente excluait le niveau 02 : elle venait d'une copie locale déjà
+modifiée ; l'original fait deux passes comme les autres. Le plugin décide
+d'après le module chargé.)

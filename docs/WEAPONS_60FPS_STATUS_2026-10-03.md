@@ -58,8 +58,9 @@ Turns the extras into a table of guarded code patches and adds two fixes first
 measured on Pokitaru: the weapon update gets twice the C1 time step (A0 ran it
 twice per frame; Blaster fire rate was halved at 60 FPS), and the BlasterShot
 speed/lifetime formulas use 60 updates per second. An offline census places
-both in every normal level module; level 02 (already one pass per frame) is
-excluded from the time-step fix.
+both in every normal level module. (An earlier note excluded level 02: that came
+from a locally patched copy of its module; the original runs two passes like the
+others. The plugin decides from the loaded module.)
 
 ## Measurement notes
 
