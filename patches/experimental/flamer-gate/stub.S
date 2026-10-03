@@ -263,7 +263,8 @@ fg_age_skip_ret:
 
 # ---------------------------------------------------------------------------
 # FG-v4 extras (gate.c wg[]): 24 flag address, 56/60 flag run/skip,
-# 64/68 damage run/skip, 72 frame-counter address, 76 run parity P, 4 applied mask.
+# 64/68 damage run/skip, 72 frame-counter address, 76 damage parity P (fg_ctl[5]),
+# 92 flag parity Pstate = P ^ 1 (FG-v5.1, GPT laser report: opposite phases), 4 applied mask.
 
 # LaserTracer flag hook: reached by `j wg_flag_hook` written over the reader's
 # `lui a0,hi`; its delay slot (the reader's `lbu a0,lo(a0)`) is a nop while
@@ -290,7 +291,7 @@ wg_flag_hook:
 	lw    $t8, 72($t9)           # C
 	lw    $t8, 0($t8)
 	andi  $t8, $t8, 1
-	lw    $at, 76($t9)           # P
+	lw    $at, 92($t9)           # Pstate = P ^ 1 (first-pass state runs opposite the damage pair end)
 	bne   $t8, $at, 2f
 	nop
 	lw    $t8, 56($t9)           # run

@@ -47,6 +47,12 @@
  * literal write invalidates the instruction cache from the word before it
  * (delay slots are compiled with their branch).
  *
+ * FG-v5.1: the laser flag gate runs on the opposite parity of the damage gate
+ * (GPT, research/v2/laser-gate-static-20261003/REPORT.md: A0 first-pass state
+ * and pair-end damage fall on opposite counter phases). Skipped damage calls
+ * still return v0 = 0: on the normal path the target stays opaque, as after a
+ * non-kill hit; never 3 (kill/XP path).
+ *
  * Signatures are generated at build time from a local signature pack (game code
  * words) into the ignored build directory; this source contains no game bytes.
  * Evidence: research/live-tests/pokitaru/flamer-001-20261003/REPORT.md,
@@ -117,7 +123,8 @@ volatile uint32_t fg_gate[24];
  *  4 restore count, 5 flag reader site, 6 flag address, 7..10 laser damage sites, 11 laser
  *  damage site count, 12 agent step site A, 13 agent step site B, 14 flag run, 15 flag skip,
  *  16 damage run, 17 damage skip, 18 frame-counter address, 19 run parity P,
- *  20 original reader word 0, 21 original reader word 1, 22 literal patch count (wg_lit).
+ *  20 original reader word 0, 21 original reader word 1, 22 literal patch count (wg_lit),
+ *  23 flag-gate parity Pstate = P ^ 1 (FG-v5.1).
  *  Request bits: 0 laser hooks, 1 agents lifetime, 2 weapon delta, 3 BlasterShot. */
 #define WG_MAX_DMG 4u
 volatile uint32_t wg[24];
@@ -551,6 +558,7 @@ static void reconcile_extras(void) {
     uint32_t want = wg[0] & 0xFu;
     int c1 = level_is_c1();
     wg[19] = fg_ctl[5] & 1u;
+    wg[23] = wg[19] ^ 1u;   /* FG-v5.1: Pstate = Pdamage ^ 1 (research/v2/laser-gate-static-20261003) */
     if (wg[1]) {
         if (want != wg[1] || !c1) restore_extras();
         return;
@@ -661,7 +669,7 @@ int module_start(SceSize args, void *argp) {
     (void)args; (void)argp;
     fg_state[0] = FG_MAGIC; fg_state[1] = FG_VERSION;
     fg_ctl[0] = FG_DEFAULT_MODE; fg_ctl[5] = 1u;
-    log_line("FlamerGate-FG-v5", FG_DEFAULT_MODE, FG_SIG_COUNT);
+    log_line("FlamerGate-FG-v5.1", FG_DEFAULT_MODE, FG_SIG_COUNT);
     SceUID th = sceKernelCreateThread("FlamerGate", fg_thread, 0x6F, 0x1000, 0, NULL);
     if (th >= 0) sceKernelStartThread(th, 0, NULL);
     return 0;

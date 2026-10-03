@@ -51,7 +51,7 @@ def decode_wg(wg, base, lit=None):
             "restoreCount": wg[4], "flagReaderRva": rva(wg[5]), "flagAddress": "0x%08X" % wg[6],
             "laserDamageRvas": [rva(x) for x in wg[7:7 + min(wg[11], 4)]], "laserDamageCount": wg[11],
             "agentStepRvas": [rva(wg[12]), rva(wg[13])], "flagRun": wg[14], "flagSkip": wg[15],
-            "damageRun": wg[16], "damageSkip": wg[17], "runParity": wg[19]}
+            "damageRun": wg[16], "damageSkip": wg[17], "runParity": wg[19], "flagParity": wg[23]}
     if lit is not None:
         res["literals"] = [{"rva": rva(lit[4 * k]), "orig": "0x%08X" % lit[4 * k + 1], "new": "0x%08X" % lit[4 * k + 2],
                             "bit": lit[4 * k + 3]} for k in range(min(wg[22], 16))]

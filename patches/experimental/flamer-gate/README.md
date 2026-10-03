@@ -85,6 +85,11 @@ restores memory without it; test through a normal game/save load.
   3 BlasterShot speed/life 30.0 -> 60.0 (signatures generated offline from
   LEVEL_01 by `research/scripts/make-offline-sigpack.py` into an ignored pack;
   `build.py --extra-pack`). Census: research/v2/port-census-20261003/REPORT.md.
+- FG-v5.1 (installed, NOT yet run): the laser flag gate uses the opposite
+  parity of the damage gate (Pstate = P ^ 1), after GPT's laser contract
+  (research/v2/laser-gate-static-20261003/REPORT.md): A0's first-pass state
+  and pair-end damage fall on opposite phases. Skipped damage calls return
+  v0 = 0 (target stays opaque as after a non-kill hit; never 3).
  (owner present): install over FG-v0, boot, confirm
 `frameCounter` matches the level map, then `--mode 1 --parity 1`, verify
 `gate.queryRun`/`querySkip` and `latchClear`/`latchRetain` alternate and count-multi shows the query call at
