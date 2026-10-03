@@ -20,6 +20,10 @@ FG-v4/v5 extras: --extras MASK writes wg[0] (bit 0 LaserTracer flag + damage gat
 AgentsGlove lifetime step -0.5, bit 2 weapon delta x2 (FG-v5), bit 3 BlasterShot 30->60 (FG-v5)), applied by the plugin in C1 only, independently of --mode;
 the phase is the same run parity (fg_ctl[5]). The decode shows sites, applied mask and counters.
 
+--auto-phase-rva RVA: same rule, but the temporary breakpoint is at an rcp1-relative code address
+that runs every frame (e.g. the player loop's first-pass flag store), for weapons other than the
+Flamethrower. Apply right after switching to C1: F0 is the counter at the first stop.
+
 Usage:
   python tools/runtime/flamer-gate.py --manifest patches/experimental/flamer-gate/build/FG-v1/manifest.json \
       [--map <levelmap.json>] [--mode 1 --parity 1] [--out <new dir>]
@@ -100,6 +104,8 @@ def main():
     ap.add_argument("--mode", type=int, choices=(0, 1))
     ap.add_argument("--parity", type=int, choices=(0, 1))
     ap.add_argument("--auto-phase", action="store_true")
+    ap.add_argument("--auto-phase-rva", type=lambda x: int(x, 0),
+                    help="auto phase at this rcp1-relative address instead of the Flamethrower callback")
     ap.add_argument("--extras", type=int, choices=range(16), help="FG-v4/v5: wg[0] request mask")
     ap.add_argument("--hold", help="PSP button held while --auto-phase waits for a callback (e.g. circle)")
     ap.add_argument("--wait", type=float, default=2.0)
@@ -144,10 +150,14 @@ def main():
         w, ctl, gate = read_all()
         if w[0] != 0x30544746:
             raise SystemExit("fg_state magic mismatch: manifest does not match the resident build")
+        if a.auto_phase_rva is not None:
+            a.auto_phase = True
         if a.auto_phase:
             if not controllable or a.parity is not None:
                 raise SystemExit("--auto-phase needs a controllable build and excludes --parity")
             cb_addr = w[8 + man["sites"].index("callback")]
+            if a.auto_phase_rva is not None:
+                cb_addr = mods["rcp1"]["address"] + a.auto_phase_rva
             fc_addr = ctl[6]
             if not cb_addr or not fc_addr:
                 raise SystemExit("callback or frame counter not bound")
