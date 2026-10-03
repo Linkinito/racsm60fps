@@ -48,3 +48,13 @@ Pas encore mesuré.
 Ajoute les correctifs Laser et Agents, activables séparément ; la partie
 lance-flammes ne change pas. Une recherche hors jeu dans les modules d'origine
 trouve chaque emplacement de façon unique dans les niveaux 01 à 10, 23 et 24.
+
+## FG-v5 (expérimental, construit)
+
+Les corrections optionnelles deviennent une table de modifications contrôlées,
+et deux corrections mesurées d'abord sur Pokitaru s'y ajoutent : la mise à jour
+des armes reçoit deux fois le pas de temps C1 (en A0 elle tournait deux fois
+par image ; à 60 FPS le Blaster tirait deux fois moins vite), et les formules
+de vitesse et de durée de vie des tirs du Blaster utilisent 60 mises à jour par
+seconde. Une recherche hors jeu les trouve dans tous les niveaux normaux ; le
+niveau 02 (déjà une seule passe par image) est exclu de la correction du pas de temps.

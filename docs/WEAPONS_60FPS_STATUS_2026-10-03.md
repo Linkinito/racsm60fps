@@ -52,6 +52,15 @@ Adds the LaserTracer and Agents fixes as separately requested extras; the
 Flamethrower part is unchanged. An offline census of the original level
 modules finds every site uniquely in levels 01-10, 23 and 24.
 
+## FG-v5 (experimental, built)
+
+Turns the extras into a table of guarded code patches and adds two fixes first
+measured on Pokitaru: the weapon update gets twice the C1 time step (A0 ran it
+twice per frame; Blaster fire rate was halved at 60 FPS), and the BlasterShot
+speed/lifetime formulas use 60 updates per second. An offline census places
+both in every normal level module; level 02 (already one pass per frame) is
+excluded from the time-step fix.
+
 ## Measurement notes
 
 - Debugger code writes in PPSSPP may be ignored by already-compiled JIT

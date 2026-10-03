@@ -16,8 +16,8 @@ counter F0 read at that first callback gives P = (F0+1) & 1 (GPT phase rule,
 research/v2/otto-flamer-static-20261003/REPORT.md); the breakpoint is removed
 before P is written. Apply right after switching to C1.
 
-FG-v4 extras: --extras MASK writes wg[0] (bit 0 LaserTracer flag + damage gates, bit 1
-AgentsGlove lifetime step -0.5), applied by the plugin in C1 only, independently of --mode;
+FG-v4/v5 extras: --extras MASK writes wg[0] (bit 0 LaserTracer flag + damage gates, bit 1
+AgentsGlove lifetime step -0.5, bit 2 weapon delta x2 (FG-v5), bit 3 BlasterShot 30->60 (FG-v5)), applied by the plugin in C1 only, independently of --mode;
 the phase is the same run parity (fg_ctl[5]). The decode shows sites, applied mask and counters.
 
 Usage:
@@ -45,13 +45,17 @@ WG_ERRORS = {0: "none", 1: "not C1", 2: "frame counter", 3: "laser sites", 4: "l
              5: "agent sites", 6: "agent word", 7: "verify", 8: "restore found foreign word"}
 
 
-def decode_wg(wg, base):
+def decode_wg(wg, base, lit=None):
     rva = lambda v: ("0x%X" % (v - base)) if v else None
-    return {"requested": wg[0], "applied": wg[1], "error": WG_ERRORS.get(wg[2], wg[2]), "applyCount": wg[3],
+    res = {"requested": wg[0], "applied": wg[1], "error": WG_ERRORS.get(wg[2], wg[2]), "applyCount": wg[3],
             "restoreCount": wg[4], "flagReaderRva": rva(wg[5]), "flagAddress": "0x%08X" % wg[6],
             "laserDamageRvas": [rva(x) for x in wg[7:7 + min(wg[11], 4)]], "laserDamageCount": wg[11],
             "agentStepRvas": [rva(wg[12]), rva(wg[13])], "flagRun": wg[14], "flagSkip": wg[15],
             "damageRun": wg[16], "damageSkip": wg[17], "runParity": wg[19]}
+    if lit is not None:
+        res["literals"] = [{"rva": rva(lit[4 * k]), "orig": "0x%08X" % lit[4 * k + 1], "new": "0x%08X" % lit[4 * k + 2],
+                            "bit": lit[4 * k + 3]} for k in range(min(wg[22], 16))]
+    return res
 
 
 def decode(man, w, ctl, gate, base, mod_addr):
@@ -96,7 +100,7 @@ def main():
     ap.add_argument("--mode", type=int, choices=(0, 1))
     ap.add_argument("--parity", type=int, choices=(0, 1))
     ap.add_argument("--auto-phase", action="store_true")
-    ap.add_argument("--extras", type=int, choices=(0, 1, 2, 3), help="FG-v4: wg[0] request mask")
+    ap.add_argument("--extras", type=int, choices=range(16), help="FG-v4/v5: wg[0] request mask")
     ap.add_argument("--hold", help="PSP button held while --auto-phase waits for a callback (e.g. circle)")
     ap.add_argument("--wait", type=float, default=2.0)
     ap.add_argument("--out", type=Path)
@@ -133,6 +137,9 @@ def main():
 
         def read_wg():
             return c.read(addr_of("wg"), 24) if "wg" in sym else None
+
+        def read_lit():
+            return c.read(addr_of("wg_lit"), 64) if "wg_lit" in sym else None
 
         w, ctl, gate = read_all()
         if w[0] != 0x30544746:
@@ -195,12 +202,13 @@ def main():
                 if wgv[1] == a.extras or wgv[2]:
                     break
         wgv = read_wg()
+        litv = read_lit()
         rcp1 = mods.get("rcp1", {})
     finally:
         c.close()
     res = decode(man, w, ctl, gate, rcp1.get("address", 0), lo)
     if wgv is not None:
-        res["extras"] = decode_wg(wgv, rcp1.get("address", 0))
+        res["extras"] = decode_wg(wgv, rcp1.get("address", 0), litv)
     res["utc"] = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
     res["writes"] = writes
     if a.map:

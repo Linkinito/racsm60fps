@@ -76,9 +76,18 @@ restores memory without it; test through a normal game/save load.
   offline census `research/scripts/scan-weapon-gate-sites.py`: flag writer,
   reader, 4 damage calls and the agent pair unique in LEVEL_01..10, 23, 24;
   absent in 15..22 (no LaserTracer/agents code with these shapes).
+- FG-v5 (2026-10-03, built and installed over FG-v4, NOT yet run): extras are a
+  table of guarded literal patches `wg_lit` (address, original, new, request
+  bit) plus the laser hooks; each write invalidates from the word before it
+  (delay slots compile with their branch). New bits: 2 weapon delta (the
+  weapon-update call's `mov.s f12,f20` at flag writer + 0x44 -> `add.s
+  f12,f20,f20`, only when the original loop limit is 2: never LEVEL_02),
+  3 BlasterShot speed/life 30.0 -> 60.0 (signatures generated offline from
+  LEVEL_01 by `research/scripts/make-offline-sigpack.py` into an ignored pack;
+  `build.py --extra-pack`). Census: research/v2/port-census-20261003/REPORT.md.
  (owner present): install over FG-v0, boot, confirm
 `frameCounter` matches the level map, then `--mode 1 --parity 1`, verify
 `gate.queryRun`/`querySkip` and `latchClear`/`latchRetain` alternate and count-multi shows the query call at
 30/s in C1 with update and ammo unchanged; `--mode 0` restores.
 
-Status: FG-v3 live-validated on Quodrona and Pokitaru (Flamethrower); FG-v4 extras BUILT_EXPERIMENTAL_NOT_RUNTIME_VALIDATED.
+Status: FG-v3 live-validated on Quodrona and Pokitaru (Flamethrower); FG-v4/FG-v5 extras BUILT_EXPERIMENTAL_NOT_RUNTIME_VALIDATED.

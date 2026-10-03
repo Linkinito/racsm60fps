@@ -36,6 +36,17 @@
  *  - Agents: the two agent-lifetime step literals `lui a2,0xBF80` (-1.0 per
  *    update) become `lui a2,0xBF00` (-0.5 per update).
  *
+ * FG-v5 (built, NOT runtime-validated): extras become a table of guarded
+ * literal patches wg_lit[] (address, original word, new word, request bit) plus
+ * the laser hooks. New bits: 2 = weapon delta (the `mov.s f12,f20` delay slot of
+ * the player loop's weapon-update call, flag writer + 0x44, becomes
+ * `add.s f12,f20,f20`: 2 x delta per C1 pass as A0's two passes; only when the
+ * module's original loop limit is 2, so never LEVEL_02), 3 = BlasterShot
+ * (speed and life formulas 30.0 -> 60.0, LEVEL_01 fixes.py `blastershot`,
+ * signatures generated offline from LEVEL_01 into the ignored build). Every
+ * literal write invalidates the instruction cache from the word before it
+ * (delay slots are compiled with their branch).
+ *
  * Signatures are generated at build time from a local signature pack (game code
  * words) into the ignored build directory; this source contains no game bytes.
  * Evidence: research/live-tests/pokitaru/flamer-001-20261003/REPORT.md,
@@ -46,10 +57,10 @@
 #include <stdint.h>
 #include "sigs.h"   /* generated: FG_SIG_COUNT, fg_sigs[], FG_SITE_*, FG_FC_COUNT, fg_fc_sigs[] */
 
-PSP_MODULE_INFO("FlamerGate", PSP_MODULE_USER, 0, 7);
+PSP_MODULE_INFO("FlamerGate", PSP_MODULE_USER, 0, 8);
 
 #define FG_MAGIC 0x30544746u  /* "FGT0": layout of fg_state unchanged since FG-v0 */
-#define FG_VERSION 6u   /* FG-v4: + LaserTracer / AgentsGlove extras (wg[]) */
+#define FG_VERSION 7u   /* FG-v5: extras as literal table + weapon delta + BlasterShot */
 /* Companion site patterns (authored MIPS encodings, LEVEL_01/LEVEL_10 verified):
  * damage: lw a0,0x64(s0); andi a0,a0,8; bne a0,zero,<skip>; swc1 f22,0x2C(sp)
  * age:    lw a0,8(s3);    addiu a0,a0,-1; bne a0,zero,<epilogue>; sw a0,8(s3) */
@@ -70,6 +81,10 @@ PSP_MODULE_INFO("FlamerGate", PSP_MODULE_USER, 0, 7);
 #define WG_LASER_JALR    0x0140F809u   /* jalr t2 */
 #define WG_AGENT_STEP    0x3C06BF80u   /* lui a2,0xBF80 (-1.0) */
 #define WG_AGENT_HALF    0x3C06BF00u   /* lui a2,0xBF00 (-0.5) */
+#define WG_MOVS_F12_F20  0x4600A306u   /* mov.s f12,f20 (weapon-update delta argument) */
+#define WG_ADDS_F12_2X   0x4614A300u   /* add.s f12,f20,f20 */
+#define WG_LOOP_LIMIT_2  0x2A240002u   /* slti a0,s1,2 (original two-pass player loop) */
+#define WG_MAX_LIT 16u
 #define FG_LOG "ms0:/PSP/PLUGINS/FlamerGate/log.txt"
 #ifndef FG_DEFAULT_MODE
 #define FG_DEFAULT_MODE 0u
@@ -102,9 +117,12 @@ volatile uint32_t fg_gate[24];
  *  4 restore count, 5 flag reader site, 6 flag address, 7..10 laser damage sites, 11 laser
  *  damage site count, 12 agent step site A, 13 agent step site B, 14 flag run, 15 flag skip,
  *  16 damage run, 17 damage skip, 18 frame-counter address, 19 run parity P,
- *  20 original reader word 0, 21 original reader word 1. */
+ *  20 original reader word 0, 21 original reader word 1, 22 literal patch count (wg_lit).
+ *  Request bits: 0 laser hooks, 1 agents lifetime, 2 weapon delta, 3 BlasterShot. */
 #define WG_MAX_DMG 4u
 volatile uint32_t wg[24];
+/* Guarded literal patches: {address, original word, new word, request bit}; wg[22] = count. */
+volatile uint32_t wg_lit[WG_MAX_LIT][4];
 extern void wg_flag_hook(void);
 extern uint32_t wg_flag_return[];
 extern void wg_dmg_hook(void);
@@ -210,6 +228,13 @@ static uint32_t read_code(uint32_t addr) {
     return *(volatile uint32_t *)(uintptr_t)addr;
 }
 
+static void add_lit(uint32_t addr, uint32_t orig, uint32_t repl, uint32_t bit) {
+    uint32_t k = wg[22];
+    if (k >= WG_MAX_LIT) return;
+    wg_lit[k][0] = addr; wg_lit[k][1] = orig; wg_lit[k][2] = repl; wg_lit[k][3] = bit;
+    wg[22] = k + 1u;
+}
+
 /* FG-v4: locate the LaserTracer flag reader, the beam damage calls and the agent
  * lifetime step literals. Each result must be unique (damage calls: 1..4 within
  * 0x2000 bytes), else that extra stays unavailable. */
@@ -217,6 +242,7 @@ static void scan_extras(uint32_t text_addr, uint32_t text_size) {
     const uint32_t *text = (const uint32_t *)(uintptr_t)text_addr;
     uint32_t nwords = text_size / 4u;
     for (int k = 5; k <= 13; ++k) wg[k] = 0u;
+    wg[22] = 0u;
     /* flag writer: sltiu a0,s1,1 ; sb a0,lo(s2) with a preceding lui s2,hi */
     uint32_t flag = 0, nw = 0;
     for (uint32_t i = 12; i + 1 < nwords; ++i)
@@ -266,6 +292,27 @@ static void scan_extras(uint32_t text_addr, uint32_t text_size) {
     }
     wg[12] = (na == 1u) ? sa : 0u; wg[13] = (na == 1u) ? sb : 0u;
     log_line("wg-agentLife", na == 1u ? sa - text_addr : 0xFFFFFFFFu, na);
+    if (na == 1u) { add_lit(sa, WG_AGENT_STEP, WG_AGENT_HALF, 1u); add_lit(sb, WG_AGENT_STEP, WG_AGENT_HALF, 1u); }
+    /* weapon delta: flag writer + 0x44 = mov.s f12,f20 after a jal; original loop limit at writer + 0x4C */
+    {
+        uint32_t wd = 0;
+        for (uint32_t i = 12; i + 20 < nwords; ++i)
+            if (text[i] == WG_SLTIU_A0_S1_1 && (text[i + 1] & 0xFFFF0000u) == 0xA2440000u
+                && text[i + 17] == WG_MOVS_F12_F20 && (text[i + 16] >> 26) == 0x03u && text[i + 19] == WG_LOOP_LIMIT_2) {
+                wd = wd ? 0xFFFFFFFFu : text_addr + 4u * (i + 17);
+            }
+        if (wd && wd != 0xFFFFFFFFu) add_lit(wd, WG_MOVS_F12_F20, WG_ADDS_F12_2X, 2u);
+        log_line("wg-weaponDelta", (wd && wd != 0xFFFFFFFFu) ? wd - text_addr : 0xFFFFFFFFu, wd ? 1u : 0u);
+    }
+#ifdef WG_LSIG_COUNT
+    /* offline-generated literal signatures (sigs.h) */
+    for (uint32_t s2 = 0; s2 < WG_LSIG_COUNT; ++s2) {
+        uint32_t addr = 0, n = find_sig(text, nwords, &wg_lsigs[s2].sig, &addr);
+        if (n == 1u && *(const uint32_t *)(uintptr_t)addr == wg_lsigs[s2].orig)
+            add_lit(addr, wg_lsigs[s2].orig, wg_lsigs[s2].repl, wg_lsigs[s2].bit);
+        log_line(wg_lsigs[s2].sig.name, n == 1u ? addr - text_addr : 0xFFFFFFFFu, n);
+    }
+#endif
 }
 
 static void scan(uint32_t text_addr, uint32_t text_size) {
@@ -488,14 +535,11 @@ static void restore_extras(void) {
             else if (w != WG_LASER_JALR) foreign = 1;
         }
     }
-    if (wg[1] & 2u) {
-        for (int k = 12; k <= 13; ++k) {
-            uint32_t a = wg[k];
-            if (!a) continue;
-            uint32_t w = read_code(a);
-            if (w == WG_AGENT_HALF) { *(volatile uint32_t *)(uintptr_t)a = WG_AGENT_STEP; sync_icache(a); }
-            else if (w != WG_AGENT_STEP) foreign = 1;
-        }
+    for (uint32_t k = 0; k < wg[22]; ++k) {
+        if (!(wg[1] & (1u << wg_lit[k][3]))) continue;
+        uint32_t a = wg_lit[k][0], w = read_code(a);
+        if (w == wg_lit[k][2]) { *(volatile uint32_t *)(uintptr_t)a = wg_lit[k][1]; sync_icache(a - 4u); }
+        else if (w != wg_lit[k][1]) foreign = 1;
     }
     if (wg[1]) { wg[4] += 1u; log_line("wg-off", wg[1], wg[15]); }
     wg[1] = 0u;
@@ -504,7 +548,7 @@ static void restore_extras(void) {
 
 /* Install (C1 only) or remove the requested extras; all checks before any write. */
 static void reconcile_extras(void) {
-    uint32_t want = wg[0] & 3u;
+    uint32_t want = wg[0] & 0xFu;
     int c1 = level_is_c1();
     wg[19] = fg_ctl[5] & 1u;
     if (wg[1]) {
@@ -530,11 +574,18 @@ static void reconcile_extras(void) {
         }
         wg[20] = w0; wg[21] = w1;
     }
-    if (want & 2u) {
-        if (!wg[12] || !wg[13]) { wg[2] = WG_ERR_AGENT_SITES; return; }
-        if (read_code(wg[12]) != WG_AGENT_STEP || read_code(wg[13]) != WG_AGENT_STEP) {
-            wg[2] = WG_ERR_AGENT_WORD; log_line("wg-refused-agent", read_code(wg[12]), read_code(wg[13])); return;
+    for (uint32_t b = 1; b < 4u; ++b) {
+        if (!(want & (1u << b))) continue;
+        uint32_t found = 0;
+        for (uint32_t k = 0; k < wg[22]; ++k) {
+            if (wg_lit[k][3] != b) continue;
+            ++found;
+            uint32_t w = read_code(wg_lit[k][0]);
+            if (w != wg_lit[k][1] || is_branch_or_jump(w)) {
+                wg[2] = WG_ERR_AGENT_WORD; log_line("wg-refused-lit", wg_lit[k][0], w); return;
+            }
         }
+        if (!found) { wg[2] = WG_ERR_AGENT_SITES; log_line("wg-missing-lit", b, 0); return; }
     }
     for (int k = 14; k <= 17; ++k) wg[k] = 0u;
     if (want & 1u) {
@@ -550,11 +601,10 @@ static void reconcile_extras(void) {
             read_code(a); *(volatile uint32_t *)(uintptr_t)a = jal_word((uint32_t)(uintptr_t)wg_dmg_hook); sync_icache(a);
         }
     }
-    if (want & 2u) {
-        for (int k = 12; k <= 13; ++k) {
-            uint32_t a = wg[k];
-            read_code(a); *(volatile uint32_t *)(uintptr_t)a = WG_AGENT_HALF; sync_icache(a);
-        }
+    for (uint32_t k = 0; k < wg[22]; ++k) {
+        if (!(want & (1u << wg_lit[k][3]))) continue;
+        uint32_t a = wg_lit[k][0];
+        read_code(a); *(volatile uint32_t *)(uintptr_t)a = wg_lit[k][2]; sync_icache(a - 4u);
     }
     wg[1] = want; wg[3] += 1u;
     int bad = 0;
@@ -563,7 +613,8 @@ static void reconcile_extras(void) {
         for (uint32_t k = 0; k < wg[11]; ++k)
             if (read_code(wg[7 + k]) != jal_word((uint32_t)(uintptr_t)wg_dmg_hook)) bad = 1;
     }
-    if ((want & 2u) && (read_code(wg[12]) != WG_AGENT_HALF || read_code(wg[13]) != WG_AGENT_HALF)) bad = 1;
+    for (uint32_t k = 0; k < wg[22]; ++k)
+        if ((want & (1u << wg_lit[k][3])) && read_code(wg_lit[k][0]) != wg_lit[k][2]) bad = 1;
     if (bad) { restore_extras(); wg[2] = WG_ERR_VERIFY; log_line("wg-verify-failed", want, 0); return; }
     wg[2] = WG_ERR_NONE;
     log_line("wg-on", want, wg[19]);
@@ -610,7 +661,7 @@ int module_start(SceSize args, void *argp) {
     (void)args; (void)argp;
     fg_state[0] = FG_MAGIC; fg_state[1] = FG_VERSION;
     fg_ctl[0] = FG_DEFAULT_MODE; fg_ctl[5] = 1u;
-    log_line("FlamerGate-FG-v4", FG_DEFAULT_MODE, FG_SIG_COUNT);
+    log_line("FlamerGate-FG-v5", FG_DEFAULT_MODE, FG_SIG_COUNT);
     SceUID th = sceKernelCreateThread("FlamerGate", fg_thread, 0x6F, 0x1000, 0, NULL);
     if (th >= 0) sceKernelStartThread(th, 0, NULL);
     return 0;
