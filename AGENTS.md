@@ -44,6 +44,10 @@ not authorize bulk publication of v2-research or any game-derived raw evidence.
 - Never commit game-derived content on any branch: game PRX/ISO, SAVEDATA,
   memory captures, disassembly listings, string dumps, zips of those.
   v2-research is local-only; only main is public. docs/PUBLICATION_POLICY.md.
+  Before every main push run tools/publish/check_publication.py --staged.
+- Before live experiments, probes or patches read research/GOTCHAS.md; add
+  new traps there. New reports start with front matter
+  (docs/methodology/REPORT_FRONT_MATTER.md); do not rewrite old reports.
 
 ## Research ownership and reading budget
 Owner decision, 2026-10-03: GPT owns function decompilation and Ghidra annotations;

@@ -34,7 +34,19 @@ generation method and hashes in Git so they can be regenerated.
 
 To update `main`, copy an explicit file allowlist from `v2-research`
 (`git checkout v2-research -- <paths>` on `main`). Review the staged list,
-then commit and push.
+run the pre-publication checker, then commit and push:
+
+```sh
+python tools/publish/check_publication.py --staged
+```
+
+It fails on forbidden paths/extensions, files over 5 MB, unexpected binaries,
+secrets and disassembly-like listings or hex dumps beyond short excerpts. It
+warns on files under `research/` (publish only with explicit owner approval per
+file), absolute user paths, e-mail addresses, byte-signature strings, images
+and large files. Warnings need a decision, not silence; `--strict` turns them
+into failures. The checker is a safety net, not a substitute for reading the
+staged list. Tests: `python -m unittest discover -s tools/publish/tests`.
 
 ## 2026-09-30 cleanup record
 
