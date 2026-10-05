@@ -1,0 +1,348 @@
+{
+  "schema": 1,
+  "date": "2026-10-06",
+  "game": "UCES00420",
+  "boundary": "Authored enumeration; not a whole-game completeness or parity claim",
+  "inventory_entries": [
+    {
+      "inventory_id": 0,
+      "internal_label": "sentinel",
+      "category": "sentinel",
+      "declared_rank_domain": "0",
+      "evidence": "OBSERVED",
+      "behavioral_parity": "UNKNOWN",
+      "report": "WEAPONS.md"
+    },
+    {
+      "inventory_id": 1,
+      "internal_label": "Wrench",
+      "category": "combat_family",
+      "declared_rank_domain": "0",
+      "evidence": "OBSERVED",
+      "behavioral_parity": "UNKNOWN",
+      "report": "WEAPONS.md"
+    },
+    {
+      "inventory_id": 2,
+      "internal_label": "Blaster",
+      "category": "combat_family",
+      "declared_rank_domain": "0..7",
+      "evidence": "OBSERVED",
+      "behavioral_parity": "UNKNOWN",
+      "report": "WEAPONS.md"
+    },
+    {
+      "inventory_id": 3,
+      "internal_label": "BlitzGun",
+      "category": "combat_family",
+      "declared_rank_domain": "0..7",
+      "evidence": "OBSERVED",
+      "behavioral_parity": "UNKNOWN",
+      "report": "WEAPONS.md"
+    },
+    {
+      "inventory_id": 4,
+      "internal_label": "BombGlove",
+      "category": "combat_family",
+      "declared_rank_domain": "0..7",
+      "evidence": "OBSERVED",
+      "behavioral_parity": "UNKNOWN",
+      "report": "WEAPONS.md"
+    },
+    {
+      "inventory_id": 5,
+      "internal_label": "AgentsGlove",
+      "category": "combat_family",
+      "declared_rank_domain": "0..7",
+      "evidence": "OBSERVED",
+      "behavioral_parity": "UNKNOWN",
+      "report": "WEAPONS.md"
+    },
+    {
+      "inventory_id": 6,
+      "internal_label": "BeeMineGlove",
+      "category": "combat_family",
+      "declared_rank_domain": "0..7",
+      "evidence": "OBSERVED",
+      "behavioral_parity": "UNKNOWN",
+      "report": "WEAPONS.md"
+    },
+    {
+      "inventory_id": 7,
+      "internal_label": "ShieldCharger",
+      "category": "combat_family",
+      "declared_rank_domain": "0..7",
+      "evidence": "OBSERVED",
+      "behavioral_parity": "UNKNOWN",
+      "report": "WEAPONS.md"
+    },
+    {
+      "inventory_id": 8,
+      "internal_label": "ShockRocket",
+      "category": "combat_family",
+      "declared_rank_domain": "0..7",
+      "evidence": "OBSERVED",
+      "behavioral_parity": "UNKNOWN",
+      "report": "WEAPONS.md"
+    },
+    {
+      "inventory_id": 9,
+      "internal_label": "CrossbowGun",
+      "category": "combat_family",
+      "declared_rank_domain": "0..7",
+      "evidence": "OBSERVED",
+      "behavioral_parity": "UNKNOWN",
+      "report": "WEAPONS.md"
+    },
+    {
+      "inventory_id": 10,
+      "internal_label": "Flamethrower",
+      "category": "combat_family",
+      "declared_rank_domain": "0..7",
+      "evidence": "OBSERVED",
+      "behavioral_parity": "UNKNOWN",
+      "report": "WEAPONS.md"
+    },
+    {
+      "inventory_id": 11,
+      "internal_label": "LaserTracer",
+      "category": "combat_family",
+      "declared_rank_domain": "0..7",
+      "evidence": "OBSERVED",
+      "behavioral_parity": "UNKNOWN",
+      "report": "WEAPONS.md"
+    },
+    {
+      "inventory_id": 12,
+      "internal_label": "SuckCannon",
+      "category": "combat_family",
+      "declared_rank_domain": "0..7",
+      "evidence": "OBSERVED",
+      "behavioral_parity": "UNKNOWN",
+      "report": "WEAPONS.md"
+    },
+    {
+      "inventory_id": 13,
+      "internal_label": "Mootator",
+      "category": "combat_family",
+      "declared_rank_domain": "0..7",
+      "evidence": "OBSERVED",
+      "behavioral_parity": "UNKNOWN",
+      "report": "WEAPONS.md"
+    },
+    {
+      "inventory_id": 14,
+      "internal_label": "MiniTurretGlove",
+      "category": "combat_family",
+      "declared_rank_domain": "0",
+      "evidence": "OBSERVED",
+      "behavioral_parity": "UNKNOWN",
+      "report": "WEAPONS.md"
+    },
+    {
+      "inventory_id": 15,
+      "internal_label": "Ryno",
+      "category": "combat_family",
+      "declared_rank_domain": "0..3",
+      "evidence": "OBSERVED",
+      "behavioral_parity": "UNKNOWN",
+      "report": "WEAPONS.md"
+    },
+    {
+      "inventory_id": 16,
+      "internal_label": "Hypershot",
+      "category": "active_gadget",
+      "declared_rank_domain": "0",
+      "evidence": "OBSERVED",
+      "behavioral_parity": "UNKNOWN",
+      "report": "WEAPONS.md"
+    },
+    {
+      "inventory_id": 17,
+      "internal_label": "Sproutomatic",
+      "category": "active_gadget",
+      "declared_rank_domain": "0",
+      "evidence": "OBSERVED",
+      "behavioral_parity": "UNKNOWN",
+      "report": "WEAPONS.md"
+    },
+    {
+      "inventory_id": 18,
+      "internal_label": "Polarizer",
+      "category": "active_gadget",
+      "declared_rank_domain": "0",
+      "evidence": "OBSERVED",
+      "behavioral_parity": "UNKNOWN",
+      "report": "WEAPONS.md"
+    },
+    {
+      "inventory_id": 19,
+      "internal_label": "PDA",
+      "category": "active_gadget",
+      "declared_rank_domain": "0",
+      "evidence": "OBSERVED",
+      "behavioral_parity": "UNKNOWN",
+      "report": "WEAPONS.md"
+    },
+    {
+      "inventory_id": 20,
+      "internal_label": "Shrinkray",
+      "category": "passive_equipment",
+      "declared_rank_domain": "0",
+      "evidence": "OBSERVED",
+      "behavioral_parity": "UNKNOWN",
+      "report": "WEAPONS.md"
+    },
+    {
+      "inventory_id": 21,
+      "internal_label": "Boltgrabber",
+      "category": "passive_equipment",
+      "declared_rank_domain": "0",
+      "evidence": "OBSERVED",
+      "behavioral_parity": "UNKNOWN",
+      "report": "WEAPONS.md"
+    },
+    {
+      "inventory_id": 22,
+      "internal_label": "Grindboots",
+      "category": "passive_equipment",
+      "declared_rank_domain": "0",
+      "evidence": "OBSERVED",
+      "behavioral_parity": "UNKNOWN",
+      "report": "WEAPONS.md"
+    },
+    {
+      "inventory_id": 23,
+      "internal_label": "Mapomatic",
+      "category": "passive_equipment",
+      "declared_rank_domain": "0",
+      "evidence": "OBSERVED",
+      "behavioral_parity": "UNKNOWN",
+      "report": "WEAPONS.md"
+    },
+    {
+      "inventory_id": 24,
+      "internal_label": "Boxbreaker",
+      "category": "passive_equipment",
+      "declared_rank_domain": "0",
+      "evidence": "OBSERVED",
+      "behavioral_parity": "UNKNOWN",
+      "report": "WEAPONS.md"
+    }
+  ],
+  "registered_level01_receiver_rows": 19,
+  "domains": [
+    {
+      "id": "common_dispatch",
+      "report": "REPORT.md",
+      "observed_contract": "selected, zero-scalar and area delivery",
+      "unresolved": "ABI and accepted counts",
+      "behavioral_parity": "UNKNOWN"
+    },
+    {
+      "id": "ratchet",
+      "report": "REPORT.md",
+      "observed_contract": "ordered gates, HP, armor, type10 and suppression",
+      "unresolved": "live boundary and group/source identity",
+      "behavioral_parity": "UNKNOWN"
+    },
+    {
+      "id": "armor",
+      "report": "REPORT.md",
+      "observed_contract": "four-piece sum and fourteen offensive/passive combos",
+      "unresolved": "child damage and passive cadence",
+      "behavioral_parity": "UNKNOWN"
+    },
+    {
+      "id": "registered_receivers_level01",
+      "report": "REPORT.md",
+      "observed_contract": "nineteen non-null descriptor rows",
+      "unresolved": "other modules and indirect group callbacks",
+      "behavioral_parity": "UNKNOWN"
+    },
+    {
+      "id": "hazards",
+      "report": "REPORT.md",
+      "observed_contract": "surface, Fire, grind and Sharkagator routes",
+      "unresolved": "scene scripts and upstream attack admission",
+      "behavioral_parity": "UNKNOWN"
+    },
+    {
+      "id": "death_recovery",
+      "report": "REPORT.md",
+      "observed_contract": "distinct HP exhaustion and state requests",
+      "unresolved": "actual death/checkpoint timing",
+      "behavioral_parity": "UNKNOWN"
+    },
+    {
+      "id": "onfoot_clank",
+      "report": "CLANK_MINIGAMES.md",
+      "observed_contract": "active forwarding and alternate form",
+      "unresolved": "constructor and state21 binding",
+      "behavioral_parity": "UNKNOWN"
+    },
+    {
+      "id": "clank_bots",
+      "report": "CLANK_MINIGAMES.md",
+      "observed_contract": "scalar-independent state17 request",
+      "unresolved": "lifecycle/controller consequence",
+      "behavioral_parity": "UNKNOWN"
+    },
+    {
+      "id": "flinger",
+      "report": "CLANK_MINIGAMES.md",
+      "observed_contract": "magnitude conversion and local timer",
+      "unresolved": "19AE0C consequence",
+      "behavioral_parity": "UNKNOWN"
+    },
+    {
+      "id": "derby_torsos",
+      "report": "CLANK_MINIGAMES.md",
+      "observed_contract": "direct player HP and local admission",
+      "unresolved": "armor/takeover and per-module cadence",
+      "behavioral_parity": "UNKNOWN"
+    },
+    {
+      "id": "vehicle_ordnance",
+      "report": "CLANK_MINIGAMES.md",
+      "observed_contract": "mine event and missile impact/expiry",
+      "unresolved": "193A84 and 1932E4 payload/filtering",
+      "behavioral_parity": "UNKNOWN"
+    },
+    {
+      "id": "microbot",
+      "report": "CLANK_MINIGAMES.md",
+      "observed_contract": "controller boundary and toss fuse/blink",
+      "unresolved": "full SurvivalBot and result/explosion",
+      "behavioral_parity": "UNKNOWN"
+    },
+    {
+      "id": "giant_clank_combat",
+      "report": "CLANK_MINIGAMES.md",
+      "observed_contract": "local HP and rocket tuple/expiry",
+      "unresolved": "upstream filters and launch/flight",
+      "behavioral_parity": "UNKNOWN"
+    },
+    {
+      "id": "gcs_flight",
+      "report": "CLANK_MINIGAMES.md",
+      "observed_contract": "resource cap, replenishment and state request",
+      "unresolved": "loss writers and virtual state3",
+      "behavioral_parity": "UNKNOWN"
+    },
+    {
+      "id": "skyboard",
+      "report": "CLANK_MINIGAMES.md",
+      "observed_contract": "separate mine effect branches",
+      "unresolved": "crash, respawn, sentry and boundary",
+      "behavioral_parity": "UNKNOWN"
+    },
+    {
+      "id": "multiplayer",
+      "report": "CLANK_MINIGAMES.md",
+      "observed_contract": "distinct targets and original one-substep loop",
+      "unresolved": "authority/team/receiver/turret semantics",
+      "behavioral_parity": "UNKNOWN"
+    }
+  ]
+}

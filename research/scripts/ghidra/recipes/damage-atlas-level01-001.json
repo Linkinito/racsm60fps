@@ -1,0 +1,7 @@
+{
+  "functions": [
+    {"rva":"0x38540", "entryEvidence":"Previously instruction-reviewed global player damage receiver"},
+    {"rva":"0x31B64", "entryEvidence":"Sharkagator16AFD4 directly requests death through this helper"},
+    {"rva":"0x4C2C0", "entryEvidence":"Direct health drain called by grind collision4C660/4DB6C"}
+  ]
+}

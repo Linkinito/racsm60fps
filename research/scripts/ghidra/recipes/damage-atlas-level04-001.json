@@ -1,0 +1,9 @@
+{
+  "functions": [
+    {"rva":"0x12A6A0", "entryEvidence":"Native ClankBotFlingerVehicle slot3"},
+    {"rva":"0x19AE0C", "entryEvidence":"Direct call at ClankBotFlingerVehicle receiver12A748"},
+    {"rva":"0x15B8BC", "entryEvidence":"Native MicroBotSurvival update slot"},
+    {"rva":"0x15DCE0", "entryEvidence":"Direct call at MicrobotTossBomb expiry15D9A8"},
+    {"rva":"0x12C850", "entryEvidence":"Native ClankRamTorso slot3"}
+  ]
+}

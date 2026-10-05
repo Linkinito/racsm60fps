@@ -1,0 +1,10 @@
+{
+  "functions": [
+    {"rva":"0xD736C", "entryEvidence":"Native GCS descriptor update slot"},
+    {"rva":"0xD6094", "entryEvidence":"Direct call at GCS update D7524"},
+    {"rva":"0xD67CC", "entryEvidence":"Direct call at GCS update D7620"},
+    {"rva":"0xD6AE0", "entryEvidence":"Direct call at GCS update D75F8"},
+    {"rva":"0x10C81C", "entryEvidence":"Direct call at GCS update D7608"},
+    {"rva":"0xD6F60", "entryEvidence":"GCS update D74C8 registers callback for event7"}
+  ]
+}

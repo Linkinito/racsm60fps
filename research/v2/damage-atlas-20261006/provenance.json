@@ -1,0 +1,55 @@
+{
+  "schema": 1,
+  "date": "2026-10-06",
+  "method": "hash reviewed project-authored UTF-8 inputs with canonical LF newlines",
+  "files": [
+    {
+      "path": "research/v2/damage-atlas-20261006/REPORT.md",
+      "sha256": "c84ad64acc1d3cd0acabda3f4fc2aa843ab28facccd515eebacd0b0aca8c73bd"
+    },
+    {
+      "path": "research/v2/damage-atlas-20261006/WEAPONS.md",
+      "sha256": "254c198756b35ac9a0293f3ace569adc24cacd979261658a5e004df91ca26e05"
+    },
+    {
+      "path": "research/v2/damage-atlas-20261006/CLANK_MINIGAMES.md",
+      "sha256": "e124401cf24c94380ca1cc71f7cd43044972de416464005c39187040537de761"
+    },
+    {
+      "path": "research/v2/damage-atlas-20261006/COVERAGE.md",
+      "sha256": "108bc554836f4295819509092da5a4e6c949f29f3195c61597dcdeedf93abf9c"
+    },
+    {
+      "path": "research/v2/damage-atlas-20261006/METHOD.md",
+      "sha256": "72e7edfecd9d044d9665f673f5449ec56802554e5ffaac22b7283cb0b2e329d2"
+    },
+    {
+      "path": "research/scripts/build-damage-atlas.py",
+      "sha256": "9518ebfc7cd041497bf862cbe092c2f949e0adef84e7335b1627731cb73cc0c2"
+    },
+    {
+      "path": "research/scripts/ghidra/ExportDamageSlice.java",
+      "sha256": "b3ee5ca84f14c002d7aa530fef09fa1ad4bde9e01079b399589b1f8bd3a519c5"
+    },
+    {
+      "path": "research/scripts/ghidra/recipes/damage-atlas-level01-001.json",
+      "sha256": "09646fa66464941ce37a4b156e3e7fd331d05f0882259e03396d10f8f456c2de"
+    },
+    {
+      "path": "research/scripts/ghidra/recipes/damage-atlas-level04-001.json",
+      "sha256": "5deb400e98c7c54b4bf1040d2b061983c7b7153e5af1cf9afca37f8aa77843a9"
+    },
+    {
+      "path": "research/scripts/ghidra/recipes/damage-atlas-level15-001.json",
+      "sha256": "ad7326bb97dfcb6e5cac6b28e46db9d12fe30f569da0f7645f23553636a23586"
+    },
+    {
+      "path": "research/tasks/gpt-damage-atlas-20261006.md",
+      "sha256": "8c0fdc55ad94077aeec5b43a8861f1bd006890f64649496b958970169cbc0764"
+    },
+    {
+      "path": "research/v2/damage-atlas-20261006/coverage.json",
+      "sha256": "f49286f681161271423dfba966be7c27752fb631b6223bcae2f26e9fe3e6b37a"
+    }
+  ]
+}
