@@ -235,13 +235,143 @@ scalar>1e-5 in its inactive spatial branch, then uses position/transform for
 proximity/orientation. Decoy's scalar0 fails this guard. Conditional suppression
 of that branch is INFERRED; controller-trigger/already-active paths can still
 move the bush. No damage dispatch/HP subtraction in the reviewed consumer;
-canonical ShakeyBush context supports identity. Enemy diversion remains UNKNOWN.
+canonical ShakeyBush context supports identity. Enemy diversion was UNKNOWN
+at this pass; the selected closure below supersedes that uncertainty for one
+concrete enemy chain.
 
-Five setter C files/one consumer and three native windows form this bounded
-pass; hashes in provenance.json. Concrete14908 caller **181C18** was located
-but **not opened** within that budget. Next read that single consumer and bind
-its class from existing canonical evidence; it may be another presentation/
-collision use. No global enemy targeting search or live acceptance.
+Five setter C files/one consumer and three native windows formed the first
+bounded pass. Concrete14908 caller **181C18** was located but not opened then.
+The continuation below follows that exact caller; no global targeting census
+or live acceptance was performed. Input hashes are retained in provenance.json.
+
+## 2.6 A concrete enemy aim consumer: TMRobotTorsoB and TorsoAShot
+
+**OBSERVED/CORROBORATED static chain, INFERRED conditional diversion:** decoy
+163FF4 writes shared snapshot -> TMRobotTorsoB reads it for alert/selection ->
+181C18 state entry15/16 uses adjusted14908 position -> cached block58+44 target ->
+17ED8C paired muzzle shots ->17FE40 direction/creation -> TorsoAShot collision
+182C50 calls the target's receiver. This is a concrete attack consequence,
+beyond the earlier non-damage bush consumer. Actual decoy attraction, scheduler
+order, legal encounter coverage and damage prevention remain UNKNOWN in game.
+
+Existing LEVEL01 canonical context plus clean native descriptor2D8B90 bind
+TMRobotTorsoB init1803D4, cleanup17ECCC, update180970, receiver17E974;
+recorded block sizes60/7C. Descriptor2D8D44 binds TorsoAShot init182E94,
+cleanup1826CC, update1827C4, registered receiverNULL, block sizes18/1C. This named projectile is
+used by the selected **TorsoB** firing helper despite the **TorsoAShot** name.
+No other module/class is inferred from a shared numerical RVA.
+
+### Alert, selection and cached aim
+
+Update180970 takes supplied delta in f12 and actor in a0. Define block54 as
+*(actor+54), block58 as *(actor+58); these are distinct pointers, not inline
+actor fields. It copies the shared four-float position through14890 before
+its state switch. Both17F570 alert eligibility and17F6C4 attack selection use
+that snapshot's XZ position, configured detection trigger block54+38 and squared
+distance against block54+44 squared. An optional alert trigger block54+3C is cleared on
+successful eligibility. These checks do not inspect shared auxiliary scalarA0,
+so decoy's scalar0 that blocks the bush branch does **not** block these checks.
+
+17F6C4 also checks configured no-create trigger block54+1C. Its positive overlap
+selects15; other branches select17,13,D or15 from squared distances. Clean
+2D8AD4=2.25,2D8ADC=2.25 and2D8AD8=0 mean the ordinary non-trigger branch
+requiring distanceSquared>2.25 and<=0 cannot select15 under these values.
+Runtime writers/reachability are UNKNOWN. Do not assume every alerted robot
+enters the selected shot state or that all distance thresholds are patched.
+
+181C18 returns on a same-state request. Entry15 queries both transformed muzzle
+positions against14908's adjusted snapshot, temporarily changing a collider
+flag around each2160C query. Either zero query result requests17 instead.
+The line-of-sight interpretation is INFERRED; exact geometry semantics remain
+bounded to that helper result. After animation completion, update state15
+requests16. Entry16 captures14908 into **block58+44..4C**, resets block54+5C
+byte0 and starts animation1. The cached vector in block58 is distinct from the
+scalar alert radius at block54+44; identical relative offsets do not alias.
+
+14908 first copies shared position, conditionally substitutes Y when registered
+pointer3696AC equals global337ED4, then adds shared vertical offset3696B0.
+The global equality branch's actor meaning remains UNKNOWN here. The decoy
+setter copied offset~0.6; this is an adjusted point, not guaranteed moby origin.
+
+State16 invokes17ED8C before re-evaluating selection17F6C4. Its firing helper
+does **not** refresh the shared snapshot: it uses cached block58+44..4C. A decoy
+registered after entry16 need not redirect an already prepared burst. State1B
+can instead aim at configured actor block54+48 and state1D at configured curve block54+50;
+those selected fixed-target paths use17FD6C. Shared-snapshot influence is thus
+not established for every attack state.
+
+### Paired firing and projectile motion
+
+17ED8C admits one pair when block54+5C<2 and current animation time reaches the
+indexed clean thresholds2D8A54~0.16666667/2D8A58~0.7. It checks both muzzle-to-
+cached-target geometry results; either zero requests12 and returns. Otherwise
+it calls17FE40 twice and increments block54+5C **once**, even if allocation fails.
+Up to two successful admitted pairs means up to four creation attempts, not
+four guaranteed live hits. Animation completion requests14. Thresholds are
+animation-time inputs, not measured seconds or rendering-frame cadence.
+
+17FE40 forms direction from target minus muzzle, normalizes nondegenerate
+vectors, constructs an orientation basis and looks up class hash702BF650.
+Successful allocation calls182BB8 with actor=shot, shooter=robot, controller=
+robot block54+0 and **f12=7.5** from2D8B30. This value is **speed input, not damage**:
+182BB8 stores shooter/block54+4 and controller/block54+8, multiplies f12 by216B0's
+f0 factor and stores block54+14 speed. That factor is1/.9/.8/.7 for the getter's
+mode selection; retail setting names remain UNKNOWN. Constructor computes
+world collision distance using speed*5 through1B4F0, or stores1000 on no hit.
+
+TorsoAShot update requires actor flags64 bit1. Age=moby70 adds supplied delta;
+age>=clean2D8DA4=5 deletes **before** movement/contact for that call. Otherwise
+position and traveled block54+10 advance by speed*delta along actor direction20..28,
+and attached presentation elements follow. This projectile motion is delta-
+based, unlike several fixed-per-call weapon children. Five is a logical age
+limit; measured wall duration and initial age/dispatcher cadence remain open.
+
+### Contact payload and rejection consumption
+
+182C50 returns-1 when saved shooter block54+4 isNULL. Otherwise it queries the
+segment from previous position to current position plus forward lookahead;
+clean2D8DAC=0, so this snapshot has no additional forward extension. Query1750C
+uses parameter10 and settings129/101/3E/1; their complete filters/order are
+UNKNOWN. It iterates returned entries until the first nonNULL actor with a
+nonNULL registered receiver, then returns that receiver's result immediately.
+
+Native182E18..182E3C resolves the floating ABI:
+
+- f12=damage table float at **2CC124+(global2CC588-1)*40+column*10**;
+  all address/stride literals here are hexadecimal.22854 selects column0/1
+  from helper22898 and a global flag, not an observed retail difficulty label.
+- a0=target, a1=type1, a2=reaction1, a3=shot position, t0=shot direction,
+  **t1=shot actor**, not the saved robot pointer.
+
+Selected table row, runtime scalar, recipient filtering and resulting HP loss
+remain UNKNOWN.7.5 must not be published as damage. There is no scalar division
+or proof of a one-shot in this local projectile body.
+
+Without a receiver contact, traveled>=saved world distance returns4; otherwise
+returns-1. Update deletes for **any result except-1**, including ordinary
+receiver rejection0. Result4 suppresses one spark branch; other results add
+presentation particles before deletion. Rejected damage can therefore still
+consume the projectile. A receiver returning-1 is not established here.
+Cleanup releases attached presentation objects; no additional damage dispatch
+was found in that reviewed cleanup body.
+
+### Changed hypothesis, reproduction and minimal experiment
+
+Enemy diversion UNKNOWN is SUPERSEDED only for this scoped static consumer
+chain; conditional snapshot-to-aim influence is CORROBORATED. Whole-enemy
+coverage and live diversion remain UNKNOWN. Thirteen additional native windows
+and sixteen additional pre-existing C inputs are pinned by recipe
+damage-followup-decoy-ai-001 / local decoy-ai-002 and provenance.json. The earlier
+decoy-ai-001 raw output is preserved; no source import, matching or patch.
+
+Claude: use one exact TorsoB instance with fixed scene/trigger setup. Compare
+no decoy, decoy present **before state16 entry**, and decoy introduced afterward.
+Record shared pointer/position at consumption, state45, block58+44..4C cached aim,
+block54+5C pair count, animation time, both geometry-query results, projectile spawn
+count/direction/speed/delta/age, query recipient, packet/source and receiver
+result/HP. Add an admitted versus rejected recipient test to verify deletion.
+Repeat A0/B/C with identical setup; infer neither timing correction nor broad
+damage immunity from aim redirection alone.
 
 # 3. LEVEL24 MiniTurret chain
 

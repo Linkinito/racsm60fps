@@ -5,7 +5,7 @@ date: 2026-10-06
 authors: ["GPT (Codex)"]
 status: complete
 evidence: [OBSERVED, TESTED, UNKNOWN]
-summary: "Explicit27-file project-authored publication selection; local evidence and research branch remain private, final remote verification recorded in the owner checkpoint."
+summary: "Explicit28-file project-authored publication selection, including the final decoy/TorsoB addendum; local evidence remains private and remote verification is recorded in the owner checkpoint."
 systems: [publication, provenance, documentation]
 related: [docs/PUBLICATION_POLICY.md, research/v2/damage-followup-20261006/publication-allowlist.txt]
 ---
@@ -18,8 +18,8 @@ this curated project-authored selection. It does not authorize publishing game
 modules, C exports, listings, raw datasets, captures or the research branch.
 
 Exact file-by-file allowlist: [publication-allowlist.txt](publication-allowlist.txt),
-27 paths. It includes9 detail/integrated/method reports, hash-only provenance,
-this register/allowlist, the task,10 native-window recipes and4 authored tools.
+28 paths. It includes9 detail/integrated/method reports, hash-only provenance,
+this register/allowlist, the task,11 native-window recipes and4 authored tools.
 Two tools are pre-existing helper sources required by the inspector: their
 inclusion makes the public method dependency chain explicit. No decoder vendor
 or game assets are included. Raw-byte/source identity metadata is acceptable
@@ -28,6 +28,20 @@ provenance; it is not an embedded raw listing or measurement archive.
 Local EVIDENCE_INDEX, GOTCHAS and CURRENT_STATE are updated separately; they are
 not in this selection. The earlier atlas/history is preserved. Only main is
 public; no merge/bulk push of v2-research is used.
+
+Initial27-file publication was verified at main commit
+`c726cdc5aed766f68b6ba57c460e265fdc962c0a`. The final decoy/TorsoB addendum
+changes only the following nine allowlisted paths; no raw game content:
+
+- research/scripts/build-damage-followup-provenance.py
+- research/scripts/ghidra/recipes/damage-followup-decoy-ai-001.json
+- research/tasks/gpt-damage-atlas-followup-20261006.md
+- research/v2/damage-followup-20261006/REPORT.md
+- research/v2/damage-followup-20261006/WEAPON_CHILDREN.md
+- research/v2/damage-followup-20261006/METHOD.md
+- research/v2/damage-followup-20261006/provenance.json
+- research/v2/damage-followup-20261006/PUBLICATION.md
+- research/v2/damage-followup-20261006/publication-allowlist.txt
 
 # Required validation and publication procedure
 

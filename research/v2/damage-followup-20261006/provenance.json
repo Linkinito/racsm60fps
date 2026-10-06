@@ -4,7 +4,7 @@
   "native_hash_encoding": "Unmodified little-endian Elf.word bytes; no relocation masking",
   "methods": {
     "research/scripts/inspect-damage-routes.py": "2859abf80a29c02da28cc1ceb3d81434383aebf57cacf9e3236333abb9a8fabe",
-    "research/scripts/build-damage-followup-provenance.py": "9700acac73b9f7887767c3e58005794c642b74f502d9771891eb0933512238b1",
+    "research/scripts/build-damage-followup-provenance.py": "7403a55604ad0ec3d368f49a73d8a8ce802b8abe69448f11b79a952f4c08017b",
     "research/scripts/build-plugin-sites.py": "b4d881a8af604469081439cd74d1b82e6ed213ae58c86407e667563ed8b00edd",
     "research/scripts/build-object-disasm-corpus.py": "ad909c54b2e0acefc37e2d653d4258ec3b4eb8bd7e815a73d294e20ec9c4d972"
   },
@@ -708,6 +708,81 @@
         }
       ],
       "relocated_reference_count": 0
+    },
+    {
+      "recipe": "research/scripts/ghidra/recipes/damage-followup-decoy-ai-001.json",
+      "recipe_canonical_lf_sha256": "ee3784983dd7808e18d55b24472f29407ef68145bfab8439c6d55f2c74875453",
+      "source": "02-Jeu-et-dumps/Data/BACKUP/BIN/LEVEL_01.PRX",
+      "source_sha256": "d10a81d076fb44987a45314a020cda2f7e8b39f860b957911ca9365464676571",
+      "local_folder": "decoy-ai-002",
+      "windows": [
+        {
+          "start": "0x14908",
+          "end": "0x14964",
+          "bytes_sha256": "f5a5a210abd8f48ecd48d41eda218be80cd6e2e505e399652c58aefd2988035a"
+        },
+        {
+          "start": "0x17ED8C",
+          "end": "0x17F054",
+          "bytes_sha256": "c9b39c7b1a5d2d8345e5321571c01731c6609a9bd46b5bcb7c50470270391f97"
+        },
+        {
+          "start": "0x17F570",
+          "end": "0x17F80C",
+          "bytes_sha256": "f72b3c5b66674cf6a88785d38efc0b40535c3fa5c22a9bf4fd40f558dfd25c86"
+        },
+        {
+          "start": "0x17F944",
+          "end": "0x17F994",
+          "bytes_sha256": "842d7480e62867df9ea2c7b50f87cf908ce4d36f8d2eab7fd45ca54529cbe1e8"
+        },
+        {
+          "start": "0x17FD6C",
+          "end": "0x1800F4",
+          "bytes_sha256": "3031b3c2fc0cc744c82814ddeafe8c08eeaa9bb2b4483cbffb677b7b87dba33d"
+        },
+        {
+          "start": "0x180970",
+          "end": "0x181C18",
+          "bytes_sha256": "6d37c3fa23df187e4fcc113535727333cbe8c02389d3b38f57a5811e8bc61c39"
+        },
+        {
+          "start": "0x181C18",
+          "end": "0x182528",
+          "bytes_sha256": "e3b1ee6b292b636d5928f254124a3d76d91bd4f5a6c79e0976dc6a62b2201777"
+        },
+        {
+          "start": "0x2D8A54",
+          "end": "0x2D8B34",
+          "bytes_sha256": "d6a9d9b15a28a578c44751074efd5f33a5315d35ac6ecbd46000cb29c31d955f"
+        },
+        {
+          "start": "0x2D8B90",
+          "end": "0x2D8BDC",
+          "bytes_sha256": "43a05b7348a30b3e495e2ed5a44b9e1a4040076b0d34548853d27a0a578b620a"
+        },
+        {
+          "start": "0x1826CC",
+          "end": "0x182E94",
+          "bytes_sha256": "13968e7ce8a1b1697cfaad01025c89ed3c206f0998dded993f9c4353316fb850"
+        },
+        {
+          "start": "0x2D8D44",
+          "end": "0x2D8DB0",
+          "bytes_sha256": "c134814b4cafde7a788f814b97c5daeec53ae0504efb520d788e3f7e8656ab63"
+        },
+        {
+          "start": "0x216B0",
+          "end": "0x2172C",
+          "bytes_sha256": "eea4aa5173d95fbae6d045cb10920192dfcb5cac0e297af565936286f5bb53f0"
+        },
+        {
+          "start": "0x22854",
+          "end": "0x22898",
+          "bytes_sha256": "73e4342a5e6d7ccb6562c76ebb4f5523ac4ea720e403d7513c9c7019b7e5202a"
+        }
+      ],
+      "relocated_reference_count": 0
     }
   ],
   "existing_c_inputs": [
@@ -766,6 +841,70 @@
     {
       "rva": "0x16aba8",
       "raw_sha256": "81667a6aeb813c95fffe9b2e55546a7171fe054cb48743fc23b2d08ef7df51dd"
+    },
+    {
+      "rva": "0x181c18",
+      "raw_sha256": "7898b89c171ac40bcc865cb3f802ff76af88742e51ca97d664fd9db2365099a1"
+    },
+    {
+      "rva": "0x14908",
+      "raw_sha256": "7faab543adff80ece68242979751d775c33953c602582695d118781085b5fa52"
+    },
+    {
+      "rva": "0x180970",
+      "raw_sha256": "d9b73c120c29700e8cf51a76eada8f9ddee847bfc4684fd1befb9135c9521403"
+    },
+    {
+      "rva": "0x17f648",
+      "raw_sha256": "1b63b060cbc34ced7455e5e3679b5bd83a7536b7dec6ee38430b3f24e688abe2"
+    },
+    {
+      "rva": "0x17f944",
+      "raw_sha256": "57c36903a8add752a971babfa43320d719a96e653c63d644fa85e60c0658355c"
+    },
+    {
+      "rva": "0x17f6c4",
+      "raw_sha256": "e893c333e55b9cb64801366fa828807e906de5a9a55eabebd6ae613e281e0bc3"
+    },
+    {
+      "rva": "0x17f570",
+      "raw_sha256": "aa39c4ca83f1048be49d096521b5cc0d10561d1720be85ca6227220a2f791e1f"
+    },
+    {
+      "rva": "0x17ed8c",
+      "raw_sha256": "c722212b0ebfee05c13807edecc2f0cb4a5daa2684762fef099c7ee969634515"
+    },
+    {
+      "rva": "0x17fd6c",
+      "raw_sha256": "dccc8abcb814fd7dee41a3904840eccd1d07b9b9e4c7163270ec08b33678e1e2"
+    },
+    {
+      "rva": "0x17fe40",
+      "raw_sha256": "8bb8af6980a0d947c6dcc4beb623b45a097fad2a11010f45c1dcc7e376d8218c"
+    },
+    {
+      "rva": "0x182bb8",
+      "raw_sha256": "fd487a3b036be33560fc4c6fc9d27fa5c890236cc4eafdf86c969e8b7923abc9"
+    },
+    {
+      "rva": "0x1827c4",
+      "raw_sha256": "0aebd1900a8360e34573067ef7ad5ba993d3c08b8fbdf22dddb82e10e6f6ac4c"
+    },
+    {
+      "rva": "0x182c50",
+      "raw_sha256": "3b24e58b60f8fbd220adf78fd09ebfda75ebf8cdb6e41d6a25f445460e9d7960"
+    },
+    {
+      "rva": "0x1826cc",
+      "raw_sha256": "4a30676130d442d13e154c39cda10dd6750fd4a51229ee269e6b1f44677cf280"
+    },
+    {
+      "rva": "0x22854",
+      "raw_sha256": "ec4c06ff843950744faa1dc41f3739a3da45a9a90fa285f17012d7bdefb38101"
+    },
+    {
+      "rva": "0x216b0",
+      "raw_sha256": "c850984f1ee11b581b0adef970922a4d0d20f565f9c98e29457a99854434f470"
     }
   ]
 }

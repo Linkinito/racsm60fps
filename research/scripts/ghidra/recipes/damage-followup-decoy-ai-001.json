@@ -1,0 +1,20 @@
+{
+  "source": "02-Jeu-et-dumps/Data/BACKUP/BIN/LEVEL_01.PRX",
+  "source_sha256": "d10a81d076fb44987a45314a020cda2f7e8b39f860b957911ca9365464676571",
+  "windows": [
+    {"start": "0x14908", "end": "0x14964", "entry_evidence": "Existing adjusted-snapshot getter C/index size, corroborated against complete native return"},
+    {"start": "0x17ED8C", "end": "0x17F054", "entry_evidence": "Existing TMRobotTorsoB state16 shot-preparation helper C/index size; native body checks cached target use"},
+    {"start": "0x17F570", "end": "0x17F80C", "entry_evidence": "Three adjacent existing alert/selection helpers, exact pre-existing C/index bounds"},
+    {"start": "0x17F944", "end": "0x17F994", "entry_evidence": "Existing small state-transition helper, pre-existing C/index size"},
+    {"start": "0x17FD6C", "end": "0x1800F4", "entry_evidence": "Existing paired muzzle wrapper and shot-construction helper, adjacent C/index bounds"},
+    {"start": "0x180970", "end": "0x181C18", "entry_evidence": "Existing TMRobotTorsoB_Update canonical LEVEL01 context and full C/index range"},
+    {"start": "0x181C18", "end": "0x182528", "entry_evidence": "Previously located single14908 consumer; existing full state-entry C/index range"},
+    {"start": "0x2D8A54", "end": "0x2D8B34", "entry_evidence": "Constants referenced by the selected enemy attack-selection and shot-preparation helpers; data only"},
+    {"start": "0x2D8B90", "end": "0x2D8BDC", "entry_evidence": "Established canonical LEVEL01 TMRobotTorsoB descriptor context; data only, not a class census"},
+    {"start": "0x1826CC", "end": "0x182E94", "entry_evidence": "Existing TorsoAShot cleanup, full update, speed constructor and collision-dispatch C/index ranges"},
+    {"start": "0x2D8D44", "end": "0x2D8DB0", "entry_evidence": "Established canonical LEVEL01 TorsoAShot descriptor and selected lifetime/lookahead data; data only"},
+    {"start": "0x216B0", "end": "0x2172C", "entry_evidence": "Existing four-valued mode speed-factor getter C/index size"},
+    {"start": "0x22854", "end": "0x22898", "entry_evidence": "Existing two-valued damage-table column getter C/index size"}
+  ],
+  "pairs": []
+}

@@ -41,7 +41,7 @@ live gameplay parity, measured DPS or an accepted60FPS correction.
 |---|---|---|
 |[GCS](GCS.md)|literal health/mirror/healing, collision loss, protection, refill and terminal state3|global mode8 visible outcome and cadence|
 |[GCS sources](GCS_SOURCES.md)|six bridge call sites and five bounded producer families|retail names, scene payload selection and callback cadence|
-|[Weapon children](WEAPON_CHILDREN.md)|ElectroBall shared arcs, paired Shield decoys, native MiniTurret chain|effective/available MiniTurret damage; indirect targeting|
+|[Weapon children](WEAPON_CHILDREN.md)|ElectroBall shared arcs, paired Shield decoys, TorsoB aim/TorsoAShot payload, native MiniTurret chain|effective/available MiniTurret damage; live diversion and other enemy consumers|
 |[Hazards](HAZARDS.md)|Shark exposure, canonical grind floor, same-state duration terminal requests|scene material/volume bindings|
 |[Arena/Microbot](ARENA_MICROBOT.md)|Toss/Mine payloads, full SurvivalBot/destructor chain, flinger forwarding|outer Survival result and occupant callback|
 |[Skyboard](SKYBOARD.md)|mine transient multiplier, two-use position impulse and age increment|crash/death/out-of-bounds/result consumers|
@@ -63,8 +63,12 @@ with its parent. Existing parent arcs, decorative entries and other balls can
 suppress same-target hits or exhaust slots. Query precedes15-update arc cleanup,
 so isolated recurrence can differ from a naive per-frame damage loop. Shield
 mod11 decoys have900-call life and separate fade; eligible source category1/9
-can return3 with scalar0 without HP subtraction. Decoy owner proximity has an
-unclosed targeting-registration consumer.
+can return3 with scalar0 without HP subtraction. Its shared spatial snapshot
+now has a concrete TMRobotTorsoB attack consumer: state16 caches an adjusted
+target point, then fires paired TorsoAShot projectiles toward that point.
+Registration/dispatch order and live diversion remain UNKNOWN. TorsoAShot's
+7.5 is speed input; damage comes from a separate table. Receiver rejection0
+still consumes this projectile; retained-1 and special world result4 differ.
 
 MiniTurret's Ball->Turret->Rocket/Manager chain is positively identified in
 LEVEL24. The original non-evolved targeted firing route is a return-zero stub.
@@ -115,6 +119,8 @@ do not infer receiver authority from that outgoing format alone.
 |GCS2C only a resource-like meter|health CORROBORATED by independent mirror/loss/healing|
 |GCS state3 guessed from zero meter|resolved enter/update/effect sequence and mode8 request; visible retry/death label still INFERRED|
 |anonymous Shock/Shield child|ElectroBall /RatchetDecoyInner+Outer identities CORROBORATED|
+|decoy snapshot has no bound enemy consumer|SUPERSEDED for TMRobotTorsoB alert/selection/cached aim; live diversion and other enemies UNKNOWN|
+|TorsoAShot constructor7.5 interpreted as damage|REJECTED: mode-scaled speed; receiver scalar selected from a separate table|
 |MiniTurret unknown child or ten-shot count|native class chain closed; stub present; counter/decrement/damage UNKNOWN|
 |leaving Shark condition resets exposure|REJECTED as universal rule: retained/mutating accumulator branch exists|
 |grind minimum unresolved/generic eligibility|clean floor0; canonical-pointer equality; runtime settings remain bounded|
@@ -131,14 +137,17 @@ do not infer receiver authority from that outgoing format alone.
 The requested whole-game exhaustive analysis is **not yet complete**. This
 session closes selected causal slices in six modules, not all scenes, bosses,
 resident code, assets or indirect callbacks. Counts of inventory/registrations/
-windows must not become a whole-game completeness percentage.
+windows must not become a whole-game completeness percentage. Final reproduction
+has133 bounded windows,38 PSP references,11 recipes and30 verified existing C
+inputs; sixteen parent inputs extend the fourteen worker-reviewed inputs.
 
 Highest-value remaining static work:
 
 1. Bind Survival outer result/UI consumer and flinger's actual occupant callback;
    close GCS global mode8 consumer and scene source-config bindings.
 2. Resolve MiniTurret2A1F00/pvar1C writers, legal availability and collision/
-   model-event consequences; decoy spatial-registration consumer.
+   model-event consequences; decoy/player snapshot writer order, other enemy
+   consumers and TorsoAShot damage-table row/column settings.
 3. Trace named campaign pit/lava/crushing/electric/script volumes from exact
    class/scene bindings; do not infer a hazard from a string/name alone.
 4. Close Skyboard crash/out-of-bounds/respawn/race result and sentry routes.

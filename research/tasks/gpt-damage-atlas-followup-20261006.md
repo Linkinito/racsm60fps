@@ -7,7 +7,7 @@ status: complete
 evidence: [OBSERVED, CORROBORATED, INFERRED, UNKNOWN, TESTED]
 summary: "Bounded continuation complete: GCS controllers/sources, weapon children, hazards, MP, Skyboard and Arena/Microbot causality documented; whole-game gaps remain explicit."
 systems: [damage, GCS, multiplayer, weapons, minigames, hazards]
-levels: [LEVEL_01, LEVEL_04, LEVEL_15, LEVEL_16, LEVEL_24]
+levels: [LEVEL_01, LEVEL_04, LEVEL_15, LEVEL_16, LEVEL_22, LEVEL_24]
 related: [research/v2/damage-atlas-20261006/COVERAGE.md, research/tasks/gpt-damage-atlas-20261006.md]
 ---
 
@@ -35,11 +35,14 @@ after staged checker. Stop new research near10% remaining, preserve checkpoint,
 and complete review/commit/publication. No static finding establishes parity.
 
 Outcome: `research/v2/damage-followup-20261006/REPORT.md` links9 authored
-reports,120 reproduced windows/38 references across6 sources and explicit
-claim-level gaps. Ten recipes,14 checked existing C inputs, source preservation
+reports,133 reproduced windows/38 references across6 sources and explicit
+claim-level gaps. Eleven recipes,30 checked existing C inputs, source preservation
 and21 decisive worker native hashes verified. Extra bounded outcomes: negative
 Survival result-reader search; VehicleController recipient registration; decoy
 shared snapshot/bush consumer; MP sampling initializer1.2*.8~.96. No patch,
-live experiment, import or new matching.27-file public allowlist is in the
+live experiment, import or new matching. Final selected181C18 consumer closes
+TorsoB shared-snapshot selection/cached aim and TorsoAShot motion/payload;
+conditional live diversion and damage-table settings remain UNKNOWN.
+28-file public allowlist is in the
 follow-up PUBLICATION.md; actual remote/checkpoint verification is recorded
 in CURRENT_STATE. Whole-game exhaustive scene/indirect coverage remains open.

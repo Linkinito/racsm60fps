@@ -13,8 +13,9 @@ related: [research/scripts/inspect-damage-routes.py, research/scripts/build-dama
 
 # Scope and evidence handling
 
-Parent owns GCS health/state controller, Sharkagator/grind/state-duration and
-Skyboard movement. Two owner-authorized read-only workers own MP/LEVEL04
+Parent owns GCS health/state controller, Sharkagator/grind/state-duration,
+Skyboard movement and the final selected decoy/TorsoB/TorsoAShot chain.
+Two owner-authorized read-only workers own MP/LEVEL04
 consequences and weapon children/GCS source families. Parent writes integration.
 No concurrent source edits, game writes, live experiments, emulator control,
 function matching/census, new Ghidra import, reindex, installation or rebuild.
@@ -64,8 +65,9 @@ Recipes are in `research/scripts/ghidra/recipes/`:
 |children-001|children-002|5|0|ElectroBall/decoy ABI and shared spatial replacement|
 |gcs-sources-001|gcs-sources-001|13|0|five producer bodies and supporting initializer/contact windows|
 |roster-001|roster-002|4|0|VehicleController/flinger registration and complete192E78|
+|decoy-ai-001|decoy-ai-002|13|0|selected TorsoB snapshot/aim and TorsoAShot motion/receiver chain|
 
-These120 windows include overlaps and context; they are not120 distinct complete
+These133 windows include overlaps and context; they are not133 distinct complete
 functions, and the38 references are not a global reference census. Six clean
 source hashes and each window/method/recipe hash are in provenance.json.
 
@@ -87,7 +89,10 @@ already-installed Capstone or the existing private legacy vendor path.
 # Worker evidence and completeness controls
 
 Shock/decoy C hashes: fourteen decisive existing files are verified against worker
-hashes by the public provenance generator. Other scoped C entries are listed in
+hashes by the public provenance generator. Sixteen final parent-selected existing
+C inputs close the TorsoB/TorsoAShot chain; their raw hashes are pinned separately
+by the same generator, not represented as additional worker verification.
+Other scoped C entries are listed in
 WEAPON_CHILDREN.md; the old all/index and class-table provenance remain local.
 Mini nine original native windows are reproduced rather than dumping functions.
 LEVEL24's empty identity class-list is not promoted to a class census.
@@ -106,7 +111,7 @@ descriptor table input SHA was
 MP reproduction preserves its original eight-instruction **gapF31B0..F31D0**.
 Positive HP100/transform/staging writes in surrounding respawn windows remain
 valid, but the full F2F4C body is not claimed newly read. Packet/score/helper
-findings came from the worker's additional bounded direct-callee reads; the21
+findings came from the worker's additional bounded direct-callee reads; the22
 main-window recipe is not a claim to include every such body. Existing map
 hash/provenance are in MULTIPLAYER.md. No new module matching was performed.
 
@@ -120,7 +125,7 @@ share one coordinate convention.
 # Public provenance and validation
 
 `build-damage-followup-provenance.py` reads an explicit manifest allowlist,
-checks clean source/current method/recipe identity and fourteen reviewed C hashes,
+checks clean source/current method/recipe identity and thirty reviewed C hashes,
 then writes only source/method/recipe hashes, window ranges and byte hashes.
 Instruction text, native words, table entries, strings, captures and raw outputs
 are excluded. Authored method/recipe hashes normalize CRLF toLF; game/source

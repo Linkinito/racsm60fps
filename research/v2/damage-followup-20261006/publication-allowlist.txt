@@ -13,6 +13,7 @@ research/scripts/ghidra/recipes/damage-followup-arena-001.json
 research/scripts/ghidra/recipes/damage-followup-miniturret-001.json
 research/scripts/ghidra/recipes/damage-followup-children-001.json
 research/scripts/ghidra/recipes/damage-followup-roster-001.json
+research/scripts/ghidra/recipes/damage-followup-decoy-ai-001.json
 research/v2/damage-followup-20261006/REPORT.md
 research/v2/damage-followup-20261006/GCS.md
 research/v2/damage-followup-20261006/GCS_SOURCES.md
