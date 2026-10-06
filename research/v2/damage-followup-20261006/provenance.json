@@ -1,0 +1,771 @@
+{
+  "scope": "Hash-only reproducibility metadata; no gameplay acceptance",
+  "authored_hash_encoding": "UTF-8 bytes with CRLF normalized to LF",
+  "native_hash_encoding": "Unmodified little-endian Elf.word bytes; no relocation masking",
+  "methods": {
+    "research/scripts/inspect-damage-routes.py": "2859abf80a29c02da28cc1ceb3d81434383aebf57cacf9e3236333abb9a8fabe",
+    "research/scripts/build-damage-followup-provenance.py": "9700acac73b9f7887767c3e58005794c642b74f502d9771891eb0933512238b1",
+    "research/scripts/build-plugin-sites.py": "b4d881a8af604469081439cd74d1b82e6ed213ae58c86407e667563ed8b00edd",
+    "research/scripts/build-object-disasm-corpus.py": "ad909c54b2e0acefc37e2d653d4258ec3b4eb8bd7e815a73d294e20ec9c4d972"
+  },
+  "recipes": [
+    {
+      "recipe": "research/scripts/ghidra/recipes/damage-followup-gcs-001.json",
+      "recipe_canonical_lf_sha256": "0041c6625655305005664e7691af76de7baa38803cbafa935fce40035a1b9e1b",
+      "source": "02-Jeu-et-dumps/Data/BACKUP/BIN/LEVEL_15.PRX",
+      "source_sha256": "cebd5b53f4a7f0b42cc7aec7f7e2e13749089a3dd630a3af1fcccaf81748e70a",
+      "local_folder": "gcs-001",
+      "windows": [
+        {
+          "start": "0x109F08",
+          "end": "0x10A018",
+          "bytes_sha256": "08ccab09bbd3c136e5f0eb974ab4950628a3d635a74a2a843916e47e433745b8"
+        },
+        {
+          "start": "0x10B95C",
+          "end": "0x10B9D4",
+          "bytes_sha256": "dc2d6288fea78785f2a386d3cfee3ac08a177c005d04473f20b9d20a32c91b73"
+        },
+        {
+          "start": "0x10C81C",
+          "end": "0x10CB68",
+          "bytes_sha256": "eb3d5c63afd60ee04963272c6838ef3737e1d57e1733467634db978afffc0a0f"
+        },
+        {
+          "start": "0x12DF9C",
+          "end": "0x12E3D0",
+          "bytes_sha256": "2b0cc92908d7bdda37f5a6486f3e26e33c78cfa5356dcc0c829abc0fa0811f1d"
+        }
+      ],
+      "relocated_reference_count": 5
+    },
+    {
+      "recipe": "research/scripts/ghidra/recipes/damage-followup-gcs-002.json",
+      "recipe_canonical_lf_sha256": "acaa9bc08ba6392ee536dee2f7ef5a25064c74e0d08ba0d0b709b45c8e6afc2d",
+      "source": "02-Jeu-et-dumps/Data/BACKUP/BIN/LEVEL_15.PRX",
+      "source_sha256": "cebd5b53f4a7f0b42cc7aec7f7e2e13749089a3dd630a3af1fcccaf81748e70a",
+      "local_folder": "gcs-002",
+      "windows": [
+        {
+          "start": "0x10BE94",
+          "end": "0x10BF64",
+          "bytes_sha256": "832a371ec3f0ad7cc509270c69b9f1fd8bbafc1092496c4988ca2f2de3541c73"
+        },
+        {
+          "start": "0x10C188",
+          "end": "0x10C568",
+          "bytes_sha256": "6d89ff616599a62c2687d44dc035e81cd05425e356b183e22ba8370bf25a6a42"
+        },
+        {
+          "start": "0x10C6EC",
+          "end": "0x10C790",
+          "bytes_sha256": "f6940320b354e3a9fe15044c5e6b691540a7d368655399fff72ddb8571cf4a93"
+        },
+        {
+          "start": "0x10C790",
+          "end": "0x10C7D0",
+          "bytes_sha256": "9f36f556bc2edc680b38e157111419cb086b6a0078d99a527b83daca60b8a24d"
+        },
+        {
+          "start": "0x10B684",
+          "end": "0x10B850",
+          "bytes_sha256": "1c1a426c3704a6f7f82a92d38e6bfec4dd99deb3ad2badcd27a4243255469f83"
+        },
+        {
+          "start": "0x10B9D4",
+          "end": "0x10BDA8",
+          "bytes_sha256": "086e7e371908c9e59e05ee56ebdf1cf60bb76c3e4a9dd94aa13ffeae53f0f1d4"
+        },
+        {
+          "start": "0x12E188",
+          "end": "0x12E628",
+          "bytes_sha256": "fb43455b5bf80e186957076723ed9bacfa4544d3ab8e7648e5541be2f59cf869"
+        },
+        {
+          "start": "0xF3BC",
+          "end": "0xF3DC",
+          "bytes_sha256": "7b3a1765e028eb18821f8a8f132b5e59944414b071dfd11493105be50c5ac7f7"
+        },
+        {
+          "start": "0xD66F0",
+          "end": "0xD67A4",
+          "bytes_sha256": "059916b66db720c1caf24521da69f725b1f68f6612e394e24ee05a5c0b50d24b"
+        },
+        {
+          "start": "0xD5288",
+          "end": "0xD542C",
+          "bytes_sha256": "09ab6ec63f635770312445f00b820462a678831f5068c8b260bf608f74b756e1"
+        },
+        {
+          "start": "0xD5A80",
+          "end": "0xD5A9C",
+          "bytes_sha256": "f0165ffb651ec78eb7fea1577101664bed37ef61191153f7f7ee6b19776a67c3"
+        }
+      ],
+      "relocated_reference_count": 10
+    },
+    {
+      "recipe": "research/scripts/ghidra/recipes/damage-followup-hazards-001.json",
+      "recipe_canonical_lf_sha256": "f2f94bca8981d507308b7a9a748f885e8033d0d8085887fc8872809116fd404e",
+      "source": "02-Jeu-et-dumps/Data/BACKUP/BIN/LEVEL_01.PRX",
+      "source_sha256": "d10a81d076fb44987a45314a020cda2f7e8b39f860b957911ca9365464676571",
+      "local_folder": "hazards-005",
+      "windows": [
+        {
+          "start": "0x16AFD4",
+          "end": "0x16B0E0",
+          "bytes_sha256": "f1e1212a51bf2c3037cd3f76bbe22f20ecce6f19ffa7e1eb0499b267da81d827"
+        },
+        {
+          "start": "0x16B0E0",
+          "end": "0x16B248",
+          "bytes_sha256": "cadb878f9e42d98de724aa78d28add22727fafc57572a184517547c615d09efe"
+        },
+        {
+          "start": "0x16B248",
+          "end": "0x16B3FC",
+          "bytes_sha256": "d0bc2efba9296d380611b4726c0b4f758760c5b673340d88e1fb3a131168cd0d"
+        },
+        {
+          "start": "0x31078",
+          "end": "0x310A8",
+          "bytes_sha256": "46da4114ebef39713cc2bb5f1db37eaf528b7bf7c7923fe67415e9ff23671c64"
+        },
+        {
+          "start": "0x31350",
+          "end": "0x31368",
+          "bytes_sha256": "39172108001339ad436efcdcb3ef4e6dade055dee26bfb693709396c8ee4bbb1"
+        },
+        {
+          "start": "0x186E1C",
+          "end": "0x186EB0",
+          "bytes_sha256": "4ef66ae27b032f91fc35883e8282c325e426f23b4412feda44ab2ccd799a09ac"
+        },
+        {
+          "start": "0x4C2C0",
+          "end": "0x4C338",
+          "bytes_sha256": "e80c77ecfdd84e4cbac30a41a6b44c7a5d1965e2ea4005a9ea439c2d19524afa"
+        },
+        {
+          "start": "0x4BDC0",
+          "end": "0x4BDE4",
+          "bytes_sha256": "e2d9f7f6832bebd82621cd3fb4fc2de41fbe2e9bc977741f1bf1ef13190a6e30"
+        },
+        {
+          "start": "0x486E4",
+          "end": "0x4884C",
+          "bytes_sha256": "ea7b77f72dc0401811262d3627c911bd018928dc55e36a60b85a06f93c6958a9"
+        },
+        {
+          "start": "0x4884C",
+          "end": "0x48868",
+          "bytes_sha256": "9ca573ace2ff81d1f7b1a534e1fa96a2e51abf99f3ce66d289ca8df39c5e0910"
+        },
+        {
+          "start": "0x48A6C",
+          "end": "0x48D80",
+          "bytes_sha256": "7f236bc5e4153a1c7377bb18f49c63ed076dfc03069dab853787721c9696b404"
+        },
+        {
+          "start": "0x39B74",
+          "end": "0x39FD4",
+          "bytes_sha256": "e41d0793a218c6253f9641b6526732ca2214c0896e88a14aeacfe6d19e7da7ff"
+        },
+        {
+          "start": "0x3DD10",
+          "end": "0x3DD48",
+          "bytes_sha256": "7b3c2f9ef533fa092bbbc61a463a63002fa5e284ab62aecf405e8248e9d5347e"
+        },
+        {
+          "start": "0x3E0FC",
+          "end": "0x3E134",
+          "bytes_sha256": "19664d4105989822acedf5af3abc8c272a4ee9be5c59cd80033e7d225529cdbd"
+        },
+        {
+          "start": "0x3EA90",
+          "end": "0x3EAC8",
+          "bytes_sha256": "2e3f2708d49f5477ac3f218bd2a4dfd8b6808734c80f7d254e9077f2b2c0ae2e"
+        }
+      ],
+      "relocated_reference_count": 5
+    },
+    {
+      "recipe": "research/scripts/ghidra/recipes/damage-followup-mp-001.json",
+      "recipe_canonical_lf_sha256": "2842be99819ef1af4ee7f6deda45f69597914aed90e643a61e7f856b02e9c9e9",
+      "source": "02-Jeu-et-dumps/Data/BACKUP/BIN/LEVEL_16.PRX",
+      "source_sha256": "7bddff247e89508bd43f27bade4418ba4ecd54ac6837e73b349baf89eb068914",
+      "local_folder": "mp-003",
+      "windows": [
+        {
+          "start": "0x318B8",
+          "end": "0x31E08",
+          "bytes_sha256": "7a784af890b2643fbc6b3fb68a46c3b5bf491151dcb384cd9716e4989d5dcdf8"
+        },
+        {
+          "start": "0x31E04",
+          "end": "0x31FC4",
+          "bytes_sha256": "eb3eba481e2f24a210d7da3a266f63abf538ce615d340b78b3a4afb6873f38c3"
+        },
+        {
+          "start": "0x1447D8",
+          "end": "0x144B70",
+          "bytes_sha256": "69c85371ed94e018dd753b83beb3fcb7898e18f1ca26ddcb50c066542bcf4681"
+        },
+        {
+          "start": "0x144B4C",
+          "end": "0x144B88",
+          "bytes_sha256": "92b8999cc0f7b061edf769909b65b3102b45f2c30d5613f107dc7ad431542b84"
+        },
+        {
+          "start": "0x2AB88",
+          "end": "0x2ACF0",
+          "bytes_sha256": "0c55e630bddd8d600e0c5dc0432a5110ccc2ea585c19d5a8c76f85df36f49ebd"
+        },
+        {
+          "start": "0x145704",
+          "end": "0x145B14",
+          "bytes_sha256": "38fcd6ca2164fb2f2a9c6dfe4f98a7998a01b6fa0919b26f2980ec1b87fc1742"
+        },
+        {
+          "start": "0x14691C",
+          "end": "0x146AFC",
+          "bytes_sha256": "40d19e6722a734b2badb523de7ccdb7d430dff6e4917012b4484e4bb6c21c6d8"
+        },
+        {
+          "start": "0x149704",
+          "end": "0x149B78",
+          "bytes_sha256": "b0e95ae1a70debb8ef41de785fab496695d767a47a96d533a2c829d9c75147da"
+        },
+        {
+          "start": "0x149C88",
+          "end": "0x14A05C",
+          "bytes_sha256": "dab7ce14eae9f1ce766f26964db9fd6389a54f9b2f7821c93da771a94820066b"
+        },
+        {
+          "start": "0x14A058",
+          "end": "0x14A140",
+          "bytes_sha256": "b2d36ee569569df065e05f7d8b9e74b9f47bedf2fac0bc5685cb53d58f12b230"
+        },
+        {
+          "start": "0x149264",
+          "end": "0x1495AC",
+          "bytes_sha256": "eb72cf214761ca0547fc523613134e528bdfaaf68e641639690f6c1ca1f3e886"
+        },
+        {
+          "start": "0x149580",
+          "end": "0x1495F8",
+          "bytes_sha256": "9d594793dc0d73c9fa87efdb0a621a0eaf0132461d71d297fb3042b322dfb5f2"
+        },
+        {
+          "start": "0x1495BC",
+          "end": "0x1496FC",
+          "bytes_sha256": "672ee7dc923e970433229f2d5e65ef87af13dafb159c95585111df4b1b6fd0eb"
+        },
+        {
+          "start": "0x14838C",
+          "end": "0x148684",
+          "bytes_sha256": "b535fb4c76b421db42dd42cbd36f59190b8c8ac696b34d74dc2046832c8163cb"
+        },
+        {
+          "start": "0x148C50",
+          "end": "0x148F20",
+          "bytes_sha256": "64d284a3eeb2920d0c87965c22725d1c3cc62a69737a694cc4f7283113f31737"
+        },
+        {
+          "start": "0x148F20",
+          "end": "0x149194",
+          "bytes_sha256": "10a0e64f321dba743af90b1f4d1a546098f07d7d5795fbda40fb6c326145a27f"
+        },
+        {
+          "start": "0xF2F38",
+          "end": "0xF2F80",
+          "bytes_sha256": "d402d8e10bcaa651e03affa927d43133c8fed47d42a89ced44962dfcebe736d9"
+        },
+        {
+          "start": "0xF2F70",
+          "end": "0xF3098",
+          "bytes_sha256": "a213442d602e5e1d491718cae1922c95ad49876c66b8e030b88eed05539fc0a8"
+        },
+        {
+          "start": "0xF3090",
+          "end": "0xF31B0",
+          "bytes_sha256": "f7b8735b9fc617f3697fc0a82167b9e3cd692ba6a779e85e1c749a9a641d80ae"
+        },
+        {
+          "start": "0xF31D0",
+          "end": "0xF32E8",
+          "bytes_sha256": "8ce0db9f5eae63ed5ff9927095daf06d2a78e288b4d1f6c824445250c45aaa5b"
+        },
+        {
+          "start": "0xF3290",
+          "end": "0xF3358",
+          "bytes_sha256": "9b8685d7e6c31a254a02343a1cbdf6ca03e0c9d5e31fde12b1a11a7c945ef554"
+        },
+        {
+          "start": "0x14A950",
+          "end": "0x14AA00",
+          "bytes_sha256": "4eb52778591b20d8b62cdd3d36cd80ae93102bc99d11ce76bca6c278281860d5"
+        }
+      ],
+      "relocated_reference_count": 5
+    },
+    {
+      "recipe": "research/scripts/ghidra/recipes/damage-followup-skyboard-001.json",
+      "recipe_canonical_lf_sha256": "7324bf2fb2586975cf926163d414f747511887930e40c50875710183579525ce",
+      "source": "02-Jeu-et-dumps/Data/BACKUP/BIN/LEVEL_22.PRX",
+      "source_sha256": "be7ef86357ee668bb1c194226e4cd2e55920a4f7f375952ffb494c0de5a78986",
+      "local_folder": "skyboard-004",
+      "windows": [
+        {
+          "start": "0x4710C",
+          "end": "0x47190",
+          "bytes_sha256": "60f282826585d2ef42ca314d91f87b18623ea2a1c55585c6fcc7db9b2a60bf2d"
+        },
+        {
+          "start": "0xEBAE4",
+          "end": "0xEBC88",
+          "bytes_sha256": "ba8e21da78a7534a725a348eeed996399d9e4fb19ddfb7fe8aefbf82d52ed54a"
+        },
+        {
+          "start": "0xEC86C",
+          "end": "0xECD0C",
+          "bytes_sha256": "c1b6d768363f51aa4821b1ba1caba34b299dc7474992ddcfcbb4c65f9fe46a68"
+        },
+        {
+          "start": "0x46BB8",
+          "end": "0x46DA8",
+          "bytes_sha256": "450b1410926c6177ac4a82dda11d3f9a61530074a6b2c433fa5d725b0f18e2d0"
+        },
+        {
+          "start": "0x482F0",
+          "end": "0x48338",
+          "bytes_sha256": "2bcbd4bd27efbff3202d654af7a15036850f6e121c1ab2bbfc22bda11fbbae76"
+        },
+        {
+          "start": "0xEC148",
+          "end": "0xEC248",
+          "bytes_sha256": "2b4f64dd9a8aa5e91c2c014042240b05f4c09b0ab2747e3130dbd300532b7585"
+        }
+      ],
+      "relocated_reference_count": 7
+    },
+    {
+      "recipe": "research/scripts/ghidra/recipes/damage-followup-arena-001.json",
+      "recipe_canonical_lf_sha256": "77eb4dfb7439182c1ebc5d6900914b263f132ad384e7ecc37970eb2ae1982126",
+      "source": "02-Jeu-et-dumps/Data/BACKUP/BIN/LEVEL_04.PRX",
+      "source_sha256": "6896122ac19973e928303dc94c40fa309b5f06e5fef6ab14f624987035a4dc37",
+      "local_folder": "arena-002",
+      "windows": [
+        {
+          "start": "0x15DCE0",
+          "end": "0x15DD8C",
+          "bytes_sha256": "d0f0bd577aee7ca0bb55b2e890bb5405c4d9763303c062492e11cddefa2e6a24"
+        },
+        {
+          "start": "0x15DD8C",
+          "end": "0x15E0D4",
+          "bytes_sha256": "a187c7aa52ef701fdb7859f56abb382d0b4d5a173169794fb21928df5c536a06"
+        },
+        {
+          "start": "0x1932E4",
+          "end": "0x193550",
+          "bytes_sha256": "9a59efa1180742258f5228a2e06ef4e1e0b12eefa5dfd91a70f1476b888dc026"
+        },
+        {
+          "start": "0x15B13C",
+          "end": "0x15B1B0",
+          "bytes_sha256": "cf2d3ee0f68ca6a1ce65e8f3dc039a64065fe32c65d1e21a8f98da2a21fe20cc"
+        },
+        {
+          "start": "0x15B324",
+          "end": "0x15B340",
+          "bytes_sha256": "54ae0f0cf5204f989646a2e01ae26c8f01c5d6205724515e202f23539d0e547f"
+        },
+        {
+          "start": "0x15B4E8",
+          "end": "0x15B5FC",
+          "bytes_sha256": "d7ced5994a4193d2b23417cb76729eb0655096bd225361737e5a95ac457e7891"
+        },
+        {
+          "start": "0x15B8BC",
+          "end": "0x15C384",
+          "bytes_sha256": "5bd1e1d96381a3dc144546673892b3f18527ee424b303d0eb4af0c53bad0b5b4"
+        },
+        {
+          "start": "0x15C384",
+          "end": "0x15CA58",
+          "bytes_sha256": "8eb51b116037c75d7a9328e750e8c9f60e8e67804a52d37ce959fa16ff332d33"
+        },
+        {
+          "start": "0x18251C",
+          "end": "0x18255C",
+          "bytes_sha256": "abd959744688f053e1c96e4535b8b1cd653b7572f95ff04ac38a8c688f91e3dc"
+        },
+        {
+          "start": "0x18255C",
+          "end": "0x18259C",
+          "bytes_sha256": "b7010d1de8d466ced713677bbec8a08dc8599a56953d769e36bd8966e09e92bf"
+        },
+        {
+          "start": "0x182AA0",
+          "end": "0x184534",
+          "bytes_sha256": "dc766039fbd86b52ee3954c22350f11c63680847093c9ee68d8cbabbc9d7ccf0"
+        },
+        {
+          "start": "0x1817C4",
+          "end": "0x1818C0",
+          "bytes_sha256": "e65fd2795fa8d7f315f16e59890b0c21b79635f2c30d808b9e4ac193d46b7c11"
+        },
+        {
+          "start": "0x181930",
+          "end": "0x181A88",
+          "bytes_sha256": "4eda044c4187295d2e24d9fa03492121973777baf19318d8696ac46fc76d8dfa"
+        },
+        {
+          "start": "0x1816F8",
+          "end": "0x181738",
+          "bytes_sha256": "e00f554eacb8e74a7ff24c01319da813a2cafe7352c40ac3c05192445a32f2a2"
+        },
+        {
+          "start": "0x1813EC",
+          "end": "0x18142C",
+          "bytes_sha256": "ed899d225961ac6e9bc54629ffcd454b78c49df1b6f94a8b9136012f1df72cec"
+        },
+        {
+          "start": "0x184534",
+          "end": "0x184784",
+          "bytes_sha256": "90f09a189d10817810bbf38754db2fc1ef9268546186e218c73ee7db3c366b21"
+        },
+        {
+          "start": "0x1847E0",
+          "end": "0x184998",
+          "bytes_sha256": "4bf40eeab05bc08f5c1bdffd31363af41b1af212a6885635dac24f937e40d7ed"
+        },
+        {
+          "start": "0x184998",
+          "end": "0x1849AC",
+          "bytes_sha256": "1792cd6d7d33ef7822f70e5d80a311e045492e2360a0b16a79eafe4b8ece0de8"
+        },
+        {
+          "start": "0x185A44",
+          "end": "0x185B88",
+          "bytes_sha256": "bd536e72028d19cfed2d8b6d33bab0337cb7b40acaadf86b1ceb801855f8d047"
+        },
+        {
+          "start": "0x181EA8",
+          "end": "0x1820C8",
+          "bytes_sha256": "2d5ee269bc651d8cae300d71f619e5c935ecbad51a3aa1f42801ce68f19efd46"
+        },
+        {
+          "start": "0x1821E8",
+          "end": "0x1823C0",
+          "bytes_sha256": "e8f12fa6f6844f432e8d752b41a2da7e5af7a31ece5698034b061cce8e83564a"
+        },
+        {
+          "start": "0x184F28",
+          "end": "0x184F80",
+          "bytes_sha256": "4458545dcf639ba23c5cbf11bd81b84a338f26e20b65342bef712b414d80d6e8"
+        },
+        {
+          "start": "0x193A84",
+          "end": "0x193AE8",
+          "bytes_sha256": "905d0a1ae7fc6bb924bd26dc48f927b76cae1a10f145a36d6b05279854af528e"
+        },
+        {
+          "start": "0x196658",
+          "end": "0x1966A0",
+          "bytes_sha256": "4408d07ae55338705f1240c6c3d8432dd84380daa846643223bc53c73cc903d7"
+        },
+        {
+          "start": "0x1968A0",
+          "end": "0x196A6C",
+          "bytes_sha256": "418036dc398b51401034bda0ddab799d44d06b9528f991d3789f1f6879f4feab"
+        },
+        {
+          "start": "0x19AE0C",
+          "end": "0x19B018",
+          "bytes_sha256": "a1b62472af014a455fb857ada358f17d8d62afaf7a5c528bab846efe19ed56af"
+        },
+        {
+          "start": "0x19B018",
+          "end": "0x19B0BC",
+          "bytes_sha256": "49e44e20c5954678edf075d05737fda4c141dd08b372c893ed7ef09df96582dc"
+        },
+        {
+          "start": "0x2D404",
+          "end": "0x2D484",
+          "bytes_sha256": "d6040036c782d0ffa9e059c2ce27e2e68fe31568b3625dea35cade3b9bbef8b8"
+        },
+        {
+          "start": "0x15B340",
+          "end": "0x15B4E8",
+          "bytes_sha256": "b199828aa74104f84b40242eba154c5a9c8b8f2546b4425ab34ba0672f085371"
+        },
+        {
+          "start": "0x15B1B0",
+          "end": "0x15B340",
+          "bytes_sha256": "7543a74b0a11d4d2bb0664dfcf874cf96ac6ce9805fdd02bc9469777e83bd8d2"
+        },
+        {
+          "start": "0x15B848",
+          "end": "0x15B8BC",
+          "bytes_sha256": "4dd4fe509888e31e2e28de3a0b9c779cc3ab6cc2b88e0330c83aa6da0a447d95"
+        }
+      ],
+      "relocated_reference_count": 6
+    },
+    {
+      "recipe": "research/scripts/ghidra/recipes/damage-followup-miniturret-001.json",
+      "recipe_canonical_lf_sha256": "08cbc898acad08ffc4c329cb803cc645ce8a195588694f3f163b961245ee5749",
+      "source": "02-Jeu-et-dumps/Data/BACKUP/BIN/LEVEL_24.PRX",
+      "source_sha256": "a4e3f6496b3d2d238767fbb72b9db274dc5179dbe4d6f71eea2ce1fee22480bf",
+      "local_folder": "miniturret-001",
+      "windows": [
+        {
+          "start": "0x139FDC",
+          "end": "0x13A39C",
+          "bytes_sha256": "58ac937fb71fd8487412ff47533c162a5f7a8dc415d2e288f4237d521647033c"
+        },
+        {
+          "start": "0x13A39C",
+          "end": "0x13A5F4",
+          "bytes_sha256": "20c9c8d0dfb7d1705123e08d16104633a59a3094e3d7f8777622b8b149a89ee9"
+        },
+        {
+          "start": "0x138DAC",
+          "end": "0x139154",
+          "bytes_sha256": "63702e57362ae488438ebadc8dedb72a1c595ed48fa49f7125a3f13061d4fc0b"
+        },
+        {
+          "start": "0x1399B0",
+          "end": "0x139FDC",
+          "bytes_sha256": "88141413eed7d51ca6f12efe516cd37b7ff5c4840854d770ce3fc436fd9dc4eb"
+        },
+        {
+          "start": "0x13A6D8",
+          "end": "0x13A7AC",
+          "bytes_sha256": "3d8c76371a06c7632c7cbae76e07bfac0bb94865df2c2072ca0d879ba9e0a21e"
+        },
+        {
+          "start": "0x13B0B4",
+          "end": "0x13B1EC",
+          "bytes_sha256": "84da980d53a414cd4d51e41579ff6228eeb0c93f88c7e16dcd016d53abfde0ed"
+        },
+        {
+          "start": "0x13B214",
+          "end": "0x13B350",
+          "bytes_sha256": "c0d6d5b0fcf13f6c33124e6039f6dcc5ae77ce3ef73976568c06f4d648c27a76"
+        },
+        {
+          "start": "0xFCA78",
+          "end": "0xFCA80",
+          "bytes_sha256": "2b12957b7b20557a2b2214ff0d4c70070be49dbb12c48fe1b778f48a6fc3cd43"
+        },
+        {
+          "start": "0x139708",
+          "end": "0x13998C",
+          "bytes_sha256": "b7b15d70aef005f5498df4861866a8b9b939f6d9e709139ceb9cb8cdedfc6642"
+        }
+      ],
+      "relocated_reference_count": 0
+    },
+    {
+      "recipe": "research/scripts/ghidra/recipes/damage-followup-children-001.json",
+      "recipe_canonical_lf_sha256": "c2452a65996a3cf58c0cfe6331d5b62fda944aff17391321ee7f3ff8ea816197",
+      "source": "02-Jeu-et-dumps/Data/BACKUP/BIN/LEVEL_01.PRX",
+      "source_sha256": "d10a81d076fb44987a45314a020cda2f7e8b39f860b957911ca9365464676571",
+      "local_folder": "children-002",
+      "windows": [
+        {
+          "start": "0x132CB0",
+          "end": "0x132CF8",
+          "bytes_sha256": "431cbba8603febba72d70000d52b2fe83b188d08af7b3e1426b5f852aa505d3a"
+        },
+        {
+          "start": "0x163F80",
+          "end": "0x163FF4",
+          "bytes_sha256": "8e2046092b61c3db90b6611d05b519783eef105c0e14e277422b821e57dee011"
+        },
+        {
+          "start": "0x163FF4",
+          "end": "0x164050",
+          "bytes_sha256": "1afcf406ef70c65a2277980ca7e7829eea1aecfedfb5c0b46b0b9b52ee63e1f9"
+        },
+        {
+          "start": "0x14748",
+          "end": "0x1483C",
+          "bytes_sha256": "6a4548b542ac7a18bc98424cdd3f42bb1ac753a17391686b51150bf3ac3ba866"
+        },
+        {
+          "start": "0x1483C",
+          "end": "0x14A94",
+          "bytes_sha256": "cdcda833b3e634fbb318dab42ae079a2b197db659e94f6ca1c24890e51a6cf51"
+        }
+      ],
+      "relocated_reference_count": 0
+    },
+    {
+      "recipe": "research/scripts/ghidra/recipes/damage-followup-gcs-sources-001.json",
+      "recipe_canonical_lf_sha256": "cb1097709b0ca3fa1a6a0e03a31a9e3f92ae6b08da39efc97be84af10e7d3109",
+      "source": "02-Jeu-et-dumps/Data/BACKUP/BIN/LEVEL_15.PRX",
+      "source_sha256": "cebd5b53f4a7f0b42cc7aec7f7e2e13749089a3dd630a3af1fcccaf81748e70a",
+      "local_folder": "gcs-sources-001",
+      "windows": [
+        {
+          "start": "0xDDA74",
+          "end": "0xDE400",
+          "bytes_sha256": "e1d55617b0887aa0c18405eeedb4cc69ee33afa61477a1d335d6e1f0959e8f85"
+        },
+        {
+          "start": "0xF7E20",
+          "end": "0xF85D0",
+          "bytes_sha256": "e89c5b25153b20532c33f0082a4b2c188f0ecc29e0f0c2d4bacec89adb41c70a"
+        },
+        {
+          "start": "0xF92A8",
+          "end": "0xF9CD0",
+          "bytes_sha256": "ced0ec958e4d283699cc1fa674c39bda9beceea713ba0a06dd0f430f6e7fe9c6"
+        },
+        {
+          "start": "0xFBB40",
+          "end": "0xFC4B0",
+          "bytes_sha256": "0b7cb102aec3152271d7c42498cc602a39276091532b0b59eb193d19872d5beb"
+        },
+        {
+          "start": "0xFC820",
+          "end": "0xFCF20",
+          "bytes_sha256": "2aea55641c55780e2ae31dbfd606b0cce6e64b95836d402151355bbb6b880096"
+        },
+        {
+          "start": "0xF7340",
+          "end": "0xF7478",
+          "bytes_sha256": "936f77d994e75e521d8aec7b4c56332f395c58834dd44367303f8c73ea258c8c"
+        },
+        {
+          "start": "0xF7478",
+          "end": "0xF7524",
+          "bytes_sha256": "36cccceb4eba2e44fa321e2aeddca5d8c8404f91e2bf6f3c8f2f4dbdc7f2a124"
+        },
+        {
+          "start": "0xE93E0",
+          "end": "0xE94E8",
+          "bytes_sha256": "f99494746ef0cffa9a1ddc1ab397474baf2131f697c4843791a0aa54fc158380"
+        },
+        {
+          "start": "0xF93F8",
+          "end": "0xF95B0",
+          "bytes_sha256": "5be77f555e3f1853918e5f4cb3b9ade334fbd453a93e91e9aad6347d8aace6b3"
+        },
+        {
+          "start": "0xF9B24",
+          "end": "0xF9CF0",
+          "bytes_sha256": "8368043f2044a2612c9b24d96c9144421be5fc31b9b7b0f50e0fdeee192d35ad"
+        },
+        {
+          "start": "0xFBC04",
+          "end": "0xFBC84",
+          "bytes_sha256": "ff9313d6df83fa258ef1a86a1917389d8e8c237cdc5f74469303764bb033d70f"
+        },
+        {
+          "start": "0xFC8D8",
+          "end": "0xFC968",
+          "bytes_sha256": "a116e183bdce2a958ed12de6d6e31d6c3fa32d31ec939742430455b771ef5760"
+        },
+        {
+          "start": "0xFCA94",
+          "end": "0xFCB04",
+          "bytes_sha256": "91fa9d0c8ea429848ec3319810f6e5e75d7302d8518761c1fd4646408bff2989"
+        }
+      ],
+      "relocated_reference_count": 0
+    },
+    {
+      "recipe": "research/scripts/ghidra/recipes/damage-followup-roster-001.json",
+      "recipe_canonical_lf_sha256": "1a9178c15033ed5a051ce7d7a2937071ebf0f24a677cf2e2e571e3b2c42589b4",
+      "source": "02-Jeu-et-dumps/Data/BACKUP/BIN/LEVEL_04.PRX",
+      "source_sha256": "6896122ac19973e928303dc94c40fa309b5f06e5fef6ab14f624987035a4dc37",
+      "local_folder": "roster-002",
+      "windows": [
+        {
+          "start": "0x192D30",
+          "end": "0x192E70",
+          "bytes_sha256": "11f5bf305f8f8d5391efef2f0c94a277b44d1ae73c3282a559d32c1d9f96ef79"
+        },
+        {
+          "start": "0x19430C",
+          "end": "0x19437C",
+          "bytes_sha256": "5fc56c569896ff5c6432b3f5da1604abab3f123933c2ca2d8bc967b5e4cd9610"
+        },
+        {
+          "start": "0x12A518",
+          "end": "0x12A668",
+          "bytes_sha256": "14872d1ce441ac052406aa12fcf5a5836911c26c1a9020847910f784788fc172"
+        },
+        {
+          "start": "0x192E78",
+          "end": "0x192F10",
+          "bytes_sha256": "326d883e2f2cd2f1202bbfa72b29e2fdc73e2fc9161c04e31d6e91811f9a24aa"
+        }
+      ],
+      "relocated_reference_count": 0
+    }
+  ],
+  "existing_c_inputs": [
+    {
+      "rva": "0x132bec",
+      "raw_sha256": "38ab6a940636d1895549bf6c50b2db21c9f09e0e0d909908f00bfa087b5fc38b"
+    },
+    {
+      "rva": "0x132e20",
+      "raw_sha256": "ca3da1fe7bf66be13b6ab818a56de29d872c14bb113b43b9826c5ae8e505b4d6"
+    },
+    {
+      "rva": "0x132f30",
+      "raw_sha256": "f6bd40c3c4d61d0a9af5dcde69f17033fc6748b565728ba37f2e3877cc9a9fb4"
+    },
+    {
+      "rva": "0x1335f4",
+      "raw_sha256": "3b657315f5c32da043f5437624b466fb28c07d1ac640fbe9ad2ade3a9c3b041e"
+    },
+    {
+      "rva": "0x164100",
+      "raw_sha256": "dd4a8b42ca137d0756b06274e0a7c30f38d82696c8c8056bd110e90e515af28c"
+    },
+    {
+      "rva": "0x164c30",
+      "raw_sha256": "d43b1b4069caecba3d22c656e69a887f0eefb5de1f75637f02e2bf6817720c23"
+    },
+    {
+      "rva": "0x163f80",
+      "raw_sha256": "c6c9d640afcc475d590d469e61f1a617b0fb5345edbdb3cca9199281386a72d3"
+    },
+    {
+      "rva": "0x163ec0",
+      "raw_sha256": "f826fdb50029eca62a118fa17b9655e36e536eb9e6ab7c3c427dda75768473e6"
+    },
+    {
+      "rva": "0x14748",
+      "raw_sha256": "042f476e547f7238f7a9b162c6017dbdc268ab38316be45988611aabcd35428f"
+    },
+    {
+      "rva": "0x14780",
+      "raw_sha256": "479dfdf148e9c753a52c12c6648f1b0698887da1aa4d1e6ccf763d1f3006744a"
+    },
+    {
+      "rva": "0x1480c",
+      "raw_sha256": "954c156a39be1f151ec5c09a73e6ba7007b6636af838926e5c597b45bd95e111"
+    },
+    {
+      "rva": "0x1483c",
+      "raw_sha256": "d31824f8e8a83e0d3bba6ab477d4c8a12d5401ff84319004f825824dd627f802"
+    },
+    {
+      "rva": "0x1485c",
+      "raw_sha256": "6601174a952c910199d2ff72712c6202d81b6e59afc4bb09edf503e1cd6c3cb5"
+    },
+    {
+      "rva": "0x16aba8",
+      "raw_sha256": "81667a6aeb813c95fffe9b2e55546a7171fe054cb48743fc23b2d08ef7df51dd"
+    }
+  ]
+}

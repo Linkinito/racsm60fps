@@ -1,0 +1,35 @@
+{
+  "source": "02-Jeu-et-dumps/Data/BACKUP/BIN/LEVEL_16.PRX",
+  "source_sha256": "7bddff247e89508bd43f27bade4418ba4ecd54ac6837e73b349baf89eb068914",
+  "windows": [
+    {"start":"0x318B8","end":"0x31E08","entry_evidence":"Worker actual-read common player receiver window"},
+    {"start":"0x31E04","end":"0x31FC4","entry_evidence":"Worker actual-read receiver terminal tail plus next prologue"},
+    {"start":"0x1447D8","end":"0x144B70","entry_evidence":"Worker actual-read NetworkedRatchet receiver and filters"},
+    {"start":"0x144B4C","end":"0x144B88","entry_evidence":"Worker actual-read compatible-source hash helper"},
+    {"start":"0x2AB88","end":"0x2ACF0","entry_evidence":"Worker actual-read terminal predicate and full pair admission2ABB0"},
+    {"start":"0x145704","end":"0x145B14","entry_evidence":"Worker actual-read turret receiver and following bounded context"},
+    {"start":"0x14691C","end":"0x146AFC","entry_evidence":"Worker actual-read turret destruction consequences"},
+    {"start":"0x149704","end":"0x149B78","entry_evidence":"Worker actual-read TurretShot hit helper"},
+    {"start":"0x149C88","end":"0x14A05C","entry_evidence":"Worker actual-read projectile movement helper"},
+    {"start":"0x14A058","end":"0x14A140","entry_evidence":"Worker actual-read movement tail"},
+    {"start":"0x149264","end":"0x1495AC","entry_evidence":"Worker actual-read TurretShot age/movement update"},
+    {"start":"0x149580","end":"0x1495F8","entry_evidence":"Worker actual-read shot update tail"},
+    {"start":"0x1495BC","end":"0x1496FC","entry_evidence":"Worker actual-read shot helper context"},
+    {"start":"0x14838C","end":"0x148684","entry_evidence":"Worker actual-read turret firing input/cooldown/ammunition"},
+    {"start":"0x148C50","end":"0x148F20","entry_evidence":"Worker actual-read shot creation success route"},
+    {"start":"0x148F20","end":"0x149194","entry_evidence":"Worker actual-read shot constructor continuation"},
+    {"start":"0xF2F38","end":"0xF2F80","entry_evidence":"Worker actual-read respawn entry context"},
+    {"start":"0xF2F70","end":"0xF3098","entry_evidence":"Worker actual-read respawn HP/transform window"},
+    {"start":"0xF3090","end":"0xF31B0","entry_evidence":"Worker actual-read respawn continuation; gapF31B0..F31D0 intentionally preserved"},
+    {"start":"0xF31D0","end":"0xF32E8","entry_evidence":"Worker actual-read respawn staging/model window after gap"},
+    {"start":"0xF3290","end":"0xF3358","entry_evidence":"Worker actual-read staging mark tail"},
+    {"start":"0x14A950","end":"0x14AA00","entry_evidence":"Parent exact2B672C relocation-reference query located sole direct SWC1 writer14A9D0; bounded initializer context"}
+  ],
+  "pairs": [
+    {"hi":"0x31ACC","lo":"0x31AD0","role":"surviving player protection reload"},
+    {"hi":"0x144ADC","lo":"0x144AE0","role":"source whitelist","table_bytes":16},
+    {"hi":"0x145420","lo":"0x145428","role":"turret initial HP"},
+    {"hi":"0x14A9C8","lo":"0x14A9D0","role":"turret-shot sampling field initializer"},
+    {"hi":"0x14A9A8","lo":"0x14A9AC","role":"sampling source structure; initializer loads its+4 value1.2"}
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "source": "02-Jeu-et-dumps/Data/BACKUP/BIN/LEVEL_04.PRX",
+  "source_sha256": "6896122ac19973e928303dc94c40fa309b5f06e5fef6ab14f624987035a4dc37",
+  "windows": [
+    {
+      "start": "0x15DCE0",
+      "end": "0x15DD8C",
+      "entry_evidence": "Exact worker-reviewed window; entry/caller bindings and limits documented in the follow-up report"
+    },
+    {
+      "start": "0x15DD8C",
+      "end": "0x15E0D4",
+      "entry_evidence": "Exact worker-reviewed window; entry/caller bindings and limits documented in the follow-up report"
+    },
+    {
+      "start": "0x1932E4",
+      "end": "0x193550",
+      "entry_evidence": "Exact worker-reviewed window; entry/caller bindings and limits documented in the follow-up report"
+    },
+    {
+      "start": "0x15B13C",
+      "end": "0x15B1B0",
+      "entry_evidence": "Exact worker-reviewed window; entry/caller bindings and limits documented in the follow-up report"
+    },
+    {
+      "start": "0x15B324",
+      "end": "0x15B340",
+      "entry_evidence": "Exact worker-reviewed window; entry/caller bindings and limits documented in the follow-up report"
+    },
+    {
+      "start": "0x15B4E8",
+      "end": "0x15B5FC",
+      "entry_evidence": "Exact worker-reviewed window; entry/caller bindings and limits documented in the follow-up report"
+    },
+    {
+      "start": "0x15B8BC",
+      "end": "0x15C384",
+      "entry_evidence": "Exact worker-reviewed window; entry/caller bindings and limits documented in the follow-up report"
+    },
+    {
+      "start": "0x15C384",
+      "end": "0x15CA58",
+      "entry_evidence": "Exact worker-reviewed window; entry/caller bindings and limits documented in the follow-up report"
+    },
+    {
+      "start": "0x18251C",
+      "end": "0x18255C",
+      "entry_evidence": "Exact worker-reviewed window; entry/caller bindings and limits documented in the follow-up report"
+    },
+    {
+      "start": "0x18255C",
+      "end": "0x18259C",
+      "entry_evidence": "Exact worker-reviewed window; entry/caller bindings and limits documented in the follow-up report"
+    },
+    {
+      "start": "0x182AA0",
+      "end": "0x184534",
+      "entry_evidence": "Exact worker-reviewed window; entry/caller bindings and limits documented in the follow-up report"
+    },
+    {
+      "start": "0x1817C4",
+      "end": "0x1818C0",
+      "entry_evidence": "Exact worker-reviewed window; entry/caller bindings and limits documented in the follow-up report"
+    },
+    {
+      "start": "0x181930",
+      "end": "0x181A88",
+      "entry_evidence": "Exact worker-reviewed window; entry/caller bindings and limits documented in the follow-up report"
+    },
+    {
+      "start": "0x1816F8",
+      "end": "0x181738",
+      "entry_evidence": "Exact worker-reviewed window; entry/caller bindings and limits documented in the follow-up report"
+    },
+    {
+      "start": "0x1813EC",
+      "end": "0x18142C",
+      "entry_evidence": "Exact worker-reviewed window; entry/caller bindings and limits documented in the follow-up report"
+    },
+    {
+      "start": "0x184534",
+      "end": "0x184784",
+      "entry_evidence": "Exact worker-reviewed window; entry/caller bindings and limits documented in the follow-up report"
+    },
+    {
+      "start": "0x1847E0",
+      "end": "0x184998",
+      "entry_evidence": "Exact worker-reviewed window; entry/caller bindings and limits documented in the follow-up report"
+    },
+    {
+      "start": "0x184998",
+      "end": "0x1849AC",
+      "entry_evidence": "Exact worker-reviewed window; entry/caller bindings and limits documented in the follow-up report"
+    },
+    {
+      "start": "0x185A44",
+      "end": "0x185B88",
+      "entry_evidence": "Exact worker-reviewed window; entry/caller bindings and limits documented in the follow-up report"
+    },
+    {
+      "start": "0x181EA8",
+      "end": "0x1820C8",
+      "entry_evidence": "Exact worker-reviewed window; entry/caller bindings and limits documented in the follow-up report"
+    },
+    {
+      "start": "0x1821E8",
+      "end": "0x1823C0",
+      "entry_evidence": "Exact worker-reviewed window; entry/caller bindings and limits documented in the follow-up report"
+    },
+    {
+      "start": "0x184F28",
+      "end": "0x184F80",
+      "entry_evidence": "Exact worker-reviewed window; entry/caller bindings and limits documented in the follow-up report"
+    },
+    {
+      "start": "0x193A84",
+      "end": "0x193AE8",
+      "entry_evidence": "Exact worker-reviewed window; entry/caller bindings and limits documented in the follow-up report"
+    },
+    {
+      "start": "0x196658",
+      "end": "0x1966A0",
+      "entry_evidence": "Exact worker-reviewed window; entry/caller bindings and limits documented in the follow-up report"
+    },
+    {
+      "start": "0x1968A0",
+      "end": "0x196A6C",
+      "entry_evidence": "Exact worker-reviewed window; entry/caller bindings and limits documented in the follow-up report"
+    },
+    {
+      "start": "0x19AE0C",
+      "end": "0x19B018",
+      "entry_evidence": "Exact worker-reviewed window; entry/caller bindings and limits documented in the follow-up report"
+    },
+    {
+      "start": "0x19B018",
+      "end": "0x19B0BC",
+      "entry_evidence": "Exact worker-reviewed window; entry/caller bindings and limits documented in the follow-up report"
+    },
+    {
+      "start": "0x2D404",
+      "end": "0x2D484",
+      "entry_evidence": "Exact worker-reviewed window; entry/caller bindings and limits documented in the follow-up report"
+    },
+    {
+      "start": "0x15B340",
+      "end": "0x15B4E8",
+      "entry_evidence": "Worker exact three-window outer-result consumer check; no positive binding, blocker documented in ARENA_MICROBOT.md"
+    },
+    {
+      "start": "0x15B1B0",
+      "end": "0x15B340",
+      "entry_evidence": "Worker exact three-window outer-result consumer check; no positive binding, blocker documented in ARENA_MICROBOT.md"
+    },
+    {
+      "start": "0x15B848",
+      "end": "0x15B8BC",
+      "entry_evidence": "Worker exact three-window outer-result consumer check; no positive binding, blocker documented in ARENA_MICROBOT.md"
+    }
+  ],
+  "pairs": [
+    {
+      "hi": "0x15B8F8",
+      "lo": "0x15B900",
+      "table_bytes": 28,
+      "role": "controller state table"
+    },
+    {
+      "hi": "0x182534",
+      "lo": "0x18253C",
+      "table_bytes": 128,
+      "role": "command admissibility table"
+    },
+    {
+      "hi": "0x182574",
+      "lo": "0x18257C",
+      "table_bytes": 72,
+      "role": "command helper table"
+    },
+    {
+      "hi": "0x182B10",
+      "lo": "0x182B18",
+      "table_bytes": 124,
+      "role": "bot update state table"
+    },
+    {
+      "hi": "0x184560",
+      "lo": "0x184568",
+      "table_bytes": 116,
+      "role": "bot state setter table"
+    },
+    {
+      "hi": "0x15C394",
+      "lo": "0x15C398",
+      "role": "controller cohort registry root"
+    }
+  ]
+}

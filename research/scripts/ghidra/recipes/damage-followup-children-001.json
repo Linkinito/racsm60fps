@@ -1,0 +1,32 @@
+{
+  "source": "02-Jeu-et-dumps/Data/BACKUP/BIN/LEVEL_01.PRX",
+  "source_sha256": "d10a81d076fb44987a45314a020cda2f7e8b39f860b957911ca9365464676571",
+  "windows": [
+    {
+      "start": "0x132CB0",
+      "end": "0x132CF8",
+      "entry_evidence": "Exact worker-reviewed window; entry/caller bindings and limits documented in the follow-up report"
+    },
+    {
+      "start": "0x163F80",
+      "end": "0x163FF4",
+      "entry_evidence": "Exact worker-reviewed window; entry/caller bindings and limits documented in the follow-up report"
+    },
+    {
+      "start": "0x163FF4",
+      "end": "0x164050",
+      "entry_evidence": "Worker exact decoy shared-spatial registration/getter window; final range includes opening14A74 only"
+    },
+    {
+      "start": "0x14748",
+      "end": "0x1483C",
+      "entry_evidence": "Worker exact decoy shared-spatial registration/getter window; final range includes opening14A74 only"
+    },
+    {
+      "start": "0x1483C",
+      "end": "0x14A94",
+      "entry_evidence": "Worker exact decoy shared-spatial registration/getter window; final range includes opening14A74 only"
+    }
+  ],
+  "pairs": []
+}

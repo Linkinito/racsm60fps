@@ -1,0 +1,17 @@
+{
+  "source": "02-Jeu-et-dumps/Data/BACKUP/BIN/LEVEL_15.PRX",
+  "source_sha256": "cebd5b53f4a7f0b42cc7aec7f7e2e13749089a3dd630a3af1fcccaf81748e70a",
+  "windows": [
+    {"start":"0x109F08","end":"0x10A018","entry_evidence":"Controller initializer10C7D0 calls four-state constructor"},
+    {"start":"0x10B95C","end":"0x10B9D4","entry_evidence":"Controller10C81C calls virtual state transition helper"},
+    {"start":"0x10C81C","end":"0x10CB68","entry_evidence":"GCS updateD736C calls ship controller"},
+    {"start":"0x12DF9C","end":"0x12E3D0","entry_evidence":"Four relocated state tables from109F08 bind callback entries in this bounded interval"}
+  ],
+  "pairs": [
+    {"hi":"0x109F18","lo":"0x109F1C","role":"controller root"},
+    {"hi":"0x109F54","lo":"0x109F58","role":"state0 table","table_bytes":64},
+    {"hi":"0x109F78","lo":"0x109F7C","role":"state1 table","table_bytes":64},
+    {"hi":"0x109F9C","lo":"0x109FA0","role":"state2 table","table_bytes":64},
+    {"hi":"0x109FC0","lo":"0x109FC4","role":"state3 table","table_bytes":64}
+  ]
+}

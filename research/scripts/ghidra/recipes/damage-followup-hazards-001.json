@@ -1,0 +1,28 @@
+{
+  "source": "02-Jeu-et-dumps/Data/BACKUP/BIN/LEVEL_01.PRX",
+  "source_sha256": "d10a81d076fb44987a45314a020cda2f7e8b39f860b957911ca9365464676571",
+  "windows": [
+    {"start":"0x16AFD4","end":"0x16B0E0","entry_evidence":"Existing Sharkagator descriptor update; death-state request caller"},
+    {"start":"0x16B0E0","end":"0x16B248","entry_evidence":"Sharkagator update direct exposure-helper call"},
+    {"start":"0x16B248","end":"0x16B3FC","entry_evidence":"Exposure helper direct attack-entry call"},
+    {"start":"0x31078","end":"0x310A8","entry_evidence":"Known canonical-player, E8 and stateF8 queries called by grind/Shark"},
+    {"start":"0x31350","end":"0x31368","entry_evidence":"Exposure helper reads player95C/960 flag pair"},
+    {"start":"0x186E1C","end":"0x186EB0","entry_evidence":"Exposure-helper trigger-group overlap call"},
+    {"start":"0x4C2C0","end":"0x4C338","entry_evidence":"Existing grind direct HP-subtraction helper"},
+    {"start":"0x4BDC0","end":"0x4BDE4","entry_evidence":"Existing C assignment to exact grind-height enable2B0A50"},
+    {"start":"0x486E4","end":"0x4884C","entry_evidence":"Player state1B/1C enter calls in existing39FD4 C"},
+    {"start":"0x4884C","end":"0x48868","entry_evidence":"Player state1B update wrapper in existing3C88C C"},
+    {"start":"0x48A6C","end":"0x48D80","entry_evidence":"Known1B wrapper direct movement/substate helper"},
+    {"start":"0x39B74","end":"0x39FD4","entry_evidence":"Exact A1C writer found in existing C; state-duration comparisonF8/FC"},
+    {"start":"0x3DD10","end":"0x3DD48","entry_evidence":"First3C88C A1C load3DD1C identified by exact operand query within known entry"},
+    {"start":"0x3E0FC","end":"0x3E134","entry_evidence":"Second3C88C A1C load3E108 identified by exact operand query within known entry"},
+    {"start":"0x3EA90","end":"0x3EAC8","entry_evidence":"Third3C88C A1C load3EA9C identified by exact operand query within known entry"}
+  ],
+  "pairs": [
+    {"hi":"0x16B18C","lo":"0x16B194","role":"Shark exposure threshold2.5"},
+    {"hi":"0x4C2E8","lo":"0x4C2F0","role":"direct grind HP floor0"},
+    {"hi":"0x31078","lo":"0x3107C","role":"canonical player equality pointer"},
+    {"hi":"0x4BDC8","lo":"0x4BDCC","role":"grind height gate reset byte"},
+    {"hi":"0x3DD20","lo":"0x3DD24","role":"state-duration threshold240"}
+  ]
+}

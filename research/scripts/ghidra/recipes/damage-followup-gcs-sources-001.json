@@ -1,0 +1,72 @@
+{
+  "source": "02-Jeu-et-dumps/Data/BACKUP/BIN/LEVEL_15.PRX",
+  "source_sha256": "cebd5b53f4a7f0b42cc7aec7f7e2e13749089a3dd630a3af1fcccaf81748e70a",
+  "windows": [
+    {
+      "start": "0xDDA74",
+      "end": "0xDE400",
+      "entry_evidence": "Exact worker source/initializer/contact window from six established direct10C6EC callers; F9B24..F9CF0 supporting range includes next prologue"
+    },
+    {
+      "start": "0xF7E20",
+      "end": "0xF85D0",
+      "entry_evidence": "Exact worker source/initializer/contact window from six established direct10C6EC callers; F9B24..F9CF0 supporting range includes next prologue"
+    },
+    {
+      "start": "0xF92A8",
+      "end": "0xF9CD0",
+      "entry_evidence": "Exact worker source/initializer/contact window from six established direct10C6EC callers; F9B24..F9CF0 supporting range includes next prologue"
+    },
+    {
+      "start": "0xFBB40",
+      "end": "0xFC4B0",
+      "entry_evidence": "Exact worker source/initializer/contact window from six established direct10C6EC callers; F9B24..F9CF0 supporting range includes next prologue"
+    },
+    {
+      "start": "0xFC820",
+      "end": "0xFCF20",
+      "entry_evidence": "Exact worker source/initializer/contact window from six established direct10C6EC callers; F9B24..F9CF0 supporting range includes next prologue"
+    },
+    {
+      "start": "0xF7340",
+      "end": "0xF7478",
+      "entry_evidence": "Exact worker source/initializer/contact window from six established direct10C6EC callers; F9B24..F9CF0 supporting range includes next prologue"
+    },
+    {
+      "start": "0xF7478",
+      "end": "0xF7524",
+      "entry_evidence": "Exact worker source/initializer/contact window from six established direct10C6EC callers; F9B24..F9CF0 supporting range includes next prologue"
+    },
+    {
+      "start": "0xE93E0",
+      "end": "0xE94E8",
+      "entry_evidence": "Exact worker source/initializer/contact window from six established direct10C6EC callers; F9B24..F9CF0 supporting range includes next prologue"
+    },
+    {
+      "start": "0xF93F8",
+      "end": "0xF95B0",
+      "entry_evidence": "Exact worker source/initializer/contact window from six established direct10C6EC callers; F9B24..F9CF0 supporting range includes next prologue"
+    },
+    {
+      "start": "0xF9B24",
+      "end": "0xF9CF0",
+      "entry_evidence": "Exact worker source/initializer/contact window from six established direct10C6EC callers; F9B24..F9CF0 supporting range includes next prologue"
+    },
+    {
+      "start": "0xFBC04",
+      "end": "0xFBC84",
+      "entry_evidence": "Exact worker source/initializer/contact window from six established direct10C6EC callers; F9B24..F9CF0 supporting range includes next prologue"
+    },
+    {
+      "start": "0xFC8D8",
+      "end": "0xFC968",
+      "entry_evidence": "Exact worker source/initializer/contact window from six established direct10C6EC callers; F9B24..F9CF0 supporting range includes next prologue"
+    },
+    {
+      "start": "0xFCA94",
+      "end": "0xFCB04",
+      "entry_evidence": "Exact worker source/initializer/contact window from six established direct10C6EC callers; F9B24..F9CF0 supporting range includes next prologue"
+    }
+  ],
+  "pairs": []
+}

@@ -1,0 +1,52 @@
+{
+  "source": "02-Jeu-et-dumps/Data/BACKUP/BIN/LEVEL_24.PRX",
+  "source_sha256": "a4e3f6496b3d2d238767fbb72b9db274dc5179dbe4d6f71eea2ce1fee22480bf",
+  "windows": [
+    {
+      "start": "0x139FDC",
+      "end": "0x13A39C",
+      "entry_evidence": "Exact worker-reviewed window; entry/caller bindings and limits documented in the follow-up report"
+    },
+    {
+      "start": "0x13A39C",
+      "end": "0x13A5F4",
+      "entry_evidence": "Exact worker-reviewed window; entry/caller bindings and limits documented in the follow-up report"
+    },
+    {
+      "start": "0x138DAC",
+      "end": "0x139154",
+      "entry_evidence": "Exact worker-reviewed window; entry/caller bindings and limits documented in the follow-up report"
+    },
+    {
+      "start": "0x1399B0",
+      "end": "0x139FDC",
+      "entry_evidence": "Exact worker-reviewed window; entry/caller bindings and limits documented in the follow-up report"
+    },
+    {
+      "start": "0x13A6D8",
+      "end": "0x13A7AC",
+      "entry_evidence": "Exact worker-reviewed window; entry/caller bindings and limits documented in the follow-up report"
+    },
+    {
+      "start": "0x13B0B4",
+      "end": "0x13B1EC",
+      "entry_evidence": "Exact worker-reviewed window; entry/caller bindings and limits documented in the follow-up report"
+    },
+    {
+      "start": "0x13B214",
+      "end": "0x13B350",
+      "entry_evidence": "Exact worker-reviewed window; entry/caller bindings and limits documented in the follow-up report"
+    },
+    {
+      "start": "0xFCA78",
+      "end": "0xFCA80",
+      "entry_evidence": "Exact worker-reviewed window; entry/caller bindings and limits documented in the follow-up report"
+    },
+    {
+      "start": "0x139708",
+      "end": "0x13998C",
+      "entry_evidence": "Exact worker-reviewed window; entry/caller bindings and limits documented in the follow-up report"
+    }
+  ],
+  "pairs": []
+}

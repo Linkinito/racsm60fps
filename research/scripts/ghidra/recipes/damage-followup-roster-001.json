@@ -1,0 +1,11 @@
+{
+  "source": "02-Jeu-et-dumps/Data/BACKUP/BIN/LEVEL_04.PRX",
+  "source_sha256": "6896122ac19973e928303dc94c40fa309b5f06e5fef6ab14f624987035a4dc37",
+  "windows": [
+    {"start":"0x192D30","end":"0x192E70","entry_evidence":"Worker exact VehicleController initializer window"},
+    {"start":"0x19430C","end":"0x19437C","entry_evidence":"Worker exact VehicleController load callback, not neighboring helper extent"},
+    {"start":"0x12A518","end":"0x12A668","entry_evidence":"Worker exact ClankBotFlingerVehicle initializer and registration candidate call12A5F4"},
+    {"start":"0x192E78","end":"0x192F10","entry_evidence":"Parent follows exact actor registration192E78 through native return192F08 and delay slot192F0C"}
+  ],
+  "pairs": []
+}

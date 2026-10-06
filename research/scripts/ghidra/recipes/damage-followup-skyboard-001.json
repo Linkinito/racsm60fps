@@ -1,0 +1,21 @@
+{
+  "source": "02-Jeu-et-dumps/Data/BACKUP/BIN/LEVEL_22.PRX",
+  "source_sha256": "be7ef86357ee668bb1c194226e4cd2e55920a4f7f375952ffb494c0de5a78986",
+  "windows": [
+    {"start":"0x4710C","end":"0x47190","entry_evidence":"Prior AirRaceMine update direct slowdown/knockback helpers4710C/47144"},
+    {"start":"0xEBAE4","end":"0xEBC88","entry_evidence":"Prior AirRaceMine direct consequence helper; native returnEBC80 plus delay slot"},
+    {"start":"0xEC86C","end":"0xECD0C","entry_evidence":"Prior atlas established LEVEL22 AirRaceMine update; next state helperECD0C"},
+    {"start":"0x46BB8","end":"0x46DA8","entry_evidence":"Exact2222C8/CC and2D3158 consumer identified46BE4/46C7C/46D0C; preceding return46BB0, own return46DA0"},
+    {"start":"0x482F0","end":"0x48338","entry_evidence":"Exact2222CC/D0 reset writer identified48314/4831C"},
+    {"start":"0xEC148","end":"0xEC248","entry_evidence":"Prior atlas age/progress producerEC148; bounded head only"}
+  ],
+  "pairs": [
+    {"hi":"0x47128","lo":"0x4712C","role":"mine slowdown envelope2222C8"},
+    {"hi":"0x47134","lo":"0x47138","role":"slowdown state request2222CC"},
+    {"hi":"0x47164","lo":"0x47168","role":"impact mode2222D0"},
+    {"hi":"0x47170","lo":"0x47174","role":"impact vector2D3158"},
+    {"hi":"0x47144","lo":"0x47148","role":"canonical player pointer"},
+    {"hi":"0xECAF4","lo":"0xECAF8","role":"impact envelope23E17C0.6, supersedes legacy24E17C coordinate"},
+    {"hi":"0xECB98","lo":"0xECB9C","role":"slowdown envelope23E1843.0, supersedes legacy24E184 coordinate"}
+  ]
+}
