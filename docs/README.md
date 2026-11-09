@@ -13,6 +13,7 @@
 | [FIX_CATALOGUE_2026-10-01.md](FIX_CATALOGUE_2026-10-01.md) | Corrections ready for live testing and the test order |
 | [WHY_60FPS_IS_HARD.md](WHY_60FPS_IS_HARD.md) | The eight time domains of the engine and why no single global patch works (FR: [fr/POURQUOI_LE_60FPS_EST_DIFFICILE.md](fr/POURQUOI_LE_60FPS_EST_DIFFICILE.md)) |
 | [DECOMPILATION_FINDINGS.md](DECOMPILATION_FINDINGS.md) | All decompilation findings: engine map, fix families, plugins (FR: [fr/TROUVAILLES_DECOMPILATION.md](fr/TROUVAILLES_DECOMPILATION.md)) |
+| [DECOMPILATION_INVENTORY.md](DECOMPILATION_INVENTORY.md) | Inventory of every decompilation: projects, counts, naming passes, datasets, gaps (no game-derived content) |
 | [../patches/experimental/enhancements/README.md](../patches/experimental/enhancements/README.md) | OCEnhance: optional camera/controls plugin |
 | [RUNTIME_GUIDE.md](RUNTIME_GUIDE.md) | How to switch corrections and use the probes live |
 | [DEVELOPMENT_STATUS_2026-09-23.md](DEVELOPMENT_STATUS_2026-09-23.md) | Earlier curated status (superseded in parts) |
